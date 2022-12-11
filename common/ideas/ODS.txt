@@ -1,0 +1,63 @@
+ideas = {
+
+	country = {
+		nenavid_serdza = {
+			picture = nenavid_serdza
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = -0.5
+				army_org_factor = -0.5
+				army_org_regain = -0.5
+				
+			}
+		}
+		sumrachniy_trepet = {
+			picture = sumrachniy_trepet
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = -0.25
+				army_org_factor = -0.25
+				army_org_regain = -0.25
+			}
+		}
+		pocrov_zamisel = {
+			picture = glaz_ebuchiy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = -0.1
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+			}
+		}
+	}
+}

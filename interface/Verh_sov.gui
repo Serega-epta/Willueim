@@ -1,0 +1,118 @@
+guiTypes = {
+	containerWindowType = {
+		name = "verhov_sovet"
+                position = { x = 0 y = 0 }
+		size = { width = 100% height= 500 }
+		iconType = {
+           name ="Brainsk"
+           quadTextureSprite = "GFX_Brainsk"
+           position = { x = 0 y = 100 }
+        }
+		iconType = {
+           name ="RUS"
+           quadTextureSprite = "GFX_RUS"
+           position = { x = 0 y = 100 }
+        }
+		
+		iconType = {
+           name ="Sov_imperskiy"
+           quadTextureSprite = "GFX_Verh_Sov"
+           position = { x = 0 y = -20 }
+        }
+		instantTextBoxType = {
+			name ="senate_support"
+			position = { x = 185 y = 10 }
+			font = "hoi_24header"
+			text = "IMP_otchet"
+			format = center
+			maxHeight = 24
+		}
+        instantTextBoxType = {
+			name ="senate_support_1"
+			position = { x = 180 y = 30 }
+			font = "hoi_24header"
+			text = "IMP_glava_soveta"
+			format = center
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="senate_support_2"
+			position = { x = 50 y = 350 }
+			font = "hoi_24header"
+			text = "IMP_loyalnost_soveta"
+			format = center
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="senate_support_3"
+			position = { x = 200 y = 350 }
+			font = "hoi_24header"
+			text = "IMP_loyalnost_soveta_1"
+			format = center
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="senate_support_4"
+			position = { x = 200 y = 350 }
+			font = "hoi_24header"
+			text = "IMP_loyalnost_soveta_2"
+			format = center
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="senate_support_5"
+			position = { x = 200 y = 350 }
+			font = "hoi_24header"
+			text = "IMP_loyalnost_soveta_3"
+			format = center
+			maxHeight = 24
+		}
+		 instantTextBoxType = {
+			name ="senate_nap_1"
+			position = { x = 50 y = 380 }
+			font = "hoi_24header"
+			text = "IMP_nap_1"
+			format = center
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="senate_nap_2"
+			position = { x = 200 y = 380 }
+			font = "hoi_24header"
+			text = "IMP_nap_2"
+			format = center
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="senate_nap_3"
+			position = { x = 200 y = 380 }
+			font = "hoi_24header"
+			text = "IMP_nap_3"
+			format = center
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="senate_nap_4"
+			position = { x = 200 y = 380 }
+			font = "hoi_24header"
+			text = "IMP_nap_4"
+			format = center
+			maxHeight = 24
+		}
+		instantTextboxType = {
+			name = "Opisanie_5"
+			position = { x = 10 y = 410 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "Opisanie"
+			maxWidth = 500
+			maxHeight = 20
+			format = left	
+		}
+		iconType = { # Иконка (картинка)
+           name ="Grigiriy"
+           spriteType = "GFX_Grigiriy"
+           position = { x= 180 y = 80 }
+        }
+    }
+}

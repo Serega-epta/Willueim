@@ -1,0 +1,754 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = odessa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ODS
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1400 }
+	default = no
+
+	focus = {
+		id = ODS_perv
+		icon = GFX_Gorod_Prokazhennyh
+		x = 6
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+
+	focus = {
+		id = ODS_clear_perimetr
+		icon = GFX_clear_perimetr
+		prerequisite = { focus = ODS_perv }
+		x = -1
+		y = 1
+		relative_position_id = ODS_perv
+		cost = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 10
+		}
+			
+		completion_reward = {
+		country_event = {
+						id = WORe.7
+				}
+		}
+	}
+
+	focus = {
+		id = ODS_garantii_bez
+		icon = GFX_garantii_bez
+		prerequisite = { focus = ODS_perv }
+		x = 1
+		y = 1
+		relative_position_id = ODS_perv
+		cost = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ODS_black_fortress
+		icon = GFX_black_fortress
+		prerequisite = { focus = ODS_clear_perimetr }
+		prerequisite = { focus = ODS_garantii_bez }
+		x = 1
+		y = 1
+		relative_position_id = ODS_clear_perimetr
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			country_event = {
+						id = WORe.6
+				}
+		}
+	}
+	focus = {
+		id = ODS_Blago
+		icon = GFX_ODS_Blago
+		prerequisite = { focus = ODS_black_fortress }
+		x = 0
+		y = 1
+		relative_position_id = ODS_black_fortress
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ODS_Nenavist
+		icon = GFX_ODS_Nenavist
+		prerequisite = { focus = ODS_Blago }
+		x = 0
+		y = 1
+		relative_position_id = ODS_Blago
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ODS_Gumanizatsiya
+		icon = GFX_ODS_Gumanizatsiya
+		prerequisite = { focus = ODS_Nenavist }
+		prerequisite = { focus = ODS_Veni_reshima }
+		prerequisite = { focus = ODS_arterii_rejima }
+		x = 0
+		y = 3
+		relative_position_id = ODS_Nenavist
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_KEB
+		icon = GFX_ODS_KEB
+		prerequisite = { focus = ODS_Blago }
+		x = -3
+		y = 1
+		relative_position_id = ODS_Blago
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.4
+				}
+		}
+	}
+	focus = {
+		id = ODS_realizovt_kazdogo
+		icon = GFX_ODS_Realizovat
+		prerequisite = { focus = ODS_KEB }
+		x = 1
+		y = 1
+		relative_position_id = ODS_KEB
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.11
+				}
+		}
+	}
+	focus = {
+		id = ODS_iskorenit_dikc
+		icon = GFX_ODS_Iskor_dick
+		prerequisite = { focus = ODS_KEB }
+		x = -1
+		y = 1
+		relative_position_id = ODS_KEB
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.15
+				}
+		}
+	}
+	focus = {
+		id = ODS_Veni_reshima
+		icon = GFX_ODS_Veni_resh
+		prerequisite = { focus = ODS_realizovt_kazdogo }
+		prerequisite = { focus = ODS_iskorenit_dikc }
+		x = -1
+		y = 1
+		relative_position_id = ODS_realizovt_kazdogo
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ODS_osn_KOB
+		icon = GFX_ODS_KOB
+		prerequisite = { focus = ODS_Blago }
+		x = 3
+		y = 1
+		relative_position_id = ODS_Blago
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ODS_new_gracdanin
+		icon = GFX_ODS_New_grazd
+		prerequisite = { focus = ODS_osn_KOB }
+		x = -1
+		y = 1
+		relative_position_id = ODS_osn_KOB
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.9
+				}
+		}
+	}
+	focus = {
+		id = ODS_rostki_blago
+		icon = GFX_ODS_Rostki_blago
+		prerequisite = { focus = ODS_osn_KOB }
+		x = 1
+		y = 1
+		relative_position_id = ODS_osn_KOB
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.5
+				}
+		}
+	}
+	focus = {
+		id = ODS_arterii_rejima
+		icon = GFX_ODS_Arterii_reshima
+		prerequisite = { focus = ODS_new_gracdanin }
+		prerequisite = { focus = ODS_rostki_blago }
+		x = -1
+		y = 1
+		relative_position_id = ODS_rostki_blago
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ODS_1
+		icon = GFX_ODS_Zakat_Vashikh_Stremleniy
+		x = 13
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_2
+		icon = GFX_ODS_The_policy_of_Humanization
+		prerequisite = { focus = ODS_1 }
+		x = 13
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_3
+		icon = GFX_ODS_Kolosya_Bessarabii
+		prerequisite = { focus = ODS_2 }
+		x = 13
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_4
+		icon = GFX_ODS_Forges_of_the_vision
+		prerequisite = { focus = ODS_3 }
+		x = 13
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_5
+		icon = GFX_ODS_Vseobemlyuschiy_Asketizm
+		prerequisite = { focus = ODS_4 }
+		x = 13
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_6
+		icon = GFX_ODS_Privnesti_Soznatelnost
+		prerequisite = { focus = ODS_2 }
+		x = 15
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_7
+		icon = GFX_ODS_Higher_Helertheria
+		prerequisite = { focus = ODS_6 }
+		x = 15
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_10
+		icon = GFX_ODS_Reabilitation
+		prerequisite = { focus = ODS_2 }
+		x = 17
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_11
+		icon = GFX_ODS_Podstancia
+		prerequisite = { focus = ODS_10 }
+		x = 17
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_8
+		icon = GFX_ODS_Curtain_of_Revelation_1
+		prerequisite = { focus = ODS_7 }
+		prerequisite = { focus = ODS_11 }
+		x = 16
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_12
+		icon = GFX_ODS_Arrogance_of_order_1
+		prerequisite = { focus = ODS_10 }
+		x = 13ы
+		y = 3
+		relative_position_id = ODS_Nenavist
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_13
+		icon = GFX_ODS_poisoned_souls_13
+		prerequisite = { focus = ODS_12 }
+		x = 19
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_14
+		icon = GFX_ODS_Vechi
+		prerequisite = { focus = ODS_13}
+		x = 2
+		y = 0
+		relative_position_id = ODS_15
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_15
+		icon = GFX_ODS_Oktopus
+		prerequisite = { focus = ODS_13 }
+		x = 16
+		y = 11
+		relative_position_id = ODS_14
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_9
+		icon = GFX_ODS_Arrogance_of_order_real
+		prerequisite = { focus = ODS_5 }
+		prerequisite = { focus = ODS_8 }
+		prerequisite = { focus = ODS_14 }
+		prerequisite = { focus = ODS_15 }
+		x = 15
+		y = 13
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_16
+		icon = GFX_ODS_dictat_voli_16
+		prerequisite = { focus = ODS_1 }
+		x = 21
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_17
+		icon = GFX_ODS_Stepennost
+		prerequisite = { focus = ODS_16 }
+		x = 20
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_18
+		icon = GFX_ODS_OdessLag
+		prerequisite = { focus = ODS_17 }
+		prerequisite = { focus = ODS_19 }
+		x = 21
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_19
+		icon = GFX_ODS_Kowka
+		prerequisite = { focus = ODS_16 }
+		x = 22
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_20
+		icon = GFX_ODS_OKO
+		prerequisite = { focus = ODS_19 }
+		x = 23
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_21
+		icon = GFX_ODS_mehanization_zamisel_21
+		prerequisite = { focus = ODS_16 }
+		x = 29
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_22
+		icon = GFX_ODS_new_doktrines_22
+		prerequisite = { focus = ODS_21 }
+		x = 28
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_23
+		icon = GFX_ODS_centers_podgotovki_23
+		prerequisite = { focus = ODS_21 }
+		x = 30
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_24
+		icon = GFX_ODS_uchenia_voshod_24
+		prerequisite = { focus = ODS_22 }
+		prerequisite = { focus = ODS_23 }
+		x = 29
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_25
+		icon = GFX_ODS_mglist_domn_25
+		prerequisite = { focus = ODS_24 }
+		x = 30
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_26
+		icon = GFX_ODS_black_vual_26
+		prerequisite = { focus = ODS_18 }
+		prerequisite = { focus = ODS_24 }
+		x = 26
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	focus = {
+		id = ODS_27
+		icon = GFX_ODS_voshod_ambitions_27
+		prerequisite = { focus = ODS_9 }
+		prerequisite = { focus = ODS_26 }
+		x = 23
+		y = 15
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		country_event = {
+						id = WORe.13
+				}
+		}
+	}
+	

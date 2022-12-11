@@ -1,0 +1,21 @@
+scripted_gui = {
+
+    sinopsis2 = {
+    
+        context_type = player_context
+		
+		window_name = "sinopsis2"
+		
+		visible = {
+            		has_variable = global.sinopsis
+		}
+		
+		effects = {
+        
+			button_close_click = {            
+				clear_variable = global.sinopsis
+			}
+		}
+        
+    }
+} 

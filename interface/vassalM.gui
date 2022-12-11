@@ -1,0 +1,308 @@
+guiTypes = {
+	containerWindowType = {
+		name = "house"
+		position = { x = 0 y = 0}	
+		
+		size = { width = 800 height = 600 }
+		
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		show_sound = menu_open_window
+		click_to_front = yes
+        
+		orientation = UPPER_LEFT
+        
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_vassal_menu"
+		}
+
+        instantTextboxType = {
+			name = "gosvo_1"
+			position = { x = 300 y = 11 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "[FROM.GetName]"
+			maxWidth = 240
+			maxHeight = 20
+			format = left	
+		}
+		instantTextboxType = {
+			name = "gosvo_2"
+			position = { x = 300 y = 500 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "[Root.GetName]"
+			maxWidth = 240
+			maxHeight = 20
+			format = left	
+		}
+		instantTextboxType = {
+			name = "gosvo_3"
+			position = { x = 300 y = 200 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "ЫЫЫЫ [?FROM.ALLs]"
+			maxWidth = 240
+			maxHeight = 20
+			format = left	
+		}
+		instantTextboxType = {
+			name = "loyal"
+			position = { x = 400 y = 50 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "Лояльность = [?FROM.autonomy_ratio]"
+			maxWidth = 240
+			maxHeight = 20
+			format = left	
+		}
+		
+		iconType = { # Иконка (картинка)
+           name ="Pol_1"
+           spriteType = "GFX_Polzunok"
+           position = { x= 20 y = 150 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Pol_2"
+           spriteType = "GFX_Polzunok"
+           position = { x= 20 y = 300 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Pol_3"
+           spriteType = "GFX_Polzunok"
+           position = { x= 400 y = 150 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Pol_4"
+           spriteType = "GFX_Polzunok"
+           position = { x= 400 y = 300  }
+        }
+		
+		
+		iconType = { # Иконка (картинка)
+           name ="Polzun_1"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 20 y = 160 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_2"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 82 y = 160 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_3"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 144 y = 160 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_4"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 206 y = 160  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_5"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 268 y = 160  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_6"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 330 y = 160  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_7"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 20 y = 310 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_8"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 82 y = 310 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_9"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 144 y = 310 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_10"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 206 y = 310  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_11"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 268 y = 310  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_12"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 330 y = 310  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_13"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 420 y = 160 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_14"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 482 y = 160 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_15"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 544 y = 160 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_16"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 606 y = 160  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_17"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 668 y = 160  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_18"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 730 y = 160  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_19"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 420 y = 310 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_20"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 482 y = 310 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_21"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 544 y = 310 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_22"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 606 y = 310  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_23"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 668 y = 310  }
+        }
+		iconType = { # Иконка (картинка)
+           name ="Polzun_24"
+           spriteType = "GFX_Polzunok_2"
+           position = { x= 730 y = 310  }
+        }
+		buttonType = { 
+           name ="Strel_1"
+           spriteType = "GFX_strel_1"
+           position = { x= 350 y = 160  }
+        }
+		buttonType = { 
+           name ="Strel_2"
+           spriteType = "GFX_strel_1"
+           position = { x= 350 y = 310  }
+        }
+		buttonType = { 
+           name ="Strel_3"
+           spriteType = "GFX_strel_1"
+           position = { x= 750 y = 160  }
+        }
+		buttonType = { 
+           name ="Strel_4"
+           spriteType = "GFX_strel_1"
+           position = { x= 750 y = 310  }
+        }
+		buttonType = { 
+           name ="Strel_5"
+           spriteType = "GFX_strel_2"
+           position = { x= 0 y = 160  }
+        }
+		buttonType = { 
+           name ="Strel_6"
+           spriteType = "GFX_strel_2"
+           position = { x= 0 y = 310  }
+        }
+		buttonType = { 
+           name ="Strel_7"
+           spriteType = "GFX_strel_2"
+           position = { x= 400 y = 160  }
+        }
+		buttonType = { 
+           name ="Strel_8"
+           spriteType = "GFX_strel_2"
+           position = { x= 400 y = 310  }
+        }
+                
+          buttonType = {
+          name = "button_add"
+          position = {x = 210 y = 675}
+          spriteType = "GFX_sort_button_100x29_2"
+          frame = 2
+		  buttonFont = "hoi_16mbs"
+		  buttonText = "Drink blood"
+		  Orientation = "UPPER_LEFT"
+           }
+                
+           buttonType = {
+        name = "button_subtract"
+        position = {x = 310 y = 675}
+        spriteType = "GFX_sort_button_100x29_2"
+        frame = 2
+	    buttonFont = "hoi_16mbs"
+		buttonText = "Sleep"
+		Orientation = "UPPER_LEFT"
+             }
+		
+		buttonType = {
+			name = "button_close"
+			position = { x = 410 y = 675 }
+			spriteType = "GFX_sort_button_100x29_2"
+                        frame = 2
+			buttonFont = "hoi_16mbs"
+			buttonText = "Exit"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+			Orientation = "UPPER_LEFT"
+		}
+        
+		instantTextBoxType = {
+			name ="text_1"
+			position = { x = 630 y = 680 }
+			font = "hoi_18mbs"
+			text = "Liters of blood = [?example1Variable]"
+			format = left
+			maxWidth = 220
+			maxHeight = 24
+		}
+		
+		instantTextBoxType = {
+			name ="text_2"
+			position = { x = 780 y = 680 }
+			font = "hoi_18mbs"
+			text = "You feel the Energy!"
+			format = left
+			maxWidth = 320
+			maxHeight = 24
+		}
+        
+        instantTextBoxType = {
+        name = "help"
+         position = { x = 500 y = 22 }
+         font = "hoi_18mbs"
+         text = "Welcome home, Master!"
+         maxWidth = 470
+        maxHeight = 200
+         Orientation = "UPPER_LEFT"	
+          allwaystransparent = yes
+        }
+    }
+}

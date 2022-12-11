@@ -1,0 +1,48 @@
+scripted_gui = { 
+    sinopsis = {
+        context_type = selected_state_context
+		parent_window_token = selected_state_view
+		window_name = "sinopsis"
+		
+		visible = {
+		     
+		}
+		
+		effects = {
+			sinopsis_click = 
+			{
+				if = 
+				{
+					limit = {  state = 857 }
+					ROOT ={
+					country_event = {
+						id = SINe.2
+					}
+					}
+				}
+					else_if = 
+				{
+						limit = {  state = 839 }
+					ROOT ={
+					country_event = {
+						id = SINe.3
+					}
+					}
+				}
+				else_if = 
+				{
+						limit = {  state = 864 }
+					ROOT ={
+					country_event = {
+						id = SINe.4
+					}
+					}
+				}
+				
+			}
+		}
+        
+		triggers = {
+		
+    }
+}

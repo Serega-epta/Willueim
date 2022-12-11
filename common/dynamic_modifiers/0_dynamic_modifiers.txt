@@ -1,0 +1,292 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+
+	centralization_dynamic_modifier = {
+		enable = { always = yes } #optional, the modifier won't apply if not enabled
+		remove_trigger = { always = no } #optional, will remove the modifier if true
+                
+
+		political_power_gain = centralization
+     	        global_building_slots_factor = centralization
+		#partisan_effect = centralization           
+	}
+
+
+	nuke_aftermath = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_nuclear_attack_icon_icon
+		
+		local_manpower = -0.5
+		local_supplies = -0.5
+	}
+
+	refuees = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_refugees_icon
+		
+		local_intel_to_enemies = 0.1
+		local_supplies = -0.05
+		local_non_core_manpower = -0.05
+	}
+
+	
+	chemweapons_basic_lethal = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_chemweapons_basic_lethal_icon
+		army_attack_factor = -0.1
+		army_defence_factor = -0.1
+		local_org_regain = -0.1
+	}
+
+	bioweapons_basic_lethal = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_chemweapons_basic_psychadelics_icon
+		MONTHLY_POPULATION = -1
+		local_factory_sabotage = 0.1
+	}
+	anomaly = {
+		enable = { always = yes }
+		
+		icon = GFX_modifiers_chemweapons_basic_nonlethal_icon	
+		local_org_regain = -0.25
+		local_supplies = -0.25
+	}
+	people = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		weekly_manpower =   ROOT.manmore
+	}
+	people_1 = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		weekly_manpower = FROM.manmore
+	}
+	issled = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		research_speed_factor = ROOT.Issled
+	}
+	fabricks = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		production_speed_buildings_factor =  ROOT.fab
+	}
+	warzawod = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		industrial_capacity_factory =  ROOT.warzav
+	}
+	issled_1 = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		research_speed_factor = FROM.Issled
+	}
+	fabricks_1 = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		production_speed_buildings_factor =  FROM.fab
+	}
+	warzawod_1 = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		industrial_capacity_factory =  FROM.warzav
+	}
+	
+	loyal_sov = {
+		enable = { always = yes }
+		
+		industrial_capacity_factory =  Loyal_all
+		production_speed_buildings_factor =  Loyal_all
+	
+
+	}
+	war_napr = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		army_attack_factor =  Warnap_all
+	}
+	peace_napr = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		consumer_goods_factor = GrazdNap_all
+	}
+	interg_1 = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		local_manpower = 0.1
+	}
+	interg_2 = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		local_manpower = 0.25
+		production_speed_buildings_factor = 0.05
+	}
+	interg_3 = {
+		icon = GFX_idea_unknown
+		enable = { always = yes }
+		local_manpower = 0.5
+		production_speed_buildings_factor = 0.10
+		research_speed_factor = 0.002
+	}
+	chemweapons_advanced_lethal = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_chemweapons_advanced_lethal_icon
+		
+		local_factories = -0.25
+		attrition_for_controller = 0.25
+	}
+
+	chemweapons_advanced_psychadelics = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_chemweapons_advanced_psychadelics_icon
+		
+		local_manpower = -0.25
+		army_speed_factor_for_controller = -0.25
+	}
+
+	chemweapons_paranoia_bomb = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_chemweapons_chemweapons_paranoia_bomb_icon
+		
+		local_org_regain = -0.25
+		local_supplies = -0.25
+		local_factory_sabotage = 0.5
+		local_intel_to_enemies = -0.5
+	}
+
+	chemweapons_meltabomb = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_chemweapons_meltabomb_icon
+		
+		local_factories = -0.50
+		attrition_for_controller = 0.50
+		local_supplies_for_controller = -0.50
+		disable_strategic_redeployment = 1 
+	}
+
+	chemweapons_mindbreaker = {
+		enable = { always = yes }
+
+		icon = GFX_modifiers_chemweapons_mindbreaker_icon
+		
+		local_manpower = -0.50
+		army_speed_factor_for_controller = -0.50
+		local_factory_sabotage = 0.5
+		local_intel_to_enemies = 0.5
+	}
+
+	bioweapons_anthrax_modifier = {
+		enable = { always = yes }
+
+		icon = GFX_bioweapons_anthrax_modifier_icon
+		
+		local_manpower = -0.25
+		local_non_core_manpower = -0.5
+		attrition_for_controller = 0.25
+	}
+
+	bioweapons_smallpox_modifier = {
+		enable = { always = yes }
+
+		icon = GFX_bioweapons_smallpox_modifier_icon
+		
+		local_manpower = -0.5
+		local_non_core_manpower = -0.75
+		local_supplies_for_controller = -0.5
+	}
+
+	bioweapons_botulism_modifier = {
+		enable = { always = yes }
+
+		icon = GFX_bioweapons_botulism_modifier_icon
+		
+		local_resources = -0.25
+		local_non_core_manpower = -0.25
+		local_supplies_for_controller = -0.5
+	}
+
+	bioweapons_influenza_modifier = {
+		enable = { always = yes }
+
+		icon = GFX_bioweapons_influenza_modifier_icon
+		
+		local_manpower = -0.25
+		local_org_regain = -0.25
+	}
+
+	bioweapons_secondary_outbreak_modifier = {
+		enable = { always = yes }
+
+		icon = GFX_bioweapons_secondary_outbreak_modifier_icon
+		
+		local_manpower = -0.25
+		local_org_regain = -0.05
+		local_supplies = -0.05
+	}
+
+	livewire_modifier = {
+		enable = { always = yes }
+
+		icon = GFX_livewire_modifier_icon
+		
+		army_speed_factor_for_controller = -0.25
+		state_production_speed_buildings_factor = -0.15
+	}
+	coalition_popularity_modifier = {
+    	enable = { always = yes }
+		
+    	political_power_factor = coalition_modifier
+    	stability_factor = coalition_modifier
+    	production_speed_buildings_factor = coalition_modifier
+	}
+	banned_popularity_modifier = {
+		enable = { always = yes }
+
+    	political_power_factor = banned_modifier
+    	stability_factor = banned_modifier
+    	production_speed_buildings_factor = banned_modifier
+	}
+	PB_Automation_Crisis_Dynamic_Modifier = {
+		enable = { always = yes }
+
+		stability_factor = PB_AC_stability_factor
+		research_speed_factor = PB_AC_Research_Speed_Factor
+		consumer_goods_factor = PB_AC_Consumer_Goods
+		production_factory_max_efficiency_factor = PB_AC_ProductionMaxEfficiency
+		production_factory_efficiency_gain_factor = PB_AC_ProductionEfficiencyGain
+		line_change_production_efficiency_factor = PB_AC_line_change_production_efficiency_factor
+		industrial_capacity_factory = PB_AC_ic_factory
+
+	}

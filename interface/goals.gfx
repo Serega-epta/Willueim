@@ -1,0 +1,291 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+
+	SpriteType = {
+	name = "GFX_goal_continuous_air_production"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_continuous_non_factory_construct"
+	texturefile = "gfx/interface/goals/goal_continuous_non_factory_construct.dds"			
+	}	
+	
+	frameAnimatedSpriteType = {
+	name = "GFX_goal_continuous_reduce_training_time"
+	texturefile = "gfx/leaders/dancing_hitler.dds"
+	noOfFrames = 6
+	animation_rate_fps = 8
+	looping = yes
+	play_on_show = yes	
+		
+	}	
+	frameAnimatedSpriteType = {
+	name = "Pomexi_sverx"
+	texturefile = "gfx/leaders/Pomexi.dds"
+	noOfFrames = 2
+	animation_rate_fps = 10
+	looping = yes
+	pause_on_loop = 1.0
+	play_on_show = yes	
+	allwaystransparent = yes	
+		 transparencecheck = yes		 
+	}	
+	SpriteType = {
+	name = "GFX_pomexi"
+		texturefile = "gfx/leaders/dancing_hitler.dds"
+		 allwaystransparent = yes	
+		 transparencecheck = yes	
+		animation = {
+			animationmaskfile = "gfx/leaders/dancing_hitler.dds"
+			animationtexturefile = "gfx/leaders/dancing_hitler.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 1.0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no		
+	}
+	SpriteType = {
+	name = "GFX_pomexi_1"
+		texturefile = "gfx/leaders/dancing_hitler.dds"
+
+		 allwaystransparent = yes	
+		 transparencecheck = yes	
+		animation = {
+			animationmaskfile = "gfx/leaders/dancing_hitler.dds"
+			animationtexturefile = "gfx/leaders/dancing_hitler.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 1.0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no		
+	}
+	SpriteType = {
+	name = "GFX_Gorod_Prokazhennyh"
+	texturefile = "gfx/interface/goals/Gorod_Prokazhennyh.dds"			
+	}
+	SpriteType = {
+	name = "GFX_clear_perimetr"
+	texturefile = "gfx/interface/goals/Perimetr.dds"			
+	}
+	SpriteType = {
+	name = "GFX_garantii_bez"
+	texturefile = "gfx/interface/goals/Bezopasnost_39.dds"			
+	}
+	SpriteType = {
+	name = "GFX_black_fortress"
+	texturefile = "gfx/interface/goals/Cherniy_Perimetr.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Blago"
+	texturefile = "gfx/interface/goals/Blago.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Nenavist"
+	texturefile = "gfx/interface/goals/Nenavist.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Gumanizatsiya"
+	texturefile = "gfx/interface/goals/Gumanizatsiya2.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Arterii_reshima"
+	texturefile = "gfx/interface/goals/Arterii_reshima.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Iskor_dick"
+	texturefile = "gfx/interface/goals/Iskor_dick.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_KEB"
+	texturefile = "gfx/interface/goals/KEB.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_KOB"
+	texturefile = "gfx/interface/goals/KOB.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_New_grazd"
+	texturefile = "gfx/interface/goals/New_grazd.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Realizovat"
+	texturefile = "gfx/interface/goals/Realizovat.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Rostki_blago"
+	texturefile = "gfx/interface/goals/Rostki_blago.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Veni_resh"
+	texturefile = "gfx/interface/goals/Veni_resh.dds"			
+	}
+
+
+	
+	SpriteType = {
+	name = "GFX_ODS_Chemical_Attack"
+	texturefile = "gfx/interface/goals/Chemical_Attack.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Bring_awareness"
+	texturefile = "gfx/interface/goals/Bring_awareness.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Curtain_of_Revelation_1"
+	texturefile = "gfx/interface/goals/Curtain_of_Revelation_1.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Forges_of_the_vision"
+	texturefile = "gfx/interface/goals/Forges_of_the_vision.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Higher_Helertheria"
+	texturefile = "gfx/interface/goals/Higher_Helertheria.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Kowka"
+	texturefile = "gfx/interface/goals/Kowka.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_OdessLag"
+	texturefile = "gfx/interface/goals/OdessLag.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_OKO"
+	texturefile = "gfx/interface/goals/OKO.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Oktopus"
+	texturefile = "gfx/interface/goals/Oktopus.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Podstancia"
+	texturefile = "gfx/interface/goals/Podstancia.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Reabilitation"
+	texturefile = "gfx/interface/goals/Reabilitation.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Stepennost"
+	texturefile = "gfx/interface/goals/Stepennost.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Triufkjm_of_our_wil"
+	texturefile = "gfx/interface/goals/Triufkjm_of_our_wil.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Vechi"
+	texturefile = "gfx/interface/goals/Vechi.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_ODS_Arrogance_of_order_1"
+	texturefile = "gfx/interface/goals/Arrogance_of_order_1.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Arrogance_of_order_real"
+	texturefile = "gfx/interface/goals/Arrogance_of_order_real.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Comprehensive_asceticism"
+	texturefile = "gfx/interface/goals/Comprehensive_asceticism.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Decline_of_your_aspirations"
+	texturefile = "gfx/interface/goals/Decline_of_your_aspirations.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_Ears_of_Bessarabia"
+	texturefile = "gfx/interface/goals/Ears_of_Bessarabia.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_The_dictate_of_your_will"
+	texturefile = "gfx/interface/goals/The_dictate_of_your_will.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_The_policy_of_Humanization"
+	texturefile = "gfx/interface/goals/The_policy_of_Humanization.dds"			
+	}
+	
+	
+	SpriteType = {
+	name = "GFX_ODS_poisoned_souls_13"
+	texturefile = "gfx/interface/goals/poisoned_souls_13.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_dictat_voli_16"
+	texturefile = "gfx/interface/goals/dictat_voli_16.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_mehanization_zamisel_21"
+	texturefile = "gfx/interface/goals/mehanization_zamisel_21.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_new_doktrines_22"
+	texturefile = "gfx/interface/goals/new_doktrines_22.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_centers_podgotovki_23"
+	texturefile = "gfx/interface/goals/centers_podgotovki_23.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_uchenia_voshod_24"
+	texturefile = "gfx/interface/goals/uchenia_voshod_24.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_mglist_domn_25"
+	texturefile = "gfx/interface/goals/mglist_domn_25.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_black_vual_26"
+	texturefile = "gfx/interface/goals/black_vual_26.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ODS_voshod_ambitions_27"
+	texturefile = "gfx/interface/goals/voshod_ambitions_27.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_ODS_Kolosya_Bessarabii"
+	texturefile = "gfx/interface/goals/Kolosya_Bessarabii.dds"
+	}
+	SpriteType = {
+	name = "GFX_ODS_Politika_Gumanizatsii"
+	texturefile = "gfx/interface/goals/Politika_Gumanizatsii.dds"
+	}
+	SpriteType = {
+	name = "GFX_ODS_Privnesti_Soznatelnost"
+	texturefile = "gfx/interface/goals/Privnesti_Soznatelnost.dds"
+	}
+	SpriteType = {
+	name = "GFX_ODS_Voskhod_Nashikh_Ambitsiy"
+	texturefile = "gfx/interface/goals/Voskhod_Nashikh_Ambitsiy.dds"
+	}
+	SpriteType = {
+	name = "GFX_ODS_Vseobemlyuschiy_Asketizm"
+	texturefile = "gfx/interface/goals/Vseobemlyuschiy_Asketizm.dds"
+	}
+	SpriteType = {
+	name = "GFX_ODS_Vzor_Nikitina"
+	texturefile = "gfx/interface/goals/Vzor_Nikitina.dds"
+	}
+	SpriteType = {
+	name = "GFX_ODS_Zakat_Vashikh_Stremleniy"
+	texturefile = "gfx/interface/goals/Zakat_Vashikh_Stremleniy.dds"
+	}
+	
+	
+}

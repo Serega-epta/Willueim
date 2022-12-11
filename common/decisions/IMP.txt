@@ -1,0 +1,871 @@
+IMP_verhov_sovet = {
+	IMP_loyalnost = { 
+		priority = 320
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				add = 100
+				check_variable = { Loyal < 5 }
+			}
+			modifier = {
+				add = 100
+				check_variable = { Loyal < 2 }
+			}
+		}
+
+		allowed = {
+			original_tag = IMP
+		}
+
+		available = {
+			original_tag = IMP
+		}
+
+		visible = {
+			original_tag = IMP
+		}
+
+		cost = 28
+
+		days_re_enable = 28
+
+		days_remove = 35
+
+		modifier = {
+			consumer_goods_factor = 0.02
+		}
+
+		complete_effect = {
+			 add_to_variable = { Loyal = 1 }
+			 set_temp_variable = { temp1 = Loyal }
+	         multiply_temp_variable = { temp1 = 0.02 }
+		     set_variable = { Loyal_all = temp1 }
+		}
+	}
+	IMP_loyalnost_1 = { 
+		priority = 307
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			original_tag = IMP
+		}
+
+		available = {
+			original_tag = IMP
+		}
+
+		visible = {
+			original_tag = IMP
+		}
+
+		cost = 28
+
+		days_re_enable = 28
+
+		days_remove = 35
+
+		modifier = {
+			consumer_goods_factor = 0.02
+		}
+
+		complete_effect = {
+			add_to_variable = { Warnap = 1 }
+			set_temp_variable = { temp1 = Warnap }
+	        multiply_temp_variable = { temp1 = 0.01 }
+		    set_variable = {Warnap_all = temp1 }
+		}
+	}
+	IMP_loyalnost_2 = { #Repeatable decision to reduce Paranoia
+		priority = 308
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			original_tag = IMP
+		}
+
+		available = {
+			original_tag = IMP
+		}
+
+		visible = {
+			original_tag = IMP
+		}
+
+		cost = 28
+
+		days_re_enable = 28
+
+		days_remove = 35
+
+		modifier = {
+			consumer_goods_factor = 0.02
+		}
+
+		complete_effect = {
+			add_to_variable = { GrazdNap = 1 }
+			set_temp_variable = { temp1 =GrazdNap }
+	        multiply_temp_variable = { temp1 = 0.01 }
+		    set_variable = {GrazdNap_all = temp1 }
+		}
+	}
+	loyal_drift = {
+		icon = generic_prepare_civil_war
+		
+	     activation = {
+         check_variable = { Loyal > 0 }
+			}
+		available = {
+			check_variable = { Loyal = 0 }
+		}
+		cancel_trigger = {
+			check_variable = { Loyal = 0 }
+		}
+		Is_good = no
+		days_mission_timeout = 90
+		fire_only_once = no
+		timeout_effect = {
+			subtract_from_variable = { Loyal = 1 }
+			 set_temp_variable = { temp1 = Loyal }
+	         multiply_temp_variable = { temp1 = 0.02 }
+		     set_variable = { Loyal_all = temp1 }
+		}
+		
+	}
+	IMP_forge_production_reports = { 
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			original_tag = IMP
+		}
+
+		available = {
+			original_tag = IMP
+		}
+
+		visible = {
+			original_tag = IMP
+		}
+
+		cost = 28
+
+		days_re_enable = 28
+
+		days_remove = 90
+
+		modifier = {
+			consumer_goods_factor = 0.02
+		}
+
+		complete_effect = {
+			SOV_paranoia_medium_decrease_effect = yes
+
+			custom_effect_tooltip = SOV_paranoia_calm_down_stalin_cd_tt
+		}
+	}
+
+}
+IMP_grigoriy_chest = {
+	IMP_high_Honor = {
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			original_tag = IMP
+		}
+
+		available = {
+			original_tag = IMP
+		}
+
+		visible = {
+			original_tag = IMP
+		}
+
+		cost = 50
+
+		days_re_enable = 90
+
+		days_remove = 35
+
+		modifier = {
+			consumer_goods_factor = 0.02
+		}
+
+		complete_effect = {
+			add_to_variable = { HONOR_GRISHA = 1 }
+		}
+	}
+	IMP_army_resh = {
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			has_idea = neorg_army
+		}
+
+		available = {
+			has_idea = neorg_army
+		}
+
+		visible = {
+			has_idea = neorg_army
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+		
+			subtract_from_variable = { HONOR_GRISHA = 1 }
+			swap_ideas = { 
+				remove_idea = neorg_army
+				add_idea = neorg_army_2 
+			}
+		}
+	}
+	IMP_army_resh_2 = {
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			has_idea = neorg_army
+		}
+
+		available = {
+			has_idea = neorg_army
+		}
+
+		visible = {
+			has_idea = neorg_army
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			 add_to_variable = { RUSSIA = 1 }
+		}
+	}
+
+}
+
+IMP_bransk = {
+	
+	IMP_perv = {
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		available = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		visible = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			 add_to_variable = { Nash_victor = 1 }
+		}
+	}
+	IMP_vtor = {
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		available = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		visible = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			 add_to_variable = { Nash_victor1 = 1 }
+		}
+	}
+	IMP_tret = {
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		available = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		visible = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			 add_to_variable = { Nash_victor2 = 1 }
+		}
+	}
+	IMP_chet= {
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		available = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		visible = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			 add_to_variable = { Nash_victor3 = 1 }
+		}
+	}
+	wrag_drift = {
+		icon = generic_prepare_civil_war
+		
+	     activation = {
+        BRA={
+			exists = yes
+			}
+			}
+		available = {
+			BRA={
+			exists = no
+			}
+		}
+		cancel_trigger = {
+			BRA={
+			exists = no
+			}
+		}
+		Is_good = no
+		days_mission_timeout = 35
+		fire_only_once = no
+		timeout_effect = {
+			add_to_variable = { Vrag_victor = 1 }
+			add_to_variable = { Vrag_victor1 = 1 }
+			add_to_variable = { Vrag_victor2 = 1 }
+			add_to_variable = { Vrag_victor3 = 1 }
+		}
+		
+	}
+	IMP_itog= {
+		priority = 510
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		available = {
+			BRA={
+			exists = yes
+			}
+		}
+
+		visible = {
+			BRA={
+			exists = yes
+			}
+		    check_variable = {Nash_victor > 10 }
+			check_variable = {Nash_victor1 > 10 }
+			check_variable = {Nash_victor2 > 10 }
+			check_variable = {Nash_victor3 > 10 }
+			check_variable = {Nash_victor > Vrag_victor }
+			check_variable = {Nash_victor1 > Vrag_victor1 }
+			check_variable = {Nash_victor2 > Vrag_victor2 }
+			check_variable = {Nash_victor3 > Vrag_victor3 }
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			annex_country = {
+			target = BRA
+			transfer_troops = yes
+			}
+		}
+	}
+}
+
+IMP_shilds = {
+	IMP_s1= {
+		priority = 310
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			NOR={
+			exists = yes
+			}
+		}
+
+		available = {
+			NOR={
+			exists = yes
+			}
+		}
+
+		visible = {
+			NOR={
+			exists = yes
+			}
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			 add_to_variable = { Nash_victor_s = 1 }
+		}
+	}
+	IMP_s2= {
+		priority = 309
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			COR={
+			exists = yes
+			}
+		}
+
+		available = {
+			COR={
+			exists = yes
+			}
+		}
+
+		visible = {
+			COR={
+			exists = yes
+			}
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			 add_to_variable = { Nash_victor_s1 = 1 }
+		}
+	}
+	IMP_s3= {
+		priority = 308
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			SOL={
+			exists = yes
+			}
+		}
+
+		available = {
+			SOL={
+			exists = yes
+			}
+		}
+
+		visible = {
+			SOL={
+			exists = yes
+			}
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			 add_to_variable = { Nash_victor_s2 = 1 }
+		}
+	}
+	
+	IMP_srag1= {
+		priority = 307
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+		
+			NOR={
+			exists = yes
+			}
+			
+		}
+
+		available = {
+			NOR={
+			exists = no
+			}
+		}
+
+		visible = {
+
+			NOR={
+			exists = no
+			}
+		}
+
+		Is_good = no
+		days_mission_timeout = 35
+		fire_only_once = no
+
+		
+
+		timeout_effect = {
+			 add_to_variable = {Vrag_victor_s = 1 }
+
+		}
+	}
+	
+	IMP_srag2= {
+		priority = 307
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+		COR={
+			exists = yes
+			}
+		}
+
+		available = {
+			COR={
+			exists = no
+			}
+		}
+
+		visible = {
+			COR={
+			exists = no
+			}
+		}
+
+		Is_good = no
+		days_mission_timeout = 35
+		fire_only_once = no
+
+		
+
+		timeout_effect = {
+			 
+			 add_to_variable = {Vrag_victor_s1 = 1 }
+			
+		}
+	}
+	IMP_srag3= {
+		priority = 307
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+		SOL={
+			exists = yes
+			}
+		}
+
+		available = {
+			SOL={
+			exists = no
+			}
+		}
+
+		visible = {
+			SOL={
+			exists = no
+			}
+		}
+
+		Is_good = no
+		days_mission_timeout = 35
+		fire_only_once = no
+
+		
+
+		timeout_effect = {
+
+			 add_to_variable = {Vrag_victor_s2 = 1 }
+		}
+	}
+	IMP_itog_N= {
+		priority = 510
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			NOR={
+			exists = yes
+			}
+		}
+
+		available = {
+			NOR={
+			exists = yes
+			}
+		}
+
+		visible = {
+			NOR={
+			exists = yes
+			}
+		    check_variable = {Nash_victor_s > 5}
+			check_variable = {Nash_victor_s > Vrag_victor_s }
+
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			annex_country = {
+			target = NOR
+			transfer_troops = yes
+			}
+		}
+	}
+	IMP_itog_C= {
+		priority = 510
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			COR={
+			exists = yes
+			}
+		}
+
+		available = {
+			COR={
+			exists = yes
+			}
+		}
+
+		visible = {
+			COR={
+			exists = yes
+			}
+		    
+			check_variable = {Nash_victor_s1 > 5 }
+			check_variable = {Nash_victor_s1 > Vrag_victor_s1 }
+			
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			annex_country = {
+			target = COR
+			transfer_troops = yes
+			}
+		}
+	}
+	IMP_itog_S= {
+		priority = 510
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		
+
+		allowed = {
+			SOL={
+			exists = yes
+			}
+		}
+
+		available = {
+			SOL={
+			exists = yes
+			}
+		}
+
+		visible = {
+			SOL={
+			exists = yes
+			}
+		  
+			check_variable = {Nash_victor_s2 > 5 }
+			check_variable = {Nash_victor_s2 > Vrag_victor_s2 }
+
+		}
+
+		cost = 10
+
+		days_re_enable = 0
+
+		days_remove = 25
+
+		
+
+		complete_effect = {
+			annex_country = {
+			target = SOL
+			transfer_troops = yes
+			}
+		}
+	}
+	
+}

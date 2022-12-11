@@ -1,0 +1,54 @@
+scripted_gui = { 
+    verhov_sovet  = {
+        context_type = decision_category
+		window_name = "verhov_sovet"
+		
+		visible = {
+		       
+		}
+		
+		effects = {
+		
+		
+		}
+        
+		triggers = {
+		
+		RUS_visible = {
+				has_variable = RUSSIA
+				
+            }
+		World_visible = {
+		
+                check_variable = { Loyal < 5 }
+            }
+		senate_support_3_visible = {
+		
+                check_variable = { Loyal < 5 }
+            }
+		senate_support_4_visible = {
+			has_variable = Loyal
+			check_variable = { Loyal > 4}
+                check_variable = { Loyal < 10 }
+            }	
+		senate_support_5_visible = {
+				has_variable = Loyal
+				check_variable = { Loyal > 9}
+            }
+		senate_nap_2_visible = {
+				has_variable = Warnap
+                check_variable = { GrazdNap < Warnap }
+            }
+		senate_nap_3_visible = {
+			has_variable = Warnap
+			has_variable = Warnap
+			check_variable = {GrazdNap = Warnap }
+                check_variable = { Loyal < 10 }
+            }	
+		senate_nap_4_visible = {
+				has_variable = GrazdNap
+                check_variable = {GrazdNap > Warnap }
+            }
+		
+    }
+}

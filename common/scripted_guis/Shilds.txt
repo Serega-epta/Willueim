@@ -1,0 +1,57 @@
+scripted_gui = { 
+    shilds  = {
+        context_type = decision_category
+		window_name = "shilds"
+		
+		visible = {
+		       
+		}
+		
+		effects = {
+		
+		
+		
+		}
+        
+		triggers = {
+		kontrol_n_visible = {
+				has_variable =  Nash_victor_s
+				check_variable = {Nash_victor_s > Vrag_victor_s }
+				
+            }
+		kontrol_n1_visible = {
+				has_variable = Nash_victor_s1
+				check_variable = {Nash_victor_s1 > Vrag_victor_s1 }
+            }
+		kontrol_n2_visible = {
+				has_variable = Nash_victor_s2
+				check_variable = {Nash_victor_s2 > Vrag_victor_s2 }
+            }
+	
+		kontrol_ws_visible = {
+				has_variable = Vrag_victor_s
+				check_variable = {Nash_victor_s < Vrag_victor_s }
+            }
+		kontrol_w1_visible = {
+				has_variable = Vrag_victo_s1
+				check_variable = {Nash_victor_s1 < Vrag_victor_s1 }
+            }
+		kontrol_w2_visible = {
+				has_variable = Vrag_victor_s2
+				check_variable = {Nash_victor_s2 < Vrag_victor_s2 }
+            }
+		kontrol_o_visible = {
+				check_variable = {Nash_victor_s = Vrag_victor_s }
+				
+            }
+		kontrol_o1_visible = {
+				check_variable = {Nash_victor_s1 = Vrag_victor_s1 }
+				
+            }
+		kontrol_o2_visible = {
+				check_variable = {Nash_victor_s2 = Vrag_victor_s2 }
+				
+            }
+		
+    }
+}

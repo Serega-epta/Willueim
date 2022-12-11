@@ -1,0 +1,45 @@
+guiTypes = {
+	containerWindowType = {
+		name = "sinopsis2"
+		position = { x = 0 y = 0}	
+		
+		size = { width = 1280 height = 720 }
+		
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		show_sound = menu_open_window
+		click_to_front = yes
+        
+		orientation = UPPER_LEFT
+        
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_main_menu_icon"
+		}
+
+                instantTextboxType = {
+			name = "title"
+			position = { x = 15 y = 11 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "Sinopsis"
+			maxWidth = 240
+			maxHeight = 20
+			format = left	
+		}
+		buttonType = {
+			name = "button_close"
+			position = { x = 410 y = 675 }
+			spriteType = "GFX_sort_button_100x29_2"
+                        frame = 2
+			buttonFont = "hoi_16mbs"
+			buttonText = "Exit"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+			Orientation = "UPPER_LEFT"
+		}
+        
+	
+    }
+}
