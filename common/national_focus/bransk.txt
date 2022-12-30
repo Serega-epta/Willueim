@@ -1,0 +1,300 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = bransk_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = IMP
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1400 }
+	default = no
+
+	focus = {
+		id = IMP_Our_Great_Destiny
+		icon = GFX_Наша_Великая_Судьба1
+		x = 6
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_Order_inside
+		icon = GFX_Порядок_внутри2
+		prerequisite = { focus = IMP_Our_Great_Destiny }
+		x = 2
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_The_Army_That_Will_Be_Great
+		icon = GFX_Армия_которая_станет_Великой1
+		prerequisite = { focus = IMP_Our_Great_Destiny }
+		x = 10
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_Department_K
+		icon = GFX_Отдел_К
+		prerequisite = { focus = IMP_Order_inside }
+		x = 0
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_Steel_Discipline_at_Work
+		icon = GFX_Стальная_дисциплина_на_производстве
+		prerequisite = { focus = IMP_Order_inside }
+		x = 4
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_Apprentices_needed
+		icon = GFX_Стальная_дисциплина_на_производстве
+		prerequisite = { focus = IMP_Steel_Discipline_at_Work }
+		prerequisite = { focus = IMP_Department_K }
+		x = 2
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_The_Power_of_the_Guard
+		icon = GFX_Мощь_Гвардии4
+		prerequisite = { focus = IMP_The_Army_That_Will_Be_Great }
+		x = 8
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_Average_Russian_guys
+		icon = GFX_Простые_русские_парни7
+		prerequisite = { focus = IMP_The_Army_That_Will_Be_Great }
+		x = 12
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_New_Logistics
+		icon = GFX_Новая_Логистика
+		prerequisite = { focus = IMP_Average_Russian_guys }
+		prerequisite = { focus = IMP_The_Power_of_the_Guard }
+		x = 10
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_Our_Humanity
+		icon = GFX_Наша_Человечность1
+		prerequisite = { focus = IMP_New_Logistics }
+		prerequisite = { focus = IMP_Apprentices_needed }
+		x = 6
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_The_Republic_must_fall
+		icon = GFX_Республика_должна_пасть
+		prerequisite = { focus = IMP_New_Logistics }
+		prerequisite = { focus = IMP_Apprentices_needed }
+		x = 6
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_Iron_Officers
+		icon = GFX_Железные_офицеры4
+		prerequisite = { focus = IMP_The_Republic_must_fall }
+		x = 6
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_Blow_up_traitors_houses
+		icon = GFX_Взорвать_дома_предателей3
+		prerequisite = { focus = IMP_The_Republic_must_fall }
+		x = 4
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_The_Perfect_Blitzkrieg
+		icon = GFX_Совершенный_Блицкриг4
+		prerequisite = { focus = IMP_The_Republic_must_fall }
+		x = 8
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+	focus = {
+		id = IMP_In_the_Heat_of_War
+		icon = GFX_В_пекло_войны
+		prerequisite = { focus = IMP_Iron_Officers }
+		prerequisite = { focus = IMP_Blow_up_traitors_houses }
+		prerequisite = { focus = IMP_The_Perfect_Blitzkrieg }
+		x = 6
+		y = 7
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = {
+						id = WORe.3
+				}
+		}
+		
+	}
+
+	}
+	
