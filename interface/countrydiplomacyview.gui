@@ -57,7 +57,7 @@ guiTypes = {
 				position = { x = 245 y = 3 }
 				font = "hoi_18mbs"
 				text = "Germanian"
-				maxWidth = 195
+				maxWidth = 140
 				fixedsize = yes
 				maxHeight = 20
 				format = left
@@ -74,7 +74,7 @@ guiTypes = {
 					position = { x = 0 y = 0 }
 					font = "hoi_18mbs"
 					text = "faction"
-					maxWidth = 173
+					maxWidth = 140
 					maxHeight = 20
 					fixedsize = yes
 					format = left
@@ -86,7 +86,7 @@ guiTypes = {
 				position = { x = 245 y = 43 }
 				font = "hoi_16mbs"
 				text = "Rudolf Kittler"
-				maxWidth = 173
+				maxWidth = 140
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -945,7 +945,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "diplomacy_action_entry"
-		position = { x=0 y=0}
+		position = { x=-2 y=-22}
 		size = { width = 228 height = 28 }
 		clipping = no
 
@@ -1008,7 +1008,7 @@ guiTypes = {
 
 		OverlappingElementsBoxType = {
 			name = "relation_flags"
-			position = { x = 40 y = 5 }
+			position = { x = 40 y = 1 }
 			size = { x = 160 y = 32 }
 			format = left
 			spacing = 1.0
