@@ -1,0 +1,63 @@
+ideas = {
+
+	country = {
+		IMP_1 = {
+			picture = Prekrasnoe_daleko
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = -0.5
+				army_org_factor = -0.5
+				army_org_regain = -0.5
+				
+			}
+		}
+		IMP_2 = {
+			picture = Nepreklonniy_militarizm
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = -0.25
+				army_org_factor = -0.25
+				army_org_regain = -0.25
+			}
+		}
+		IMP_3 = {
+			picture = Uzhas_neizbezhnogo
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = -0.1
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+			}
+		}
+	}
+}

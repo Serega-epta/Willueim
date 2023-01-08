@@ -40,35 +40,27 @@ set_research_slots = 5
 set_convoys = 20
 
 
-
-
 set_politics = {
 	ruling_party = gumanists
 	elections_allowed = no
 }
-
 set_popularities = {
 	gumanists = 84
 	svobod = 6
 	technocracies = 10
 }
+add_ideas = IMP_1
+add_ideas = IMP_2
+add_ideas = IMP_3 
 add_to_variable = { HONOR_GRISHA = 5 }
 add_to_variable = { Loyal = 5 } 
 add_ideas = neorg_army
 set_temp_variable = { temp1 = Loyal }
 multiply_temp_variable = { temp1 = 0.02 }
 set_variable = { Loyal_all = temp1 }
-recruit_character = IMP_grigoriy_svetonos
-add_dynamic_modifier = {  modifier = loyal_sov }	
-add_dynamic_modifier = {  modifier = war_napr }	
-add_dynamic_modifier = {  modifier = peace_napr }	
-create_country_leader = {
-    name = "Dmitry_Milenin"
-    desc = "POLITICS_Dmitry_Milenin_DESC"
-    picture = "gfx/leaders/IMP/Konsul_1.dds"
-    ideology = unificators
-    traits = {
-        #
-    }
-}
-
+recruit_character = IMP_Dmitry_Milenin
+recruit_character = IMP_Grig_Reznov
+recruit_character = IMP_Aleksey_Dorog
+recruit_character = IMP_Michail_Orlov
+recruit_character = IMP_Nikita_Bartonov
+recruit_character = IMP_Nikita_Bartonov2
