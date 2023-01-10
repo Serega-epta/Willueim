@@ -224,5 +224,17 @@ ideas = {
 				political_power_factor = 0.2
 			}
 		}
+		godsdl = {
+			modifier = {
+				army_defence_factor = 0.03
+				training_time_army_factor = 0.03
+				resistance_target = -0.05
+				compliance_gain = 0.05
+			}
+			targeted_modifier = {
+				tag = COA
+				attack_bonus_against = 0.05
+			}
+		}
 	}
 }
