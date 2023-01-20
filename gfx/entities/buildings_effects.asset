@@ -1,9 +1,18 @@
 entity = {
-	name = "building_gas_effect"
+	name = "building_chem_effect"
 	pdxmesh = "building_industrial_complex"
 	default_state = "idle"
 	state = { name = "idle" 
 		event = { time = 0.5 particle = "building_gas_particle" }
+	}	
+	scale = 0.5
+}
+entity = {
+	name = "building_psix_effect"
+	pdxmesh = "building_industrial_complex"
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.5 particle = "building_psix_particle" }
 	}	
 	scale = 0.5
 }

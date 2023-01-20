@@ -1,0 +1,169 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = bransk_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = NOR
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+	
+	
+	focus = {
+		id = AUS_perv
+		icon = GFX_focus_generic_coastal_fort
+		available = {
+		NOT = { is_puppet_of = GER
+		}
+		}
+		x = 5
+		y = 1
+		cancel_if_invalid = no
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = AUS_Get_up_through_the_force
+			}
+	}
+		
+		focus = {
+		id = AUS_Next_game
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = AUS_perv }
+		x = -1
+		y = 1
+		relative_position_id = AUS_perv
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = AUS_End_of_game
+			add_political_power = 60
+			}
+	}
+		
+		focus = {
+		id = AUS_Clear_Politics
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { AUS_Next_game }
+		x = 1
+		y = 1
+		relative_position_id = AUS_Next_game
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			remove_ideas = AUS_Not_political_stabiliti
+			add_political_power = -200
+			}
+		}
+		focus = {
+		id = AUS_Neutraliti_Politics
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { AUS_Clear_Politics }
+		x = 0
+		y = 1
+		cancel_if_invalid = no
+		relative_position_id = AUS_Clear_Politics
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
+			add_political_power = 40
+			}
+		}
+		focus = {
+		id = AUS_ref_army_1
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { AUS_Next_game }
+		x = -1
+		y = 1
+		cancel_if_invalid = no
+		relative_position_id = AUS_Next_game
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = AUS_Death_army_1
+					add_idea = AUS_Death_army_2
+				}
+			}
+		}
+		focus = {
+		id = AUS_ref_army_2
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { AUS_ref_army_1 }
+		x = 0
+		y = 1
+		cancel_if_invalid = no
+		relative_position_id = AUS_ref_army_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = AUS_Death_army_2
+					add_idea = AUS_Death_army_3
+				}
+			}
+		}
+		focus = {
+		id = AUS_Start_Live
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { AUS_ref_army_2 AUS_Neutraliti_Politics}
+		x = 1
+		y = 1
+		cancel_if_invalid = no
+		relative_position_id = AUS_ref_army_2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+				remove_ideas = AUS_Death_army_3
+				swap_ideas = {
+					remove_idea = AUS_Get_up_through_the_force
+					add_idea = AUS_Get_up_force
+				}
+			}
+		}
+		
+	}
+	}
+
+
