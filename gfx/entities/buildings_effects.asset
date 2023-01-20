@@ -1,6 +1,5 @@
 entity = {
 	name = "building_chem_effect"
-	pdxmesh = "building_industrial_complex"
 	default_state = "idle"
 	state = { name = "idle" 
 		event = { time = 0.5 particle = "building_gas_particle" }
@@ -9,7 +8,6 @@ entity = {
 }
 entity = {
 	name = "building_psix_effect"
-	pdxmesh = "building_industrial_complex"
 	default_state = "idle"
 	state = { name = "idle" 
 		event = { time = 0.5 particle = "building_psix_particle" }
@@ -27,7 +25,6 @@ entity = {
 }
 entity = {
 	name = "building_bio_effect"
-	pdxmesh = "building_industrial_complex"
 	default_state = "idle"
 	state = { name = "idle" 
 		event = { time = 0.5 particle = "building_bio_effect_particle" }
