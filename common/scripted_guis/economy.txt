@@ -33,9 +33,52 @@ scripted_gui = {
 	}
 		
 	effects = {
-		button_close_click = {            
-			clear_variable = country_economy
+		left_1_click = {
+			ROOT={
+				military_production = -1
+				subtract_from_variable = { FROM.afactoriesVariable = 1 }
+				subtract_from_variable = { FROM.armyVariable = 10 }
+				subtract_from_variable = { FROM.economyVariable = 100 }
+			}
 		}
+		right_1_click = {
+			ROOT={
+				military_production = 1
+				add_to_variable = { FROM.afactoriesVariable = 1 }
+				add_to_variable = { FROM.armyVariable = 10 }
+				add_to_variable = { FROM.economyVariable = 100 }
+			}
+		}
+		left_2_click = {
+			ROOT={
+				general_production = -1
+				subtract_from_variable = { FROM.cfactoriesVariable = 1 }
+				subtract_from_variable = { FROM.civilianVariable = 10 }
+				subtract_from_variable = { FROM.economyVariable = 100 }
+			}
+		}
+		right_2_click = {
+			ROOT={
+				general_production = 1
+				add_to_variable = { FROM.cfactoriesVariable = 1 }
+				add_to_variable = { FROM.civilianVariable = 10 }
+				add_to_variable = { FROM.economyVariable = 100 }
+			}
+		}
+	trigger = {
+		left_1_click_enabled = {	
+			ROOT={
+				
+				check_variable = { FROM.economyVariable > 0 }
+			}
+		}
+		left_2_click_enabled = {	
+			ROOT={
+				
+				check_variable = { FROM.economyVariable > 0 }
+			}
+		}
+	}	
 	}
     }
 } 

@@ -57,7 +57,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name ="army_title"
-			position = { x = 95 y = 60 }
+			position = { x = 95 y = 55 }
 			font = "hoi_18mbs"
 			text = "ВОЕННАЯ ПРОМЫШЛЕННОСТЬ"
 			maxWidth = 240
@@ -65,9 +65,17 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name ="army"
-			position = { x = 135 y = 110 }
+			position = { x = 45 y = 107 }
 			font = "hoi_16mbs"
-			text = "Военные расходы: [?army1Variable]"
+			text = "Военные расходы: [?armyVariable]"
+			maxWidth = 200
+		}
+		
+		instantTextBoxType = {
+			name ="army_factories"
+			position = { x = 45 y = 80 }
+			font = "hoi_16mbs"
+			text = "Требуется заводов: [?afactoriesVariable]"
 			maxWidth = 200
 		}
 		
@@ -80,13 +88,13 @@ guiTypes = {
 		buttonType = { 
            name ="left_1"
            spriteType = "GFX_scroll_left"
-           position = { x= 16 y = 130 }
+           position = { x= 16 y = 129 }
         }
 		
 		buttonType = { 
            name ="right_1"
            spriteType = "GFX_scroll_right"
-           position = { x= 368 y = 130 }
+           position = { x= 368 y = 129 }
         }
 		
 		#Гражданка
@@ -101,9 +109,17 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name ="civilian"
-			position = { x = 123 y = 210 }
+			position = { x = 45 y = 207 }
 			font = "hoi_16mbs"
-			text = "Гражданские расходы: [?civilian1Variable]"
+			text = "Гражданские расходы: [?civilianVariable]"
+			maxWidth = 200
+		}
+		
+		instantTextBoxType = {
+			name ="civilian_factories"
+			position = { x = 45 y = 180 }
+			font = "hoi_16mbs"
+			text = "Требуется фабрик: [?cfactoriesVariable]"
 			maxWidth = 200
 		}
 		
@@ -116,13 +132,13 @@ guiTypes = {
 		buttonType = { 
            name ="left_2"
            spriteType = "GFX_scroll_left"
-           position = { x= 16 y = 230 }
+           position = { x= 16 y = 229 }
         }
 		
 		buttonType = { 
            name ="right_2"
            spriteType = "GFX_scroll_right"
-           position = { x= 368 y = 230 }
+           position = { x= 368 y = 229 }
         }
 		
 		#Нужно
@@ -131,7 +147,7 @@ guiTypes = {
 			name ="all_need"
 			position = { x = 135 y = 255 }
 			font = "hoi_18mbs"
-			text = "Всего требуется: [?economy1Variable]"
+			text = "Всего требуется: [?economyVariable]"
 			maxWidth = 200
 		}
 	}
