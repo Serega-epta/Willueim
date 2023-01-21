@@ -20,22 +20,10 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "generic_motorized_mesh"
-		file = "gfx/models/units/vehicles/gaz66.mesh"
+		file = "gfx/models/units/vehicles/generic_motorized_01.mesh"
 		
-		animation = { id = "idle"			type = "generic_motorized_idle_animation" }
-		animation = { id = "move"			type = "generic_motorized_move_animation" }
-		
-		scale = 0.022
-	}
-	
-	pdxmesh = {
-		name = "generic_mechanized_mesh"
-		file = "gfx/models/units/vehicles/kozak2.mesh"
-		
-		animation = { id = "idle"			type = "generic_mechanized_idle_animation" }
-		animation = { id = "move"			type = "generic_mechanized_move_animation" }
-		
-		scale = 0.8
+		animation = { id = "idle"			type = "generic_motorized_01_idle_animation" }
+		animation = { id = "move"			type = "generic_motorized_01_move_animation" }
 	}
 
 	pdxmesh = {
@@ -62,37 +50,7 @@ objectTypes = {
 		animation = { id = "idle"			type = "SOV_mechanized_01_idle_animation" }
 		animation = { id = "move"			type = "SOV_mechanized_01_move_animation" }
 	}
-	pdxmesh = {
-		name = "Konsul_mechanized_mesh"
-		file = "gfx/models/units/vehicles/Konsul_marder.mesh"
-		
-		animation = { id = "idle"			type = "SOV_mechanized_01_idle_animation" }
-		animation = { id = "move"			type = "SOV_mechanized_01_move_animation" }
-	}
-	pdxmesh = {
-		name = "Konsul_motorized_mesh"
-		file = "gfx/models/units/vehicles/Konsul_dingo_atf.mesh"
-		
-		animation = { id = "idle"			type = "SOV_mechanized_01_idle_animation" }
-		animation = { id = "move"			type = "SOV_mechanized_01_move_animation" }
-	}
-	pdxmesh = {
-		name = "ODS_mechanized_mesh"
-		file = "gfx/models/units/vehicles/ODS_tigr.mesh"
-		
-		animation = { id = "idle"			type = "SOV_mechanized_01_idle_animation" }
-		animation = { id = "move"			type = "SOV_mechanized_01_move_animation" }
-	}
-	pdxmesh = {
-		name = "ODS_motorized_mesh"
-		file = "gfx/models/units/vehicles/ODS_btr82.mesh"
-		
-		animation = { id = "idle"			type = "ODS_motorized_idle_animation" }
-		animation = { id = "move"			type = "ODS_motorized_move_animation" }
-		animation = { id = "attack"			type = "ODS_motorized_attack_animation" }
-		
-		scale = 0.021
-	}
+	
 	pdxmesh = {
 		name = "SOV_motorized_mesh"
 		file = "gfx/models/units/vehicles/SOV_motorized_01.mesh"

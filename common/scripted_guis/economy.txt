@@ -1,0 +1,41 @@
+scripted_gui = {
+    economy_view = {
+        context_type = player_context
+	parent_window_token = politics_tab
+	window_name = "economy_view"
+	dirty = country_economy
+	
+	visible = {
+		is_ai = no
+	}
+		
+	effects = {
+		economy_button_click = {
+			if = {
+				limit = { NOT = { has_variable = country_economy } }
+				set_variable = { country_economy = 1 }
+			}
+			else = {
+				clear_variable = country_economy
+			}
+			update_position = yes
+		}
+	}
+    }
+
+    economy_main = {
+        context_type = player_context	
+	parent_window_token = politics_tab
+	window_name = "economy_main"
+		
+	visible = {
+            	check_variable = { country_economy > 0 }
+	}
+		
+	effects = {
+		button_close_click = {            
+			clear_variable = country_economy
+		}
+	}
+    }
+} 

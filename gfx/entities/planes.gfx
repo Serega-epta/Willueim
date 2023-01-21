@@ -41,28 +41,16 @@ objectTypes = {
 		file = "gfx/models/units/planes/FRA_plane_heavy.mesh"
 		animation = { id = "idle" type = "bomber_default_idle_animation" }
 	}
-	pdxmesh = {
-		name = "ODS_plane_light_mesh"
-		file = "gfx/models/units/planes/ODS_heli_mi24.mesh"
-		animation = { id = "idle" type = "SOV_attack_helicopter_m24_idle_animation" }
-	}
-	pdxmesh = {
-		name = "ODS_plane_medium_mesh"
-		file = "gfx/models/units/planes/ODS_su25.mesh"
-		animation = { id = "idle" type = "bomber_default_idle_animation" }
-	}
+
 	pdxmesh = {
 		name = "generic_plane_light_mesh"
-		file = "gfx/models/units/planes/mi8.mesh"
-		animation = { id = "idle" type = "generic_helicopter_mi8_idle_animation" }		
-		animation = { id = "attack" type = "generic_helicopter_mi8_attack_animation" }
-		animation = { id = "move" type = "generic_helicopter_mi8_move_animation" }	
-
-		scale = 0.016	
+		file = "gfx/models/units/planes/generic_plane_light.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
 	}
+	
 	pdxmesh = {
 		name = "generic_plane_medium_mesh"
-		file = "gfx/models/units/planes/mig21.mesh"
+		file = "gfx/models/units/planes/generic_plane_medium.mesh"
 		animation = { id = "idle" type = "bomber_default_idle_animation" }
 	}
 	

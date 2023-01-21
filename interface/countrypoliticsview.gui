@@ -7,14 +7,17 @@ guiTypes = {
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300	
-		size = { width=550 height=100%% }
+		size = { width=1200 height=100%% }
 		
 		#hide_sound = menu_close_window
 		show_sound = menu_open_window
 		
-		background = {
-			name = "Background"		
-			quadTextureSprite ="GFX_tiled_plain_bg"
+		containerWindowType = {
+			size = { width=550 height=100%% }
+			background = {
+				name = "Background"		
+				quadTextureSprite ="GFX_tiled_plain_bg"
+			}
 		}
 
 		iconType ={
@@ -95,7 +98,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "exile_info_container"
-			position = { x = -145 y = 241 }
+			position = { x = -800 y = 241 }
 			size = { width = 150 height = 75 }
 			clipping = no
 			Orientation = UPPER_RIGHT
@@ -461,11 +464,11 @@ guiTypes = {
 		containerWindowType = {
 			name = "ideas"
 			position = { x = 0 y = 425 }
-			size = { width=100%% height=100%% }
+			size = { width=550 height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			scroll_wheel_factor = 40
 			smooth_scrolling = yes
-			margin = { top = 14 bottom = 13}
+			margin = { top = 14 bottom = 0}
 		
 			background = {
 				name = "Background"
@@ -496,7 +499,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "close_button"
-			position = { x = -42 y = 9 }
+			position = { x = -693 y = 9 }
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
