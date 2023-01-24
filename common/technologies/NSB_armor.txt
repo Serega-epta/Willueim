@@ -1,0 +1,1357 @@
+technologies = {
+
+
+	@2010 = 0
+	@2015 = 4
+	@2020 = 5
+	@2025 = 6
+	@2030 = 7
+	@2035 = 7
+	@2040 = 8
+	@2045 = 9
+	
+	gwtank_chassis = { #Leichttraktor
+
+		enable_equipments = {
+			light_tank_chassis_0
+			medium_tank_chassis_0
+			heavy_tank_chassis_0
+			light_tank_destroyer_chassis_0
+			medium_tank_destroyer_chassis_0
+			heavy_tank_destroyer_chassis_0
+			light_tank_artillery_chassis_0
+			medium_tank_artillery_chassis_0
+			heavy_tank_artillery_chassis_0
+			light_tank_aa_chassis_0
+			medium_tank_aa_chassis_0
+			heavy_tank_aa_chassis_0
+		}
+		enable_equipment_modules = {
+			tank_torsion_bar_suspension
+			tank_riveted_armor
+			tank_gasoline_engine
+			tank_diesel_engine
+			tank_petrol_electric_engine
+			tank_cast_armor
+			tank_christie_suspension
+			tank_bogie_suspension
+			tank_interleaved_suspension
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+			tank_light_three_man_tank_turret
+			tank_light_fixed_superstructure_turret
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+			tank_medium_fixed_superstructure_turret
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_superstructure_turret
+			tank_super_heavy_four_man_tank_turret
+			tank_super_heavy_three_man_tank_turret
+			tank_modern_tank_turret
+			sloped_armor
+			extra_ammo_storage
+			wet_ammo_storage
+			smoke_launchers
+			expanded_fuel_tank
+		}
+		enable_subunits = {
+			light_armor
+			medium_armor
+			heavy_armor
+		}
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+
+		path = {
+			leads_to_tech = obtvtorogourovnya
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+			cat_light_armor
+		}
+	}
+
+	obtvtorogourovnya = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = obtvtorogourovnya2
+			research_cost_coeff = 1
+		}
+
+
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	obtvtorogourovnya2 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = kachestveniitank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = massovitank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = volshebnitank
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 4 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	kachestveniitank = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = kachestveniitank2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 6 y = 6 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	kachestveniitank2 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = kachestveniitank3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 6 y = 8 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	kachestveniitank3 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		
+		path = {
+			leads_to_tech = kachestveniitank4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 6 y = 10 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	kachestveniitank4 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 6 y = 12 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	massovitank = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = massovitank2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 6 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	massovitank2 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = massovitank3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 8 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	massovitank3 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		
+		path = {
+			leads_to_tech = massovitank4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 10 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	massovitank4 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 12 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	
+	volshebnitank = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = volshebnitank2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -2 y = 6 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	volshebnitank2 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = volshebnitank3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -2 y = 8 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	volshebnitank3 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		
+		path = {
+			leads_to_tech = volshebnitank4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -2 y = 10 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+	volshebnitank4 = { 
+
+		enable_equipments = {
+			heavy_tank_chassis_1
+		}
+
+		enable_subunits = {
+			heavy_armor
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -2 y = 12 }
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
+
+
+
+	
+	armor_tech_1 = {
+		enable_equipment_modules = {
+			tank_welded_armor
+		}
+
+		path = {
+			leads_to_tech = armor_tech_2
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = armor_tech_1_tt
+		}
+		show_effect_as_desc = yes
+
+		research_cost = 1
+		start_year = 1936
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 3 y = 4 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	armor_tech_2 = {
+
+		enable_equipment_modules = {
+			armor_skirts
+		}
+		path = {
+			leads_to_tech = armor_tech_3
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = armor_tech_2_tt
+		}
+		show_effect_as_desc = yes
+
+		research_cost = 1
+		start_year = 1936
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 3 y = 6 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	armor_tech_3 = {
+
+
+		path = {
+			leads_to_tech = armor_tech_4
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = armor_tech_3_tt
+		}
+		show_effect_as_desc = yes
+
+		research_cost = 1
+		start_year = 1941
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 3 y = 8 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	armor_tech_4 = {
+
+		research_cost = 1
+		start_year = 1944
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 3 y = 10 }
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = armor_tech_4_tt
+		}
+		show_effect_as_desc = yes
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	engine_tech_1 = {
+
+
+		path = {
+			leads_to_tech = engine_tech_2
+			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = engine_tech_1_tt
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 1934
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 4 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	engine_tech_2 = {
+
+
+		path = {
+			leads_to_tech = engine_tech_3
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = engine_tech_2_tt
+		}
+		show_effect_as_desc = yes
+
+		research_cost = 1
+		start_year = 1936
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 6 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	engine_tech_3 = {
+
+
+		path = {
+			leads_to_tech = engine_tech_4
+			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = engine_tech_3_tt
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 1941
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 8 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	engine_tech_4 = {
+
+		research_cost = 1
+		start_year = 1944
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 10 }
+		}
+		on_research_complete = {
+			custom_effect_tooltip = engine_tech_4_tt
+		}
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+}

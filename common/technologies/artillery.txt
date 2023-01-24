@@ -1,0 +1,1372 @@
+technologies = {
+
+	gw_artillery = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+
+		path = {
+			leads_to_tech = stvolartillery
+			research_cost_coeff = 1
+		}
+
+
+		path = {
+			leads_to_tech = reaktivartillery
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = boepripas
+			research_cost_coeff = 1
+		}
+ 
+
+		enable_equipment_modules = {
+			ship_anti_air_1
+			tank_small_cannon
+			secondary_turret_small_cannon
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	stvolartillery = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+
+		path = {
+			leads_to_tech = stvolartillerybonus
+			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = {
+			ship_anti_air_1
+			tank_small_cannon
+			secondary_turret_small_cannon
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 2 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	stvolartillerybonus = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = stvolartillery2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 4 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	stvolartillery2 = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+
+		path = {
+			leads_to_tech = stvolartillerybonus2
+			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = {
+			ship_anti_air_1
+			tank_small_cannon
+			secondary_turret_small_cannon
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 6 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	stvolartillerybonus2 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = stvolartillery3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 8 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	stvolartillery3 = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+
+		path = {
+			leads_to_tech = stvolartillerybonus3
+			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = {
+			ship_anti_air_1
+			tank_small_cannon
+			secondary_turret_small_cannon
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 10 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	
+	stvolartillerybonus3 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 12 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+	reaktivartillery = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+
+		path = {
+			leads_to_tech = reaktivartillerybonus
+			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = {
+			ship_anti_air_1
+			tank_small_cannon
+			secondary_turret_small_cannon
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = artillery_folder
+			position = { x = -4 y = 2 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	reaktivartillerybonus = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = reaktivartillerybonus2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = -4 y = 4 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	reaktivartillerybonus2 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = reaktivartillery2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = -4 y = 6 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+		
+	reaktivartillery2 = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+
+		path = {
+			leads_to_tech = reaktivartillerybonus3
+			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = {
+			ship_anti_air_1
+			tank_small_cannon
+			secondary_turret_small_cannon
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = artillery_folder
+			position = { x = -4 y = 8 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	reaktivartillerybonus3 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = reaktivartillery3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = -4 y = 10 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	reaktivartillery3 = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+
+		enable_equipment_modules = {
+			ship_anti_air_1
+			tank_small_cannon
+			secondary_turret_small_cannon
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = artillery_folder
+			position = { x = -4 y = 12 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+
+
+	boepripas = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripascalibr
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = boepripasvid
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = boepripasii
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 2 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+
+	boepripascalibr = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripascalibr2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 4 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripascalibr2 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripascalibr3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 6 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripascalibr3 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripascalibr4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 8 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripascalibr4 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = boepripascalibr5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 10 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	boepripascalibr5 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+		
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 12 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+
+	boepripasvid = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripasvid2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 4 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasvid2 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripasvid3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 6 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasvid3 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripasvid4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 8 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasvid4 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripasvid5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 10 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasvid5 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 12 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+
+
+	boepripasii = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripasii2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 4 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasii2 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripasii3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 6 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasii3 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripasii4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 8 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasii4 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = boepripasii5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 10 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasii5 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		light_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		medium_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		super_heavy_sp_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		modern_sp_artillery_brigade= {
+			soft_attack = 0.1
+		}
+		
+		research_cost = 1
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 12 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
