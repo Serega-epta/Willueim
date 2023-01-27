@@ -1,0 +1,79 @@
+sub_units = {
+
+	automatizated_tank = {
+		abbreviation = "AUT"
+		sprite = heavy_armor
+		map_icon_category = armored
+		priority = 2520
+		ai_priority = 2520
+		active = yes
+
+		type = {
+			armor
+		}
+		
+		group = armor
+
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+		combat_width = 2
+
+		need = {
+			super_heavy_tank_chassis = 50
+		}
+
+		manpower = 10
+		max_organisation = 100
+		default_morale = 0.4
+		max_strength = 4
+		training_time = 60
+		weight = 2
+		
+		supply_consumption = 0.4
+
+		#Tanks are awesome
+		# soft_attack = 0.8
+
+		suppression = 3.5
+
+		breakthrough = 0.80	
+
+		forest = {
+		    attack = 0.5
+			movement = 0.5
+		}
+		hills = {
+		    attack = 0.5
+		}
+		mountain = 	{
+		    attack = 0.5
+		}
+		jungle = {
+		    attack = 0.5
+			movement = 0.5
+		}
+		marsh = {
+		    attack = 0.5
+			movement = 0.5
+		}
+		urban = {
+			attack = 0.5
+			defence = 0.5
+		}
+		river = { 
+			attack = 0.5
+			movement = 0.5
+		}
+		amphibious = { 
+			attack = 2.8
+		}
+		fort = {
+			attack = 0.8
+		}
+	}
+}
