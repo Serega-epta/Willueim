@@ -32,45 +32,65 @@ scripted_gui = {
 		
 	effects = {
 		left_1_click = {
-			ROOT={
-				subtract_from_variable = { FROM.afactoriesVariable = 1 }
-				subtract_from_variable = { FROM.armyVariable = 10 }
-				subtract_from_variable = { FROM.economyVariable = 100 }
+			if = {
+				limit = { OR = { has_political_power > 25 has_political_power = 25 } }
+				add_political_power = -25
+				add_to_variable = { economyVariable = 100 }
+				subtract_from_variable = { asponsorVariable = 1 }
 			}
-		}
-		right_1_click = {
-			ROOT={
-				add_to_variable = { FROM.afactoriesVariable = 1 }
-				add_to_variable = { FROM.armyVariable = 10 }
-				add_to_variable = { FROM.economyVariable = 100 }
+			else = {
+				limit = { OR = { has_political_power < 0 has_political_power = 0 } }
+				add_political_power = 0
+				add_to_variable = { economyVariable = 0 }
+				subtract_from_variable = { asponsorVariable = 0 }
 			}
 		}
 		left_2_click = {
-			ROOT={
-				subtract_from_variable = { FROM.cfactoriesVariable = 1 }
-				subtract_from_variable = { FROM.civilianVariable = 10 }
-				subtract_from_variable = { FROM.economyVariable = 100 }
+			if = {
+				limit = { OR = { has_political_power > 25 has_political_power = 25 } }
+				add_political_power = -25
+				add_to_variable = { economyVariable = 100 }
+				subtract_from_variable = { csponsorVariable = 1 }
+			}
+			else = {
+				limit = { OR = { has_political_power < 0 has_political_power = 0 } }
+				add_political_power = 0
+				add_to_variable = { economyVariable = 0 }
+				subtract_from_variable = { asponsorVariable = 0 }
+			}
+		}
+		right_1_click = {
+			if = {
+				limit = { OR = { check_variable = { economyVariable > 100 } check_variable = { economyVariable = 100 } } OR = { has_political_power > 25 has_political_power = 25 } }
+				add_political_power = -25
+				subtract_from_variable = { economyVariable = 100 }
+				add_to_variable = { asponsorVariable = 1 }
+			}
+			else = {
+				limit = { check_variable = { economyVariable < 100 } OR = { has_political_power < 0 has_political_power = 0 } }
+				add_political_power = 0
+				subtract_from_variable = { economyVariable = 0 }
+				add_to_variable = { asponsorVariable = 0 }
 			}
 		}
 		right_2_click = {
-			ROOT={
-				add_to_variable = { FROM.cfactoriesVariable = 1 }
-				add_to_variable = { FROM.civilianVariable = 10 }
-				add_to_variable = { FROM.economyVariable = 100 }
+			if = {
+				limit = { OR = { check_variable = { economyVariable > 100 } check_variable = { economyVariable = 100 } } OR = { has_political_power > 25 has_political_power = 25 } }
+				add_political_power = -25
+				subtract_from_variable = { economyVariable = 100 }
+				add_to_variable = { csponsorVariable = 1 }
+			}
+			else = {
+				limit = { check_variable = { economyVariable < 100 } OR = { has_political_power < 0 has_political_power = 0 } }
+				add_political_power = 0
+				subtract_from_variable = { economyVariable = 0 }
+				add_to_variable = { asponsorVariable = 0 }
 			}
 		}
 	}
-	trigger = {
-		left_1_click_enabled = {	
-			ROOT={
-				check_variable = { FROM.economyVariable > 0 }
-			}
-		}
-		left_2_click_enabled = {	
-			ROOT={
-				check_variable = { FROM.economyVariable > 0 }
-			}
-		}
+
+	triggers = {
+		
 	}	
     }
 } 

@@ -51,9 +51,9 @@ guiTypes = {
 			maxWidth = 200
 		}
 		
-		## МЕХАНИКА ##
+		#### МЕХАНИКА ####
 		
-		#Военка
+		###Военка###
 		
 		instantTextBoxType = {
 			name ="army_title"
@@ -75,7 +75,7 @@ guiTypes = {
 			name ="army_factories"
 			position = { x = 45 y = 80 }
 			font = "hoi_16mbs"
-			text = "Требуется заводов: [?afactoriesVariable]"
+			text = "Число спонсирования: [?asponsorVariable]"
 			maxWidth = 200
 		}
 		
@@ -97,6 +97,12 @@ guiTypes = {
            spriteType = "GFX_scroll_right"
            position = { x= 368 y = 129 }
 		   pdx_tooltip = "right_1_tt"
+        }
+		
+		iconType = { 
+           name ="picker_1"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x= 185 y = 129 }
         }
 		
 		#Гражданка
@@ -121,7 +127,7 @@ guiTypes = {
 			name ="civilian_factories"
 			position = { x = 45 y = 180 }
 			font = "hoi_16mbs"
-			text = "Требуется фабрик: [?cfactoriesVariable]"
+			text = "Число спонсирования: [?csponsorVariable]"
 			maxWidth = 200
 		}
 		
@@ -144,15 +150,22 @@ guiTypes = {
            position = { x= 368 y = 229 }
 		   pdx_tooltip = "right_2_tt"
         }
+		iconType = { 
+           name ="picker_2"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x= 185 y = 229 }
+        }
 		
-		#Нужно
+		###Имеется###
 		
 		instantTextBoxType = {
 			name ="all_need"
-			position = { x = 135 y = 255 }
+			position = { x = 110 y = 255 }
 			font = "hoi_18mbs"
-			text = "Всего требуется: [?economyVariable]"
-			maxWidth = 200
+			text = "Имеется: [?economyVariable] Черных рублей"
+			maxWidth = 280
+			pdx_tooltip = "all_have_tt"
+			pdx_tooltip_delayed = "all_have_tt_delayed"
 		}
 	}
 }

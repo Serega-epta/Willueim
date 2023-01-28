@@ -1,0 +1,18 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = { 
+				limit = {
+					SWR = { has_capitulated = yes}
+				}
+				LWV = {
+					white_peace = SWR
+					annex_country = {
+						target = SWR
+						transfer_troops = no
+					}
+				}
+			}
+		}
+	}
+}

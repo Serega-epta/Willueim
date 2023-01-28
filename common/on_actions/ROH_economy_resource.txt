@@ -1,0 +1,40 @@
+on_actions = {
+	on_startup = {
+		set_variable = { economyVariable = 0 }
+	}
+
+	on_weekly = {
+		effect = {
+			set_variable = { economyVariable1 = 0 }
+
+			if = {
+				linit = { any_controlled_state = { FROM.resource@coal > 0 } }
+				add_to_variable = { economyVariable1 = FROM.resource@coal }
+			}
+			else = {
+				linit = { all_controlled_state = { FROM.resource@coal = 0 } }
+				multiply_variable = { economyVariable1 = 1 }
+			}
+
+			if = {
+				linit = { any_controlled_state = { FROM.resource@oil > 0 } }
+				add_to_variable = { economyVariable1 = FROM.resource@oil }
+			}
+			else = {
+				linit = { all_controlled_state = { FROM.resource@oil = 0 } }
+				multiply_variable = { economyVariable1 = 1 }
+			}
+
+			if = {
+				linit = { any_controlled_state = { FROM.resource@energy > 0 } }
+				add_to_variable = { economyVariable1 = FROM.resource@energy }
+			}
+			else = {
+				linit = { all_controlled_state = { FROM.resource@energy = 0 } }
+				multiply_variable = { economyVariable1 = 1 }
+			}
+
+			add_to_variable = { economyVariable = economyVariable1 }
+		}
+	}
+} 

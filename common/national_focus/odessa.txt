@@ -546,7 +546,9 @@ focus_tree = {
 	focus = {
 		id = ODS_16
 		icon = GFX_ODS_dictat_voli_16
-		prerequisite = { focus = ODS_1 }
+		available = {
+			has_completed_focus = ODS_1
+		}
 		x = 21
 		y = 1
 		cost = 10
@@ -632,7 +634,9 @@ focus_tree = {
 	focus = {
 		id = ODS_21
 		icon = GFX_ODS_mehanization_zamisel_21
-		prerequisite = { focus = ODS_16 }
+		available = {
+			has_completed_focus = ODS_16
+		}
 		x = 29
 		y = 1
 		cost = 10
