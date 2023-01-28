@@ -1,6 +1,6 @@
 scripted_gui = {
     economy_view = {
-        context_type = player_context
+    context_type = player_context
 	parent_window_token = politics_tab
 	window_name = "economy_view"
 	dirty = country_economy
@@ -22,7 +22,7 @@ scripted_gui = {
     }
 
     economy_main = {
-        context_type = player_context	
+    context_type = player_context	
 	parent_window_token = politics_tab
 	window_name = "economy_main"
 		
@@ -33,13 +33,13 @@ scripted_gui = {
 	effects = {
 		left_1_click = {
 			if = {
-				limit = { OR = { has_political_power > 25 has_political_power = 25 } }
+				limit = { OR = { has_political_power > 25 has_political_power = 25 } check_variable = { asponsorVariable > -10 } }
 				add_political_power = -25
 				add_to_variable = { economyVariable = 100 }
 				subtract_from_variable = { asponsorVariable = 1 }
 			}
 			else = {
-				limit = { OR = { has_political_power < 0 has_political_power = 0 } }
+				limit = { OR = { has_political_power < 0 has_political_power = 0 } check_variable = { asponsorVariable = -10 } }
 				add_political_power = 0
 				add_to_variable = { economyVariable = 0 }
 				subtract_from_variable = { asponsorVariable = 0 }
@@ -47,27 +47,27 @@ scripted_gui = {
 		}
 		left_2_click = {
 			if = {
-				limit = { OR = { has_political_power > 25 has_political_power = 25 } }
+				limit = { OR = { has_political_power > 25 has_political_power = 25 } check_variable = { csponsorVariable > -10 } }
 				add_political_power = -25
 				add_to_variable = { economyVariable = 100 }
 				subtract_from_variable = { csponsorVariable = 1 }
 			}
 			else = {
-				limit = { OR = { has_political_power < 0 has_political_power = 0 } }
+				limit = { OR = { has_political_power < 0 has_political_power = 0 } check_variable = { csponsorVariable = -10 } }
 				add_political_power = 0
 				add_to_variable = { economyVariable = 0 }
-				subtract_from_variable = { asponsorVariable = 0 }
+				subtract_from_variable = { csponsorVariable = 0 }
 			}
 		}
 		right_1_click = {
 			if = {
-				limit = { OR = { check_variable = { economyVariable > 100 } check_variable = { economyVariable = 100 } } OR = { has_political_power > 25 has_political_power = 25 } }
+				limit = { OR = { check_variable = { economyVariable > 100 } check_variable = { economyVariable = 100 } } OR = { has_political_power > 25 has_political_power = 25 } check_variable = { asponsorVariable < 11 } }
 				add_political_power = -25
 				subtract_from_variable = { economyVariable = 100 }
 				add_to_variable = { asponsorVariable = 1 }
 			}
 			else = {
-				limit = { check_variable = { economyVariable < 100 } OR = { has_political_power < 0 has_political_power = 0 } }
+				limit = { check_variable = { economyVariable < 100 } OR = { has_political_power < 0 has_political_power = 0 } check_variable = { asponsorVariable = 11 } }
 				add_political_power = 0
 				subtract_from_variable = { economyVariable = 0 }
 				add_to_variable = { asponsorVariable = 0 }
@@ -75,22 +75,158 @@ scripted_gui = {
 		}
 		right_2_click = {
 			if = {
-				limit = { OR = { check_variable = { economyVariable > 100 } check_variable = { economyVariable = 100 } } OR = { has_political_power > 25 has_political_power = 25 } }
+				limit = { OR = { check_variable = { economyVariable > 100 } check_variable = { economyVariable = 100 } } OR = { has_political_power > 25 has_political_power = 25 } check_variable = { csponsorVariable < 11 } }
 				add_political_power = -25
 				subtract_from_variable = { economyVariable = 100 }
 				add_to_variable = { csponsorVariable = 1 }
 			}
 			else = {
-				limit = { check_variable = { economyVariable < 100 } OR = { has_political_power < 0 has_political_power = 0 } }
+				limit = { check_variable = { economyVariable < 100 } OR = { has_political_power < 0 has_political_power = 0 } check_variable = { csponsorVariable = 11 } }
 				add_political_power = 0
 				subtract_from_variable = { economyVariable = 0 }
-				add_to_variable = { asponsorVariable = 0 }
+				add_to_variable = { csponsorVariable = 0 }
 			}
 		}
 	}
 
 	triggers = {
+
+		picker_1_visible = {
+            check_variable = { asponsorVariable = 0 }
+        }
+		picker_1_1_visible = {
+            check_variable = { asponsorVariable = 1 }
+        }
+		picker_1_2_visible = {
+            check_variable = { asponsorVariable = 2 }
+        }
+		picker_1_3_visible = {
+            check_variable = { asponsorVariable = 3 }
+        }
+		picker_1_4_visible = {
+            check_variable = { asponsorVariable = 4 }
+        }
+		picker_1_5_visible = {
+            check_variable = { asponsorVariable = 5 }
+        }
+		picker_1_6_visible = {
+            check_variable = { asponsorVariable = 6 }
+        }
+		picker_1_7_visible = {
+            check_variable = { asponsorVariable = 7 }
+        }
+		picker_1_8_visible = {
+            check_variable = { asponsorVariable = 8 }
+        }
+		picker_1_9_visible = {
+            check_variable = { asponsorVariable = 9 }
+        }
+		picker_1_10_visible = {
+            check_variable = { asponsorVariable = 10 }
+        }
+		picker_1_11_visible = {
+            check_variable = { asponsorVariable = 11 }
+        }
 		
+		
+		picker_1_12_visible = {
+            check_variable = { asponsorVariable = -1 }
+        }
+		picker_1_13_visible = {
+            check_variable = { asponsorVariable = -2 }
+        }
+		picker_1_14_visible = {
+            check_variable = { asponsorVariable = -3 }
+        }
+		picker_1_15_visible = {
+            check_variable = { asponsorVariable = -4 }
+        }
+		picker_1_16_visible = {
+            check_variable = { asponsorVariable = -5 }
+        }
+		picker_1_17_visible = {
+            check_variable = { asponsorVariable = -6 }
+        }
+		picker_1_18_visible = {
+            check_variable = { asponsorVariable = -7 }
+        }
+		picker_1_19_visible = {
+            check_variable = { asponsorVariable = -8 }
+        }
+		picker_1_20_visible = {
+            check_variable = { asponsorVariable = -9 }
+        }
+		picker_1_21_visible = {
+            check_variable = { asponsorVariable = -10 }
+        }
+
+
+
+
+		picker_2_1_visible = {
+            check_variable = { сsponsorVariable = 1 }
+        }
+		picker_2_2_visible = {
+            check_variable = { сsponsorVariable = 2 }
+        }
+		picker_2_3_visible = {
+            check_variable = { сsponsorVariable = 3 }
+        }
+		picker_2_4_visible = {
+            check_variable = { сsponsorVariable = 4 }
+        }
+		picker_2_5_visible = {
+            check_variable = { сsponsorVariable = 5 }
+        }
+		picker_2_6_visible = {
+            check_variable = { сsponsorVariable = 6 }
+        }
+		picker_2_7_visible = {
+            check_variable = { сsponsorVariable = 7 }
+        }
+		picker_2_8_visible = {
+            check_variable = { сsponsorVariable = 8 }
+        }
+		picker_2_9_visible = {
+            check_variable = { сsponsorVariable = 9 }
+        }
+		picker_2_10_visible = {
+            check_variable = { сsponsorVariable = 10 }
+        }
+		picker_2_11_visible = {
+            check_variable = { сsponsorVariable = 11 }
+        }
+		
+		
+		picker_2_12_visible = {
+            check_variable = { сsponsorVariable = -1 }
+        }
+		picker_2_13_visible = {
+            check_variable = { сsponsorVariable = -2 }
+        }
+		picker_2_14_visible = {
+            check_variable = { сsponsorVariable = -3 }
+        }
+		picker_2_15_visible = {
+            check_variable = { сsponsorVariable = -4 }
+        }
+		picker_2_16_visible = {
+            check_variable = { сsponsorVariable = -5 }
+        }
+		picker_2_17_visible = {
+            check_variable = { сsponsorVariable = -6 }
+        }
+		picker_2_18_visible = {
+            check_variable = { сsponsorVariable = -7 }
+        }
+		picker_2_19_visible = {
+            check_variable = { сsponsorVariable = -8 }
+        }
+		picker_2_20_visible = {
+            check_variable = { сsponsorVariable = -9 }
+        }
+		picker_2_21_visible = {
+            check_variable = { сsponsorVariable = -10 }
+        }
 	}	
-    }
 } 

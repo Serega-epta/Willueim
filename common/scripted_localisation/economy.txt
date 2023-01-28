@@ -1,0 +1,42 @@
+defined_text = { 
+	name = csponsor_text
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable > 0 }
+		}
+		localization_key = "[?csponsorVariable|0G]"
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 0 }
+		}
+		localization_key = "[?csponsorVariable|0Y]"
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable < 0 }
+		}
+		localization_key = "[?csponsorVariable|0R]"
+	}
+}
+defined_text = { 
+	name = asponsor_text
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable > 0 }
+		}
+		localization_key = "[?asponsorVariable|0G]"
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 0 } 
+		}
+		localization_key = "[?asponsorVariable|0Y]"
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable < 0 }
+		}
+		localization_key = "[?asponsorVariable|0R]"
+	}
+}

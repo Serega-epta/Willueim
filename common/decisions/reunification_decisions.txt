@@ -60,4 +60,46 @@ reunification_category = {
 			custom_effect_tooltip = reunification_of_ukraine_tt
 		}	
 	}
-}=
+
+	create_united_central_russia = {
+		
+		icon = form_nation
+
+		fire_only_once = yes
+
+		available = {
+			is_subject = no
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = all_states_of_cen_russia_tt	
+				controls_state = 895
+				controls_state = 242
+			}		
+		}
+
+		visible = {
+			OR = {
+				original_tag = IMP
+			}			
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = IMP
+					}
+					IMP = {
+						set_cosmetic_tag = IMP_unified_cen_rus
+					}
+					play_song = reunification_IMP
+				}
+				set_capital = { state = 895 remember_old_capital = no }
+				add_political_power = 100
+				add_stability = 0.15
+				add_research_slot = 1
+			}
+			custom_effect_tooltip = reunification_of_cen_russia_tt
+		}	
+	}
+}
