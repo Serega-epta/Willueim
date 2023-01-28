@@ -4,19 +4,19 @@ defined_text = {
 		trigger = {
 			check_variable = { csponsorVariable > 0 }
 		}
-		localization_key = "[?csponsorVariable|0G]"
+		localization_key = "[?csponsorVariable|0§G]"
 	}
 	text = {
 		trigger = {
 			check_variable = { csponsorVariable = 0 }
 		}
-		localization_key = "[?csponsorVariable|0Y]"
+		localization_key = "[?csponsorVariable|0§Y]"
 	}
 	text = {
 		trigger = {
 			check_variable = { csponsorVariable < 0 }
 		}
-		localization_key = "[?csponsorVariable|0R]"
+		localization_key = "[?csponsorVariable|0§R]"
 	}
 }
 defined_text = { 
@@ -25,18 +25,18 @@ defined_text = {
 		trigger = {
 			check_variable = { asponsorVariable > 0 }
 		}
-		localization_key = "[?asponsorVariable|0G]"
+		localization_key = "[?asponsorVariable|0§G]"
 	}
 	text = {
 		trigger = {
 			check_variable = { asponsorVariable = 0 } 
 		}
-		localization_key = "[?asponsorVariable|0Y]"
+		localization_key = "[?asponsorVariable|0§Y]"
 	}
 	text = {
 		trigger = {
 			check_variable = { asponsorVariable < 0 }
 		}
-		localization_key = "[?asponsorVariable|0R]"
+		localization_key = "[?asponsorVariable|0§R]"
 	}
 }
