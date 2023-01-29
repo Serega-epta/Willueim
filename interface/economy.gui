@@ -72,11 +72,19 @@ guiTypes = {
 		}
 		
 		instantTextBoxType = {
-			name ="army_factories"
+			name ="army_spons"
 			position = { x = 45 y = 80 }
 			font = "hoi_16mbs"
-			text = "Число спонсирования: [?asponsorVariable]"
-			maxWidth = 200
+			text = "Число спонсирований: " 
+			maxWidth = 140
+		}
+		
+		instantTextBoxType = {
+			name ="army_spons_num"
+			position = { x = 185 y = 80 }
+			font = "hoi_16mbs"
+			text = [asponsor_text] 
+			maxWidth = 35
 		}
 		
 		iconType = { 
@@ -124,12 +132,20 @@ guiTypes = {
 		}
 		
 		instantTextBoxType = {
-			name ="civilian_factories"
+			name ="civilian_spons"
 			position = { x = 45 y = 180 }
 			font = "hoi_16mbs"
-			text = "Число спонсирования: [?csponsorVariable]"
-			maxWidth = 200
+			text = "Число спонсирований: "
+			maxWidth = 140
 		}
+		
+		instantTextBoxType = {
+			name ="civilian_spons_num"
+			position = { x = 185 y = 180 }
+			font = "hoi_16mbs"
+			text = [csponsor_text] 
+			maxWidth = 35
+		}		
 		
 		iconType = { 
            name ="Pol_2"
@@ -159,13 +175,235 @@ guiTypes = {
 		###Имеется###
 		
 		instantTextBoxType = {
-			name ="all_need"
+			name ="all_have"
 			position = { x = 110 y = 255 }
 			font = "hoi_18mbs"
 			text = "Имеется: [?economyVariable] Черных рублей"
-			maxWidth = 280
+			maxWidth = 250
 			pdx_tooltip = "all_have_tt"
 			pdx_tooltip_delayed = "all_have_tt_delayed"
 		}
+		
+		###Вай бля точки###
+		##+Военка##
+		iconType = { 
+           name ="picker_1_1"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 200 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_2"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 215 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_3"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 230 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_4"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 245 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_5"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 260  y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_6"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 275 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_7"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 290 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_8"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 305 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_9"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 320 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_10"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 335 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_11"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 350 y = 129 }
+        }
+		
+		##-Военка##
+
+		iconType = { 
+           name ="picker_1_12"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 170 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_13"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 155 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_14"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 140 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_15"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 125 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_16"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 110 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_17"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 95 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_18"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 80 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_19"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 65 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_20"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 50 y = 129 }
+        }
+		iconType = { 
+           name ="picker_1_21"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 35 y = 129 }
+        }
+
+		##+Гражданка##
+		
+		iconType = { 
+           name ="picker_2_1"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 200 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_2"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 215 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_3"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 230 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_4"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 245 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_5"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 260 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_6"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 275 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_7"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 290 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_8"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 305 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_9"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 320 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_10"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 335 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_11"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 350 y = 229 }
+        }
+
+		##-Гражданка##
+
+		iconType = { 
+           name ="picker_2_12"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 170 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_13"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 155 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_14"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 140 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_15"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 125 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_16"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 110 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_17"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 95 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_18"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 80 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_19"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 65 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_20"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 50 y = 229 }
+        }
+		iconType = { 
+           name ="picker_2_21"
+           spriteType = "GFX_color_picker_scroll_drager"
+           position = { x = 35 y = 229 }
+        }
 	}
 }
