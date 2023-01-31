@@ -1,7 +1,7 @@
 equipments = {
 
 	motorized_equipment = {
-		year = 2010
+		year = 1936
 
 		is_archetype = yes
 		picture = archetype_motorized_equipment		
@@ -36,23 +36,18 @@ equipments = {
 	}
 
 	motorized_equipment_1 = {
-		year = 2010
+		year = 2015
 		parent = motorized_equipment
 		archetype = motorized_equipment
 		priority = 30	
 		active = yes
-		visual_level = 0	
-		
-		maximum_speed = 12
-		reliability = 0.8
-		hardness = 0.1
-		breakthrough = 5
+		visual_level = 0		
 	}
 	
 	
 	
 	motorized_equipment_2 = {
-		year = 2015
+		year = 2020
 
 		type = {
 			#infantry #Removing inf type 
@@ -64,8 +59,8 @@ equipments = {
 		maximum_speed = 20
 		reliability = 0.8
 		hardness = 0.1
+
 		breakthrough = 10
-		
 		archetype = motorized_equipment
 		parent = motorized_equipment_1
 		#Space taken in convoy
@@ -86,7 +81,7 @@ equipments = {
 	
 
 	motorized_equipment_3 = {
-		year = 2020
+		year = 2027
 
 
 		type = {
@@ -119,7 +114,7 @@ equipments = {
 	
 	
 	motorized_equipment_4 = {
-		year = 2025
+		year = 2033
 
 		type = {
 			#infantry #Removing inf type 
@@ -148,95 +143,7 @@ equipments = {
 		supply_truck = yes
 	}
 	
-	motorized_equipment_5 = {
-		year = 2033
-
-		type = {
-			#infantry #Removing inf type 
-			motorized
-		}
-		parent = motorized_equipment_4
-		interface_category = interface_category_land
-		visual_level = 4
-		maximum_speed = 30
-		reliability = 1.5
-		hardness = 0.1
-		archetype = motorized_equipment
-		breakthrough = 25
-
-		#Space taken in convoy
-		lend_lease_cost = 6
-
-		build_cost_ic = 5.5
-		resources = {
-			#oil = 1
-			rubber = 3
-			steel = 4
-		}
-		
-		fuel_consumption = 2.8
-		supply_truck = yes
-	}
 	
-	motorized_equipment_6 = {
-		year = 2040
-
-		type = {
-			#infantry #Removing inf type 
-			motorized
-		}
-		parent = motorized_equipment_5
-		interface_category = interface_category_land
-		visual_level = 5
-		maximum_speed = 35
-		reliability = 2
-		hardness = 0.1
-		archetype = motorized_equipment
-		breakthrough = 30
-
-		#Space taken in convoy
-		lend_lease_cost = 8
-
-		build_cost_ic = 8
-		resources = {
-			#oil = 1
-			rubber = 2
-			steel = 2
-		}
-		
-		fuel_consumption = 3
-		supply_truck = yes
-	}
-	
-	motorized_equipment_7 = {
-		year = 2045
-
-		type = {
-			#infantry #Removing inf type 
-			motorized
-		}
-		parent = motorized_equipment_6
-		interface_category = interface_category_land
-		visual_level = 6
-		maximum_speed = 40
-		reliability = 2
-		hardness = 0.1
-		archetype = motorized_equipment
-		breakthrough = 35
-
-		#Space taken in convoy
-		lend_lease_cost = 10
-
-		build_cost_ic = 8.5
-		resources = {
-			#oil = 1
-			rubber = 3
-			steel = 3
-		}
-		
-		fuel_consumption = 4
-		supply_truck = yes
-	}
 	
 	
 
