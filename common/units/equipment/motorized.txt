@@ -1,7 +1,7 @@
 equipments = {
 
 	motorized_equipment = {
-		year = 1936
+		year = 2015
 
 		is_archetype = yes
 		picture = archetype_motorized_equipment		
@@ -81,7 +81,7 @@ equipments = {
 	
 
 	motorized_equipment_3 = {
-		year = 2027
+		year = 2025
 
 
 		type = {
@@ -110,11 +110,9 @@ equipments = {
 		fuel_consumption = 2.5
 		supply_truck = yes
 	}
-	
-	
-	
+			
 	motorized_equipment_4 = {
-		year = 2033
+		year = 2030
 
 		type = {
 			#infantry #Removing inf type 
@@ -143,6 +141,93 @@ equipments = {
 		supply_truck = yes
 	}
 	
+	motorized_equipment_5 = {
+		year = 2033
+
+		type = {
+			#infantry #Removing inf type 
+			motorized
+		}
+		parent = motorized_equipment_4
+		interface_category = interface_category_land
+		visual_level = 4
+		maximum_speed = 30
+		reliability = 1
+		hardness = 0.1
+		archetype = motorized_equipment
+		breakthrough = 22
+
+		#Space taken in convoy
+		lend_lease_cost = 5
+
+		build_cost_ic = 6
+		resources = {
+			#oil = 1
+			rubber = 3
+			steel = 4
+		}
+		
+		fuel_consumption = 2.8
+		supply_truck = yes
+	}
+	motorized_equipment_6 = {
+		year = 2040
+
+		type = {
+			#infantry #Removing inf type 
+			motorized
+		}
+		parent = motorized_equipment_5
+		interface_category = interface_category_land
+		visual_level = 5
+		maximum_speed = 32
+		reliability = 1
+		hardness = 0.1
+		archetype = motorized_equipment
+		breakthrough = 25
+
+		#Space taken in convoy
+		lend_lease_cost = 8
+
+		build_cost_ic = 6.5
+		resources = {
+			#oil = 1
+			rubber = 4
+			steel = 4
+		}
+		
+		fuel_consumption = 3
+		supply_truck = yes
+	}
+	motorized_equipment_7 = {
+		year = 2045
+
+		type = {
+			#infantry #Removing inf type 
+			motorized
+		}
+		parent = motorized_equipment_6
+		interface_category = interface_category_land
+		visual_level = 6
+		maximum_speed = 35
+		reliability = 1
+		hardness = 0.1
+		archetype = motorized_equipment
+		breakthrough = 28
+
+		#Space taken in convoy
+		lend_lease_cost = 8.5
+
+		build_cost_ic = 7
+		resources = {
+			#oil = 1
+			rubber = 4
+			steel = 5
+		}
+		
+		fuel_consumption = 3.5
+		supply_truck = yes
+	}
 	
 	
 	
