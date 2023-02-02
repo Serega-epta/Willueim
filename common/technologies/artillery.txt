@@ -22,13 +22,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
  
-
-		enable_equipment_modules = {
-			ship_anti_air_1
-			tank_small_cannon
-			secondary_turret_small_cannon
-		}
-
 		research_cost = 1.5
 
 		folder = {
@@ -48,7 +41,7 @@ technologies = {
 	stvolartillery = {
 
 		enable_equipments = {
-			artillery_equipment_1
+			stvolartillery_equipment_1
 		}
 
 		enable_subunits = {
@@ -68,14 +61,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipment_modules = {
-			ship_anti_air_1
-			tank_small_cannon
-			secondary_turret_small_cannon
-		}
-
 		research_cost = 1.5
 
+		start_year = 2015
+		
 		folder = {
 			name = artillery_folder
 			position = { x = -8 y = 2 }
@@ -92,28 +81,28 @@ technologies = {
 
 	stvolartillerybonus = {
 
-		artillery = {
+		stvolland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		stvolair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		art_stvol = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		Pvo_stvol = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		Pvo_auto= {
 			soft_attack = 0.1
 		}
 
@@ -124,7 +113,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2020
 
 		folder = {
 			name = artillery_folder
@@ -143,7 +132,7 @@ technologies = {
 	stvolartillery2 = {
 
 		enable_equipments = {
-			artillery_equipment_1
+			stvolartillery_equipment_2
 		}
 
 		path = {
@@ -151,14 +140,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipment_modules = {
-			ship_anti_air_1
-			tank_small_cannon
-			secondary_turret_small_cannon
-		}
 
 		research_cost = 1.5
 
+		start_year = 2025
+		
 		folder = {
 			name = artillery_folder
 			position = { x = -8 y = 6 }
@@ -175,28 +161,28 @@ technologies = {
 
 	stvolartillerybonus2 = {
 
-		artillery = {
+		stvolland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		stvolair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		art_stvol = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		Pvo_stvol = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		Pvo_auto= {
 			soft_attack = 0.1
 		}
 
@@ -207,7 +193,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2030
 
 		folder = {
 			name = artillery_folder
@@ -226,7 +212,7 @@ technologies = {
 	stvolartillery3 = {
 
 		enable_equipments = {
-			artillery_equipment_1
+			stvolartillery_equipment_3
 		}
 
 		path = {
@@ -234,14 +220,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipment_modules = {
-			ship_anti_air_1
-			tank_small_cannon
-			secondary_turret_small_cannon
-		}
-
 		research_cost = 1.5
 
+		start_year = 2035
+		
 		folder = {
 			name = artillery_folder
 			position = { x = -8 y = 10 }
@@ -259,35 +241,35 @@ technologies = {
 	
 	stvolartillerybonus3 = {
 
-		artillery = {
+		stvolland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		stvolair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		art_stvol = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		Pvo_stvol = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		Pvo_auto= {
 			soft_attack = 0.1
 		}
 
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2040
 
 		folder = {
 			name = artillery_folder
@@ -307,10 +289,8 @@ technologies = {
 	reaktivartillery = {
 
 		enable_equipments = {
-			artillery_equipment_1
+			reaktivartillery_equipment_1
 		}
-		
-		
 		enable_subunits = {
 		roketland
 		rocketair
@@ -322,21 +302,12 @@ technologies = {
 		art_auto
 		art_roket		
 		}
-		
-
 		path = {
 			leads_to_tech = reaktivartillerybonus
 			research_cost_coeff = 1
 		}
-
-		enable_equipment_modules = {
-			ship_anti_air_1
-			tank_small_cannon
-			secondary_turret_small_cannon
-		}
-
 		research_cost = 1.5
-
+		start_year = 2015
 		folder = {
 			name = artillery_folder
 			position = { x = -4 y = 2 }
@@ -353,28 +324,28 @@ technologies = {
 
 	reaktivartillerybonus = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
 
@@ -385,7 +356,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2020
 
 		folder = {
 			name = artillery_folder
@@ -403,28 +374,28 @@ technologies = {
 	
 	reaktivartillerybonus2 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
 
@@ -435,7 +406,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2025
 
 		folder = {
 			name = artillery_folder
@@ -454,7 +425,7 @@ technologies = {
 	reaktivartillery2 = {
 
 		enable_equipments = {
-			artillery_equipment_1
+			reaktivartillery_equipment_2
 		}
 
 		path = {
@@ -462,14 +433,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipment_modules = {
-			ship_anti_air_1
-			tank_small_cannon
-			secondary_turret_small_cannon
-		}
-
 		research_cost = 1.5
-
+		start_year = 2030
 		folder = {
 			name = artillery_folder
 			position = { x = -4 y = 8 }
@@ -486,28 +451,28 @@ technologies = {
 
 	reaktivartillerybonus3 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
 
@@ -518,7 +483,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2035
 
 		folder = {
 			name = artillery_folder
@@ -537,17 +502,11 @@ technologies = {
 	reaktivartillery3 = {
 
 		enable_equipments = {
-			artillery_equipment_1
-		}
-
-		enable_equipment_modules = {
-			ship_anti_air_1
-			tank_small_cannon
-			secondary_turret_small_cannon
+			reaktivartillery_equipment_3
 		}
 
 		research_cost = 1.5
-
+		start_year = 2040
 		folder = {
 			name = artillery_folder
 			position = { x = -4 y = 12 }
@@ -567,28 +526,40 @@ technologies = {
 
 	boepripas = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
 			soft_attack = 0.1
 		}
 
@@ -607,7 +578,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2015
 
 		folder = {
 			name = artillery_folder
@@ -627,30 +598,43 @@ technologies = {
 
 	boepripascalibr = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripascalibr2
@@ -659,7 +643,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2020
 
 		folder = {
 			name = artillery_folder
@@ -677,30 +661,43 @@ technologies = {
 
 	boepripascalibr2 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripascalibr3
@@ -709,7 +706,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2025
 
 		folder = {
 			name = artillery_folder
@@ -727,30 +724,43 @@ technologies = {
 
 	boepripascalibr3 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripascalibr4
@@ -759,7 +769,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2030
 
 		folder = {
 			name = artillery_folder
@@ -777,30 +787,43 @@ technologies = {
 
 	boepripascalibr4 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 		
 		path = {
 			leads_to_tech = boepripascalibr5
@@ -809,7 +832,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2035
 
 		folder = {
 			name = artillery_folder
@@ -827,34 +850,47 @@ technologies = {
 	
 	boepripascalibr5 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 		
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2040
 
 		folder = {
 			name = artillery_folder
@@ -873,30 +909,43 @@ technologies = {
 
 	boepripasvid = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripasvid2
@@ -905,7 +954,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2020
 
 		folder = {
 			name = artillery_folder
@@ -923,30 +972,43 @@ technologies = {
 
 	boepripasvid2 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripasvid3
@@ -955,7 +1017,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2025
 
 		folder = {
 			name = artillery_folder
@@ -973,30 +1035,43 @@ technologies = {
 
 	boepripasvid3 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripasvid4
@@ -1005,7 +1080,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2030
 
 		folder = {
 			name = artillery_folder
@@ -1023,30 +1098,43 @@ technologies = {
 
 	boepripasvid4 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripasvid5
@@ -1055,7 +1143,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2035
 
 		folder = {
 			name = artillery_folder
@@ -1073,34 +1161,47 @@ technologies = {
 
 	boepripasvid5 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2040
 
 		folder = {
 			name = artillery_folder
@@ -1121,30 +1222,43 @@ technologies = {
 
 	boepripasii = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripasii2
@@ -1153,7 +1267,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2020
 
 		folder = {
 			name = artillery_folder
@@ -1171,30 +1285,43 @@ technologies = {
 
 	boepripasii2 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripasii3
@@ -1203,7 +1330,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2025
 
 		folder = {
 			name = artillery_folder
@@ -1221,30 +1348,43 @@ technologies = {
 
 	boepripasii3 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripasii4
@@ -1253,7 +1393,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2030
 
 		folder = {
 			name = artillery_folder
@@ -1271,30 +1411,43 @@ technologies = {
 
 	boepripasii4 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
 			leads_to_tech = boepripasii5
@@ -1303,7 +1456,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2035
 
 		folder = {
 			name = artillery_folder
@@ -1321,34 +1474,47 @@ technologies = {
 
 	boepripasii5 = {
 
-		artillery = {
+		roketland = {
 			soft_attack = 0.1
 		}
-		artillery_brigade = {
+		rocketair = {
 			soft_attack = 0.1
 		}
-		mot_artillery_brigade = {
+		automatedland = {
 			soft_attack = 0.1
 		}
-		light_sp_artillery_brigade = {
+		automatezatedair = {
 			soft_attack = 0.1
 		}
-		medium_sp_artillery_brigade = {
+		Pvo_auto = {
 			soft_attack = 0.1
 		}
-		heavy_sp_artillery_brigade = {
+		Pvo_roket = {
 			soft_attack = 0.1
 		}
-		super_heavy_sp_artillery_brigade = {
+		art_auto = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
+		art_roket= {
 			soft_attack = 0.1
 		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 		
 		research_cost = 1
 
-		start_year = 1940
+		start_year = 2040
 
 		folder = {
 			name = artillery_folder
