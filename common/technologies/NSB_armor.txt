@@ -13,87 +13,19 @@ technologies = {
 	gwtank_chassis = { #Leichttraktor
 
 		enable_equipments = {
-			light_tank_chassis_0
-			medium_tank_chassis_0
-			heavy_tank_chassis_0
-			light_tank_destroyer_chassis_0
-			medium_tank_destroyer_chassis_0
-			heavy_tank_destroyer_chassis_0
-			light_tank_artillery_chassis_0
-			medium_tank_artillery_chassis_0
-			heavy_tank_artillery_chassis_0
-			light_tank_aa_chassis_0
-			medium_tank_aa_chassis_0
-			heavy_tank_aa_chassis_0
-		}
-		enable_equipment_modules = {
-			tank_torsion_bar_suspension
-			tank_riveted_armor
-			tank_gasoline_engine
-			tank_diesel_engine
-			tank_petrol_electric_engine
-			tank_cast_armor
-			tank_christie_suspension
-			tank_bogie_suspension
-			tank_interleaved_suspension
-			tank_light_one_man_tank_turret
-			tank_light_two_man_tank_turret
-			tank_light_three_man_tank_turret
-			tank_light_fixed_superstructure_turret
-			tank_medium_one_man_tank_turret
-			tank_medium_two_man_tank_turret
-			tank_medium_three_man_tank_turret
-			tank_medium_fixed_superstructure_turret
-			tank_heavy_two_man_tank_turret
-			tank_heavy_three_man_tank_turret
-			tank_heavy_fixed_superstructure_turret
-			tank_super_heavy_four_man_tank_turret
-			tank_super_heavy_three_man_tank_turret
-			tank_modern_tank_turret
-			sloped_armor
-			extra_ammo_storage
-			wet_ammo_storage
-			smoke_launchers
-			expanded_fuel_tank
+			obt_tank_chassis_0
 		}
 		enable_subunits = {
 			obt_tank	
 			tank_podderjka			
 		}
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-
-
 		path = {
 			leads_to_tech = obtvtorogourovnya
 			research_cost_coeff = 1
 		}
 
 		research_cost = 2
-		start_year = 1918
+		start_year = 2010
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 2 y = 0 }
@@ -101,28 +33,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
 		}
-
 		categories = {
 			armor
 			cat_light_armor
@@ -132,44 +43,16 @@ technologies = {
 	obtvtorogourovnya = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			obt_tank_chassis_1
 		}
-
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-
+		
 		path = {
 			leads_to_tech = obtvtorogourovnya2
 			research_cost_coeff = 1
 		}
 
-
-
 		research_cost = 2
-		start_year = 1934
+		start_year = 2015
 
 		folder = {
 			name = nsb_armour_folder
@@ -188,34 +71,9 @@ technologies = {
 	obtvtorogourovnya2 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			obt_tank_chassis_2
 		}
 		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
 
 		path = {
 			leads_to_tech = kachestveniitank
@@ -234,7 +92,7 @@ technologies = {
 
 
 		research_cost = 2
-		start_year = 1934
+		start_year = 2020
 
 		folder = {
 			name = nsb_armour_folder
@@ -253,38 +111,12 @@ technologies = {
 	kachestveniitank = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			spec_tank_chassis_0
 		}
 
 		enable_subunits = {
 			special_tank
-		}
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
+		}		
 
 		path = {
 			leads_to_tech = kachestveniitank2
@@ -292,7 +124,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1934
+		start_year = 2025
 
 		folder = {
 			name = nsb_armour_folder
@@ -311,48 +143,18 @@ technologies = {
 	kachestveniitank2 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			spec_tank_chassis_1
 		}
-
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-
 		path = {
 			leads_to_tech = kachestveniitank3
 			research_cost_coeff = 1
 		}
-
 		research_cost = 2
-		start_year = 1934
-
+		start_year = 2030
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 6 y = 8 }
 		}
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -365,42 +167,14 @@ technologies = {
 	kachestveniitank3 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
-		}
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-		
+			spec_tank_chassis_2
+		}		
 		path = {
 			leads_to_tech = kachestveniitank4
 			research_cost_coeff = 1
 		}
-
 		research_cost = 2
-		start_year = 1934
+		start_year = 2035
 
 		folder = {
 			name = nsb_armour_folder
@@ -419,37 +193,10 @@ technologies = {
 	kachestveniitank4 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			spec_tank_chassis_3
 		}
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-
 		research_cost = 2
-		start_year = 1934
+		start_year = 2040
 
 		folder = {
 			name = nsb_armour_folder
@@ -465,55 +212,28 @@ technologies = {
 		}
 	}
 
+
+
+
+
 	massovitank = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			mass_tank_chassis_0
 		}
-
 		enable_subunits = {
 			massovi_tank
 		}
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-
 		path = {
 			leads_to_tech = massovitank2
 			research_cost_coeff = 1
 		}
-
 		research_cost = 2
-		start_year = 1934
-
+		start_year = 2025
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 2 y = 6 }
 		}
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -526,34 +246,7 @@ technologies = {
 	massovitank2 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
-		}
-
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			mass_tank_chassis_1
 		}
 
 		path = {
@@ -562,13 +255,11 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1934
-
+		start_year = 2030
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 2 y = 8 }
 		}
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -581,33 +272,7 @@ technologies = {
 	massovitank3 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
-		}
-
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			mass_tank_chassis_2
 		}
 		
 		path = {
@@ -616,7 +281,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1934
+		start_year = 2035
 
 		folder = {
 			name = nsb_armour_folder
@@ -635,37 +300,10 @@ technologies = {
 	massovitank4 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
-		}
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-
+			mass_tank_chassis_3
+		}		
 		research_cost = 2
-		start_year = 1934
+		start_year = 2040
 
 		folder = {
 			name = nsb_armour_folder
@@ -685,37 +323,11 @@ technologies = {
 	volshebnitank = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			ii_tank_chassis_0
 		}
 
 		enable_subunits = {
 			automatizated_tank
-		}
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
 
 		path = {
@@ -724,7 +336,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1934
+		start_year = 2025
 
 		folder = {
 			name = nsb_armour_folder
@@ -743,34 +355,7 @@ technologies = {
 	volshebnitank2 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
-		}
-
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			ii_tank_chassis_1
 		}
 
 		path = {
@@ -779,7 +364,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1934
+		start_year = 2030
 
 		folder = {
 			name = nsb_armour_folder
@@ -798,35 +383,9 @@ technologies = {
 	volshebnitank3 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			ii_tank_chassis_2
 		}
 
-		
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
 		
 		path = {
 			leads_to_tech = volshebnitank4
@@ -834,7 +393,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1934
+		start_year = 2035
 
 		folder = {
 			name = nsb_armour_folder
@@ -853,37 +412,12 @@ technologies = {
 	volshebnitank4 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1
+			ii_tank_chassis_3
 		}
 
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
 
 		research_cost = 2
-		start_year = 1934
+		start_year = 2040
 
 		folder = {
 			name = nsb_armour_folder

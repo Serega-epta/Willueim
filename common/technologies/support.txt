@@ -721,7 +721,7 @@ technologies = {
 	tech_politruk2 = {
 
 		politruk = {
-			organisation_factor = 0.1
+			max_organisation = 30
 		}
 		
 		path = {
@@ -730,7 +730,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2020
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @2025 }
@@ -747,7 +747,7 @@ technologies = {
 	tech_politruk3 = {
 
 		politruk = {
-			organisation_factor = 0.1
+			max_organisation = 30
 		}
 		
 		path = {
@@ -756,7 +756,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2030
 		folder = {
 			name = support_folder
 			position = { x = 6 y = 12 }
@@ -773,11 +773,11 @@ technologies = {
 	tech_politruk4 = {
 
 		politruk = {
-			organisation_factor = 0.1
+			max_organisation = 30
 		}
 		
 		research_cost = 2
-		start_year = 2010
+		start_year = 2040
 		folder = {
 			name = support_folder
 			position = { x = 6 y = 18 }
@@ -797,6 +797,7 @@ technologies = {
 		enable_subunits = {
 			rhbz
 		}
+		
 		
 		path = {
 			leads_to_tech = tech_rhbz2
@@ -821,9 +822,11 @@ technologies = {
 	}
 	tech_rhbz2 = {
 
+	
 		rhbz = {
-			organisation_factor = 0.1
+		max_strength = 20
 		}
+		
 		
 		path = {
 			leads_to_tech = tech_rhbz3
@@ -848,8 +851,9 @@ technologies = {
 	}
 	tech_rhbz3 = {
 
+		
 		rhbz = {
-			organisation_factor = 0.1
+		max_strength = 20
 		}
 		
 		path = {
@@ -875,9 +879,10 @@ technologies = {
 	}
 	tech_rhbz4 = {
 
+		
 		rhbz = {
-			organisation_factor = 0.1
-		}		
+		max_strength = 20
+		}	
 
 		research_cost = 2
 		start_year = 2010
@@ -926,7 +931,7 @@ technologies = {
 	tech_radiolocationborba2 = {
 
 		radiolocationborba = {
-			organisation_factor = 0.1
+			default_morale = 1
 		}
 		
 		path = {
@@ -953,7 +958,7 @@ technologies = {
 	tech_radiolocationborba3 = {
 
 		radiolocationborba = {
-			organisation_factor = 0.1
+			default_morale = 1
 		}
 		
 		path = {
@@ -980,7 +985,7 @@ technologies = {
 	tech_radiolocationborba4 = {
 
 		radiolocationborba = {
-			organisation_factor = 0.1
+			default_morale = 1
 		}		
 
 		research_cost = 2
