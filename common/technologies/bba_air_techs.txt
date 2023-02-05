@@ -3,14 +3,7 @@ technologies = {
 	iw_small_airframe = {
 
 		enable_equipments = {
-			small_plane_airframe_0
-			small_plane_cas_airframe_0
-			small_plane_naval_bomber_airframe_0
-			small_plane_suicide_airframe_0
-			cv_small_plane_airframe_0
-			cv_small_plane_cas_airframe_0
-			cv_small_plane_naval_bomber_airframe_0
-			cv_small_plane_suicide_airframe_0
+			mass_plane_airframe_0
 		}
 		
 		path = {
@@ -19,7 +12,7 @@ technologies = {
 		}
 				
 		research_cost = 2
-		start_year = 1926
+		start_year = 2010
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 2 }
@@ -34,7 +27,6 @@ technologies = {
 			air_equipment
 		}
 
-		
 		ai_will_do = {
 			factor = 1
 			
@@ -44,14 +36,7 @@ technologies = {
 	basic_small_airframe = {
 
 		enable_equipments = {
-			small_plane_airframe_1
-			small_plane_cas_airframe_1
-			small_plane_naval_bomber_airframe_1
-			small_plane_suicide_airframe_1
-			cv_small_plane_airframe_1
-			cv_small_plane_cas_airframe_1
-			cv_small_plane_naval_bomber_airframe_1
-			cv_small_plane_suicide_airframe_1
+			mass_plane_airframe_1
 		}
 	
 		path = {
@@ -60,7 +45,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1936
+		start_year = 2015
 
 		folder = {
 			name = bba_air_techs_folder
@@ -85,14 +70,7 @@ technologies = {
 	improved_small_airframe = {
 
 		enable_equipments = {
-			small_plane_airframe_2
-			small_plane_cas_airframe_2
-			small_plane_naval_bomber_airframe_2
-			small_plane_suicide_airframe_2
-			cv_small_plane_airframe_2
-			cv_small_plane_cas_airframe_2
-			cv_small_plane_naval_bomber_airframe_2
-			cv_small_plane_suicide_airframe_2
+			mass_plane_airframe_2
 		}
 	
 		path = {
@@ -102,7 +80,7 @@ technologies = {
 				
 
 		research_cost = 2
-		start_year = 1940
+		start_year = 2020
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 6 }
@@ -123,51 +101,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 2
-			
-			modifier = {
-				factor = 4
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 0
-				original_tag = GER
-				date < "1941.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1942.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1944.1.1"
-			}
 		}
 	}
 	
 	advanced_small_airframe = {
 
 		enable_equipments = {
-			small_plane_airframe_3
-			small_plane_cas_airframe_3
-			small_plane_naval_bomber_airframe_3
-			small_plane_suicide_airframe_3
-			cv_small_plane_airframe_3
-			cv_small_plane_cas_airframe_3
-			cv_small_plane_naval_bomber_airframe_3
-			cv_small_plane_suicide_airframe_3
+			mass_plane_airframe_3
 		}
 		
 		path = {
@@ -176,7 +116,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1944
+		start_year = 2025
 
 		folder = {
 			name = bba_air_techs_folder
@@ -195,37 +135,13 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 			
-			modifier = {
-				factor = 4
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1947.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1948.1.1"
-			}
 		}
 	}
 	
 	advanced_small_airframe2 = {
 
 		enable_equipments = {
-		small_plane_airframe_3
+		mass_plane_airframe_4
 		}
 		
 		path = {
@@ -259,19 +175,10 @@ technologies = {
 	modern_small_airframe = {
 
 		enable_equipments = {
-			small_plane_airframe_4
-			small_plane_cas_airframe_4
-			small_plane_naval_bomber_airframe_4
-			small_plane_suicide_airframe_4
-			cv_small_plane_airframe_4
-			cv_small_plane_cas_airframe_4
-			cv_small_plane_naval_bomber_airframe_4
-			cv_small_plane_suicide_airframe_4
-		}
-
-		
+			mass_plane_airframe_5
+		}	
 		research_cost = 2
-		start_year = 1945
+		start_year = 2035
 
 		folder = {
 			name = bba_air_techs_folder
@@ -289,23 +196,19 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				tag = GER
-				factor = 2
-			}
 		}
 	}
+	
+	
+	
+	
+	
+	
 	
 	iw_medium_airframe = {
 
 		enable_equipments = {
-			medium_plane_airframe_0
-			medium_plane_fighter_airframe_0
-			medium_plane_scout_plane_airframe_0
+			spec_plane_airframe_0
 		}
 
 		path = {
@@ -314,7 +217,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1926
+		start_year = 2010
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 2 y = 2 }
@@ -335,9 +238,7 @@ technologies = {
 	basic_medium_airframe = {
 
 		enable_equipments = {
-			medium_plane_airframe_1
-			medium_plane_fighter_airframe_1
-			medium_plane_scout_plane_airframe_1
+			spec_plane_airframe_1
 		}
 	
 		path = {
@@ -346,7 +247,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 2015
 
 		folder = {
 			name = bba_air_techs_folder
@@ -362,39 +263,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1936.1.1"
-			}
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = tactical_bomber
-				}
-				factor = 2
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1940.1.1"
-			}
 		}
 	}
 	
 	improved_medium_airframe = {
 
 		enable_equipments = {
-			medium_plane_airframe_2
-			medium_plane_fighter_airframe_2
-			medium_plane_scout_plane_airframe_2
+			spec_plane_airframe_2
 		}
 	
 		path = {
@@ -403,7 +278,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1940
+		start_year = 2020
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 2 y = 6 }
@@ -418,39 +293,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1940.1.1"
-			}
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = tactical_bomber
-				}
-				factor = 2
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1944.1.1"
-			}
+
 		}
 	}
 	
 	advanced_medium_airframe = {
 
 		enable_equipments = {
-			medium_plane_airframe_3
-			medium_plane_fighter_airframe_3
-			medium_plane_scout_plane_airframe_3
+			spec_plane_airframe_3
 		}
 		
 		path = {
@@ -459,7 +309,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1944
+		start_year = 2025
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 2 y = 8 }
@@ -474,31 +324,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1944.1.1"
-			}
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = tactical_bomber
-				}
-				factor = 2
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1945.1.1"
-			}
 		}
 	}
 	
 	advanced_medium_airframe2 = {
 
 		enable_equipments = {
-			medium_plane_airframe_3
+			spec_plane_airframe_4
 		}
 		
 		path = {
@@ -507,7 +339,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1944
+		start_year = 2030
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 2 y = 10 }
@@ -528,13 +360,11 @@ technologies = {
 	modern_medium_airframe = {
 
 		enable_equipments = {
-			medium_plane_airframe_4
-			medium_plane_fighter_airframe_4
-			medium_plane_scout_plane_airframe_4
+			spec_plane_airframe_5
 		}
 		
 		research_cost = 2
-		start_year = 1945
+		start_year = 2035
 		
 		folder = {
 			name = bba_air_techs_folder
@@ -549,18 +379,21 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 4
-			}
 		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 	iw_large_airframe = {
 
 		enable_equipments = {
-			large_plane_airframe_0
-			large_plane_maritime_patrol_plane_airframe_0
+			ii_plane_airframe_0
 		}
 	
 		path = {
@@ -573,7 +406,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1926
+		start_year = 2010
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 2 }
@@ -587,24 +420,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 		}
 	}
 	
 	basic_large_airframe = {
 
 		enable_equipments = {
-			large_plane_airframe_1
-			large_plane_maritime_patrol_plane_airframe_1
+			ii_plane_airframe_1
 		}
 	
 		path = {
@@ -613,7 +435,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 2015
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 4 }
@@ -628,23 +450,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 		}
 	}
 	
 	improved_large_airframe = {
 
 		enable_equipments = {
-			large_plane_airframe_2
-			large_plane_maritime_patrol_plane_airframe_2
+			ii_plane_airframe_2
 		}
 	
 		path = {
@@ -653,7 +465,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1940
+		start_year = 2020
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 6 }
@@ -667,24 +479,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 		}
 	}
 	
 	advanced_large_airframe = {
 
 		enable_equipments = {
-			large_plane_airframe_3
-			large_plane_maritime_patrol_plane_airframe_3
+			ii_plane_airframe_3
 		}
 		
 		path = {
@@ -693,7 +494,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1944
+		start_year = 2025
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 8 }
@@ -708,22 +509,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 		}
 	}
 	
 	advanced_large_airframe2 = {
 
 		enable_equipments = {
-			large_plane_airframe_3
+			ii_plane_airframe_4
 		}
 		
 		path = {
@@ -731,7 +523,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1944
+		start_year = 2030
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 10 }
@@ -746,19 +538,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
-	}
-	
-	
+	}	
 	
 	modern_large_airframe = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			ii_plane_airframe_5
 		}
 		
 		research_cost = 2
-		start_year = 1950
+		start_year = 2035
 
 
 		folder = {
@@ -773,21 +562,15 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
 		}
 	}
+	
+	
 	
 	helicopterstechnologii = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			helikopter_airframe_0
 		}
 		
 		path = {
@@ -804,7 +587,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1950
+		start_year = 2010
 
 
 		folder = {
@@ -819,28 +602,20 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
 		}
 	}
 	
 	kachestveniivertolet = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			spechelocopter_airframe_0
 		}
 		path = {
 			leads_to_tech = kachestveniivertolet2
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1950
+		start_year = 2015
 
 
 		folder = {
@@ -855,27 +630,20 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
+
 		}
 	}
 	kachestveniivertolet2 = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			spechelocopter_airframe_1
 		}
 		path = {
 			leads_to_tech = kachestveniivertolet3
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1950
+		start_year = 2020
 
 
 		folder = {
@@ -890,24 +658,17 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
+
 		}
 	}
 	kachestveniivertolet3 = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			spechelocopter_airframe_2
 		}
 
 		research_cost = 2
-		start_year = 1950
+		start_year = 2025
 
 
 		folder = {
@@ -922,28 +683,21 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
 		}
 	}
+	
 	
 	massovivertolet = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			masshelocopter_airframe_0
 		}
 		path = {
 			leads_to_tech = massovivertolet2
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1950
+		start_year = 2015
 
 
 		folder = {
@@ -958,27 +712,19 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
 		}
 	}
 	massovivertolet2 = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			masshelocopter_airframe_1
 		}
 		path = {
 			leads_to_tech = massovivertolet3
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1950
+		start_year = 2020
 
 
 		folder = {
@@ -993,24 +739,16 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
 		}
 	}
 	massovivertolet3 = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			masshelocopter_airframe_2
 		}
 
 		research_cost = 2
-		start_year = 1950
+		start_year = 2025
 
 
 		folder = {
@@ -1025,28 +763,24 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
+
 		}
 	}
+	
+	
+	
 	
 	kamikadzevertolet = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			kamikadzehelocopter_airframe_0
 		}
 		path = {
 			leads_to_tech = kamikadzevertolet2
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1950
+		start_year = 2015
 
 
 		folder = {
@@ -1061,27 +795,19 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
 		}
 	}
 	kamikadzevertolet2 = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			kamikadzehelocopter_airframe_1
 		}
 		path = {
 			leads_to_tech = kamikadzevertolet3
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1950
+		start_year = 2020
 
 
 		folder = {
@@ -1096,24 +822,16 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
 		}
 	}
 	kamikadzevertolet3 = {
 
 		enable_equipments = {
-			large_plane_airframe_4
-			large_plane_maritime_patrol_plane_airframe_4
+			kamikadzehelocopter_airframe_2
 		}
 
 		research_cost = 2
-		start_year = 1950
+		start_year = 2025
 
 
 		folder = {
@@ -1128,13 +846,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
 		}
 	}
 	

@@ -1,20 +1,15 @@
 technologies = {
 	electronic_mechanical_engineering = {
 
-		# small boost to research speed
-		research_speed_factor = 0.05
+		research_speed_factor = 0.1
 		
 		path = {
 			leads_to_tech = electronic_mechanical_engineering2
 			research_cost_coeff = 1
 		}
-
-		enable_equipment_modules = { 
-			ship_fire_control_system_0
-		}
 		
 		research_cost = 1
-		start_year = 1936
+		start_year = 2010
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 0 }
@@ -22,12 +17,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 30
-			
-			
-			modifier = {
-				factor = 3
-				date > "1937.1.1"
-			}
 		}
 		
 		categories = {
@@ -39,7 +28,6 @@ technologies = {
 	
 	electronic_mechanical_engineering2 = {
 
-		# small boost to research speed
 		research_speed_factor = 0.1
 		
 		path = {
@@ -52,7 +40,7 @@ technologies = {
 		}
 		
 		research_cost = 1
-		start_year = 1936
+		start_year = 2015
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 2 }
@@ -60,26 +48,17 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 30
-			
-			
-			modifier = {
-				factor = 3
-				date > "1937.1.1"
-			}
 		}
 		
 		categories = {
 			electronics
-		}
-		
-
+		}		
 	}
 	
 	
 	
 	radio = {
 
-		# units with radios can more efficiently join combats when there is room
 		land_reinforce_rate = 0.05
 		coordination_bonus = 0.04
 		
@@ -95,11 +74,6 @@ technologies = {
 			position = { x = -2 y = 4 }
 		}
 		
-		enable_equipment_modules = { 
-			tank_radio_1
-			radio_navigation_1
-		}
-
 		folder = {
 			name = support_folder
 			position = { x = 11 y = 9 } # x = 12 y = 0
@@ -108,18 +82,6 @@ technologies = {
 		ai_will_do = {
 			factor = 3
 			
-			modifier = {
-				factor = 6
-				has_war = yes
-			}
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				factor = 5
-				date > "1939.8.1"
-			}
 		}
 		
 		categories = {
@@ -129,7 +91,7 @@ technologies = {
 	
 	radio_detection = {
 
-		# 
+		
 		enable_building = {
 			building = radar_station
 			level = 1
@@ -149,10 +111,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				tag = USA
-				factor = 4
-			}
 		}
 		
 		categories = {
@@ -163,7 +121,6 @@ technologies = {
 	
 	decimetric_radar = {
 
-		# can build radars/radar boost in air/sea combat depends on radar level
 
 		path = {
 			leads_to_tech = improved_decimetric_radar 
@@ -171,12 +128,7 @@ technologies = {
 		}
 		coordination_bonus = 0.01
 		research_cost = 1.25
-		start_year = 1938
-		enable_equipment_modules = { 
-			ship_radar_1
-			tank_radio_2
-			radio_navigation_2
-		}
+		start_year = 2030
 		folder = {
 			name = electronics_folder
 			position = { x = -2 y = 8 }
@@ -184,17 +136,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-				factor = 5
-			}
-			modifier = {
-				date < "1938.1.1"
-				factor = 0.5
-			}
 		}
 		
 		categories = {
@@ -210,15 +151,11 @@ technologies = {
 	
 	improved_decimetric_radar = {
 
-		# radar boost in air/sea combat depends on radar level
 		enable_building = {
 			building = radar_station
 			level = 3
 		}
 		coordination_bonus = 0.01
-		enable_equipment_modules = { 
-			ship_radar_2
-		}
 
 		path = {
 			leads_to_tech = centimetric_radar 
@@ -226,7 +163,7 @@ technologies = {
 		}
 		
 		research_cost = 1.25
-		start_year = 1939
+		start_year = 2035
 		
 		folder = {
 			name = electronics_folder
@@ -235,17 +172,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-				factor = 5
-			}
-			modifier = {
-				date < "1939.1.1"
-				factor = 0.5
-			}
 		}
 		
 		categories = {
@@ -257,18 +183,15 @@ technologies = {
 
 	mechanical_computing = {
 
-		# small boost to research speed
-		research_speed_factor = 0.05
+		research_speed_factor = 0.1
 		
 		path = {
 			leads_to_tech = computing_machine 
 			research_cost_coeff = 1
 		}
-		enable_equipment_modules = {
-			bomb_sights_1
-		}
 		
 		research_cost = 2.5
+		start_year = 2020
 		
 		folder = {
 			name = electronics_folder
@@ -287,8 +210,7 @@ technologies = {
 	
 	computing_machine = {
 
-		# small boost to research speed
-		research_speed_factor = 0.05
+		research_speed_factor = 0.1
 		
 		path = {
 			leads_to_tech = improved_computing_machine 
@@ -296,7 +218,7 @@ technologies = {
 		}
 		
 		research_cost = 2.5
-		start_year = 1938
+		start_year = 2025
 		
 		folder = {
 			name = electronics_folder
@@ -305,16 +227,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 6
-			
-			modifier = {
-				factor = 3
-				date > "1938.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1939.1.1"
-			}
 		}
 		
 		categories = {
@@ -327,19 +239,15 @@ technologies = {
 	
 	improved_computing_machine = {
 
-		# small boost to research speed
-		research_speed_factor = 0.08
-		enable_equipment_modules = {
-			stabilizer
-			bomb_sights_2
-		}
+		research_speed_factor = 0.1
+	
 		path = {
 			leads_to_tech = advanced_computing_machine 
 			research_cost_coeff = 1
 		}
 		
 		research_cost = 2.5
-		start_year = 1940
+		start_year = 2030
 		
 		folder = {
 			name = electronics_folder
@@ -348,21 +256,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 3
-			
-			modifier = {
-				factor = 3
-				date > "1940.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
 		}
 		
 		categories = {
@@ -375,11 +268,10 @@ technologies = {
 	
 	advanced_computing_machine = {
 
-		# small boost to research speed
-		research_speed_factor = 0.08
+		research_speed_factor = 0.1
 				
 		research_cost = 2.5
-		start_year = 1942
+		start_year = 2035
 		
 		folder = {
 			name = electronics_folder
@@ -388,16 +280,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 3
-			
-			modifier = {
-				factor = 3
-				date > "1942.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1943.1.1"
-			}
 		}
 		
 		categories = {
