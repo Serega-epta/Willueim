@@ -35,7 +35,48 @@
 		#partisan_effect = centralization           
 	}
 
-
+      congestion_of_creatures = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		production_speed_buildings_factor = -0.25
+		attrition = +0.25
+		army_speed_factor = -0.25
+		monthly_population = -0.005
+		
+}
+      wild_settlements = {
+		enable = { always = yes }
+		icon = GFX_temperature_icons
+		production_speed_buildings_factor = -0.05
+		attrition = +0.1			
+}
+      abnormal_activity = {
+		enable = { always = yes }
+		icon = GFX_modifiers_refugees_icon
+		production_speed_buildings_factor = -0.4
+		local_resources_factor = -0.5
+		attrition = +0.5
+		army_speed_factor = -0.5
+		monthly_population = -0.01
+		
+}
+      distortion_of_silence = {
+		enable = { always = yes }
+		icon = GFX_modifiers_unplanned_offensive_icon
+		army_speed_factor = -0.25
+		army_defence_factor = -0.25
+		army_attack_factor = -0.25
+		
+}
+      radiant_storm = {
+		enable = { always = yes }
+		icon = GFX_modifiers_unplanned_offensive_icon
+		production_speed_buildings_factor = -0.1
+		attrition = +0.05
+		army_speed_factor = -0.25
+            army_fuel_consumption_factor = +0.1
+		
+}
 	nuke_aftermath = {
 		enable = { always = yes }
 
