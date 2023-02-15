@@ -34,7 +34,7 @@
      	        global_building_slots_factor = centralization
 		#partisan_effect = centralization           
 	}
-
+#засилие тварей
       congestion_of_creatures = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
@@ -44,12 +44,22 @@
 		monthly_population = -0.005
 		
 }
+#дикие деревни
       wild_settlements = {
 		enable = { always = yes }
 		icon = GFX_temperature_icons
 		production_speed_buildings_factor = -0.05
 		attrition = +0.1			
 }
+#дикие деревни2
+    wild_tribes = {
+	    enable = { always = yes }
+		
+		icon = GFX_bioweapons_anthrax_modifier_icon
+		production_speed_buildings_factor = -0.05
+		supply_factor = -0.1
+}
+#аномальная активность
       abnormal_activity = {
 		enable = { always = yes }
 		icon = GFX_modifiers_refugees_icon
@@ -60,6 +70,7 @@
 		monthly_population = -0.01
 		
 }
+#искажение молчание
       distortion_of_silence = {
 		enable = { always = yes }
 		icon = GFX_modifiers_unplanned_offensive_icon
@@ -68,6 +79,7 @@
 		army_attack_factor = -0.25
 		
 }
+#лучевой буран
       radiant_storm = {
 		enable = { always = yes }
 		icon = GFX_modifiers_unplanned_offensive_icon
@@ -331,10 +343,3 @@
 		industrial_capacity_factory = PB_AC_ic_factory
 
 	}
-    wild_tribes = {
-	    enable = { always = yes }
-		
-		icon = GFX_bioweapons_anthrax_modifier_icon
-		production_speed_buildings_factor = -0.05
-		supply_factor = -0.1
-    }
