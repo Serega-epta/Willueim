@@ -1,0 +1,44 @@
+#Images
+defined_text = {  
+	name = get_superevent
+	
+	text = {
+        trigger = {
+            has_global_flag = Dog_Clanging
+        }
+        localization_key = "GFX_sp_event_Dog_Clanging"
+	}		
+}
+
+
+#Titles, Quotes and Remarks
+defined_text = {
+    name = get_super_event_title
+	
+    text = {
+        trigger = {
+            has_global_flag = Dog_Clanging
+        }
+        localization_key = "sp_event_Dog_Clanging"
+    }
+}
+defined_text = {
+    name = get_super_event_remark
+    
+    text = { 
+        trigger = {
+            has_global_flag = Dog_Clanging
+        }
+        localization_key = "sp_event_Dog_Clanging_REMARK"
+    }
+}
+defined_text = {
+    name = get_super_event_quote
+    
+    text = {
+        trigger = {
+            has_global_flag = Dog_Clanging
+        }
+        localization_key = "sp_event_Dog_Clanging_QUOTE"
+    }
+}

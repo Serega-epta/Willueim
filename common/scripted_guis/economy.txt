@@ -35,11 +35,12 @@ scripted_gui = {
 			if = {
 				limit = { OR = { has_political_power > 25 has_political_power = 25 } check_variable = { asponsorVariable > -10 } }
 				add_political_power = -25
-				add_to_variable = { economyVariable = 100 }
+				subtract_from_variable = { minusEconomyVariable = 1000 }
+				add_to_variable = { economyVariable = 1000 }
 				subtract_from_variable = { asponsorVariable = 1 }
 			}
 			else = {
-				limit = { OR = { has_political_power < 0 has_political_power = 0 } check_variable = { asponsorVariable = -10 } }
+				limit = { has_political_power < 25 check_variable = { economyVariable < 1000 } check_variable = { asponsorVariable = -10 } }
 				add_political_power = 0
 				add_to_variable = { economyVariable = 0 }
 				subtract_from_variable = { asponsorVariable = 0 }
@@ -49,44 +50,50 @@ scripted_gui = {
 			if = {
 				limit = { OR = { has_political_power > 25 has_political_power = 25 } check_variable = { csponsorVariable > -10 } }
 				add_political_power = -25
-				add_to_variable = { economyVariable = 100 }
+				subtract_from_variable = { minusEconomyVariable = 1000 }
+				add_to_variable = { economyVariable = 1000 }
 				subtract_from_variable = { csponsorVariable = 1 }
-			}
+			}		
 			else = {
-				limit = { OR = { has_political_power < 0 has_political_power = 0 } check_variable = { csponsorVariable = -10 } }
+				limit = { has_political_power < 25 check_variable = { economyVariable < 1000 } check_variable = { csponsorVariable = -10 } }
 				add_political_power = 0
+				subtract_from_variable = { minusEconomyVariable = 0 }
 				add_to_variable = { economyVariable = 0 }
 				subtract_from_variable = { csponsorVariable = 0 }
 			}
 		}
 		right_1_click = {
 			if = {
-				limit = { OR = { check_variable = { economyVariable > 100 } check_variable = { economyVariable = 100 } } OR = { has_political_power > 25 has_political_power = 25 } check_variable = { asponsorVariable < 11 } }
+				limit = { OR = { has_political_power > 25 has_political_power = 25 } OR = { check_variable = { economyVariable > 1000 } check_variable = { economyVariable = 1000 } } check_variable = { asponsorVariable < 11 } }
 				add_political_power = -25
-				subtract_from_variable = { economyVariable = 100 }
+				add_to_variable = { minusEconomyVariable = 1000 }
+				subtract_from_variable = { economyVariable = 1000 }
 				add_to_variable = { asponsorVariable = 1 }
-			}
+			}			
 			else = {
-				limit = { check_variable = { economyVariable < 100 } OR = { has_political_power < 0 has_political_power = 0 } check_variable = { asponsorVariable = 11 } }
+				limit = { has_political_power < 25 check_variable = { economyVariable < 1000 } check_variable = { asponsorVariable = 11 } }
 				add_political_power = 0
+				add_to_variable = { minusEconomyVariable = 0 }
 				subtract_from_variable = { economyVariable = 0 }
 				add_to_variable = { asponsorVariable = 0 }
 			}
 		}
 		right_2_click = {
 			if = {
-				limit = { OR = { check_variable = { economyVariable > 100 } check_variable = { economyVariable = 100 } } OR = { has_political_power > 25 has_political_power = 25 } check_variable = { csponsorVariable < 11 } }
+				limit = { OR = { has_political_power > 25 has_political_power = 25 } OR = { check_variable = { economyVariable > 1000 } check_variable = { economyVariable = 1000 } } check_variable = { csponsorVariable < 11 } }
 				add_political_power = -25
-				subtract_from_variable = { economyVariable = 100 }
+				add_to_variable = { minusEconomyVariable = 1000 }
+				subtract_from_variable = { economyVariable = 1000 }
 				add_to_variable = { csponsorVariable = 1 }
 			}
 			else = {
-				limit = { check_variable = { economyVariable < 100 } OR = { has_political_power < 0 has_political_power = 0 } check_variable = { csponsorVariable = 11 } }
+				limit = { has_political_power < 25 check_variable = { economyVariable < 1000 } check_variable = { csponsorVariable = 11 } }
 				add_political_power = 0
+				add_to_variable = { minusEconomyVariable = 0 }
 				subtract_from_variable = { economyVariable = 0 }
 				add_to_variable = { csponsorVariable = 0 }
 			}
-		}
+		}		
 	}
 
 	triggers = {

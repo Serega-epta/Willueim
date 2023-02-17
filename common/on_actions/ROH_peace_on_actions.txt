@@ -1,15 +1,43 @@
 on_actions = {
 	on_capitulation = {
 		effect = {
-			if = { 
+			FROM = {
+				save_global_event_target_as = winning_country
+			}
+			ROOT = {
+				save_global_event_target_as = losing_country
+			}
+			
+			if = {
 				limit = {
-					SWR = { has_capitulated = yes}
+					OR = {
+						ROOT = { is_in_faction = no }
+						ROOT = {
+							all_allied_country = {
+								has_capitulated = yes
+							}
+						}
+					}
 				}
-				LWV = {
-					white_peace = SWR
-					annex_country = {
-						target = SWR
-						transfer_troops = no
+				if = {
+					limit = { NOT = { has_global_flag = skip_default_capitulation } }
+					FROM = {
+						every_enemy_country = {
+							limit = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+									is_puppet_of = ROOT
+								}
+							}
+							FROM = {
+								white_peace = PREV
+								annex_country = {
+									target = PREV
+									transfer_troops = no
+								}
+							}
+						}
 					}
 				}
 			}

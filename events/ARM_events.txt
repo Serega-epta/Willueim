@@ -1,0 +1,67 @@
+add_namespace = ARM
+
+#В кольце врагов
+country_event = {
+	id = ARM.1
+	title = ARM.1.t
+	desc = ARM.1.d
+	picture = 
+
+        fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+	name = ARM.1.a	
+	add_political_power = 150
+	}
+}
+#День Сурка
+country_event = {
+	id = ARM.2
+	title = ARM.2.t
+	desc = ARM.2.d
+	picture = 
+
+        fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+	name = ARM.2.a	
+	add_war_support = 0.05
+	}
+}
+#Передышка
+country_event = {
+	id = ARM.3
+	title = ARM.3.t
+	desc = ARM.3.d
+	picture = 
+
+        fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+	name = ARM.3.a	
+	country_event = {
+		id = ARM.4
+	}
+	}
+}
+country_event = {
+	id = ARM.4
+	title = ARM.4.t
+	desc = ARM.4.d
+	picture = 
+
+        fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+	name = ARM.4.a	
+	add_war_support = 0.15
+	}
+}

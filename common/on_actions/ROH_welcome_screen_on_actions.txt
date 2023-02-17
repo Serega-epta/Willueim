@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			for_each_scope_loop = {
+				array = global.players
+				set_country_flag = show_roh_welcome_screen
+			}
+		}
+	}
+}

@@ -28,7 +28,7 @@ guiTypes = {
 			name = "decisionview_title"
 			position = { x = 45 y = 8 }
 			textureFile = ""
-			font = "hoi_36header"
+			font = "pobeda_36"
 			borderSize = {x = 0 y = 0}
 			text = "DECISIONVIEW_TITLE"
 			maxWidth = 440
@@ -101,7 +101,7 @@ guiTypes = {
 			name = "name_text"
 			position = { x = 74 y = 23 }
 			textureFile = ""
-			font = "hoi_20b"
+			font = "pobeda_20"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 365
@@ -113,7 +113,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "track_decisions_checkbox"
-			position = { x = 447 y = 26 }
+			position = { x = 447 y = 22 }
 			quadTextureSprite = "GFX_checkbox_small5"
 			clicksound = decisions_ui_button
 			frame = 2
@@ -121,7 +121,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "category_collapse_btn"
-			position = { x=475 y=25 }
+			position = { x=475 y=22 }
 			quadTextureSprite = "GFX_conveyor_collapse_btn"
 			buttonFont = "hoi_18mbs"
 			clicksound = click_default
@@ -155,7 +155,7 @@ guiTypes = {
 			name = "full_text"
 			position = { x = 14 y = 6 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 470
@@ -165,7 +165,7 @@ guiTypes = {
 			name = "short_text"
 			position = { x = 116 y = 6 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 380
@@ -189,7 +189,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "value"
 			position = { x = 170 y = 3 }
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = {x = 0 y = 0}
 			text = "33"	
 			maxWidth = 50
@@ -241,7 +241,7 @@ guiTypes = {
 				name = "minor_events_popup_text"
 				position = { x = 23 y = -5 }
 				textureFile = ""
-				font = "hoi_16mbs"
+				font = "pobeda_16"
 				borderSize = { x = 0 y = 0 }
 				text = "POPUP_MINOR_EVENTS"
 				maxWidth = 200
@@ -269,7 +269,7 @@ guiTypes = {
 				name = "events_popup_text"
 				position = { x = 23 y = -5 }
 				textureFile = ""
-				font = "hoi_16mbs"
+				font = "pobeda_16"
 				borderSize = { x = 0 y = 0 }
 				text = "POPUP_EVENTS"
 				maxWidth = 110
@@ -297,7 +297,7 @@ guiTypes = {
 				name = "news_popup_text"
 				position = { x = 23 y = -5 }
 				textureFile = ""
-				font = "hoi_16mbs"
+				font = "pobeda_16"
 				borderSize = { x = 0 y = 0 }
 				text = "POPUP_NEWS"
 				maxWidth = 110
@@ -415,7 +415,7 @@ guiTypes = {
 			name = "name_text"
 			position = { x = 63 y = 2 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 330
@@ -442,7 +442,7 @@ guiTypes = {
 			name = "cost_and_timer_text"
 			position = { x = 112 y = 9 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = "999"
 			maxWidth = 320
@@ -452,7 +452,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "track_decision_checkbox"
-			position = { x = 437 y = 7 }
+			position = { x = 437 y = 8 }
 			quadTextureSprite = "GFX_checkbox_small4"
 			clicksound = decisions_ui_button
 			frame = 2
@@ -501,7 +501,7 @@ guiTypes = {
 			name = "name_text"
 			position = { x = 62 y = 2 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 280
@@ -529,7 +529,7 @@ guiTypes = {
 			name = "timer_text"
 			position = { x = 405 y = 9 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = "999"
 			maxWidth = 70
@@ -541,7 +541,7 @@ guiTypes = {
 			name = "cost_and_timer_text"
 			position = { x = 112 y = 9 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = "999"
 			maxWidth = 320
@@ -551,7 +551,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "track_decision_checkbox"
-			position = { x = 437 y = 7 }
+			position = { x = 437 y = 8 }
 			quadTextureSprite = "GFX_checkbox_small4"
 			clicksound = click_checkbox
 			frame = 2
@@ -559,7 +559,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "btn_select"
-			position = {x=465 y=4}
+			position = {x=465 y=6}
 			spriteType = "GFX_decision_select_icon_strip"
 			clicksound = click_default
 			frame = 2
@@ -616,7 +616,7 @@ guiTypes = {
 			name = "name_text"
 			position = { x = 62 y = 2 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 300
@@ -638,7 +638,7 @@ guiTypes = {
 			name = "timer_text"
 			position = { x = 405 y = 9 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = "999"
 			maxWidth = 70
@@ -650,7 +650,7 @@ guiTypes = {
 			name = "cost_and_timer_text"
 			position = { x = 135 y = 9 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = "999"
 			maxWidth = 320
@@ -692,7 +692,7 @@ guiTypes = {
 			name = "name_text"
 			position = { x = 62 y = 12 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "pobeda_16"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 395

@@ -40,3 +40,291 @@ defined_text = {
 		localization_key = "[?asponsorVariable|0§R]"
 	}
 }
+
+##### Дальше - пиздец #####
+
+defined_text = { 
+	name = army_sponsor_effect
+	
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 0 }
+		}
+		localization_key = army_sponsor_effect0
+	}	
+	
+	### в плюс ###
+	
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 1 }
+		}
+		localization_key = army_sponsor_effect1
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 2 }
+		}
+		localization_key = army_sponsor_effect2
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 3 }
+		}
+		localization_key = army_sponsor_effect3
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 4 }
+		}
+		localization_key = army_sponsor_effect4
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 5 }
+		}
+		localization_key = army_sponsor_effect5
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 6 }
+		}
+		localization_key = army_sponsor_effect6
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 7 }
+		}
+		localization_key = army_sponsor_effect7
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 8 }
+		}
+		localization_key = army_sponsor_effect8
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 9 }
+		}
+		localization_key = army_sponsor_effect9
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 10 }
+		}
+		localization_key = army_sponsor_effect10
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = 11 }
+		}
+		localization_key = army_sponsor_effect11
+	}
+	
+	### в минус ###
+	
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -1 }
+		}
+		localization_key = army_sponsor_effect_1
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -2 }
+		}
+		localization_key = army_sponsor_effect_2
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -3 }
+		}
+		localization_key = army_sponsor_effect_3
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -4 }
+		}
+		localization_key = army_sponsor_effect_4
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -5 }
+		}
+		localization_key = army_sponsor_effect_5
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -6 }
+		}
+		localization_key = army_sponsor_effect_6
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -7 }
+		}
+		localization_key = army_sponsor_effect_7
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -8 }
+		}
+		localization_key = army_sponsor_effect_8
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -9 }
+		}
+		localization_key = army_sponsor_effect_9
+	}
+	text = {
+		trigger = {
+			check_variable = { asponsorVariable = -10 }
+		}
+		localization_key = army_sponsor_effect_10
+	}
+}
+
+defined_text = { 
+	name = civil_sponsor_effect
+
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 0 }
+		}
+		localization_key = civil_sponsor_effect0 
+	}
+	
+	### в плюс ###	
+	
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 1 }
+		}
+		localization_key = civil_sponsor_effect1
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 2 }
+		}
+		localization_key = civil_sponsor_effect2
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 3 }
+		}
+		localization_key = civil_sponsor_effect3
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 4 }
+		}
+		localization_key = civil_sponsor_effect4
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 5 }
+		}
+		localization_key = civil_sponsor_effect5
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 6 }
+		}
+		localization_key = civil_sponsor_effect6
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 7 }
+		}
+		localization_key = civil_sponsor_effect7
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 8 }
+		}
+		localization_key = civil_sponsor_effect8
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 9 }
+		}
+		localization_key = civil_sponsor_effect9
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 10 }
+		}
+		localization_key = civil_sponsor_effect10
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = 11 }
+		}
+		localization_key = civil_sponsor_effect11
+	}
+	
+	### в минус ###
+	
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -1 }
+		}
+		localization_key = civil_sponsor_effect_1
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -2 }
+		}
+		localization_key = civil_sponsor_effect_2
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -3 }
+		}
+		localization_key = civil_sponsor_effect_3
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -4 }
+		}
+		localization_key = civil_sponsor_effect_4
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -5 }
+		}
+		localization_key = civil_sponsor_effect_5
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -6 }
+		}
+		localization_key = civil_sponsor_effect_6
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -7 }
+		}
+		localization_key = civil_sponsor_effect_7
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -8 }
+		}
+		localization_key = civil_sponsor_effect_8
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -9 }
+		}
+		localization_key = civil_sponsor_effect_9
+	}
+	text = {
+		trigger = {
+			check_variable = { csponsorVariable = -10 }
+		}
+		localization_key = civil_sponsor_effect_10
+	}
+}

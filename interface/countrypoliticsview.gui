@@ -102,43 +102,6 @@ guiTypes = {
 			size = { width = 150 height = 75 }
 			clipping = no
 			Orientation = UPPER_RIGHT
-			
-			background = {
-				name = "Background"
-				spriteType ="GFX_countryview_government_in_exile_bg"
-			}
-
-
-			instantTextboxType = {
-				name = "header"
-				position = { x = 35 y = 8 }
-				font = "hoi_16mbs"
-				text = "COUNTRY_VIEW_LEGITIMACY_HEADER"
-				maxWidth = 80
-				maxHeight = 20
-				fixedsize = yes
-				format = center		
-				alwaystransparent = yes
-			}
-
-			instantTextboxType = {
-				name = "legitimacy"
-				position = { x = 35 y = 23 }
-				font = "hoi_24header"
-				text = "42"
-				maxWidth = 80
-				maxHeight = 20
-				fixedsize = yes
-				format = center	
-				alwaystransparent = yes
-			}
-
-			iconType = {
-				name = "icon_exiled_governments"
-				spriteType = "GFX_countryview_exile_my_legitimacy"
-				position = { x = 12 y = 12 }
-				alwaystransparent = yes
-			}
 		}
 		
 		containerWindowType = {
@@ -147,27 +110,18 @@ guiTypes = {
 			size = { width = 255 height = 60 }
 			clipping = no
 					
-#			instantTextboxType = {
-#				name = "party"
-#				position = { x = 9 y = 2 }
-#				font = "hoi_18mbs"
-#				text = "party"
-#				maxWidth = 155
-#				maxHeight = 20
-#			}
-			
 			instantTextboxType = {
-				name = "ideology"
+				name = "party"
 				position = { x = 9 y = 8 }
 				font = "hoi_18mbs"
-				text = "ideology"
+				text = ""
 				maxWidth = 155
 				maxHeight = 20
 			}
 			
 			instantTextboxType = {
 				name = "elections"
-				position = { x = 9 y = 29 }
+				position = { x = 9 y = 31 }
 				font = "hoi_16mbs"
 				text = "elections"
 				maxWidth = 155

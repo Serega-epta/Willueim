@@ -5,44 +5,43 @@ scripted_gui = {
 		window_name = "sinopsis"
 		
 		visible = {
-		     
+			is_in_array = { array = global.states_sinopsis value = THIS.id }			
 		}
 		
 		effects = {
-			sinopsis_click = 
-			{
-				if = 
-				{
-					limit = {  state = 857 }
+		
+			sinopsis_click = {
+			
+				if = {
+					limit = { THIS = { state = 857.id } }
 					ROOT ={
-					country_event = {
-						id = SINe.2
-					}
+						country_event = {
+							id = SINe.2
+						}
 					}
 				}
-					else_if = 
-				{
-						limit = {  state = 839 }
+					
+				else_if = {
+					limit = { THIS = { state = 839.id } }
 					ROOT ={
-					country_event = {
-						id = SINe.3
-					}
-					}
-				}
-				else_if = 
-				{
-						limit = {  state = 864 }
-					ROOT ={
-					country_event = {
-						id = SINe.4
-					}
+						country_event = {
+							id = SINe.3
+						}
 					}
 				}
 				
+				else_if = {
+					limit = { THIS = { state = 864.id } }
+					ROOT ={
+						country_event = {
+							id = SINe.4
+						}
+					}
+				}
 			}
 		}
-        
 		triggers = {
 		
-    }
+		}
+	}
 }

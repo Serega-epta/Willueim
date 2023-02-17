@@ -1,13 +1,5 @@
-### search_filters = {FOCUS_FILTER_POLITICAL}
-### search_filters = {FOCUS_FILTER_RESEARCH}
-### search_filters = {FOCUS_FILTER_INDUSTRY}
-### search_filters = {FOCUS_FILTER_STABILITY}
-### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-### search_filters = {FOCUS_FILTER_MANPOWER}
-### search_filters = {FOCUS_FILTER_ANNEXATION}
-
 focus_tree = {
-	id = bransk_focus
+	id = army_voz_focus
 	
 	country = {
 		factor = 0
@@ -30,7 +22,9 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			country_event = {
+						id = ARM.1
+					}
 		}
 		
 	}
@@ -47,6 +41,9 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+					country_event = {
+						id = ARM.2
+					}
 		
 		}
 		
@@ -64,7 +61,21 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 300
+		producer = ARM
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 100
+		producer = ARM
+		}
+		add_equipment_to_stockpile = {
+		type = obt_tank_chassis
+		amount = 2
+		producer = ARM
+		}
 		}
 		
 	}
@@ -81,7 +92,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_manpower = 100
+			country_event = {
+				id = ARM.3
+				}
 		}
 		
 	}
@@ -97,7 +111,7 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		completion_reward = { add_ideas = ARM_Kyst_Factor
 		
 		}
 		
@@ -125,7 +139,7 @@ focus_tree = {
 		id = IMP_Loyalist_units
 		icon = GFX_Отряды_Лоялистов
 		prerequisite = { focus = IMP_Crimson_Terror }
-            mutually_exclusive = { focus = IMP_The_Thrill_of_Traitors }
+        mutually_exclusive = { focus = IMP_The_Thrill_of_Traitors }
 		x = 4
 		y = 4
 		cost = 1
@@ -133,7 +147,7 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		completion_reward = { add_ideas = ARM_Vozrozh_1
 		
 		}
 		
@@ -151,6 +165,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+		swap_ideas = {remove_idea = ARM_Vozrozh_1 add_idea = ARM_Vozrozh_2}
 		
 		}
 		
@@ -160,6 +175,7 @@ focus_tree = {
 		id = IMP_The_Thrill_of_Traitors
 		icon = GFX_Трепет_Предателей
 		prerequisite = { focus = IMP_Crimson_Terror }
+		mutually_exclusive = { focus = IMP_Loyalist_units }
 		x = 8
 		y = 4
 		cost = 1
@@ -167,7 +183,7 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		completion_reward = { add_ideas = ARM_Bag_dik_1
 		
 		}
 		
@@ -184,7 +200,7 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		completion_reward = { swap_ideas = {remove_idea = ARM_Bag_dik_1 add_idea = ARM_Bag_dik_2}
 		
 		}
 		
@@ -193,8 +209,7 @@ focus_tree = {
 	focus = {
 		id = IMP_From_Nonexistence
 		icon = GFX_Из_Небытия
-		prerequisite = { focus = IMP_Punitive_Labor }
-		prerequisite = { focus = IMP_The_Loyalty_Desperate }
+		prerequisite = { focus = IMP_Punitive_Labor focus = IMP_The_Loyalty_Desperate }
 		x = 6
 		y = 7
 		cost = 1
@@ -202,16 +217,21 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		completion_reward = {add_ideas = ARM_Marsh_v_pered
 		
 		}
 		
 	}
+	
 
 	focus = {
 		id = IMP_Operation_MOR
 		icon = GFX_Операция_М_О_Р
 		prerequisite = { focus = IMP_From_Nonexistence }
+		available = {
+			is_subject = no
+			has_war = no 
+		}
 		x = 4
 		y = 8
 		cost = 1
@@ -219,7 +239,10 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		completion_reward = {declare_war_on = {
+		target = SUM
+		type = annex_everything
+		}
 		
 		}
 		
@@ -229,6 +252,10 @@ focus_tree = {
 		id = IMP_Operation_VOY
 		icon = GFX_Операция_В_О_Й
 		prerequisite = { focus = IMP_From_Nonexistence }
+		available = {
+			is_subject = no
+			has_war = no 
+		}
 		x = 8
 		y = 8
 		cost = 1
@@ -237,6 +264,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+		declare_war_on = {
+		target = VDS
+		type = annex_everything
+		}
 		
 		}
 		
@@ -255,7 +286,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+				add_ideas = ARM_Sovet_Reintegration
 		}
 		
 	}
@@ -264,6 +295,10 @@ focus_tree = {
 		id = IMP_Operation_Atonement
 		icon = GFX_Операция_ИСКУПЛЕНИЕ
 		prerequisite = { focus = IMP_Integration_Council }
+		available = {
+			is_subject = no
+			has_war = no 
+		}
 		x = 6
 		y = 10
 		cost = 1
@@ -272,9 +307,23 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+		declare_war_on = {
+		target = MAD
+		type = annex_everything
+		}
+		declare_war_on = {
+		target = BAG
+		type = annex_everything
+		}
+		declare_war_on = {
+		target = BIH
+		type = annex_everything
+		}
 		
 		}
 		
 	}
+
+
 
 

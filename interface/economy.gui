@@ -15,7 +15,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "economy_main"
-		size = { width = 400 height = 300 }
+		size = { width = 400 height = 320 }
 		position = { x = 543 y = 0  } 
 		fade_time = 300
 		fade_type = linear
@@ -68,7 +68,8 @@ guiTypes = {
 			position = { x = 45 y = 107 }
 			font = "hoi_16mbs"
 			text = "Военные расходы: [?armyVariable]"
-			maxWidth = 200
+			pdx_tooltip = army_tt
+			maxWidth = 220
 		}
 		
 		instantTextBoxType = {
@@ -83,7 +84,8 @@ guiTypes = {
 			name ="army_spons_num"
 			position = { x = 185 y = 80 }
 			font = "hoi_16mbs"
-			text = [asponsor_text] 
+			text = [asponsor_text]
+			pdx_tooltip = army_spons_num_tt
 			maxWidth = 35
 		}
 		
@@ -128,7 +130,8 @@ guiTypes = {
 			position = { x = 45 y = 207 }
 			font = "hoi_16mbs"
 			text = "Гражданские расходы: [?civilianVariable]"
-			maxWidth = 200
+			pdx_tooltip = civilian_tt
+			maxWidth = 220
 		}
 		
 		instantTextBoxType = {
@@ -144,6 +147,7 @@ guiTypes = {
 			position = { x = 185 y = 180 }
 			font = "hoi_16mbs"
 			text = [csponsor_text] 
+			pdx_tooltip = civil_spons_num_tt		
 			maxWidth = 35
 		}		
 		
@@ -176,15 +180,27 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name ="all_have"
-			position = { x = 110 y = 255 }
+			position = { x = 110 y = 250 }
 			font = "hoi_18mbs"
 			text = "Имеется: [?economyVariable] Черных рублей"
 			maxWidth = 250
 			pdx_tooltip = "all_have_tt"
 			pdx_tooltip_delayed = "all_have_tt_delayed"
 		}
+
+		###Тратится###
 		
-		###Вай бля точки###
+		instantTextBoxType = {
+			name ="spent"
+			position = { x = 110 y = 275 }
+			font = "hoi_18mbs"
+			text = "Тратится: [?minusEconomyVariable] Черных рублей"
+			maxWidth = 250
+			pdx_tooltip = "spent_tt"
+			pdx_tooltip_delayed = "spent_tt_delayed"
+		}
+		
+		#### Вай бля точки ####
 		##+Военка##
 		iconType = { 
            name ="picker_1_1"

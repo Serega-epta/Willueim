@@ -1,0 +1,56 @@
+guiTypes = {
+	containerWindowType = {
+		name = "RoH_welcome_screen_container"
+		position = { x = 0 y = 0 }
+		size = { width = 750 height = 630 }
+		clipping = no
+		moveable = yes
+		orientation = CENTER
+		origo = center
+		
+		fade_time = 300
+		fade_type = linear
+
+		background = {
+			name = "logo_os"
+			spriteType ="GFX_logo_os"
+			position = { x = -4 y = 0 }
+		}
+
+		background = {
+			name = "logo_os_bg"
+			spriteType = "GFX_logo_os_bg"
+			position = { x = 4 y = 357 }			
+		}
+
+		instantTextboxType = {
+			name = "header"
+			position = { x=184 y=376 }
+			font = "hoi_30header"
+			text = "[get_welcome_screen_header]"
+			maxWidth = 700
+		}
+
+		instantTextboxType = {
+			name = "based"
+			position = { x=61 y=447 }
+			font = "hoi_16mbs"
+			text = "[get_welcome_screen_credits]"
+			maxWidth = 650
+			maxHeight = 140
+			scrollbarType = standardtext_slider
+		}
+
+		buttonType = {
+			name = "RoH_welcome_screen_button"
+			position = { x = 255 y = 590 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "[get_welcome_screen_button]"
+			pdx_tooltip = roh_welcome_screen_button_tt
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+			shortcut = "ESCAPE"
+		}
+	}
+}

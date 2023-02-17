@@ -1,0 +1,96 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			set_variable = { economyVariable = 0 }
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			set_variable = { economyVariable1 = 1 }
+			set_variable = { civilianVariable = civilSpent }
+			set_variable = { armyVariable = armySpent }
+			round_variable = { civilianVariable }
+			round_variable = { armyVariable }
+
+			if = {
+				linit = { any_controlled_state = { FROM.resource@coal > 0 } }
+				multiply_variable = { economyVariable1 = FROM.resource@coal }
+			}
+			else = {
+				linit = { all_controlled_state = { FROM.resource@coal = 0 } }
+				multiply_variable = { economyVariable1 = 1 }
+			}
+
+			if = {
+				linit = { any_controlled_state = { FROM.resource@oil > 0 } }
+				multiply_variable = { economyVariable1 = FROM.resource@oil }
+			}
+			else = {
+				linit = { all_controlled_state = { FROM.resource@oil = 0 } }
+				multiply_variable = { economyVariable1 = 1 }
+			}
+
+			if = {
+				linit = { any_controlled_state = { FROM.resource@energy > 0 } }
+				multiply_variable = { economyVariable1 = FROM.resource@energy }
+			}
+			else = {
+				linit = { all_controlled_state = { FROM.resource@energy = 0 } }
+				multiply_variable = { economyVariable1 = 1 }
+			}
+			if = {
+				linit = { NOT = { civilSpent = civilSpent } }
+				add_to_variable = { minusEconomyVariable = civilSpent }
+			}
+			else = {
+				linit = { civilSpent = civilSpent }
+				multiply_variable = { minusEconomyVariable = 1 }
+			}			
+
+			add_to_variable = { economyVariable = economyVariable1 }
+			
+			subtract_from_variable = { economyVariable = minusEconomyVariable }
+			
+			#### Гражданские расходы####
+			
+			if = {
+				limit = { OR = { check_variable = { manpower = 100000 } check_variable = { manpower > 100000 } } }
+				set_variable = { civilSpent = 1000 }
+			}
+			if = {
+				limit = { OR = { check_variable = { manpower = 200000 } check_variable = { manpower > 200000 } } }	
+				set_variable = { civilSpent = 2000 }
+			}
+			if = {
+				limit = { OR = { check_variable = { manpower = 300000 } check_variable = { manpower > 300000 } } }	
+				set_variable = { civilSpent = 3000 }
+			}
+			if = {
+				limit = { OR = { check_variable = { manpower = 400000 } check_variable = { manpower > 400000 } } }	
+				set_variable = { civilSpent = 4000 }
+			}			
+			if = {
+				limit = { OR = { check_variable = { manpower = 500000 } check_variable = { manpower > 500000 } } }	
+				set_variable = { civilSpent = 5000 }
+			}	
+			if = {
+				limit = { OR = { check_variable = { manpower = 1000000 } check_variable = { manpower > 1000000 } } }	
+				set_variable = { civilSpent = 10000 }
+			}				
+			if = {
+				limit = { check_variable = { manpower < 100000 } }
+				set_variable = { civilSpent = 500 }
+			}
+			
+			#### Военные расходы ####
+			
+			
+			
+			#### Зачем ####
+			
+			set_variable = { factories = minusEconomyVariable }
+			subtract_from_variable = { factories = civilSpent } 
+		}
+	}
+} 
