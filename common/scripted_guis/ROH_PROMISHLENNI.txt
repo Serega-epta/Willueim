@@ -1,0 +1,27 @@
+#Скрипт промышленного
+scripted_gui = {
+
+		OKNO_PROMISHLENNI = {
+			context_type = selected_state_context
+			parent_window_token = selected_state_view
+			window_name = "OKNO_PROMISHLENNI"
+			dirty = state_prmishleni
+			
+			visible = { 
+				check_variable = { state_prmishleni > 0 }		
+			}
+			
+			effects = { 
+				BUTTON_VIHOD5_click = {  				
+					clear_variable = state_prmishleni						
+				}
+#Скрипт убрать специализацию
+				BUTTON_RESPECIALIZIROVAT4_click = {  				
+					clear_variable = state_prmishleni
+					clear_variable = state_specialization		
+					remove_dynamic_modifier = { modifier = promishlenni_baff }											
+				}				
+			}	
+		}		
+}
+

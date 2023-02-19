@@ -1,0 +1,325 @@
+guiTypes = {
+   containerWindowType = {
+       name = "GUI_SPECIALIZATION" 
+       position = { x = 150 y = 550 }
+	   clipping = no
+	   
+# Кнопка специализации
+       buttonType ={ 
+           name ="BUTTON_SPECIALIZATION"
+		   position = { x=10 y=10 }
+		   quadTextureSprite = "GFX_button_148x34"
+		   buttonFont = "hoi_16mbs"
+		   format = right
+		   buttonText = "СПЕЦИАЛИЗАЦИЯ РЕГИОНА"		   
+		   clicksound = click_close
+       } 
+   }
+   
+# Окно специализации
+   containerWindowType = {
+       name = "OKNO_SPECIALIZATION" 
+	   size = { width=500 height=600  }
+	   clipping = no
+	   position = { x=450 y=0 }
+	   show_position = { x=450 y=0 }
+	   show_animation_type = accelerated
+	   hide_animation_type = accelerated
+	   
+	   hide_sound = menu_close_window
+	   show_sound = menu_open_window
+	   
+      background = {
+		name = "Background"
+	    quadTextureSprite ="GFX_tiled_window_w_close"	  
+	  }
+	  
+	  background = {
+		name = "Background"
+		position = { x=0 y=300 }
+	    quadTextureSprite ="GFX_kartinka_vibora_button"	  
+	  }
+	  
+	  
+# Кнопка выхода из окна специализации
+	  buttonType ={ 
+           name ="BUTTON_VIHOD"
+		   position = { x=-50 y=15 }
+		   quadTextureSprite ="GFX_closebutton"
+		   buttonFont = "Main_14_black"
+		   shortcut = "ESCAPE"
+		   Orientation = "UPPER_RIGHT" 
+		   clicksound = click_close 
+		   pdx_tooltip = "CLOSE"
+       } 
+# Кнопка задать специализацию
+	buttonType ={ 
+           name ="BUTTON_SPECIAALIZIROVAT"
+		   position = { x=180 y=100 }
+		   quadTextureSprite = "GFX_button_148x34"
+		   buttonFont = "hoi_16mbs"
+		   format = right
+		   buttonText = "СПЕЦИАЛИЗИРОВАТЬ"		   
+		   clicksound = click_close
+       } 
+	   
+   }
+
+
+
+
+
+# Окно гарнизонного типа
+   containerWindowType = {
+       name = "OKNO_GARNIZON" 
+	   size = { width=500 height=600  }
+	   clipping = no
+	   position = { x=450 y=0 }
+	   show_position = { x=450 y=0 }
+	   show_animation_type = accelerated
+	   hide_animation_type = accelerated
+	   
+	   hide_sound = menu_close_window
+	   show_sound = menu_open_window
+	   
+      background = {
+		name = "Background"
+	    quadTextureSprite ="GFX_tiled_window_w_close"	  
+	  }
+	  
+	  instantTextBoxType = {
+			name ="GRE_fascists_attitude_status"
+			position = { x = 0 y = 200 }
+			font = "hoi_18mbs"
+			text = "Бонусы гарнизона : +20% к обороне в регионе +5 к снабжению в регионе +15% к фактору военнообязаного населения в регионе"
+			format = center
+			maxwidth = 500
+		}
+	    
+	  background = {
+		name = "Background"
+		position = { x=0 y=300 }
+	    quadTextureSprite ="GFX_kartinka_garnizona_button"	  
+	  }
+	  
+	  
+# Кнопка выхода из окна специализации
+	  buttonType ={ 
+           name ="BUTTON_VIHOD2"
+		   position = { x=-50 y=15 }
+		   quadTextureSprite ="GFX_closebutton"
+		   buttonFont = "Main_14_black"
+		   shortcut = "ESCAPE"
+		   Orientation = "UPPER_RIGHT" 
+		   clicksound = click_close 
+		   pdx_tooltip = "CLOSE"
+       } 
+# Кнопка снять специализацию
+	buttonType ={ 
+           name ="BUTTON_RESPECIALIZIROVAT"
+		   position = { x=180 y=100 }
+		   quadTextureSprite = "GFX_button_148x34"
+		   buttonFont = "hoi_16mbs"
+		   format = right
+		   buttonText = "УБРАТЬ СПЕЦИАЛИЗАЦИЮ"		   
+		   clicksound = click_close
+       } 
+	   
+   }
+   
+   
+   
+   
+
+# Окно переферийного типа
+   containerWindowType = {
+       name = "OKNO_PEREFERIA" 
+	   size = { width=500 height=600  }
+	   clipping = no
+	   position = { x=450 y=0 }
+	   show_position = { x=450 y=0 }
+	   show_animation_type = accelerated
+	   hide_animation_type = accelerated
+	   
+	   hide_sound = menu_close_window
+	   show_sound = menu_open_window
+	   
+      background = {
+		name = "Background"
+	    quadTextureSprite ="GFX_tiled_window_w_close"	  
+	  }
+	  
+	  instantTextBoxType = {
+			name ="GRE_fascists_attitude_status"
+			position = { x = 0 y = 200 }
+			font = "hoi_18mbs"
+			text = "Бонусы переферии : +0,05% к приросту населения глобально, базовая стабильность + 10%"
+			format = center
+			maxwidth = 500
+		}
+	  
+	  background = {
+		name = "Background"
+		position = { x=0 y=300 }
+	    quadTextureSprite ="GFX_kartinka_pereferia_button"	  
+	  }
+	  
+	  
+# Кнопка выхода из окна специализации
+	  buttonType ={ 
+           name ="BUTTON_VIHOD3"
+		   position = { x=-50 y=15 }
+		   quadTextureSprite ="GFX_closebutton"
+		   buttonFont = "Main_14_black"
+		   shortcut = "ESCAPE"
+		   Orientation = "UPPER_RIGHT" 
+		   clicksound = click_close 
+		   pdx_tooltip = "CLOSE"
+       } 
+# Кнопка снять специализацию
+	buttonType ={ 
+           name ="BUTTON_RESPECIALIZIROVAT2"
+		   position = { x=180 y=100 }
+		   quadTextureSprite = "GFX_button_148x34"
+		   buttonFont = "hoi_16mbs"
+		   format = right
+		   buttonText = "УБРАТЬ СПЕЦИАЛИЗАЦИЮ"		   
+		   clicksound = click_close
+       } 
+	   
+   }
+
+
+
+
+# Окно сырьевого типа
+   containerWindowType = {
+       name = "OKNO_SIREVOI" 
+	   size = { width=500 height=600  }
+	   clipping = no
+	   position = { x=450 y=0 }
+	   show_position = { x=450 y=0 }
+	   show_animation_type = accelerated
+	   hide_animation_type = accelerated
+	   
+	   hide_sound = menu_close_window
+	   show_sound = menu_open_window
+	   
+      background = {
+		name = "Background"
+	    quadTextureSprite ="GFX_tiled_window_w_close"	  
+	  }
+	  
+	  instantTextBoxType = {
+			name ="GRE_fascists_attitude_status"
+			position = { x = 0 y = 200 }
+			font = "hoi_18mbs"
+			text = "Бонусы сырьевого : +20% к ресурсам в регионе, открывает решения на разработку новых ресурсов в регионе"
+			format = center
+			maxwidth = 500
+		}
+	  
+	  background = {
+		name = "Background"
+		position = { x=0 y=300 }
+	    quadTextureSprite ="GFX_kartinka_sirievoi_button"	  
+	  }
+	  
+	  
+# Кнопка выхода из окна специализации
+	  buttonType ={ 
+           name ="BUTTON_VIHOD4"
+		   position = { x=-50 y=15 }
+		   quadTextureSprite ="GFX_closebutton"
+		   buttonFont = "Main_14_black"
+		   shortcut = "ESCAPE"
+		   Orientation = "UPPER_RIGHT" 
+		   clicksound = click_close 
+		   pdx_tooltip = "CLOSE"
+       } 
+# Кнопка снять специализацию
+	buttonType ={ 
+           name ="BUTTON_RESPECIALIZIROVAT3"
+		   position = { x=180 y=100 }
+		   quadTextureSprite = "GFX_button_148x34"
+		   buttonFont = "hoi_16mbs"
+		   format = right
+		   buttonText = "УБРАТЬ СПЕЦИАЛИЗАЦИЮ"		   
+		   clicksound = click_close
+       } 
+	   
+   }
+
+# Окно промышленного типа
+   containerWindowType = {
+       name = "OKNO_PROMISHLENNI" 
+	   size = { width=500 height=600  }
+	   clipping = no
+	   position = { x=450 y=0 }
+	   show_position = { x=450 y=0 }
+	   show_animation_type = accelerated
+	   hide_animation_type = accelerated
+	   
+	   hide_sound = menu_close_window
+	   show_sound = menu_open_window
+	   
+      background = {
+		name = "Background"
+	    quadTextureSprite ="GFX_tiled_window_w_close"	  
+	  }
+	  
+	  instantTextBoxType = {
+			name ="GRE_fascists_attitude_status"
+			position = { x = 0 y = 200 }
+			font = "hoi_18mbs"
+			text = "Бонусы промышленого : +20% к скорости строительства в регионе , +5 обьем заводского производства глобально"
+			format = center
+			maxwidth = 500
+		}
+	  
+	  background = {
+		name = "Background"
+		position = { x=0 y=300 }
+	    quadTextureSprite ="GFX_kartinka_promishlenny_button"	  
+	  }
+	  
+	  
+# Кнопка выхода из окна специализации
+	  buttonType ={ 
+           name ="BUTTON_VIHOD5"
+		   position = { x=-50 y=15 }
+		   quadTextureSprite ="GFX_closebutton"
+		   buttonFont = "Main_14_black"
+		   shortcut = "ESCAPE"
+		   Orientation = "UPPER_RIGHT" 
+		   clicksound = click_close 
+		   pdx_tooltip = "CLOSE"
+       } 
+# Кнопка снять специализацию
+	buttonType ={ 
+           name ="BUTTON_RESPECIALIZIROVAT4"
+		   position = { x=180 y=100 }
+		   quadTextureSprite = "GFX_button_148x34"
+		   buttonFont = "hoi_16mbs"
+		   format = right
+		   buttonText = "УБРАТЬ СПЕЦИАЛИЗАЦИЮ"		   
+		   clicksound = click_close
+       } 
+	   
+   }
+
+
+
+
+
+
+
+
+
+
+   
+}
+
+
+
+

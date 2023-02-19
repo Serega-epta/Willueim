@@ -1,0 +1,28 @@
+#Скрипт гарнизона
+scripted_gui = {
+
+		OKNO_GARNIZON = {
+			context_type = selected_state_context
+			parent_window_token = selected_state_view
+			window_name = "OKNO_GARNIZON"
+			dirty = state_garnizon
+			
+			visible = { 
+				check_variable = { state_garnizon > 0 }				
+			}
+			
+			effects = { 
+				BUTTON_VIHOD2_click = {  
+					clear_variable = state_garnizon													
+				}
+#Скрипт убрать специализацию
+				BUTTON_RESPECIALIZIROVAT_click = {  								
+					clear_variable = state_garnizon
+					clear_variable = state_specialization		
+					remove_dynamic_modifier = { modifier = garnizon_baff }					 							
+				}				
+			}	
+		}		
+}
+
+
