@@ -47,7 +47,7 @@
 		
 }
 #дикие деревни
-      wild_settlements = {
+      wild_tribes = {
 		enable = { always = yes }
 		icon = GFX_temperature_icons
 		production_speed_buildings_factor = -0.05
@@ -68,8 +68,9 @@
       distortion_of_silence = {
 		enable = { always = yes }
 		icon = GFX_modifiers_unplanned_offensive_icon
-		#initiative_factor = 0.3
-		#coordination_bonus = 0.3
+		
+		initiative_factor = -0.3
+		coordination_bonus = -0.3
 		
 		
 		army_speed_factor = -0.25

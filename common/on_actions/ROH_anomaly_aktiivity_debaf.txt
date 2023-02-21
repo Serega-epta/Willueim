@@ -1,0 +1,58 @@
+on_state_control_changed = { 
+	effect = { 	
+	
+###########################	
+#		log = yes
+#			random_other_country = {
+#							random_owned_state = {
+#							log = dasd
+#							add_dynamic_modifier = { modifier = abnormal_activity }
+#							}							
+#			}
+##########################			
+#			
+#			if = {
+#				limit = {
+#					FROM = {
+#						original_tag = COA						
+#					}
+#					FROM.FROM = {					
+#						NOT = { has_dynamic_modifier = { modifier = abnormal_activity } }
+#					}
+#				}
+#				FROM.FROM = {
+#					add_dynamic_modifier = { modifier = abnormal_activity }
+#				}
+#			}
+#########################	
+#		if = {
+#				limit = {
+#					ROOT = {
+#						original_tag = COA						
+#					}
+#					FROM.FROM = {
+#						is_on_continent = europe
+#						NOT = { has_dynamic_modifier = { modifier = abnormal_activity } }
+#					}
+#				}
+#				FROM.FROM = {
+#					add_dynamic_modifier = { modifier = abnormal_activity }
+#				}
+#			}
+#########################	
+#			if = {
+#				limit = { 
+#					FROM = { original_tag = COA }
+#					FROM.FROM = { is_core_of = COA }
+#				}
+#				FROM.FROM = { add_dynamic_modifier = { modifier = abnormal_activity } }
+#				}
+#########################				
+#					if = {
+#						limit = { is_core_of = COA	}
+#
+#						add_dynamic_modifier = { modifier = abnormal_activity }
+#					}
+#########################	
+	}
+}
