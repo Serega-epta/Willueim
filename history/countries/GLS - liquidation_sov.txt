@@ -20,9 +20,18 @@ set_politics = {
     election_frequency = 48
     elections_allowed = no
 }
+recruit_character = GLS_Iron_Dimon
 recruit_character = GLS_Ivan_Sykhoy
 recruit_character = GLS_Airat_Kabirov
 recruit_character = GLS_Almaz_Gabbasin
+
+create_country_leader = {
+	name = GLS_Iron_Dimon
+	picture = "gfx/leaders/GLS/Iron_Dimon.dds"
+	ideology = patriots_1
+	expire = "1965.1.1.1"
+	desc = GLS_Iron_Dimon_desc
+}
 set_popularities = {
     bandits = 0
     patriots = 100
