@@ -23,8 +23,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = {
-						id = ARM.1
-					}
+				id = ARM.1
+				days = 1
+			}
 		}
 		
 	}
@@ -41,9 +42,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-					country_event = {
-						id = ARM.2
-					}
+			country_event = {
+				id = ARM.2
+				days = 1
+			}
 		
 		}
 		
@@ -76,8 +78,13 @@ focus_tree = {
 		amount = 2
 		producer = ARM
 		}
+		hidden_effect = {
+		country_event = {
+		id = ARM.5
+		days = 1
+		}		
 		}
-		
+		}
 	}
 
 	focus = {
@@ -95,6 +102,7 @@ focus_tree = {
 			add_manpower = 100
 			country_event = {
 				id = ARM.3
+				days = 1
 				}
 		}
 		
@@ -111,8 +119,14 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { add_ideas = ARM_Kyst_Factor
-		
+		completion_reward = { 
+		add_ideas = ARM_Kyst_Factor
+		hidden_effect = {
+		country_event = {
+		id = ARM.6
+		days = 1
+		}
+		}
 		}
 		
 	}
@@ -130,7 +144,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+		country_event = {
+		id = ARM.14
+		days = 1
+		}		
 		}
 		
 	}
@@ -147,8 +164,14 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { add_ideas = ARM_Vozrozh_1
-		
+		completion_reward = { 
+		add_ideas = ARM_Vozrozh_1
+		hidden_effect = {
+		country_event = {
+		id = ARM.7
+		days = 1
+		}
+		}		
 		}
 		
 	}
@@ -166,7 +189,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 		swap_ideas = {remove_idea = ARM_Vozrozh_1 add_idea = ARM_Vozrozh_2}
-		
+		hidden_effect = {
+		country_event = {
+		id = ARM.15
+		days = 1
+		}
+		}		
 		}
 		
 	}
@@ -183,10 +211,15 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { add_ideas = ARM_Bag_dik_1
-		
+		completion_reward = { 
+		add_ideas = ARM_Bag_dik_1
+		hidden_effect = {
+		country_event = {
+		id = ARM.10
+		days = 1
+		}		
 		}
-		
+		}
 	}
 
 	focus = {
@@ -200,10 +233,15 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { swap_ideas = {remove_idea = ARM_Bag_dik_1 add_idea = ARM_Bag_dik_2}
-		
+		completion_reward = { 
+		swap_ideas = {remove_idea = ARM_Bag_dik_1 add_idea = ARM_Bag_dik_2}
+		hidden_effect = {
+		country_event = {
+		id = ARM.11
+		days = 1
+		}		
 		}
-		
+		}
 	}
 
 	focus = {
@@ -217,8 +255,12 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {add_ideas = ARM_Marsh_v_pered
-		
+		completion_reward = {
+		add_ideas = ARM_Marsh_v_pered
+		country_event = {
+		id = ARM.8
+		days = 1
+		}		
 		}
 		
 	}
@@ -239,11 +281,17 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {declare_war_on = {
+		completion_reward = {
+		declare_war_on = {
 		target = SUM
 		type = annex_everything
 		}
-		
+		hidden_effect = {
+		country_event = {
+		id = ARM.9
+		days = 7
+		}	
+		}
 		}
 		
 	}
@@ -267,10 +315,14 @@ focus_tree = {
 		declare_war_on = {
 		target = VDS
 		type = annex_everything
+		}	
+		hidden_effect = {
+		country_event = {
+		id = ARM.12
+		days = 7		
+		}		
 		}
-		
 		}
-		
 	}
 
 	focus = {
@@ -286,7 +338,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-				add_ideas = ARM_Sovet_Reintegration
+			add_ideas = ARM_Sovet_Reintegration
+			country_event = {
+				id = ARM.16
+				days = 1
+			}			
 		}
 		
 	}
@@ -319,11 +375,15 @@ focus_tree = {
 		target = BIH
 		type = annex_everything
 		}
-		
+		hidden_effect = {	
+		country_event = {
+		id = ARM.13
+		days = 7		
+		}		
 		}
-		
+		}
 	}
-
+}
 
 
 
