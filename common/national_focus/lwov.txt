@@ -28,8 +28,11 @@ factor = 1
 }
 search_filters = { FOCUS_FILTER_POLITICAL }
 completion_reward = {
-				add_political_power = 120
-				
+	add_political_power = 120
+	country_event = {
+		id = LWV.1
+		days = 1
+	}	
 }
 }
 
@@ -49,7 +52,11 @@ factor = 1
 }
 search_filters = { FOCUS_FILTER_POLITICAL }
 completion_reward = {
-			add_stability = 0.15
+	add_stability = 0.15
+	country_event = {
+		id = LWV.2
+		days = 1
+	}				
 }
 }
 
@@ -71,6 +78,12 @@ search_filters = { FOCUS_FILTER_POLITICAL }
 completion_reward = {
 			add_country_leader_trait = New_vera
 			add_country_leader_trait = Absolyut
+			hidden_effect = {
+			country_event = {
+				id = LWV.3
+				days = 1
+			}	
+			}
 }
 }
 focus = {
@@ -110,6 +123,10 @@ factor = 1
 search_filters = { FOCUS_FILTER_POLITICAL }
 completion_reward = {
 			add_political_power = 75
+			country_event = {
+				id = LWV.4
+				days = 1
+			}			
 }}	
 focus = {
 id = LWV_Yk_svyatie_nadeli
@@ -159,6 +176,12 @@ completion_reward = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+				id = LWV.5
+				days = 1
+			}	
+			}
 }
 }
 focus = {
@@ -206,6 +229,10 @@ completion_reward = { random_owned_controlled_state = {
 					instant_build = yes
 				}
 			} }	
+			country_event = {
+				id = LWV.6
+				days = 1
+			}				
 }
 	
 focus = {
@@ -223,7 +250,15 @@ ai_will_do = {
 factor = 1
 }
 search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-completion_reward = { add_ideas = Rabochii_moleben }
+completion_reward = { 
+	add_ideas = Rabochii_moleben 
+	hidden_effect = {
+	country_event = {
+		id = LWV.7
+		days = 1
+	}
+	}
+}
 }
 	
 focus = {
@@ -272,6 +307,12 @@ completion_reward = {  							random_owned_controlled_state = {
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+			country_event = {
+				id = LWV.8
+				days = 1
+			}
+			}
 }
 }
 		
@@ -292,7 +333,7 @@ factor = 1
 search_filters = { FOCUS_FILTER_POLITICAL }
 completion_reward = {
 			add_political_power = 25
-			add_stability = 0.05
+			add_stability = 0.05				
 }
 }	
 focus = {
@@ -343,6 +384,12 @@ completion_reward = { random_owned_controlled_state = {
 		if = { limit = { has_idea = holy_nadely_2} swap_ideas = {remove_idea = holy_nadely_2 add_idea = holy_nadely_4}}
 		if = { limit = { has_idea = holy_nadely} swap_ideas = {remove_idea = holy_nadely add_idea = holy_nadely_3}}
 		remove_ideas = uniat_nationalists
+		hidden_effect = {
+		country_event = {
+			id = LWV.9
+			days = 1
+		}	
+		}
 }
 }	
 focus = {
@@ -365,6 +412,10 @@ completion_reward = {
     type = infantry_equipment
     amount = 1500
     producer = LWV
+	country_event = {
+		id = LWV.10
+		days = 1
+	}	
 }
 	
 }}
@@ -386,10 +437,14 @@ factor = 1
 search_filters = { FOCUS_FILTER_POLITICAL }
 completion_reward = { declare_war_on = {
     target = SWR
-    type = annex_everything
+    type = annex_everything	
 }
-	
-	
+	hidden_effect = {
+	country_event = {
+		id = LWV.11
+		days = 1
+	}
+	}
 }}
 focus = {
 id = LWV_Net_bezbozhnikov
@@ -401,6 +456,7 @@ y = 5
 relative_position_id = LWV_Istinniy_god
 available = {
 			is_subject = no
+			has_war = no
 		}
 cost = 1
 ai_will_do = {
@@ -408,7 +464,10 @@ factor = 1
 }
 search_filters = { FOCUS_FILTER_POLITICAL }
 completion_reward = { add_war_support = 0.05
-	
+country_event = {
+	id = LWV.13
+	days = 1
+}	
 	
 }}
 focus = {
@@ -431,7 +490,12 @@ completion_reward = { declare_war_on = {
     target = BGD
     type = annex_everything
 }
-	
+hidden_effect = {
+country_event = {
+	id = LWV.14
+	days = 1
+}	
+}
 	
 }}
 

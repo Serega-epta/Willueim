@@ -4,13 +4,13 @@ integration_category = {
 
 		icon = GFX_decision_generic_form_nation
 
-		priority = 320
+		priority = 100
 
 		ai_will_do = {
 			factor = 100
 		}
 
-		cost = 20
+		cost = 25
 
 		days_remove = 45
 
@@ -38,7 +38,9 @@ integration_category = {
 		}
 
 		remove_effect = {
-			add_state_core = 
+			FROM = {
+				add_core_of = ROOT
+			}
 			production_speed_buildings_factor = 0.1
 		}
 	}
