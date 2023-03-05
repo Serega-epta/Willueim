@@ -1,0 +1,485 @@
+focus_tree = {
+	id = army_junta_unite_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ARM
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#Эйфория после объединения
+	focus = {
+		id = ARM_Restoration_of_the_CSF
+		icon = GFX_Фатальное_Оцепенение
+		x = 6
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_cosmetic_tag = ARM_CGF
+			add_stability = 0.1
+			add_political_power = 40
+			political_power_factor = 0.007
+		}
+		
+	}
+	focus = {
+		id = ARM_Our_new_burden
+		icon = GFX_Фатальное_Оцепенение
+		prerequisite = { focus = ARM_Restoration_of_the_CSF }
+		x = 6
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 140
+		}
+		
+	}
+#Сопротивление на территориях
+	focus = {
+		id = ARM_First_of_all
+		icon = GFX_Фатальное_Оцепенение
+		prerequisite = { focus = ARM_Our_new_burden }
+		x = 2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = -0.5
+			add_manpower = -0.02
+
+		}
+		
+	}
+	focus = {
+		id = ARM_Check_loyalty
+		icon = GFX_Фатальное_Оцепенение
+		mutually_exclusive = { focus = ARM_Dont_give_traitors_chance }
+		prerequisite = { focus = ARM_First_of_all }
+		x = 0
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Dont_give_traitors_chance
+		icon = GFX_Фатальное_Оцепенение
+		mutually_exclusive = { focus = ARM_Check_loyalty }
+		prerequisite = { focus = ARM_First_of_all }
+		x = 4
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Check_the_functionality_of_the_board
+		icon = GFX_Фатальное_Оцепенение
+		prerequisite = { focus = ARM_Check_loyalty focus = ARM_Dont_give_traitors_chance}
+		x = 2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Committee_for_the_Management_of_Civil_Territories
+		icon = GFX_Фатальное_Оцепенение
+		prerequisite = { focus = ARM_Check_the_functionality_of_the_board}
+		x = 2
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_The_situation_is_under_control
+		icon = GFX_Фатальное_Оцепенение
+		prerequisite = { focus = ARM_Committee_for_the_Management_of_Civil_Territories}
+		x = 2
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+#Устройство государства
+	focus = {
+		id = ARM_The_Crimson_Question
+		icon = GFX_Фатальное_Оцепенение
+		prerequisite = { focus = ARM_Our_new_burden }
+		x = 10
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Introduce_a_hierarchy
+		icon = GFX_Фатальное_Оцепенение
+		mutually_exclusive = { focus = ARM_Dont_be_constrained_by_authority }
+		prerequisite = { focus = ARM_The_Crimson_Question }
+		x = 8
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Dont_be_constrained_by_authority
+		icon = GFX_Фатальное_Оцепенение
+		mutually_exclusive = { focus = ARM_Introduce_a_hierarchy }
+		prerequisite = { focus = ARM_The_Crimson_Question }
+		x = 12
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Question_of_human_resources
+		icon = GFX_Фатальное_Оцепенение
+		prerequisite = { focus = ARM_Introduce_a_hierarchy focus = ARM_Dont_be_constrained_by_authority}
+		x = 10
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_New_Blood
+		icon = GFX_Фатальное_Оцепенение
+		mutually_exclusive = { focus = ARM_Well_established_mechanism }
+		prerequisite = { focus = ARM_Question_of_human_resources }
+		x = 8
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Well_established_mechanism
+		icon = GFX_Фатальное_Оцепенение
+		mutually_exclusive = { focus = ARM_New_Blood }
+		prerequisite = { focus = ARM_Question_of_human_resources }
+		x = 12
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Advancing_the_goal
+		icon = GFX_Фатальное_Оцепенение
+		prerequisite = { focus = ARM_New_Blood focus = ARM_Well_established_mechanism}
+		x = 10
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_To_which_we_aspire
+		icon = GFX_Фатальное_Оцепенение
+		mutually_exclusive = { focus = ARM_Which_justifies_the_means }
+		prerequisite = { focus = ARM_Advancing_the_goal }
+		x = 8
+		y = 7
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Which_justifies_the_means
+		icon = GFX_Фатальное_Оцепенение
+		mutually_exclusive = { focus = ARM_To_which_we_aspire }
+		prerequisite = { focus = ARM_Advancing_the_goal }
+		x = 12
+		y = 7
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Writing_a_charter
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_The_situation_is_under_control }
+		prerequisite = { focus = ARM_To_which_we_aspire focus = ARM_Which_justifies_the_means}
+		x = 6
+		y = 8
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+#Производство Армии Возрождения (почему сейчас? В начале у игрока них*я нет)
+	focus = {
+		id = ARM_Get_your_tools_in_order
+		icon = GFX_Фатальное_Оцепенение
+		x = 17
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Census_of_Productions
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_Get_your_tools_in_order }
+		x = 15
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Move_industry_underground
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_Census_of_Productions }
+		x = 15
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Linkage_assessment
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_Get_your_tools_in_order }
+		x = 19
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Infrastructure_restoration
+	      prerequisite = { focus = ARM_Linkage_assessment }
+		icon = GFX_Фатальное_Оцепенение
+		x = 19
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_The_means_to_an_end
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_Infrastructure_restoration }
+	      prerequisite = { focus = ARM_Move_industry_underground }
+		x = 17
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+#Армия Армии Возрождения (XD простите за тавталогию)
+	focus = {
+		id = ARM_We_Army
+		icon = GFX_Фатальное_Оцепенение
+		x = 17
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Weapons_in_hand
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_We_Army }
+		x = 15
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_New_protective_equipment
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_Weapons_in_hand }
+		x = 15
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Soldier_in_the_car
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_We_Army }
+		x = 19
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_Heavy_Cavalry
+	      prerequisite = { focus = ARM_Soldier_in_the_car }
+		icon = GFX_Фатальное_Оцепенение
+		x = 19
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+	focus = {
+		id = ARM_New_and_unbreakable
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_New_protective_equipment }
+	      prerequisite = { focus = ARM_Heavy_Cavalry }
+		x = 17
+		y = 7
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+		
+	}
+}
