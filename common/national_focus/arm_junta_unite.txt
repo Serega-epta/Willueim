@@ -26,7 +26,6 @@ focus_tree = {
 			set_cosmetic_tag = ARM_CGF
 			add_stability = 0.1
 			add_political_power = 40
-			political_power_factor = 0.007
 		}
 		
 	}
@@ -60,8 +59,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = -0.5
-			add_manpower = -0.02
-
+			line_change_production_efficiency_factor = -0.3
 		}
 		
 	}
@@ -78,6 +76,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_stability = 0.1
 		}
 		
 	}
@@ -94,6 +93,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_stability = -0.1
 		}
 		
 	}
@@ -155,6 +155,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_political_power = 50
 		}
 		
 	}
@@ -265,6 +266,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_stability = 0.1
 		}
 		
 	}
@@ -281,6 +283,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_stability = 0.15
 		}
 		
 	}
@@ -297,6 +300,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_political_power = 150
 		}
 		
 	}
@@ -311,6 +315,9 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			has_completed_focus = ARM_Restoration_of_the_CSF
+		}
 		completion_reward = {
 		}
 		
@@ -327,6 +334,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			193 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+			}
 		}
 		
 	}
@@ -342,6 +356,18 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			202 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+			}
 		}
 		
 	}
@@ -372,6 +398,15 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			ARM = {
+				every_owned_state = {
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+			}
+			}
 		}
 		
 	}
@@ -388,6 +423,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			202 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+			}
 		}
 		
 	}
@@ -402,7 +444,11 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			has_completed_focus = ARM_Restoration_of_the_CSF
+		}
 		completion_reward = {
+			add_political_power = 120
 		}
 		
 	}
@@ -448,6 +494,12 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_tech_bonus = {
+				name = motorised_infantry_bonus
+				bonus = 0.5
+				uses = 1
+				technology = motorised_infantry
+			}
 		}
 		
 	}
@@ -463,6 +515,12 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_tech_bonus = {
+				name = tank_bonus
+				bonus = 0.5
+				uses = 1
+				technology = gwtank_chassis
+			}
 		}
 		
 	}
@@ -479,6 +537,8 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			army_experience = 50
+			remove_ideas = vyrv_vieny
 		}
 		
 	}
