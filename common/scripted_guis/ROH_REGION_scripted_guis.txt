@@ -6,8 +6,17 @@ scripted_gui = {
 			parent_window_token = selected_state_view
 			window_name = "OKNO_SPECIALIZATION"
 			
-			visible = { 
+			visible = {
+               	is_controlled_by = ROOT
 				check_variable = { state_specialization > 0 }
+				check_variable = { state_prmishleni = 0 }	
+				check_variable = { state_pereferia = 0 }
+				check_variable = { state_garnizon = 0 }
+				check_variable = { state_sirievoi = 0 }					
+			}
+
+			available = {
+				is_controlled_by = ROOT
 			}
 			
 			effects = { 
@@ -15,7 +24,9 @@ scripted_gui = {
 						clear_variable = state_specialization				
 				}
 #Скрипт кнопки специализировать
-				BUTTON_SPECIAALIZIROVAT_click = {  				
+				BUTTON_SPECIAALIZIROVAT_click = {
+					limit = { OR = { has_political_power > 100 has_political_power = 100 } }
+					ROOT = { add_political_power = -100 }
 					if = { 
 						limit = { state = 809  }
 						set_variable = { state_garnizon = 1 } 
