@@ -64,7 +64,7 @@ guiTypes = {
 # Окно гарнизонного типа
    containerWindowType = {
        name = "OKNO_GARNIZON" 
-	   size = { width=500 height=200  }
+	   size = { width=500 height=220  }
 	   clipping = no
 	   position = { x=464 y=4 }
 	   show_animation_type = accelerated
@@ -82,9 +82,19 @@ guiTypes = {
 			name ="GRE_fascists_attitude_status"
 			position = { x = 0 y = 100 }
 			font = "hoi_18mbs"
-			text = "Бонусы гарнизона : +20% к обороне в регионе +5 к снабжению в регионе +15% к фактору военнообязаного населения в регионе"
+			text = "Бонусы гарнизона : +50% к скорости мобилизации, Восстановление организации в регионе +20%,"
 			format = center
 			maxwidth = 500
+			maxHeight = 500
+		} 
+	instantTextBoxType = {
+			name ="GRE_fascists_attitude_status2"
+			position = { x = 0 y = 140 }
+			font = "hoi_18mbs"
+			text = " Скорость планирования в регионе +25%, Военнообязанное население региона +15%, Снабжение для наших войск +50%."
+			format = center
+			maxwidth = 500
+			maxHeight = 500
 		} 
 	  
 # Кнопка выхода из окна специализации
@@ -136,7 +146,7 @@ guiTypes = {
 			name ="GRE_fascists_attitude_status"
 			position = { x = 0 y = 100 }
 			font = "hoi_18mbs"
-			text = "Бонусы переферии : +0,05% к приросту населения глобально, базовая стабильность + 10%"
+			text = "Бонусы переферии : +25% к количеству построек в регионе, Дальность снабжения + 40%,  Скорость мобилизации -50%."
 			format = center
 			maxwidth = 500
 		}
@@ -190,7 +200,15 @@ guiTypes = {
 			name ="GRE_fascists_attitude_status"
 			position = { x = 0 y = 100 }
 			font = "hoi_18mbs"
-			text = "Бонусы сырьевого : +20% к ресурсам в регионе, открывает решения на разработку новых ресурсов в регионе"
+			text = "Бонусы сырьевого : +25% к ресурсам в регионе, Припасы в регионе +30%, Скорость перемещения войск +40%, открывает решения на разработку новых ресурсов в регионе."
+			format = center
+			maxwidth = 500
+		}
+	instantTextBoxType = {
+			name ="GRE_fascists_attitude_status4"
+			position = { x = 132 y = 136 }
+			font = "hoi_18mbs"
+			text = "сов в регионе."
 			format = center
 			maxwidth = 500
 		}
@@ -223,7 +241,7 @@ guiTypes = {
 # Окно промышленного типа
    containerWindowType = {
        name = "OKNO_PROMISHLENNI" 
-	   size = { width=500 height=600  }
+	   size = { width=500 height=200  }
 	   clipping = no
 	   position = { x=464 y=4 }
 	   show_animation_type = accelerated
@@ -241,7 +259,7 @@ guiTypes = {
 			name ="GRE_fascists_attitude_status"
 			position = { x = 0 y = 100 }
 			font = "hoi_18mbs"
-			text = "Бонусы промышленого : +20% к скорости строительства в регионе , +5 обьем заводского производства глобально"
+			text = "Бонусы промышленого : +40% к скорости строительства в регионе , +30% к шансу летных происшествий, -20% к обнаружению воздушных целей"
 			format = center
 			maxwidth = 500
 		}

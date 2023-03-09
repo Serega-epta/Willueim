@@ -16,7 +16,18 @@ scripted_gui = {
 					clear_variable = state_garnizon													
 				}
 #Скрипт убрать специализацию
-				BUTTON_RESPECIALIZIROVAT_click = {  								
+				BUTTON_RESPECIALIZIROVAT_click = {
+				available = {
+					if = {
+					ROOT = { has_political_power > 50 }
+					}
+					ROOT = limit = { OR = { has_political_power > 50 has_political_power = 50 } }
+					}
+					
+					limit = { OR = { has_political_power > 50 has_political_power = 50 } }
+					ROOT = { add_political_power = -50 }				
+
+				
 					clear_variable = state_garnizon
 					clear_variable = state_specialization		
 					remove_dynamic_modifier = { modifier = garnizon_baff }					 							

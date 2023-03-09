@@ -25,6 +25,14 @@ scripted_gui = {
 				}
 #Скрипт кнопки специализировать
 				BUTTON_SPECIAALIZIROVAT_click = {
+				
+					available = {
+					if = {
+					ROOT = { has_political_power > 100 }
+					}
+					ROOT = limit = { OR = { has_political_power > 100 has_political_power = 100 } }
+					}
+					
 					limit = { OR = { has_political_power > 100 has_political_power = 100 } }
 					ROOT = { add_political_power = -100 }
 					if = { 
