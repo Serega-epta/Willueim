@@ -26,6 +26,7 @@ focus_tree = {
 			set_cosmetic_tag = ARM_CGF
 			add_stability = 0.1
 			add_political_power = 40
+			add_ideas = ARM_euphoria_after_the_merger
 		}
 		
 	}
@@ -58,8 +59,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_stability = -0.5
-			line_change_production_efficiency_factor = -0.3
+			add_ideas = ARM_insubordination
 		}
 		
 	}
@@ -77,6 +77,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = 0.1
+			add_ideas = ARM_cleanings1
 		}
 		
 	}
@@ -94,6 +95,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = -0.1
+			add_ideas = ARM_cleanings2
 		}
 		
 	}
@@ -109,6 +111,20 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			if = {
+				LIMIT = { has_idea = ARM_cleanings1}
+				Swap_ideas ={
+					Remove_idea = ARM_cleanings1
+					Add_idea = ARM_cleanings12
+				}
+			}
+			else_if = {
+				LIMIT = { has_idea = ARM_cleanings2}
+				Swap_ideas ={
+					Remove_idea = ARM_cleanings2
+					Add_idea = ARM_cleanings22
+				}
+			}
 		}
 		
 	}
@@ -124,6 +140,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_ideas = ARM_Committee_for_the_Management_of_Civil_Territories
 		}
 		
 	}
@@ -139,6 +156,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+				Swap_ideas ={
+					Remove_idea = ARM_insubordination
+					Add_idea = ARM_Everything_is_under_control
+				}
 		}
 		
 	}
@@ -156,6 +177,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 50
+			add_ideas = ARM_The_Organization_of_the_New_State
 		}
 		
 	}
@@ -172,6 +194,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+				Swap_ideas ={
+					Remove_idea = ARM_The_Organization_of_the_New_State
+					Add_idea = ARM_The_Organization_of_the_New_State1
+				}
 		}
 		
 	}
@@ -188,6 +214,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+				Swap_ideas ={
+					Remove_idea = ARM_The_Organization_of_the_New_State1
+					Add_idea = ARM_The_Organization_of_the_New_State2
+				}
 		}
 		
 	}
@@ -203,6 +233,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_political_power = 50
 		}
 		
 	}
@@ -219,6 +250,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+				Swap_ideas ={
+					Remove_idea = ARM_The_Organization_of_the_New_State2
+					Add_idea = ARM_The_Organization_of_the_New_State22
+				}
 		}
 		
 	}
@@ -235,6 +270,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+				Swap_ideas ={
+					Remove_idea = ARM_The_Organization_of_the_New_State2
+					Add_idea = ARM_The_Organization_of_the_New_State122
+				}
 		}
 		
 	}
@@ -250,6 +289,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_ideas = ARM_Target
 		}
 		
 	}
@@ -284,6 +324,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = 0.15
+				Swap_ideas ={
+					Remove_idea = ARM_Target
+					Add_idea = ARM_Target1
+				}
 		}
 		
 	}
@@ -301,6 +345,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 150
+			add_ideas = ARM_Charter
 		}
 		
 	}
@@ -319,6 +364,7 @@ focus_tree = {
 			has_completed_focus = ARM_Restoration_of_the_CSF
 		}
 		completion_reward = {
+			add_ideas = ARM_Production
 		}
 		
 	}
@@ -383,6 +429,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_ideas = ARM_Production1
 		}
 		
 	}
@@ -449,6 +496,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 120
+			add_ideas = ARM_Army
 		}
 		
 	}
@@ -464,6 +512,12 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons1_bonus
+				bonus = 0.5
+				uses = 1
+				technology = infantry_weapons1
+			}
 		}
 		
 	}
@@ -479,6 +533,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_ideas = ARM_Army1
 		}
 		
 	}
