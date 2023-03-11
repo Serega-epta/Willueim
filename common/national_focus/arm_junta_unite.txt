@@ -289,7 +289,20 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_ideas = ARM_Target
+			if = {
+				LIMIT = { has_idea = ARM_The_Organization_of_the_New_State22}
+				Swap_ideas ={
+					Remove_idea = ARM_The_Organization_of_the_New_State22
+					Add_idea = ARM_Target22
+				}
+			}
+			else_if = {
+				LIMIT = { has_idea = ARM_The_Organization_of_the_New_State122}
+				Swap_ideas ={
+					Remove_idea = ARM_The_Organization_of_the_New_State122
+					Add_idea = ARM_Target122
+				}
+			}
 		}
 		
 	}
@@ -324,10 +337,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = 0.15
+			if = {
+				LIMIT = { has_idea = ARM_Target22}
 				Swap_ideas ={
-					Remove_idea = ARM_Target
-					Add_idea = ARM_Target1
+					Remove_idea = ARM_Target22
+					Add_idea = ARM_Target33
 				}
+			}
+			else_if = {
+				LIMIT = { has_idea = ARM_Target122}
+				Swap_ideas ={
+					Remove_idea = ARM_Target122
+					Add_idea = ARM_Target133
+				}
+			}
 		}
 		
 	}
@@ -429,7 +452,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_ideas = ARM_Production1
+				Swap_ideas ={
+					Remove_idea = ARM_Production
+					Add_idea = ARM_Production1
+				}
 		}
 		
 	}
@@ -533,7 +559,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_ideas = ARM_Army1
+				Swap_ideas ={
+					Remove_idea = ARM_Army
+					Add_idea = ARM_Army1
+				}
 		}
 		
 	}
