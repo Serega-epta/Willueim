@@ -455,3 +455,61 @@ country_event = {
 	name = ARM.30.a
 	}
 }
+
+country_event = {
+	id = ARM.999
+	title = ARM.999.t
+	desc = ARM.999.d
+	picture = GFX_report_Zhelt_lake
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+	name = ARM.999.a
+	custom_effect_tooltip = on_ne_vernetsya_tt
+	}
+}
+
+country_event = {
+	id = ARM.998
+	title = ARM.998.t
+	desc = ARM.998.d
+	picture = GFX_report_Zhelt_lake
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+	name = ARM.998.a
+	custom_effect_tooltip = porajenie_tt
+	BIH = {
+	annex_country = {
+    target = ARM
+    transfer_troops = yes
+	}
+	}
+	}
+	option = {
+	name = ARM.998.b
+	custom_effect_tooltip = sest_za_nihilusa_tt
+	
+	country_event = { id = ARM.997  days = 1 }	
+	}
+}
+
+country_event = {
+	id = ARM.997
+	title = ARM.997.t
+	desc = ARM.997.d
+	picture = GFX_report_Zhelt_lake
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+	name = ARM.997.a
+	custom_effect_tooltip = voistiny_tt	
+	BIH = {
+	annex_country = {
+    target = ARM
+    transfer_troops = yes
+	}
+	}
+	BIH = { change_tag_from = ARM }
+	}
+}
