@@ -23,6 +23,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			
+			set_country_flag = partizane_nihilusa
+			set_variable = { partizans = 1 }
+			set_variable = { zahita_ot_partizan = 0 }
+			set_variable = { Sila_partizan = 0.5 }
+			set_variable = { Nasha_sila = 0.5 }
+		
 			set_cosmetic_tag = ARM_CGF
 			add_stability = 0.1
 			add_political_power = 40
@@ -170,8 +177,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			has_country_flag = nihilus_ubejal
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		completion_reward = {			
 				Swap_ideas ={
 					Remove_idea = ARM_insubordination
 					Add_idea = ARM_Everything_is_under_control
