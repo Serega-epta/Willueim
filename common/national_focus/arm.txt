@@ -12,7 +12,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
 	focus = {
-		id = IMP_Fatal_Daze
+		id = ARM_Fatal_Daze
 		icon = GFX_Фатальное_Оцепенение
 		x = 6
 		y = 0
@@ -31,9 +31,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_The_Dynamics_of_Revenge
+		id = ARM_The_Dynamics_of_Revenge
 		icon = GFX_Динамика_Мести
-		prerequisite = { focus = IMP_Fatal_Daze }
+		prerequisite = { focus = ARM_Fatal_Daze }
 		x = 4
 		y = 1
 		cost = 1
@@ -52,9 +52,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Abandoned_warehouses
+		id = ARM_Abandoned_warehouses
 		icon = GFX_Заброшенные_Склады
-		prerequisite = { focus = IMP_The_Dynamics_of_Revenge }
+		prerequisite = { focus = ARM_The_Dynamics_of_Revenge }
 		x = 4
 		y = 2
 		cost = 1
@@ -88,9 +88,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Enemy_inertia
+		id = ARM_Enemy_inertia
 		icon = GFX_Инертность_Противника
-		prerequisite = { focus = IMP_Fatal_Daze }
+		prerequisite = { focus = ARM_Fatal_Daze }
 		x = 8
 		y = 1
 		cost = 1
@@ -109,9 +109,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Artisanal_engineering
+		id = ARM_Artisanal_engineering
 		icon = GFX_Кустарная_Инженерия
-		prerequisite = { focus = IMP_Enemy_inertia }
+		prerequisite = { focus = ARM_Enemy_inertia }
 		x = 8
 		y = 2
 		cost = 1
@@ -132,10 +132,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Crimson_Terror
+		id = ARM_Crimson_Terror
 		icon = GFX_Багровый_Террор
-		prerequisite = { focus = IMP_Artisanal_engineering }
-		prerequisite = { focus = IMP_Abandoned_warehouses }
+		prerequisite = { focus = ARM_Artisanal_engineering }
+		prerequisite = { focus = ARM_Abandoned_warehouses }
 		x = 6
 		y = 3
 		cost = 1
@@ -153,10 +153,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Loyalist_units
+		id = ARM_Loyalist_units
 		icon = GFX_Отряды_Лоялистов
-		prerequisite = { focus = IMP_Crimson_Terror }
-        mutually_exclusive = { focus = IMP_The_Thrill_of_Traitors }
+		prerequisite = { focus = ARM_Crimson_Terror }
+        mutually_exclusive = { focus = ARM_The_Thrill_of_Traitors }
 		x = 4
 		y = 4
 		cost = 1
@@ -177,9 +177,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_The_Loyalty_Desperate
+		id = ARM_The_Loyalty_Desperate
 		icon = GFX_Лояльность_Отчаявшихся
-		prerequisite = { focus = IMP_Loyalist_units }
+		prerequisite = { focus = ARM_Loyalist_units }
 		x = 2
 		y = 5
 		cost = 1
@@ -200,10 +200,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_The_Thrill_of_Traitors
+		id = ARM_The_Thrill_of_Traitors
 		icon = GFX_Трепет_Предателей
-		prerequisite = { focus = IMP_Crimson_Terror }
-		mutually_exclusive = { focus = IMP_Loyalist_units }
+		prerequisite = { focus = ARM_Crimson_Terror }
+		mutually_exclusive = { focus = ARM_Loyalist_units }
 		x = 8
 		y = 4
 		cost = 1
@@ -223,9 +223,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Punitive_Labor
+		id = ARM_Punitive_Labor
 		icon = GFX_Карательный_Труд
-		prerequisite = { focus = IMP_The_Thrill_of_Traitors }
+		prerequisite = { focus = ARM_The_Thrill_of_Traitors }
 		x = 10
 		y = 5
 		cost = 1
@@ -245,9 +245,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_From_Nonexistence
+		id = ARM_From_Nonexistence
 		icon = GFX_Из_Небытия
-		prerequisite = { focus = IMP_Punitive_Labor focus = IMP_The_Loyalty_Desperate }
+		prerequisite = { focus = ARM_Punitive_Labor focus = ARM_The_Loyalty_Desperate }
 		x = 6
 		y = 7
 		cost = 1
@@ -267,9 +267,9 @@ focus_tree = {
 	
 
 	focus = {
-		id = IMP_Operation_MOR
+		id = ARM_Operation_MOR
 		icon = GFX_Операция_М_О_Р
-		prerequisite = { focus = IMP_From_Nonexistence }
+		prerequisite = { focus = ARM_From_Nonexistence }
 		available = {
 			is_subject = no
 			has_war = no 
@@ -297,9 +297,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Operation_VOY
+		id = ARM_Operation_VOY
 		icon = GFX_Операция_В_О_Й
-		prerequisite = { focus = IMP_From_Nonexistence }
+		prerequisite = { focus = ARM_From_Nonexistence }
 		available = {
 			is_subject = no
 			has_war = no 
@@ -326,10 +326,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Integration_Council
+		id = ARM_Integration_Council
 		icon = GFX_Совет_Реинтеграции
-		prerequisite = { focus = IMP_Operation_VOY }
-		prerequisite = { focus = IMP_Operation_MOR }
+		prerequisite = { focus = ARM_Operation_VOY }
+		prerequisite = { focus = ARM_Operation_MOR }
 		x = 6
 		y = 9
 		cost = 1
@@ -348,9 +348,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMP_Operation_Atonement
+		id = ARM_Operation_Atonement
 		icon = GFX_Операция_ИСКУПЛЕНИЕ
-		prerequisite = { focus = IMP_Integration_Council }
+		prerequisite = { focus = ARM_Integration_Council }
 		available = {
 			is_subject = no
 			has_war = no 
