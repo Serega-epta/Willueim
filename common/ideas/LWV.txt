@@ -91,10 +91,71 @@ Rabochii_moleben = {
 				conscription = -0.002
 			}
 		}	
-		
-		
-		
-		
+Brother = {
+			picture = blazh_warriors
+			modifier = {
+				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -1
+				send_volunteer_factor = 0.25
+			}
+		}
+Blagoslavleny = {
+			picture = blazh_warriors
+			modifier = {
+				attrition = -0.25
+				army_core_attack_factor = 0.05
+				mobilization_speed = 0.1
+			}
+		}
+heaven_on_earth = {
+			picture = blazh_warriors
+			modifier = {
+				political_power_cost = 0.02
+				production_lack_of_resource_penalty_factor = -0.15
+
+			}
+		}
+bez_slabosti = {
+			picture = blazh_warriors
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.25
+				army_speed_factor = -0.1
+				army_org = 0.05
+			targeted_modifier = {
+			tag = COA
+			attack_bonus_against = 0.15
+			defence_bonus_against = 0.15
+		    }
+			}
+}
+zapoved = {
+			picture = blazh_warriors
+			modifier = {
+			monthly_population = -0.15
+			consumer_goods_factor = -0.03
+			production_lack_of_resource_penalty_factor = -0.15
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_start_efficiency_factor = 0.1
+			}
+}
+heaven_on_earth_2 = {
+			picture = blazh_warriors
+			modifier = {
+			attrition = -0.05
+			}
+}
+heaven_on_earth_3 = {
+			picture = blazh_warriors
+			modifier = {
+			command_power_gain = 2
+			}
+}
+heaven_on_earth_4 = {
+			picture = blazh_warriors
+			modifier = {
+			
+			}
+}		
 		
 		
 
@@ -103,4 +164,6 @@ Rabochii_moleben = {
 		
 		
 		
-}}
+}
+}
+
