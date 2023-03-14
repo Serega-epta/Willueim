@@ -791,6 +791,30 @@
  TRIGGER_NUM_OF_TOTAL_SUPPLYNODES_LESS_THAN:0 "Узлов снабжения меньше $NUMBER|H$"
  TRIGGER_LEADER_HAS_IDEOLOGY:0 "$NAME|Y$ исповедует идеологию «$IDEOLOGY|Y$»"
  TRIGGER_LEADER_HAS_NOT_IDEOLOGY:0 "$NAME|Y$ не исповедует идеологию «$IDEOLOGY|Y$»"
+ 
+ TRIGGER_HAS_POWER_BALANCE:0 "$POWER_BALANCE|Y$ действует в регионе [root.GetName]"
+ TRIGGER_HAS_NOT_POWER_BALANCE:0 "$POWER_BALANCE|Y$ не действует в регионе [root.GetName]"
+ TRIGGER_HAS_ANY_POWER_BALANCE:1 "Действует §Hбаланс сил§!"
+ TRIGGER_HAS_NOT_ANY_POWER_BALANCE:1 "Не действует §Hбаланс сил§!"
+ TRIGGER_POWER_BALANCE_VALUE_MORE_THAN:2 "$POWER_BALANCE|Y$ более чем на $PERCENT|%1Y$ сдвинут в следующую сторону: $SIDE|Y$"
+ TRIGGER_POWER_BALANCE_VALUE_LESS_THAN:2 "$POWER_BALANCE|Y$ менее чем на $PERCENT|%1Y$ сдвинут в следующую сторону: $SIDE|Y$"
+ TRIGGER_POWER_BALANCE_DAILY_MORE_THAN:1 "$POWER_BALANCE|Y$ каждый день сдвигается более чем на $PERCENT|%1Y$ в следующую сторону: $SIDE|Y$"
+ TRIGGER_POWER_BALANCE_DAILY_LESS_THAN:1 "$POWER_BALANCE|Y$ каждый день сдвигается менее чем на $PERCENT|%1Y$ в следующую сторону: $SIDE|Y$"
+ TRIGGER_POWER_BALANCE_WEEKLY_MORE_THAN:1 "$POWER_BALANCE|Y$ каждую неделю сдвигается более чем на $PERCENT|%1Y$ в следующую сторону: $SIDE|Y$"
+ TRIGGER_POWER_BALANCE_WEEKLY_LESS_THAN:1 "$POWER_BALANCE|Y$ каждую неделю сдвигается менее чем на $PERCENT|%1Y$ в следующую сторону: $SIDE|Y$"
+
+ TRIGGER_POWER_BALANCE_IN_RANGE:1 "$POWER_BALANCE|Y$ в диапазоне $RANGE|Y$"
+ TRIGGER_POWER_BALANCE_NOT_IN_RANGE:1 "$POWER_BALANCE|Y$ не в диапазоне $RANGE|Y$"
+ TRIGGER_POWER_BALANCE_BELOW_RANGE:1 "$POWER_BALANCE|Y$ находится £GFX_BoP_left_texticon£§Yслева§! от диапазона $RANGE|Y$"
+ TRIGGER_POWER_BALANCE_NOT_BELOW_RANGE:1 "$POWER_BALANCE|Y$ находится в диапазоне $RANGE|Y$ или £GFX_BoP_right_texticon£§Yправее§!"
+ TRIGGER_POWER_BALANCE_ABOVE_RANGE:1 "$POWER_BALANCE|Y$ находится £GFX_BoP_right_texticon£§Yсправа§! от диапазона $RANGE|Y$"
+ TRIGGER_POWER_BALANCE_NOT_ABOVE_RANGE:1 "$POWER_BALANCE|Y$ находится в диапазоне $RANGE|Y$ или £GFX_BoP_left_texticon£§Yлевее§!"
+
+ TRIGGER_POWER_BALANCE_SIDE_ACTIVE:2 "$SIDE|Y$ — активная сторона: $POWER_BALANCE|Y$"
+ TRIGGER_POWER_BALANCE_SIDE_NOT_ACTIVE:2 "$SIDE|Y$ не является активной стороной: $POWER_BALANCE|Y$"
+ TRIGGER_HAS_POWER_BALANCE_MODIFIER:1 "$POWER_BALANCE|Y$ обладает модификатором: $MODIFIER|Y$"
+ TRIGGER_HAS_NOT_POWER_BALANCE_MODIFIER:1 "$POWER_BALANCE|Y$ не обладает модификатором: $MODIFIER|Y$"
+
 
 # === [LocEditor:OrphanedKeys] Keys that do not exist in English ===
  TRIGGER_UNIT_LEADER_FLAG_NOT_SET:0 "Не:"
