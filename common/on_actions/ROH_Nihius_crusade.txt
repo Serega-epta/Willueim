@@ -1,0 +1,17 @@
+on_actions = {
+    on_daily = {
+        effect = { 			
+			if = {
+				limit = {
+				and = {
+						date > 1936.1.5
+						date < 1936.1.6
+				}
+				}	  			
+				set_global_flag = Nihilus_start_crusade
+				set_variable = { svyatie_ochki = 50 }
+				play_song = Nihilu_treck
+			}
+		}
+	}
+}
