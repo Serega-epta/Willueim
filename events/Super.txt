@@ -1,0 +1,26 @@
+add_namespace = super
+
+news_event = { 
+	id = super.1 #Собачий Лязг
+	title = super.1.t
+	desc = super.1.d
+	picture = GFX_news_event_dog_clanging
+
+	is_triggered_only = yes
+	major = yes
+
+    	option = {
+		name = super.1.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_global_flag = Dog_Clanging
+			set_global_flag = super_Event_Visible	
+			hidden_effect = {	
+				play_song = "Dog_Clanging"
+			}
+		}
+   	}
+}

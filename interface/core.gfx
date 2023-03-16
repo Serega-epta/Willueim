@@ -1608,13 +1608,13 @@ bitmapfonts = {
 		}
 	}
 	
-	### ШРИФТЫ ЕПТА ### для решений
+	### ШРИФТЫ ЕПТА ### для суперивентов
 	
 	bitmapfont = {
-		name = "pobeda_36"
-#		path = "gfx/fonts/pobeda_36"
+		name = "console_36"
+#		path = "gfx/fonts/console_36"
 		fontfiles = {
-			"gfx/fonts/pobeda_36"
+			"gfx/fonts/console_36"
 		}
 		color = 0xffffffff
 
@@ -1628,43 +1628,18 @@ bitmapfonts = {
 	}
 
 	bitmapfont_override = {
-		name = "pobeda_36"
+		name = "console_36"
 		fontfiles = {
-			"gfx/fonts/pobeda_36"
-		}
-		languages = { "l_russian" "l_english" }
-	}
-	
-	bitmapfont = {
-		name = "pobeda_20"
-#		path = "gfx/fonts/pobeda_20"
-		fontfiles = {
-			"gfx/fonts/pobeda_20"
-		}
-		color = 0xffffffff
-
-		textcolors = {
-			G = { 86 172 91 }
-			R = { 222 86 70 }
-			Y = { 238 201 35 }
-			H = { 238 201 35 }
-			T = { 255 255 255 }
-		}
-	}
-
-	bitmapfont_override = {
-		name = "pobeda_20"
-		fontfiles = {
-			"gfx/fonts/pobeda_20"
+			"gfx/fonts/console_36"
 		}
 		languages = { "l_russian" "l_english" }
 	}	
 	
 	bitmapfont = {
-		name = "pobeda_16"
-#		path = "gfx/fonts/pobeda_16"
+		name = "console_16"
+#		path = "gfx/fonts/console_16"
 		fontfiles = {
-			"gfx/fonts/pobeda_16"
+			"gfx/fonts/console_16"
 		}
 		color = 0xffffffff
 
@@ -1678,9 +1653,9 @@ bitmapfonts = {
 	}
 
 	bitmapfont_override = {
-		name = "pobeda_16"
+		name = "console_16"
 		fontfiles = {
-			"gfx/fonts/pobeda_16"
+			"gfx/fonts/console_16"
 		}
 		languages = { "l_russian" "l_english" }
 	}		

@@ -1,0 +1,86 @@
+############################
+### Black Junta Triggers ###
+###	  by Daniel_Letov    ###
+############################
+
+Dog_Clanging_started = {
+	AND = {
+		WAC = { 
+			has_defensive_war_with = BRI 
+			has_defensive_war_with = BRD 
+			has_defensive_war_with = HAN 
+			has_idea = dog_clanging 
+		}
+		NOT = {
+			has_global_flag = Dog_Clanging
+		}
+	}
+}
+Dog_Clanging_finished = {
+	OR = {
+		WAC_unified_Black_Junta = yes
+	  	HAN_unified_Black_Junta = yes
+		BRI_unified_Black_Junta = yes
+		BRD_unified_Black_Junta = yes
+	}
+}
+WAC_unified_Black_Junta = {
+	WAC = {
+		has_idea = dog_clanging
+		has_war = no
+	}
+	BRI = {
+		exists = no
+	}
+	HAN = {
+		exists = no
+	}
+	BRD = {
+		exists = no
+	}
+}
+HAN_unified_Black_Junta = {
+	HAN = {
+		has_idea = dog_clanging
+		has_war = no
+	}
+	BRI = {
+		exists = no
+	}
+	BRD = {
+		exists = no
+	}
+	WAC = {
+		exists = no
+	}
+}
+BRI_unified_Black_Junta = {
+	BRI = {
+		has_idea = dog_clanging
+		has_war = no
+	}
+	BRD = {
+		exists = no
+	}
+	HAN = {
+		exists = no
+	}
+	WAC = {
+		exists = no
+	}
+}
+BRD_unified_Black_Junta = {
+	BRD = {
+		has_idea = dog_clanging
+		has_war = no
+	}
+	BRI = {
+		exists = no
+	}
+	HAN = {
+		exists = no
+	}
+	WAC = {
+		exists = no
+	}
+}

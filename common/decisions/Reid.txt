@@ -1,0 +1,57 @@
+Reid_category = {
+	Sobrat_prinud_nalog = {
+		icon = ger_mefo_bills
+		priority = 10
+		ai_will_do = {
+		base = 100
+		}
+		allowed = { always = yes }
+		available = {
+			has_political_power > 40
+			has_manpower > 200
+		}
+		visible = {
+			always = yes
+		}
+		days_remove = 1 # время события 
+		
+		# Сразу после события
+		complete_effect = {	add_manpower = -200 add_stability = -0.01 } 
+		
+		# Когда время прошло
+		remove_effect = { 
+		country_event = {id = Reid.4}
+				}
+		cost = 40
+	}
+	Reid_na_band_form = {
+		icon = ger_mefo_bills
+		priority = 7
+		allowed = { always = yes }
+		available = {
+			has_political_power > 80
+			has_manpower > 1000
+			has_stability < 60
+			has_equipment = {
+			infantry_equipment > 150
+			}
+		}
+	ai_will_do = {
+		base = 60
+		}
+		visible = {
+			has_stability < 60
+		}
+		days_remove = 1 # время события 
+		
+		# Сразу после события
+		complete_effect = {	add_manpower = -1000 add_equipment_to_stockpile = {type = infantry_equipment amount = -150}
+		} 
+		
+		# Когда время прошло
+		remove_effect = { 
+		country_event = {id = Reid.5}
+				}
+		cost = 40
+	}
+}

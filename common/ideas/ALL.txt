@@ -1,0 +1,39 @@
+ideas = {
+
+	country = {
+			
+		Shahti = {
+			picture = gubit_izobiliye
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = 0.05
+			stability_factor = -0.01
+			consumer_goods_factor = -0.01
+			}
+		}
+		Anti_banditizm = {
+			picture = krugom_vragi
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = 0.05
+			stability_factor = 0.02
+			stability_weekly = 0.01
+			political_power_gain = 0.05
+			}
+		}
+}}
+	

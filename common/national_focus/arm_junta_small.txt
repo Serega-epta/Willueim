@@ -301,6 +301,7 @@ focus_tree = {
 		icon = GFX_Операция_В_О_Й
 		prerequisite = { focus = ARM_From_Nonexistence }
 		available = {
+			has_completed_focus = ARM_Operation_MOR
 			is_subject = no
 			has_war = no 
 		}

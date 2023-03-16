@@ -1,0 +1,657 @@
+add_namespace = Reid
+
+#Рейд в деревни
+# Жители нехотя платят дань
+country_event = {
+	id = Reid.1
+	title = Reid.1.t
+	desc = Reid.1.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.1.a
+	add_war_support = 0.01
+	add_manpower = 200
+	random_list = {
+		60 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 400
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 20
+		}}
+		20 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 12
+		}}
+		10 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 42
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 43
+		}}
+		5 = { 
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 60
+		}}
+		3 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 23
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 80
+		}}
+		2 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 800
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 90
+		}}
+	}}}
+
+# Жители Платят налоги с патриатизмом и идут в армию
+country_event = {
+	id = Reid.2
+	title = Reid.2.t
+	desc = Reid.2.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.2.a
+	add_war_support = 0.02
+	add_manpower = 200
+		random_list = {
+		60 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 700
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 40
+		}
+		add_manpower = 400}
+		20 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 800
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 24
+		}
+		add_manpower = 600}
+		10 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 90
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 60
+		}
+		add_manpower = 1200}
+		5 = { 
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 126
+		}
+		add_manpower = 1395}
+		3 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 23
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 80
+		}
+		add_manpower = 380}
+		2 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 800
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 90
+		}
+		add_manpower = 2200}
+	}}}
+# Жители Отказываются
+country_event = {
+	id = Reid.3
+	title = Reid.3.t
+	desc = Reid.3.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.3.a
+	add_stability = 0.01
+	}
+	option = {
+	name = Reid.3.b
+		add_war_support = -0.02
+		add_stability = -0.01
+		random_list = {
+		60 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 700
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 40
+		}
+		army_experience = 8
+		add_manpower = 80}
+		20 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 800
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 24
+		}
+		army_experience = 10
+		add_manpower = 60}
+		10 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 90
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 60
+		}
+		army_experience = 12
+		add_manpower = 20}
+		5 = { 
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 126
+		}
+		army_experience = 11
+		add_manpower = 35}
+		3 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 23
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 80
+		}
+		army_experience = 8
+		add_manpower = 80}
+		2 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 800
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 90
+		}
+		army_experience = 1
+		add_manpower = 200}
+	}
+	}}
+# Поведение при рейде
+	
+	country_event = {
+	id = Reid.4
+	title = Reid.4.t
+	desc = Reid.4.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.4.a
+	add_stability = -0.02
+	add_war_support = -0.02
+	random_list = {
+				 90 = { 	country_event = {id = Reid.1}  }
+				 10 = { 	country_event = {id = Reid.3}  }
+				}
+	}
+	option = {
+	name = Reid.4.b
+	add_stability = 0.01
+	random_list = {
+				 50 = { 	country_event = {id = Reid.1}  }
+				 30 = { 	country_event = {id = Reid.2}  }
+				 20 = { 	country_event = {id = Reid.3}  }
+				}
+	}
+	option = {
+	name = Reid.4.c
+	 	random_list = {
+				 65 = { 	country_event = {id = Reid.1}  }
+				 20 = { 	country_event = {id = Reid.2}  }
+				 15 = { 	country_event = {id = Reid.3}  }
+				}
+	}}
+# Рейд на банд. формирования
+	country_event = {
+	id = Reid.5
+	title = Reid.5.t
+	desc = Reid.5.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.5.a
+	add_stability = 0.02
+	add_war_support = 0.02
+	trigger = { OR = {has_government = bandits has_government = juntas has_government = gumanists has_government = svobod has_government = technocracies has_government = forestry}}
+	random_list = {
+				 65 = { country_event = {id = Reid.6}  }
+				 32 = { country_event = {id = Reid.7}  }
+				 1 = { country_event = {id = Reid.8}  }
+				 2 = { country_event = {id = Reid.9}  }
+				}
+	}
+	option = {
+	name = Reid.5.b
+		random_list = {
+				 52 = { country_event = {id = Reid.7}  }
+				 33 = { country_event = {id = Reid.6}  }
+				 1 = { country_event = {id = Reid.8}  }
+				 4 = { country_event = {id = Reid.9}  }
+				}
+	}
+	option = {
+	name = Reid.5.c
+	trigger = { NOT = {has_government = gumanists}}
+	random_list = {
+				 97 = { country_event = {id = Reid.7}  }
+				 1 = { country_event = {id = Reid.8}  }
+				 2 = { country_event = {id = Reid.9}  }
+				}
+	}
+	option = {
+	name = Reid.5.a1
+	trigger = { has_government = sacraments}
+	random_list = {
+				 78 = { country_event = {id = Reid.7}  }
+				 20 = { country_event = {id = Reid.6}  }
+				 2 = { country_event = {id = Reid.8}  }
+				}
+	}
+	}
+	
+#Нанять Банд. Форимрование
+		country_event = {
+	id = Reid.6
+	title = Reid.6.t
+	desc = Reid.6.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	# Сдать оружие,отправить на завод
+	name = Reid.6.a
+	trigger = { OR = {has_government = militarists has_government = bandits has_government = juntas has_government = gumanists has_government = svobod has_government = technocracies has_government = forestry}}
+	add_stability = 0.01
+	add_manpower = 1000 add_equipment_to_stockpile = {type = infantry_equipment amount = 200}
+		random_list = {
+		40 = { 
+		random_core_state = { add_manpower = 100}
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 500
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 10
+		}
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 11
+		}}
+		30 = { 
+		random_core_state = { add_manpower = 500}
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 400
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 12
+		}
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 24
+		}}
+		14 = { 
+		random_core_state = { add_manpower = 150}
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 350
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 32
+		}
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 24
+		}}
+		9 = { 
+		random_core_state = { add_manpower = 400}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 480
+		}
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 18
+		}}
+		3 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 13
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 80
+		}
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 27
+		}}
+		2 = { 
+		random_core_state = { add_manpower = 2400}
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1400
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 80
+		}
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 60
+		}}
+		2 = { 
+		random_core_state = { add_manpower = 400}
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 20
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 4
+		}
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 30
+		}}
+	}
+	}
+	option = {
+	# Нам нужны их войска
+	name = Reid.6.b
+	trigger = { OR = {has_government = bandits has_government = juntas }}
+	add_stability = -0.04
+	add_manpower = 1000 add_equipment_to_stockpile = {type = infantry_equipment amount = 200}
+	random_list = {
+		40 = { 
+		army_experience = 8
+		add_stability = -0.02
+		add_manpower = 300
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 500
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 10
+		}}
+		35 = { 
+		army_experience = 10
+		add_stability = -0.03
+		add_manpower = 580
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 400
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 12
+		}}
+		25 = { 
+		army_experience = 16
+		add_stability = -0.04
+		add_manpower = 1000
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 900
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 60
+		}}
+		}
+	}
+	option = {
+	# Устранить Радикалов, Остальных - в шахты
+	name = Reid.6.c
+	add_stability = 0.01
+	add_war_support = 0.01
+	random_list = {
+	80 = {
+	add_manpower = 800 add_equipment_to_stockpile = {type = infantry_equipment amount = 180}
+	add_timed_idea = {
+    idea = Shahti
+    days = 80
+	}
+	add_timed_idea = {
+    idea = Anti_banditizm
+    days = 20
+	}}
+	10 = {
+	add_manpower = 500 add_equipment_to_stockpile = {type = infantry_equipment amount = 120}
+	add_timed_idea = {
+    idea = Shahti
+    days = 130
+	}
+	add_timed_idea = {
+    idea = Anti_banditizm
+    days = 30
+	}}
+	6 = {
+	add_manpower = 960 add_equipment_to_stockpile = {type = infantry_equipment amount = 188}
+	add_timed_idea = {
+    idea = Shahti
+    days = 40
+	}
+	add_timed_idea = {
+    idea = Anti_banditizm
+    days = 25
+	}}
+	3 = {
+	add_manpower = 1000 add_equipment_to_stockpile = {type = infantry_equipment amount = 200}
+	add_timed_idea = {
+    idea = Shahti
+    days = 20
+	}
+	add_timed_idea = {
+    idea = Anti_banditizm
+    days = 7
+	}}
+	1 = {
+	add_manpower = 965 add_equipment_to_stockpile = {type = infantry_equipment amount = 189}
+	random_core_state = { add_manpower = 10}
+	add_timed_idea = {
+    idea = Shahti
+    days = 135
+	}add_timed_idea = {
+    idea = Anti_banditizm
+    days = 70
+	}}
+	}
+	}
+}
+# Бандиты сопротивляютя до последнего
+country_event = {
+	id = Reid.7
+	title = Reid.7.t
+	desc = Reid.7.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.7.a
+	add_war_support = 0.01
+	add_stability = 0.02
+	random_list = {
+		60 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 800
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 20
+		}
+		add_manpower = 270
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 70
+		}
+		army_experience = 10}
+		20 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1200
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 6
+		}add_manpower = 265
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 76
+		}
+		army_experience = 13}
+		10 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 540
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 41
+		}add_manpower = 140
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 60
+		}
+		army_experience = 20}
+		5 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 360
+		}add_manpower = 321
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 90
+		}
+		army_experience = 17}
+		3 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 280
+		}add_manpower = 120
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 120
+		}
+		army_experience = 9}
+		2 = { 
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 180
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 76
+		}add_manpower = 268
+		add_timed_idea = {
+		idea = Anti_banditizm
+		days = 90
+		}
+		army_experience = 21}
+	}}}
+# Никто не вернулся...
+country_event = {
+	id = Reid.8
+	title = Reid.8.t
+	desc = Reid.8.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.8.a
+	add_war_support = -0.01
+	add_stability = -0.02
+	add_political_power = -100
+	}
+
+}
+# Поражение
+country_event = {
+	id = Reid.9
+	title = Reid.9.t
+	desc = Reid.9.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.9.a
+	add_stability = -0.01
+	random_list = {
+	60 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 80
+		}
+		army_experience = 20
+		add_manpower = 70}
+	33 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 120
+		}
+		army_experience = 25
+		add_manpower = 100}
+	7 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 10
+		}
+		army_experience = 16
+		add_manpower = 20}
+	
+	}
+	
+	}
+
+}

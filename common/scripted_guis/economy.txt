@@ -5,20 +5,20 @@ scripted_gui = {
 	window_name = "economy_view"
 	dirty = country_economy
 	
-	visible = {
-	}
+		visible = {
+		}
 		
-	effects = {
-		economy_button_click = {
-			if = {
-				limit = { NOT = { has_variable = country_economy } }
-				set_variable = { country_economy = 1 }
-			}
-			else = {
-				clear_variable = country_economy
+		effects = {
+			economy_button_click = {
+				if = {
+					limit = { NOT = { has_variable = country_economy } }
+					set_variable = { country_economy = 1 }
+				}
+				else = {
+					clear_variable = country_economy
+				}
 			}
 		}
-	}
     }
 
     economy_main = {
@@ -27,7 +27,7 @@ scripted_gui = {
 	window_name = "economy_main"
 		
 	visible = {
-            	check_variable = { country_economy > 0 }
+        check_variable = { country_economy > 0 }
 	}
 		
 	effects = {

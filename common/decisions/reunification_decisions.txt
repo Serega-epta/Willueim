@@ -32,7 +32,6 @@ reunification_category = {
 					ODS = {
 						set_cosmetic_tag = ODS_unified_ukr
 					}
-					play_song = reunification_ODS
 				}
 				if = {
 					limit = {
@@ -40,11 +39,10 @@ reunification_category = {
 					}
 					ARM = {
 						set_cosmetic_tag = ARM_unified_ukr
-                  			load_focus_tree = {
+                  		load_focus_tree = {
  							tree = army_junta_unite_focus
 						}
 					}
-					play_song = reunification_ARM
 				}
 				if = {
 					limit = {
@@ -53,7 +51,6 @@ reunification_category = {
 					LWV = {
 						set_cosmetic_tag = LWV_unified_ukr
 					}
-					play_song = reunification_LWV
 				}
 				set_capital = { state = 202 remember_old_capital = no }
 				add_political_power = 100
@@ -95,7 +92,6 @@ reunification_category = {
 					IMP = {
 						set_cosmetic_tag = IMP_unified_cen_rus
 					}
-					play_song = reunification_IMP
 				}
 				set_capital = { state = 895 remember_old_capital = no }
 				add_political_power = 100
