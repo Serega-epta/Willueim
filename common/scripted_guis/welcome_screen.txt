@@ -1,0 +1,17 @@
+scripted_gui = {
+	RoH_welcome_screen_container = {
+		context_type = player_context
+		
+		window_name = "RoH_welcome_screen_container"
+
+		visible = {
+			has_country_flag = show_roh_welcome_screen
+		}
+
+		effects = {
+			RoH_welcome_screen_button_click = {
+				clr_country_flag = show_roh_welcome_screen
+			}
+		}
+	}
+}

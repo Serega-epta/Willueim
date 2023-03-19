@@ -1,0 +1,1450 @@
+#Скрипт механики специализации
+scripted_gui = {
+
+		OKNO_SPECIALIZATION = {
+			context_type = selected_state_context
+			parent_window_token = selected_state_view
+			window_name = "OKNO_SPECIALIZATION"
+			
+			visible = { 
+				check_variable = { state_specialization > 0 }
+			}
+			
+			effects = { 
+				BUTTON_VIHOD_click = {  				
+						clear_variable = state_specialization				
+				}
+#Скрипт кнопки специализировать
+				BUTTON_SPECIAALIZIROVAT_click = {  				
+					if = { 
+						limit = { state = 809  }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 810 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 909 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 910 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 908 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+					
+					if = { 
+						limit = { state = 814 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 98 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 918 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 919 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 95 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 887 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 885 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 886 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 906 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 931 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 945 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 243 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 902 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 893 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 880 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 193 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 941 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 933 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 949 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 944 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 883 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 256 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 992 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 990 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 1003 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 928 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+					
+					if = { 
+						limit = { state = 926 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 927 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 215 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 216 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 965 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 967 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+				
+					
+	
+					if = { 
+						limit = { state = 150 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+					if = { 
+						limit = { state = 968 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 972 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 147 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 970 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 722 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 966 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 971 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 973 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 976 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 974 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 975 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 922 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 263 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 244 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 925 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 923 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 929 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 73 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 889 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 884 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 80 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 882 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 78 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 201 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 860 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 858 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 855 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 857 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 862 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 192 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 834 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 259 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 865 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 845 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 863 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 868 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 850 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 852 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 854 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 245 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 265 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 958 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 959 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+					if = { 
+						limit = { state = 960 }
+						set_variable = { state_garnizon = 1 } 
+						add_dynamic_modifier = { modifier = garnizon_baff }
+					}
+
+###################################################Переферия					
+					
+					if = { 
+						limit = { state = 13 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 199 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 911 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 191 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 209 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 930 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 913 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 815 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 912 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 188 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 916 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 914 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 917 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 915 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 96 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}				
+					if = { 
+						limit = { state = 907 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 904 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 989 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 947 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 946 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 948 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 896 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 894 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 900 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 901 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 943 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 903 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 881 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 258 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 935 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 937 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 407 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 406 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 994 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 1002 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 262 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 979 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 978 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 397 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 400 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 997 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 399 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 996 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 995 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 351 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 985 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 983 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 977 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 214 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 984 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 988 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 248 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 253 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 942 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 264 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 247 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 980 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 890 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 875 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 91 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 93 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 878 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 856 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 766 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 838 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 837 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 871 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 861 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 876 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 841 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 840 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 842 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 137 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 844 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 874 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 869 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 846 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 200 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 867 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 848 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 851 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 853 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 239 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 961 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 962 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 964 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 963 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 954 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 236 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 953 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 951 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					if = { 
+						limit = { state = 950 }
+						set_variable = { state_pereferia = 1 } 
+						add_dynamic_modifier = { modifier = pereferia_baff }
+					}
+					
+###################################################Сырьевой							
+					
+					if = { 
+						limit = { state = 12 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 189 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 5 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 888 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 210 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 897 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 899 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 940 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 222 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 257 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 220 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 250 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 249 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 993 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 652 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 401 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 582 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 651 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 1001 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 573 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 1000 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 999 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 581 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 981 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 982 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 998 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 1004 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 986 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 825 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 89 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 891 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 203 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 196 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 870 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 226 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 227 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 221 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 228 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 866 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 234 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 864 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 238 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 873 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 957 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 829 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					if = { 
+						limit = { state = 952 }
+						set_variable = { state_sirievoi = 1 } 
+						add_dynamic_modifier = { modifier = sirievoi_baff }
+					}
+					
+###################################################Промышленный	
+
+					if = { 
+						limit = { state = 808 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 784 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 11 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 763 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 97 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 92 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 94 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 920 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 206 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 204 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 905 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 207 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 242 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 254 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 241 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 224 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 895 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 892 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 898 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 879 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 225 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 939 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 205 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 223 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 938 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 260 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 934 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 936 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 240 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 255 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 252 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 991 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 251 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 398 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 202 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 839 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 198 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 197 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 872 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 843 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 847 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 218 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 213 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 195 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 924 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 246 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}
+					if = { 
+						limit = { state = 208 }
+						set_variable = { state_prmishleni = 1 } 
+						add_dynamic_modifier = { modifier = promishlenni_baff }
+					}				
+					clear_variable = state_specialization						
+				}				
+			}	
+		}		
+}
+

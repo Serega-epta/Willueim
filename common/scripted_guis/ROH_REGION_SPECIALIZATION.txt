@@ -1,0 +1,25 @@
+#Скрипт механики специализации
+scripted_gui = {
+	Specialization_of_regions = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		window_name = "GUI_SPECIALIZATION" 
+		dirty = state_specialization
+	
+		visible = { }
+		
+		effects = { 
+			BUTTON_SPECIALIZATION_click = {  
+				if = {
+					limit = { NOT = { has_variable = state_specialization } }
+					set_variable = { state_specialization = 1 }
+				}
+				else = {
+					clear_variable = state_specialization
+				}
+			}
+		}	
+	}
+
+
+#parent_window_token = selected_state_view

@@ -1,0 +1,27 @@
+#Скрипт переферии
+scripted_gui = {
+
+		OKNO_PEREFERIA = {
+			context_type = selected_state_context
+			parent_window_token = selected_state_view
+			window_name = "OKNO_PEREFERIA"
+			dirty = state_pereferia
+			
+			visible = { 
+				check_variable = { state_pereferia > 0 }		
+			}
+			
+			effects = { 
+				BUTTON_VIHOD3_click = {  				
+					clear_variable = state_pereferia										
+				}
+#Скрипт убрать специализацию
+				BUTTON_RESPECIALIZIROVAT2_click = {  														
+					clear_variable = state_pereferia
+					clear_variable = state_specialization		
+					remove_dynamic_modifier = { modifier = pereferia_baff }					 						
+				}				
+			}	
+		}		
+}
+
