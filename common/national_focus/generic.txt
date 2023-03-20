@@ -1,5 +1,780 @@
 focus_tree = {
 	id = generic_focus
-	country = { factor = 0 }
+	country = { factor = 1 }
 	default = yes
+	
+	focus = {
+		id = ROH_capital
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					if = {
+						limit = {
+							is_capital = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							instant_build = yes
+							province = {
+								all_provinces = yes
+								limit_to_victory_point = yes
+							}
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ROH_create_bunkers
+		}
+	}
+	focus = {
+		id = ROH_15
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		x = 13
+		y = 0
+		ai_will_do = { factor = 10 }
+		available = {
+			has_completed_focus = ROH_next
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+
+	}
+	focus = {
+		id = ROH_29
+		cost = 10,00
+		x = 11
+		y = 7
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = ROH_29
+		}
+		prerequisite = {
+			focus = ROH_27
+		}
+
+	}
+	focus = {
+		id = ROH_create_patrols
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_capital
+		}
+		x = 5
+		y = 1
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			division_template = {
+				name = "Patrulnaya Diviziya"
+				is_locked = no
+				priority = 1
+				regiments = {
+					egerskayapechota = { x = 0 y = 0 }
+					egerskayapechota = { x = 0 y = 1 }
+					egerskayapechota = { x = 0 y = 2 }
+					egerskayapechota = { x = 1 y = 0 }
+					egerskayapechota = { x = 1 y = 1 }
+					egerskayapechota = { x = 1 y = 2 }
+				}
+				#support = {
+				#	military_police = { x = 0 y = 0 }
+				#}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. Patrulnaya Diviziya\" division_template = \"Patrulnaya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.3 start_manpower_factor = 0"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROH_recreate_MIC
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_create_patrols
+		}
+		x = 5
+		y = 2
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+
+	}
+	focus = {
+		id = ROH_chegoblia
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_recreate_MIC
+		}
+		x = 5
+		y = 3
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+
+	}
+	focus = {
+		id = ROH_civ_ind
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_chegoblia
+		}
+		mutually_exclusive = {
+			focus = ROH_11
+		}
+		x = 3
+		y = 4
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_11
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_chegoblia
+		}
+		mutually_exclusive = {
+			focus = ROH_civ_ind
+		}
+		x = 7
+		y = 4
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_12
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_11
+		}
+		x = 7
+		y = 5
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.05
+			add_manpower = -100
+		}
+
+	}
+	focus = {
+		id = ROH_13
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_12
+		}
+		x = 7
+		y = 6
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = ROH_13
+		}
+
+	}
+	focus = {
+		id = ROH_14
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_13
+		}
+		x = 7
+		y = 7
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = ROH_14
+		}
+
+	}
+	focus = {
+		id = ROH_16
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_15
+		}
+		mutually_exclusive = {
+			focus = ROH_17
+			focus = ROH_18
+		}
+		x = 10
+		y = 1
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ROH_create_bunkers_borders_1
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_19
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_16
+		}
+		x = 10
+		y = 2
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			division_template = {
+				name = "Diviziya Territorialnoy Oborony"
+				is_locked = no
+				priority = 1
+				regiments = {
+					egerskayapechota = { x = 0 y = 0 }
+					egerskayapechota = { x = 0 y = 1 }
+					egerskayapechota = { x = 0 y = 2 }
+					egerskayapechota = { x = 1 y = 0 }
+					egerskayapechota = { x = 1 y = 1 }
+					egerskayapechota = { x = 1 y = 2 }
+					egerskayapechota = { x = 2 y = 0 }
+					egerskayapechota = { x = 2 y = 1 }
+					egerskayapechota = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. Diviziya Territorialnoy Oborony\" division_template = \"Diviziya Territorialnoy Oborony\" start_experience_factor = 0.3 start_equipment_factor = 0.3 start_manpower_factor = 0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Diviziya Territorialnoy Oborony\" division_template = \"Diviziya Territorialnoy Oborony\" start_experience_factor = 0.3 start_equipment_factor = 0.3 start_manpower_factor = 0"
+					owner = ROOT
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_17
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_15
+		}
+		mutually_exclusive = {
+			focus = ROH_16
+			focus = ROH_18
+		}
+		x = 13
+		y = 1
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_20
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_17
+		}
+		x = 13
+		y = 2
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			division_template = {
+				name = "Otdelnaya Osobaya Diviziya"
+				is_locked = no
+				priority = 1
+				regiments = {
+					opolchenie = { x = 0 y = 0 }
+					opolchenie = { x = 0 y = 1 }
+					opolchenie = { x = 0 y = 2 }
+					opolchenie = { x = 1 y = 0 }
+					opolchenie = { x = 1 y = 1 }
+					opolchenie = { x = 1 y = 2 }
+					opolchenie = { x = 2 y = 0 }
+					opolchenie = { x = 2 y = 1 }
+					opolchenie = { x = 2 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. Otdelnaya Osobaya Diviziya\" division_template = \"Otdelnaya Osobaya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.3 start_manpower_factor = 0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Otdelnaya Osobaya Diviziya\" division_template = \"Otdelnaya Osobaya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.3 start_manpower_factor = 0"
+					owner = ROOT
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_to_people
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_civ_ind
+		}
+		x = 3
+		y = 5
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_father_to_every_family
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_to_people
+		}
+		x = 3
+		y = 6
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = ROH_light
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_father_to_every_family
+		}
+		x = 3
+		y = 7
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = energy
+					amount = 10
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_new_intruments
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_light
+			focus = ROH_14
+		}
+		x = 5
+		y = 8
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_next
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_new_intruments
+		}
+		x = 5
+		y = 9
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			effect_tooltip = {
+				unlock_national_focus = ROH_15
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_18
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_15
+		}
+		mutually_exclusive = {
+			focus = ROH_17
+			focus = ROH_16
+		}
+		x = 16
+		y = 1
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_21
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_18
+		}
+		x = 16
+		y = 2
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			division_template = {
+				name = "Shturmovoy Korpus"
+				is_locked = no
+				priority = 1
+				regiments = {
+					opolchenie = { x = 0 y = 0 }
+					opolchenie = { x = 0 y = 1 }
+					opolchenie = { x = 0 y = 2 }
+					opolchenie = { x = 1 y = 0 }
+					opolchenie = { x = 1 y = 1 }
+					opolchenie = { x = 1 y = 2 }
+					opolchenie = { x = 2 y = 0 }
+					opolchenie = { x = 2 y = 1 }
+					opolchenie = { x = 2 y = 2 }
+					stvolland = { x = 3 y = 0 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. Shturmovoy Korpus\" division_template = \"Shturmovoy Korpus\" start_experience_factor = 0.3 start_equipment_factor = 0.3 start_manpower_factor = 0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Shturmovoy Korpus\" division_template = \"Shturmovoy Korpus\" start_experience_factor = 0.3 start_equipment_factor = 0.3 start_manpower_factor = 0"
+					owner = ROOT
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_22
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_20
+			focus = ROH_19
+			focus = ROH_21
+		}
+		x = 13
+		y = 3
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_23
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_22
+		}
+		mutually_exclusive = {
+			focus = ROH_24
+			focus = ROH_25
+		}
+		x = 11
+		y = 4
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ROH_create_bunkers_borders_2
+		}
+
+	}
+	focus = {
+		id = ROH_24
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_22
+		}
+		mutually_exclusive = {
+			focus = ROH_23
+			focus = ROH_25
+		}
+		x = 13
+		y = 4
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			set_rule = {
+				can_send_volunteers = yes
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_25
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_22
+		}
+		mutually_exclusive = {
+			focus = ROH_24
+			focus = ROH_23
+		}
+		x = 15
+		y = 4
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			custom_effect_tooltip = ROH_m_raid
+		}
+
+	}
+	focus = {
+		id = ROH_26
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_25
+			focus = ROH_24
+			focus = ROH_23
+		}
+		x = 13
+		y = 5
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_27
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_26
+		}
+		mutually_exclusive = {
+			focus = ROH_28
+		}
+		x = 11
+		y = 6
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+
+	}
+	focus = {
+		id = ROH_28
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_26
+		}
+		mutually_exclusive = {
+			focus = ROH_27
+		}
+		x = 15
+		y = 6
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = -1 }
+			add_ideas = ROH_28
+		}
+
+	}
+	focus = {
+		id = ROH_30
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_28
+		}
+		x = 15
+		y = 7
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = -0.05
+			add_manpower = 10000
+		}
+
+	}
+	focus = {
+		id = ROH_31
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_29
+			focus = ROH_30
+		}
+		x = 13
+		y = 8
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = armor 
+				category = artillery 
+				category = infantry_weapons 
+				category = motorized_equipment
+			}
+		}
+
+	}
+	focus = {
+		id = ROH_32
+		#icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ROH_31
+		}
+		x = 13
+		y = 9
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			division_template = {
+				name = "Gvardeyskaya Diviziya"
+				is_locked = no
+				priority = 2
+				regiments = {
+					egerskayapechota = { x = 0 y = 0 }
+					egerskayapechota = { x = 0 y = 1 }
+					egerskayapechota = { x = 0 y = 2 }
+					egerskayapechota = { x = 1 y = 0 }
+					egerskayapechota = { x = 1 y = 1 }
+					egerskayapechota = { x = 1 y = 2 }
+					egerskayapechota = { x = 2 y = 0 }
+					stvolland = { x = 2 y = 1 }
+					stvolland = { x = 2 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. Gvardeyskaya Diviziya\" division_template = \"Gvardeyskaya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.3 start_manpower_factor = 0"
+					owner = ROOT
+				}
+			}
+		}
+
+	}
 }
