@@ -35,7 +35,7 @@ focus_tree = {
 		icon = GFX_eat
 		x = 6
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -60,7 +60,7 @@ focus_tree = {
 		icon = GFX_eat
 		x = 6
 		y = 2
-		cost = 1
+		cost = 2
 		prerequisite = { focus = LWV_fire_and_sopkes }
 		ai_will_do = {
 			factor = 10
@@ -80,7 +80,7 @@ focus_tree = {
 		icon = GFX_eat
 		x = 4
 		y = 3
-		cost = 1
+		cost = 0.1
 		available = {
 		always = no
 		}
@@ -106,7 +106,7 @@ focus_tree = {
 		icon = GFX_eat
 		x = 8
 		y = 3
-		cost = 1
+		cost = 0.1
 		available = {
 		always = no
 		}
@@ -140,7 +140,7 @@ focus_tree = {
 		relative_position_id = LWV_nozhi
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
 		prerequisite = { focus = LWV_nozhi }
 		ai_will_do = {
 			factor = 10
@@ -160,7 +160,7 @@ focus_tree = {
 		relative_position_id = LWV_hitrost
 		x = 0
 		y = 1
-		cost = 1
+		cost = 3
 		prerequisite = { focus = LWV_hitrost }
 		ai_will_do = {
 			factor = 10
@@ -178,7 +178,7 @@ focus_tree = {
 		relative_position_id = LWV_nozhi
 		x = 0
 		y = 3
-		cost = 1
+		cost = 4
 		prerequisite = { focus = LWV_rostochki }
 		ai_will_do = {
 			factor = 10
@@ -215,7 +215,7 @@ focus_tree = {
 		relative_position_id = LWV_nozhi
 		x = 0
 		y = 4
-		cost = 1
+		cost = 5
 		prerequisite = { focus = LWV_plamya }
 		ai_will_do = {
 			factor = 10
@@ -242,7 +242,7 @@ focus_tree = {
 		relative_position_id = LWV_oralo
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
 		prerequisite = { focus = LWV_oralo }
 		ai_will_do = {
 			factor = 10
@@ -258,7 +258,7 @@ focus_tree = {
 		relative_position_id = LWV_slabost
 		x = 0
 		y = 1
-		cost = 1
+		cost = 3
 		prerequisite = { focus = LWV_slabost }
 		ai_will_do = {
 			factor = 10
@@ -274,7 +274,7 @@ focus_tree = {
 		relative_position_id = LWV_zapoved
 		x = 0
 		y = 1
-		cost = 1
+		cost = 4
 		prerequisite = { focus = LWV_zapoved }
 		ai_will_do = {
 			factor = 10
@@ -293,7 +293,7 @@ focus_tree = {
 		relative_position_id = LWV_spasenie
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
 		prerequisite = { focus = LWV_spasenie }
 		ai_will_do = {
 			factor = 10
@@ -309,7 +309,7 @@ focus_tree = {
 		relative_position_id = LWV_swordaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 		x = 0
 		y = 6
-		cost = 1
+		cost = 10
 		set_country_flag = pipapupa
 		prerequisite = { focus = LWV_luboy focus = LWV_pryamo }
 		ai_will_do = {
@@ -333,7 +333,7 @@ focus_tree = {
 		icon = GFX_eat
 		x = 13
 		y = 0
-		cost = 1
+		cost = 10
 		available = {
             has_completed_focus = LWV_otmshenie
         }
@@ -352,7 +352,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = -2
 		y = 1
-		cost = 1
+		cost = 7
 		mutually_exclusive = { focus = LWV_notexit }
 		prerequisite = { focus = LWV_otkrovenie }
 		ai_will_do = {
@@ -372,7 +372,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 2
 		y = 1
-		cost = 1
+		cost = 7
 		mutually_exclusive = { focus = LWV_vstar }
 		prerequisite = { focus = LWV_otkrovenie }
 		ai_will_do = {
@@ -392,7 +392,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 0
 		y = 2
-		cost = 1
+		cost = 3
 		mutually_exclusive = { focus = LWV_vstar }
 		prerequisite = { focus = LWV_vstar focus = LWV_notexit }
 		ai_will_do = {
@@ -411,7 +411,7 @@ focus_tree = {
 		relative_position_id = LWV_shadow_warrior
 		x = 0
 		y = 1
-		cost = 1
+		cost = 4
 		prerequisite = { focus = LWV_shadow_warrior }
 		ai_will_do = {
 			factor = 10
@@ -428,7 +428,7 @@ focus_tree = {
 		relative_position_id = LWV_shadow_warrior
 		x = 0
 		y = 2
-		cost = 1
+		cost = 5
 		prerequisite = { focus = LWV_exkalation }
 		ai_will_do = {
 			factor = 10
@@ -447,7 +447,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 6
 		y = 0
-		cost = 1
+		cost = 2
 		available = {
             has_completed_focus = LWV_fatum
         }
@@ -468,7 +468,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
 		prerequisite = { focus = LWV_ochi }
 		ai_will_do = {
 			factor = 10
@@ -487,7 +487,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = -2
 		y = 2
-		cost = 1
+		cost = 1.5
 		prerequisite = { focus = LWV_ushi }
 		ai_will_do = {
 			factor = 10
@@ -506,7 +506,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 2
 		y = 2
-		cost = 1
+		cost = 1.5
 		prerequisite = { focus = LWV_ushi }
 		ai_will_do = {
 			factor = 10
@@ -528,7 +528,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 3
-		cost = 1
+		cost = 3
 		prerequisite = { focus = LWV_ruki }
 		prerequisite = { focus = LWV_hearts }
 		ai_will_do = {
@@ -551,7 +551,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 4
-		cost = 1
+		cost = 3
 		prerequisite = { focus = LWV_razum }
 		ai_will_do = {
 			factor = 10
