@@ -1,0 +1,32 @@
+
+integrated_state_humanist = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_factory_worker_militias
+	local_manpower = -0.1
+}
+
+integrated_state_patriots = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_factory_worker_militias
+	local_manpower = -0.05
+}
+
+integrated_state_others = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_factory_worker_militias
+	local_manpower = -0.15
+}
+
+patriots_partisan_communes = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_invaders_must_die
+	no_compliance_gain = 1
+	required_garrison_factor = 0.5
+	resistance_activity = 0.5
+	resistance_damage_to_garrison_on_our_occupied_states = 0.8
+	compliance_growth = -0.15
+	resistance_growth = 0.15
+	resistance_target = 0.15
+	resistance_decay = -0.30
+	local_manpower = 0.03
+}
