@@ -1,14 +1,27 @@
 spriteTypes = {
 
-	spriteType = {
+	frameAnimatedSpriteType = {
 		name = "GFX_default"
 		texturefile = "gfx/interface/thisisdog.dds"
+		noOfFrames = 24
+		animation_rate_fps = 12
+		looping = yes 
+		play_on_show = yes 
+		pause_on_loop = 0.0 
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua" 
 		legacy_lazy_load = no
 	}
-
-	spriteType = {
+	
+	frameAnimatedSpriteType = {
 		name = "GFX_default_fallback_texture"
 		texturefile = "gfx/interface/thisisdog.dds"
+		noOfFrames = 24
+		animation_rate_fps = 12
+		looping = yes 
+		play_on_show = yes 
+		pause_on_loop = 0.0 
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua" 
+		legacy_lazy_load = no
 	}
 
 	spriteType = {
@@ -26,10 +39,17 @@ spriteTypes = {
 		name = "GFX_console_win_bg"
 		texturefile = "gfx/interface/console_win_bg.dds"
 	}
-
-	spriteType = {
+	
+	frameAnimatedSpriteType = {
 		name = "GFX_dog"
 		texturefile = "gfx/interface/thisisdog.dds"
+		noOfFrames = 24
+		animation_rate_fps = 12
+		looping = yes 
+		play_on_show = yes 
+		pause_on_loop = 0.0 
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua" 
+		legacy_lazy_load = no
 	}
 
 	spriteType = {
