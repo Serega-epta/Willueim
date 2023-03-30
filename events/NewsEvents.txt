@@ -1,1 +1,37 @@
-﻿
+﻿add_namespace = worldnews
+
+news_event = { # Новость об объединении после Собачего лязга
+	id = worldnews.1
+	title = worldnews.1.t
+	desc = {
+		text = worldnews.1.d_WAC_unified_Black_Junta
+		trigger = {
+			WAC = { has_cosmetic_tag = WAC_unified_Black_Junta }
+		}
+	}
+	desc = {
+		text = worldnews.1.d_HAN_unified_Black_Junta
+		trigger = {
+			HAN = { has_cosmetic_tag = HAN_unified_Black_Junta }
+		}
+	}
+	desc = {
+		text = worldnews.1.d_BRI_unified_Black_Junta
+		trigger = {
+			BRI = { has_cosmetic_tag = BRI_unified_Black_Junta }
+		}
+	}
+	desc = {
+		text = worldnews.1.d_BRD_unified_Black_Junta
+		trigger = {
+			BRD = { has_cosmetic_tag = BRD_unified_Black_Junta }
+		}
+	}
+	picture = GFX_news_event_dog_clanging
+
+	is_triggered_only = yes
+	
+	option = {
+		name = worldnews.1.a
+	}
+}

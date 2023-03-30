@@ -1,13 +1,19 @@
-#Images
+#Images Unconscious_Flight
 defined_text = {  
 	name = get_superevent
 	
 	text = {
-        trigger = {
-            has_global_flag = Dog_Clanging
-        }
-        localization_key = "GFX_sp_event_Dog_Clanging"
-	}		
+        	trigger = {
+           		has_global_flag = Dog_Clanging
+        	}
+        	localization_key = "GFX_sp_event_Dog_Clanging"
+	}
+	text = {
+        	trigger = {
+           		has_global_flag = Unconscious_Flight
+        	}
+        	localization_key = "GFX_sp_event_Unconscious_Flight"
+	}			
 }
 
 
@@ -21,6 +27,12 @@ defined_text = {
         }
         localization_key = "sp_event_Dog_Clanging"
     }
+    text = {
+        trigger = {
+            has_global_flag = Unconscious_Flight
+        }
+        localization_key = "sp_event_Unconscious_Flight"
+    }
 }
 defined_text = {
     name = get_super_event_remark
@@ -31,6 +43,12 @@ defined_text = {
         }
         localization_key = "sp_event_Dog_Clanging_REMARK"
     }
+    text = { 
+        trigger = {
+            has_global_flag = Unconscious_Flight
+        }
+        localization_key = "sp_event_Unconscious_Flight_REMARK"
+    }
 }
 defined_text = {
     name = get_super_event_quote
@@ -40,5 +58,11 @@ defined_text = {
             has_global_flag = Dog_Clanging
         }
         localization_key = "sp_event_Dog_Clanging_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = Unconscious_Flight
+        }
+        localization_key = "sp_event_Unconscious_Flight_QUOTE"
     }
 }

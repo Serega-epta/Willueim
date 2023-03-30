@@ -393,3 +393,56 @@ ODS_annex = {
 		
 	}
 }
+
+ODS_kuban = {
+	krasnodar_annex = {
+		priority = 100
+		ai_will_do = {
+			base = 100	
+		}
+		allowed = {
+			original_tag = ODS
+		}
+		visible = {
+			original_tag = ODS
+			has_country_flag = Kuban_in_fire
+		}
+		available = {
+			has_manpower > 5000
+			has_equipment = {
+				infantry_equipment > 4999
+			}
+			has_equipment = {
+				support_equipment > 4999
+			}
+			has_equipment = {
+				motorized_equipment_1 > 99
+			}			
+		}
+		days_remove = 180
+		complete_effect = {	
+			add_manpower = -5000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment 
+				amount = -5000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment 
+				amount = -5000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1 
+				amount = -100
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = krasnodar_annex_tt
+			hidden_effect = {
+				random_list = {
+					50 = { ODS = { clr_country_tag = Kuban_in_fire country_event = { id = kuban.2 } annex_country = { target = ECD transfer_troops = no } } }
+					50 = { ODS = { clr_country_tag = Kuban_in_fire country_event = { id = kuban.3 } declare_war_on = { target = ECD type = annex_everything } } }
+				}
+			}
+		}		
+	}
+}

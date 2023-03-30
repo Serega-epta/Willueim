@@ -1,20 +1,16 @@
 ############################
 ### Black Junta Triggers ###
-###	  by Daniel_Letov    ###
+###    by Daniel_Letov   ###
 ############################
 
-Dog_Clanging_started = {
-	AND = {
-		WAC = { 
-			has_defensive_war_with = BRI 
-			has_defensive_war_with = BRD 
-			has_defensive_war_with = HAN 
-			has_idea = dog_clanging 
-		}
-		NOT = {
-			has_global_flag = Dog_Clanging
-		}
+Dog_Clanging_has_not_begun = {
+	WAC = { 
+		NOT = { has_defensive_war_with = BRI }
+		NOT = { has_defensive_war_with = BRD }
+		NOT = { has_defensive_war_with = HAN }
+		NOT = { has_idea = dog_clanging }
 	}
+	date > 2022.01.05 #2024.01.19
 }
 Dog_Clanging_finished = {
 	OR = {

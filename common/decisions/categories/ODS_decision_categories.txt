@@ -1,4 +1,3 @@
-
 ODS_annex = {
 	
 	icon = saf_anti_colonialist_crusade
@@ -6,6 +5,24 @@ ODS_annex = {
 	allowed = {
 		original_tag = ODS
 	}
+	visible = {
+	}
 	scripted_gui = Odessa
 	priority = 85
+}
+
+ODS_kuban = {
+	
+	icon = saf_anti_colonialist_crusade
+
+	picture = GFX_desicion_kuban_in_fire
+
+	allowed = {
+		original_tag = ODS
+	}
+	visible = {
+		country_exists = ECD
+		has_country_flag = Kuban_in_fire
+	}
+	priority = 100
 }
