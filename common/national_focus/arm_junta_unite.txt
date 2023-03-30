@@ -14,7 +14,7 @@ focus_tree = {
 #Эйфория после объединения
 	focus = {
 		id = ARM_Restoration_of_the_CSF
-		icon = GFX_Restoration_of_the_CSF
+		icon = GFX_Фатальное_Оцепенение
 		x = 6
 		y = 0
 		cost = 10
@@ -60,7 +60,7 @@ focus_tree = {
 #Сопротивление на территориях
 	focus = {
 		id = ARM_First_of_all
-		icon = GFX_First_of_all
+		icon = GFX_Фатальное_Оцепенение
 		prerequisite = { focus = ARM_Our_new_burden }
 		x = 2
 		y = 2
@@ -80,7 +80,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Check_loyalty
-		icon = GFX_Check_loyalty
+		icon = GFX_Фатальное_Оцепенение
 		mutually_exclusive = { focus = ARM_Dont_give_traitors_chance }
 		prerequisite = { focus = ARM_First_of_all }
 		x = 0
@@ -102,7 +102,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Dont_give_traitors_chance
-		icon = GFX_Dont_give_traitors_chance
+		icon = GFX_Фатальное_Оцепенение
 		mutually_exclusive = { focus = ARM_Check_loyalty }
 		prerequisite = { focus = ARM_First_of_all }
 		x = 4
@@ -124,7 +124,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Check_the_functionality_of_the_board
-		icon = GFX_Check_the_functionality_of_the_board
+		icon = GFX_Фатальное_Оцепенение
 		prerequisite = { focus = ARM_Check_loyalty focus = ARM_Dont_give_traitors_chance}
 		x = 2
 		y = 4
@@ -153,7 +153,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Committee_for_the_Management_of_Civil_Territories
-		icon = GFX_Committee_for_the_Management_of_Civil_Territories
+		icon = GFX_Фатальное_Оцепенение
 		prerequisite = { focus = ARM_Check_the_functionality_of_the_board}
 		x = 2
 		y = 5
@@ -169,7 +169,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_The_situation_is_under_control
-		icon = GFX_The_situation_is_under_control
+		icon = GFX_Фатальное_Оцепенение
 		prerequisite = { focus = ARM_Committee_for_the_Management_of_Civil_Territories}
 		x = 2
 		y = 6
@@ -196,7 +196,7 @@ focus_tree = {
 #Устройство государства
 	focus = {
 		id = ARM_The_Crimson_Question
-		icon = GFX_Crimson_Question
+		icon = GFX_Фатальное_Оцепенение
 		prerequisite = { focus = ARM_Our_new_burden }
 		x = 10
 		y = 2
@@ -213,7 +213,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Introduce_a_hierarchy
-		icon = GFX_Introduce_a_hierarchy
+		icon = GFX_Фатальное_Оцепенение
 		mutually_exclusive = { focus = ARM_Dont_be_constrained_by_authority }
 		prerequisite = { focus = ARM_The_Crimson_Question }
 		x = 8
@@ -233,7 +233,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Dont_be_constrained_by_authority
-		icon = GFX_Dont_be_constrained_by_authority
+		icon = GFX_Фатальное_Оцепенение
 		mutually_exclusive = { focus = ARM_Introduce_a_hierarchy }
 		prerequisite = { focus = ARM_The_Crimson_Question }
 		x = 12
@@ -257,7 +257,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Question_of_human_resources
-		icon = GFX_Question_of_human_resources
+		icon = GFX_Фатальное_Оцепенение
 		prerequisite = { focus = ARM_Introduce_a_hierarchy focus = ARM_Dont_be_constrained_by_authority}
 		x = 10
 		y = 4
@@ -273,7 +273,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_New_Blood
-		icon = GFX_New_Blood
+		icon = GFX_Фатальное_Оцепенение
 		mutually_exclusive = { focus = ARM_Well_established_mechanism }
 		prerequisite = { focus = ARM_Question_of_human_resources }
 		x = 8
@@ -297,7 +297,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Well_established_mechanism
-		icon = GFX_Well_established_mechanism
+		icon = GFX_Фатальное_Оцепенение
 		mutually_exclusive = { focus = ARM_New_Blood }
 		prerequisite = { focus = ARM_Question_of_human_resources }
 		x = 12
@@ -317,7 +317,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Advancing_the_goal
-		icon = GFX_Advancing_the_goal
+		icon = GFX_Фатальное_Оцепенение
 		prerequisite = { focus = ARM_New_Blood focus = ARM_Well_established_mechanism}
 		x = 10
 		y = 6
@@ -350,7 +350,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_To_which_we_aspire
-		icon = GFX_To_which_we_aspire
+		icon = GFX_Фатальное_Оцепенение
 		mutually_exclusive = { focus = ARM_Which_justifies_the_means }
 		prerequisite = { focus = ARM_Advancing_the_goal }
 		x = 8
@@ -367,7 +367,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Which_justifies_the_means
-		icon = GFX_To_which_we_aspire
+		icon = GFX_Фатальное_Оцепенение
 		mutually_exclusive = { focus = ARM_To_which_we_aspire }
 		prerequisite = { focus = ARM_Advancing_the_goal }
 		x = 12
@@ -398,8 +398,8 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Writing_a_charter
-		icon = GFX_Writing_a_charter
-	    prerequisite = { focus = ARM_The_situation_is_under_control }
+		icon = GFX_Фатальное_Оцепенение
+	      prerequisite = { focus = ARM_The_situation_is_under_control }
 		prerequisite = { focus = ARM_To_which_we_aspire focus = ARM_Which_justifies_the_means}
 		x = 6
 		y = 8
@@ -421,7 +421,7 @@ focus_tree = {
 #Производство Армии Возрождения (почему сейчас? В начале у игрока них*я нет)
 	focus = {
 		id = ARM_Get_your_tools_in_order
-		icon = GFX_Get_your_tools_in_order
+		icon = GFX_Фатальное_Оцепенение
 		x = 17
 		y = 0
 		cost = 3
@@ -439,7 +439,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Census_of_Productions
-		icon = GFX_Census_of_Productions
+		icon = GFX_Фатальное_Оцепенение
 	      prerequisite = { focus = ARM_Get_your_tools_in_order }
 		x = 15
 		y = 1
@@ -461,7 +461,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Move_industry_underground
-		icon = GFX_Move_industry_underground
+		icon = GFX_Фатальное_Оцепенение
 	      prerequisite = { focus = ARM_Census_of_Productions }
 		x = 15
 		y = 2
@@ -492,7 +492,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Linkage_assessment
-		icon = GFX_Linkage_assessment
+		icon = GFX_Фатальное_Оцепенение
 	      prerequisite = { focus = ARM_Get_your_tools_in_order }
 		x = 19
 		y = 1
@@ -512,7 +512,7 @@ focus_tree = {
 	focus = {
 		id = ARM_Infrastructure_restoration
 	      prerequisite = { focus = ARM_Linkage_assessment }
-		icon = GFX_Infrastructure_restoration
+		icon = GFX_Фатальное_Оцепенение
 		x = 19
 		y = 2
 		cost = 2.9
@@ -539,7 +539,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_The_means_to_an_end
-		icon = GFX_The_means_to_an_end
+		icon = GFX_Фатальное_Оцепенение
 	      prerequisite = { focus = ARM_Infrastructure_restoration }
 	      prerequisite = { focus = ARM_Move_industry_underground }
 		x = 17
@@ -563,7 +563,7 @@ focus_tree = {
 #Армия Армии Возрождения (XD простите за тавталогию)
 	focus = {
 		id = ARM_We_Army
-		icon = GFX_We_Army
+		icon = GFX_Фатальное_Оцепенение
 		x = 17
 		y = 4
 		cost = 3
@@ -586,7 +586,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Weapons_in_hand
-		icon = GFX_We_Army
+		icon = GFX_Фатальное_Оцепенение
 	      prerequisite = { focus = ARM_We_Army }
 		x = 15
 		y = 5
@@ -611,7 +611,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_New_protective_equipment
-		icon = GFX_New_protective_equipment
+		icon = GFX_Фатальное_Оцепенение
 	      prerequisite = { focus = ARM_Weapons_in_hand }
 		x = 15
 		y = 6
@@ -630,7 +630,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Soldier_in_the_car
-		icon = GFX_Soldier_in_the_car
+		icon = GFX_Фатальное_Оцепенение
 	      prerequisite = { focus = ARM_We_Army }
 		x = 19
 		y = 5
@@ -652,7 +652,7 @@ focus_tree = {
 	focus = {
 		id = ARM_Heavy_Cavalry
 	      prerequisite = { focus = ARM_Soldier_in_the_car }
-		icon = GFX_Heavy_Cavalry
+		icon = GFX_Фатальное_Оцепенение
 		x = 19
 		y = 6
 		cost = 2.9
@@ -672,7 +672,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_New_and_unbreakable
-		icon = GFX_New_and_unbreakable
+		icon = GFX_Фатальное_Оцепенение
 	      prerequisite = { focus = ARM_New_protective_equipment }
 	      prerequisite = { focus = ARM_Heavy_Cavalry }
 		x = 17
