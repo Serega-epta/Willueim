@@ -19,7 +19,7 @@ guiTypes = {
 # Окно специализации
    containerWindowType = {
        name = "OKNO_SPECIALIZATION" 
-	   size = { width=500 height=200  }
+	   size = { width=440 height=440  }
 	   clipping = no
 	   position = { x=464 y=4 }
 	   show_animation_type = accelerated
@@ -47,13 +47,30 @@ guiTypes = {
 # Кнопка задать специализацию
 	buttonType ={ 
            name ="BUTTON_SPECIAALIZIROVAT"
-		   position = { x=180 y=20 }
+		   position = { x=150 y=20 }
 		   quadTextureSprite = "GFX_button_148x34"
 		   buttonFont = "hoi_16mbs"
 		   format = right
 		   buttonText = "СПЕЦИАЛИЗИРОВАТЬ"		   
 		   clicksound = click_close
        } 
+	   
+	    instantTextBoxType = {
+			name ="ttfttt"
+			position = { x = 50 y = 100 }
+			font = "hoi_18mbs"
+			text = "[dddd]"
+			format = center
+			maxwidth = 350
+			maxHeight = 500
+		} 
+
+	   
+	   iconType = { # Иконка (картинка)
+           name ="kartinochka1"
+           spriteType = "GFX_desicion_reunification"
+           position = { x= 170 y = 180 }
+        }
 	   
    }
 
@@ -64,7 +81,7 @@ guiTypes = {
 # Окно гарнизонного типа
    containerWindowType = {
        name = "OKNO_GARNIZON" 
-	   size = { width=500 height=220  }
+	   size = { width=440 height=440  }
 	   clipping = no
 	   position = { x=464 y=4 }
 	   show_animation_type = accelerated
@@ -77,24 +94,23 @@ guiTypes = {
 		name = "Background"
 	    quadTextureSprite ="GFX_tiled_window_w_close"	  
 	  }
-	  
-	  instantTextBoxType = {
-			name ="GRE_fascists_attitude_status"
-			position = { x = 0 y = 100 }
-			font = "hoi_18mbs"
-			text = "Бонусы гарнизона : +50% к скорости мобилизации, Восстановление организации в регионе +20%,"
+	   instantTextBoxType = {
+			name ="78787"
+			position = { x = -100 y = 80 }
+			font = "hoi_36header"
+			text = "[garnizon]"
 			format = center
-			maxwidth = 500
-			maxHeight = 500
+			maxwidth = 480
+			maxHeight = 480
 		} 
 	instantTextBoxType = {
 			name ="GRE_fascists_attitude_status2"
-			position = { x = 0 y = 140 }
+			position = { x = 40 y = 140 }
 			font = "hoi_18mbs"
-			text = " Скорость планирования в регионе +25%, Военнообязанное население региона +15%, Снабжение для наших войск +50%."
+			text = "[garnizont]"
 			format = center
-			maxwidth = 500
-			maxHeight = 500
+			maxwidth = 200
+			maxHeight = 480
 		} 
 	  
 # Кнопка выхода из окна специализации
@@ -111,13 +127,22 @@ guiTypes = {
 # Кнопка снять специализацию
 	buttonType ={ 
            name ="BUTTON_RESPECIALIZIROVAT"
-		   position = { x=180 y=20 }
+		   position = { x=150 y=380 }
 		   quadTextureSprite = "GFX_button_148x34"
 		   buttonFont = "hoi_16mbs"
 		   format = right
 		   buttonText = "УБРАТЬ СПЕЦИАЛИЗАЦИЮ"		   
 		   clicksound = click_close
-       } 
+       }
+	   
+	   iconType = { # Иконка (картинка)
+           name ="kartinochka2"
+           spriteType = "GFX_desicion_reunification"
+           position = { x= 280 y = 80 }
+        }
+
+
+	   
 	   
    }
    
@@ -128,7 +153,7 @@ guiTypes = {
 # Окно переферийного типа
    containerWindowType = {
        name = "OKNO_PEREFERIA" 
-	   size = { width=500 height=200  }
+	   size = { width=440 height=440  }
 	   clipping = no
 	   position = { x=464 y=4 }
 	   show_animation_type = accelerated
@@ -142,13 +167,23 @@ guiTypes = {
 	    quadTextureSprite ="GFX_tiled_window_w_close"	  
 	  }
 	  
-	  instantTextBoxType = {
-			name ="GRE_fascists_attitude_status"
-			position = { x = 0 y = 100 }
-			font = "hoi_18mbs"
-			text = "Бонусы переферии : +25% к количеству построек в регионе, Дальность снабжения + 40%,  Скорость мобилизации -50%."
+	   instantTextBoxType = {
+			name ="GRE_fascists_attitu44de_status"
+			position = { x = -100 y = 80 }
+			font = "hoi_36header"
+			text = "[pereferia]"
 			format = center
 			maxwidth = 500
+		}
+	  
+	  instantTextBoxType = {
+			name ="GRE_fascists_attitude_status"
+			position = { x = 40 y = 140 }
+			font = "hoi_18mbs"
+			text = "[pereferiat]"
+			format = center
+			maxwidth = 200
+			maxHeight = 480
 		}
 	  
 	  
@@ -166,13 +201,19 @@ guiTypes = {
 # Кнопка снять специализацию
 	buttonType ={ 
            name ="BUTTON_RESPECIALIZIROVAT2"
-		   position = { x=180 y=20 }
+		   position = { x=150 y=380 }
 		   quadTextureSprite = "GFX_button_148x34"
 		   buttonFont = "hoi_16mbs"
 		   format = right
 		   buttonText = "УБРАТЬ СПЕЦИАЛИЗАЦИЮ"		   
 		   clicksound = click_close
        } 
+	   
+	   iconType = { # Иконка (картинка)
+           name ="kartinochka2"
+           spriteType = "GFX_desicion_reunification"
+           position = { x= 280 y = 80 }
+        }
 	   
    }
 
@@ -182,7 +223,7 @@ guiTypes = {
 # Окно сырьевого типа
    containerWindowType = {
        name = "OKNO_SIREVOI" 
-	   size = { width=500 height=200  }
+	   size = { width=440 height=440  }
 	   clipping = no
 	   position = { x=464 y=4 }
 	   show_animation_type = accelerated
@@ -197,22 +238,23 @@ guiTypes = {
 	  }
 	  
 	  instantTextBoxType = {
-			name ="GRE_fascists_attitude_status"
-			position = { x = 0 y = 100 }
-			font = "hoi_18mbs"
-			text = "Бонусы сырьевого : +25% к ресурсам в регионе, Припасы в регионе +30%, Скорость перемещения войск +40%, открывает решения на разработку новых ресурсов в регионе."
-			format = center
-			maxwidth = 500
-		}
-	instantTextBoxType = {
-			name ="GRE_fascists_attitude_status4"
-			position = { x = 132 y = 136 }
-			font = "hoi_18mbs"
-			text = "сов в регионе."
+			name ="GRE_fascists_attitu444de_status"
+			position = { x = -110 y = 80 }
+			font = "hoi_36header"
+			text = "[sirevoi]"
 			format = center
 			maxwidth = 500
 		}
 	  
+	  instantTextBoxType = {
+			name ="GRE_fascists_attitude_status"
+			position = { x = 40 y = 140 }
+			font = "hoi_18mbs"
+			text = "[sirevoit]"
+			format = center
+			maxwidth = 200
+			maxHeight = 480
+		}
 	  
 # Кнопка выхода из окна специализации
 	  buttonType ={ 
@@ -228,7 +270,7 @@ guiTypes = {
 # Кнопка снять специализацию
 	buttonType ={ 
            name ="BUTTON_RESPECIALIZIROVAT3"
-		   position = { x=180 y=20 }
+		   position = { x=150 y=380 }
 		   quadTextureSprite = "GFX_button_148x34"
 		   buttonFont = "hoi_16mbs"
 		   format = right
@@ -236,12 +278,18 @@ guiTypes = {
 		   clicksound = click_close
        } 
 	   
+	    iconType = { # Иконка (картинка)
+           name ="kartinochka2"
+           spriteType = "GFX_desicion_reunification"
+           position = { x= 280 y = 80 }
+        }
+	   
    }
 
 # Окно промышленного типа
    containerWindowType = {
        name = "OKNO_PROMISHLENNI" 
-	   size = { width=500 height=200  }
+	   size = { width=440 height=440  }
 	   clipping = no
 	   position = { x=464 y=4 }
 	   show_animation_type = accelerated
@@ -254,14 +302,22 @@ guiTypes = {
 		name = "Background"
 	    quadTextureSprite ="GFX_tiled_window_w_close"	  
 	  }
-	  
-	  instantTextBoxType = {
-			name ="GRE_fascists_attitude_status"
-			position = { x = 0 y = 100 }
-			font = "hoi_18mbs"
-			text = "Бонусы промышленого : +40% к скорости строительства в регионе , +30% к шансу летных происшествий, -20% к обнаружению воздушных целей"
+	   instantTextBoxType = {
+			name ="GRE_fascists_attitu444de_status"
+			position = { x = -110 y = 80 }
+			font = "hoi_36header"
+			text = "[promishleni]"
 			format = center
 			maxwidth = 500
+		}
+	  instantTextBoxType = {
+			name ="GRE_fascists_attitude_status"
+			position = { x = 40 y = 140 }
+			font = "hoi_18mbs"
+			text = "[promishlenit]"
+			format = center
+			maxwidth = 200
+			maxHeight = 480
 		}
 	  
 	  
@@ -279,13 +335,18 @@ guiTypes = {
 # Кнопка снять специализацию
 	buttonType ={ 
            name ="BUTTON_RESPECIALIZIROVAT4"
-		   position = { x=180 y=20 }
+		   position = { x=150 y=380 }
 		   quadTextureSprite = "GFX_button_148x34"
 		   buttonFont = "hoi_16mbs"
 		   format = right
 		   buttonText = "УБРАТЬ СПЕЦИАЛИЗАЦИЮ"		   
 		   clicksound = click_close
-       } 
+       }
+ iconType = { # Иконка (картинка)
+           name ="kartinochka2"
+           spriteType = "GFX_desicion_reunification"
+           position = { x= 280 y = 80 }
+        }	   
 	   
    }
  
