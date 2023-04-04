@@ -55,7 +55,47 @@ guiTypes = {
 		   clicksound = click_close
        } 
 	   
+	   
+# Описание типа реигиона до специализации	   
 	    instantTextBoxType = {
+			name ="opisanie"
+			position = { x = 50 y = 300 }
+			font = "hoi_18mbs"
+			text = "Регион гарнизонного типа"
+			format = center
+			maxwidth = 350
+			maxHeight = 500
+		} 
+		instantTextBoxType = {
+			name ="opisanie2"
+			position = { x = 50 y = 300 }
+			font = "hoi_18mbs"
+			text = "Регион переферийного типа"
+			format = center
+			maxwidth = 350
+			maxHeight = 500
+		} 
+		instantTextBoxType = {
+			name ="opisanie3"
+			position = { x = 50 y = 300 }
+			font = "hoi_18mbs"
+			text = "Регион промышленного типа"
+			format = center
+			maxwidth = 350
+			maxHeight = 500
+		} 
+		instantTextBoxType = {
+			name ="opisanie4"
+			position = { x = 50 y = 300 }
+			font = "hoi_18mbs"
+			text = "Регион сырьевого типа"
+			format = center
+			maxwidth = 350
+			maxHeight = 500
+		} 
+						
+		
+		instantTextBoxType = {
 			name ="ttfttt"
 			position = { x = 50 y = 100 }
 			font = "hoi_18mbs"

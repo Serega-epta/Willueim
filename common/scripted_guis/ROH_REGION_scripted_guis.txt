@@ -19,10 +19,50 @@ scripted_gui = {
 				is_controlled_by = ROOT
 			}
 			
+			triggers = {
+				opisanie_visible = {					
+						if = {
+						limit = { THIS = { state = 201 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+				opisanie2_visible = {					
+						if = {
+						limit = { THIS = { state = 199 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+				opisanie3_visible = {					
+						if = {
+						limit = { THIS = { state = 198 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+				opisanie4_visible = {					
+						if = {
+						limit = { THIS = { state = 500 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+			}
+			
 			effects = { 
 				BUTTON_VIHOD_click = {  				
 						clear_variable = state_specialization				
 				}
+							
 #Скрипт кнопки специализировать
 				BUTTON_SPECIAALIZIROVAT_click = {
 				
