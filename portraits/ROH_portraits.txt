@@ -16,6 +16,7 @@ default = {
 	#	
 	#	}
 	#}
+	
 
 	male = {
 		"GFX_leader_unknown"
@@ -45,3 +46,157 @@ default = {
 #		}
 #	}
 #}
+
+
+#Этот костыль существует, потому что <ВИД> = { <ИДЕОЛОГИЯ> = { <ГЕНДЕР> = { "ПОРТРЕТ" } } } не работает с армией\флотом
+
+#Радикалисты
+SFR = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+REN = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+VOU = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+TWD = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+MUC = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+BGR = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+VLC = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+CAV = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+CST = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+BIH = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+DRW = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+WOD = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+YWD = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+MOD = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+SOD = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+STW = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+GAT = { army = { male = { "GFX_portrait_ROH_generic_1" "GFX_portrait_ROH_generic_2" "GFX_portrait_ROH_generic_6" } } }
+
+######################################################
+#Гуманисты
+PLD = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+ARK = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+TAR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+ZAN = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+WPK = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+URK = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+NVC = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+SBT = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+COR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+IMP = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+NOR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+BRA = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+BAR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+PLR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+POP = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+TIP = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+LPC = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+SUM = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+SOL = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+ORL = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+ZAK = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+MAZ = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+SMK = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+#Гелертерия
+MGL = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+ODJ = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+SDI = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+OBJ = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+OBS = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+#Лесничество
+DRG = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+KSK = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+OLD = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+OZE = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+GBR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+OCH = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+HAR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+VOS = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+SWR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+DIB = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+PLC = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+#Партикуляристы
+ZLG = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+BSL = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+MIN = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+MSH = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+BLZ = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+BTC = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+MKS = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+KMN = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+URA = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+MOT = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+TTL = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+MOT = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+ECD = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+FSR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+#Свободники
+KRT = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+WEC = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+TAG = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+UFV = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+POV = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+SOC = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+SAC = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+DIS = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+NFL = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+FRE = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+KRV = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+FUD = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+DOM = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+WTR = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+#Таинства
+VOZ = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+KOC = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+HOT = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+HOH = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+LWV = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+COA = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+BAG = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+MAD = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+VDS = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+BL1 = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+KUH = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+FHS = { army = { male = { "GFX_portrait_ROH_generic_3" "GFX_portrait_ROH_generic_7" "GFX_portrait_ROH_generic_8" } } }
+
+######################################################
+#Хунта
+TTS = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+ISK = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+CHU = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+RIK = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+BRI = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+WAC = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+BRD = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+BOD = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+HAN = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+ADT = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+#Милитаристы
+LKV = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+TRO = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+BLT = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+NAR = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+SMX = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+MAP = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+BAL = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+BAI = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+BGD = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+TAB = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+AZB = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+#Технократия
+EDM = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+LUG = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+#Профессориат
+IRT = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+SI1 = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+#Государственники
+SDK = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+OKS = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+AGE = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+ASR = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+GLS = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+ARM = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+PVS = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+#Оппортунисты
+SIL = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+ODS = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+HER = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+CRI = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
+YJY = { army = { male = { "GFX_portrait_ROH_generic_4" "GFX_portrait_ROH_generic_5" "GFX_portrait_ROH_generic_9" } } }
