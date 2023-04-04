@@ -47,3 +47,51 @@ news_event = { #Бессознательное Бегство
 		}
    	}
 }
+
+news_event = { #Красные знамена
+	id = super.3
+	title = super.3.t
+	desc = super.3.d
+	picture = GFX_news_event_red_banners
+
+	is_triggered_only = yes
+
+    	option = {
+		name = super.3.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_global_flag = Dynamics_of_Life
+			set_global_flag = super_Event_Visible	
+			hidden_effect = {	
+				play_song = "Dynamics_of_Life"
+			}
+		}
+	}
+}
+
+news_event = { #Воскресший колосс
+	id = super.4
+	title = super.4.t
+	desc = super.4.d
+	picture = GFX_news_event_resurrected_colossus
+
+	is_triggered_only = yes
+
+    	option = {
+		name = super.4.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_global_flag = Stability_of_Being
+			set_global_flag = super_Event_Visible	
+			hidden_effect = {	
+				play_song = "Stability_of_Being"
+			}
+		}
+   	}
+}

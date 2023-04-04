@@ -1,7 +1,17 @@
 capital = 71
 
-oob = base #"NAR_1936"
+oob = NAR
 
+if = {
+	limit = {
+		has_start_date < 2022.01.02
+	}
+
+	declare_war_on = {
+		target = SMK
+		type = annex_everything
+	}
+}
 
 # Starting tech
 set_technology = {

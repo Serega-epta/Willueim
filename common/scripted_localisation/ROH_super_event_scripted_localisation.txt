@@ -1,4 +1,4 @@
-#Images Unconscious_Flight
+#Images 
 defined_text = {  
 	name = get_superevent
 	
@@ -13,6 +13,18 @@ defined_text = {
            		has_global_flag = Unconscious_Flight
         	}
         	localization_key = "GFX_sp_event_Unconscious_Flight"
+	}
+	text = {
+        	trigger = {
+           		has_global_flag = Dynamics_of_Life
+        	}
+        	localization_key = "GFX_sp_event_Dynamics_of_Life"
+	}
+	text = {
+        	trigger = {
+           		has_global_flag = Stability_of_Being
+        	}
+        	localization_key = "GFX_sp_event_Stability_of_Being"
 	}			
 }
 
@@ -33,6 +45,18 @@ defined_text = {
         }
         localization_key = "sp_event_Unconscious_Flight"
     }
+    text = {
+        trigger = {
+            has_global_flag = Dynamics_of_Life
+        }
+        localization_key = "sp_event_Dynamics_of_Life"
+    }
+    text = {
+        trigger = {
+            has_global_flag = Stability_of_Being
+        }
+        localization_key = "sp_event_Stability_of_Being"
+    }
 }
 defined_text = {
     name = get_super_event_remark
@@ -49,6 +73,18 @@ defined_text = {
         }
         localization_key = "sp_event_Unconscious_Flight_REMARK"
     }
+    text = { 
+        trigger = {
+            has_global_flag = Dynamics_of_Life
+        }
+        localization_key = "sp_event_Dynamics_of_Life_REMARK"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = Stability_of_Being
+        }
+        localization_key = "sp_event_Stability_of_Being_REMARK"
+    }
 }
 defined_text = {
     name = get_super_event_quote
@@ -64,5 +100,17 @@ defined_text = {
             has_global_flag = Unconscious_Flight
         }
         localization_key = "sp_event_Unconscious_Flight_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = Dynamics_of_Life
+        }
+        localization_key = "sp_event_Dynamics_of_Life_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = Stability_of_Being
+        }
+        localization_key = "sp_event_Stability_of_Being_QUOTE"
     }
 }
