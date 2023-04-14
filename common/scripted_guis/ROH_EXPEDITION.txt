@@ -1,0 +1,68 @@
+scripted_gui = { 
+    roh_expedition= {
+        context_type = decision_category
+		window_name = "roh_expedition"
+		
+		visible = {
+		       
+		}
+		available = {
+			always = yes
+		}
+		
+		triggers = { 
+				Sila_otriada_visible = {					
+						if = {
+						limit = { check_variable = { profesionalzm_oriada > 0 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+				kartinochka_visible = {					
+						if = {
+						limit = { check_variable = { profesionalzm_oriada > 0.04 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+				kartinochka2_visible = {					
+						if = {
+						limit = { check_variable = { profesionalzm_oriada > 0.49 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+				kartinochka3_visible = {					
+						if = {
+						limit = { check_variable = { profesionalzm_oriada > 0.99 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+				########## сюда добавить кучу картинок у каждой вариабл +0,5
+				prof_text_visible = {					
+						if = {
+						limit = { check_variable = { profesionalzm_oriada > 0 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+		}						
+		
+		effects = {
+		
+		
+		}		
+				
+	}
+}

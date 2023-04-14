@@ -1,0 +1,46 @@
+guiTypes = {
+	containerWindowType = {
+		name = "roh_expedition"
+                position = { x = 0 y = 0 }
+		size = { width = 100% height= 390 }		
+		iconType = {
+           name ="expedition"
+           quadTextureSprite = "GFX_expedition_fon"
+           position = { x = 0 y = -20 }
+        }
+
+		instantTextBoxType = {
+			name ="prof_text"
+			position = { x = 10 y = 150 }
+			font = "hoi_24header"
+			text = "Профессионализм Отряда:"
+			format = center
+			maxHeight = 24
+		}	
+		
+		instantTextBoxType = {
+			name ="Sila_otriada"
+			position = { x = 50 y = 300 }
+			font = "hoi_24header"
+			text = "[?profesionalzm_oriada|%C]"
+			format = center
+			maxHeight = 24
+		}
+
+		iconType = { # Иконка (картинка)
+           name ="kartinochka"
+           spriteType = "GFX_SHKALA_OPITA"
+           position = { x= 50 y = 180 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="kartinochka2"
+           spriteType = "GFX_SHKALA_OPITA2"
+           position = { x= 50 y = 180 }
+        }
+		iconType = { # Иконка (картинка)
+           name ="kartinochka3"
+           spriteType = "GFX_SHKALA_OPITA3"
+           position = { x= 50 y = 180 }
+        }
+    }
+}

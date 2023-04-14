@@ -923,6 +923,53 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = Reid.333
+	title = Reid.333.t
+	desc = Reid.333.d
+	picture = event_Ar_start
+
+	is_triggered_only = yes
+
+	option = {
+	name = Reid.333.a
+	add_to_variable = { profesionalzm_oriada = 0.05 }
+	}
+	option = {
+	name = Reid.333.b
+	add_to_variable = { profesionalzm_oriada = -0.15 }
+	# мудро придумал)))
+	if = {
+		limit = { has_country_flag = otriad_STEAL_gotov }
+		clr_country_flag = otriad_STEAL_gotov
+		}
+	else = {
+		if = {
+			limit = { has_country_flag = otriad_iskoreniteley_gotov }
+			clr_country_flag = otriad_iskoreniteley_gotov
+		}
+		else = { 
+			if = {
+				limit = { has_country_flag = otriad_zachistki_gotov }
+				clr_country_flag = otriad_zachistki_gotov
+			}
+			else = {
+			clr_country_flag = otriad_nabran
+			clr_country_flag = oriad_ekipirovan
+			clr_country_flag = otriad_obuchen		
+			}
+		}
+	}
+	}
+}
+
+
+
+
+
+
+
 # reid to ruins start
 country_event = {
 	id = Reid.15
