@@ -10,7 +10,9 @@ on_actions = {
 		#задаем переменную рубли от электричества
 			set_variable = { Rubli_ot_elekrtichestva = 0 }
 		#задаем переменную рубли от топлива
-			set_variable = { Rubli_ot_topliva = 0 }	
+			set_variable = { Rubli_ot_topliva = 0 }				
+		#задаем переменную рубли от печатного станка
+			set_variable = { Rubli_ot_pechatnogo_stanka = 200 }		
 		#задаем переменную отображающую доход
 			set_variable = { inkome_rublei = 0 }	
 			set_variable = { inkome_rublei_dlya_opisaniyaa = 0 }			
@@ -69,16 +71,19 @@ on_actions = {
 			else = {
 				add_to_variable = { Rubli_ot_nefti = 0 }
 			}		
-			#После мы прибавляем значение всех переменных в Рубли
+			#После мы прибавляем значение всех переменных в Рубли + #задаем переменную рубли от печатного станка
+			set_variable = { Rubli_ot_pechatnogo_stanka = 200 }	
+			add_to_variable = { inkome_rublei = Rubli_ot_pechatnogo_stanka }	
 			add_to_variable = { inkome_rublei = Rubli_ot_elekrtichestva }
 			add_to_variable = { inkome_rublei = Rubli_ot_uglia }
 			add_to_variable = { inkome_rublei = Rubli_ot_nefti }
-			add_to_variable = { inkome_rublei = Rubli_ot_topliva }			
+			add_to_variable = { inkome_rublei = Rubli_ot_topliva }				
 			#Затем очищаем каждую *ресурсную* переменнную что бы они не перемножались много раз 
 			clear_variable = Rubli_ot_elekrtichestva
 			clear_variable = Rubli_ot_uglia
 			clear_variable = Rubli_ot_nefti
 			clear_variable = Rubli_ot_topliva
+			
 			#если на одном из наших стейтов болше чем 0 построек типа военный завод то переменая расход рублей заводами равно 50 и умножить на количество заводов в противном случае переменная прибавляет ноль
 			if = {
 				limit = { any_controlled_state = { ROOT.num_of_military_factories  > 0 } }
