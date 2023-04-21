@@ -30,6 +30,12 @@ scripted_gui = {
         	check_variable = { country_economy > 0 }
 	}
 		
+		
+		
+		
+		
+		
+		
 	effects = {
 		left_1_click = {
 			if = {
@@ -97,6 +103,349 @@ scripted_gui = {
 	}
 
 	triggers = {
+	
+	rost1_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week1 = 11 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+	rost11_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week2 = 11 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}			
+	rost111_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week3 = 11 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}			
+	rost1111_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week4 = 11 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}				
+	rost11111_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week5 = 11 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}				
+	rost111111_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week6 = 11 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}				
+				
+				
+				
+				
+				
+	rost2_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week1 = 22 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	rost22_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week2 = 22 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	rost222_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week3 = 22 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	rost2222_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week4 = 22 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+	rost22222_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week5 = 22 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+	rost222222_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week6 = 22 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}			
+
+
+
+
+
+	rost3_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week1 = 33 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}			
+	rost33_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week2 = 33 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}			
+	rost333_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week3 = 33 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}					
+	rost3333_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week4 = 33 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	
+	rost33333_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week5 = 33 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	rost333333_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week6 = 33 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+				
+				
+		
+	padenie1_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week1 = 101 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+	padenie11_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week2 = 101 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie111_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week3 = 101 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie1111_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week4 = 101 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie11111_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week5 = 101 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie111111_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week6 = 101 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}					
+	
+	padenie2_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week1 = 202 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+	padenie22_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week2 = 202 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie222_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week3 = 202 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie2222_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week4 = 202 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie22222_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week5 = 202 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie222222_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week6 = 202 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+	
+	padenie3_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week1 = 303 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+	padenie33_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week2 = 303 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie333_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week3 = 303 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie3333_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week4 = 303 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie33333_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week5 = 303 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}	
+	padenie333333_visible = {					
+						if = {
+						limit = { check_variable = { grfic_week6 = 303 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+				}
+	
+	
 
 		picker_1_visible = {
             check_variable = { asponsorVariable = 0 }

@@ -1,0 +1,904 @@
+on_actions = {
+	on_startup = {
+		effect = {
+		#задаем переменную рубли- собственно все деньги что у нас есть 
+			set_variable = { Chernii_rubli = 0 }
+		#задаем переменную рубли от угля	
+			set_variable = { Rubli_ot_uglia = 0 }
+		#задаем переменную рубли от нефти
+			set_variable = { Rubli_ot_nefti = 0 }
+		#задаем переменную рубли от электричества
+			set_variable = { Rubli_ot_elekrtichestva = 0 }
+		#задаем переменную рубли от топлива
+			set_variable = { Rubli_ot_topliva = 0 }	
+		#задаем переменную отображающую доход
+			set_variable = { inkome_rublei = 0 }	
+			set_variable = { inkome_rublei_dlya_opisaniyaa = 0 }			
+		#задаем переменную Расход рублей
+			set_variable = { Rashod_rublei = 0 }
+			set_variable = { Rashod_rublei_dlya_opisaniyaa = 0 }		
+		#задаем переменную Расход рублей идущий от фабрик а так же переменную которая будет отображать это значение в опсании (ввиду обнуления значения в конце недельного циклас необходимо сохранить это значение в сторонней переменной)
+			set_variable = { Rashod_rublei_fabrikami = 0 }	
+			set_variable = { Rashod_rublei_fabrikami_dlya_opisaniyaa = 0 }		
+		#задаем переменную Расход рублей идущий от Военных заводов а так же переменную которая будет отображать это значение в опсании (ввиду обнуления значения в конце недельного циклас необходимо сохранить это значение в сторонней переменной)
+			set_variable = { Rashod_rublei_zavodi = 0 }		
+			set_variable = { Rashod_rublei_zavodi_dlya_opisaniyaa = 0 }		
+		#задаем переменную Расход рублей идущий от Армии а так же переменную которая будет отображать это значение в опсании (ввиду обнуления значения в конце недельного циклас необходимо сохранить это значение в сторонней переменной)
+			set_variable = { Rashod_rublei_soldatami = 0 }		
+			set_variable = { Rashod_rublei_soldatami_dlya_opisaniyaa = 0 }	
+		#задаем переменную Сальдо ( баланс - разницу между доходом и расходом) и переменую к описанию
+			set_variable = { saldo_rublei = 0 }	
+			set_variable = { saldo_rublei_dlya_opisaniyaa = 0 }					
+		#Сейчас будет очень страшно, тут гига шиза переменных графиков если вам вдруг поручили задание редактирования экономики то пишите сразу Gudleifr Invictus т.к. тут конечно ничего прям ултра жесткого просто огромная логическая цепочка и я помогу вам разобраться 
+		# но я все же дам небольшое описание тут что б оперативно разобрались	
+		# мы задаем 6 переменных на каждую неделю для шестидневного графика (дальше действyм в  on_weekly)
+		set_variable = { grfic_week1 = 0 }	
+		set_variable = { grfic_week2 = 0 }	
+		set_variable = { grfic_week3 = 0 }	
+		set_variable = { grfic_week4 = 0 }	
+		set_variable = { grfic_week5 = 0 }	
+		set_variable = { grfic_week6 = 0 }		
+		}
+	}
+	on_weekly = {
+		effect = {
+			#если на одном из наших стейтов болше чем 0 угля то переменая рубли от угля равно 2  и умножить на количество угля в противном случае переменная прибавляет ноль
+			if = {
+				limit = { any_controlled_state = { ROOT.resource@coal > 0 } }
+				add_to_variable = { Rubli_ot_uglia = 2 }
+				multiply_variable = { Rubli_ot_uglia = ROOT.resource@coal }
+				}
+			else = {
+				add_to_variable = { Rubli_ot_uglia = 0 }
+			}
+			#если на одном из наших стейтов болше чем 0 электричества то переменая рубли от электричества равно 5  и умножить на количество электричества в противном случае переменная прибавляет ноль
+			if = {
+				limit = { any_controlled_state = { ROOT.resource@energy > 0 } }
+				add_to_variable = { Rubli_ot_elekrtichestva = 5 }
+				multiply_variable = { Rubli_ot_elekrtichestva = ROOT.resource@energy }
+				}
+			else = {
+				add_to_variable = { Rubli_ot_elekrtichestva = 0 }
+			}
+			#если на одном из наших стейтов болше чем 0 нефти то переменая рубли от нефти равно 10 и умножить на количество нефти в противном случае переменная прибавляет ноль
+			if = {
+				limit = { any_controlled_state = { ROOT.resource@oil > 0 } }
+				add_to_variable = { Rubli_ot_nefti = 10 }
+				multiply_variable = { Rubli_ot_nefti = ROOT.resource@oil }
+				}
+			else = {
+				add_to_variable = { Rubli_ot_nefti = 0 }
+			}		
+			#После мы прибавляем значение всех переменных в Рубли
+			add_to_variable = { inkome_rublei = Rubli_ot_elekrtichestva }
+			add_to_variable = { inkome_rublei = Rubli_ot_uglia }
+			add_to_variable = { inkome_rublei = Rubli_ot_nefti }
+			add_to_variable = { inkome_rublei = Rubli_ot_topliva }			
+			#Затем очищаем каждую *ресурсную* переменнную что бы они не перемножались много раз 
+			clear_variable = Rubli_ot_elekrtichestva
+			clear_variable = Rubli_ot_uglia
+			clear_variable = Rubli_ot_nefti
+			clear_variable = Rubli_ot_topliva
+			#если на одном из наших стейтов болше чем 0 построек типа военный завод то переменая расход рублей заводами равно 50 и умножить на количество заводов в противном случае переменная прибавляет ноль
+			if = {
+				limit = { any_controlled_state = { ROOT.num_of_military_factories  > 0 } }
+				add_to_variable = { Rashod_rublei_zavodi = 50 }
+				multiply_variable = { Rashod_rublei_zavodi = ROOT.num_of_military_factories }
+				}
+			else = {
+				add_to_variable = { Rashod_rublei_zavodi = 0 }
+			}
+			#если на одном из наших стейтов болше чем 0 построек типа фабрика то переменая расход рублей фабриками равно 25 и умножить на количество заводов в противном случае переменная прибавляет ноль
+			if = {
+				limit = { any_controlled_state = { ROOT.num_of_civilian_factories > 0 } }
+				add_to_variable = { Rashod_rublei_fabrikami = 25 }
+				multiply_variable = { Rashod_rublei_fabrikami = ROOT.num_of_civilian_factories }
+				}
+			else = {
+				add_to_variable = { Rashod_rublei_fabrikami = 0 }
+			}		
+			#если на одном из наших стейтов болше чем 0 дивизий то переменая расход рублей солдатами равно 10 и умножить на количество дивизий в противном случае переменная прибавляет ноль
+			if = {
+				limit = { any_controlled_state = { ROOT.num_divisions > 0 } }
+				add_to_variable = { Rashod_rublei_soldatami = 10 }
+				multiply_variable = { Rashod_rublei_soldatami = ROOT.num_divisions }
+				}
+			else = {
+				add_to_variable = { Rashod_rublei_soldatami = 0 }
+			}				
+			#После мы прибавляем значение всех переменных в расход рублей а так же присваеваем переменые описания до того как обнулим их для следующего цикла и так же фиксируем недельный расход
+			set_variable = { Rashod_rublei_zavodi_dlya_opisaniyaa = Rashod_rublei_zavodi }
+			set_variable = { Rashod_rublei_fabrikami_dlya_opisaniyaa = Rashod_rublei_fabrikami }
+			set_variable = { Rashod_rublei_soldatami_dlya_opisaniyaa = Rashod_rublei_soldatami }		
+			add_to_variable = { Rashod_rublei = Rashod_rublei_zavodi }
+			add_to_variable = { Rashod_rublei = Rashod_rublei_fabrikami }
+			add_to_variable = { Rashod_rublei = Rashod_rublei_soldatami }		
+			set_variable = { Rashod_rublei_dlya_opisaniyaa = Rashod_rublei }		
+			#Фиксируем баланс добавляя к переменной значение дохода после вычитая расходы
+			add_to_variable = { saldo_rublei = inkome_rublei }
+			subtract_from_variable = { saldo_rublei = Rashod_rublei }
+			set_variable = { saldo_rublei_dlya_opisaniyaa = saldo_rublei }
+			#Фиксируем доход в казну за эту неделю и фиксируем инкам
+			add_to_variable = { Chernii_rubli = saldo_rublei }
+			set_variable = { inkome_rublei_dlya_opisaniyaa = inkome_rublei }	
+			
+			#Еженедельные действия для графика приготовьтесь)))
+			# эта конструкция из  if/else проверяет пуста ли переменая первой недели если да то записывает ее значенее и на вторую неделю записывает значение второй и т.д. и т.п.
+			#ЭТОТ ГРФИК МНОГО ГДЕ НЕПРАВИЛЬНОЙ НО ЛАДНО УЖЕ ДОДЕЛАЕМ КОГДА БУДУТ НОРМ КАРТИНКИ ДЛЯ НЕГО)))
+			if = {
+				limit = {
+					check_variable = { grfic_week1 < 10 }
+				}
+				if = {
+					limit = {
+					check_variable = { saldo_rublei > 0 }
+					}
+					set_variable = { grfic_week1 = 11 }
+				}
+				else = {
+					set_variable = { grfic_week1 = 101 }		
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						check_variable = { grfic_week2 < 10  }
+					}
+					if = {
+						limit = {
+						check_variable = { saldo_rublei > 0 }
+						}
+					set_variable = { grfic_week2 = 11 }
+					}
+					else = {
+						set_variable = { grfic_week2 = 101 }		
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							check_variable = { grfic_week3 < 10  }
+						}
+						if = {
+							limit = {
+							check_variable = { saldo_rublei > 0 }
+							}
+						set_variable = { grfic_week3 = 11 }
+						}
+						else = {
+							set_variable = { grfic_week3 = 101 }		
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								check_variable = { grfic_week4 < 10  }
+							}
+							if = {
+								limit = {
+								check_variable = { saldo_rublei > 0 }
+								}
+							set_variable = { grfic_week4 = 11 }
+							}
+							else = {
+								set_variable = { grfic_week4 = 101 }		
+							}
+						}
+						else = {
+							if = {
+								limit = {
+									check_variable = { grfic_week5 < 10  }
+								}
+								if = {
+									limit = {
+									check_variable = { saldo_rublei > 0 }
+									}
+								set_variable = { grfic_week5 = 11 }
+								}
+								else = {
+									set_variable = { grfic_week5 = 101 }		
+								}
+							}
+							else = {
+								if = {
+									limit = {
+										check_variable = { grfic_week6 < 10  }
+									}
+									if = {
+										limit = {
+										check_variable = { saldo_rublei > 0 }
+										}
+									set_variable = { grfic_week6 = 11 }
+									}
+									else = {
+										set_variable = { grfic_week6 = 101 }		
+									}
+								}
+								else = {								
+									set_variable = { grfic_week1 = grfic_week2 }	
+									set_variable = { grfic_week2 = grfic_week3 }
+									set_variable = { grfic_week3 = grfic_week4 }	
+									set_variable = { grfic_week4 = grfic_week5 }	
+									set_variable = { grfic_week5 = grfic_week6 }	
+									set_variable = { grfic_week6 = 0 }																		
+								}
+							}
+						}
+					}
+				}
+			}
+			#если первая неделя график стартует снизу в верх то вторая в зависимости от того + балан или - идет в нужном порядке и по той же анаклогии если первая неделя баланс отрицательный влюбой из точек  то вторая в зависимости от баланса соответсвено изменяется
+			if = {
+				limit = {
+					check_variable = { grfic_week1 = 11 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week2 = 11 }}
+							add_to_variable = { grfic_week2 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week2 = 101 }}
+						add_to_variable = { grfic_week2 = 0 }
+						}		
+					}
+			}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week1 = 22 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week2 = 11 }}
+							add_to_variable = { grfic_week2 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week2 = 101 }}
+						add_to_variable = { grfic_week2 = 101 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week1 = 33 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week2 = 11 }}
+							add_to_variable = { grfic_week2 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week2 = 101 }}
+						add_to_variable = { grfic_week2 = 202 }
+						}			
+					}
+				}
+				if = {
+				limit = {
+					check_variable = { grfic_week1 = 101 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week2 = 11 }}
+							add_to_variable = { grfic_week2 = 0 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week2 = 101 }}
+						add_to_variable = { grfic_week2 = 0 }
+						}		
+					}
+				}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week1 = 202 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week2 = 11 }}
+							add_to_variable = { grfic_week2 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week2 = 101 }}
+						add_to_variable = { grfic_week2 = 0 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week1 = 303 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week2 = 11 }}
+							add_to_variable = { grfic_week2 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week2 = 101 }}
+						add_to_variable = { grfic_week2 = 101 }
+						}			
+					}
+				}
+			}
+			}
+			}
+			}
+			#то же самое для второй недели
+			if = {
+				limit = {
+					check_variable = { grfic_week2 = 11 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week3 = 11 }}
+							add_to_variable = { grfic_week3 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week3 = 101 }}
+						add_to_variable = { grfic_week3 = 0 }
+						}		
+					}
+			}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week2 = 22 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week3 = 11 }}
+							add_to_variable = { grfic_week3 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week3 = 101 }}
+						add_to_variable = { grfic_week3 = 101 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week2 = 33 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week3 = 11 }}
+							add_to_variable = { grfic_week3 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week3 = 101 }}
+						add_to_variable = { grfic_week3 = 202 }
+						}			
+					}
+				}
+				if = {
+				limit = {
+					check_variable = { grfic_week2 = 101 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week3 = 11 }}
+							add_to_variable = { grfic_week3 = 0 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week3 = 101 }}
+						add_to_variable = { grfic_week3 = 0 }
+						}		
+					}
+				}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week2 = 202 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week3 = 11 }}
+							add_to_variable = { grfic_week3 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week3 = 101 }}
+						add_to_variable = { grfic_week3 = 0 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week2 = 303 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week3 = 11 }}
+							add_to_variable = { grfic_week3 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week3 = 101 }}
+						add_to_variable = { grfic_week3 = 101 }
+						}			
+					}
+				}
+			}
+			}
+			}
+			}
+			
+			#то же самое для 3 недели
+			
+			
+			if = {
+				limit = {
+					check_variable = { grfic_week3 = 11 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week4 = 11 }}
+							add_to_variable = { grfic_week4 = 0 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week4 = 101 }}
+						add_to_variable = { grfic_week4 = 0 }
+						}		
+					}
+			}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week3 = 22 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week4 = 11 }}
+							add_to_variable = { grfic_week4 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week4 = 101 }}
+						add_to_variable = { grfic_week4 = 101 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week3 = 33 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week4 = 11 }}
+							add_to_variable = { grfic_week4 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week4 = 101 }}
+						add_to_variable = { grfic_week4 = 202 }
+						}			
+					}
+				}
+				if = {
+				limit = {
+					check_variable = { grfic_week3 = 101 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week4 = 11 }}
+							add_to_variable = { grfic_week4 = 0 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week4 = 101 }}
+						add_to_variable = { grfic_week4 = 0 }
+						}		
+					}
+				}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week3 = 202 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week4 = 11 }}
+							add_to_variable = { grfic_week4 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week4 = 101 }}
+						add_to_variable = { grfic_week4 = 0 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week3 = 303 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week4 = 11 }}
+							add_to_variable = { grfic_week4 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week4 = 101 }}
+						add_to_variable = { grfic_week4 = 101 }
+						}			
+					}
+				}
+			}
+			}
+			}
+			}
+
+			
+			#то же самое для 4 недели
+			
+			
+			if = {
+				limit = {
+					check_variable = { grfic_week4 = 11 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week5 = 11 }}
+							add_to_variable = { grfic_week5 = 0 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week5 = 101 }}
+						add_to_variable = { grfic_week5 = 0 }
+						}		
+					}
+			}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week4 = 22 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week5 = 11 }}
+							add_to_variable = { grfic_week5 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week5 = 101 }}
+						add_to_variable = { grfic_week5 = 101 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week4 = 33 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week5 = 11 }}
+							add_to_variable = { grfic_week5 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week5 = 101 }}
+						add_to_variable = { grfic_week5 = 202 }
+						}			
+					}
+				}
+				if = {
+				limit = {
+					check_variable = { grfic_week4 = 101 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week5 = 11 }}
+							add_to_variable = { grfic_week5 = 0 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week5 = 101 }}
+						add_to_variable = { grfic_week5 = 0 }
+						}		
+					}
+				}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week4 = 202 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week5 = 11 }}
+							add_to_variable = { grfic_week5 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week5 = 101 }}
+						add_to_variable = { grfic_week5 = 0 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week4 = 303 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week5 = 11 }}
+							add_to_variable = { grfic_week5 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week5 = 101 }}
+						add_to_variable = { grfic_week5 = 101 }
+						}			
+					}
+				}
+			}
+			}
+			}
+			}
+			
+			
+			
+			#то же самое для 5 недели
+			
+			
+			if = {
+				limit = {
+					check_variable = { grfic_week5 = 11 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week6 = 11 }}
+							add_to_variable = { grfic_week6 = 0 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week6 = 101 }}
+						add_to_variable = { grfic_week6 = 0 }
+						}		
+					}
+			}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week5 = 22 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week6 = 11 }}
+							add_to_variable = { grfic_week6 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week6 = 101 }}
+						add_to_variable = { grfic_week6 = 101 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week5 = 33 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week6 = 11 }}
+							add_to_variable = { grfic_week6 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week6 = 101 }}
+						add_to_variable = { grfic_week6 = 202 }
+						}			
+					}
+				}
+				if = {
+				limit = {
+					check_variable = { grfic_week5 = 101 }
+				}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week6 = 11 }}
+							add_to_variable = { grfic_week6 = 0 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week6 = 101 }}
+						add_to_variable = { grfic_week6 = 0 }
+						}		
+					}
+				}
+			else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week5 = 202 }
+						}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week6 = 11 }}
+							add_to_variable = { grfic_week6 = 11 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week6 = 101 }}
+						add_to_variable = { grfic_week6 = 0 }
+						}		
+					}
+				}
+				else = {
+				if = {
+				limit = {
+					check_variable = { grfic_week5 = 303 }
+					}
+					if = {
+						limit = {
+							check_variable = { saldo_rublei > 0 }
+						}
+						if = {
+							limit = { check_variable = { grfic_week6 = 11 }}
+							add_to_variable = { grfic_week6 = 22 }
+						}
+					}
+					else = {	
+						if = {
+						limit = { check_variable = { grfic_week6 = 101 }}
+						add_to_variable = { grfic_week6 = 101 }
+						}			
+					}
+				}
+			}
+			}
+			}
+			}
+			#Затем очищаем каждую *расходную* переменнную что бы они не перемножались много раз и так же очищаем сальдо расход и доход
+			clear_variable = Rashod_rublei_zavodi
+			clear_variable = Rashod_rublei_fabrikami
+			clear_variable = Rashod_rublei_soldatami
+			clear_variable = Rashod_rublei
+			clear_variable = saldo_rublei
+			clear_variable = inkome_rublei	
+			if = {
+				limit = { check_variable = { Chernii_rubli < -1000 } }
+				add_ideas = { defolt_economiki }
+			}
+			if = {
+				limit = { check_variable = { Chernii_rubli < -10000 } }
+				add_ideas = { bankrotstvo_economiki }
+			}	
+		}
+	}
+} 
