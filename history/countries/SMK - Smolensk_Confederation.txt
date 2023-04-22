@@ -2,6 +2,9 @@ capital = 242
 
 oob = SMK
 
+add_ideas = {
+	torgovlya
+}
 
 # Starting tech
 set_technology = {
@@ -122,48 +125,11 @@ set_popularities = {
 	gumanists = 100
 }
 
- 
-
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_KOMUNISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Komunistov.dds"
-    ideology = militarists_1
-    traits = {
-        #
-    }
-}
+recruit_character = SMK_aleksandr_laznovsky
 
 create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_FASHISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Fashistov.dds"
-    expire = "2017.1.1"
-    ideology = fascism_ideology
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_NEYTRALOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Neytralov.dds"
-    expire = "2017.1.1"
-    ideology = despotism
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_DEMOKRATOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Demokratov.dds"
-    expire = "2017.1.1"
-    ideology = conservatism
-    traits = {
-        #
-    }
-}
+	name = SMK_aleksandr_laznovsky
+	picture = "gfx/leaders/SMK/aleksandr_laznovsky.dds"
+	ideology = gumanists_1
+	expire = "1965.1.1.1"
+	desc = SMK_aleksandr_laznovsky_desc

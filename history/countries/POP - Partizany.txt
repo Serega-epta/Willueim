@@ -2,6 +2,9 @@ capital = 839
 
 oob = base #"BRA_1936"
 
+add_ideas = {
+	terror
+}
 
 # Starting tech
 set_technology = {
@@ -151,6 +154,16 @@ create_country_leader = {
     desc = "POLITICS_PEPE_NEYTRALOV_DESC"
     picture = "gfx/leaders/DNN/Portrait_Pepe_Neytralov.dds"
     ideology = sacraments
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "egor_alifenko"
+    desc = "egor_alifenko_desc"
+    picture = "gfx/leaders/POP/POP_egor_alifenko.dds"
+    ideology = gumanists_1
     traits = {
         #
     }

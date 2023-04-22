@@ -1,9 +1,10 @@
 capital = 839
 
-oob = base #"ODS_1936"
+
+oob = "HAN"
 
 add_ideas = {
-	EEEGOSPOD
+	ZHELEZO
 }
 
 # Starting tech
@@ -117,53 +118,20 @@ set_national_unity = 0.7
 }
 
 set_politics = {
-	ruling_party = bandits
+	ruling_party = militarists 
 	elections_allowed = no
 }
 
 set_popularities = {
-	bandits = 100
-}
- 
-
-create_country_leader = {
-    name = "CST_vit"
-    desc = "CST_vit_desc"
-    picture = "gfx/leaders/CST/CST_vit.dds"
-    ideology = bandits_1
-    traits = {
-        #
-    }
+	juntas = 0
+	militarists = 100
 }
 
 create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_FASHISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Fashistov.dds"
-    expire = "2017.1.1"
-    ideology = fascism_ideology
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_NEYTRALOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Neytralov.dds"
-    expire = "2017.1.1"
-    ideology = despotism
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_DEMOKRATOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Demokratov.dds"
-    expire = "2017.1.1"
-    ideology = conservatism
+    name = "HAR_paramonov"
+    desc = "HAR_paramonov_desc"
+    picture = "gfx/leaders/HAR/HAR_paramonov.dds"
+    ideology = militarists_1
     traits = {
         #
     }
