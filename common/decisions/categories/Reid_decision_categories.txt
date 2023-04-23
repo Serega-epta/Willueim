@@ -10,7 +10,10 @@ allowed = {
 	}
 	
 	visible = {
-			has_war = no
+		has_war = no
+		NOT = {
+			tag = MOS
+		}
 	}
 }
 
@@ -26,6 +29,8 @@ allowed = {
 	}
 	scripted_gui = roh_expedition
 	visible = {
-			always = yes
+		NOT = {
+			tag = MOS
+		}
 	}
 }
