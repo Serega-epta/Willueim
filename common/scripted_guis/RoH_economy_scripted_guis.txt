@@ -12,10 +12,11 @@ scripted_gui = {
 			economy_button_click = {
 				if = {
 					limit = { NOT = { has_variable = country_economy } }
-					set_variable = { country_economy = 1 }
+					set_variable = { country_economy = 1 }					
 				}
 				else = {
 					clear_variable = country_economy
+					clear_variable = macro_economyy
 				}
 			}
 		}
@@ -37,6 +38,26 @@ scripted_gui = {
 		
 		
 	effects = {
+	
+		macro_econoy_buttom_click = {
+				if = {
+					limit = { NOT = { has_variable = macro_economyy } }
+					set_variable = { macro_economyy = 1 }
+				}
+				else = {
+					clear_variable = macro_economyy
+				}
+			}
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	
 		left_1_click = {
 			if = {
 				limit = { OR = { has_political_power > 25 has_political_power = 25 } check_variable = { asponsorVariable > -10 } }
@@ -588,3 +609,311 @@ scripted_gui = {
         }
 	}	
 } 
+
+MACRO_ECONOMY = {
+    	context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "MACRO_ECONOMY"
+
+		visible = {
+		 	check_variable = { macro_economyy > 0 }
+		}
+		
+		
+		
+		effects = {	
+			porca_money_click = {
+				add_to_variable = { corruption = 5 }
+				add_to_variable = { Chernii_rubli = corruptionavard }
+				add_stability = -0.01
+			}
+			porca_money_fix_corruption_click = {
+				if = {
+					check_variable = { corruption > 0 }
+					add_political_power = -100
+					add_stability = 0.01
+					subtract_from_variable = { Chernii_rubli = corruptionavard }
+					add_to_variable = { corruption = -5 }
+				}
+				else = {
+					
+				}
+			}				
+			printer_on_click = {
+					set_variable = { printer_on = 1 }
+			}			
+			printer_off_click = {
+					set_variable = { printer_on = 0 }
+			}			
+			war_taxes_on_click = {
+					set_variable = { war_taks = 1 }		
+			}			
+			war_taxes_off_click = {
+				set_variable = { war_taks = 0 }		
+			}			
+			inflation_fight_on_click = {
+					set_variable = { inflation_fightg = 1 }				
+			}
+			inflation_fight_off_click = {
+					set_variable = { inflation_fightg = 0 }								
+			}
+
+			
+			nalogi_app_click = {
+			if = {
+				limit = { check_variable = { first_clik = 0 } }
+				set_variable = { first_clik = 1 }	
+				add_to_variable = { podohodninalogbonus = 0.2 }	
+			}
+			
+			add_to_variable = { podohodninalogbonus = 0.1 }				
+			}
+			
+			nalogi_dovn_click = {
+			add_to_variable = { podohodninalogbonus = -0.1 }				
+			}
+			
+			
+		}
+		
+		triggers = {
+		
+				
+		inflation_fight_on_visible = {
+			if = {
+				limit = {  check_variable = { inflation_fightg = 0 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+		}		
+		inflation_fight_off_visible = {
+			if = {
+				limit = {  check_variable = { inflation_fightg = 1 } }
+					always = yes
+			}
+			else = {
+			always = no
+			}  
+        }
+		
+		
+		procvetanie0_visible= {
+			if = {
+				limit = {  check_variable = { prosvetanie1 = 0 } }	
+				always = yes
+			}
+			else = {
+			always = no
+			}  
+		}
+		procvetanie1_visible= {
+		if = {
+		limit = {  check_variable = { prosvetanie1 = 1 } }
+		always = yes
+		}
+		else = {
+		always = no
+		}
+			if = {
+				limit = {  check_variable = { corruption < 10 } }
+				if = {
+					limit = { check_variable = { inflation < 10 } }
+						if = {
+							limit = { check_variable = { finaly > 5 } }
+								set_variable = { prosvetanie1 = 1 }
+								always = yes
+						}
+						else = {
+							always = no
+						} 			
+				}
+				else = {
+				always = no
+				}
+			}
+			else = {
+			always = no
+			}			
+		}
+		
+		
+		
+		printer_on_visible = {
+			if = {
+				limit = {  check_variable = { printer_on = 0 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+		}		
+		printer_off_visible = {
+			if = {
+				limit = {  check_variable = { printer_on = 1 } }
+					always = yes
+			}
+			else = {
+			always = no
+			}  
+        }
+		
+		
+		war_taxes_on_visible = {
+			if = {
+				limit = {  check_variable = { war_taks = 0 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+		}		
+		war_taxes_off_visible = {
+			if = {
+				limit = {  check_variable = { war_taks = 1 } }
+					always = yes
+			}
+			else = {
+			always = no
+			}  
+        }
+		
+		
+		
+		
+		
+		corruption20_visible = {
+			if = {
+				limit = {  check_variable = { corruption > 20 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		corruption40_visible = {
+			if = {
+				limit = {  check_variable = { corruption > 40 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		corruption60_visible = {
+			if = {
+				limit = {  check_variable = { corruption > 60 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		corruption80_visible = {
+			if = {
+				limit = {  check_variable = { corruption > 80 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		corruption100_visible = {
+			if = {
+				limit = {  check_variable = { corruption > 100 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		corruption101_visible = {
+			if = {
+				limit = {  check_variable = { corruption > 101 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		
+		
+		inflation20_visible = {
+			if = {
+				limit = {  check_variable = { inflation > 20 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		inflation40_visible = {
+			if = {
+				limit = {  check_variable = { inflation > 40 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		inflation60_visible = {
+			if = {
+				limit = {  check_variable = { inflation > 60 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		inflation80_visible = {
+			if = {
+				limit = {  check_variable = { inflation > 80 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		inflation100_visible = {
+			if = {
+				limit = {  check_variable = { inflation > 100 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		inflation101_visible = {
+			if = {
+				limit = {  check_variable = { inflation > 101 } }
+					always = yes
+			}
+			else = {
+				always = no
+			}  
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+    	}
+}

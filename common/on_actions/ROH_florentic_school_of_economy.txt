@@ -30,7 +30,35 @@ on_actions = {
 			set_variable = { Rashod_rublei_soldatami_dlya_opisaniyaa = 0 }	
 		#задаем переменную Сальдо ( баланс - разницу между доходом и расходом) и переменую к описанию
 			set_variable = { saldo_rublei = 0 }	
-			set_variable = { saldo_rublei_dlya_opisaniyaa = 0 }					
+			set_variable = { saldo_rublei_dlya_opisaniyaa = 0 }		
+
+
+
+		#задаем переменную корупции а так же переменую которая хранит значение дохода умножить на 12
+			set_variable = { corruption = 0 }	
+			set_variable = { corruptionavard = 0 }	
+		#задаем переменную инфляции	
+			set_variable = { inflation = 0 }	
+		#задаем переменную бонус от военного налога	
+			set_variable = { war_tax_baff = 0 }	
+		#задаем переменную процветания	
+			set_variable = { procvetanie = 0 }	
+		#задаем переменную наологов и переменую для описания и обратного перемножения от призыва и налогоплательшиков(военнообязанных)
+			set_variable = { nalogi = 0 }	
+			set_variable = { nalogidlyaopisania = 0 }	
+			set_variable = { priziv = 0 }	
+			set_variable = { nalogoplatelshiki = 0 }	
+		#мноожитель налогов
+			set_variable = { podohodninalog = 1 }
+			set_variable = { podohodninalogbonus = 0 }
+			set_variable = { podohodninalogopsanie = 1 }	
+		#ПРОЦВЕТАНИЕ
+			set_variable = { prosvetanie1 = 0 }	
+
+
+
+
+			
 		#Сейчас будет очень страшно, тут гига шиза переменных графиков если вам вдруг поручили задание редактирования экономики то пишите сразу Gudleifr Invictus т.к. тут конечно ничего прям ултра жесткого просто огромная логическая цепочка и я помогу вам разобраться 
 		# но я все же дам небольшое описание тут что б оперативно разобрались	
 		# мы задаем 6 переменных на каждую неделю для шестидневного графика (дальше действyм в  on_weekly)
@@ -39,11 +67,13 @@ on_actions = {
 		set_variable = { grfic_week3 = 0 }	
 		set_variable = { grfic_week4 = 0 }	
 		set_variable = { grfic_week5 = 0 }	
-		set_variable = { grfic_week6 = 0 }		
+		set_variable = { grfic_week6 = 0 }	
+		set_variable = { finaly = 0 }	
 		}
 	}
 	on_weekly = {
 		effect = {
+
 			#если на одном из наших стейтов болше чем 0 угля то переменая рубли от угля равно 2  и умножить на количество угля в противном случае переменная прибавляет ноль
 			if = {
 				limit = { any_controlled_state = { ROOT.resource@coal > 0 } }
@@ -70,19 +100,116 @@ on_actions = {
 				}
 			else = {
 				add_to_variable = { Rubli_ot_nefti = 0 }
-			}		
+			}
+			
+			#если на одном из наших стейтов болше чем 0 людей то переменая рубли от налогов равно 1 и умножить на количество людей в противном случае переменная прибавляет ноль    дальше проверяем призыв и домножаем до количества населения после пемемнажаем %налога
+
+			if = {
+				limit = { any_controlled_state = { ROOT.has_manpower  > 0 } }
+				add_to_variable = { nalogi = 1 }
+				multiply_variable = { nalogi = ROOT.has_manpower   }
+				}
+			else = {
+				add_to_variable = { nalogi = 0 }
+			}				
+				if = {
+					limit =  {  ROOT.conscription_ratio < 0.15 } 
+					set_variable = { priziv = 0.67  }
+				}
+				else =  {
+				if = {
+					limit =  {  ROOT.conscription_ratio < 0.1 } 
+					set_variable = { priziv = 1  }
+				}
+				else = {
+				if = {
+					limit =  {  ROOT.conscription_ratio < 5 } 
+					set_variable = { priziv = 0.20  }
+				}
+				else = {
+				if = {
+					limit =  {  ROOT.conscription_ratio < 0.10 } 
+					set_variable = { priziv = 0.10  }
+				}
+				else = {
+				if = {
+					limit =  {  ROOT.conscription_ratio < 0.20 } 
+					set_variable = { priziv = 0.05  }
+				}
+				else = {
+				if = {
+					limit =  {  ROOT.conscription_ratio < 0.25 } 
+					set_variable = { priziv = 0.4  }
+				}
+				}
+				}
+				}
+				}				
+				}		
+				set_variable = { podohodninalog = 0.1 }	
+				if = {
+					limit = { check_variable = { podohodninalogbonus > 0 }}
+					set_variable = { podohodninalog = podohodninalogbonus }	
+				}
+				
+				
+				
+				set_variable = { podohodninalogopsanie = podohodninalog }	
+							
+				add_to_variable = { nalogoplatelshiki = 0.01 }					
+				multiply_variable  = { nalogi = priziv }
+				multiply_variable = { nalogoplatelshiki = podohodninalog }	
+				multiply_variable = { nalogi = nalogoplatelshiki }					
+					
+
 			#После мы прибавляем значение всех переменных в Рубли + #задаем переменную рубли от печатного станка
-			set_variable = { Rubli_ot_pechatnogo_stanka = 200 }	
-			add_to_variable = { inkome_rublei = Rubli_ot_pechatnogo_stanka }	
+			#set_variable = { Rubli_ot_pechatnogo_stanka = 200 }	
+			#add_to_variable = { inkome_rublei = Rubli_ot_pechatnogo_stanka }	
 			add_to_variable = { inkome_rublei = Rubli_ot_elekrtichestva }
 			add_to_variable = { inkome_rublei = Rubli_ot_uglia }
+			add_to_variable = { inkome_rublei = nalogi }
+			set_variable = { nalogidlyaopisania = nalogi }
 			add_to_variable = { inkome_rublei = Rubli_ot_nefti }
-			add_to_variable = { inkome_rublei = Rubli_ot_topliva }				
+			add_to_variable = { inkome_rublei = Rubli_ot_topliva }	
+
+			#Процветание
+			if = {
+				limit = { check_variable = { prosvetanie1 = 1 } }
+			
+					multiply_variable = { inkome_rublei = 1.2 }		
+					add_stability = 0.01
+					add_war_support = 0.01
+			}
+			#печтаный станок
+			if = {
+				limit = { check_variable = { printer_on > 0 } }
+					add_to_variable = { inflation = 5 }
+					multiply_variable = { inkome_rublei = 1.5 }		
+					add_stability = -0.01	
+			}
+			#борьба с инфляцией
+			if = {
+				limit = { check_variable = { inflation_fightg > 0 } }
+					add_to_variable = { inflation = -5 }
+					multiply_variable = { inkome_rublei = 0.5 }		
+					add_stability = 0.01	
+			}
+			
+			
+			
+			
 			#Затем очищаем каждую *ресурсную* переменнную что бы они не перемножались много раз 
-			clear_variable = Rubli_ot_elekrtichestva
+			clear_variable = Rubli_ot_elekrtichestva			
+			clear_variable = nalogoplatelshiki
+			clear_variable = priziv		
 			clear_variable = Rubli_ot_uglia
 			clear_variable = Rubli_ot_nefti
+			clear_variable = nalogi
 			clear_variable = Rubli_ot_topliva
+			
+			
+			
+			
 			
 			#если на одном из наших стейтов болше чем 0 построек типа военный завод то переменая расход рублей заводами равно 50 и умножить на количество заводов в противном случае переменная прибавляет ноль
 			if = {
@@ -110,7 +237,17 @@ on_actions = {
 				}
 			else = {
 				add_to_variable = { Rashod_rublei_soldatami = 0 }
-			}				
+			}
+			#если включен военный налог то солдаты дешевле вдвое
+			if = {
+					limit = { check_variable = { war_taks = 1 }}
+					multiply_variable = { Rashod_rublei_soldatami = 0.5 }
+					add_stability = -0.01
+				}
+			
+
+
+			
 			#После мы прибавляем значение всех переменных в расход рублей а так же присваеваем переменые описания до того как обнулим их для следующего цикла и так же фиксируем недельный расход
 			set_variable = { Rashod_rublei_zavodi_dlya_opisaniyaa = Rashod_rublei_zavodi }
 			set_variable = { Rashod_rublei_fabrikami_dlya_opisaniyaa = Rashod_rublei_fabrikami }
@@ -123,10 +260,11 @@ on_actions = {
 			add_to_variable = { saldo_rublei = inkome_rublei }
 			subtract_from_variable = { saldo_rublei = Rashod_rublei }
 			set_variable = { saldo_rublei_dlya_opisaniyaa = saldo_rublei }
-			#Фиксируем доход в казну за эту неделю и фиксируем инкам
+			#Фиксируем доход в казну за эту неделю и фиксируем инкам                      А так же фиксируем корупуионный бонус и т.д.
 			add_to_variable = { Chernii_rubli = saldo_rublei }
 			set_variable = { inkome_rublei_dlya_opisaniyaa = inkome_rublei }	
-			
+			set_variable = { corruptionavard = inkome_rublei }	
+			multiply_variable = { corruptionavard = 12 }
 			#Еженедельные действия для графика приготовьтесь)))
 			# эта конструкция из  if/else проверяет пуста ли переменая первой недели если да то записывает ее значенее и на вторую неделю записывает значение второй и т.д. и т.п.
 			#ЭТОТ ГРФИК МНОГО ГДЕ НЕПРАВИЛЬНОЙ НО ЛАДНО УЖЕ ДОДЕЛАЕМ КОГДА БУДУТ НОРМ КАРТИНКИ ДЛЯ НЕГО)))
@@ -903,7 +1041,45 @@ on_actions = {
 			if = {
 				limit = { check_variable = { Chernii_rubli < -10000 } }
 				add_ideas = { bankrotstvo_economiki }
+			}
+			#ПРОЦВЕТАНИЕ
+			if = {
+				limit = { check_variable = { grfic_week1 < 100 } }
+				add_to_variable = { finaly = 1 }
+			}
+			if = {
+				limit = { check_variable = { grfic_week2 < 100 } }
+				add_to_variable = { finaly = 1 }
+			}
+			if = {
+				limit = { check_variable = { grfic_week3 < 100 } }
+				add_to_variable = { finaly = 1 }
+			}
+			if = {
+				limit = { check_variable = { grfic_week4 < 100 } }
+				add_to_variable = { finaly = 1 }
+			}
+			if = {
+				limit = { check_variable = { grfic_week5 < 100 } }
+				add_to_variable = { finaly = 1 }
+			}
+			if = {
+				limit = { check_variable = { grfic_week6 < 100 } }
+				add_to_variable = { finaly = 1 }
 			}	
+			
+			
+			
+					
+		
+		if = {
+		limit = { is_ai = yes }
+		add_to_variable = { Chernii_rubli = 10000 }
+		}
+		
+		
+		
+			
 		}
 	}
 } 

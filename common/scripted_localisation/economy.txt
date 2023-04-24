@@ -41,6 +41,40 @@ defined_text = {
 	}
 }
 
+
+defined_text = { 
+	name = coruptiion_effect
+	text = {
+		trigger = {
+			check_variable = { corruption > 0 }
+		}
+		localization_key = "[?corruption|0§G]"
+	}
+	text = {
+		trigger = {
+			check_variable = { corruption = 0 } 
+		}
+		localization_key = "[?corruption|0§Y]"
+	}
+	text = {
+		trigger = {
+			check_variable = { corruption < 0 }
+		}
+		localization_key = "[?corruption|0§R]"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
 ##### Дальше - пиздец #####
 
 defined_text = { 
