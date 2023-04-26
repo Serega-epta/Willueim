@@ -40,6 +40,29 @@ defined_text = {
 		localization_key = "[?asponsorVariable|0§R]"
 	}
 }
+defined_text = { 
+	name = msponsor_text
+	text = {
+		trigger = {
+			check_variable = { msponsorVariable > 0 }
+		}
+		localization_key = "[?msponsorVariable|0§G]"
+	}
+	text = {
+		trigger = {
+			check_variable = { msponsorVariable = 0 } 
+		}
+		localization_key = "[?msponsorVariable|0§Y]"
+	}
+	text = {
+		trigger = {
+			check_variable = { msponsorVariable < 0 }
+		}
+		localization_key = "[?msponsorVariable|0§R]"
+	}
+}
+
+
 
 
 defined_text = { 

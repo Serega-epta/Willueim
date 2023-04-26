@@ -32,7 +32,16 @@ on_actions = {
 			set_variable = { saldo_rublei = 0 }	
 			set_variable = { saldo_rublei_dlya_opisaniyaa = 0 }		
 
-
+		# ПЕременные для спонсирований
+			set_variable = { spons_civil = 0 }	
+			set_variable = { spons_civil_opisanie = 0 }	
+			set_variable = { s_c = 0 }	
+			set_variable = { spons_vpk = 0 }
+			set_variable = { spons_vpk_opisanie = 0 }
+			set_variable = { s_v = 0 }
+			set_variable = { spons_army = 0 }	
+			set_variable = { spons_army_opisanie = 0 }	
+			set_variable = { s_a = 0 }	
 
 		#задаем переменную корупции а так же переменую которая хранит значение дохода умножить на 12
 			set_variable = { corruption = 0 }	
@@ -73,6 +82,273 @@ on_actions = {
 	}
 	on_weekly = {
 		effect = {
+		
+		#проверяем назначено ли какое либо их спонсирований и присваиваем переменной ссоотеветсвующие значаение что б потом посчитать 10% от дохода для каждой
+		# VPK
+		if = {
+		limit = {check_variable = { asponsorVariable = 1 } }
+		set_variable = { spons_vpk = 0.1 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 2 } }
+		set_variable = { spons_vpk = 0.2 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 3 } }
+		set_variable = { spons_vpk = 0.3 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 4 } }
+		set_variable = { spons_vpk = 0.4 }
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 5 } }
+		set_variable = { spons_vpk = 0.5 }		
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 6 } }
+		set_variable = { spons_vpk = 0.6 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 7 } }
+		set_variable = { spons_vpk = 0.7 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 8 } }
+		set_variable = { spons_vpk = 0.8 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 9 } }
+		set_variable = { spons_vpk = 0.9 }
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 10 } }
+		set_variable = { spons_vpk = 1 }		
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -1 } }
+		set_variable = { spons_vpk = 0.1 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -2 } }
+		set_variable = { spons_vpk = 0.2 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -3 } }
+		set_variable = { spons_vpk = 0.3 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -4 } }
+		set_variable = { spons_vpk = 0.4 }
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -5 } }
+		set_variable = { spons_vpk = 0.5 }		
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -6 } }
+		set_variable = { spons_vpk = 0.6 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -7 } }
+		set_variable = { spons_vpk = 0.7 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -8 } }
+		set_variable = { spons_vpk = 0.8 }	
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -9 } }
+		set_variable = { spons_vpk = 0.9 }
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = -10 } }
+		set_variable = { spons_vpk = 1 }		
+		}
+		# civilians
+		if = {
+		limit = {check_variable = { csponsorVariable = 1 } }
+		set_variable = { spons_civil = 0.1 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 2 } }
+		set_variable = { spons_civil = 0.2 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 3 } }
+		set_variable = { spons_civil = 0.3 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 4 } }
+		set_variable = { spons_civil = 0.4 }
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 5 } }
+		set_variable = { spons_civil = 0.5 }		
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 6 } }
+		set_variable = { spons_civil = 0.6 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 7 } }
+		set_variable = { spons_civil = 0.7 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 8 } }
+		set_variable = { spons_civil = 0.8 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 9 } }
+		set_variable = { spons_civil = 0.9 }
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 10 } }
+		set_variable = { spons_civil = 1 }		
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -1 } }
+		set_variable = { spons_civil = 0.1 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -2 } }
+		set_variable = { spons_civil = 0.2 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -3 } }
+		set_variable = { spons_civil = 0.3 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -4 } }
+		set_variable = { spons_civil = 0.4 }
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -5 } }
+		set_variable = { spons_civil = 0.5 }		
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -6 } }
+		set_variable = { spons_civil = 0.6 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -7 } }
+		set_variable = { spons_civil = 0.7 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -8 } }
+		set_variable = { spons_civil = 0.8 }	
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -9 } }
+		set_variable = { spons_civil = 0.9 }
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = -10 } }
+		set_variable = { spons_civil = 1 }		
+		}		
+		# army		
+		if = {
+		limit = {check_variable = { msponsorVariable = 1 } }
+		set_variable = { spons_army = 0.1 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 2 } }
+		set_variable = { spons_army = 0.2 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 3 } }
+		set_variable = { spons_army = 0.3 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 4 } }
+		set_variable = { spons_army = 0.4 }
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 5 } }
+		set_variable = { spons_army = 0.5 }		
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 6 } }
+		set_variable = { spons_army = 0.6 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 7 } }
+		set_variable = { spons_army = 0.7 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 8 } }
+		set_variable = { spons_army = 0.8 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 9 } }
+		set_variable = { spons_army = 0.9 }
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = 10 } }
+		set_variable = { spons_army = 1 }		
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -1 } }
+		set_variable = { spons_army = 0.1 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -2 } }
+		set_variable = { spons_army = 0.2 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -3 } }
+		set_variable = { spons_army = 0.3 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -4 } }
+		set_variable = { spons_army = 0.4 }
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -5 } }
+		set_variable = { spons_army = 0.5 }		
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -6 } }
+		set_variable = { spons_army = 0.6 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -7 } }
+		set_variable = { spons_army = 0.7 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -8 } }
+		set_variable = { spons_army = 0.8 }	
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -9 } }
+		set_variable = { spons_army = 0.9 }
+		}
+		if = {
+		limit = {check_variable = { msponsorVariable = -10 } }
+		set_variable = { spons_army = 1 }		
+		}
+		
+		
+		
+		
+		if = {
+		limit = {check_variable = { msponsorVariable = 0 } }
+		set_variable = { spons_army = 0 }		
+		}
+		if = {
+		limit = {check_variable = { csponsorVariable = 0 } }
+		set_variable = { spons_civil = 0 }		
+		}
+		if = {
+		limit = {check_variable = { asponsorVariable = 0 } }
+		set_variable = { spons_vpk = 0 }		
+		}
+
+
+
+
+
+
 
 			#если на одном из наших стейтов болше чем 0 угля то переменая рубли от угля равно 2  и умножить на количество угля в противном случае переменная прибавляет ноль
 			if = {
@@ -162,7 +438,7 @@ on_actions = {
 				multiply_variable = { nalogi = nalogoplatelshiki }					
 					
 
-			#После мы прибавляем значение всех переменных в Рубли + #задаем переменную рубли от печатного станка
+			#После мы прибавляем значение всех переменных в Рубли + #задаем переменную рубли от печатного станка 77777 от налогов и еще спонсмиорования и т.д
 			#set_variable = { Rubli_ot_pechatnogo_stanka = 200 }	
 			#add_to_variable = { inkome_rublei = Rubli_ot_pechatnogo_stanka }	
 			add_to_variable = { inkome_rublei = Rubli_ot_elekrtichestva }
@@ -196,7 +472,70 @@ on_actions = {
 			}
 			
 			
-			
+			#Если спонсирование одной из отраслей чему то равно то доход перемножается на это заранее определенное значение и после добавляется к основному доходу и течет далаше					
+			if = {
+				limit = { check_variable = { spons_army > 0 } }
+					set_variable = { s_a = inkome_rublei }	
+					multiply_variable = { s_a = spons_army }
+					if = {
+						limit = {check_variable = { msponsorVariable < 0 } }
+					add_to_variable = { inkome_rublei = s_a }	
+					}
+					else = {
+					subtract_from_variable = { inkome_rublei = s_a }
+					}
+			}
+			if = {
+				limit = { check_variable = { spons_civil > 0 } }
+					set_variable = { s_c = inkome_rublei }	
+					multiply_variable = { s_c = spons_civil }
+					if = {
+						limit = {check_variable = { csponsorVariable < 0 } }
+					add_to_variable = { inkome_rublei = s_c }	
+					}
+					else = {
+					subtract_from_variable = { inkome_rublei = s_c }
+					}					
+			}
+			if = {
+				limit = { check_variable = { spons_vpk > 0 } }
+					set_variable = { s_v = inkome_rublei }	
+					multiply_variable = { s_v = spons_vpk }	
+					if = {
+						limit = {check_variable = { asponsorVariable < 0 } }
+					add_to_variable = { inkome_rublei = s_v }	
+					}
+					else = {
+					subtract_from_variable = { inkome_rublei = s_v }
+					}
+			}
+			######################В случае если спонсирование минусовое то усножаем на -1 что б норм отображалось в описании
+			if = {
+				limit = {check_variable = { asponsorVariable < 0 } }
+				multiply_variable = { s_v = -1 }		
+			}
+			if = {
+				limit = {check_variable = { csponsorVariable < 0 } }
+				multiply_variable = { s_c = -1 }		
+			}
+			if = {
+				limit = {check_variable = { msponsorVariable < 0 } }
+				multiply_variable = { s_a = -1 }		
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			
 			#Затем очищаем каждую *ресурсную* переменнную что бы они не перемножались много раз 
 			clear_variable = Rubli_ot_elekrtichestva			
@@ -1071,15 +1410,1230 @@ on_actions = {
 			
 			
 					
-		
+		#даем иишкам деньги
 		if = {
 		limit = { is_ai = yes }
 		add_to_variable = { Chernii_rubli = 10000 }
 		}
 		
+	
+		
+		#тут проверяем и даем инфляцию
+		if = {
+		limit = { check_variable = { inflation = 0 } }
+		remove_ideas = inflation1  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 5 } }
+		add_ideas = inflation1  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 10 } }
+		remove_ideas = inflation1
+		add_ideas = inflation2  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 15 } }
+		remove_ideas = inflation2
+		add_ideas = inflation3  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 20 } }
+		remove_ideas = inflation3
+		add_ideas = inflation4 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 25 } }
+		remove_ideas = inflation4
+		add_ideas = inflation5  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 30 } }
+		remove_ideas = inflation5
+		add_ideas = inflation6 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 35 } }
+		remove_ideas = inflation6
+		add_ideas = inflation7 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 40 } }
+		remove_ideas = inflation7
+		add_ideas = inflation8  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 45 } }
+		remove_ideas = inflation8
+		add_ideas = inflation9 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 50 } }
+		remove_ideas = inflation9
+		add_ideas = inflation10  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 55 } }
+		remove_ideas = inflation10
+		add_ideas = inflation11 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 60 } }
+		remove_ideas = inflation11
+		add_ideas = inflation12  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 65 } }
+		remove_ideas = inflation12
+		add_ideas = inflation13 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 70 } }
+		remove_ideas = inflation13
+		add_ideas = inflation14  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 75 } }
+		remove_ideas = inflation14
+		add_ideas = inflation15 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 80 } }
+		remove_ideas = inflation15
+		add_ideas = inflation16 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 85 } }
+		remove_ideas = inflation16
+		add_ideas = inflation17 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 90 } }
+		remove_ideas = inflation17
+		add_ideas = inflation18				
+		}
+		if = {
+		limit = { check_variable = { inflation = 95 } }
+		remove_ideas = inflation18
+		add_ideas = inflation19  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 100 } }
+		remove_ideas = inflation19
+		add_ideas = inflation20  				
+		}
+		if = {
+		limit = { check_variable = { inflation > 101 } }
+		remove_ideas = inflation20
+		add_ideas = inflation21  				
+		}
+		# Это был только набор инфляции а теперь в обратную сторону))) 
+		if = {
+		limit = { check_variable = { inflation = 10 } }
+		remove_ideas = inflation3
+		add_ideas = inflation2  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 15 } }
+		remove_ideas = inflation4
+		add_ideas = inflation3  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 20 } }
+		remove_ideas = inflation5
+		add_ideas = inflation4 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 25 } }
+		remove_ideas = inflation6
+		add_ideas = inflation5  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 30 } }
+		remove_ideas = inflation7
+		add_ideas = inflation6 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 35 } }
+		remove_ideas = inflation8
+		add_ideas = inflation7 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 40 } }
+		remove_ideas = inflation9
+		add_ideas = inflation8  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 45 } }
+		remove_ideas = inflation10
+		add_ideas = inflation9 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 50 } }
+		remove_ideas = inflation11
+		add_ideas = inflation10  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 55 } }
+		remove_ideas = inflation12
+		add_ideas = inflation11 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 60 } }
+		remove_ideas = inflation13
+		add_ideas = inflation12  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 65 } }
+		remove_ideas = inflation14
+		add_ideas = inflation13 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 70 } }
+		remove_ideas = inflation15
+		add_ideas = inflation14  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 75 } }
+		remove_ideas = inflation16
+		add_ideas = inflation15 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 80 } }
+		remove_ideas = inflation17
+		add_ideas = inflation16 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 85 } }
+		remove_ideas = inflation18
+		add_ideas = inflation17 				
+		}
+		if = {
+		limit = { check_variable = { inflation = 90 } }
+		remove_ideas = inflation19
+		add_ideas = inflation18				
+		}
+		if = {
+		limit = { check_variable = { inflation = 95 } }
+		remove_ideas = inflation20
+		add_ideas = inflation19  				
+		}
+		if = {
+		limit = { check_variable = { inflation = 100 } }
+		remove_ideas = inflation21
+		add_ideas = inflation20  				
+		}
+		
+		########################AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA теперь коррупция
+		#ЭТО НЕ ПРАВИЛЬНЫЙ СПОСОБ!, ТО ЧТО ВЫШЕ НУЖНО  ПЕРЕДЕЛАТЬ В ОБЩЕМ ДЕЛО В ТОМ ЧТО МОЖНО ДИКО НАОБУЗИТЬ ДЕНЬГИ БЕЗ ДЕБАФА Т,К, УЧЕТ ИДЕТ ЛИШ РАЗ В НЕДЕЛЮ И ЕСЛИ НАЖАТЬ В ОДИН ДЕНЬ КОРУПЦИЮ МНОГО РАЗ ТО ПРИ ТАКИХ ИФАХ ЭТО ВЫЗОВЕТ СРАЗУ 
+		# 2 ИДЕИ КОРУПЦИИ 
+		
+	# пофиксил, новый способ выглядит чудовищьно.... хотя так выглядит вся экономика...
+		
+		if = {
+		limit = { check_variable = { corruption = 0 } }
+		remove_ideas = corruption1  
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		}
+		if = {
+		limit = { check_variable = { corruption = 5 } }
+		add_ideas = corruption1 
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		}
+		if = {
+		limit = { check_variable = { corruption = 10 } }
+		remove_ideas = corruption1  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption2  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 15 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption1 
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption3  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 20 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption1  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption4 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 25 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption1  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption5  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 30 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption1  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption6 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 35 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption1 
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption7 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 40 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption1  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption8  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 45 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption1  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption9 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 50 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption1  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption10  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 55 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption1 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption11 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 60 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption1  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption12  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 65 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption1 
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption13 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 70 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption1  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption14  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 75 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption1  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption15 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 80 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption1 
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption16 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 85 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption1  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption17 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 90 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption1  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption18				
+		}
+		if = {
+		limit = { check_variable = { corruption = 95 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption1
+		remove_ideas = corruption20
+		remove_ideas = corruption21
+		add_ideas = corruption19  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 100 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption1
+		remove_ideas = corruption21
+		add_ideas = corruption20  				
+		}
+		if = {
+		limit = { check_variable = { corruption > 101 } }
+		remove_ideas = corruption2  
+		remove_ideas = corruption3  
+		remove_ideas = corruption4  
+		remove_ideas = corruption5  
+		remove_ideas = corruption6  
+		remove_ideas = corruption7  
+		remove_ideas = corruption8  
+		remove_ideas = corruption9  
+		remove_ideas = corruption10  
+		remove_ideas = corruption11 
+		remove_ideas = corruption12  
+		remove_ideas = corruption13  
+		remove_ideas = corruption14  
+		remove_ideas = corruption15  
+		remove_ideas = corruption16  
+		remove_ideas = corruption17  
+		remove_ideas = corruption18  
+		remove_ideas = corruption19
+		remove_ideas = corruption20
+		remove_ideas = corruption1
+		add_ideas = corruption21  				
+		}
+		########## кусок старого кода...м ожет пригодится потом...
+		# Это был только набор а теперь в обратную сторону))) 
+		if = {
+		limit = { check_variable = { corruption = 10 } }
+		remove_ideas = corruption3
+		add_ideas = corruption2  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 15 } }
+		remove_ideas = corruption4
+		add_ideas = corruption3  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 20 } }
+		remove_ideas = corruption5
+		add_ideas = corruption4 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 25 } }
+		remove_ideas = corruption6
+		add_ideas = corruption5  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 30 } }
+		remove_ideas = corruption7
+		remove_ideas = corruption1
+		add_ideas = corruption6 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 35 } }
+		remove_ideas = corruption8
+		add_ideas = corruption7 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 40 } }
+		remove_ideas = corruption9
+		add_ideas = corruption8  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 45 } }
+		remove_ideas = corruption10
+		add_ideas = corruption9 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 50 } }
+		remove_ideas = corruption11
+		add_ideas = corruption10  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 55 } }
+		remove_ideas = corruption12
+		add_ideas = corruption11 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 60 } }
+		remove_ideas = corruption13
+		add_ideas = corruption12  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 65 } }
+		remove_ideas = corruption14
+		add_ideas = corruption13 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 70 } }
+		remove_ideas = corruption15
+		add_ideas = corruption14  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 75 } }
+		remove_ideas = corruption16
+		add_ideas = corruption15 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 80 } }
+		remove_ideas = corruption17
+		add_ideas = corruption16 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 85 } }
+		remove_ideas = corruption18
+		add_ideas = corruption17 				
+		}
+		if = {
+		limit = { check_variable = { corruption = 90 } }
+		remove_ideas = corruption19
+		add_ideas = corruption18				
+		}
+		if = {
+		limit = { check_variable = { corruption = 95 } }
+		remove_ideas = corruption20
+		add_ideas = corruption19  				
+		}
+		if = {
+		limit = { check_variable = { corruption = 100 } }
+		remove_ideas = corruption21
+		add_ideas = corruption20  				
+		}
 		
 		
+		# скрытые идеи для спонсирования)))
+		if = {
+		limit = { check_variable = { msponsorVariable = 0 } }
+		remove_ideas = army1  
+		remove_ideas = army11  
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 1 } }
+		remove_ideas = army2
+		add_ideas = army1  						
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 2 } }
+		remove_ideas = army3
+		remove_ideas = army1
+		add_ideas = army2
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 3 } }
+		remove_ideas = army4
+		remove_ideas = army2
+		add_ideas = army3			
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 4 } }
+		remove_ideas = army5
+		remove_ideas = army3
+		add_ideas = army4		
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 5 } }
+		remove_ideas = army6
+		remove_ideas = army4
+		add_ideas = army5		
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 6 } }
+		remove_ideas = army7
+		remove_ideas = army5
+		add_ideas = army6		
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 7 } }
+		remove_ideas = army8
+		remove_ideas = army6
+		add_ideas = army7			
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 8 } }
+		remove_ideas = army9
+		remove_ideas = army7
+		add_ideas = army8			
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 9 } }
+		remove_ideas = army10
+		remove_ideas = army8
+		add_ideas = army9				
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = 10 } }
+		remove_ideas = arm9
+		add_ideas = army10			
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -1 } }
+		remove_ideas = army12
+		add_ideas = army11				
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -2 } }
+		remove_ideas = army13
+		remove_ideas = army11
+		add_ideas = army12		
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -3 } }
+		remove_ideas = army14
+		remove_ideas = army12
+		add_ideas = army13				
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -4 } }
+		remove_ideas = army15
+		remove_ideas = army13
+		add_ideas = army14		
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -5 } }
+		remove_ideas = army16
+		remove_ideas = army14
+		add_ideas = army15			
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -6 } }
+		remove_ideas = army17
+		remove_ideas = army15
+		add_ideas = army16			
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -7 } }
+		remove_ideas = army18
+		remove_ideas = army16
+		add_ideas = army17		
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -8 } }
+		remove_ideas = army19
+		remove_ideas = army17
+		add_ideas = army18			
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -9 } }
+		remove_ideas = army20
+		remove_ideas = army18
+		add_ideas = army19			
+		}
+		if = {
+		limit = { check_variable = { msponsorVariable = -10 } }
+		remove_ideas = army19
+		add_ideas = army20			
+		}
+		
+		
+		
+		
+		#ГРАЖДАНСКАЯ ПРОМКА   csponsorVariable
+		
+		if = {
+		limit = { check_variable = { csponsorVariable = 0 } }
+		remove_ideas = civilian1  
+		remove_ideas = civilian11  
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 1 } }
+		remove_ideas = civilian2
+		add_ideas = civilian1  						
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 2 } }
+		remove_ideas = civilian3
+		remove_ideas = civilian1
+		add_ideas = civilian2
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 3 } }
+		remove_ideas = civilian4
+		remove_ideas = civilian2
+		add_ideas = civilian3			
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 4 } }
+		remove_ideas = civilian5
+		remove_ideas = civilian3
+		add_ideas = civilian4		
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 5 } }
+		remove_ideas = civilian6
+		remove_ideas = civilian4
+		add_ideas = civilian5		
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 6 } }
+		remove_ideas = civilian7
+		remove_ideas = civilian5
+		add_ideas = civilian6		
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 7 } }
+		remove_ideas = civilian8
+		remove_ideas = civilian6
+		add_ideas = civilian7			
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 8 } }
+		remove_ideas = civilian9
+		remove_ideas = civilian7
+		add_ideas = civilian8			
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 9 } }
+		remove_ideas = civilian10
+		remove_ideas = civilian8
+		add_ideas = civilian9				
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = 10 } }
+		remove_ideas = civilian9
+		add_ideas = civilian10			
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -1 } }
+		remove_ideas = civilian12
+		add_ideas = civilian11				
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -2 } }
+		remove_ideas = civilian13
+		remove_ideas = civilian11
+		add_ideas = civilian12		
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -3 } }
+		remove_ideas = civilian14
+		remove_ideas = civilian12
+		add_ideas = civilian13				
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -4 } }
+		remove_ideas = civilian15
+		remove_ideas = civilian13
+		add_ideas = civilian14		
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -5 } }
+		remove_ideas = civilian16
+		remove_ideas = civilian14
+		add_ideas = acivilian15			
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -6 } }
+		remove_ideas = civilian17
+		remove_ideas = civilian15
+		add_ideas = civilian16			
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -7 } }
+		remove_ideas = civilian18
+		remove_ideas = civilian16
+		add_ideas = civilian17		
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -8 } }
+		remove_ideas = civilian19
+		remove_ideas = civilian17
+		add_ideas = civilian18			
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -9 } }
+		remove_ideas = civilian20
+		remove_ideas = civilian18
+		add_ideas = civilian19			
+		}
+		if = {
+		limit = { check_variable = { csponsorVariable = -10 } }
+		remove_ideas = civilian19
+		add_ideas = civilian20			
+		}
+		
+		
+		
+		#ВПК
 			
+		if = {
+		limit = { check_variable = { asponsorVariable = 0 } }
+		remove_ideas = vpk1  
+		remove_ideas = vpk11  
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 1 } }
+		remove_ideas = vpk2
+		add_ideas = vpk1  						
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 2 } }
+		remove_ideas = vpk3
+		remove_ideas = vpk1
+		add_ideas = vpk2
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 3 } }
+		remove_ideas = vpk4
+		remove_ideas = vpk2
+		add_ideas = vpk3			
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 4 } }
+		remove_ideas = vpk5
+		remove_ideas = vpk3
+		add_ideas = vpk4		
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 5 } }
+		remove_ideas = vpk6
+		remove_ideas = vpk4
+		add_ideas = vpk5		
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 6 } }
+		remove_ideas = vpk7
+		remove_ideas = vpk5
+		add_ideas = vpk6		
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 7 } }
+		remove_ideas = vpk8
+		remove_ideas = vpk6
+		add_ideas = vpk7			
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 8 } }
+		remove_ideas = vpk9
+		remove_ideas = vpk7
+		add_ideas = vpk8			
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 9 } }
+		remove_ideas = vpk10
+		remove_ideas = vpk8
+		add_ideas = vpk9				
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = 10 } }
+		remove_ideas = vpk9
+		add_ideas = vpk10			
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -1 } }
+		remove_ideas = vpk12
+		add_ideas = vpk11				
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -2 } }
+		remove_ideas = vpk13
+		remove_ideas = vpk11
+		add_ideas = vpk12		
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -3 } }
+		remove_ideas = vpk14
+		remove_ideas = vpk12
+		add_ideas = vpk13				
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -4 } }
+		remove_ideas = vpk15
+		remove_ideas = vpk13
+		add_ideas = vpk14		
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -5 } }
+		remove_ideas = vpk16
+		remove_ideas = vpk14
+		add_ideas = vpk15			
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -6 } }
+		remove_ideas = vpk17
+		remove_ideas = vpk15
+		add_ideas = vpk16			
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -7 } }
+		remove_ideas = vpk18
+		remove_ideas = vpk16
+		add_ideas = vpk17		
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -8 } }
+		remove_ideas = vpk19
+		remove_ideas = vpk17
+		add_ideas = vpk18			
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -9 } }
+		remove_ideas = vpk20
+		remove_ideas = vpk18
+		add_ideas = vpk19			
+		}
+		if = {
+		limit = { check_variable = { asponsorVariable = -10 } }
+		remove_ideas = vpk19
+		add_ideas = vpk20			
+		}
+				
 		}
 	}
 } 
