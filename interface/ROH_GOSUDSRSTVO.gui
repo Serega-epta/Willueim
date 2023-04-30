@@ -1,0 +1,1190 @@
+guiTypes = {
+
+
+   containerWindowType = {
+        name = "panel_gosudarstva" 
+        position = { x = -325 y = 10 }		   
+		size = { width = 550 height = 150 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = yes
+		clipping = no
+		
+		instantTextboxType = {
+			name = "zakoni_text"
+			position = { x = 0 y = 0 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = -200 y = 100}
+			text = "ОТКРЫТЬ ЗАКОНЫ"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "gos_ustr_text"
+			position = { x = 100 y = 100 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "ОТКРЫТЬ ГОСУДАРСТВЕННОЕ УСТРОЙСТВО"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+		
+		
+		
+		buttonType ={ 
+           name ="BUTTON_Open_okno_zakona"
+		   position = { x= 25 y= 0 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   text = ""
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_Open_okno_gosustroistva"
+		   position = { x= 325 y= 0 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   text = ""
+		   clicksound = click_close
+        }
+	
+	
+	
+	
+	
+	   background = {
+			name = "Background1"	
+			spriteType = "GFX_tiled_window"
+		}	  
+   }
+   ################################### сюда законы
+   containerWindowType = {
+        name = "Okno_zakona" 
+        position = { x = -325 y = 350 }		   
+		size = { width = 550 height = 600 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+		
+		instantTextboxType = {
+			name = "zaakoni_text"
+			position = { x = 0 y = 100 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "ну здесь в общем то законы будут"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+	
+		
+	   background = {
+			name = "Background2"	
+			spriteType = "GFX_tiled_window"
+		}	  
+   }
+   
+   
+    ################################### сюда гос устройство
+      containerWindowType = {
+        name = "Okno_gosustroistva" 
+        position = { x = -325 y = 350 }		   
+		size = { width = 550 height = 600 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+		
+		instantTextboxType = {
+			name = "military_sfera_text"
+			position = { x = 0 y = 140 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Наша военная система"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+				
+		instantTextBoxType = {
+			name ="kaznatekxt"
+			position = { x = 110 y = 10 }
+			font = "hoi_18mbs"
+			text = "Имеется: [?ochki_gos_progressa|G] Очков государственных реформ"
+			maxWidth = 350
+			maxHeight = 20
+			#pdx_tooltip = "ochki_reform_tt"
+			pdx_tooltip_delayed = "ochki_reform_tt"
+		}
+		
+		
+		
+		
+		
+		
+		buttonType ={ 
+           name ="BUTTON_Open_okno_military_system"
+		   position = { x= 230 y= 30 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "military_system_button_tt"
+		   clicksound = click_close
+        }	
+		instantTextboxType = {
+			name = "civil_sfra_text"
+			position = { x = 0 y = 270 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Наша гражданская система"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_Open_okno_civil_system"
+		   position = { x= 230 y= 160 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "civil_system_button_tt"
+		   clicksound = click_close
+        }	
+		instantTextboxType = {
+			name = "state_sfra_text"
+			position = { x = 0 y = 400 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Наша государственная система"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_Open_okno_ststegos_system"
+		   position = { x= 230 y= 290 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "ststegos_system_button_tt"
+		   clicksound = click_close
+        }	
+	   background = {
+			name = "Background3"	
+			spriteType = "GFX_tiled_window"
+		}	  
+   }
+   
+   
+    ################################### воеенную систему
+    containerWindowType = {
+        name = "military_system_tree" 
+        position = { x = 440 y = 5 }	  
+		size = { width = 1000 height = 1010 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+		
+		instantTextboxType = {
+			name = "military_system_tree_text"
+			position = { x = 200 y = 50 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "УПРАВЛЕНИЕ НАШЕЙ ВОЕННОЙ СИСЕМТОЙ :"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+		
+		
+		
+		
+		
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m"
+		   position = { x= 420 y= 100 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "1milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m1"
+		   position = { x= 420 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "2milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m2"
+		   position = { x= 420 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m3"
+		   position = { x= 420 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m4"
+		   position = { x= 420 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "5milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m5"
+		   position = { x= 420 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "6milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m6"
+		   position = { x= 130 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m7"
+		   position = { x= 130 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m8"
+		   position = { x= 130 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "9milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m9"
+		   position = { x= 130 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "10milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m10"
+		   position = { x= 130 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m11"
+		   position = { x= 730 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "12milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m12"
+		   position = { x= 730 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "13milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m13"
+		   position = { x= 730 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "14milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m14"
+		   position = { x= 730 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "15milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_m15"
+		   position = { x= 730 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16milita_tt"
+		   clicksound = click_close
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		# после включения
+		buttonType ={ 
+           name ="BUTTON_start_1bonus_m"
+		   position = { x= 420 y= 100 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "17milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_2bonus_m1"
+		   position = { x= 420 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_3bonus_m2"
+		   position = { x= 420 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "19milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_4bonus_m3"
+		   position = { x= 420 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_5bonus_m4"
+		   position = { x= 420 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_6bonus_m5"
+		   position = { x= 420 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "22milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_7bonus_m6"
+		   position = { x= 130 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "23milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_8bonus_m7"
+		   position = { x= 130 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "24milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_9bonus_m8"
+		   position = { x= 130 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "25milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_10bonus_m9"
+		   position = { x= 130 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "26milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_11bonus_m10"
+		   position = { x= 130 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "27milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_12bonus_m11"
+		   position = { x= 730 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "28milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_13bonus_m12"
+		   position = { x= 730 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "29milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_14bonus_m13"
+		   position = { x= 730 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "30milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_15bonus_m14"
+		   position = { x= 730 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "31milita_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_16bonus_m15"
+		   position = { x= 730 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "32milita_tt"
+		   clicksound = click_close
+        }
+		
+		
+		
+	   background = {
+			name = "Background4"	
+			spriteType = "GFX_fon"
+		}	  
+    }
+   
+   
+    ################################### гражданскую систему
+    containerWindowType = {
+        name = "civil_system_tree" 
+        position = { x = 440 y = 5 }			   
+		size = { width = 1000 height = 1010 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+		
+		instantTextboxType = {
+			name = "civil_system_tree_text"
+			position = { x = 200 y = 50 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "УПРАВЛЕНИЕ НАШЕЙ ГРАЖДАНСКОЙ СИСТЕМОЙ :"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+			
+			
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c"
+		   position = { x= 420 y= 100 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "1civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c1"
+		   position = { x= 420 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "2civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c2"
+		   position = { x= 420 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c3"
+		   position = { x= 420 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c4"
+		   position = { x= 420 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "5civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c5"
+		   position = { x= 420 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "6civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c6"
+		   position = { x= 130 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c7"
+		   position = { x= 130 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c8"
+		   position = { x= 130 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "9civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c9"
+		   position = { x= 130 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "10civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c10"
+		   position = { x= 130 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c11"
+		   position = { x= 730 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "12civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c12"
+		   position = { x= 730 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "13civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c13"
+		   position = { x= 730 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "14civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c14"
+		   position = { x= 730 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "15civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_c15"
+		   position = { x= 730 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16civill_tt"
+		   clicksound = click_close
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		# после включения
+		buttonType ={ 
+           name ="BUTTON_start_1bonus_c"
+		   position = { x= 420 y= 100 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "17civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_2bonus_c1"
+		   position = { x= 420 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_3bonus_c2"
+		   position = { x= 420 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "19civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_4bonus_c3"
+		   position = { x= 420 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_5bonus_c4"
+		   position = { x= 420 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_6bonus_c5"
+		   position = { x= 420 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "22civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_7bonus_c6"
+		   position = { x= 130 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "23civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_8bonus_c7"
+		   position = { x= 130 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "24civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_9bonus_c8"
+		   position = { x= 130 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "25civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_10bonus_c9"
+		   position = { x= 130 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "26civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_11bonus_c10"
+		   position = { x= 130 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "27civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_12bonus_c11"
+		   position = { x= 730 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "28civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_13bonus_c12"
+		   position = { x= 730 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "29civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_14bonus_c13"
+		   position = { x= 730 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "30civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_15bonus_c14"
+		   position = { x= 730 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "31civill_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_16bonus_c15"
+		   position = { x= 730 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "32civill_tt"
+		   clicksound = click_close
+        }
+		
+	   background = {
+			name = "Background5"	
+			spriteType = "GFX_tiled_window"
+		}	  
+    }
+    ################################### госсистему
+    containerWindowType = {
+        name = "gosudar_system_tree" 
+        position = { x = 440 y = 5 }		   
+		size = { width = 1000 height = 1010 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+		
+		instantTextboxType = {
+			name = "gosudar_system_tree_text"
+			position = { x = 200 y = 50 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "УПРАВЛЕНИЕ НАШЕЙ ГОСУДАРСТВЕНННОЙ СИСТЕМОЙ :"
+			maxWidth = 550
+			maxHeight = 800
+			fixedsize = yes
+		}
+		
+			
+		
+		
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g"
+		   position = { x= 420 y= 100 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "1gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g1"
+		   position = { x= 420 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "2gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g2"
+		   position = { x= 420 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g3"
+		   position = { x= 420 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g4"
+		   position = { x= 420 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "5gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g5"
+		   position = { x= 420 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "6gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g6"
+		   position = { x= 130 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g7"
+		   position = { x= 130 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g8"
+		   position = { x= 130 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "9gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g9"
+		   position = { x= 130 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "10gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g10"
+		   position = { x= 130 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g11"
+		   position = { x= 730 y= 250 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "12gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g12"
+		   position = { x= 730 y= 390 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "13gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g13"
+		   position = { x= 730 y= 580 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "14gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g14"
+		   position = { x= 730 y= 750 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "15gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_bonus_g15"
+		   position = { x= 730 y= 900 }
+		   quadTextureSprite = "GFX_lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16gos_tt"
+		   clicksound = click_close
+        }
+		
+
+		
+		# после включения
+		buttonType ={ 
+           name ="BUTTON_start_1bonus_g"
+		   position = { x= 420 y= 100 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "17gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_2bonus_g1"
+		   position = { x= 420 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_3bonus_g2"
+		   position = { x= 420 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "19gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_4bonus_g3"
+		   position = { x= 420 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_5bonus_g4"
+		   position = { x= 420 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_6bonus_g5"
+		   position = { x= 420 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "22gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_7bonus_g6"
+		   position = { x= 130 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "23gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_8bonus_g7"
+		   position = { x= 130 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "24gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_9bonus_g8"
+		   position = { x= 130 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "25gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_10bonus_g9"
+		   position = { x= 130 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "26gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_11bonus_g10"
+		   position = { x= 130 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "27gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_12bonus_g11"
+		   position = { x= 730 y= 250 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "28gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_13bonus_g12"
+		   position = { x= 730 y= 390 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "29gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_14bonus_g13"
+		   position = { x= 730 y= 580 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "30gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_15bonus_g14"
+		   position = { x= 730 y= 750 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "31gos_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_start_16bonus_g15"
+		   position = { x= 730 y= 900 }
+		   quadTextureSprite = "GFX_lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "32gos_tt"
+		   clicksound = click_close
+        }	
+	   background = {
+			name = "Background6"	
+			spriteType = "GFX_fon2"
+		}	  
+    }
+ 
+}
