@@ -707,47 +707,67 @@ MACRO_ECONOMY = {
 		
 		
 		
-		effects = {	
-			porca_money_click = {
-				add_to_variable = { corruption = 5 }
-				add_to_variable = { Chernii_rubli = corruptionavard }
-				add_stability = -0.01
-			}
-			porca_money_fix_corruption_click = {
-				if = {
-					check_variable = { corruption > 0 }
-					add_political_power = -100
-					add_stability = 0.01
-					subtract_from_variable = { Chernii_rubli = corruptionavard }
-					add_to_variable = { corruption = -5 }
-				}
-				else = {
-					
-				}
-			}				
+		effects = {				
 			printer_on_click = {
 					set_variable = { printer_on = 1 }
+					add_ideas = ecsplotation 
 			}			
 			printer_off_click = {
 					set_variable = { printer_on = 0 }
-			}			
+					remove_ideas = ecsplotation
+			}	
+			
 			war_taxes_on_click = {
 					if = {
 					limit = { has_war = yes}
-					set_variable = { war_taks = 1 }		
+					set_variable = { war_taks = 1 }
+					add_ideas = war_tax				
 					}
 					else = {
 						set_variable = { war_taks = 0 }	
 					}
 			}			
 			war_taxes_off_click = {
-				set_variable = { war_taks = 0 }		
-			}			
+				set_variable = { war_taks = 0 }
+				remove_ideas = war_tax						
+			}
+			
+			poshlini_on_click = {
+				if = {
+					limit = {  check_variable = { poshlinii < 1 } }
+					add_to_variable = { poshlinii = 0.01 }						
+				}			
+				else = {
+				#ничего)))
+				}			
+			}		
+			poshlini_off_click = {
+				if = {
+					limit = {  check_variable = { poshlinii > -1 } }
+					add_to_variable = { poshlinii = -0.01 }						
+				}			
+				else = {
+				#ничего)))
+				}							
+			}
+
+
+
+
+
+
+
+
+
+
+			
 			inflation_fight_on_click = {
-					set_variable = { inflation_fightg = 1 }				
+					set_variable = { inflation_fightg = 1 }	
+					add_ideas = ponizit_gradus 
 			}
 			inflation_fight_off_click = {
-					set_variable = { inflation_fightg = 0 }								
+					set_variable = { inflation_fightg = 0 }	
+					remove_ideas = ponizit_gradus 
 			}
 
 			
@@ -757,12 +777,126 @@ MACRO_ECONOMY = {
 				set_variable = { first_clik = 1 }	
 				add_to_variable = { podohodninalogbonus = 0.2 }	
 			}
-			
-			add_to_variable = { podohodninalogbonus = 0.1 }				
+			add_stability = -0.01
+			add_political_power = -10
+			add_to_variable = { podohodninalogbonus = 0.1 }	
+
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 0.5 } }
+			add_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 1 } }
+			add_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 1.5 } }
+			add_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 2 } }
+			add_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 2.5 } }
+			add_ideas = slidhkom_bolshoi_nalog5
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog1
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus < 0.5 } }
+			remove_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
 			}
 			
 			nalogi_dovn_click = {
-			add_to_variable = { podohodninalogbonus = -0.1 }				
+			add_stability = 0.01
+			add_political_power = 10
+			add_to_variable = { podohodninalogbonus = -0.1 }
+
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 0.5 } }
+			add_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 1 } }
+			add_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 1.5 } }
+			add_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 2 } }
+			add_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus > 2.5 } }
+			add_ideas = slidhkom_bolshoi_nalog5
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog1
+			}
+			if = {
+			limit = { check_variable = { podohodninalogbonus < 0.5 } }
+			remove_ideas = slidhkom_bolshoi_nalog1
+			remove_ideas = slidhkom_bolshoi_nalog2
+			remove_ideas = slidhkom_bolshoi_nalog3
+			remove_ideas = slidhkom_bolshoi_nalog4
+			remove_ideas = slidhkom_bolshoi_nalog5
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+			
 			}
 			
 			
@@ -869,142 +1003,7 @@ MACRO_ECONOMY = {
 			else = {
 			always = no
 			}  
-        }
-		
-		
-		
-		
-		
-		corruption20_visible = {
-			if = {
-				limit = {  check_variable = { corruption > 20 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		corruption40_visible = {
-			if = {
-				limit = {  check_variable = { corruption > 40 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		corruption60_visible = {
-			if = {
-				limit = {  check_variable = { corruption > 60 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		corruption80_visible = {
-			if = {
-				limit = {  check_variable = { corruption > 80 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		corruption100_visible = {
-			if = {
-				limit = {  check_variable = { corruption > 100 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		corruption101_visible = {
-			if = {
-				limit = {  check_variable = { corruption > 101 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		
-		
-		inflation20_visible = {
-			if = {
-				limit = {  check_variable = { inflation > 20 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		inflation40_visible = {
-			if = {
-				limit = {  check_variable = { inflation > 40 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		inflation60_visible = {
-			if = {
-				limit = {  check_variable = { inflation > 60 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		inflation80_visible = {
-			if = {
-				limit = {  check_variable = { inflation > 80 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		inflation100_visible = {
-			if = {
-				limit = {  check_variable = { inflation > 100 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		inflation101_visible = {
-			if = {
-				limit = {  check_variable = { inflation > 101 } }
-					always = yes
-			}
-			else = {
-				always = no
-			}  
-        }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+        }	
 		
 		}
     	}

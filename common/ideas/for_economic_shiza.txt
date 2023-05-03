@@ -1399,6 +1399,128 @@ ideas = {
 				army_defence_factor = -1
 				army_attack_factor = -1
 			}
-		}		
+		}
+
+		ecsplotation = {			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = -100
+				local_resources_factor = 0.5
+			}
+		}
+
+		ponizit_gradus = {			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				local_resources_factor = 0.5
+			}
+		}
+
+
+		war_tax = {			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -50
+				stability_weekly = -0.01
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				base_fuel_gain = 3
+			}
+		}
+		
+		slidhkom_bolshoi_nalog1 = {			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -1		
+			}
+		}
+		slidhkom_bolshoi_nalog2 = {			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -2		
+			}
+		}
+		slidhkom_bolshoi_nalog3 = {			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -3		
+			}
+		}
+		slidhkom_bolshoi_nalog4 = {			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -4		
+			}
+		}
+		slidhkom_bolshoi_nalog5 = {			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -5		
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 	}
 }

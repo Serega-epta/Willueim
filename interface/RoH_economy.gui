@@ -415,20 +415,7 @@ guiTypes = {
            position = { x= 185 y = 344 }
 		   maxHeight = 20
         }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 		#Гражданка
 		
@@ -891,48 +878,17 @@ guiTypes = {
 		fade_time = 300
 		fade_type = linear
 		show_sound = menu_open_window
-		
-		
-		
-		
-		instantTextBoxType = {
-			name ="porchp_text"
-			position = { x = 35 y = 260 }
-			font = "hoi_18mbs"
-			text = "ПРОВЕСТИ ПОРЧУ МОНЕТ :"
-			maxWidth = 200
-		}	
-		buttonType = {
-			name = "porca_money" 
-			position = { x = 240 y = 250 }
-			quadTextureSprite = "GFX_porcha_monet"
-			clicksound = click_default
-			pdx_tooltip = "porcha_button_tt"
-		}
-		instantTextBoxType = {
-			name ="anti_cor_text"
-			position = { x = 35 y = 310 }
-			font = "hoi_18mbs"
-			text = "БОРОТЬСЯ С КОРРУПЦИЕЙ :"
-			maxWidth = 200
-		}	
-		buttonType = {
-			name = "porca_money_fix_corruption" 
-			position = { x = 240 y = 300 }
-			quadTextureSprite = "GFX_porcha_monet_fix"
-			clicksound = click_default
-			pdx_tooltip = "fight_corrupt_button_tt"
-		}		
+				
 		instantTextBoxType = {
 			name ="printerrr_text"
 			position = { x = 35 y = 360 }
 			font = "hoi_18mbs"
-			text = "ВКЛЮЧИТЬ ПЕЧАТНЫЙ СТАНОК :"
-			maxWidth = 200
+			text = "УЖЕСТОЧИТЬ ЭКСПЛУАТАЦИЮ :"
+			maxWidth = 250
 		}
 		buttonType = {
 			name = "printer_on" 
-			position = { x = 240 y = 350 }
+			position = { x = 280 y = 350 }
 			quadTextureSprite = "GFX_printer_on"
 			clicksound = click_default
 			pdx_tooltip = "printer_button_tt"
@@ -940,59 +896,100 @@ guiTypes = {
 		
 		buttonType = {
 			name = "printer_off" 
-			position = { x = 240 y = 350 }
+			position = { x = 280 y = 350 }
 			quadTextureSprite = "GFX_printer_off"
 			clicksound = click_default
 			pdx_tooltip = "printof_button_tt"
 		}
-		
-		
+
 		instantTextBoxType = {
 			name ="anti_infla_text"
 			position = { x = 35 y = 410 }
 			font = "hoi_18mbs"
-			text = "БОРОТЬСЯ С ИНФЛЯЦИЕЙ :"
+			text = "ПОНИЗИТЬ ГРАДУС :"
 			maxWidth = 200
 		}
 		
 		
 		buttonType = {
 			name = "inflation_fight_on" 
-			position = { x = 240 y = 400 }
+			position = { x = 280 y = 400 }
 			quadTextureSprite = "GFX_fight_inflation_on"
 			clicksound = click_default
 			pdx_tooltip = "fight_infl_button_tt"
 		}
 		buttonType = {
 			name = "inflation_fight_off" 
-			position = { x = 240 y = 400 }
+			position = { x = 280 y = 400 }
 			quadTextureSprite = "GFX_fight_inflation_off"
 			clicksound = click_default
 			pdx_tooltip = "inf_fight_off_button_tt"
 		}	
 	
 	
+	
+	
+	
+	
+	
+	
+	
 		instantTextBoxType = {
 			name ="warr_tax_text"
 			position = { x = 35 y = 460 }
 			font = "hoi_18mbs"
-			text = "ВВЕСТИ ВОЕННЫЙ НАЛОГ :"
+			text = "ВВЕСТИ ВОЕННЫЙ СБОР :"
 			maxWidth = 200
 		}
 		buttonType = {
 			name = "war_taxes_on" 
-			position = { x = 240 y = 450 }
+			position = { x = 280 y = 450 }
 			quadTextureSprite = "GFX_war_tax_on"
 			clicksound = click_default
 			pdx_tooltip = "war_tddd_button_tt"
 		}
 		buttonType = {
 			name = "war_taxes_off" 
-			position = { x = 240 y = 450 }
+			position = { x = 280 y = 450 }
 			quadTextureSprite = "GFX_war_tax_off"
 			clicksound = click_default
 			pdx_tooltip = "war_pepepep_button_tt"
 		}
+		
+		
+		instantTextBoxType = {
+			name ="poshini_text"
+			position = { x = 150 y = 50 }
+			font = "hoi_18mbs"
+			text = "ПОШЛИНЫ : [?poshlinii|%] "
+			maxWidth = 200
+		}
+		buttonType = {
+			name = "poshlini_on" 
+			position = { x = 80 y = 100 }
+			quadTextureSprite = "GFX_lisa_on"
+			clicksound = click_default
+			pdx_tooltip = "poshlini_tt"
+		}
+		buttonType = {
+			name = "poshlini_off" 
+			position = { x = 260 y = 100 }
+			quadTextureSprite = "GFX_lisa_off"
+			clicksound = click_default
+			pdx_tooltip = "podhlini_niz_tt"
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -1007,7 +1004,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "nalogi_app" 
-			position = { x = 240 y = 500 }
+			position = { x = 280 y = 500 }
 			quadTextureSprite = "GFX_podniat_nalogi"
 			clicksound = click_default
 			pdx_tooltip = "nalog_plus_button_tt"
@@ -1060,145 +1057,7 @@ guiTypes = {
 			maxWidth = 250
 			maxHeight = 20
 		}
-		instantTextBoxType = {
-			name ="couprion_text"
-			position = { x = 30 y = 50 }
-			font = "hoi_18mbs"
-			text = "КОРРУПЦИЯ : "
-			maxWidth = 100
-			maxHeight = 20
-		}
-		instantTextBoxType = {
-			name ="couprion_teeeext"
-			position = { x = 140 y = 50 }
-			font = "hoi_18mbs"
-			text = "[?corruption]"
-			maxWidth = 200
-			pdx_tooltip_delayed = "curoption_effect_tt"
-	
-		}
-		instantTextBoxType = {
-			name ="inflation_text"
-			position = { x = 30 y = 150 }
-			font = "hoi_18mbs"
-			text = "ИНФЛЯЦИЯ : "
-			maxWidth = 100
-			maxHeight = 20
-		}
-		instantTextBoxType = {
-			name ="inflatyyion_text"
-			position = { x = 140 y = 150 }
-			font = "hoi_18mbs"
-			text = "[?inflation]"
-			pdx_tooltip_delayed = "inflation_effect_tt"
-			maxWidth = 20
-			maxHeight = 20
-		}
-		
-		
-		
-		
-		
-		
-		iconType = { 
-           name ="corruption0"
-           spriteType = "GFX_corruptoin0"
-           position = { x = 35 y = 80 }
-		   pdx_tooltip_delayed = "corupttion_tt"
-        }
-		iconType = { 
-           name ="corruption20"
-           spriteType = "GFX_corruptoin20"
-           position = { x = 35 y = 80 }
-		   pdx_tooltip_delayed = "corupttion_tt"
-        }
-		iconType = { 
-           name ="corruption40"
-           spriteType = "GFX_corruptoin40"
-           position = { x = 35 y = 80 }
-		   pdx_tooltip_delayed = "corupttion_tt"
-        }
-		iconType = { 
-           name ="corruption60"
-           spriteType = "GFX_corruptoin60"
-           position = { x = 35 y = 80 }
-		   pdx_tooltip_delayed = "corupttion_tt"
-        }
-		iconType = { 
-           name ="corruption80"
-           spriteType = "GFX_corruptoin80"
-           position = { x = 35 y = 80 }
-		   pdx_tooltip_delayed = "corupttion_tt"
-        }
-		iconType = { 
-           name ="corruption100"
-           spriteType = "GFX_corruptoin100"
-           position = { x = 35 y = 80 }
-		   pdx_tooltip_delayed = "corupttion_tt"
-        }
-		iconType = { 
-           name ="corruption101"
-           spriteType = "GFX_corruptoin101"
-           position = { x = 35 y = 80 }
-		   pdx_tooltip_delayed = "coru7pttion_tt"
-        }
-		
-		
-		
-		
-		
-		iconType = { 
-           name ="inflation0"
-           spriteType = "GFX_inflation0"
-           position = { x = 35 y = 180 }
-		   pdx_tooltip_delayed = "inflatttion_tt"
-		   maxWidth = 20
-			maxHeight = 20
-        }
-		iconType = { 
-           name ="inflation20"
-           spriteType = "GFX_inflation20"
-           position = { x = 35 y = 180 }
-		   pdx_tooltip_delayed = "inflatttion_tt"
-		   maxWidth = 20
-			maxHeight = 20
-        }
-		iconType = { 
-           name ="inflation40"
-           spriteType = "GFX_inflation40"
-           position = { x = 35 y = 180 }
-		   pdx_tooltip_delayed = "inflatttion_tt"
-		   maxWidth = 20
-			maxHeight = 10
-        }
-		iconType = { 
-           name ="inflation60"
-           spriteType = "GFX_inflation60"
-           position = { x = 35 y = 180 }
-		   pdx_tooltip_delayed = "inflatttion_tt"
-        }
-		iconType = { 
-           name ="inflation80"
-           spriteType = "GFX_inflation80"
-           position = { x = 35 y = 180 }
-		   pdx_tooltip_delayed = "inflatttion_tt"
-        }
-		iconType = { 
-           name ="inflation100"
-           spriteType = "GFX_inflation100"
-           position = { x = 35 y = 180 }
-		   pdx_tooltip_delayed = "inflatttion_tt"
-        }
-		iconType = { 
-           name ="inflation101"
-           spriteType = "GFX_inflation101"
-           position = { x = 35 y = 180 }
-		   pdx_tooltip_delayed = "inflatррррttion_tt"
-        }
-		
-		
-		
-		
+
 		
 		background = {
 			name = "Bacskground"		
