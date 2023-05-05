@@ -8,7 +8,8 @@ scripted_gui = {
 			dirty = state_garnizon
 			
 			visible = { 
-				check_variable = { state_garnizon > 0 }				
+				check_variable = { state_specialization > 0 }
+				has_dynamic_modifier = { modifier = garnizon_baff }		
 			}
 			
 			effects = { 

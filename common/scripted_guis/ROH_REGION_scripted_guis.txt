@@ -12,7 +12,13 @@ scripted_gui = {
 				check_variable = { state_prmishleni = 0 }	
 				check_variable = { state_pereferia = 0 }
 				check_variable = { state_garnizon = 0 }
-				check_variable = { state_sirievoi = 0 }					
+				check_variable = { state_sirievoi = 0 }	
+				NOT ={
+				has_dynamic_modifier = { modifier = garnizon_baff }
+				has_dynamic_modifier = { modifier = pereferia_baff }
+				has_dynamic_modifier = { modifier = promishlenni_baff }
+				has_dynamic_modifier = { modifier = sirievoi_baff }
+				}
 			}
 
 			available = {
