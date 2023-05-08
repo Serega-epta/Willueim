@@ -5,7 +5,7 @@ focus_tree = {
 	
 	focus = {
 		id = ROH_capital
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Strengthen_the_Capital
 		cost = 10,00
 		x = 5
 		y = 0
@@ -34,7 +34,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_15
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_our_place_under_the_sun
 		cost = 10,00
 		x = 13
 		y = 0
@@ -48,7 +48,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ROH_29
+		id = ROH_29		icon = GFX_goal_Dont_sleep
 		cost = 10,00
 		x = 11
 		y = 7
@@ -63,7 +63,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_create_patrols
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Creating_Patrols
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_capital
@@ -98,7 +98,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_recreate_MIC
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Revitalization_of_the_military_industrial_complex
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_create_patrols
@@ -113,7 +113,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_chegoblia
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Rise_From_the_Dead
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_recreate_MIC
@@ -128,7 +128,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_civ_ind
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Emphasis_on_the_civilian_sector
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_chegoblia
@@ -153,7 +153,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_11
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Emphasis_on_Military_Sector
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_chegoblia
@@ -178,7 +178,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_12
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Eat_less
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_11
@@ -195,7 +195,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_13
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Every_man_warrior
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_12
@@ -210,7 +210,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_14
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Work
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_13
@@ -225,7 +225,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_16
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_The_doctrine_of_total_isolatione
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_15
@@ -265,7 +265,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_19
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_And_a_fly_wont_fly_away
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_16
@@ -308,7 +308,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_17
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Limited_Intervention_Doctrine
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_15
@@ -339,7 +339,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_20
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Polite_people
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_17
@@ -382,7 +382,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_to_people
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_For_the_needs_of_the_citizens
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_civ_ind
@@ -404,7 +404,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_father_to_every_family
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Every_family_needs_a_father
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_to_people
@@ -420,7 +420,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_light
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Let_there_be_light
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_father_to_every_family
@@ -440,7 +440,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_new_intruments
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Equipment_Upgrade
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_light
@@ -460,7 +460,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_next
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Whats_Next
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_new_intruments
@@ -477,7 +477,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_18
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_The_Strong_State_Doctrine
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_15
@@ -503,7 +503,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_21
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Assault_Corps
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_18
@@ -548,7 +548,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_22
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Hold_a_drill
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_20
@@ -569,7 +569,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_23
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_The_Second_Great_Wall_of_China
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_22
@@ -601,7 +601,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_24
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Helping_Hand
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_22
@@ -622,7 +622,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_25
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Take_all_you_can
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_22
@@ -641,7 +641,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_26
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_development_of_the_doctrine
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_25
@@ -662,7 +662,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_27
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_More_guns
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_26
@@ -680,7 +680,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_28
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_More_Meat
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_26
@@ -699,7 +699,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_30
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_expand_the_appeal
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_28
@@ -716,7 +716,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_31
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Intelligence_is_the_backbone_of_the_army
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_29
@@ -739,7 +739,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROH_32
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_Forward_to_the_future
 		cost = 10,00
 		prerequisite = {
 			focus = ROH_31
