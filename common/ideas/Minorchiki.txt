@@ -1,0 +1,396 @@
+ideas = {
+	country = {
+	
+		duh_voinov = {	
+			picture = Dukh_voinov		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				offence = 0.1
+				defence = 0.1			
+			}
+		}
+		
+		tradition_tsennosi_osujdauy = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				defence = 0.05
+				stability_factor = -0.05				
+			}
+		}
+		
+		ubivat_ubivat = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+		army_attack_factor = 0.2
+		army_org_factor = -0.4
+		army_morale_factor = 0.3							
+			}
+		}
+		
+		iskupaya_kroviu = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+		political_power_gain = -0.1
+		stability_factor = -0.15
+		monthly_population = -0.15							
+			}
+		}
+		
+		bessmislenaya_war = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+		offence = 0.05
+		defence = 0.05
+		stability_factor = -0.1							
+			}
+		}
+		
+		pribalt_nazi = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+		offence = 0.1
+		defence = 0.1
+		stability_factor = 0.1							
+			}
+		}
+		
+		
+		sad_nuke = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+		stability_factor = -0.1
+		war_support_factor = -0.1
+		defence = -0.1
+		offence = -0.1
+		army_org_factor = -0.1							
+			}
+		}
+		
+		hunt_nas_begun = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+		stability_factor = 0.05
+		offence = 0.1							
+			}
+		}
+		
+		mercenary_army = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+		offence = 0.05							
+			}
+		}
+		
+		giga_trade = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+			stability_factor = -0.05
+			political_power_gain = 0.1	
+			}
+		}
+		
+		green_duche = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+			stability_factor = 0.05
+		
+			}
+		}
+		
+		ejipalka_uga_buga = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+			stability_factor = -0.03
+			offence = 0.05		
+			}
+		}
+		
+		
+		free_ot_freedom = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+			stability_factor = 0.05
+			monthly_population = 0.4		
+			}
+		}
+		
+		democraty_no = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		
+		yantarni_son = {		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				monthly_population = 1	
+			}
+		}
+		
+		fallen_gods = {	
+			picture = Padshie_bogi		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				war_support_factor = 0.1
+				offence = 0.1
+			}
+		}
+		
+		boloto_shreka = {
+			picture = Otravlennoe_boloto				
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				army_org_factor = 0.05 
+				stability_factor = 0.05
+			}
+		}
+		
+		adekvatni_cringe = {	
+			picture = Svetoch_normalnosti	
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				army_org_factor = 0.05
+				offence = 0.05
+				defence = 0.05
+			}
+		}
+		
+		idol_pal = {
+			picture = Padshiy_idol		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				offence = 0.1
+				defence = 0.1
+				stability_factor = -10
+			}
+		}
+		
+		opustevshee_bratstvo = {
+			picture = Opustevshee_bratstvo1		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				stability_factor = -0.05
+				recruitable_population_factor = -0.1
+				offence = -0.05
+				defence = -0.05
+			}
+		}
+		
+		dead_inside1000minus7 = {	
+			picture = Poteryanny_chelovek		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				offence = 0.05
+				defence = 0.05
+			}
+		}
+		
+		ponyatia = {
+			picture = Zhizn_po_ponyatiam		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				recruitable_population_factor = 0.05 
+			}
+		}
+		
+		baza1 = {
+			picture = Da_osvetitsya_imya_tvoe		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		baza2 = {		
+			picture = Blazhennaya_bratia
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				offence = 0.1
+				defence = 0.1
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
