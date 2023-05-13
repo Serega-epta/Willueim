@@ -116,7 +116,7 @@ set_national_unity = 0.7
         concentrated_industry3 = 1
     }
 }
-
+add_ideas = tradition_tsennosi_osujdauy
 set_politics = {
 	ruling_party = militarists 
 	elections_allowed = no
@@ -132,7 +132,5 @@ create_country_leader = {
     desc = "HAR_paramonov_desc"
     picture = "gfx/leaders/HAR/HAR_paramonov.dds"
     ideology = militarists_1
-    traits = {
-        #
-    }
+    traits = { tradition_tsennosi_osujdauy }
 }

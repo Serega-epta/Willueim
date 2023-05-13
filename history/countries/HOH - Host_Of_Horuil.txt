@@ -112,7 +112,7 @@ set_national_unity = 0.7
         concentrated_industry3 = 1
     }
 }
-
+add_ideas = baza2
 set_politics = {
 	ruling_party = sacraments
 	elections_allowed = no
@@ -124,45 +124,11 @@ set_popularities = {
 
  
 
-
 create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_KOMUNISTOV_DESC"
+    name = "horuil"
+    desc = "horuil_DESC"
     picture = "gfx/leaders/DNN/Portrait_Pepe_Komunistov.dds"
-    ideology = militarists_1
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_FASHISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Fashistov.dds"
-    expire = "2017.1.1"
-    ideology = fascism_ideology
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_NEYTRALOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Neytralov.dds"
-    expire = "2017.1.1"
-    ideology = despotism
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_DEMOKRATOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Demokratov.dds"
-    expire = "2017.1.1"
-    ideology = conservatism
+    ideology = sacraments_1
     traits = {
         #
     }

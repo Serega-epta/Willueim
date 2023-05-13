@@ -112,7 +112,7 @@ set_national_unity = 0.7
         concentrated_industry3 = 1
     }
 }
-
+add_ideas = ubivat_ubivat
 set_politics = {
 	ruling_party = bandits
 	elections_allowed = no
@@ -126,11 +126,9 @@ set_popularities = {
 
 
 create_country_leader = {
-    name = "Noname"
-    desc = "POLITICS_PEPE_KOMUNISTOV_DESC"
+    name = "TWD_Chel_5"
+    desc = "TWD_Chel_5_desc"
     picture = "gfx/leaders/TWD/Chel.dds"
     ideology = bandits_1
-    traits = {
-        #
-    }
+    traits = { ubivat_ubivat }
 }

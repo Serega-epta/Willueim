@@ -41,7 +41,7 @@ set_convoys = 20
 set_national_unity = 0.7
 
 
-
+add_ideas = iskupaya_kroviu
 set_politics = {
 	ruling_party = forestry 
 	elections_allowed = no
@@ -59,7 +59,5 @@ create_country_leader = {
     desc = "VOS_vostochni_lug_DESC"
     picture = "gfx/leaders/VOS/vostochni_lug.dds"
     ideology = forestry_1  
-    traits = {
-        #
-    }
+    traits = { iskupaya_kroviu }
 }

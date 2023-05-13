@@ -41,7 +41,7 @@ set_convoys = 20
 set_national_unity = 0.7
 
 
-
+add_ideas = mercenary_army
 set_politics = {
 	ruling_party = juntas 
 	elections_allowed = no
@@ -59,8 +59,6 @@ create_country_leader = {
     desc = "TTS_cord_corp_DESC"
     picture = "gfx/leaders/TTS/cord_corp.dds"
     ideology = juntas_1   
-    traits = {
-        #
-    }
+    traits = { mercenary_army }
 }
 

@@ -40,7 +40,7 @@ set_research_slots = 5
 set_convoys = 20
 set_national_unity = 0.7
 
-
+add_ideas = hunt_nas_begun
 set_politics = {
 	ruling_party = svobod	
 	elections_allowed = no
@@ -58,8 +58,6 @@ create_country_leader = {
     desc = "BSL_prohor_DESC"
     picture = "gfx/leaders/BSL/prohor.dds"
     ideology = svobod_1   
-    traits = {
-        #
-    }
+    traits = { hunt_nas_begun }
 }
 

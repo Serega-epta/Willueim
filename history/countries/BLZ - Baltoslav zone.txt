@@ -41,7 +41,7 @@ set_convoys = 20
 set_national_unity = 0.7
 
 
-
+add_ideas = bessmislenaya_war
 set_politics = {
 	ruling_party = svobod 
 	elections_allowed = no
@@ -60,9 +60,7 @@ create_country_leader = {
     desc = "BLZ_akim_juk_DESC"
     picture = "gfx/leaders/BLZ/akim_juk.dds"
     ideology = svobod_1   
-    traits = {
-        #
-    }
+    traits = { bessmislenaya_war }
 }
 
 
