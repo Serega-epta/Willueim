@@ -1,109 +1,18 @@
 guiTypes = {
 	containerWindowType = {
 		name = "roh_expedition"
-                position = { x = 0 y = 0 }
-		size = { width = 100% height= 390 }		
-		iconType = {
-           name ="expedition"
-           quadTextureSprite = "GFX_expedition_fon3"
-           position = { x = -50 y = -20 }
-        }
-
-		instantTextBoxType = {
-			name ="prof_text"
-			position = { x = 10 y = 150 }
-			font = "hoi_24header"
-			text = "Профессионализм Отряда:"
-			format = center
-			maxHeight = 24
-		}	
-		
-		instantTextBoxType = {
-			name ="Sila_otriada"
-			position = { x = 50 y = 300 }
-			font = "hoi_24header"
-			text = "[?profesionalzm_oriada|%C]"
-			format = center
-			maxHeight = 24
+		size = { width = 100% height = 100 }	
+        	position = { x = 0 y = 0 }
+		containerWindowType = {
+			name = "progressbar"
+			size = { width = 100% height = 100 }
+			position = { x = 0 y = 0 }
+	 		iconType = { 
+				name = "expedition_progressbar"
+				position = { x = 25 y = -58 }
+				spriteType = "GFX_expedition_progressbar"
+				pdx_tooltip = expedition_progressbar_tt
+			}
 		}
-
-		iconType = { # Иконка (картинка)
-           name ="kartinochka"
-           spriteType = "GFX_SHKALA_OPITA"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka2"
-           spriteType = "GFX_SHKALA_OPITA2"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka3"
-           spriteType = "GFX_SHKALA_OPITA3"
-           position = { x= 50 y = 180 }
-        }
-		
-		
-		
-		iconType = { # Иконка (картинка)
-           name ="kartinochka0"
-           spriteType = "GFX_SHKALA_OPITA0"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka5"
-           spriteType = "GFX_SHKALA_OPITA5"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka10"
-           spriteType = "GFX_SHKALA_OPITA10"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka20"
-           spriteType = "GFX_SHKALA_OPITA20"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka30"
-           spriteType = "GFX_SHKALA_OPITA30"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka40"
-           spriteType = "GFX_SHKALA_OPITA40"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka50"
-           spriteType = "GFX_SHKALA_OPITA50"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka60"
-           spriteType = "GFX_SHKALA_OPITA60"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka70"
-           spriteType = "GFX_SHKALA_OPITA70"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka80"
-           spriteType = "GFX_SHKALA_OPITA80"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka90"
-           spriteType = "GFX_SHKALA_OPITA90"
-           position = { x= 50 y = 180 }
-        }
-		iconType = { # Иконка (картинка)
-           name ="kartinochka100"
-           spriteType = "GFX_SHKALA_OPITA100"
-           position = { x= 50 y = 180 }
-        }
-    }
+    	}
 }

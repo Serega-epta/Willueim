@@ -20,12 +20,12 @@ allowed = {
 expedition_category = {
 	icon = GFX_rod_reunification
 	priority = 10
-#	picture = GFX_desicion_reunification
+	picture = GFX_expedition_picture
 	ai_will_do = {
-    base = 12
-}
-allowed = {
-	always = yes
+    		base = 12
+	}
+	allowed = {
+		always = yes
 	}
 	scripted_gui = roh_expedition
 	visible = {
