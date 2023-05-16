@@ -170,7 +170,7 @@ country_event = {
 		type = infantry_odejda
 		amount = 2500}
 		add_manpower = 2200}
-	}}
+-	}}
 	custom_effect_tooltip = 2a_tt}}
 # Жители Отказываются
 country_event = {
@@ -923,7 +923,7 @@ country_event = {
 	}
 }
 
-
+# выбор цели (основа)
 country_event = {
 	id = Reid.333
 	title = Reid.333.t
@@ -934,43 +934,149 @@ country_event = {
 
 	option = {
 	name = Reid.333.a
-	add_to_variable = { profesionalzm_oriada = 0.05 }
+	hidden_effect = {
+		random_list = {
+			20 = {
+			country_event = {id = Reid.13}
+			}
+			80 = {
+			country_event = {id = Reid.11}
+			}
+		}	
+	}
 	}
 	option = {
 	name = Reid.333.b
-	add_to_variable = { profesionalzm_oriada = -0.15 }
-	# мудро придумал)))
-	if = {
-		limit = { has_country_flag = otriad_STEAL_gotov }
-		clr_country_flag = otriad_STEAL_gotov
-		}
-	else = {
-		if = {
-			limit = { has_country_flag = otriad_iskoreniteley_gotov }
-			clr_country_flag = otriad_iskoreniteley_gotov
-		}
-		else = { 
-			if = {
-				limit = { has_country_flag = otriad_zachistki_gotov }
-				clr_country_flag = otriad_zachistki_gotov
+	hidden_effect = {
+		random_list = {
+			20 = {
+			country_event = {id = Reid.1315}
 			}
-			else = {
-			clr_country_flag = otriad_nabran
-			clr_country_flag = oriad_ekipirovan
-			clr_country_flag = otriad_obuchen		
+			80 = {
+			country_event = {id = Reid.999}
 			}
+		}	
+	}
+	}
+	option = {
+	name = Reid.333.c
+	hidden_effect = {
+		random_list = {
+			20 = {
+			country_event = {id = Reid.1314}
+			}
+			80 = {
+			country_event = {id = Reid.1411}
+			}
+		}	
+	}
+		}
+	option = {
+	name = Reid.333.d
+	hidden_effect = {
+		random_list = {
+			20 = {
+			country_event = {id = Reid.1316}
+			}
+			80 = {
+			country_event = {id = Reid.14322}
+			}
+		}	
+	}
+		}
+}
+
+
+# САБОТАЖ!!!
+country_event = {
+	id = Reid.13
+	title = Reid.13.t
+	desc = Reid.13.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.13.a
+	add_manpower = 1500
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 2000} add_equipment_to_stockpile = {type = infantry_odejda amount = 1500}
+	add_command_power = 50
+	}
+	option = {
+	name = Reid.15.b
+	custom_effect_tooltip = ruins_tt1
+	hidden_effect = {
+	add_equipment_to_stockpile = {type = infantry_equipment amount = -1000}
+		country_event = { id = Reid.11}
 		}
 	}
+}
+country_event = {
+	id = Reid.1314
+	title = Reid.13.t
+	desc = Reid.13.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.13.a
+	add_manpower = 1500
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 2000} add_equipment_to_stockpile = {type = infantry_odejda amount = 1500}
+	add_command_power = 50
+	}
+	option = {
+	name = Reid.15.b
+	custom_effect_tooltip = ruins_tt1
+	hidden_effect = {
+	add_equipment_to_stockpile = {type = infantry_equipment amount = -1000}
+		country_event = { id = Reid.1411}
+		}
+	}
+}
+country_event = {
+	id = Reid.1315
+	title = Reid.13.t
+	desc = Reid.13.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.13.a
+	add_manpower = 1500
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 2000} add_equipment_to_stockpile = {type = infantry_odejda amount = 1500}
+	add_command_power = 50
+	}
+	option = {
+	name = Reid.15.b
+	custom_effect_tooltip = ruins_tt1
+	hidden_effect = {
+	add_equipment_to_stockpile = {type = infantry_equipment amount = -1000}
+		country_event = { id = Reid.999}
+		}
+	}
+}
+country_event = {
+	id = Reid.1316
+	title = Reid.13.t
+	desc = Reid.13.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.13.a
+	add_manpower = 1500
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 2000} add_equipment_to_stockpile = {type = infantry_odejda amount = 1500}
+	add_command_power = 50
+	}
+	option = {
+	name = Reid.15.b
+	custom_effect_tooltip = ruins_tt1
+	hidden_effect = {
+	add_equipment_to_stockpile = {type = infantry_equipment amount = -1000}
+		country_event = { id = Reid.14322}
+		}
 	}
 }
 
 
 
 
-
-
-
-# reid to ruins start
+# В запустелом городе (основа)
 country_event = {
 	id = Reid.15
 	title = Reid.15.t
@@ -982,31 +1088,11 @@ country_event = {
 	custom_effect_tooltip = ruins_tt1
 	hidden_effect = {
 	country_event = {id = Reid.11}
-	}
-	}
-	option = {
-	name = Reid.15.b
-	custom_effect_tooltip = ruins_tt2
-	hidden_effect = {
-	country_event = {id = Reid.12}
-	}
-	}
-	option = {
-	name = Reid.15.c
-	custom_effect_tooltip = ruins_tt3
-	hidden_effect = {
-	country_event = {id = Reid.13}
-	}
-	}
-	option = {
-	name = Reid.15.r
-	custom_effect_tooltip = ruins_tt4
-	hidden_effect = {
-	country_event = {id = Reid.14}
-	}
+		}
 	}
 }
 
+# В каменных джунглях (основа)
 country_event = {
 	id = Reid.11
 	title = Reid.11.t
@@ -1015,11 +1101,36 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.11.a
+	hidden_effect = {
+	country_event = { id = Reid.12}
 	}
 	option = {
 	name = Reid.11.b
+	hidden_effect = {
+	country_event = {id = Reid.13}
+		}
+	}
+	option = {
+	name = Reid.11.c
+		hidden_effect = {
+			random_list = {
+				50 = {
+				country_event = {id = Reid.14}
+				}
+				50 = {
+				country_event = {id = Reid.141}
+				}
+			}
+		}
+	}
+	option = {
+	name = Reid.11.d
+	}
+	option = {
+	name = Reid.11.e
 	}
 }
+# МОНСТРЫ АТАКУЮТ
 country_event = {
 	id = Reid.12
 	title = Reid.12.t
@@ -1027,12 +1138,22 @@ country_event = {
 	picture = event_Ar_start
 	is_triggered_only = yes
 	option = {
-	name = Reid.12.a
+		name = Reid.12.a
+		random_list = {
+			23 = {
+				country_event = { id = Reid.1011 }
+			}
+			67 = {
+				add_to_variable = { profesionalzm_oriada = 0.25 }
+			}
+		}
 	}
 	option = {
 	name = Reid.12.b
+	add_to_variable = { profesionalzm_oriada = -0.25 }
 	}
 }
+#РЫЖИЙЛЕС
 country_event = {
 	id = Reid.13
 	title = Reid.13.t
@@ -1041,11 +1162,21 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.13.a
+	random_list = {
+		75 = {
+			country_event = { id = Reid.1010} 
+		}
+		25 = {
+			add_to_variable = { profesionalzm_oriada = 0.5 }
+		}
+		
+	}
 	}
 	option = {
 	name = Reid.13.b
 	}
 }
+#СОКРОВИЩЕ НАЙДЕНО
 country_event = {
 	id = Reid.14
 	title = Reid.14.t
@@ -1056,33 +1187,30 @@ country_event = {
 	name = Reid.14.a
 	custom_effect_tooltip = peshera
 	hidden_effect = {
-	country_event = {id = Reid.141}
-	}
-	}
-	option = {
-	name = Reid.14.b
-	custom_effect_tooltip = peshera1
-	hidden_effect = {
-	random_list = {
-	99 = {
-	country_event = {id = Reid.142}
-	play_song = skyriim
-	}
-	1 = {
-	country_event = {id = Reid.999}
-	play_song = skyriim
-	}
-	}
-	}
-	}
-	option = {
-	name = Reid.14.c
-	custom_effect_tooltip = peshera2
-	hidden_effect = {
-	country_event = {id = Reid.143}
-	}
+	60 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 800
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 20
+		}
+		add_manpower = 270
+		}
+		add_equipment_to_stockpile = {
+		type = infantry_odejda
+		amount = 940
+		}
+		army_experience = 10}
+		{ add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1200
+		}
 	}
 }
+}
+}
+#IT'S A TRAP
 country_event = {
 	id = Reid.141
 	title = Reid.141.t
@@ -1090,18 +1218,10 @@ country_event = {
 	picture = event_Ar_start
 	is_triggered_only = yes
 	option = {
-	name = Reid.141.a
-	country_event = {days = 2 id = Reid.1411}
-	}
-	option = {
-	name = Reid.141.b
-	country_event = {days = 2 id = Reid.1413}
-	}
-	option = {
-	name = Reid.141.c
-	country_event = {days = 2 id = Reid.1412}
+	add_to_variable = { profesionalzm_oriada = -0.5 }
 	}
 }
+# о ПГТ в лесу (основа)
 country_event = {
 	id = Reid.1411
 	title = Reid.1411.t
@@ -1110,16 +1230,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1411.a
-	add_political_power = 50
-	add_stability = -0.1
-	add_war_support = 0.25
-	add_manpower = 4000
-	add_equipment_to_stockpile = {
-		type = infantry_odejda_0
-		amount = 3000
+	country_event= {id = Reid.1412}
 		}
 	}
 }
+#по нехоженной тропе (основа)
 country_event = {
 	id = Reid.1412
 	title = Reid.1412.t
@@ -1128,47 +1243,47 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1412.a
-	country_event = {days = 2 id = Reid.14121}
+	country_event = { id = Reid.1413}
 	}
 	option = {
 	name = Reid.1412.b
-	country_event = {days = 2 id = Reid.14122}
+	country_event = { id = Reid.14122}
+	}
+	option = {
+	name = Reid.1412.c
+	country_event = { id = Reid.142}
+	}
+	option = {
+	name = Reid.1412.d
+	country_event = { id = Reid.143}
+	}
+	option = {
+	name = Reid.1412.e
+	
 	}
 }
+#Селяне просят помощи
 country_event = {
 	id = Reid.1413
 	title = Reid.1413.t
 	desc = Reid.1413.d
-	picture = GFX_GobliN
-	is_triggered_only = yes
-	option = {
-	name = Reid.1413.a
-	add_political_power = -150
-	add_stability = -0.2
-	add_war_support = -0.2
-	clr_country_flag = otriad_nabran
-	clr_country_flag = oriad_ekipirovan
-	clr_country_flag = otriad_obuchen
-	}
-}
-
-country_event = {
-	id = Reid.14121
-	title = Reid.14121.t
-	desc = Reid.14121.d
 	picture = event_Ar_start
 	is_triggered_only = yes
 	option = {
-	name = Reid.14121.a
-	add_political_power = -150
-	add_stability = -0.1
-	add_war_support = -0.1
-	clr_country_flag = otriad_nabran
-	clr_country_flag = oriad_ekipirovan
-	clr_country_flag = otriad_obuchen
+	name = Reid.1413.a
+	add_to_variable = { profesionalzm_oriada = 0.1 }
+	random_list = {
+	30 = {
+	country_event = {id = Reid.1431}
+	}
+	}
+	}
+	option = {
+	name = Reid.1413.b
+	add_to_variable = { profesionalzm_oriada = -0.1 }
 	}
 }
-
+#разграбление села
 country_event = {
 	id = Reid.14122
 	title = Reid.14122.t
@@ -1177,42 +1292,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14122.a
-	add_political_power = 150
-	add_stability = 0.1
-	add_war_support = 0.1
-	add_manpower = -1
-	army_experience = 150
-	add_doctrine_cost_reduction = {
-	cost_reduction = 1
-	uses = 1
-	category = land_doctrine
+	
 	}
+	option = {
+	name = Reid.14122.b
+	
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#селяне дают отпор
 country_event = {
 	id = Reid.142
 	title = Reid.142.t
@@ -1221,51 +1308,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.142.a
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		}
-		add_equipment_to_stockpile = {
-		type = infantry_odejda_0
-		amount = 1000
-		}
-		add_equipment_to_stockpile = {
-		type = support_equipment
-		amount = 1000
-		}
-	add_political_power = 150
-	add_stability = 0.05
-	add_war_support = 0.05
-	add_manpower = 1500
+	
 	}
 	option = {
 	name = Reid.142.b
-	add_tech_bonus = {
-    bonus = 0.5
-    uses = 2
-    category = armor
-	}
-	add_tech_bonus = {
-    bonus = 0.5
-    uses = 2
-    category = artillery
-	}
-	add_tech_bonus = {
-    bonus = 0.5
-    uses = 2
-    category = infantry_tech
-	}
-	add_doctrine_cost_reduction = {
-	cost_reduction = 0.5
-	uses = 2
-	category = land_doctrine
-	}
-	add_political_power = 150
-	add_stability = 0.05
-	add_war_support = 0.05
-	add_manpower = 1500
+	
 	}
 }
+#РЫЖЕЕ СЕЛО
 country_event = {
 	id = Reid.143
 	title = Reid.143.t
@@ -1274,18 +1324,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.143.a
-	country_event = {days = 2 id = Reid.1431}
+	
 	}
 	option = {
 	name = Reid.143.b
-	country_event = {days = 2 id = Reid.1432}
-	}
-	option = {
-	name = Reid.143.c
-	country_event = {days = 2 id = Reid.1433}
+	
 	}
 }
-
+#СВОЕВРЕМЕННАЯ ПОМОЩЬ
 country_event = {
 	id = Reid.1431
 	title = Reid.1431.t
@@ -1294,16 +1340,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1431.a
-	add_political_power = -100
-	add_stability = -0.1
-	add_war_support = -0.1
-	add_manpower = 1
-	clr_country_flag = otriad_nabran
-	clr_country_flag = oriad_ekipirovan
-	clr_country_flag = otriad_obuchen
+	hidden_effect = {
+	60 = { add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 800
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 20
+		}
+		add_manpower = 270
+		}
+		add_equipment_to_stockpile = {
+		type = infantry_odejda
+		amount = 940
+		}
+		army_experience = 10}
+		{ add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1200
+		}
+	}
 	}
 }
-
+#Истебление деревни
 country_event = {
 	id = Reid.1432
 	title = Reid.1432.t
@@ -1312,22 +1372,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1432.a
-	random_list = {
-	30 = {country_event = {days = 2 id = Reid.14321}}
-	30 = {country_event = {days = 2 id = Reid.14322}}
-	40 = {country_event = {days = 2 id = Reid.14323}}
-	}
-	}
-	option = {
-	name = Reid.1432.b
-	country_event = {days = 2 id = Reid.14326}
-	}
-	option = {
-	name = Reid.1432.c
-	country_event = {days = 2 id = Reid.14327}
+
 	}
 }
-
+#Расстрелянная группа
 country_event = {
 	id = Reid.14321
 	title = Reid.14321.t
@@ -1336,24 +1384,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14321.a
-	hidden_effect = {
-	country_event = {days = 2 id = Reid.14325}
-	}
-	}
-	option = {
-	name = Reid.14321.b
-	hidden_effect = {
-	country_event = {days = 2 id = Reid.14324}
-	}
-	}
-	option = {
-	name = Reid.14321.c
-	hidden_effect = {
-	country_event = {days = 2 id = Reid.14324}
-	}
-	}
+	
 }
-
+#Где-то в пустошах(
 country_event = {
 	id = Reid.14322
 	title = Reid.14322.t
@@ -1363,23 +1396,10 @@ country_event = {
 	option = {
 	name = Reid.14322.a
 	hidden_effect = {
-	country_event = {days = 2 id = Reid.14324}
-	}
-	}
-	option = {
-	name = Reid.14322.b
-	hidden_effect = {
-	country_event = {days = 2 id = Reid.14324}
-	}
-	}
-	option = {
-	name = Reid.14322.c
-	hidden_effect = {
-	country_event = {days = 2 id = Reid.14325}
-	}
+		country_event = { id = 14323}
 	}
 }
-
+#На привале
 country_event = {
 	id = Reid.14323
 	title = Reid.14323.t
@@ -1389,23 +1409,34 @@ country_event = {
 	option = {
 	name = Reid.14323.a
 	hidden_effect = {
-	country_event = {days = 2 id = Reid.14324}
-	}
+		country_event = { id = 14324}
+		}
 	}
 	option = {
 	name = Reid.14323.b
 	hidden_effect = {
-	country_event = {days = 2 id = Reid.14324}
-	}
+		country_event = { id = 14325}
+		}
 	}
 	option = {
 	name = Reid.14323.c
-	hidden_effect = {
-	country_event = {days = 2 id = Reid.14325}
+	
 	}
+	option = {
+	name = Reid.14323.d
+	
 	}
-}
+	option = {
+	name = Reid.14323.e
+	
+	}
+	option = {
+	name = Reid.14323.f
+	
+	}
 
+}
+#На охоте
 country_event = {
 	id = Reid.14324
 	title = Reid.14324.t
@@ -1414,15 +1445,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14324.a
-	add_political_power = -100
-	add_stability = -0.05
-	add_war_support = -0.05
-	add_manpower = 1
-	clr_country_flag = otriad_nabran
-	clr_country_flag = oriad_ekipirovan
-	clr_country_flag = otriad_obuchen
+	
+	}
+	option = {
+	name = Reid.14324.b
+	
 	}
 }
+#Одинокая хижина
 country_event = {
 	id = Reid.14325
 	title = Reid.14325.t
@@ -1431,33 +1461,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14325.a
-	add_tech_bonus = {
-    bonus = 0.9
-    uses = 1
-    category = armor
+
 	}
-	add_tech_bonus = {
-    bonus = 0.9
-    uses = 1
-    category = artillery
-	}
-	add_tech_bonus = {
-    bonus = 0.9
-    uses = 1
-    category = infantry_tech
-	}
-	add_doctrine_cost_reduction = {
-	cost_reduction = 0.9
-	uses = 2
-	category = land_doctrine
-	}
-	add_political_power = 150
-	add_stability = 0.05
-	add_war_support = 0.05
-	add_manpower = 1500
+	option = {
+	name = Reid.14325.b
+	
 	}
 }
-
+#Забытый бункер
 country_event = {
 	id = Reid.14326
 	title = Reid.14326.t
@@ -1466,16 +1477,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14326.a
-	add_political_power = -100
-	add_stability = -0.05
-	add_war_support = -0.05
-	add_manpower = 1
-	clr_country_flag = otriad_nabran
-	clr_country_flag = oriad_ekipirovan
-	clr_country_flag = otriad_obuchen
+	
+	}
+	option = {
+	name = Reid.14326.b
 	}
 }
-
+#РЫЖИЙЛЕС
 country_event = {
 	id = Reid.14327
 	title = Reid.14327.t
@@ -1484,16 +1492,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14327.a
-	add_political_power = -100
-	add_stability = -0.05
-	add_war_support = -0.05
-	clr_country_flag = otriad_nabran
-	clr_country_flag = oriad_ekipirovan
-	clr_country_flag = otriad_obuchen
+	
+	}
+	option = {
+	name = Reid.14327.b
+	
 	}
 }
 
-
+#Успешный взлом
 country_event = {
 	id = Reid.1433
 	title = Reid.1433.t
@@ -1502,118 +1509,34 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1433.a
-	add_political_power = -10
-	add_manpower = 1500
+	
 	}
 	option = {
 	name = Reid.1433.b
-	country_event = {days = 2 id = Reid.14}
+	
 	}
 }
+country_event = {
+	id = Reid.14328
+	title = Reid.14328.t
+	desc = Reid.14328.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.14328.a
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	}
+}
+#Секретая база
 country_event = {
 	id = Reid.999
 	title = Reid.999.t
 	desc = Reid.999.d
-	picture = GFX_DRAAAKON
+	picture = event_Ar_start
 	is_triggered_only = yes
 	option = {
 	name = Reid.999.a
-	custom_effect_tooltip = drakon
-#	hidden_effect = {
-	add_political_power = -50
-	add_stability = -0.1
-	add_war_support = -0.1
-	add_manpower = 15
-#	}
-		clr_country_flag = otriad_nabran
-		clr_country_flag = oriad_ekipirovan
-		clr_country_flag = otriad_obuchen
-	}
-	option = {
-	name = Reid.999.b
-	custom_effect_tooltip = drakon1
-	add_political_power = -100
-	add_stability = -0.2
-	add_war_support = -0.2
-	add_manpower = 1
-	clr_country_flag = otriad_nabran
-	clr_country_flag = oriad_ekipirovan
-	clr_country_flag = otriad_obuchen
-	}
-	option = {
-	name = Reid.999.c
-	custom_effect_tooltip = drakon2
-	add_political_power = 100
-	add_stability = 0.25
-	add_war_support = 0.25
-	add_manpower = 1500
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 5000
-		}
-		add_equipment_to_stockpile = {
-		type = infantry_odejda_0
-		amount = 5000
-		}
-		add_equipment_to_stockpile = {
-		type = support_equipment
-		amount = 2000
-		}
-		add_equipment_to_stockpile = {
-		type = artillery_equipment
-		amount = 400
-		}
-		add_equipment_to_stockpile = {
-		type = motorized_equipment
-		amount = 500
-		}
-	}
-	option = {
-	name = Reid.999.r
-	custom_effect_tooltip = drakon3
-	add_political_power = 200
-	add_stability = 0.3
-	add_war_support = 0.3
-	add_manpower = 1501
-	custom_effect_tooltip = drakon5
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 10000
-		}
-		add_equipment_to_stockpile = {
-		type = infantry_odejda_0
-		amount = 10000
-		}
-		add_equipment_to_stockpile = {
-		type = support_equipment
-		amount = 6000
-		}
-		add_equipment_to_stockpile = {
-		type = artillery_equipment
-		amount = 4000
-		}
-		add_equipment_to_stockpile = {
-		type = motorized_equipment
-		amount = 8000
-		}
-		custom_effect_tooltip = drakon4	
+
 	}
 }
 
@@ -1621,41 +1544,293 @@ country_event = {
 
 
 
-
+#Глубокое погружение
 country_event = {
 	id = Reid.1000
 	title = Reid.1000.t
 	desc = Reid.1000.d
-	picture = GFX_DRAAAKON
+	picture = event_Ar_start
 	is_triggered_only = yes
 	option = {
 	name = Reid.1000.a
+	hidden_effect = {
+	country_event = { id = 1000 }
+		}
+	}
+	option = {
+	name = Reid.1000.b
+	}
+	option = {
+	name = Reid.1000.c
+	}
+	option = {
+	name = Reid.1000.d
+	}
+	option = {
+	name = Reid.1000.e
 	}
 }
+#ТУРЕЛИ
 country_event = {
 	id = Reid.1001
 	title = Reid.1001.t
 	desc = Reid.1001.d
-	picture = GFX_DRAAAKON
+	picture = event_Ar_start
 	is_triggered_only = yes
 	option = {
 	name = Reid.1001.a
 	}
+	option = {
+	name = Reid.1001.a
+	}
+	option = {
+	name = Reid.1001.a
+	}
 }
+#Успешная ликвидация
 country_event = {
 	id = Reid.1002
 	title = Reid.1002.t
 	desc = Reid.1002.d
-	picture = GFX_DRAAAKON
+	picture = event_Ar_start
 	is_triggered_only = yes
 	option = {
 	name = Reid.1002.a
 	}
 }
+#якобы успешня ликвидация
+country_event = {
+	id = Reid.1003
+	title = Reid.1003.t
+	desc = Reid.1003.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1003.a
+	}
+}
+#В логове бандитов
+country_event = {
+	id = Reid.1004
+	title = Reid.1004.t
+	desc = Reid.1004.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1004.a
+	random_list = {
+		50 = {
+		country_event = { id = Reid.1005 }
+			}	
+		50 = {
+		country_event = { id = Reid.1006 }
+			}
+		}
+	}
+}
+#рАСТРЕЛЛЯНАЯ ГРУППА
+country_event = {
+	id = Reid.1005
+	title = Reid.1005.t
+	desc = Reid.1005.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1005.a
+	
+	}
+}
+#Успешная ликвидация 2
+country_event = {
+	id = Reid.1006
+	title = Reid.1006.t
+	desc = Reid.1006.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1006.a
+	}
+}
+#тайная секта
+country_event = {
+	id = Reid.1007
+	title = Reid.1007.t
+	desc = Reid.1007.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1007.a
+	hidden_effect = {
+		country_event = { id = Reid.1007}
+	}
+	option = {
+	name = Reid.1007.b
+	hidden_effect = { id = Reid.1008}
+	}
+}
+#НЕОБХОДИМАЯ ЖЕРТАВА?
+id = Reid.1008
+	title = Reid.1007.t
+	desc = Reid.1007.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1007.a
+	}
+}
+#ТОПЛИВО ДЛЯ ТЕМНЫХ СИЛ
+id = Reid.1009
+	title = Reid.1008.t
+	desc = Reid.1008.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1008.a
+	}
+}
+#прокаженная группа
+id = Reid.1010
+	title = Reid.1010.t
+	desc = Reid.1010.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1010.a
+	add_to_variable = { profesionalzm_oriada = -0.5 }
+	}
+}
+#съеденная группа
+id = Reid.1011
+	title = Reid.1011.t
+	desc = Reid.1011.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1011.a
+	add_to_variable = { profesionalzm_oriada = -0.5 }
+	}
+}
+#УСПЕХ!
+id = Reid.1012
+	title = Reid.1012.t
+	desc = Reid.1012.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1012.a
+	}
+}
+#НЕУДАЧА
+id = Reid.1013
+	title = Reid.1013.t
+	desc = Reid.1013.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1013.a
+	}
+}
+#кОлеги
+id = Reid.1014
+	title = Reid.1014.t
+	desc = Reid.1014.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1014.a
+	}
+	option = {
+	name = Reid.1014.b
+	}
+	option = {
+	name = Reid.1014.c
+	}
+}
+#злые кОлеги
+id = Reid.1015
+	title = Reid.1015.t
+	desc = Reid.1015.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1015.a
+	}
+	option = {
+	name = Reid.1015.b
+	}
+}
+#честная сделка?
+id = Reid.1016
+	title = Reid.1016.t
+	desc = Reid.1016.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1016.a
+	}
+	option = {
+	name = Reid.1016.b
+	}
+	option = {
+	name = Reid.1016.c
+	}
+}
+#Расстрелянная группа
+id = Reid.1017
+	title = Reid.1017.t
+	desc = Reid.1017.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1017.a
+	add_to_variable = { profesionalzm_oriada = -0.5 }
+	}
+}
+#Истебление группы
+id = Reid.1018
+	title = Reid.1018.t
+	desc = Reid.1018.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	add_to_variable = { profesionalzm_oriada = -0.5 }
+	name = Reid.1018.a
+	}
+}
 
 
 
 
-
-
-
+#Пасхалочная фигня
+#Лазерный резак
+id = Reid.1019
+	title = Reid.1019.t
+	desc = Reid.1019.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1019.a
+	}
+	option = {
+	name = Reid.1019.b
+	}
+}
+#домик лесника (в глуши)
+id = Reid.1020
+	title = Reid.1020.t
+	desc = Reid.1020.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1020.a
+	}
+	option = {
+	name = Reid.1020.b
+	}
+	option = {
+	name = Reid.1020.c
+	}
+	option = {
+	name = Reid.1020.d
+	}
+}
