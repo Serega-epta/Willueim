@@ -8,7 +8,7 @@
 
 Reid_category = {
 	Sobrat_prinud_nalog = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_generic_document
 		priority = 10
 		ai_will_do = {
 		base = 100
@@ -33,7 +33,7 @@ Reid_category = {
 		cost = 40
 	}
 	Reid_na_band_form = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_generic_document
 		priority = 7
 		allowed = { always = yes }
 		available = {
@@ -63,7 +63,7 @@ Reid_category = {
 
 	
 	Issled_anom = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_generic_document
 		priority = 1
 		allowed = { OR = {has_government = technocracies has_government = patriots has_government = gelerteria has_government = professariat} }
 		available = {
