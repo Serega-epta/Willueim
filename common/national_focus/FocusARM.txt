@@ -1,0 +1,291 @@
+﻿focus_tree = {
+	id = ARM_focus_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARM
+		}
+	}
+
+	default = no
+
+	initial_show_position = {
+		focus = politic_ARM
+	}
+
+	focus = {
+		id = politic_ARM
+		icon = GFX_
+		x = 9
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_command_power = 20
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic1_ARM
+		icon = GFX_
+		prerequisite = { focus = politic_ARM }
+		x = 9
+		y = 1
+		relative_position_ = politic_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic2_ARM
+		icon = GFX_
+		prerequisite = { focus = politic1_ARM }
+		x = 11
+		y = 2
+		relative_position_ = politic_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic3_ARM
+		icon = GFX_
+		prerequisite = { focus = politic1_ARM }
+		x = 7
+		y = 2
+		relative_position_ = politic_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic4_ARM
+		icon = GFX_
+		prerequisite = { focus = politic3_ARM }
+		x = 7
+		y = 3
+		relative_position_ = politic3_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic5_ARM
+		icon = GFX_
+		prerequisite = { focus = politic2_ARM }
+		x = 11
+		y = 3
+		relative_position_ = politic2_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic6_ARM
+		icon = GFX_
+		prerequisite = { focus = politic4_ARM }
+		x = 7
+		y = 4
+		relative_position_ = politic4_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic7_ARM
+		icon = GFX_
+		prerequisite = { focus = politic6_ARM }
+		mutually_exclusive = { focus = politic8_ARM }
+		x = 6
+		y = 5
+		relative_position_ = politic6_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic8_ARM
+		icon = GFX_
+		prerequisite = { focus = politic6_ARM }
+		mutually_exclusive = { focus = politic7_ARM }
+		x = 8
+		y = 5
+		relative_position_ = politic6_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic9_ARM
+		icon = GFX_
+		prerequisite = { focus = politic7_ARM focus = politic8_ARM }
+		mutually_exclusive = { focus = politic10_ARM }
+		x = 8
+		y = 6
+		relative_position_ = politic7_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic10_ARM
+		icon = GFX_
+		prerequisite = { focus = politic8_ARM focus = politic7_ARM }
+		mutually_exclusive = { focus = politic9_ARM }
+		x = 6
+		y = 6
+		relative_position_ = politic8_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic11_ARM
+		icon = GFX_
+		prerequisite = { focus = politic9_ARM focus = politic10_ARM }
+		x = 7
+		y = 7
+		relative_position_ = politic8_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic12_ARM
+		icon = GFX_
+		prerequisite = { focus = politic11_ARM }
+		x = 7
+		y = 8
+		relative_position_ = politic11_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic13_ARM
+		icon = GFX_
+		prerequisite = { focus = politic12_ARM }
+		x = 7
+		y = 9
+		relative_position_ = politic12_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic14_ARM
+		icon = GFX_
+		prerequisite = { focus = politic13_ARM }
+		x = 7
+		y = 10
+		relative_position_ = politic13_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic15_ARM
+		icon = GFX_
+		prerequisite = { focus = politic14_ARM }
+		x = 7
+		y = 11
+		relative_position_ = politic14_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic16_ARM
+		icon = GFX_
+		prerequisite = { focus = politic5_ARM }
+		mutually_exclusive = { focus = politic17_ARM }
+		x = 12
+		y = 4
+		relative_position_ = politic6_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = politic17_ARM
+		icon = GFX_
+		prerequisite = { focus = politic5_ARM }
+		mutually_exclusive = { focus = politic16_ARM }
+		x = 10
+		y = 4
+		relative_position_ = politic5_ARM
+		cost = 10
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}

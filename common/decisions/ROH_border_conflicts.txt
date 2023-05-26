@@ -8,7 +8,7 @@
 
 Reid_category = {
 	Sobrat_prinud_nalog = {
-		icon = GFX_decision_generic_document
+		icon = ger_mefo_bills
 		priority = 10
 		ai_will_do = {
 		base = 100
@@ -33,7 +33,7 @@ Reid_category = {
 		cost = 40
 	}
 	Reid_na_band_form = {
-		icon = GFX_decision_generic_document
+		icon = ger_mefo_bills
 		priority = 7
 		allowed = { always = yes }
 		available = {
@@ -63,7 +63,7 @@ Reid_category = {
 
 	
 	Issled_anom = {
-		icon = GFX_decision_generic_document
+		icon = ger_mefo_bills
 		priority = 1
 		allowed = { OR = {has_government = technocracies has_government = patriots has_government = gelerteria has_government = professariat} }
 		available = {
@@ -82,6 +82,175 @@ Reid_category = {
 		
 		days_remove = 180
 		days_re_enable = 60
+		
+		cost = 10
+	}
+	Obryad = {
+		icon = ger_mefo_bills
+		priority = 1
+		allowed = { has_government = sacraments }
+		available = {
+		}
+	ai_will_do = {
+		base = 100
+		}
+		visible = {
+			has_government = sacraments
+		}
+		complete_effect = {add_political_power = 25 add_stability = 0.01}
+		modifier = {political_power_factor = -0.01} 
+		
+		days_remove = 14
+		days_re_enable = 90
+		
+		cost = 0
+	}
+	Dosmotr_in_dorogi = {
+		icon = ger_mefo_bills
+		priority = 99
+		allowed = { always = yes}
+		available = {
+		has_political_power > 10
+		NOT = {has_idea = Dosmotr_in_Dorogi_reid}
+		}
+	ai_will_do = {
+		base = 100
+		}
+		visible = {
+		NOT = {has_idea = Dosmotr_in_Dorogi_reid}
+		}
+		remove_effect = {add_ideas = {Dosmotr_in_Dorogi_reid}}
+		modifier = {political_power_gain = -0.01}
+		
+		days_remove = 14
+		days_re_enable = 90
+		
+		cost = 10
+	}
+	NOT_Dosmotr_in_dorogi = {
+		icon = ger_mefo_bills
+		priority = 99
+		allowed = { always = yes}
+		available = {
+		has_political_power > 10
+		has_idea = Dosmotr_in_Dorogi_reid
+		}
+	ai_will_do = {
+		base = 0
+		}
+		visible = {
+		has_idea = Dosmotr_in_Dorogi_reid
+		}
+		remove_effect = {remove_ideas = {Dosmotr_in_Dorogi_reid}}
+		modifier = {political_power_gain = -0.01}
+		
+		days_remove = 14
+		days_re_enable = 90
+		
+		cost = 10
+	}
+	Ukreplenie_gran = {
+		icon = ger_mefo_bills
+		priority = 98
+		allowed = { always = yes}
+		available = {
+		has_political_power > 20
+		OR = {
+		NOT = {has_idea = Ukreplenie_gran_1_reid}
+		NOT = {has_idea = Ukreplenie_gran_2_reid}}
+		}
+	ai_will_do = {
+		base = 5
+		modifier = {
+			NOT = {
+			AND = {
+			OR = { has_government = free  has_government = bandits has_government = forestry}
+			has_war = yes}}
+			factor = 20
+		}
+		}
+		visible = {
+		OR = {
+		NOT = {has_idea = Ukreplenie_gran_1_reid}
+		NOT = {has_idea = Ukreplenie_gran_2_reid}}
+		}
+		remove_effect = {
+		if = { limit = { has_idea = Ukreplenie_gran_1_reid} swap_ideas = {remove_idea = Ukreplenie_gran_1_reid add_idea = Ukreplenie_gran_2_reid}}
+		if = { limit = { Not = {has_idea = Ukreplenie_gran_1_reid}} add_ideas = {Ukreplenie_gran_1_reid}}}
+		modifier = {political_power_gain = -0.01}
+		
+		days_remove = 14
+		days_re_enable = 14
+		
+		cost = 20
+	}
+	NOT_Ukreplenie_gran = {
+		icon = ger_mefo_bills
+		priority = 98
+		allowed = { always = yes}
+		available = {
+		has_political_power > 10
+		OR = {
+		has_idea = Ukreplenie_gran_1_reid
+		has_idea = Ukreplenie_gran_2_reid}
+		}
+	ai_will_do = {
+		base = 1
+		modifier = {
+			has_war = yes
+			factor = 80
+		}}
+		visible = {
+		OR = {
+		has_idea = Ukreplenie_gran_1_reid
+		has_idea = Ukreplenie_gran_2_reid}
+		}
+		remove_effect = {
+		if = { limit = { has_idea = Ukreplenie_gran_1_reid} remove_ideas = {Ukreplenie_gran_1_reid}}
+		if = { limit = { has_idea = Ukreplenie_gran_2_reid} swap_ideas = {remove_idea =  Ukreplenie_gran_2_reid add_idea = Ukreplenie_gran_1_reid}}}
+		modifier = {political_power_gain = -0.01}
+		
+		days_remove = 7
+		days_re_enable = 0
+		
+		cost = 10
+	}
+	Mushtra = {
+		icon = ger_mefo_bills
+		priority = 97
+		allowed = { always = yes}
+		available = {
+		has_political_power > 50
+		has_war = no
+		}
+	ai_will_do = {
+		base = 60
+		}
+		visible = {
+		has_war = no
+		}
+		remove_effect = {army_experience = 10}
+		modifier = {political_power_gain = -0.05 army_org_factor = -0.15 experience_gain_army = 0.2 }
+		
+		days_remove = 70
+		days_re_enable = 90
+		
+		cost = 50
+	}
+	XP_Reid = {
+		icon = ger_mefo_bills
+		priority = 100
+		allowed = { always = yes }
+		available = {
+		has_army_experience > 10
+		has_political_power > 10
+		}
+	ai_will_do = {
+		base = 100
+		}
+		complete_effect = {country_event = {id = Reid.3666}} 
+		
+		days_re_enable = 50
 		
 		cost = 10
 	}
