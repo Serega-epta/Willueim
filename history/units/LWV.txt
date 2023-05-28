@@ -1,0 +1,83 @@
+division_template = {
+	name = "sviatoe_opolchenie"
+	division_names_group = SOV_INF_01
+	regiments = {
+		opolchenie = { x = 0 y = 0 }
+		opolchenie = { x = 1 y = 0 }
+		opolchenie = { x = 0 y = 1 }
+		opolchenie = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "bojiya_dlan"
+	division_names_group = SOV_INF_01
+	regiments = {
+		egerskayapechota  = { x = 0 y = 0 }
+		egerskayapechota  = { x = 1 y = 0 }
+		egerskayapechota  = { x = 0 y = 1 }
+		egerskayapechota  = { x = 1 y = 1 }
+	 	egerskayapechota  = { x = 0 y = 2 }
+		egerskayapechota  = { x = 2 y = 0 }
+		egerskayapechota  = { x = 2 y = 1 }
+		egerskayapechota  = { x = 2 y = 2 }
+		egerskayapechota  = { x = 2 y = 3 }
+	 	egerskayapechota  = { x = 2 y = 4 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }	
+		rhbz = { x = 0 y = 3 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "sviatoe_opolchenie"
+		location = 422
+		division_template = "sviatoe_opolchenie"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "sviatoe_opolchenie"
+		location = 9494
+		division_template = "sviatoe_opolchenie"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "sviatoe_opolchenie"
+		location = 9468
+		division_template = "sviatoe_opolchenie"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "sviatoe_opolchenie"
+		location = 11550
+		division_template = "sviatoe_opolchenie"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	
+	
+	
+	division = {
+		name = "bojiya_dlan"
+		location = 11479
+		division_template = "bojiya_dlan"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+
+}

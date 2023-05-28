@@ -1,0 +1,121 @@
+division_template = {
+	name = "loyalisti"
+	division_names_group = SOV_INF_01
+	regiments = {
+		opolchenie = { x = 0 y = 0 }
+		opolchenie = { x = 1 y = 0 }
+		opolchenie = { x = 0 y = 1 }
+		opolchenie = { x = 1 y = 1 }
+	 	opolchenie = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "bagrovie_luchi"
+	division_names_group = SOV_INF_01
+	regiments = {
+		egerskayapechota  = { x = 0 y = 0 }
+		egerskayapechota  = { x = 1 y = 0 }
+		egerskayapechota  = { x = 0 y = 1 }
+		egerskayapechota  = { x = 1 y = 1 }
+	 	egerskayapechota  = { x = 0 y = 2 }
+		egerskayapechota  = { x = 2 y = 0 }
+		egerskayapechota  = { x = 2 y = 1 }
+		egerskayapechota  = { x = 2 y = 2 }
+		egerskayapechota  = { x = 2 y = 3 }
+	 	egerskayapechota  = { x = 2 y = 4 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		politruk = { x = 0 y = 2 }
+		rhbz = { x = 0 y = 3 }
+		radiolocationborba = { x = 0 y = 4 }
+		military_police = { x = 0 y = 5 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "bagrovie_klinya"
+	division_names_group = SOV_INF_01
+	regiments = {
+		obt_tank = { x = 0 y = 0 }	
+		obt_tank = { x = 0 y = 1 }	
+		obt_tank = { x = 0 y = 2 }	
+		obt_tank = { x = 0 y = 3 }	
+		mechanized = { x = 1 y = 0 }	
+		mechanized = { x = 1 y = 1 }	
+		motopechotanagruzovikah = { x = 2 y = 0 }	
+		motopechotanagruzovikah = { x = 2 y = 1 }	
+		artillery_brigade = { x = 3 y = 0 }	
+		artillery_brigade = { x = 3 y = 1 }	
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "loyalisti"
+		location = 11489
+		division_template = "loyalisti"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "loyalisti"
+		location = 6508
+		division_template = "loyalisti"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "loyalisti"
+		location = 11425
+		division_template = "loyalisti"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "loyalisti"
+		location = 9437
+		division_template = "loyalisti"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "loyalisti"
+		location = 3584
+		division_template = "loyalisti"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "bagrovie_luchi"
+		location = 3480
+		division_template = "bagrovie_luchi"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	
+		division = {
+		name = "bagrovie_klinya"
+		location = 6532
+		division_template = "bagrovie_klinya"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.9
+        	start_manpower_factor = 1.0
+	}
+	
+}

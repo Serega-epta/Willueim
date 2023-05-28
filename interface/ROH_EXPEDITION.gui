@@ -1,15 +1,34 @@
 guiTypes = {
 	containerWindowType = {
 		name = "roh_expedition"
-		size = { width = 100% height = 100 }	
-        	position = { x = 0 y = 0 }
+		size = { width = 600 height = 480 }	
+        position = { x = 0 y = 0 }
+			
+		instantTextboxType = {
+			name = "ooooopisanie"
+			position = { x = 0 y = 250 }
+			font = "hoi_16mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[ex_text]"
+			maxWidth = 500
+			maxHeight = 800
+			fixedsize = yes
+		}
+		
+		iconType = { 
+           name ="dver"
+           spriteType = "GFX_expedition_picture"
+           position = { x= 5 y = 0 }
+        }	
+			
 		containerWindowType = {
 			name = "progressbar"
 			size = { width = 100% height = 100 }
-			position = { x = 0 y = 0 }
+			position = { x = -30 y = 50 }
 	 		iconType = { 
 				name = "expedition_progressbar"
-				position = { x = 25 y = -58 }
+				position = { x = 375 y = 0 }
 				spriteType = "GFX_expedition_progressbar"
 				pdx_tooltip = expedition_progressbar_tt
 			}

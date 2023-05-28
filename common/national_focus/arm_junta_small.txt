@@ -2,10 +2,10 @@ focus_tree = {
 	id = army_junta_small_focus
 	
 	country = {
-		factor = 0
+		factor = 100
 		
 		modifier = {
-			add = 10
+			add = 100
 			tag = ARM
 		}
 	}
@@ -376,7 +376,10 @@ focus_tree = {
 		target = BIH
 		type = annex_everything
 		}
-		hidden_effect = {	
+		hidden_effect = {
+		
+		load_focus_tree = army_junta_unite_focus
+		
 		country_event = {
 		id = ARM.13
 		days = 7		

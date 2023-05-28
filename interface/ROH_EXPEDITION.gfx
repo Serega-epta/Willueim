@@ -1,9 +1,11 @@
 spriteTypes = {
-	progressbartype = { #Кликуха
-		name = "GFX_expedition_progressbar" #Погоняло
-		textureFile1 = "gfx/interface/MEHANIKI/SHKALA_OPITA_100.dds" #Хуя чего-то
-		textureFile2 = "gfx/interface/MEHANIKI/SHKALA_OPITA_0.dds" #Нихуя чего-то
-		size = { x = 51 y = 150 } #В каком подъезде проживает
-		effectFile = "gfx/FX/progress.lua" #Эффекты
+	progressbartype = { 
+		name = "GFX_expedition_progressbar" 
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/MEHANIKI/SHKALA_OPITA_100.dds" 
+		textureFile2 = "gfx/interface/MEHANIKI/SHKALA_OPITA_0.dds"
+		size = { x = 51 y = 150 } 
+		effectFile = "gfx/FX/progress.lua" 
 	}
 }
