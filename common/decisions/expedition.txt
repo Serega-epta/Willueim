@@ -13,11 +13,15 @@ expedition_category = {
 		base = 60
 		}
 		fire_only_once = no
-		days_remove = 60 # время события 
+		days_remove = 1 # время события 
 		# Сразу после события
 		complete_effect = {
 		add_manpower = -1500
 		set_country_flag = otriad_nabran
+		ROOT = {
+		set_variable = { profesionalzm_oriada = 10 }
+		}
+		set_variable = { profesionalzm_oriada = 10 }
 		} 
 		cost = 25
 	}
@@ -111,7 +115,6 @@ expedition_category = {
 	
 	
 	
-	
 	otriad_iskoreniteley = {
 		icon = GFX_decision_generic_document
 		priority = 7
@@ -190,10 +193,6 @@ expedition_category = {
 		cost = 25
 	}
 	
-	
-
-
-
 	
 	
 	brosit_otriad_v_boy = {
