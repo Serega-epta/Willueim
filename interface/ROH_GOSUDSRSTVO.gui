@@ -3,7 +3,7 @@ guiTypes = {
 
    containerWindowType = {
         name = "panel_gosudarstva" 
-        position = { x = -325 y = 10 }		   
+        position = { x = -325 y = -50 }		   
 		size = { width = 550 height = 150 }
 		orientation = center
 		origo = center
@@ -11,95 +11,31 @@ guiTypes = {
 		click_to_front = yes
 		clipping = no
 		
-		instantTextboxType = {
-			name = "zakoni_text"
-			position = { x = 0 y = 0 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = -200 y = 100}
-			text = "ОТКРЫТЬ ЗАКОНЫ"
-			maxWidth = 550
-			maxHeight = 800
-			fixedsize = yes
-		}
-		instantTextboxType = {
-			name = "gos_ustr_text"
-			position = { x = 100 y = 100 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "ОТКРЫТЬ ГОСУДАРСТВЕННОЕ УСТРОЙСТВО"
-			maxWidth = 550
-			maxHeight = 800
-			fixedsize = yes
-		}
-		
-		
-		
 		buttonType ={ 
            name ="BUTTON_Open_okno_zakona"
-		   position = { x= 25 y= 0 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 40 y= 15 }
+		   quadTextureSprite = "GFX_button_221x34"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   text = ""
+		   text = "ОКНО ЗАКОНОВ"
 		   clicksound = click_close
         }
 		buttonType ={ 
            name ="BUTTON_Open_okno_gosustroistva"
-		   position = { x= 325 y= 0 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 280 y= 15 }
+		   quadTextureSprite = "GFX_button_221x34"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   text = ""
+		   text = "ОКНО ГОСУДАРСТВА"
 		   clicksound = click_close
-        }
-	
-	
-	
-	
-	
-	   background = {
-			name = "Background1"	
-			spriteType = "GFX_tiled_window"
-		}	  
+        }	  
    }
-   ################################### сюда законы
-   containerWindowType = {
-        name = "Okno_zakona" 
-        position = { x = -325 y = 350 }		   
-		size = { width = 550 height = 600 }
-		orientation = center
-		origo = center
-		moveable = no
-		click_to_front = no
-		clipping = no
-		
-		instantTextboxType = {
-			name = "zaakoni_text"
-			position = { x = 0 y = 100 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "ну здесь в общем то законы будут"
-			maxWidth = 550
-			maxHeight = 800
-			fixedsize = yes
-		}
-	
-		
-	   background = {
-			name = "Background2"	
-			spriteType = "GFX_tiled_window"
-		}	  
-   }
-   
-   
+
     ################################### сюда гос устройство
       containerWindowType = {
         name = "Okno_gosustroistva" 
         position = { x = -325 y = 350 }		   
-		size = { width = 550 height = 600 }
+		size = { width = 550 height = 850 }
 		orientation = center
 		origo = center
 		moveable = no
@@ -108,7 +44,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "military_sfera_text"
-			position = { x = 0 y = 140 }
+			position = { x = 0 y = 150 }
 			font = "hoi_18mbs"
 			format = center
 			borderSize = {x = 0 y = 0}
@@ -120,7 +56,7 @@ guiTypes = {
 				
 		instantTextBoxType = {
 			name ="kaznatekxt"
-			position = { x = 110 y = 10 }
+			position = { x = 110 y = 20 }
 			font = "hoi_18mbs"
 			text = "Имеется: [?ochki_gos_progressa|G] Очков государственных реформ"
 			maxWidth = 350
@@ -136,8 +72,8 @@ guiTypes = {
 		
 		buttonType ={ 
            name ="BUTTON_Open_okno_military_system"
-		   position = { x= 230 y= 30 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 230 y= 40 }
+		   quadTextureSprite = "GFX_okno_military_system"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "military_system_button_tt"
@@ -145,7 +81,7 @@ guiTypes = {
         }	
 		instantTextboxType = {
 			name = "civil_sfra_text"
-			position = { x = 0 y = 270 }
+			position = { x = 0 y = 300 }
 			font = "hoi_18mbs"
 			format = center
 			borderSize = {x = 0 y = 0}
@@ -156,8 +92,8 @@ guiTypes = {
 		}
 		buttonType ={ 
            name ="BUTTON_Open_okno_civil_system"
-		   position = { x= 230 y= 160 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 230 y= 190 }
+		   quadTextureSprite = "GFX_okno_civil_system"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "civil_system_button_tt"
@@ -165,7 +101,7 @@ guiTypes = {
         }	
 		instantTextboxType = {
 			name = "state_sfra_text"
-			position = { x = 0 y = 400 }
+			position = { x = 0 y = 470 }
 			font = "hoi_18mbs"
 			format = center
 			borderSize = {x = 0 y = 0}
@@ -176,8 +112,8 @@ guiTypes = {
 		}
 		buttonType ={ 
            name ="BUTTON_Open_okno_ststegos_system"
-		   position = { x= 230 y= 290 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 230 y= 360 }
+		   quadTextureSprite = "GFX_okno_ststegos_system"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "ststegos_system_button_tt"
@@ -220,7 +156,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_bonus_m"
 		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   quadTextureSprite = "GFX_MeSaNa_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1milita_tt"
@@ -229,7 +165,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_bonus_m1"
 		   position = { x= 420 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   quadTextureSprite = "GFX_Samoilov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "2milita_tt"
@@ -237,8 +173,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m2"
-		   position = { x= 420 y= 390 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 420 y= 400 }
+		   quadTextureSprite = "GFX_Samoilov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "3milita_tt"
@@ -246,8 +182,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m3"
-		   position = { x= 420 y= 580 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 420 y= 550 }
+		   quadTextureSprite = "GFX_Samoilov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "4milita_tt"
@@ -255,8 +191,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m4"
-		   position = { x= 420 y= 750 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 420 y= 700 }
+		   quadTextureSprite = "GFX_Samoilov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "5milita_tt"
@@ -264,8 +200,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m5"
-		   position = { x= 420 y= 900 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 420 y= 850 }
+		   quadTextureSprite = "GFX_Samoilov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "6milita_tt"
@@ -274,7 +210,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_bonus_m6"
 		   position = { x= 130 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   quadTextureSprite = "GFX_Menshikov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "7milita_tt"
@@ -282,8 +218,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m7"
-		   position = { x= 130 y= 390 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 130 y= 400 }
+		   quadTextureSprite = "GFX_Menshikov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "8milita_tt"
@@ -291,8 +227,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m8"
-		   position = { x= 130 y= 580 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 130 y= 550 }
+		   quadTextureSprite = "GFX_Menshikov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "9milita_tt"
@@ -300,8 +236,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m9"
-		   position = { x= 130 y= 750 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 130 y= 700 }
+		   quadTextureSprite = "GFX_Menshikov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "10milita_tt"
@@ -309,8 +245,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m10"
-		   position = { x= 130 y= 900 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 130 y= 850 }
+		   quadTextureSprite = "GFX_Menshikov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "11milita_tt"
@@ -319,7 +255,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_bonus_m11"
 		   position = { x= 730 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   quadTextureSprite = "GFX_Naumov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "12milita_tt"
@@ -327,8 +263,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m12"
-		   position = { x= 730 y= 390 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 730 y= 400 }
+		   quadTextureSprite = "GFX_Naumov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "13milita_tt"
@@ -336,8 +272,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m13"
-		   position = { x= 730 y= 580 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 730 y= 550 }
+		   quadTextureSprite = "GFX_Naumov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "14milita_tt"
@@ -345,8 +281,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m14"
-		   position = { x= 730 y= 750 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 730 y= 700 }
+		   quadTextureSprite = "GFX_Naumov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "15milita_tt"
@@ -354,8 +290,9 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_m15"
-		   position = { x= 730 y= 900 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   position = { x= 730 y= 850 }
+		   quadTextureSprite = "GFX_Naumov_add"
+		   quadTextureSprite = "GFX_Naumov_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "16milita_tt"
@@ -379,7 +316,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_1bonus_m"
 		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   quadTextureSprite = "GFX_MeSaNa_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17milita_tt"
@@ -388,7 +325,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_2bonus_m1"
 		   position = { x= 420 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   quadTextureSprite = "GFX_Samoilov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "18milita_tt"
@@ -396,8 +333,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_3bonus_m2"
-		   position = { x= 420 y= 390 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 420 y= 400 }
+		   quadTextureSprite = "GFX_Samoilov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "19milita_tt"
@@ -405,8 +342,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_4bonus_m3"
-		   position = { x= 420 y= 580 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 420 y= 550 }
+		   quadTextureSprite = "GFX_Samoilov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "20milita_tt"
@@ -414,8 +351,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_5bonus_m4"
-		   position = { x= 420 y= 750 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 420 y= 700 }
+		   quadTextureSprite = "GFX_Samoilov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "21milita_tt"
@@ -423,8 +360,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_6bonus_m5"
-		   position = { x= 420 y= 900 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 420 y= 850 }
+		   quadTextureSprite = "GFX_Samoilov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "22milita_tt"
@@ -433,7 +370,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_7bonus_m6"
 		   position = { x= 130 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   quadTextureSprite = "GFX_Menshikov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "23milita_tt"
@@ -441,8 +378,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_8bonus_m7"
-		   position = { x= 130 y= 390 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 130 y= 400 }
+		   quadTextureSprite = "GFX_Menshikov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "24milita_tt"
@@ -450,8 +387,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_9bonus_m8"
-		   position = { x= 130 y= 580 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 130 y= 550 }
+		   quadTextureSprite = "GFX_Menshikov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "25milita_tt"
@@ -459,8 +396,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_10bonus_m9"
-		   position = { x= 130 y= 750 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 130 y= 700 }
+		   quadTextureSprite = "GFX_Menshikov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "26milita_tt"
@@ -468,8 +405,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_11bonus_m10"
-		   position = { x= 130 y= 900 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 130 y= 850 }
+		   quadTextureSprite = "GFX_Menshikov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "27milita_tt"
@@ -478,7 +415,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_12bonus_m11"
 		   position = { x= 730 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   quadTextureSprite = "GFX_Naumov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "28milita_tt"
@@ -486,8 +423,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_13bonus_m12"
-		   position = { x= 730 y= 390 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 730 y= 400 }
+		   quadTextureSprite = "GFX_Naumov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "29milita_tt"
@@ -495,8 +432,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_14bonus_m13"
-		   position = { x= 730 y= 580 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 730 y= 550 }
+		   quadTextureSprite = "GFX_Naumov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "30milita_tt"
@@ -504,8 +441,8 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_15bonus_m14"
-		   position = { x= 730 y= 750 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 730 y= 700 }
+		   quadTextureSprite = "GFX_Naumov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "31milita_tt"
@@ -513,19 +450,23 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_16bonus_m15"
-		   position = { x= 730 y= 900 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   position = { x= 730 y= 850 }
+		   quadTextureSprite = "GFX_Naumov_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "32milita_tt"
 		   clicksound = click_close
         }
 		
+		iconType = {
+			name ="liniya"
+			position = { x= 105 y= 83 }
+			quadTextureSprite = "GFX_liniya"
+		}
 		
-		
-	   background = {
+	    background = {
 			name = "Background4"	
-			spriteType = "GFX_fon"
+			spriteType = "GFX_tiled_window"
 		}	  
     }
    
@@ -557,7 +498,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_bonus_c"
 		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   quadTextureSprite = "GFX_MeSaNa_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1civill_tt"
@@ -574,7 +515,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c2"
-		   position = { x= 420 y= 390 }
+		   position = { x= 420 y= 400 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -583,7 +524,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c3"
-		   position = { x= 420 y= 580 }
+		   position = { x= 420 y= 550 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -592,7 +533,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c4"
-		   position = { x= 420 y= 750 }
+		   position = { x= 420 y= 700 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -601,7 +542,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c5"
-		   position = { x= 420 y= 900 }
+		   position = { x= 420 y= 850 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -619,7 +560,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c7"
-		   position = { x= 130 y= 390 }
+		   position = { x= 130 y= 400 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -628,7 +569,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c8"
-		   position = { x= 130 y= 580 }
+		   position = { x= 130 y= 550 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -637,7 +578,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c9"
-		   position = { x= 130 y= 750 }
+		   position = { x= 130 y= 700 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -646,7 +587,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c10"
-		   position = { x= 130 y= 900 }
+		   position = { x= 130 y= 850 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -664,7 +605,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c12"
-		   position = { x= 730 y= 390 }
+		   position = { x= 730 y= 400 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -673,7 +614,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c13"
-		   position = { x= 730 y= 580 }
+		   position = { x= 730 y= 550 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -682,7 +623,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c14"
-		   position = { x= 730 y= 750 }
+		   position = { x= 730 y= 700 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -691,7 +632,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_c15"
-		   position = { x= 730 y= 900 }
+		   position = { x= 730 y= 850 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -716,7 +657,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_1bonus_c"
 		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   quadTextureSprite = "GFX_MeSaNa_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17civill_tt"
@@ -733,7 +674,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_3bonus_c2"
-		   position = { x= 420 y= 390 }
+		   position = { x= 420 y= 400 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -742,7 +683,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_4bonus_c3"
-		   position = { x= 420 y= 580 }
+		   position = { x= 420 y= 550 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -751,7 +692,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_5bonus_c4"
-		   position = { x= 420 y= 750 }
+		   position = { x= 420 y= 700 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -760,7 +701,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_6bonus_c5"
-		   position = { x= 420 y= 900 }
+		   position = { x= 420 y= 850 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -778,7 +719,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_8bonus_c7"
-		   position = { x= 130 y= 390 }
+		   position = { x= 130 y= 400 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -787,7 +728,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_9bonus_c8"
-		   position = { x= 130 y= 580 }
+		   position = { x= 130 y= 550 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -796,7 +737,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_10bonus_c9"
-		   position = { x= 130 y= 750 }
+		   position = { x= 130 y= 700 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -805,7 +746,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_11bonus_c10"
-		   position = { x= 130 y= 900 }
+		   position = { x= 130 y= 850 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -823,7 +764,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_13bonus_c12"
-		   position = { x= 730 y= 390 }
+		   position = { x= 730 y= 400 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -832,7 +773,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_14bonus_c13"
-		   position = { x= 730 y= 580 }
+		   position = { x= 730 y= 550 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -841,7 +782,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_15bonus_c14"
-		   position = { x= 730 y= 750 }
+		   position = { x= 730 y= 700 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -850,13 +791,19 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_16bonus_c15"
-		   position = { x= 730 y= 900 }
+		   position = { x= 730 y= 850 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "32civill_tt"
 		   clicksound = click_close
         }
+		
+		iconType = {
+			name ="liniya1"
+			position = { x= 105 y= 83 }
+			quadTextureSprite = "GFX_liniya"
+		}		
 		
 	   background = {
 			name = "Background5"	
@@ -892,7 +839,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_bonus_g"
 		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_lisa_off"
+		   quadTextureSprite = "GFX_MeSaNa_add"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1gos_tt"
@@ -909,7 +856,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g2"
-		   position = { x= 420 y= 390 }
+		   position = { x= 420 y= 400 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -918,7 +865,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g3"
-		   position = { x= 420 y= 580 }
+		   position = { x= 420 y= 550 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -927,7 +874,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g4"
-		   position = { x= 420 y= 750 }
+		   position = { x= 420 y= 700 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -936,7 +883,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g5"
-		   position = { x= 420 y= 900 }
+		   position = { x= 420 y= 850 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -954,7 +901,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g7"
-		   position = { x= 130 y= 390 }
+		   position = { x= 130 y= 400 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -963,7 +910,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g8"
-		   position = { x= 130 y= 580 }
+		   position = { x= 130 y= 550 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -972,7 +919,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g9"
-		   position = { x= 130 y= 750 }
+		   position = { x= 130 y= 700 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -981,7 +928,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g10"
-		   position = { x= 130 y= 900 }
+		   position = { x= 130 y= 850 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -999,7 +946,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g12"
-		   position = { x= 730 y= 390 }
+		   position = { x= 730 y= 400 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1008,7 +955,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g13"
-		   position = { x= 730 y= 580 }
+		   position = { x= 730 y= 550 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1017,7 +964,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g14"
-		   position = { x= 730 y= 750 }
+		   position = { x= 730 y= 700 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1026,7 +973,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_bonus_g15"
-		   position = { x= 730 y= 900 }
+		   position = { x= 730 y= 850 }
 		   quadTextureSprite = "GFX_lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1040,7 +987,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_start_1bonus_g"
 		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_lisa_on"
+		   quadTextureSprite = "GFX_MeSaNa_added"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17gos_tt"
@@ -1057,7 +1004,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_3bonus_g2"
-		   position = { x= 420 y= 390 }
+		   position = { x= 420 y= 400 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1066,7 +1013,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_4bonus_g3"
-		   position = { x= 420 y= 580 }
+		   position = { x= 420 y= 550 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1075,7 +1022,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_5bonus_g4"
-		   position = { x= 420 y= 750 }
+		   position = { x= 420 y= 700 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1084,7 +1031,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_6bonus_g5"
-		   position = { x= 420 y= 900 }
+		   position = { x= 420 y= 850 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1102,7 +1049,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_8bonus_g7"
-		   position = { x= 130 y= 390 }
+		   position = { x= 130 y= 400 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1111,7 +1058,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_9bonus_g8"
-		   position = { x= 130 y= 580 }
+		   position = { x= 130 y= 550 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1120,7 +1067,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_10bonus_g9"
-		   position = { x= 130 y= 750 }
+		   position = { x= 130 y= 700 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1129,7 +1076,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_11bonus_g10"
-		   position = { x= 130 y= 900 }
+		   position = { x= 130 y= 850 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1147,7 +1094,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_13bonus_g12"
-		   position = { x= 730 y= 390 }
+		   position = { x= 730 y= 400 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1156,7 +1103,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_14bonus_g13"
-		   position = { x= 730 y= 580 }
+		   position = { x= 730 y= 550 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1165,7 +1112,7 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_15bonus_g14"
-		   position = { x= 730 y= 750 }
+		   position = { x= 730 y= 700 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
@@ -1174,16 +1121,23 @@ guiTypes = {
         }
 		buttonType ={ 
            name ="BUTTON_start_16bonus_g15"
-		   position = { x= 730 y= 900 }
+		   position = { x= 730 y= 850 }
 		   quadTextureSprite = "GFX_lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "32gos_tt"
 		   clicksound = click_close
         }	
+		
+		iconType = {
+			name ="liniya2"
+			position = { x= 105 y= 83 }
+			quadTextureSprite = "GFX_liniya"
+		}
+		
 	   background = {
 			name = "Background6"	
-			spriteType = "GFX_fon2"
+			spriteType = "GFX_tiled_window"
 		}	  
     }
  
