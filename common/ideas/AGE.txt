@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		AGE_1 = {
+		AGE_splitting_the_discipline = {		#Расщепление дисциплины
 			
 			allowed = {
 				always = no
@@ -14,10 +14,31 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = –0.05
-				war_support_factor = 0.1
-				Defence = -0.1
-				Offence = 0.1
+				experience_gain_army = -0.5
+				max_command_power = -100
+				offence = -0.1
+				defence = -0.1
+				army_speed_factor = -0.05
+				max_planning = -0.15
+				planning_speed = -0.15
+				max_army_group_size = -2
+				max_commander_army_size = -12
 				
 			}
 		}
+		AGE_warrior_spirit = {			#Дух воинов
+			picture = Dukh_voinov		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				offence = 0.1
+				defence = 0.1			
+			}
+		}
+	}
+}

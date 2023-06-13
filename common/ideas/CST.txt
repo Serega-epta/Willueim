@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		EEEGOSPOD = {
+		CST_In_the_name_of_survivors = {			#Во имя выживших
 			
 			allowed = {
 				always = no
@@ -14,12 +14,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.05
-				Defence = 0.1
-				Offence = 0.1
-
-
-
-				
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				monthly_population = 0.1	
 			}
 		}
+	}
+}

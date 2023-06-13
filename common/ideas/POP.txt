@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		terror = {
+		POP_total_terror = {		#ТОТАЛЬНЫЙ террор
 			
 			allowed = {
 				always = no
@@ -14,11 +14,16 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = –0.1
-				war_support_factor = -0.1
-				Defence = 0.05
-				Offence = 0.05
-
-				
+				surrender_limit = 0.1
+				defensive_war_stability_factor = 0.35
+				war_support_factor = 0.25
+				offence = -0.05
+				defence = -0.05
+				army_org = -0.1
+				production_speed_buildings_factor = -0.1
+				max_commander_army_size = -14
+				max_army_group_size = -3				
 			}
 		}
+	}
+}

@@ -2,7 +2,10 @@ capital = 6360
 
 oob = "ODS_1936"
 
-
+add_ideas = {
+    BLZ_underground_doctor
+    BLZ_meaningless_war
+}
 # Starting tech
 set_technology = {
     infantry_weapons = 1
@@ -38,10 +41,7 @@ set_technology = {
 
 set_research_slots = 5
 set_convoys = 20
-set_national_unity = 0.7
 
-
-add_ideas = bessmislenaya_war
 set_politics = {
 	ruling_party = svobod 
 	elections_allowed = no
@@ -60,7 +60,7 @@ create_country_leader = {
     desc = "BLZ_akim_juk_DESC"
     picture = "gfx/leaders/BLZ/akim_juk.dds"
     ideology = svobod_1   
-    traits = { bessmislenaya_war }
+    # traits = { bessmislenaya_war }
 }
 
 

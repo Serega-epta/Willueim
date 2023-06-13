@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		toshto = {
+		OBJ_whats_hidden = {		#То, что сокрыто
 			
 			allowed = {
 				always = no
@@ -14,11 +14,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.1
-				Defence = 0.1
-				army_org = 0.05
-				research_speed_factor = 0.15
-
-				
+				army_core_defence_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05				
 			}
 		}
+	}
+}

@@ -1,8 +1,16 @@
 ideas = {
 
 	country = {
-		torgovlya = {
+		SMK_false_messiah = {		#Ложный мессия
 			modifier = {
-				stability_factor = -0.1
-				political_power_gain = 0.2
+				monthly_population = -0.25
+				surrender_limit = -0.05
+				offensive_war_stability_factor = -0.15
+				defensive_war_stability_factor = -0.15
+				war_support_weekly = -0.001
+				stability_weekly_factor = -0.001
+				
+			}
 		}
+	}
+}

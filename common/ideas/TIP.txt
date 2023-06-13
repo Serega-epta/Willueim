@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		tish = {
+		TIP_blessed_silence = {		#Блаженная тишина
 			
 			allowed = {
 				always = no
@@ -14,9 +14,13 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.05
-				
-
+				army_speed_factor = -10
+				production_speed_buildings_factor = -10
+				stability_factor = -10
+				war_support_factor = -10
+				production_factory_max_efficiency_factor = -10
 				
 			}
 		}
+	}
+}

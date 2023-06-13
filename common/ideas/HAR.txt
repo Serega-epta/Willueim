@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		ZHELEZO = {
+		HAR_last_frontier = {			#Последний рубеж
 			
 			allowed = {
 				always = no
@@ -14,10 +14,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = –0.05
-				war_support_factor = 0.1
-				Defence = 0.1
-
-				
+				army_defence_factor = 0.15
+				defensive_war_stability_factor = 0.05
+				offensive_war_stability_factor = 0.05				
 			}
 		}
+	}
+}

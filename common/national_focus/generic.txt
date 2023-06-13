@@ -48,7 +48,8 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ROH_29		icon = GFX_goal_Dont_sleep
+		id = ROH_29
+		icon = GFX_goal_Dont_sleep
 		cost = 10,00
 		x = 11
 		y = 7
@@ -578,6 +579,9 @@ focus_tree = {
 			focus = ROH_24
 			focus = ROH_25
 		}
+		available = {
+			has_completed_focus = ROH_16
+		}
 		x = 11
 		y = 4
 		ai_will_do = { factor = 10 }
@@ -610,6 +614,9 @@ focus_tree = {
 			focus = ROH_23
 			focus = ROH_25
 		}
+		available = {
+			has_completed_focus = ROH_17
+		}
 		x = 13
 		y = 4
 		ai_will_do = { factor = 10 }
@@ -630,6 +637,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ROH_24
 			focus = ROH_23
+		}
+		available = {
+			has_completed_focus = ROH_18
 		}
 		x = 15
 		y = 4

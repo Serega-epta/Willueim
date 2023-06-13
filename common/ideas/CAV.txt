@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		sad_tsar = {
+		CAV_fallen = {			#Падший
 			
 			allowed = {
 				always = no
@@ -14,9 +14,13 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.15
-				political_power_gain –0.15
-
+				political_power_gain = -0.01
+				war_support_factor = -0.05
+				production_speed_buildings_factor = -0.15
+				command_power_gain = -0.1
+				army_org = -0.1
 				
 			}
 		}
+	}
+}
