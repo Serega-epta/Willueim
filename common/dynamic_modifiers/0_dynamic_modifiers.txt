@@ -36,6 +36,51 @@
 	}
 
 
+
+
+#СВЯТОСТЬ
+    sviatoost = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		
+		local_manpower = 0.07	
+	}
+#СВЯТАЯ ПОСТУПЬ
+    sviataya_postup = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		
+		targeted_modifier = {
+			tag = LWV
+			defense_bonus_against = -0.05
+		}
+	}
+#СУДНЫЙ ДЕНЬ
+    sudni_den = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		
+		
+		supply_factor = -0.1
+		disable_strategic_redeployment = 1
+		max_dig_in_factor = -0.05
+		targeted_modifier = {
+			tag = LWV
+			defense_bonus_against = -0.1
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 #засилие тварей
       congestion_of_creatures = {
 		enable = { always = yes }

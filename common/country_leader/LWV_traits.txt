@@ -28,6 +28,57 @@ leader_traits = {
 		}
 	}
 
+	LWV_avtor_sviatosti = {
+		random = no
+		
+		offence = 0.02
+		defence = 0.02
+		weekly_manpower = 50
+		monthly_population = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LWV_defender_of_faith = {
+		random = no
+		
+		justify_war_goal_time = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LWV_archiepiskop = {
+		random = no
+		
+		political_power_gain = 0.05
+		war_support = 0.1
+		stability = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LWV_bisnes_sviashenik = {
+		random = no
+		
+		political_power_gain = -0.1
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+
+
+
 
 
 

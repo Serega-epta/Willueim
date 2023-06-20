@@ -112,7 +112,6 @@ heaven_on_earth = {
 			modifier = {
 				political_power_cost = 0.02
 				production_lack_of_resource_penalty_factor = -0.15
-
 			}
 		}
 bez_slabosti = {
@@ -142,28 +141,144 @@ heaven_on_earth_2 = {
 			picture = blazh_warriors
 			modifier = {
 			attrition = -0.05
+			political_power_cost = 0.02
+			production_lack_of_resource_penalty_factor = -0.15
 			}
 }
 heaven_on_earth_3 = {
 			picture = blazh_warriors
 			modifier = {
 			command_power_gain = 2
+			attrition = -0.05
+			political_power_cost = 0.02
+			production_lack_of_resource_penalty_factor = -0.15
 			}
 }
 heaven_on_earth_4 = {
 			picture = blazh_warriors
 			modifier = {
-			
+			command_power_gain = 2
+			attrition = -0.05
+			political_power_cost = 0.02
+			production_lack_of_resource_penalty_factor = -0.15
 			}
 }		
+			
+########################################## 3 FAZA ################################################
 		
-		
+	LWV_bejinsy_from_holy_land = {
+		picture = cute_knightboy
+		modifier = {
+			monthly_population = 0.03
+			production_speed_buildings_factor = 0.03
+			research_speed_factor = 0.03
+		}
+	}	
+	LWV_begushie_otstupniki = {
+		picture = cute_knightboy
+		modifier = {
+			monthly_population = -0.05
+			production_speed_buildings_factor = -0.05
+			research_speed_factor = -0.05
+		}
+	}	
+	LWV_boji_perst_cut = {
+		picture = cute_knightboy
+		modifier = {
+			drift_defence_factor = 0.05
+		}
+	}	
+	LWV_boji_perst_full = {
+		picture = cute_knightboy
+		modifier = {
+			resistance_growth = -0.02
+			resistance_damage_to_garrison = -0.1
+			drift_defence_factor = 0.3
+		    compliance_gain = 0.02
+			resistance_damage_to_garrison_on_our_occupied_states = 0.05
+			compliance_growth_on_our_occupied_states = 0.05
+		    enemy_intel_network_gain_factor_over_occupied_tag = 0.1
+		#-10% гражданских разведданных (прочие страны хуже видят)
+		#-10% военных разведданных
+		#-10% авиационных разведанных
+		#-10% морских разведданных
+			political_power_gain = -0.15
+			consumer_goods_factor = 0.05
+		}
+	}		
+	LWV_holy_gramots = {
+		picture = cute_knightboy
+		modifier = {
+			political_power_gain = -0.05
+			global_building_slots_factor = 0.1
+		}
+	}	
+	LWV_new_promishlenost = {
+		picture = cute_knightboy
+		modifier = {
+			production_speed_buildings_factor = 0.05 
+		}
+	}	
+	LWV_rianost_yonih = {
+		picture = cute_knightboy
+		modifier = {
+			grant_medal_cost_factor = -0.5
+			army_leader_cost_factor = -0.5
+			army_leader_start_level = 2
+		}
+	}		
+	LWV_voina_vo_tme = {
+		picture = cute_knightboy
+		modifier = {
+				command_power_gain = 2
+				attrition = -0.05
+				political_power_cost = 0.02
+				production_lack_of_resource_penalty_factor = -0.15
+				defence = -0.1 ###################################################против кризисных сектантов
+				offence = 0.2 ###################################################против кризисных сектантов
+		}
+	}
+	LWV_scared_war = {
+		picture = cute_knightboy
+		modifier = {
+			special_forces_attack_factor = 0.2
+		}
+	}
+	LWV_scared_war_upgrate = {
+		picture = cute_knightboy
+		modifier = {
+		conscription =  0.025
+		offence = 0.15
+		defence = 0.1
+		special_forces_attack_factor = 0.2
 
-		
-		
-		
-		
-		
-}
+		equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+		}
+	
+		}
+	}
+	LWV_scared_war_upgrate_ultra = {
+		picture = cute_knightboy
+		modifier = {
+		conscription =  0.025
+		offence = 0.15
+		defence = 0.1
+		special_forces_attack_factor = 0.2
+		defensive_war_stability_factor = 0.2
+		offensive_war_stability_factor = 0.2
+		justify_war_goal_time = -0.25
+
+		equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+		}
+		}
+	}
 }
 

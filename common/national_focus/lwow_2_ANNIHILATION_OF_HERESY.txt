@@ -534,7 +534,17 @@ focus_tree = {
 		country_event = {
 			id = LWV.26
 		}
-		add_ideas = heaven_on_earth
+		
+		if = {
+			limit = { has_idea = heaven_on_earth }
+				swap_ideas ={
+					Remove_idea = heaven_on_earth
+					Add_idea = heaven_on_earth_2
+				}
+		}
+		else = {
+			add_ideas = heaven_on_earth
+		}
 		}
 	}
 	focus = {
@@ -550,10 +560,18 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		Swap_ideas ={
+				
+		if = {
+			limit = { has_idea = heaven_on_earth }
+				swap_ideas ={
 					Remove_idea = heaven_on_earth
 					Add_idea = heaven_on_earth_2
 				}
+		}
+		else = {
+			add_ideas = heaven_on_earth
+		}				
+				
 			country_event = {
 				id = LWV.27
 			}	
@@ -599,6 +617,21 @@ focus_tree = {
 					Remove_idea = heaven_on_earth_3
 					Add_idea = heaven_on_earth_4
 				}
+				
+				
+				
+				
+				
+				load_focus_tree = Lwov_focus_tretia_faza
+				
+				
+				
+				
+				
+				
+				
+				
+				
 			country_event = {
 				id = LWV.29
 			}	

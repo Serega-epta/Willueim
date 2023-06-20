@@ -1,0 +1,1012 @@
+focus_tree = {
+	id = Lwov_focus_tretia_faza
+	
+	country = {
+		factor = 0	
+		modifier = {
+			add = 10
+			tag = LWV
+		}
+	}
+	continuous_focus_position = { x = 100 y = 2500 }
+	
+	default = no
+	
+	focus = {
+		id = LWV_osviatit_land
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 0
+		cost = 5
+		ai_will_do = {
+		factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LWV = { country_event = LWV.30 days = 1 }
+			add_ideas = LWV_begushie_otstupniki		
+			add_stability = 0.05
+			add_political_power = 50
+						
+			all_neighbor_country = { country_event = LWV.31 days = 1 }
+						
+		}
+	}	
+	focus = {
+		id = LWV_nizlojit_sektantov
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_osviatit_land }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas ={
+				remove_idea = heaven_on_earth_4
+				add_idea = LWV_voina_vo_tme
+			}	
+		}
+	}
+	focus = {
+		id = LWV_boji_gnev
+		icon = GFX_Korol_charodei
+		x = 8
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_nizlojit_sektantov }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		if = {
+			limit = { has_idea = LWV_scared_war_upgrate }
+				swap_ideas ={
+					remove_idea = LWV_scared_war_upgrate
+					add_idea = LWV_scared_war_upgrate_ultra
+				}
+		}
+		else = {
+			if = {
+				limit = { has_idea = LWV_scared_war }
+					swap_ideas ={
+						remove_idea = LWV_scared_war
+						add_idea = LWV_scared_war_upgrate
+					}
+			}
+			else = {
+				add_ideas = LWV_scared_war
+			}
+		}
+	
+		LWV = {	
+			division_template = { 
+				name = "Bojiya dlan"
+				division_names_group = LWV_CAM_02
+				is_locked = no
+				regiments = {
+					egerskayapechota  = { x = 0 y = 0 }
+					egerskayapechota  = { x = 1 y = 0 }
+					egerskayapechota  = { x = 0 y = 1 }
+					egerskayapechota  = { x = 1 y = 1 }
+					egerskayapechota  = { x = 0 y = 2 }
+					egerskayapechota  = { x = 2 y = 0 }
+					egerskayapechota  = { x = 2 y = 1 }
+					egerskayapechota  = { x = 2 y = 2 }
+					egerskayapechota  = { x = 2 y = 3 }
+					egerskayapechota  = { x = 2 y = 4 }	
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }	
+				}
+				priority = 0
+			}				
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = LWV
+					is_fully_controlled_by = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Bojiya dlan\" start_experience_factor = 1 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 1
+				}
+			}
+		}
+		}
+	}
+	focus = {
+		id = LWV_voorujitsia_veroy
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_nizlojit_sektantov }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		if = {
+		limit = { has_idea = LWV_scared_war_upgrate }
+			swap_ideas ={
+				remove_idea = LWV_scared_war_upgrate
+				add_idea = LWV_scared_war_upgrate_ultra
+			}
+		}
+		else = {
+			if = {
+				limit = { has_idea = LWV_scared_war }
+					swap_ideas ={
+						remove_idea = LWV_scared_war
+						add_idea = LWV_scared_war_upgrate
+					}
+			}
+			else = {
+				add_ideas = LWV_scared_war
+			}
+		}	
+		}
+	}
+	focus = {
+		id = LWV_blagie_namerineya
+		icon = GFX_Korol_charodei
+		x = 12
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_nizlojit_sektantov }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		if = {
+			limit = { has_idea = LWV_scared_war_upgrate }
+				swap_ideas ={
+					remove_idea = LWV_scared_war_upgrate
+					add_idea = LWV_scared_war_upgrate_ultra
+				}
+		}
+		else = {
+			if = {
+				limit = { has_idea = LWV_scared_war }
+					swap_ideas ={
+						remove_idea = LWV_scared_war
+						add_idea = LWV_scared_war_upgrate
+					}
+			}
+			else = {
+				add_ideas = LWV_scared_war
+			}
+		}	
+		}
+	}
+	focus = {
+		id = LWV_kajdi_doljen_uslishat
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_boji_gnev }
+		prerequisite = { focus = LWV_voorujitsia_veroy }
+		prerequisite = { focus = LWV_blagie_namerineya }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_country_leader_trait = LWV_defender_of_faith
+		}
+	}
+	focus = {
+		id = LWV_osviatit_bessarabiu
+		icon = GFX_Korol_charodei
+		x = 6
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_osviatit_sever
+		icon = GFX_Korol_charodei
+		x = 8
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_osviatit_iug
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_osviatit_malorossiu
+		icon = GFX_Korol_charodei
+		x = 12
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_osviatit_dikie_lesa
+		icon = GFX_Korol_charodei
+		x = 14
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_kievan_vselen_sobor
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		202 = { is_core_of = LWV }
+		}	
+		
+		prerequisite = { focus = LWV_osviatit_bessarabiu }
+		prerequisite = { focus = LWV_osviatit_sever }
+		prerequisite = { focus = LWV_osviatit_iug }
+		prerequisite = { focus = LWV_osviatit_malorossiu }
+		prerequisite = { focus = LWV_osviatit_dikie_lesa }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		remove_country_leader_trait = New_vera
+		add_country_leader_trait = LWV_avtor_sviatosti
+		
+		}
+	}
+	focus = {
+		id = LWV_sviatoe_pisanie
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_kievan_vselen_sobor }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		add_political_power = 100
+		}
+	}
+	focus = {
+		id = LWV_new_ikonopis
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_sviatoe_pisanie }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		add_political_power = 50
+		}
+	}
+	focus = {
+		id = LWV_religion_isskustvo
+		icon = GFX_Korol_charodei
+		x = 8
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_new_ikonopis }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		add_political_power = 50
+		
+		random_owned_state = {
+		add_extra_state_shared_building_slots = 1
+		}
+		random_owned_state = {
+		add_extra_state_shared_building_slots = 1
+		}
+		random_owned_state = {
+		add_extra_state_shared_building_slots = 1
+		}
+		random_owned_state = {
+		add_extra_state_shared_building_slots = 1
+		}
+		
+		
+		}
+	}
+	focus = {
+		id = LWV_rukopolojit_vernih
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_new_ikonopis }
+		prerequisite = { focus = LWV_religion_isskustvo }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = LWV_religion_obrazovanie
+		icon = GFX_Korol_charodei
+		x = 12
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_rukopolojit_vernih }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		add_political_power = 50
+		}
+	}
+	focus = {
+		id = LWV_vzrastit_unih
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 11
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_rukopolojit_vernih }
+		prerequisite = { focus = LWV_religion_obrazovanie }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		add_ideas = LWV_rianost_yonih
+		
+		recruit_character = LWV_MARIA
+		
+		
+		}
+	}
+	focus = {
+		id = LWV_uprazdnit_troitsy
+		icon = GFX_Korol_charodei
+		x = 10
+		y = 12
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_vzrastit_unih }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		add_stability = -0.15
+		add_political_power = 200
+		set_country_flag = uprazdnit_troitsy			
+		}
+	}
+	
+######################################### VTOROE DREVO ###############################################	
+	
+		
+	focus = {
+		id = LWV_vernii
+		icon = GFX_Korol_charodei
+		x = 40
+		y = 0
+		cost = 5
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_country_flag = uprazdnit_troitsy
+		}	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support	= 0.01
+		}
+	}	
+	focus = {
+		id = LWV_uchredit_boji_perst
+		icon = GFX_Korol_charodei
+		x = 39
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_vernii }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		add_ideas = LWV_boji_perst_cut
+		
+		set_country_flag = reshenia_na_boji_perst		
+		}
+	}
+	focus = {
+		id = LWV_blagoslovlenie
+		icon = GFX_Korol_charodei
+		x = 41
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_vernii }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {		
+			891 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}			
+		}
+	}
+	focus = {
+		id = LWV_presledovat_otstupnikov
+		icon = GFX_Korol_charodei
+		x = 38
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_uchredit_boji_perst }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {		
+		remove_ideas = LWV_begushie_otstupniki			
+		all_neighbor_country = { 
+			if = {
+				limit = { has_idea = LWV_bejinsy_from_holy_land } 			
+				country_event = LWV.32 days = 1
+			}
+		}
+		}
+	}
+	focus = {
+		id = LWV_rasprostraniat_religiu
+		icon = GFX_Korol_charodei
+		x = 37
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_presledovat_otstupnikov }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		custom_effect_tooltip = rrrreshenia_region_sviat
+		
+		if = {
+		limit = { is_core_of = LWV } 
+		add_dynamic_modifier = {
+				modifier = sviatoost
+				scope = LWV
+			}
+		}
+		#чзх почему не работает? потом разобраться#############
+		
+		all_core_state = { 
+			add_dynamic_modifier = {
+				modifier = sviatoost
+				scope = LWV
+			}
+		}
+		all_core_state = { 
+			set_state_flag = has_sviatost
+			scope = LWV
+		}
+		set_country_flag = reshenia_na_sviatost_regionov	
+		
+		}
+	}
+	focus = {
+		id = LWV_pooshrit_dostoinih
+		icon = GFX_Korol_charodei
+		x = 42
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_blagoslovlenie }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_vruchit_sviatii_gramoti
+		icon = GFX_Korol_charodei
+		x = 43
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_pooshrit_dostoinih }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}	
+	focus = {
+		id = LWV_razoslat_misionerov
+		icon = GFX_Korol_charodei
+		x = 36
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_rasprostraniat_religiu }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		custom_effect_tooltip = razoslat_missionerov
+		
+		}
+	}
+	focus = {
+		id = LWV_kovat_mechi
+		icon = GFX_Korol_charodei
+		x = 38
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_rasprostraniat_religiu }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		random_owned_state = {
+		add_offsite_building = { type = arms_factory level = 1 }
+		}
+		random_owned_state = {
+		add_offsite_building = { type = arms_factory level = 1 }
+		}
+		random_owned_state = {
+		add_offsite_building = { type = arms_factory level = 1 }
+		}
+		
+		}
+	}
+	focus = {
+		id = LWV_nasitit_narod
+		icon = GFX_Korol_charodei
+		x = 42
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_vruchit_sviatii_gramoti }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_zvon_kolocolov
+		icon = GFX_Korol_charodei
+		x = 44
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_vruchit_sviatii_gramoti }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}	
+	focus = {
+		id = LWV_podgotovit_pochvu
+		icon = GFX_Korol_charodei
+		x = 35
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_razoslat_misionerov }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_zavershit_industrialization
+		icon = GFX_Korol_charodei
+		x = 40
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_nasitit_narod }
+		prerequisite = { focus = LWV_kovat_mechi }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_tserkovni_hor
+		icon = GFX_Korol_charodei
+		x = 45
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_zvon_kolocolov }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = LWV_zaseet_semena_pravednosti
+		icon = GFX_Korol_charodei
+		x = 34
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_podgotovit_pochvu }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}	
+	focus = {
+		id = LWV_concentrirovat_promku
+		icon = GFX_Korol_charodei
+		x = 38
+		y = 6
+		cost = 5
+		mutually_exclusive = { focus = LWV_rasssredotochit_promku }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_zavershit_industrialization }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_rasssredotochit_promku
+		icon = GFX_Korol_charodei
+		x = 42
+		y = 6
+		cost = 5
+		mutually_exclusive = { focus = LWV_concentrirovat_promku }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_zavershit_industrialization }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_blesk_kresta
+		icon = GFX_Korol_charodei
+		x = 46
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_tserkovni_hor }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_Our_bog
+		icon = GFX_Korol_charodei
+		x = 33
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_zaseet_semena_pravednosti }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_effektivnost
+		icon = GFX_Korol_charodei
+		x = 37
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_concentrirovat_promku }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_vosstanovlenie
+		icon = GFX_Korol_charodei
+		x = 40
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_concentrirovat_promku focus = LWV_rasssredotochit_promku }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_kolichestvo
+		icon = GFX_Korol_charodei
+		x = 43
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_rasssredotochit_promku }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_our_creator
+		icon = GFX_Korol_charodei
+		x = 47
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_blesk_kresta }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}	
+	focus = {
+		id = LWV_Create_us
+		icon = GFX_Korol_charodei
+		x = 32
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_Our_bog }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_obuchit_upravlentsev
+		icon = GFX_Korol_charodei
+		x = 36
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_effektivnost }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_expand_ifrastructure
+		icon = GFX_Korol_charodei
+		x = 40
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_vosstanovlenie }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_pooshriat_vernost
+		icon = GFX_Korol_charodei
+		x = 44
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_kolichestvo }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_give_mind_to_us
+		icon = GFX_Korol_charodei
+		x = 48
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_our_creator }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_but_why
+		icon = GFX_Korol_charodei
+		x = 31
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_Create_us }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_new_metod
+		icon = GFX_Korol_charodei
+		x = 35
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_obuchit_upravlentsev }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_razvit_regioni
+		icon = GFX_Korol_charodei
+		x = 40
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_expand_ifrastructure }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_adaptirovat_tradition
+		icon = GFX_Korol_charodei
+		x = 45
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_pooshriat_vernost }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = LWV_zochem
+		icon = GFX_Korol_charodei
+		x = 49
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_give_mind_to_us }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}	
+	
+	focus = {
+		id = LWV_sut_mira
+		icon = GFX_Korol_charodei
+		x = 40
+		y = 11
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LWV_zochem }
+		prerequisite = { focus = LWV_but_why }
+		prerequisite = { focus = LWV_new_metod  focus = LWV_adaptirovat_tradition }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+}
