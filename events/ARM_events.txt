@@ -245,6 +245,7 @@ country_event = {
 	name = ARM.16.a
 	}
 }
+
 #Повод для улыбки
 country_event = {
 	id = ARM.17
@@ -460,12 +461,15 @@ country_event = {
 	id = ARM.999
 	title = ARM.999.t
 	desc = ARM.999.d
-	picture = GFX_report_Zhelt_lake
-    fire_only_once = yes  
+	picture = 
+
+   	fire_only_once = yes  
 	is_triggered_only = yes
+
 	option = {
-	name = ARM.999.a
-	custom_effect_tooltip = on_ne_vernetsya_tt
+		name = ARM.999.a
+		custom_effect_tooltip = nixilus_lost_tt
+		set_country_flag = nixilus_lost
 	}
 }
 
@@ -473,24 +477,36 @@ country_event = {
 	id = ARM.998
 	title = ARM.998.t
 	desc = ARM.998.d
-	picture = GFX_report_Zhelt_lake
-    fire_only_once = yes  
+	picture = 
+
+    	fire_only_once = yes  
 	is_triggered_only = yes
+
 	option = {
-	name = ARM.998.a
-	custom_effect_tooltip = porajenie_tt
-	BIH = {
-	annex_country = {
-    target = ARM
-    transfer_troops = yes
-	}
-	}
+		name = ARM.998.a
+		hidden_effect = {
+			BIH = {
+				annex_country = {
+    					target = ARM
+    					transfer_troops = yes
+				}
+			}
+			ARS = {
+				transfer_state = 259
+			}
+			BAN = {
+				transfer_state = 203
+			}
+			GUM = {
+				transfer_state = 225
+			}
+		}
 	}
 	option = {
-	name = ARM.998.b
-	custom_effect_tooltip = sest_za_nihilusa_tt
-	
-	country_event = { id = ARM.997  days = 1 }	
+		name = ARM.998.b
+		hidden_effect = {
+			country_event = { id = ARM.997  days = 3 }	
+		}
 	}
 }
 
@@ -498,18 +514,30 @@ country_event = {
 	id = ARM.997
 	title = ARM.997.t
 	desc = ARM.997.d
-	picture = GFX_report_Zhelt_lake
-    fire_only_once = yes  
+	picture = 
+
+    	fire_only_once = yes  
 	is_triggered_only = yes
+
 	option = {
-	name = ARM.997.a
-	custom_effect_tooltip = voistiny_tt	
-	BIH = {
-	annex_country = {
-    target = ARM
-    transfer_troops = yes
-	}
-	}
-	BIH = { change_tag_from = ARM }
+		name = ARM.997.a
+		hidden_effect = {
+			BIH = {
+				annex_country = {
+    					target = ARM
+    					transfer_troops = yes
+				}
+				change_tag_from = ARM 
+			}
+			ARS = {
+				transfer_state = 259
+			}
+			BAN = {
+				transfer_state = 203
+			}
+			GUM = {
+				transfer_state = 225
+			}
+		}
 	}
 }

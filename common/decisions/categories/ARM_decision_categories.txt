@@ -1,0 +1,8 @@
+ARM_partisans = {
+	icon = saf_anti_colonialist_crusade
+	scripted_gui = arm_partisans
+	allowed = { original_tag = ARM }
+	visible = { has_country_flag = ARM_partisanship_start }
+	visible_when_empty = yes
+	priority = { base = 5 }
+}

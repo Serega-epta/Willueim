@@ -1,0 +1,68 @@
+scripted_gui = { 
+	arm_partisans  = {
+		context_type = decision_category
+		window_name = "arm_partisans"
+		visible = { always = yes }
+		properties = {
+			top_bar_strength = { frame = power_of_partisanship }
+		}
+		effects = {
+		}
+		triggers = {
+			203_army_visible = {
+				check_variable = { state_203 < 50 }
+			}
+			203_partisans_visible = {
+				check_variable = { state_203 > 49 }
+			}
+			876_army_visible = {
+				check_variable = { state_876 < 50 }
+			}
+			876_partisans_visible = {
+				check_variable = { state_876 > 49 }
+			}
+			259_army_visible = {
+				check_variable = { state_259 < 50 }
+			}
+			259_partisans_visible = {
+				check_variable = { state_259 > 49 }
+			}
+			202_army_visible = {
+				check_variable = { state_202 < 50 }
+			}
+			202_partisans_visible = {
+				check_variable = { state_202 > 49 }
+			}
+			193_army_visible = {
+				check_variable = { state_193 < 50 }
+			}
+			193_partisans_visible = {
+				check_variable = { state_193 > 49 }
+			}
+			879_army_visible = {
+				check_variable = { state_879 < 50 }
+			}
+			879_partisans_visible = {
+				check_variable = { state_879 > 49 }
+			}
+			225_army_visible = {
+				check_variable = { state_225 < 50 }
+			}
+			225_partisans_visible = {
+				check_variable = { state_225 > 49 }
+			}
+			881_army_visible = {
+				check_variable = { state_881 < 50 }
+			}
+			881_partisans_visible = {
+				check_variable = { state_881 > 49 }
+			}
+			880_army_visible = {
+				check_variable = { state_880 < 50 }
+			}
+			880_partisans_visible = {
+				check_variable = { state_880 > 49 }
+			}
+		}
+	}
+}

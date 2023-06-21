@@ -89,3 +89,58 @@ country_event = {
 		remove_ideas = patriots_20p
 	}
 }
+
+#Ивент на проверку работоспособности механики Нихилитов
+country_event = {
+	id = ROH_debug.4
+	title = ROH_debug.4.t
+	desc = ROH_debug.4.d
+	picture = 
+
+    	fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+		name = ROH_debug.4.a
+		load_focus_tree = army_junta_unite_focus
+		ARM = {
+			annex_country = {
+    				target = BIH
+    				transfer_troops = no
+			}
+			annex_country = {
+    				target = SUM
+    				transfer_troops = no
+			}
+			annex_country = {
+    				target = MAD
+    				transfer_troops = no
+			}
+			annex_country = {
+    				target = VDS
+    				transfer_troops = no
+			}
+			annex_country = {
+    				target = BAG
+    				transfer_troops = no
+			}			
+		}
+	}
+	option = {
+		name = ROH_debug.4.b
+		set_variable = { state_202 = 90 }
+		set_variable = { state_876 = 90 }
+		set_variable = { state_879 = 90 }
+		set_variable = { state_880 = 90 }
+		set_variable = { state_203 = 90 }
+		set_variable = { state_259 = 90 }
+		set_variable = { state_193 = 90 }
+		set_variable = { state_225 = 90 }
+		set_variable = { state_881 = 90 }	
+	}
+	option = {
+		name = ROH_debug.4.c
+		country_event = { id = ARM.998  days = 1 }			
+	}
+}

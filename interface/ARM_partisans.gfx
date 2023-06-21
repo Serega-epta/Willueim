@@ -1,12 +1,103 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_Partizanski_Nihilus"
-		texturefile = "gfx/interface/ARM/Partizanski_Nihilus.dds"
-	}
-}
-spriteTypes = {
+		name = "GFX_state_203_army"
+		texturefile = "gfx/interface/ARM/insurgency/203_army.dds"
+		transparencecheck = yes
+	}	
 	spriteType = {
-		name = "GFX_partisans"
-		texturefile = "gfx/interface/ARM/partizani.dds"
+		name = "GFX_state_876_army"
+		texturefile = "gfx/interface/ARM/insurgency/876_army.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_259_army"
+		texturefile = "gfx/interface/ARM/insurgency/259_army.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_202_army"
+		texturefile = "gfx/interface/ARM/insurgency/202_army.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_193_army"
+		texturefile = "gfx/interface/ARM/insurgency/193_army.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_879_army"
+		texturefile = "gfx/interface/ARM/insurgency/879_army.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_225_army"
+		texturefile = "gfx/interface/ARM/insurgency/225_army.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_881_army"
+		texturefile = "gfx/interface/ARM/insurgency/881_army.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_880_army"
+		texturefile = "gfx/interface/ARM/insurgency/880_army.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_203_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/203_partisans.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_876_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/876_partisans.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_259_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/259_partisans.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_202_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/202_partisans.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_193_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/193_partisans.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_879_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/879_partisans.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_225_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/225_partisans.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_881_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/881_partisans.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_state_880_partisans"
+		texturefile = "gfx/interface/ARM/insurgency/880_partisans.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_insurgency_nixilus_map_bg"
+		texturefile = "gfx/interface/ARM/insurgency/map.dds"
+	}	
+	progressbartype = {
+		name = "GFX_insurgency_nixilus_top_bar_strength"
+		textureFile1 = "gfx/interface/ARM/insurgency/strength_bar_full.dds"
+		textureFile2 = "gfx/interface/ARM/insurgency/strength_bar_empty.dds"
+		size = { x = 466 y = 50 }
+		effectFile = "gfx/FX/progress.lua"
 	}
 }

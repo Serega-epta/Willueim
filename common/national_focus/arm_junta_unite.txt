@@ -11,8 +11,7 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
-#Эйфория после объединения
-	focus = {
+	focus = { #Эйфория после объединения
 		id = ARM_Restoration_of_the_CSF
 		icon = GFX_Restoration_of_the_CSF
 		x = 6
@@ -21,14 +20,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ARM_junta_united_tt 
+				AND = {
+					has_war = no
+					ARM_junta_united = yes
+				}
+			}
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			
-			set_country_flag = partizane_nihilusa
-			set_variable = { partizans = 1 }
-			set_variable = { zahita_ot_partizan = 0 }
-			set_variable = { Sila_partizan = 0.5 }
-			set_variable = { Nasha_sila = 0.5 }
+			set_country_flag = ARM_partisanship_start
+
+			set_variable = { power_of_partisanship = 30 }
+			set_variable = { state_202 = 60 }
+			set_variable = { state_876 = 50 }
+			set_variable = { state_879 = 50 }
+			set_variable = { state_880 = 50 }
+			set_variable = { state_203 = 30 }
+			set_variable = { state_259 = 30 }
 		
 			set_cosmetic_tag = ARM_CGF
 			add_stability = 0.1
@@ -39,7 +50,6 @@ focus_tree = {
 				days = 1
 			}
 		}
-		
 	}
 	focus = {
 		id = ARM_Our_new_burden
@@ -178,7 +188,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			has_country_flag = nihilus_ubejal
+			has_country_flag = nixilus_lost
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {			
@@ -415,6 +425,9 @@ focus_tree = {
 				id = ARM.25
 				days = 1
 			}
+			hidden_effect = {		
+				load_focus_tree = army_junta_mega_focus		
+			}
 		}
 		
 	}
@@ -450,11 +463,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			193 = {
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 		
@@ -472,23 +485,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			202 = {
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 			country_event = {
 				id = ARM.26
 				days = 1
 			}
 		}
-		
 	}
 	focus = {
 		id = ARM_Linkage_assessment
@@ -502,10 +514,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-				Swap_ideas ={
-					Remove_idea = ARM_Production
-					Add_idea = ARM_Production1
-				}
+			Swap_ideas ={
+				Remove_idea = ARM_Production
+				Add_idea = ARM_Production1
+			}
 		}
 		
 	}
@@ -523,19 +535,18 @@ focus_tree = {
 		completion_reward = {
 			ARM = {
 				every_owned_state = {
-						add_building_construction = {
-							type = infrastructure
-							level = 2
-							instant_build = yes
-						}
-			}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
 			country_event = {
 				id = ARM.27
 				days = 1
 			}
 		}
-		
 	}
 	focus = {
 		id = ARM_The_means_to_an_end
@@ -550,12 +561,14 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			custom_effect_tooltip = can_cleaning_up_state_with_25_tt
+			set_country_flag = can_cleaning_up_state_with_25
 			202 = {
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 		
@@ -673,28 +686,30 @@ focus_tree = {
 	focus = {
 		id = ARM_New_and_unbreakable
 		icon = GFX_New_and_unbreakable
-	      prerequisite = { focus = ARM_New_protective_equipment }
-	      prerequisite = { focus = ARM_Heavy_Cavalry }
+	      	prerequisite = { focus = ARM_New_protective_equipment }
+	      	prerequisite = { focus = ARM_Heavy_Cavalry }
 		x = 17
 		y = 7
-		cost = 3.8
+		cost = 3.8	
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_can_cleaning_up_state_with_25_tt
+				has_country_flag = can_cleaning_up_state_with_25
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			custom_effect_tooltip = can_cleaning_up_state_with_10_tt
+			set_country_flag = can_cleaning_up_state_with_10
 			army_experience = 50
 			remove_ideas = vyrv_vieny
 			country_event = {
 				id = ARM.30
 				days = 1
 			}
-		}
-		
-		
-		hidden_effect = {		
-		load_focus_tree = army_junta_mega_focus		
-		}
-		
+		}	
 	}
 }
