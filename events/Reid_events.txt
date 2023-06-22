@@ -1100,13 +1100,11 @@ country_event = {
 	}
 	option = {
 	name = Reid.11.b
-	hidden_effect = {
-	country_event = {id = Reid.13}
-		}
+	country_event = {id = Reid.12}
 	}
 	option = {
 	name = Reid.11.c
-	}
+	country_event = {id = Reid.13}
 	option = {
 	name = Reid.11.d
 	}
@@ -1126,6 +1124,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.12.a
+	random_list = {
+	32 = {
+	country_event = { id = Reid.1011 }
+	}
+	68 = {
+	add_to_variable = { profesionalzm_oriada = 0.05 }
+	country_event = {days = 2 id = Reid.11}
+	}
+	}
 	}
 	option = {
 	name = Reid.12.b
@@ -1140,9 +1147,19 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.13.a
+	hidden_effect = {
+	68 = {
+	country_event = {id = Reid.1011}
+	}
+	32 = {
+	country_event = {id = Reid.11}
+	add_to_variable = { profesionalzm_oriada = 0.15 }
+	}
+	}
 	}
 	option = {
 	name = Reid.13.b
+	add_to_variable = { profesionalzm_oriada = -0.05 }
 	}
 }
 #СОКРОВИЩЕ НАЙДЕНО
@@ -1155,8 +1172,10 @@ country_event = {
 	option = {
 	name = Reid.14.a
 	custom_effect_tooltip = peshera
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000} add_political_power = 50
 	hidden_effect = {
 	country_event = {id = Reid.141}
+	
 		}
 	}
 }
