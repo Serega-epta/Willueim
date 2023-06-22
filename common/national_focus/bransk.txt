@@ -1,17 +1,16 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
-### search_filters = {FOCUS_FILTER_RESEARCH}
-### search_filters = {FOCUS_FILTER_INDUSTRY}
-### search_filters = {FOCUS_FILTER_STABILITY}
-### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-### search_filters = {FOCUS_FILTER_MANPOWER}
-### search_filters = {FOCUS_FILTER_ANNEXATION}
+﻿search_filters = {FOCUS_FILTER_POLITICAL}
+search_filters = {FOCUS_FILTER_RESEARCH}
+search_filters = {FOCUS_FILTER_INDUSTRY}
+search_filters = {FOCUS_FILTER_STABILITY}
+search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+search_filters = {FOCUS_FILTER_MANPOWER}
+search_filters = {FOCUS_FILTER_ANNEXATION}
 
 focus_tree = {
 	id = bransk_focus
 	
 	country = {
 		factor = 0
-		
 		modifier = {
 			add = 10
 			tag = IMP
@@ -22,7 +21,7 @@ focus_tree = {
 
 	focus = {
 		id = IMP_Our_Great_Destiny
-		icon = GFX_Наша_Великая_Судьба1
+		icon = GFX_Our_Great_Destiny
 		x = 6
 		y = 0
 		cost = 1.5
@@ -31,15 +30,15 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-						id = IMPe.2
-				}
+			country_event = {
+				id = IMPe.2
+			}
 		}
 		
 	}
 	focus = {
 		id = IMP_Order_inside
-		icon = GFX_Порядок_внутри2
+		icon = GFX_Order_inside
 		prerequisite = { focus = IMP_Our_Great_Destiny }
 		x = 4
 		y = 1
@@ -49,12 +48,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_The_Army_That_Will_Be_Great
-		icon = GFX_Армия_которая_станет_Великой1
+		icon = GFX_The_Army_That_Will_Be_Great
 		prerequisite = { focus = IMP_Our_Great_Destiny }
 		x = 8
 		y = 1
@@ -64,15 +64,15 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-						id = IMPe.3
-				}
+			country_event = {
+				id = IMPe.3
+			}
 		}
 		
 	}
 	focus = {
 		id = IMP_Department_K
-		icon = GFX_Отдел_К
+		icon = GFX_Department_K
 		prerequisite = { focus = IMP_Order_inside }
 		x = 3
 		y = 2
@@ -82,13 +82,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_Steel_Discipline_at_Work
-		icon = GFX_Стальная_дисциплина_на_производстве
+		icon = GFX_Steel_Discipline_at_Work
 		prerequisite = { focus = IMP_Order_inside }
 		x = 5
 		y = 2
@@ -98,7 +98,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
@@ -115,13 +115,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_The_Power_of_the_Guard
-		icon = GFX_Мощь_Гвардии4
+		icon = GFX_The_Power_of_the_Guard
 		prerequisite = { focus = IMP_The_Army_That_Will_Be_Great }
 		x = 7
 		y = 2
@@ -131,13 +131,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_Average_Russian_guys
-		icon = GFX_Простые_русские_парни7
+		icon = GFX_Average_Russian_guys
 		prerequisite = { focus = IMP_The_Army_That_Will_Be_Great }
 		x = 9
 		y = 2
@@ -147,13 +147,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_New_Logistics
-		icon = GFX_Новая_Логистика
+		icon = GFX_New_Logistics
 		prerequisite = { focus = IMP_Average_Russian_guys }
 		prerequisite = { focus = IMP_The_Power_of_the_Guard }
 		x = 8
@@ -164,13 +164,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_Our_Humanity
-		icon = GFX_Наша_Человечность1
+		icon = GFX_Our_Humanity
 		prerequisite = { focus = IMP_New_Logistics }
 		prerequisite = { focus = IMP_Apprentices_needed }
 		x = 6
@@ -181,13 +181,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_The_Republic_must_fall
-		icon = GFX_Республика_должна_пасть
+		icon = GFX_The_Republic_must_fall
 		prerequisite = { focus = IMP_New_Logistics }
 		prerequisite = { focus = IMP_Apprentices_needed }
 		x = 6
@@ -198,13 +198,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_Iron_Officers
-		icon = GFX_Железные_офицеры4
+		icon = GFX_Iron_Officers
 		prerequisite = { focus = IMP_The_Republic_must_fall }
 		x = 6
 		y = 6
@@ -214,13 +214,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_Blow_up_traitors_houses
-		icon = GFX_Взорвать_дома_предателей3
+		icon = GFX_Blow_up_traitors_houses
 		prerequisite = { focus = IMP_The_Republic_must_fall }
 		x = 4
 		y = 6
@@ -230,13 +230,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_The_Perfect_Blitzkrieg
-		icon = GFX_Совершенный_Блицкриг4
+		icon = GFX_The_Perfect_Blitzkrieg
 		prerequisite = { focus = IMP_The_Republic_must_fall }
 		x = 8
 		y = 6
@@ -246,13 +246,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
 	focus = {
 		id = IMP_In_the_Heat_of_War
-		icon = GFX_В_пекло_войны
+		icon = GFX_In_the_Heat_of_War
 		prerequisite = { focus = IMP_Iron_Officers }
 		prerequisite = { focus = IMP_Blow_up_traitors_houses }
 		prerequisite = { focus = IMP_The_Perfect_Blitzkrieg }
@@ -264,10 +264,9 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			#эффекты отсутствуют
 		}
 		
 	}
-
-	}
+}
 	

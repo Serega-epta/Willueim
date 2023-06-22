@@ -1,19 +1,41 @@
 capital = 839
 
-oob = MOS_2022
+oob = base
 
 set_research_slots = 1
 set_convoys = 0
-
+set_technology = {
+    infantry_weapons = 1
+    tech_recon = 1
+    tech_support = 1        
+    tech_engineers = 1
+    tech_military_police = 1
+    tech_mountaineers = 1
+    paratroopers = 1
+    gw_artillery = 1
+    gwtank = 1
+}
 set_politics = {
 	ruling_party = free
 	elections_allowed = no
 }
-
 set_popularities = {
-	free = 12
-    sacraments = 23
-    gelerteria = 32
+	free = 1
+    sacraments = 33
+    gelerteria = 33
     militarists = 33
+	gumanists = 0
+	svobod = 0
+	technocracies = 0
+	opportunists = 0
+    forestry = 0
+    juntas = 0
+    professariat = 0
+    patriots = 0
+    bandits = 0
+}
+add_ideas = {
+    MOS_nuclear_wasteland
+    MOS_the_ruins_of_the_old_world
 }
 recruit_character = MOS_anarchy
