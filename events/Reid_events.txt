@@ -946,9 +946,14 @@ country_event = {
 	}
 	option = {
 	name = Reid.333.b
-	20 = {
-		country_event = {id = Reid.13}
-	}
+	hidden_effect = {
+		random_list = {
+			20 = {
+				country_event = {id = Reid.1311}
+			}
+			80 = {
+				country_event = {id = Reid.1411}
+			}
 	
 	}
 	option = {
@@ -959,7 +964,7 @@ country_event = {
 			country_event = {id = Reid.1314}
 			}
 			80 = {
-			country_event = {id = Reid.1411}
+			country_event = {id = Reid.14322}
 			}
 		}	
 	}
@@ -967,10 +972,13 @@ country_event = {
 	}
 	option = {
 	name = Reid.333.d
-	
 	hidden_effect = {
-	ra
-	country_event = { id = 14322 }
+	random_list = {
+		20 = {
+		country_event = { id = Reid.1399}
+		}
+		80 = {
+		country_event = { id = Reid.999}
 		}
 	}
 }
@@ -1015,7 +1023,49 @@ country_event = {
 	custom_effect_tooltip = ruins_tt1
 	hidden_effect = {
 		add_equipment_to_stockpile = {type = infantry_equipment amount = -1000}
+		country_event = { id = Reid.14322}
+		}
+	}
+}
+country_event = {
+	id = Reid.1311
+	title = Reid.13
+	desc = Reid.13.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.13.a
+	add_manpower = 1500
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 2000} add_equipment_to_stockpile = {type = infantry_odejda amount = 1500}
+	add_command_power = 50
+	}
+	option = {
+	name = Reid.13.b
+	custom_effect_tooltip = ruins_tt1
+	hidden_effect = {
+		add_equipment_to_stockpile = {type = infantry_equipment amount = -1000}
 		country_event = { id = Reid.1411}
+		}
+	}
+}
+country_event = {
+	id = Reid.1399
+	title = Reid.13
+	desc = Reid.13.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.13.a
+	add_manpower = 1500
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 2000} add_equipment_to_stockpile = {type = infantry_odejda amount = 1500}
+	add_command_power = 50
+	}
+	option = {
+	name = Reid.13.b
+	custom_effect_tooltip = ruins_tt1
+		add_equipment_to_stockpile = {type = infantry_equipment amount = -1000}
+		hidden_effect = {
+		country_event = { id = Reid.999}
 		}
 	}
 }
