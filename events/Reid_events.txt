@@ -1108,12 +1108,6 @@ country_event = {
 	option = {
 	name = Reid.11.d
 	}
-	option = {
-	name = Reid.11.e
-	}
-	option = {
-	name = Reid.11.f
-	}
 }
 # МОНСТРЫ АТАКУЮТ
 country_event = {
@@ -1136,6 +1130,8 @@ country_event = {
 	}
 	option = {
 	name = Reid.12.b
+	country_event = {id = Reid.11}
+	add_to_variable = { profesionalzm_oriada = -0.05 }
 	}
 }
 #РЫЖИЙЛЕС
@@ -1172,10 +1168,15 @@ country_event = {
 	option = {
 	name = Reid.14.a
 	custom_effect_tooltip = peshera
-	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000} add_political_power = 50
-	hidden_effect = {
-	country_event = {id = Reid.141}
-	
+		hidden_effect = {
+			random_list = {
+				60 = {
+					add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000} add_political_power = 50
+				}
+				40 = {
+					country_event = {id = Reid.141}
+				}
+			}
 		}
 	}
 }
@@ -1188,8 +1189,12 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.141.a
-	country_event = {days = 2 id = Reid.1411}
+	random_list = {
+	50 = {
+	add_to_variable = { profesionalzm_oriada = -0.05 }
 	}
+	50 = {
+	country_event = {id = Reid.1013}
 }
 # о ПГТ в лесу (основа)
 country_event = {
@@ -1213,27 +1218,27 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1412.a
-	
+	country_event = {id = Reid.1413}
 	}
 	option = {
 	name = Reid.1412.b
-	
+	country_event = {id = Reid.14122}
 	}
 	option = {
 	name = Reid.1412.c
-	
+	country_event = {id = Reid.142}
 	}
 	option = {
 	name = Reid.1412.d
-	
+	country_event = {id = Reid.142}
 	}
 	option = {
 	name = Reid.1412.e
-	
+	country_event = {id = Reid.143}
 	}
 	option = {
 	name = Reid.1412.f
-	
+	country_event = {id = Reid.1431}
 	}
 }
 #Селяне просят помощи
@@ -1249,22 +1254,6 @@ country_event = {
 	}
 	option = {
 	name = Reid.1413.b
-	
-	}
-	option = {
-	name = Reid.1413.c
-	
-	}
-	option = {
-	name = Reid.1413.d
-	
-	}
-	option = {
-	name = Reid.1413.e
-	
-	}
-	option = {
-	name = Reid.1413.f
 	
 	}
 }
