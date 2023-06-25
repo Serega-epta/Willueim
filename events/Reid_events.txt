@@ -1134,6 +1134,54 @@ country_event = {
 	add_to_variable = { profesionalzm_oriada = -0.05 }
 	}
 }
+country_event = {
+	id = Reid.121
+	title = Reid.12.t
+	desc = Reid.12.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.12.a
+	random_list = {
+	32 = {
+	country_event = { id = Reid.1011 }
+	}
+	68 = {
+	add_to_variable = { profesionalzm_oriada = 0.05 }
+	country_event = {days = 2 id = Reid.1412}
+	}
+	}
+	}
+	option = {
+	name = Reid.12.b
+	country_event = {id = Reid.1412}
+	add_to_variable = { profesionalzm_oriada = -0.05 }
+	}
+}
+country_event = {
+	id = Reid.122
+	title = Reid.12.t
+	desc = Reid.12.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.12.a
+	random_list = {
+	32 = {
+	country_event = { id = Reid.1011 }
+	}
+	68 = {
+	add_to_variable = { profesionalzm_oriada = 0.05 }
+	country_event = {days = 2 id = Reid.14323}
+	}
+	}
+	}
+	option = {
+	name = Reid.12.b
+	country_event = {id = Reid.14323}
+	add_to_variable = { profesionalzm_oriada = -0.05 }
+	}
+}
 #РЫЖИЙЛЕС
 country_event = {
 	id = Reid.13
@@ -1230,7 +1278,7 @@ country_event = {
 	}
 	option = {
 	name = Reid.1412.d
-	country_event = {id = Reid.142}
+	country_event = {id = Reid.121}
 	}
 	option = {
 	name = Reid.1412.e
@@ -1250,11 +1298,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1413.a
-	
+	country_event = {id = Reid.1431}
 	}
 	option = {
 	name = Reid.1413.b
-	
+	country_event = {id = Reid.1412}
 	}
 }
 #разграбление села
@@ -1264,13 +1312,20 @@ country_event = {
 	desc = Reid.14122.d
 	picture = event_Ar_start
 	is_triggered_only = yes
-	option = {
-	name = Reid.14122.a
-	
-	}
+		option = {
+		name = Reid.14122.a
+		random_list = {
+			68 = {
+				country_event = {id = Reid.14321}
+				}
+			32 = {
+				country_event = {id = Reid.1432}
+				}
+			}
+		}	
 	option = {
 	name = Reid.14122.b
-	
+	country_event = { id = Reid.1412 }
 	}
 }
 #селяне дают отпор
@@ -1282,11 +1337,20 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.142.a
-	
+	random_list = {
+	67 = {
+	country_event = {id = Reid.14321}
+	}
+	33 = {
+	country_event = {id = Reid.1432}
 	}
 	option = {
 	name = Reid.142.b
-	
+	country_event = { id = Reid.1412}
+	random_list = {
+	23 = { add_to_variable = {profesionalzm_oriada = -0.05}}
+	77 = { }
+	}
 	}
 }
 #РЫЖЕЕ СЕЛО
@@ -1298,11 +1362,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.143.a
-	
+	random_list = { 
+	75 = {country_event = {id = Reid.1010}}
+	25 = {add_to_variable = {profesionalzm_oriada = 0.15}}
 	}
 	option = {
 	name = Reid.143.b
-	
+	add_to_variable = {profesionalzm_oriada = -0.05}
+	country_event = {id = Reid.1412}
 	}
 }
 #СВОЕВРЕМЕННАЯ ПОМОЩЬ
@@ -1314,7 +1381,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1431.a
-	
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 2000} add_equipment_to_stockpile = {type = infantry_odejda amount = 1500}
 	}
 }
 #Истебление деревни
@@ -1326,7 +1393,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1432.a
-
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000}
 	}
 }
 #Расстрелянная группа
@@ -1338,7 +1405,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14321.a
-	
+	add_to_variable = {profesionalzm_oriada = -0.25}
 }
 #Где-то в пустошах(
 country_event = {
@@ -1362,31 +1429,23 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14323.a
-	hidden_effect = {
-		country_event = { id = 14324}
-		}
+		country_event = { id = Reid.14324}
 	}
 	option = {
 	name = Reid.14323.b
-	hidden_effect = {
-		country_event = { id = 14325}
-		}
+		country_event = { id = Reid.14325}
 	}
 	option = {
 	name = Reid.14323.c
-	
+		country_event = { id = Reid.14326}
 	}
 	option = {
 	name = Reid.14323.d
-	
+		country_event = { id = Reid.122}
 	}
 	option = {
 	name = Reid.14323.e
-	
-	}
-	option = {
-	name = Reid.14323.f
-	
+	country_event = { id = Reid.14327}
 	}
 
 }
@@ -1399,11 +1458,18 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14324.a
-	
+	country_event = {id = Reid.14323}
+	random_list = {
+	60 = {
+	add_to_variable = {profesionalzm_oriada = -0.05}
+	}
+	40 = {
+	add_to_variable = {profesionalzm_oriada = 0.10}
 	}
 	option = {
 	name = Reid.14324.b
-	
+	country_event = {id = Reid.14323}
+	add_to_variable = {profesionalzm_oriada = -0.15}
 	}
 }
 #Одинокая хижина
@@ -1415,11 +1481,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14325.a
-
+	hidden_effect = {
+	country_event = {id = Reid.1012}
+	}
 	}
 	option = {
 	name = Reid.14325.b
-	
+	country_event = {id = Reid.14323}
 	}
 }
 #Забытый бункер
@@ -1431,10 +1499,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14326.a
-	
+	random_list = {
+	50 = {country_event = {id = Reid.1433}}
+	50 = {country_event = {id = Reid.14328}}
+	}
 	}
 	option = {
 	name = Reid.14326.b
+	add_to_variable = {profesionalzm_oriada = -0.05}
+	country_event = {id = Reid.14323}
 	}
 }
 #РЫЖИЙЛЕС
@@ -1446,11 +1519,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14327.a
-	
+	random_list = { 
+	75 = {country_event = {id = Reid.1010}}
+	25 = {add_to_variable = {profesionalzm_oriada = 0.15}}
+	}
 	}
 	option = {
 	name = Reid.14327.b
-	
+	add_to_variable = {profesionalzm_oriada = -0.05}
+	country_event = {id = Reid.14323}
 	}
 }
 
@@ -1463,13 +1540,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1433.a
-	
-	}
-	option = {
-	name = Reid.1433.b
-	
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000}
 	}
 }
+#ITISTRAP
 country_event = {
 	id = Reid.14328
 	title = Reid.14328.t
@@ -1478,7 +1552,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.14328.a
-
+	50 = {add_to_variable = {profesionalzm_oriada = -0.15}}
+	50 = {}
 	}
 }
 #Секретая база
