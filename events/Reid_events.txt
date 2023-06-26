@@ -1556,6 +1556,8 @@ country_event = {
 	50 = {}
 	}
 }
+
+
 #Секретая база
 country_event = {
 	id = Reid.999
@@ -1565,14 +1567,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.999.a
-
+	country_event = { id = Reid.1000 }
 	}
 }
-
-
-
-
-
 #Глубокое погружение
 country_event = {
 	id = Reid.1000
@@ -1582,21 +1579,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1000.a
-	hidden_effect = {
-	country_event = { id = 1000 }
-		}
+	country_event = { id = Reid.1001 }
 	}
 	option = {
 	name = Reid.1000.b
+	country_event = {id = Reid.1004}
 	}
 	option = {
 	name = Reid.1000.c
-	}
-	option = {
-	name = Reid.1000.d
-	}
-	option = {
-	name = Reid.1000.e
+	country_event = {id = Reid.1007}
 	}
 }
 #ТУРЕЛИ
@@ -1608,12 +1599,25 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1001.a
+	hidden_effect = {
+	random_list {
+	70 = {country_event = {id = Reid.1003}}
+	30 = {country_event = {id = Reid.1002}}
+	}
+	}
 	}
 	option = {
 	name = Reid.1001.a
+	hidden_effect = {
+	random_list = {
+	80 = {country_event = {id = Reid.1003}}
+	20 = {country_event = {id = Reid.1002}}
+	}
+	}
 	}
 	option = {
 	name = Reid.1001.a
+	add_to_variable = {profesionalzm_oriada = -0.05}
 	}
 }
 #Успешная ликвидация
@@ -1625,6 +1629,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1002.a
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000}
 	}
 }
 #якобы успешня ликвидация
@@ -1636,6 +1641,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1003.a
+	add_to_variable = {profesionalzm_oriada = -0.15}
 	}
 }
 #В логове бандитов
@@ -1648,13 +1654,17 @@ country_event = {
 	option = {
 	name = Reid.1004.a
 	random_list = {
-		50 = {
+		65 = {
 		country_event = { id = Reid.1005 }
 			}	
-		50 = {
+		35 = {
 		country_event = { id = Reid.1006 }
 			}
 		}
+	}
+	option = {
+	name = Reid.1004.b
+	add_to_variable = {profesionalzm_oriada = -0.05}
 	}
 }
 #рАСТРЕЛЛЯНАЯ ГРУППА
@@ -1678,6 +1688,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = Reid.1006.a
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000}
 	}
 }
 #тайная секта
@@ -1690,31 +1701,33 @@ country_event = {
 	option = {
 	name = Reid.1007.a
 	hidden_effect = {
-		country_event = { id = Reid.1007}
+	country_event = { id = Reid.1008}
 	}
 	option = {
 	name = Reid.1007.b
-	hidden_effect = { id = Reid.1008}
+	country_event = { id = Reid.1009}
 	}
 }
 #НЕОБХОДИМАЯ ЖЕРТАВА?
 id = Reid.1008
-	title = Reid.1007.t
-	desc = Reid.1007.d
-	picture = event_Ar_start
-	is_triggered_only = yes
-	option = {
-	name = Reid.1007.a
-	}
-}
-#ТОПЛИВО ДЛЯ ТЕМНЫХ СИЛ
-id = Reid.1009
 	title = Reid.1008.t
 	desc = Reid.1008.d
 	picture = event_Ar_start
 	is_triggered_only = yes
 	option = {
 	name = Reid.1008.a
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000}
+	}
+}
+#ТОПЛИВО ДЛЯ ТЕМНЫХ СИЛ
+id = Reid.1009
+	title = Reid.1009.t
+	desc = Reid.1009.d
+	picture = event_Ar_start
+	is_triggered_only = yes
+	option = {
+	name = Reid.1009.a
+	add_to_variable = {profesionalzm_oriada = -0.15}
 	}
 }
 #прокаженная группа
@@ -1725,6 +1738,7 @@ id = Reid.1010
 	is_triggered_only = yes
 	option = {
 	name = Reid.1010.a
+	add_to_variable = {profesionalzm_oriada}
 	}
 }
 #съеденная группа
@@ -1735,6 +1749,7 @@ id = Reid.1011
 	is_triggered_only = yes
 	option = {
 	name = Reid.1011.a
+	add_to_variable = {profesionalzm_oriada}
 	}
 }
 #УСПЕХ!
@@ -1765,9 +1780,11 @@ id = Reid.1014
 	is_triggered_only = yes
 	option = {
 	name = Reid.1014.a
+	country_event = {id = Reid.1015}
 	}
 	option = {
 	name = Reid.1014.b
+	country_event = {id = Reid.1016}
 	}
 	option = {
 	name = Reid.1014.c
@@ -1781,9 +1798,16 @@ id = Reid.1015
 	is_triggered_only = yes
 	option = {
 	name = Reid.1015.a
+	random_list = {
+	20 = {country_event = {id = Reid.1017}}
+	80 = {country_event = {id = Reid.1018}}
+	}
 	}
 	option = {
 	name = Reid.1015.b
+	random_list = {
+	10 = {add_to_variable = {profesionalzm_oriada = 0.05}}
+	}
 	}
 }
 #честная сделка?
@@ -1794,12 +1818,15 @@ id = Reid.1016
 	is_triggered_only = yes
 	option = {
 	name = Reid.1016.a
+	add_to_variable = {profesionalzm_oriada = 0.15}
 	}
 	option = {
 	name = Reid.1016.b
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000}
 	}
 	option = {
 	name = Reid.1016.c
+	add_to_variable = {profesionalzm_oriada = -0.05}
 	}
 }
 #Расстрелянная группа
@@ -1810,6 +1837,7 @@ id = Reid.1017
 	is_triggered_only = yes
 	option = {
 	name = Reid.1017.a
+	add_to_variable = {profesionalzm_oriada = -0.15}
 	}
 }
 #Истебление группы
@@ -1820,6 +1848,7 @@ id = Reid.1018
 	is_triggered_only = yes
 	option = {
 	name = Reid.1018.a
+	add_equipment_to_stockpile = {type = infantry_equipment amount = 20000} add_equipment_to_stockpile = {type = infantry_odejda amount = 15000}
 	}
 }
 
