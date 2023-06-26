@@ -1,0 +1,24 @@
+scripted_gui = {
+    RoH_laws_gui = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "RoH_laws_gui"
+		dirty = country_laws
+	
+		visible = {
+			if = { 
+				limit = { check_variable = { government_laws = 1 } }
+				always = yes
+			}
+			else = {
+				always = no
+			}
+		}
+		
+		effects = {
+		}
+
+		triggers = {
+		}
+    }
+}

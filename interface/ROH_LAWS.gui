@@ -1,0 +1,205 @@
+guiTypes = {
+	containerWindowType = {
+		name = "RoH_laws_gui"	
+		position = { x = 0 y = 425 } 	   
+		size = { width = 550 height = 850 }
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window"
+		}
+		
+		containerWindowType = {
+			name = "RoH_category_laws"
+			position = { x = 20 y = 20 }
+			size = { width=510 height=67 }
+			iconType ={
+				name ="category_header_laws"
+				spriteType = "GFX_category_header_laws"
+				position = { x=0 y=0 }
+			}
+			iconType ={
+				name ="category_header_icon_laws"
+				spriteType = "GFX_category_header_icon_laws"
+				position = { x=3 y=0 }
+			}
+			instantTextboxType = {
+				name = "category_header_text_laws"
+				position = { x = 0 y = 13 }
+				font = "console_36"
+				format = center
+				text = category_header_text_laws
+				maxWidth = 510
+				maxHeight = 67
+			}
+		}
+		containerWindowType = {
+			name = "RoH_law_box_1"
+			position = { x = 20 y = 100 }
+			size = { width=244 height=67 }
+			buttonType ={
+				name ="box_law_1"
+				spriteType = "GFX_law_box_1"
+				position = { x=0 y=0 }
+				clicksound = click_close
+			}			
+			instantTextboxType = {
+				name = "law_box_text_1"
+				position = { x = 69 y = 20 }
+				font = "console_24"
+				format = center
+				text = law_box_text_1
+				maxWidth = 170
+				maxHeight = 67
+			}			
+		}
+		containerWindowType = {
+			name = "RoH_law_box_2"
+			position = { x = 20 y = 180 }
+			size = { width=244 height=67 }
+			buttonType ={
+				name ="box_law_2"
+				spriteType = "GFX_law_box_2"
+				position = { x=0 y=0 }
+				clicksound = click_close
+			}
+			instantTextboxType = {
+				name = "law_box_text_2"
+				position = { x = 69 y = 20 }
+				font = "console_24"
+				format = center
+				text = law_box_text_2
+				maxWidth = 170
+				maxHeight = 67
+			}			
+		}
+		containerWindowType = {
+			name = "RoH_law_box_3"
+			position = { x = 20 y = 260 }
+			size = { width=244 height=67 }
+			buttonType ={
+				name ="box_law_3"
+				spriteType = "GFX_law_box_3"
+				position = { x=0 y=0 }
+				clicksound = click_close
+			}	
+			instantTextboxType = {
+				name = "law_box_text_3"
+				position = { x = 69 y = 20 }
+				font = "console_24"
+				format = center
+				text = law_box_text_3
+				maxWidth = 170
+				maxHeight = 67
+			}			
+		}
+		containerWindowType = {
+			name = "RoH_law_box_4"
+			position = { x = 20 y = 340 }
+			size = { width=244 height=67 }
+			buttonType ={
+				name ="box_law_4"
+				spriteType = "GFX_law_box_4"
+				position = { x=0 y=0 }
+				clicksound = click_close
+			}	
+			instantTextboxType = {
+				name = "law_box_text_4"
+				position = { x = 69 y = 20 }
+				font = "console_24"
+				format = center
+				text = law_box_text_4
+				maxWidth = 170
+				maxHeight = 67
+			}			
+		}
+		containerWindowType = {
+			name = "RoH_law_box_5"
+			position = { x = 286 y = 100 }
+			size = { width=244 height=67 }
+			buttonType ={
+				name ="box_law_5"
+				spriteType = "GFX_law_box_5"
+				position = { x=0 y=0 }
+				clicksound = click_close
+			}
+			instantTextboxType = {
+				name = "law_box_text_5"
+				position = { x = 69 y = 20 }
+				font = "console_24"
+				format = center
+				text = law_box_text_5
+				maxWidth = 170
+				maxHeight = 67
+			}			
+		}
+		containerWindowType = {
+			name = "RoH_law_box_6"
+			position = { x = 286 y = 180 }
+			size = { width=244 height=67 }
+			buttonType ={
+				name ="box_law_6"
+				spriteType = "GFX_law_box_6"
+				position = { x=0 y=0 }
+				clicksound = click_close
+			}
+			instantTextboxType = {
+				name = "law_box_text_6"
+				position = { x = 69 y = 20 }
+				font = "console_24"
+				format = center
+				text = law_box_text_6
+				maxWidth = 170
+				maxHeight = 67
+			}			
+		}
+		containerWindowType = {
+			name = "RoH_law_box_7"
+			position = { x = 286 y = 260 }
+			size = { width=244 height=67 }
+			buttonType ={
+				name ="box_law_7"
+				spriteType = "GFX_law_box_7"
+				position = { x=0 y=0 }
+				clicksound = click_close
+			}
+			instantTextboxType = {
+				name = "law_box_text_7"
+				position = { x = 69 y = 20 }
+				font = "console_24"
+				format = center
+				text = law_box_text_7
+				maxWidth = 170
+				maxHeight = 67
+			}			
+		}
+		containerWindowType = {
+			name = "RoH_law_box_8"
+			position = { x = 286 y = 340 }
+			size = { width=244 height=67 }
+			buttonType ={
+				name ="box_law_8"
+				spriteType = "GFX_law_box_8"
+				position = { x=0 y=0 }
+				clicksound = click_close
+			}
+			instantTextboxType = {
+				name = "law_box_text_8"
+				position = { x = 69 y = 20 }
+				font = "console_24"
+				format = center
+				text = law_box_text_8
+				maxWidth = 170
+				maxHeight = 67
+			}			
+		}		
+	}
+	containerWindowType = {
+		name = "RoH_choosing_law_gui"	
+        position = { x = 440 y = 5 }	  
+		size = { width = 1000 height = 1010 }
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window"
+		}
+	}	
+}

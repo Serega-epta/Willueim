@@ -10,7 +10,7 @@ scripted_gui = {
 		
 		properties = { 
 			
-        }
+        	}
 		
 		effects = {
 		
@@ -18,8 +18,11 @@ scripted_gui = {
 		
 		BUTTON_Open_okno_gosustroistva_click = {	
 				if = {
-					limit = { check_variable = { gos_usroistvo = 0 } }
-					set_variable = { gos_usroistvo = 1 }		
+					limit = { 
+						check_variable = { gos_usroistvo = 0 }
+					} 
+					set_variable = { gos_usroistvo = 1 }
+					set_variable = { government_laws = 0 }		
 				}
 #				else = {
 #					set_variable = { gos_usroistvo = 0 }
@@ -28,8 +31,11 @@ scripted_gui = {
 			
 		BUTTON_Open_okno_zakona_click = {	
 				if = {
-					limit = { check_variable = { gos_usroistvo = 1 } }
+					limit = { 
+						check_variable = { gos_usroistvo = 1 }
+					}
 					set_variable = { gos_usroistvo = 0 }
+					set_variable = { government_laws = 1 }
 				}
 #				else = {
 #					set_variable = { gos_usroistvo = 0 }
