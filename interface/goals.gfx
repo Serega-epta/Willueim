@@ -161,78 +161,7 @@ spriteTypes = {
 	name = "GFX_goal_development_of_the_doctrine"
 	texturefile = "gfx/interface/goals/development_of_the_doctrine.dds"			
 	}
-
-	#### Generic continuous goal icons
-
-	SpriteType = {
-	name = "GFX_goal_continuous_air_production"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}	
 	
-	SpriteType = {
-	name = "GFX_goal_continuous_non_factory_construct"
-	texturefile = "gfx/interface/goals/goal_continuous_non_factory_construct.dds"			
-	}	
-	
-	frameAnimatedSpriteType = {
-	name = "GFX_goal_continuous_reduce_training_time"
-	texturefile = "gfx/leaders/dancing_hitler.dds"
-	noOfFrames = 6
-	animation_rate_fps = 8
-	looping = yes
-	play_on_show = yes	
-		
-	}	
-	frameAnimatedSpriteType = {
-	name = "Pomexi_sverx"
-	texturefile = "gfx/leaders/Pomexi.dds"
-	noOfFrames = 2
-	animation_rate_fps = 10
-	looping = yes
-	pause_on_loop = 1.0
-	play_on_show = yes	
-	allwaystransparent = yes	
-		 transparencecheck = yes		 
-	}	
-	SpriteType = {
-	name = "GFX_pomexi"
-		texturefile = "gfx/leaders/dancing_hitler.dds"
-		 allwaystransparent = yes	
-		 transparencecheck = yes	
-		animation = {
-			animationmaskfile = "gfx/leaders/dancing_hitler.dds"
-			animationtexturefile = "gfx/leaders/dancing_hitler.dds" 	# <- the animated file
-			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = yes			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 1.0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no		
-	}
-	SpriteType = {
-	name = "GFX_pomexi_1"
-		texturefile = "gfx/leaders/dancing_hitler.dds"
-
-		 allwaystransparent = yes	
-		 transparencecheck = yes	
-		animation = {
-			animationmaskfile = "gfx/leaders/dancing_hitler.dds"
-			animationtexturefile = "gfx/leaders/dancing_hitler.dds" 	# <- the animated file
-			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = yes			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 1.0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no		
-	}
 	SpriteType = {
 	name = "GFX_Gorod_Prokazhennyh"
 	texturefile = "gfx/interface/goals/Gorod_Prokazhennyh.dds"			
