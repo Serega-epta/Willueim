@@ -115,7 +115,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_ideas = ARM_kajdoi_otvetke_svoi_surup
 		}
 	}
 	
@@ -303,6 +303,9 @@
 
 		completion_reward = {
 			
+			add_manpower = -10000
+			add_stability = 0.15
+			country_event = { id = ARM.31 days = 1 }
 		}
 	}
 	
@@ -505,6 +508,23 @@
 
 		completion_reward = {
 			
+			add_resource = {
+				type = coal
+				amount = 20
+				state = 193
+			}
+			add_resource = {
+				type = coal
+				amount = 10
+				state = 202
+			}			
+			add_resource = {
+				type = coal
+				amount = 15
+				state = 225
+			}			
+			
+			
 		}
 	}
 	
@@ -578,6 +598,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			
+			add_war_support = 0.1
 			
 		}
 	}
