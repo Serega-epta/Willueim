@@ -43,6 +43,26 @@ on_actions = {
 			set_variable = { spons_army_opisanie = 0 }	
 			set_variable = { s_a = 0 }	
 
+
+
+		############################# ПЕРЕМЕННЫЕ НАЕМНИКОВ 
+		set_variable = { wagnera = 0 }	
+		set_variable = { ahmat = 0 }	
+		set_variable = { belg_legion = 0 }	
+		set_variable = { ice_armyy = 0 }	
+		set_variable = { glebusarmy = 0 }	
+		set_variable = { rashod_rublei_naemnikamy = 0 }
+		set_variable = { rashod_rublei_naemnikamy_dlya_opisaniya = 0 }
+
+
+
+
+
+
+
+
+
+
 		#задаем переменную бонус от военного налога	
 			set_variable = { war_tax_baff = 0 }	
 		#задаем переменную процветания	
@@ -585,10 +605,48 @@ on_actions = {
 
 			
 			#После мы прибавляем значение всех переменных в расход рублей а так же присваеваем переменые описания до того как обнулим их для следующего цикла и так же фиксируем недельный расход
+			
+			########################## РАСХОДЫ ОТ НАЕМНИКОВ ###############################################
+			
+			if = {
+				limit = { check_variable = { chvk_was_recruted = 1 }}
+				set_variable = { wagnera = 100 }	
+			}
+			if = {
+				limit = { check_variable = { legion_was_recruted = 1 }}
+				set_variable = { belg_legion = 200 }	
+			}
+			if = {
+				limit = { check_variable = { ice_army_was_recruted = 1 }}
+				set_variable = { ice_armyy = 500 }	
+			}
+			if = {
+				limit = { check_variable = { ahmat_was_recruted = 1 }}
+				set_variable = { ahmat = 150 }	
+			}
+			if = {
+				limit = { check_variable = { glebs_warriors_was_recruted = 1 }}
+				set_variable = { glebusarmy = 1000 }	
+			}		
+			add_to_variable = { rashod_rublei_naemnikamy = wagnera }	
+			add_to_variable = { rashod_rublei_naemnikamy = belg_legion }		
+			add_to_variable = { rashod_rublei_naemnikamy = ice_armyy }		
+			add_to_variable = { rashod_rublei_naemnikamy = ahmat }	
+			add_to_variable = { rashod_rublei_naemnikamy = glebusarmy }				
+			set_variable = { rashod_rublei_naemnikamy_dlya_opisaniya = rashod_rublei_naemnikamy }
+			
+			
+			
 			set_variable = { Rashod_rublei_zavodi_dlya_opisaniyaa = Rashod_rublei_zavodi }
 			set_variable = { Rashod_rublei_soldatami_dlya_opisaniyaa = Rashod_rublei_soldatami }		
 			add_to_variable = { Rashod_rublei = Rashod_rublei_zavodi }
-			add_to_variable = { Rashod_rublei = Rashod_rublei_soldatami }		
+			add_to_variable = { Rashod_rublei = Rashod_rublei_soldatami }
+			add_to_variable = { Rashod_rublei = rashod_rublei_naemnikamy }
+
+
+
+
+			
 			set_variable = { Rashod_rublei_dlya_opisaniyaa = Rashod_rublei }		
 			#Фиксируем баланс добавляя к переменной значение дохода после вычитая расходы
 			add_to_variable = { saldo_rublei = inkome_rublei }
@@ -1366,6 +1424,30 @@ on_actions = {
 			clear_variable = Rashod_rublei
 			clear_variable = saldo_rublei
 			clear_variable = inkome_rublei	
+			
+			
+			
+			#ОЧИЩАЕМ НАЕМНИКОВ
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			if = {
 				limit = { check_variable = { Chernii_rubli < -1000 } }
 				add_ideas = { defolt_economiki }
