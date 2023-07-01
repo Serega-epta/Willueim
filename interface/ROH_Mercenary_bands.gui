@@ -73,9 +73,14 @@ guiTypes = {
 		   spriteType = "GFX_nkr_logo"
 		   clicksound = click_close
 		   pdx_tooltip = "glebs_army_opisanie_tt"
+        }	      
+		buttonType ={ 
+           name ="peresvet"
+		   position = { x = 280 y = 410 }
+		   spriteType = "GFX_peresvet_logo"
+		   clicksound = click_close
+		   pdx_tooltip = "peresvet_opisanie_tt"
         }	   
-	   
-	   
 	   
 	   
 	    buttonType ={ 
@@ -106,6 +111,12 @@ guiTypes = {
            name ="recrut_glebs_warriors"
 		   position = { x = 875 y = 700 }
 		   spriteType = "GFX_nanyat_gleb"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="recrut_peresvet"
+		   position = { x = 50 y = 720 }
+		   spriteType = "GFX_nanyat_peresvet"
 		   clicksound = click_close
         }	
 	   
@@ -141,6 +152,12 @@ guiTypes = {
 		   clicksound = click_close
         }	
 	   
+	   	buttonType ={ 
+           name ="rospusk_peresvet"
+		   position = { x = 50 y = 720 }
+		   spriteType = "GFX_raspustit_peresvet"
+		   clicksound = click_close
+        }	
 	   
 	   
 	   
@@ -253,6 +270,25 @@ guiTypes = {
 			maxWidth = 400
 			maxHeight = 500
 		}
+		
+		instantTextBoxType = {
+			name ="stoimost6"
+			position = { x = 50 y = 770 }
+			font = "hoi_24mbs"
+			text = "Стоимость отряда - 3500 рублей"
+			maxWidth = 350
+			maxHeight = 500
+		}
+		instantTextBoxType = {
+			name ="soderjanie6"
+			position = { x = 50 y = 795 }
+			font = "hoi_24mbs"
+			text = "Содержание отряда - 350 рублей/нед."
+			maxWidth = 400
+			maxHeight = 500
+		}
+		
+		
 		instantTextBoxType = {
 			name ="sod888"
 			position = { x = 875 y = 800 }

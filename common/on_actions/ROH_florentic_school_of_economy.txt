@@ -51,6 +51,7 @@ on_actions = {
 		set_variable = { belg_legion = 0 }	
 		set_variable = { ice_armyy = 0 }	
 		set_variable = { glebusarmy = 0 }	
+		set_variable = { peresvet = 0 }	
 		set_variable = { rashod_rublei_naemnikamy = 0 }
 		set_variable = { rashod_rublei_naemnikamy_dlya_opisaniya = 0 }
 
@@ -627,7 +628,18 @@ on_actions = {
 			if = {
 				limit = { check_variable = { glebs_warriors_was_recruted = 1 }}
 				set_variable = { glebusarmy = 1000 }	
-			}		
+			}
+			if = {
+				limit = { check_variable = { peresvet_was_recruted = 1 }}
+				set_variable = { peresvet = 350 }	
+			}
+
+
+
+
+
+
+			add_to_variable = { rashod_rublei_naemnikamy = peresvet }	
 			add_to_variable = { rashod_rublei_naemnikamy = wagnera }	
 			add_to_variable = { rashod_rublei_naemnikamy = belg_legion }		
 			add_to_variable = { rashod_rublei_naemnikamy = ice_armyy }		
@@ -1429,6 +1441,7 @@ on_actions = {
 			
 			#ОЧИЩАЕМ НАЕМНИКОВ
 			
+			clear_variable = peresvet 
 			clear_variable = wagnera 
 			clear_variable = belg_legion 		
 			clear_variable = ice_armyy		

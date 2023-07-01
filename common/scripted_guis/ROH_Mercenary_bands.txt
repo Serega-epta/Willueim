@@ -84,7 +84,25 @@ okno_naima_naemnikov = {
 						else = {
 						always = no
 						}							
-			}			
+			}
+			recrut_peresvet_visible = {					
+						if = {
+						limit = { check_variable = { peresvet_was_recruted = 0 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+			}
+			rospusk_peresvet_visible = {					
+						if = {
+						limit = { check_variable = { peresvet_was_recruted = 1 }}
+						always = yes
+						}
+						else = {
+						always = no
+						}							
+			}		
 			rospusk_chvk_visible = {					
 						if = {
 						limit = { check_variable = { chvk_was_recruted = 1 }}
@@ -524,6 +542,7 @@ okno_naima_naemnikov = {
 				}
 				else = {			
 				set_global_flag = gleb_nanyat
+				add_manpower = -1000000
 				set_variable = { glebs_warriors_was_recruted = 1 }
 				play_song = iron_hevest_russvet_hymn
 				add_to_variable = { Chernii_rubli = -10000 }	
@@ -573,7 +592,7 @@ okno_naima_naemnikov = {
 							opolchenie = { x = 4 y = 1 }
 							opolchenie = { x = 4 y = 2 }
 							opolchenie = { x = 4 y = 3 }
-							opolchenie = { x = 4 y = 4s }
+							opolchenie = { x = 4 y = 4 }
 						}
 						priority = 0
 					}		
@@ -591,6 +610,140 @@ okno_naima_naemnikov = {
 				}
 				}				
 			}
+			recrut_peresvet_click = {
+				if = {
+					limit = { has_global_flag = peresvet_nanyat }
+					#ЕСЛИ ЕСТЬ ЭТОТ ФЛАГ ЗНАЧИТ ЭТИ НАЕМНИКИ УЖЕ НАНЯТЫ И ОНИ НЕ НАЙМУТСЯ КЕМ ТО ДРУГИМ А В ELSE ЕСЛИ ФЛАГА НЕТ ТО НАНАТЬ МОЖНО 
+				}
+				else = {			
+				set_global_flag = peresvet_nanyat	
+				set_variable = { peresvet_was_recruted = 1 }
+				play_song = sibirean_rifeman
+				add_to_variable = { Chernii_rubli = -3500 }	
+				recruit_character = KONDOTIER_KIrill_de_fernandezov
+				add_corps_commander_role = {
+					Character = KONDOTIER_KIrill_de_fernandezov						
+					traits={ trait_SOV_determined }
+					skill = 7
+					attack_skill = 8
+					defense_skill = 4
+					planning_skill = 9
+					logistics_skill = 6
+				}
+				if = {
+					limit = {
+						any_owned_state = {
+							is_core_of = ROOT
+							is_fully_controlled_by = ROOT
+						}
+					}				
+					division_template = { 
+						name = "boytsi peresvet1"
+						division_names_group = MER_CAM_12
+						is_locked = yes
+						regiments = {
+							egerskayapechota = { x = 0 y = 0 }
+							egerskayapechota = { x = 0 y = 1 }
+							egerskayapechota = { x = 0 y = 2 }
+							egerskayapechota = { x = 0 y = 3 }						
+							egerskayapechota = { x = 0 y = 4 }				
+							artillery_brigade = { x = 1 y = 0 }
+							artillery_brigade = { x = 1 y = 1 }							
+							artillery_brigade = { x = 1 y = 2 }	
+							artillery_brigade = { x = 1 y = 3 }	
+							artillery_brigade = { x = 1 y = 4 }	
+							obt_tank = { x = 2 y = 0 }	
+							obt_tank = { x = 2 y = 1 }	
+							obt_tank = { x = 2 y = 2 }	
+							obt_tank = { x = 2 y = 3 }
+							obt_tank = { x = 2 y = 4 }
+							mechanized = { x = 3 y = 0 }	
+							mechanized = { x = 3 y = 1 }	
+							mechanized = { x = 3 y = 2 }	
+							mechanized = { x = 3 y = 3 }
+							mechanized = { x = 3 y = 4 }	
+							motopechotanagruzovikah = { x = 4 y = 0 }
+							motopechotanagruzovikah = { x = 4 y = 1 }
+							motopechotanagruzovikah = { x = 4 y = 2 }
+							motopechotanagruzovikah = { x = 4 y = 3 }
+							motopechotanagruzovikah = { x = 4 y = 4 }							
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							politruk = { x = 0 y = 2 }
+						}
+						priority = 0
+					}
+					division_template = {
+						name = "boytsi peresvet2"
+						division_names_group = MER_CAM_13
+						is_locked = yes
+						regiments = {	
+							egerskayapechota = { x = 0 y = 0 }
+							egerskayapechota = { x = 0 y = 1 }
+							egerskayapechota = { x = 0 y = 2 }
+							egerskayapechota = { x = 0 y = 3 }	
+							egerskayapechota = { x = 0 y = 4 }							
+							egerskayapechota = { x = 1 y = 0 }
+							egerskayapechota = { x = 1 y = 1 }
+							egerskayapechota = { x = 1 y = 2 }
+							egerskayapechota = { x = 1 y = 3 }
+							egerskayapechota = { x = 1 y = 4 }
+							egerskayapechota = { x = 2 y = 0 }
+							egerskayapechota = { x = 2 y = 1 }							
+							egerskayapechota = { x = 2 y = 2 }
+							egerskayapechota = { x = 2 y = 3 }
+							egerskayapechota = { x = 2 y = 4 }								
+							egerskayapechota = { x = 3 y = 0 }
+							egerskayapechota = { x = 3 y = 1 }
+							egerskayapechota = { x = 3 y = 2 }
+							egerskayapechota = { x = 3 y = 3 }							
+							egerskayapechota = { x = 3 y = 4 }
+							egerskayapechota = { x = 4 y = 0 }	
+							egerskayapechota = { x = 4 y = 1 }
+							egerskayapechota = { x = 4 y = 2 }
+							egerskayapechota = { x = 4 y = 3 }
+							egerskayapechota = { x = 4 y = 4 }															
+						}
+						support = {
+							politruk = { x = 0 y = 0 }
+						}
+						priority = 0
+					}		
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							is_fully_controlled_by = ROOT
+						}			
+						create_unit = {
+							division = "division_template = \"boytsi peresvet1\" start_experience_factor = 1 start_equipment_factor = 1.0"
+							owner = ROOT
+							count = 5
+						}
+						create_unit = {
+							division = "division_template = \"boytsi peresvet2\" start_experience_factor = 1 start_equipment_factor = 1.0"
+							owner = ROOT
+							count = 4
+						}
+					}
+				}
+				}				
+			}
+			rospusk_peresvet_click = {			
+				clr_global_flag = peresvet_nanyat
+				set_variable = { peresvet_was_recruted = 0 }
+				KONDOTIER_KIrill_de_fernandezov = { remove_unit_leader = yes } 
+				delete_units = {
+					division_template = "boytsi peresvet1"
+					disband = no
+				}
+				delete_units = {
+					division_template = "boytsi peresvet2"
+					disband = no
+				}
+				
+			}		
 			rospusk_chvk_click = {			
 				clr_global_flag = chvk_nanyata
 				set_variable = { chvk_was_recruted = 0 }
@@ -669,7 +822,9 @@ okno_naima_naemnikov = {
 			glebs_army_click = {			
 				play_song = iron_hevest_russvet_hymn
 			}
-			
+			peresvet_click = {			
+				play_song = sibirean_rifeman
+			}
 			
 			
 			
