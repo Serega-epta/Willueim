@@ -40,7 +40,11 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_stability = 0.1
+			add_popularity = {
+				ideology = patriots
+				popularity = 0.1
+			}
 		}
 	}
 	
@@ -55,7 +59,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_manpower = -10000
 		}
 	}
 	
@@ -70,7 +74,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_stability = 0.15
 		}
 	}
 	
@@ -85,7 +89,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 50
 		}
 	}
 	
@@ -100,7 +104,13 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_manpower = -70000
+			add_timed_idea = {
+				idea = ARM_ruthless_cleaning
+				days = 1080				
+			}
+			army_experience = -200
+			air_experience = -200
 		}
 	}
 	
@@ -115,7 +125,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = ARM_kajdoi_otvetke_svoi_surup
+			add_ideas = ARM_universal_employment
 		}
 	}
 	
@@ -129,9 +139,9 @@
 		relative_position_ = politic6_ARM
 		cost = 10
 		available_if_capitulated = no
-
 		completion_reward = {
-			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.2
 		}
 	}
 	
@@ -147,7 +157,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			swap_ideas = {
+				remove_idea = ARM_universal_employment
+				add_idea = ARM_universal_employment1
+			}
 		}
 	}
 	
@@ -163,7 +176,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			swap_ideas = {
+				remove_idea = ARM_universal_employment1
+				add_idea = ARM_universal_employment3
+			}
 		}
 	}
 	
@@ -179,7 +195,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			swap_ideas = {
+				remove_idea = ARM_universal_employment
+				add_idea = ARM_universal_employment2
+			}
 		}
 	}
 	
@@ -194,7 +213,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_war_support = 0.1
 		}
 	}
 	
@@ -209,7 +228,24 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			if = {
+    			limit = {
+        			has_idea = ARM_universal_employment3
+    			}
+				swap_ideas = {
+					remove_idea = ARM_universal_employment3
+					add_idea = ARM_universal_employment31
+				}				
+			}
+			else = {
+    			limit = {
+        			has_idea = ARM_universal_employment2
+    			}
+				swap_ideas = {
+					remove_idea = ARM_universal_employment2
+					add_idea = ARM_universal_employment21
+				}
+			}
 		}
 	}
 	
@@ -224,7 +260,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_stability = 0.05
 		}
 	}
 	
@@ -239,7 +275,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_stability = 0.15
+			add_political_power = 50
 		}
 	}
 	
@@ -270,7 +307,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_ideas = ARM_bloody_terror
 		}
 	}
 	
@@ -286,7 +323,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
+			add_manpower = 10000
+			add_command_power = 10
 		}
 	}
 	
@@ -301,7 +339,6 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
 			add_manpower = -10000
 			add_stability = 0.15
 			country_event = { id = ARM.31 days = 1 }
@@ -318,7 +355,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_stability = 0.3
+			add_political_power = -150			
 		}
 	}
 	
@@ -333,7 +371,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARM_bloody_terror
+				add_idea = ARM_bloody_terror2
+			}
 		}
 	}
 	
@@ -348,7 +389,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARM_bloody_terror
+				add_idea = ARM_bloody_terror1
+			}
 		}
 	}
 	
@@ -362,7 +406,24 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			if = {
+    			limit = {
+        			has_idea = ARM_bloody_terror1
+    			}
+				swap_ideas = {
+					remove_idea = ARM_bloody_terror1
+					add_idea = ARM_bloody_terror12
+				}				
+			}
+			else = {
+    			limit = {
+        			has_idea = ARM_bloody_terror2
+    			}
+				swap_ideas = {
+					remove_idea = ARM_bloody_terror2
+					add_idea = ARM_bloody_terror22
+				}
+			}			
 		}
 	}
 	
@@ -376,7 +437,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_manpower = -1000
 		}
 	}
 	
@@ -390,7 +451,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_stability = -0.2
 		}
 	}
 	
@@ -404,7 +465,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_manpower = -20000
+			add_ideas = ARM_one_motherland_one_idea
 		}
 	}
 	
@@ -420,7 +482,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_political_power = 200
 		}
 	}
 	
@@ -436,7 +498,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARM_one_motherland_one_idea
+				add_idea = ARM_one_motherland_one_idea1
+			}
 		}
 	}
 	
@@ -464,7 +529,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_idea = ARM_underground_treasures
 		}
 	}
 	
@@ -478,7 +543,18 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			202 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
 		}
 	}
 	
@@ -492,7 +568,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_ideas = ARM_living_earth
 		}
 	}
 	
@@ -505,8 +581,7 @@
 		cost = 10
 		available_if_capitulated = no
 
-		completion_reward = {
-			
+		completion_reward = {		
 			add_resource = {
 				type = coal
 				amount = 20
@@ -521,9 +596,7 @@
 				type = coal
 				amount = 15
 				state = 225
-			}			
-			
-			
+			}					
 		}
 	}
 	
@@ -551,7 +624,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_ideas = ARM_living_earth
+				add_idea = ARM_living_earth1
+			}
 		}
 	}
 	
@@ -565,7 +641,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARM_underground_treasures
+				add_idea = ARM_underground_treasures1
+			}
 		}
 	}
 	
@@ -579,7 +658,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_ideas = ARM_all_to_the_front
 		}
 	}
 	
@@ -596,10 +675,8 @@
 		cost = 10
 		available_if_capitulated = no
 
-		completion_reward = {
-			
+		completion_reward = {	
 			add_war_support = 0.1
-			
 		}
 	}
 	
@@ -613,7 +690,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			# Разблокирует решения на “Разведку Боем”
 		}
 	}
 	
@@ -629,7 +706,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			# Стоимость создания конфликтов снижается. (500 пех.снаряжения, 500 людей будет стоить)
+			# Ивент "Каратели"
 		}
 	}
 	
@@ -644,7 +722,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			# Стоимость конфликтов (50 пп и теперь дают + 50 к опыту армии)			
 		}
 	}
 	
@@ -658,7 +736,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			# Вместо нац.духа  “Шок”,  у врага будет появляться “Шок и трепет”			
 		}
 	}
 	
@@ -672,7 +750,11 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			army_experience = 50
+			swap_ideas = {
+				remove_idea = ARM_all_to_the_front
+				add_idea = ARM_all_to_the_front1
+			}
 		}
 	}
 	
@@ -686,7 +768,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			air_experience = 10
 		}
 	}
 	focus = {
@@ -699,7 +781,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARM_all_to_the_front3
+				add_idea = ARM_all_to_the_front4
+			}
 		}
 	}
 	
@@ -713,7 +798,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARM_all_to_the_front1
+				add_idea = ARM_all_to_the_front2
+			}
 		}
 	}
 	focus = {
@@ -726,7 +814,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARM_all_to_the_front4
+				add_idea = ARM_all_to_the_front5
+			}			
 		}
 	}
 	
@@ -740,7 +831,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			swap_ideas = {
+				add_idea = ARM_all_to_the_front3
+				remove_idea = ARM_all_to_the_front2
+			}
 		}
 	}
 	focus = {
@@ -753,7 +847,11 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_trait = {
+				character = ARM_michael_onufrenko
+     			slot = corps_commander
+     			trait = army_armored_1				
+			}
 		}
 	}
 	
@@ -777,8 +875,8 @@
 		load_focus_tree = { 
 			tree = army_junta_rodina_unite
 			keep_completed = yes 
-			}		
-			
+		}		
+		add_ideas = ARM_invincible_and_legendary	
 		}
 	}
 	

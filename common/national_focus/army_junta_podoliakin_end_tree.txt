@@ -12,7 +12,7 @@
 
 	focus = {
 		id = ARM_red_sunrise
-		icon = GFX_besslavni_end
+		icon = GFX_red_sunrise
 		x = 6
 		y = 0
 		cost = 5
@@ -27,10 +27,10 @@
 	
 	focus = {
 		id = ARM_open_the_bunkers
-		icon = GFX_besslavni_end
+		icon = GFX_open_the_bunkers
 		prerequisite = { focus = ARM_red_sunrise }
 		x = 6
-		y = 1
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -43,10 +43,10 @@
 
 	focus = {
 		id = ARM_coming_podoliakin
-		icon = GFX_besslavni_end
+		icon = GFX_coming
 		prerequisite = { focus = ARM_open_the_bunkers }
 		x = 6
-		y = 2
+		y = 4
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -59,10 +59,10 @@
 
 	focus = {
 		id = ARM_the_time_has_come
-		icon = GFX_besslavni_end
+		icon = GFX_the_time_has_come
 		prerequisite = { focus = ARM_coming_podoliakin }
 		x = 6
-		y = 4
+		y = 6
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -75,73 +75,8 @@
 
 	focus = {
 		id = ARM_weapon_of_retaliation
-		icon = GFX_besslavni_end
+		icon = GFX_weapon_of_retaliation
 		prerequisite = { focus = ARM_the_time_has_come }
-		x = 6
-		y = 5
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = ARM_started
-		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_weapon_of_retaliation }
-		x = 6
-		y = 6
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = ARM_what_we_have_to_do
-		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_started }
-		x = 5
-		y = 7
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = ARM_break_their_will
-		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_started }
-		x = 7
-		y = 7
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = ARM_our_salvation
-		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_what_we_have_to_do }
-		prerequisite = { focus = ARM_break_their_will }
 		x = 6
 		y = 8
 		cost = 5
@@ -155,25 +90,9 @@
 	}
 
 	focus = {
-		id = ARM_they_know_fear
-		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_our_salvation }
-		x = 6
-		y = 9
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = ARM_eight_two
-		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_they_know_fear }
+		id = ARM_started
+		icon = GFX_started
+		prerequisite = { focus = ARM_weapon_of_retaliation }
 		x = 6
 		y = 10
 		cost = 5
@@ -182,31 +101,15 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			
+
 		}
 	}
 
 	focus = {
-		id = ARM_its_all_over
-		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_eight_two }
-		x = 6
-		y = 11
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = ARM_we_did_what_we_had_to_do
-		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_its_all_over }
-		x = 6
+		id = ARM_what_we_have_to_do
+		icon = GFX_what_we_have_to_do
+		prerequisite = { focus = ARM_started }
+		x = 4
 		y = 12
 		cost = 5
 		ai_will_do = {
@@ -219,11 +122,108 @@
 	}
 
 	focus = {
+		id = ARM_break_their_will
+		icon = GFX_break_their_will
+		prerequisite = { focus = ARM_started }
+		x = 8
+		y = 12
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_our_salvation
+		icon = GFX_our_salvation
+		prerequisite = { focus = ARM_what_we_have_to_do }
+		prerequisite = { focus = ARM_break_their_will }
+		x = 6
+		y = 14
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_they_know_fear
+		icon = GFX_they_know_fear
+		prerequisite = { focus = ARM_our_salvation }
+		x = 6
+		y = 16
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_eight_two
+		icon = GFX_eight_two
+		prerequisite = { focus = ARM_they_know_fear }
+		x = 6
+		y = 18
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ARM_its_all_over
+		icon = GFX_its_all_over
+		prerequisite = { focus = ARM_eight_two }
+		x = 6
+		y = 20
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ARM_we_did_what_we_had_to_do
+		icon = GFX_we_did_what_we_had_to_do
+		prerequisite = { focus = ARM_its_all_over }
+		x = 6
+		y = 22
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
 		id = ARM_the_mandate_of_the_Motherland_over_the_world
-		icon = GFX_besslavni_end
+		icon = GFX_the_mandate_of_the_Motherland_over_the_world
 		prerequisite = { focus = ARM_we_did_what_we_had_to_do }
 		x = 6
-		y = 13
+		y = 24
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -236,10 +236,10 @@
 
 	focus = {
 		id = ARM_rebirth_of_humanity_podoliakin
-		icon = GFX_besslavni_end
+		icon = GFX_rebirth_of_humanity
 		prerequisite = { focus = ARM_the_mandate_of_the_Motherland_over_the_world }
 		x = 6
-		y = 14
+		y = 26
 		cost = 5
 		ai_will_do = {
 			factor = 10

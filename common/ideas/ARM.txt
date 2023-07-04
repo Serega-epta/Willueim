@@ -345,11 +345,10 @@ ideas = {
 		
 		
 		
-		ARM_kajdoi_otvetke_svoi_surup = {
+		ARM_universal_employment = {
 			picture = Sovet_reintegratsii
 			modifier = {
-			   
-			production_factory_max_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
 			}	
 			equipment_bonus = {
 				infantry_equipment = {
@@ -358,11 +357,272 @@ ideas = {
 				}
 			}
 		}
-		
-		
-		
-		
-		
-		
+
+		ARM_universal_employment1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}	
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+
+		ARM_universal_employment2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				stability_factor = 0.1
+			}	
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+		ARM_universal_employment21 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.2
+				stability_factor = 0.1
+			}	
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+		ARM_universal_employment3 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}	
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+
+		ARM_universal_employment31 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}	
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+
+		ARM_ruthless_cleaning = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.3				
+			}	
+		}
+
+		ARM_bloody_terror = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				monthly_population = -0.2	
+				compliance_growth_on_our_occupied_states = -0.1	
+			}	
+		}
+
+		ARM_bloody_terror1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				monthly_population = -0.2	
+				compliance_growth_on_our_occupied_states = -0.1	
+				political_power_gain = 0.5
+			}	
+		}
+
+		ARM_bloody_terror12 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				monthly_population = -0.2	
+				compliance_growth_on_our_occupied_states = -0.1	
+				political_power_gain = 0.5
+				production_speed_infrastructure_factor = 0.1
+			}	
+		}
+
+		ARM_bloody_terror2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				monthly_population = -0.2	
+				compliance_growth_on_our_occupied_states = -0.1	
+				resistance_growth_on_our_occupied_states = -0.3
+			}	
+		}
+
+		ARM_bloody_terror22 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				monthly_population = -0.2	
+				compliance_growth_on_our_occupied_states = -0.1	
+				production_speed_infrastructure_factor = 0.1
+			}	
+		}
+
+		ARM_one_motherland_one_idea = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_core_defence_factor = 0.1
+			}	
+		}
+
+		ARM_one_motherland_one_idea1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_core_defence_factor = 0.1
+				consumer_goods_factor = -0.05
+				conversion_cost_civ_to_mil_factor = -0.4
+			}	
+		}
+
+		ARM_living_earth = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				monthly_population = 0.1
+			}	
+		}
+
+		ARM_living_earth1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = -0.05
+			}	
+		}
+
+		ARM_underground_treasures = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_speed_supply_node_factor = 0.5
+			}	
+		}
+
+		ARM_underground_treasures1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_speed_supply_node_factor = 0.5
+				production_lack_of_resource_penalty_factor = 0.25
+			}	
+		}
+
+		ARM_all_to_the_front = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_supply_node_factor = 0.3
+				production_speed_bunker_factor = 0.25
+			}	
+		}
+
+		ARM_all_to_the_front1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_supply_node_factor = 0.3
+				production_speed_bunker_factor = 0.25
+				army_leader_cost_factor = -0.3
+				land_doctrine_cost_factor = -0.2
+			}	
+		}
+
+		ARM_all_to_the_front2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_supply_node_factor = 0.3
+				production_speed_bunker_factor = 0.25
+				army_leader_cost_factor = -0.3
+				land_doctrine_cost_factor = -0.2
+				air_doctrine_cost_factor = -0.3
+				experience_gain_air = 0.5
+			}	
+		}
+
+		ARM_all_to_the_front3 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_supply_node_factor = 0.3
+				production_speed_bunker_factor = 0.25
+				army_leader_cost_factor = -0.3
+				land_doctrine_cost_factor = -0.2
+				air_doctrine_cost_factor = -0.3
+				experience_gain_air = 0.5
+				air_ace_generation_chance_factor = 0.2
+			}	
+		}
+
+		ARM_all_to_the_front4 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_supply_node_factor = 0.3
+				production_speed_bunker_factor = 0.25
+				army_leader_cost_factor = -0.3
+				land_doctrine_cost_factor = -0.2
+				air_doctrine_cost_factor = -0.3
+				experience_gain_air = 0.5
+				air_ace_generation_chance_factor = 0.2
+				army_armor_attack_factor = 0.1
+			}	
+		}
+
+		ARM_all_to_the_front5 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_supply_node_factor = 0.3
+				production_speed_bunker_factor = 0.25
+				army_leader_cost_factor = -0.3
+				land_doctrine_cost_factor = -0.2
+				air_doctrine_cost_factor = -0.3
+				experience_gain_air = 0.5
+				air_ace_generation_chance_factor = 0.2
+				army_armor_attack_factor = 0.1
+				army_armor_speed_factor = 0.2
+			}	
+		}
+
+		ARM_invincible_and_legendary = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				supply_combat_penalties_on_core_factor = -0.1
+				army_fuel_consumption_factor = -0.1
+			}	
+		}
 	}
 }
