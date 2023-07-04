@@ -294,8 +294,7 @@
 	focus = {
 		id = ARM_mochit_v_sortirah
 		icon = GFX_third_faza_pic19
-		prerequisite = { focus = politic17_ARM }
-		prerequisite = { focus = politic16_ARM }
+		prerequisite = { focus = politic17_ARM focus = politic16_ARM }
 		x = 12
 		y = 10
 		cost = 10
@@ -767,7 +766,12 @@
 		y = 24
 		cost = 10
 		available_if_capitulated = no
-
+		available = {
+			has_completed_focus = ARM_evrebody_knows_his_role
+			has_completed_focus = ARM_raspredelit_v_kolhozi	
+			has_completed_focus = ARM_iskuplenie_pod_zemley	
+			has_completed_focus = ARM_ritm_effectivnosty			
+		}
 		completion_reward = {
 			
 		load_focus_tree = { 

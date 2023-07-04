@@ -1,0 +1,252 @@
+﻿focus_tree = {
+	id = army_junta_podoliakin_end_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARM
+		}
+	}
+	default = no
+
+	focus = {
+		id = ARM_red_sunrise
+		icon = GFX_besslavni_end
+		x = 6
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}	
+	
+	focus = {
+		id = ARM_open_the_bunkers
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_red_sunrise }
+		x = 6
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}	
+
+	focus = {
+		id = ARM_coming_podoliakin
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_open_the_bunkers }
+		x = 6
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_the_time_has_come
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_coming_podoliakin }
+		x = 6
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}	
+
+	focus = {
+		id = ARM_weapon_of_retaliation
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_the_time_has_come }
+		x = 6
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_started
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_weapon_of_retaliation }
+		x = 6
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_what_we_have_to_do
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_started }
+		x = 5
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_break_their_will
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_started }
+		x = 7
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_our_salvation
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_what_we_have_to_do }
+		prerequisite = { focus = ARM_break_their_will }
+		x = 6
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_they_know_fear
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_our_salvation }
+		x = 6
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_eight_two
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_they_know_fear }
+		x = 6
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ARM_its_all_over
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_eight_two }
+		x = 6
+		y = 11
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ARM_we_did_what_we_had_to_do
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_its_all_over }
+		x = 6
+		y = 12
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_the_mandate_of_the_Motherland_over_the_world
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_we_did_what_we_had_to_do }
+		x = 6
+		y = 13
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_rebirth_of_humanity_podoliakin
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_the_mandate_of_the_Motherland_over_the_world }
+		x = 6
+		y = 14
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+}

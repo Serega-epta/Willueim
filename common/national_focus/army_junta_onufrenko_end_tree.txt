@@ -1,0 +1,236 @@
+﻿focus_tree = {
+	id = army_junta_onufrenko_end_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARM
+		}
+	}
+	default = no
+
+	focus = {
+		id = ARM_uncompromising_triumph
+		icon = GFX_besslavni_end
+		x = 6
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}	
+	
+	focus = {
+		id = ARM_our_capabilities
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_uncompromising_triumph }
+		x = 6
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}	
+
+	focus = {
+		id = ARM_coming_onufrenko
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_our_capabilities }
+		x = 6
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_our_meaning
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_coming_onufrenko }
+		x = 6
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}	
+
+	focus = {
+		id = ARM_way_across_the_ocean
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_our_meaning }
+		x = 6
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_eyes_do_not_fear_hands_do
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_way_across_the_ocean }
+		x = 6
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_uninhibited
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_eyes_do_not_fear_hands_do }
+		x = 5
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_final_decision
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_eyes_do_not_fear_hands_do }
+		x = 7
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_look_fear_in_the_eye
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_uninhibited }
+		prerequisite  = { focus = ARM_final_decision }
+		x = 6
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_no_light
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_look_fear_in_the_eye }
+		x = 6
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_break_the_cycle
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_no_light }
+		x = 6
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ARM_end_of_hate
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_break_the_cycle }
+		x = 6
+		y = 11
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_place_a_domino
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_end_of_hate }
+		x = 6
+		y = 12
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ARM_rebirth_of_humanity_onufrenko
+		icon = GFX_besslavni_end
+		prerequisite  = { focus = ARM_place_a_domino }
+		x = 6
+		y = 13
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+}
