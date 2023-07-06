@@ -24,7 +24,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			set_cosmetic_tag = ARM_Motherland_without_banner
 		}	
 	}
 
@@ -40,7 +40,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			set_cosmetic_tag = ARM_Motherland_with_banner
 		}
 	}
 	
@@ -56,7 +56,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_stability = -0.2
 		}
 	}
 	
@@ -152,7 +152,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -338,7 +338,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_war_support = 0.3
 		}
 	}
 	focus = {
@@ -383,7 +383,9 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			202 = {
+				add_manpower = -30000
+			}
 		}
 	}
 	focus = {
@@ -493,7 +495,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_ideas = ARM_fighting_for_the_fate_of_the_Motherland
 		}	
 	}
 	focus = {
@@ -508,7 +510,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -523,7 +525,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_war_support = 0.3
 		}
 	}
 	focus = {
@@ -538,7 +540,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_war_support = 0.2
 		}
 	}
 	focus = {
@@ -568,7 +570,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			army_experience = 10
 		}
 	}
 	focus = {
@@ -583,7 +585,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -598,7 +600,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_fighting_for_the_fate_of_the_Motherland
+				add_idea = ARM_fighting_for_the_fate_of_the_Motherland1_pod
+			}
 		}
 	}
 	focus = {
@@ -613,7 +618,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			army_experience = 100
 		}
 	}		
 	focus = {
@@ -628,7 +633,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_fighting_for_the_fate_of_the_Motherland1_pod
+				add_idea = ARM_fighting_for_the_fate_of_the_Motherland2_pod
+			}
 		}
 	}
 	focus = {
@@ -643,7 +651,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_ideas = ARM_in_salvation
 		}
 	}
 	focus = {
@@ -658,7 +666,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_in_salvation
+				add_idea = ARM_in_salvation1
+			}			
 		}
 	}
 	focus = {
@@ -673,7 +684,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_in_salvation1
+				add_idea = ARM_in_salvation2
+			}		
 		}
 	}	
 	
@@ -683,6 +697,9 @@ focus_tree = {
 		prerequisite = { focus = ARM_our_faithful }
 		prerequisite = { focus = ARM_we_win_obiazatelno }
 		prerequisite = { focus = ARM_dokazavshie_loyalnost }
+		available = {
+			surrender_progress > 0.25
+		}
 		x = 6
 		y = 10
 		cost = 5
@@ -691,7 +708,32 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_in_salvation2
+				add_idea = ARM_in_salvation_lose1
+			}
+		}
+	}
 
+	focus = {
+		id = ARM_mi_na_grani
+		icon = GFX_mi_na_grani
+		prerequisite = { focus = ARM_seria_porajenii }
+		available = {
+			surrender_progress > 0.5
+		}
+		x = 6
+		y = 12
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_in_salvation_lose1
+				add_idea = ARM_in_salvation_lose2
+			}
 		}
 	}
 	
@@ -709,22 +751,33 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = ARM_mi_na_grani
-		icon = GFX_mi_na_grani
-		prerequisite = { focus = ARM_seria_porajenii }
-		x = 6
-		y = 12
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
+			if = {
+				limit = {
+					has_idea = ARM_in_salvation_lose1
+				}   
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_lose1
+					add_idea = ARM_in_salvation_win1_and_lose1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_in_salvation_lose2
+				}
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_lose2
+					add_idea = ARM_in_salvation_win1_and_lose2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_in_salvation2
+				}
+				swap_ideas = {
+					remove_idea = ARM_in_salvation2
+					add_idea = ARM_in_salvation_win1
+				}
+			}
 		}
 	}
 	focus = {
@@ -739,14 +792,39 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			if = {
+				limit = {
+					has_idea = ARM_in_salvation_win1_and_lose1
+				}   
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_win1_and_lose1
+					add_idea = ARM_in_salvation_win2_and_lose1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_in_salvation_win1_and_lose2
+				}
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_win1_and_lose2
+					add_idea = ARM_in_salvation_win2_and_lose2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_in_salvation_win1
+				}
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_win1
+					add_idea = ARM_in_salvation_win2
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = ARM_besslavni_end
 		icon = GFX_besslavni_end
-		prerequisite = { focus = ARM_mi_na_grani }
 		prerequisite = { focus = ARM_ostalos_nemnogo }
 		x = 8
 		y = 14
@@ -791,7 +869,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_ideas = ARM_fighting_for_the_fate_of_the_Motherland
 		}	
 	}
 	focus = {
@@ -806,7 +884,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_fighting_for_the_fate_of_the_Motherland
+				add_idea = ARM_fighting_for_the_fate_of_the_Motherland1_onuf
+			}
 		}
 	}
 	focus = {
@@ -821,7 +902,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_manpower = -3500
 		}
 	}
 	focus = {
@@ -836,7 +917,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_manpower = -5000
 		}
 	}
 	focus = {
@@ -851,7 +932,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_manpower = -1000
 		}
 	}	
 	focus = {
@@ -866,7 +947,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_fighting_for_the_fate_of_the_Motherland1_onuf
+				add_idea = ARM_fighting_for_the_fate_of_the_Motherland2_onuf
+			}
 		}
 	}
 	focus = {
@@ -896,7 +980,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_fighting_for_the_fate_of_the_Motherland2_onuf
+				add_idea = ARM_fighting_for_the_fate_of_the_Motherland3_onuf
+			}
+			add_manpower = -10000
 		}
 	}
 	focus = {
@@ -911,7 +999,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_fighting_for_the_fate_of_the_Motherland3_onuf
+				add_idea = ARM_fighting_for_the_fate_of_the_Motherland4_onuf
+			}			
 		}
 	}		
 	focus = {
@@ -926,7 +1017,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			add_ideas = ARM_our_guidelines
 		}
 	}
 	focus = {
@@ -941,7 +1032,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_our_guidelines
+				add_idea = ARM_our_guidelines1
+			}
 		}
 	}
 	focus = {
@@ -956,7 +1050,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_our_guidelines1
+				add_idea = ARM_our_guidelines2
+			}
 		}
 	}
 	focus = {
@@ -971,7 +1068,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_our_guidelines2
+				add_idea = ARM_our_guidelines3
+			}
 		}
 	}	
 	
@@ -989,7 +1089,28 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = ARM_our_guidelines3
+				add_idea = ARM_our_guidelines3_lose1
+			}			
+		}
+	}
+	focus = {
+		id = ARM_vpered_sobaki_k_pobede
+		icon = GFX_vpered_sobaki_k_pobede
+		prerequisite = { focus = ARM_fight }
+		x = 6
+		y = 12
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_our_guidelines3_lose1
+				add_idea = ARM_our_guidelines3_lose2
+			}
 		}
 	}
 	focus = {
@@ -1006,22 +1127,33 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = ARM_vpered_sobaki_k_pobede
-		icon = GFX_vpered_sobaki_k_pobede
-		prerequisite = { focus = ARM_fight }
-		x = 6
-		y = 12
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
+			if = {
+				limit = {
+					has_idea = ARM_our_guidelines3_lose1
+				}   
+				swap_ideas = {
+					remove_idea = ARM_our_guidelines3_lose1
+					add_idea = ARM_our_guidelines_win1_and_lose1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_our_guidelines3_lose2
+				}
+				swap_ideas = {
+					remove_idea = ARM_our_guidelines3_lose2
+					add_idea = ARM_our_guidelines_win1_and_lose2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_our_guidelines3
+				}
+				swap_ideas = {
+					remove_idea = ARM_our_guidelines3
+					add_idea = ARM_our_guidelines_win1
+				}
+			}
 		}
 	}
 	focus = {
@@ -1036,7 +1168,33 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+			if = {
+				limit = {
+					has_idea = ARM_our_guidelines_win1_and_lose1
+				}   
+				swap_ideas = {
+					remove_idea = ARM_our_guidelines_win1_and_lose1
+					add_idea = ARM_our_guidelines_win2_and_lose1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_our_guidelines_win1_and_lose2
+				}
+				swap_ideas = {
+					remove_idea = ARM_our_guidelines_win1_and_lose2
+					add_idea = ARM_our_guidelines_win2_and_lose2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_our_guidelines_win1
+				}
+				swap_ideas = {
+					remove_idea = ARM_our_guidelines_win1
+					add_idea = ARM_our_guidelines_win2
+				}
+			}
 		}
 	}
 	

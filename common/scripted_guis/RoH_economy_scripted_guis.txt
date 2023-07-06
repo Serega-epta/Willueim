@@ -1,35 +1,35 @@
 scripted_gui = {
     	economy_view = {
-    	context_type = player_context
-	parent_window_token = politics_tab
-	window_name = "economy_view"
-	dirty = country_economy
+    		context_type = player_context
+			parent_window_token = politics_tab
+			window_name = "economy_view"
+			dirty = country_economy
 	
-		visible = {
-		}
+			visible = {
+			}
 		
-		effects = {
-			economy_button_click = {
-				if = {
-					limit = { NOT = { has_variable = country_economy } }
-					set_variable = { country_economy = 1 }					
-				}
-				else = {
-					clear_variable = country_economy
-					clear_variable = macro_economyy
+			effects = {
+				economy_button_click = {
+					if = {
+						limit = { NOT = { has_variable = country_economy } }
+						set_variable = { country_economy = 1 }					
+					}
+					else = {
+						clear_variable = country_economy
+						clear_variable = macro_economyy
+					}
 				}
 			}
-		}
     	}
 
-	economy_main = {
-    	context_type = player_context	
-	parent_window_token = politics_tab
-	window_name = "economy_main"
+		economy_main = {
+    		context_type = player_context	
+			parent_window_token = politics_tab
+			window_name = "economy_main"
 		
-	visible = {
-        	check_variable = { country_economy > 0 }
-	}
+			visible = {
+        		check_variable = { country_economy > 0 }
+		}
 		
 		
 		

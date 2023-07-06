@@ -7,3 +7,9 @@ ARM_partisans = {
 	visible_when_empty = yes
 	priority = { base = 5 }
 }
+ARM_creating_a_submarines = {
+	icon = saf_anti_colonialist_crusade
+	scripted_gui = creating_a_submarines
+	allowed = { original_tag = ARM }
+	priority = { base = 5 }
+}

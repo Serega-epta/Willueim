@@ -624,5 +624,383 @@ ideas = {
 				army_fuel_consumption_factor = -0.1
 			}	
 		}
+
+		ARM_fighting_for_the_fate_of_the_Motherland = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				stability_factor = -0.7
+			}	
+			rule = {
+				can_not_declare_war = yes
+			}
+		}
+
+		#Нацдухи Онуфренко в войне с Подолякиным (суффикс _onuf означает, что это нацдух Онуфренко)
+
+		ARM_fighting_for_the_fate_of_the_Motherland1_onuf = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				stability_factor = -0.7
+				line_change_production_efficiency_factor = 0.1
+			}	
+			rule = {
+				can_not_declare_war = yes
+			}
+		}
+
+		ARM_fighting_for_the_fate_of_the_Motherland2_onuf = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				stability_factor = -0.7
+				line_change_production_efficiency_factor = 0.1
+				resistance_target = -0.1
+			}	
+			rule = {
+				can_not_declare_war = yes
+			}
+		}
+
+		ARM_fighting_for_the_fate_of_the_Motherland3_onuf = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				stability_factor = -0.7
+				line_change_production_efficiency_factor = 0.1
+				monthly_population = -0.05				
+				resistance_target = -0.2
+			}	
+			rule = {
+				can_not_declare_war = yes
+			}
+		}
+
+		ARM_fighting_for_the_fate_of_the_Motherland4_onuf = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				stability_factor = -0.7
+				line_change_production_efficiency_factor = 0.1
+				monthly_population = -0.05		
+				army_morale_factor = 0.1	
+				resistance_target = -0.2
+			}	
+			rule = {
+				can_not_declare_war = yes
+			}
+		}
+
+		ARM_our_guidelines = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15			
+			}	
+		}
+
+		ARM_our_guidelines1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+			}	
+		}
+
+		ARM_our_guidelines2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+			}	
+		}
+
+		ARM_our_guidelines3 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+			}	
+		}
+
+		ARM_our_guidelines3_lose1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+				surrender_limit = 0.2
+			}	
+		}
+
+		ARM_our_guidelines3_lose2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+				surrender_limit = 0.3
+			}	
+		}
+
+		ARM_our_guidelines_win1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+				breakthrough_factor = 0.15
+			}	
+		}
+
+		ARM_our_guidelines_win1_and_lose1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+				surrender_limit = 0.2
+				breakthrough_factor = 0.15
+			}	
+		}
+
+		ARM_our_guidelines_win1_and_lose2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+				surrender_limit = 0.3
+				breakthrough_factor = 0.15
+			}	
+		}
+
+		ARM_our_guidelines_win2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+				breakthrough_factor = 0.15
+				terrain_penalty_reduction = 0.5
+			}	
+		}
+
+		ARM_our_guidelines_win2_and_lose1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+				breakthrough_factor = 0.15
+				terrain_penalty_reduction = 0.5
+			}	
+		}
+
+		ARM_our_guidelines_win2_and_lose2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.15	
+				army_core_attack_factor = 0.15
+				army_org_factor = 0.05		
+				training_time_army_factor = -0.3
+				stability_factor = 0.2
+				breakthrough_factor = 0.15
+				terrain_penalty_reduction = 0.5
+			}	
+		}
+
+		#Нацдухи Подолякина в войне с Онуфренко (суффикс _pod означает, что это нацдух Подолякина)
+
+		ARM_fighting_for_the_fate_of_the_Motherland1_pod = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				stability_factor = -0.7
+				production_factory_efficiency_gain_factor = 0.1
+			}	
+			rule = {
+				can_not_declare_war = yes
+			}
+		}
+
+		ARM_fighting_for_the_fate_of_the_Motherland2_pod = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				stability_factor = -0.7
+				production_factory_efficiency_gain_factor = 0.1
+				planning_speed = 0.5
+			}	
+			rule = {
+				can_not_declare_war = yes
+			}
+		}
+
+		ARM_in_salvation = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3				
+			}	
+		}
+
+		ARM_in_salvation1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3		
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+			}	
+		}
+
+		ARM_in_salvation2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3	
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}	
+		}
+
+		ARM_in_salvation_lose1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3		
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+				surrender_limit = 0.2
+			}	
+		}
+
+		ARM_in_salvation_lose2= {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3	
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+				surrender_limit = 0.3
+			}	
+		}
+
+		ARM_in_salvation_win1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3	
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+				breakthrough_factor = 0.2
+			}	
+		}
+
+		ARM_in_salvation_win1_and_lose1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3	
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+				surrender_limit = 0.2
+				breakthrough_factor = 0.2
+			}	
+		}
+
+		ARM_in_salvation_win1_and_lose2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3	
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+				surrender_limit = 0.3
+				breakthrough_factor = 0.2
+			}	
+		}
+
+		ARM_in_salvation_win2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3	
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+				breakthrough_factor = 0.2
+				terrain_penalty_reduction = 0.5
+			}	
+		}
+
+		ARM_in_salvation_win2_and_lose1 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3	
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+				breakthrough_factor = 0.2
+				surrender_limit = 0.2
+				terrain_penalty_reduction = 0.5
+			}	
+		}
+
+		ARM_in_salvation_win2_and_lose2 = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.3	
+				dig_in_speed = 0.2
+				experience_gain_army_unit_factor = 0.5		
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.15
+				breakthrough_factor = 0.2
+				surrender_limit = 0.3
+				terrain_penalty_reduction = 0.5
+			}	
+		}
 	}
 }
