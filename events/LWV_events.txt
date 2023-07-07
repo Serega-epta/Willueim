@@ -1,4 +1,5 @@
 add_namespace = LWV
+add_namespace = unity_in_holiness
 
 #Сень Господня
 country_event = {
@@ -688,6 +689,38 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = LWV.46.a
+	}
+}
+country_event = {
+	id = unity_in_holiness.1
+	title = unity_in_holiness.1.t
+	desc = unity_in_holiness.1.d
+	picture = GFX_gg
+	fire_only_once = yes	
+	is_triggered_only = yes
+	option = {
+		name = unity_in_holiness.1.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = LWV
+		}
+	}
+	option = {
+		name = unity_in_holiness.1.b
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 120
+			producer = LWV
+		}		
+	}
+	option = {
+		name = unity_in_holiness.1.c
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 120
+			producer = LWV
+		}		
 	}
 }
 

@@ -56,40 +56,305 @@ LWV_boji_perst = {
 	}
 }
 
-LWV_sviatost_regionov = {
-	osviatit_state = {
+LWV_holiness = {
+	stage_1 = {
 		icon = generic_scorched_earth
 		visible = { 
 			FROM = {
 				is_owned_by = ROOT
-				#is_fully_controlled_by = ROOT
 				is_core_of = ROOT
+				any_neighbor_state = {
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
+				NOT = {
+					has_state_flag = whisper_of_holiness
+					has_state_flag = gods_voice
+					has_state_flag = song_of_grace
+				}
 			}
 		}
 		available = {		
 			FROM = {
 				NOT = {
-					has_state_flag = has_sviatost
+					has_state_flag = whisper_of_holiness
+					has_state_flag = gods_voice
+					has_state_flag = song_of_grace
 				}
 			}
 		}
-
-		modifier = {
-		}
-		days_remove = 7
-		cost = 15
+		days_remove = 35
+		cost = 50
 		complete_effect = {
-			
 		}
 		remove_effect = {
-		FROM ={
-			add_dynamic_modifier = { modifier = sviatoost }			
-			set_state_flag = has_sviatost
+			FROM ={
+				add_dynamic_modifier = { modifier = whisper_of_holiness }
+				set_state_flag = whisper_of_holiness
 			}
+			add_to_variable = { unity_in_holiness = 1 }
 		}
 		state_target = yes
 		on_map_mode = map_only
-	}		
+	}	
+	stage_2 = {
+		icon = generic_scorched_earth
+		visible = { 
+			FROM = {
+				is_owned_by = ROOT
+				is_core_of = ROOT
+				any_neighbor_state = {
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
+				has_state_flag = whisper_of_holiness
+				NOT = {
+					has_state_flag = gods_voice
+					has_state_flag = song_of_grace
+				}
+			}
+		}
+		available = {		
+			FROM = {
+				NOT = {
+					has_state_flag = gods_voice
+					has_state_flag = song_of_grace
+				}
+			}
+		}
+		days_remove = 75
+		cost = 100
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM ={
+				remove_dynamic_modifier = { modifier = whisper_of_holiness }
+				add_dynamic_modifier = { modifier = gods_voice }	
+				clr_state_flag = whisper_of_holiness
+				set_state_flag = gods_voice
+			}
+			add_to_variable = { unity_in_holiness = 1 }
+		}
+		state_target = yes
+		on_map_mode = map_only
+	}
+	stage_3 = {
+		icon = generic_scorched_earth
+		visible = { 
+			FROM = {
+				is_owned_by = ROOT
+				is_core_of = ROOT
+				any_neighbor_state = {
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
+				has_state_flag = gods_voice
+				NOT = {
+					has_state_flag = song_of_grace
+				}
+			}
+		}
+		available = {		
+			FROM = {
+				NOT = {
+					has_state_flag = song_of_grace
+				}
+			}
+		}
+		days_remove = 90
+		cost = 150
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM ={
+				remove_dynamic_modifier = { modifier = gods_voice }
+				add_dynamic_modifier = { modifier = song_of_grace }	
+				clr_state_flag = gods_voice
+				set_state_flag = song_of_grace
+			}
+			add_to_variable = { unity_in_holiness = 1 }
+		}
+		state_target = yes
+		on_map_mode = map_only
+	}	
+}
+
+LWV_unity_in_holiness = {
+	collect_swords = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { unity_in_holiness > 1 } }
+		custom_cost_text = decision_cost_UH_2
+		days_re_enable = 30
+		complete_effect = {
+			country_event = { id = unity_in_holiness.1 }
+		}
+	}
+	bring_down_gods_wrath = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { unity_in_holiness > 9 } }
+		custom_cost_text = decision_cost_UH_10
+		days_re_enable = 100
+		complete_effect = {
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"bojiya_dlan\" 
+					division_template = \"bojiya_dlan\" 
+					start_experience_factor = 0.5"
+					owner = LWV
+					count = 1
+				}
+			}
+		}
+	}
+	bless_the_work = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { unity_in_holiness > 2 } }
+		custom_cost_text = decision_cost_UH_3
+		days_re_enable = 30
+		complete_effect = {
+			add_timed_idea = {
+				idea = LWV_blessing_of_labor
+				days = 60
+			}
+		}
+	}
+	forging_iron = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { check_variable = { unity_in_holiness > 4 } }
+		custom_cost_text = decision_cost_UH_5
+		days_re_enable = 30
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+		}
+	}
+	bless_the_fight = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { unity_in_holiness > 4 } }
+		custom_cost_text = decision_cost_UH_5
+		days_re_enable = 70
+		complete_effect = {
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"sviatoe_opolchenie\" 
+					division_template = \"sviatoe_opolchenie\" 
+					start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = LWV
+					count = 3
+				}		
+			}
+		}
+	}
+	stone_skin = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { unity_in_holiness > 2 } }
+		custom_cost_text = decision_cost_UH_3
+		days_re_enable = 60
+		complete_effect = {
+			add_timed_idea = {
+				idea = LWV_blessing_with_stone_skin
+				days = 30
+			}			
+		}
+	}
+	asceticism = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { unity_in_holiness > 6 } }
+		custom_cost_text = decision_cost_UH_7
+		days_re_enable = 70
+		complete_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+   	 				type = industrial_complex
+    					level = 1
+    					instant_build = yes
+				}	
+			}
+		}
+	}
+	blessing_with_provisions = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { unity_in_holiness > 2 } }
+		custom_cost_text = decision_cost_UH_3
+		days_re_enable = 30
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 3
+				producer = LWV
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 35
+				producer = LWV
+			}
+		}
+	}
+	prepare_provisions = {
+		icon = 
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = { check_variable = { unity_in_holiness > 2 } }
+		custom_cost_text = decision_cost_UH_3
+		days_re_enable = 30
+		complete_effect = {
+			add_timed_idea = {
+				idea = LWV_preparation_of_provisions
+				days = 60
+			}
+		}
+	}
+	debug_holiness = {
+		icon = 
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_debug = yes
+		}
+		complete_effect = {
+			add_to_variable = { unity_in_holiness = 1000 }
+		}
+	}
 }
 
 LWV_balance_of_power_category = {
@@ -248,37 +513,4 @@ LWV_balance_of_power_category = {
 		days_remove = 40
 		cost = 0
 	}
-}
-
-LWV_prepare_the_ground = {
-	prepare_the_ground = {
-		icon = generic_scorched_earth
-		visible = { 
-			FROM = {
-				is_owned_by = ROOT
-				is_core_of = ROOT
-			}
-		}
-		available = {		
-			has_dynamic_modifier = sviataya_postup
-		}
-
-		modifier = {
-		}
-		days_remove = 100
-		cost = 60
-		complete_effect = {
-			FROM ={
-				add_dynamic_modifier = { modifier = sudni_den }			
-			}			
-		}
-		remove_effect = {
-			FROM ={
-				add_dynamic_modifier = { modifier = sviataya_postup }	
-				remove_dynamic_modifier = { modifier = sudni_den }		
-			}
-		}
-		state_target = yes
-		on_map_mode = map_only
-	}		
 }

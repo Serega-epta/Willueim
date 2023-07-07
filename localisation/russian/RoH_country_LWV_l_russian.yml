@@ -237,9 +237,9 @@ LWV_scared_war_upgrate_ultra:0 "Священная Война"
 
 ################### STATE MODIFAIERS ########################################
 
-sviatoost:0 "Святость"
-sviataya_postup:0 "Святая поступь"
-sudni_den:0 "Судный день"
+whisper_of_holiness:0 "Шёпот Святости"
+gods_voice:0 "Божий глас"
+song_of_grace:0 "Песнь Благодати"
 
 ################### STATE MODIFAIERS ########################################
 
@@ -263,8 +263,46 @@ LWV_boji_perst:0 "Реформировать Божий Перст"
 upgrade:0 "Расширить <<Божий Перст>>"
 downgrade:0 "Сократить <<Божий Перст>>"
 
-LWV_sviatost_regionov:0 "Распространить Святость"
-osviatit_state:0 "Освятить регион"
+LWV_holiness:0 "Святость"
+LWV_holiness_desc:0 "Ээээээ... ну типо... ээээ... писатели, вставьте сюда что-нибудь пжпжпж \n\nНу а если вкратце, то начинаем §0РЕЗНЮ§!"
+stage_1:0 "§0Освящение земли§!: §G1 этап§!"
+stage_2:0 "§0Освящение земли§!: §Y2 этап§!"
+stage_3:0 "§0Освящение земли§!: §R3 этап§!"
+whisper_of_holiness:0 "Шёпот святости"
+gods_voice:0 "Божий глас"
+song_of_grace:0 "Песнь Благодати"
+
+LWV_unity_in_holiness:0 "Единство в Святости"
+LWV_unity_in_holiness_desc:0 "Количество очков "Единства в Святости": §0[?unity_in_holiness]§!"
+collect_swords:0 "Собрать мечи"
+bring_down_gods_wrath:0 "Обрушить божий гнев"
+bless_the_work:0 "Благословить на труд"
+forging_iron:0 "Ковать железо"
+bless_the_fight:0 "Благословить на бой"
+stone_skin:0 "Каменная кожа"
+asceticism:0 "Аскетизм"
+blessing_with_provisions:0 "Благословение провизией"
+prepare_provisions:0 "Подготовить провизию"
+
+decision_cost_UH_2:0 "£unity_in_holiness §Y2§!"
+decision_cost_UH_2_blocked:0 "£unity_in_holiness §R2§!"
+decision_cost_UH_2_tooltip:0 "Стоимость принятия решения: £unity_in_holiness §Y2§!"
+
+decision_cost_UH_3:0 "£unity_in_holiness §Y3§!"
+decision_cost_UH_3_blocked:0 "£unity_in_holiness §R3§!"
+decision_cost_UH_3_tooltip:0 "Стоимость принятия решения: £unity_in_holiness §Y3§!"
+
+decision_cost_UH_5:0 "£unity_in_holiness §Y5§!"
+decision_cost_UH_5_blocked:0 "£unity_in_holiness §R5§!"
+decision_cost_UH_5_tooltip:0 "Стоимость принятия решения: £unity_in_holiness §Y5§!"
+
+decision_cost_UH_7:0 "£unity_in_holines  §Y7§!"
+decision_cost_UH_7_blocked:0 "£unity_in_holiness §R7§!"
+decision_cost_UH_7_tooltip:0 "Стоимость принятия решения: £unity_in_holiness §Y7§!"
+
+decision_cost_UH_10:0 "£unity_in_holiness §Y10§!"
+decision_cost_UH_10_blocked:0 "£unity_in_holiness §R10§!"
+decision_cost_UH_10_tooltip:0 "Стоимость принятия решения: £unity_in_holiness §Y10§!"
 
 rrrreshenia_region_sviat:0 "§RБудут доступны решения на освящение регионов§!"
 razoslat_missionerov:0 "§RБудут доступны решения на отправку миссионеров§!"
@@ -286,6 +324,12 @@ vidali_bejensev:0 "Отказалось принять отступников"
 ################### OPINION MODIFAIERS ########################################
 
 ################### EVENTS ########################################
+
+unity_in_holiness.1.t:0 "Собрать мечи"
+unity_in_holiness.1.d:0 "Господь благословил нас! Но что же он преподнёс нам?"
+unity_in_holiness.1.a:0 "Оружие"
+unity_in_holiness.1.b:0 "Артиллерию"
+unity_in_holiness.1.c:0 "Дополнительное оснащение"
 
 LWV.30.t:0 "Святая Земля"
 LWV.30.d:0 "§RА ГДЕ ТЕКСТ?§!" 
@@ -567,7 +611,7 @@ LWV_bop_mission_1:0 "Ход Маркова"
 LWV_bop_1:0 "Охотиться за предателями"
 LWV_bop_2:0 "Добиться лояльности"
 LWV_bop_3:0 "Чистка в армии"
-holy_mjatej_tt:0 "§RСвятые мятежники поднимут восстание против ДетейАоана§!"
+holy_mjatej_tt:0 "§RСвятые мятежники поднимут восстание против Детей Аоана§!"
 SVA_sacraments:0 "Святые мятежники"
 SVA_sacraments_l:0 "Святые мятежники"
 LWV_bop_4:0 "Начать расследование"

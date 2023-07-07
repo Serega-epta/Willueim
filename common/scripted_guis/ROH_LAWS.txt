@@ -6,7 +6,13 @@ scripted_gui = {
 		dirty = country_laws
 	
 		visible = {
-			always = yes
+			if = { 
+				limit = { check_variable = { government_laws = 1 } }
+				always = yes
+			}
+			else = {
+				always = no
+			}
 		}
 		
 		effects = {
@@ -586,6 +592,8 @@ RoH_law_migrant = {
 	visible = {
 		if = {
 			limit = { check_variable = { okno_zakonow_migration_opend = 1}}
+			if = { 
+				limit = { check_variable = { government_laws = 1 } }
 				always = yes
 			}
 		else = {
@@ -643,6 +651,8 @@ RoH_law_migrant = {
 				pogran_control
 				closed_borders
 				migration_otbor
+			else = {
+				always = no
 			}
 			add_ideas = propusk_punkt
 			add_political_power = -100
@@ -681,6 +691,7 @@ RoH_law_migrant = {
 				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		
+		effects = {
 		}
 		}
 	}
@@ -912,6 +923,5 @@ RoH_law_social = {
 				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
-	}
-}	
+    }
 }

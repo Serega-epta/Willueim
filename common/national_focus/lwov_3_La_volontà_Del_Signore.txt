@@ -537,35 +537,8 @@ focus_tree = {
 		prerequisite = { focus = LWV_presledovat_otstupnikov }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
-		custom_effect_tooltip = rrrreshenia_region_sviat
-		
-		if = {
-			limit = { 
-				is_core_of = LWV 
-			} 
-			add_dynamic_modifier = {
-				modifier = sviatoost
-				scope = LWV
-			}
-		}
-		#чзх почему не работает? потом разобраться#############
-		
-		all_core_state = { 
-			add_dynamic_modifier = {
-				modifier = sviatoost
-				scope = LWV
-			}
-		}
-		all_core_state = { 
-			set_state_flag = has_sviatost
-			scope = LWV
-		}
-		set_country_flag = reshenia_na_sviatost_regionov	
-		country_event = {
-			id = LWV.46
-			days = 1
-		}	
+			custom_effect_tooltip = rrrreshenia_region_sviat
+			set_country_flag = decision_for_holiness
 		}
 	}
 	focus = {

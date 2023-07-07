@@ -28,25 +28,52 @@
 	centralization_dynamic_modifier = {
 		enable = { always = yes } #optional, the modifier won't apply if not enabled
 		remove_trigger = { always = no } #optional, will remove the modifier if true
-                
+				
 
 		political_power_gain = centralization
-     	        global_building_slots_factor = centralization
-		#partisan_effect = centralization           
+	 			global_building_slots_factor = centralization
+		#partisan_effect = centralization		 
 	}
 
 
 
-
+	
 #СВЯТОСТЬ
-    sviatoost = {
+	whisper_of_holiness = {
 		enable = { always = yes }
+		remove_trigger = { NOT = { country_exists = LWV } }
 		icon = GFX_impassable_icon
 		
-		local_manpower = 0.07	
+		local_manpower = 0.01
+		army_defence_factor = 0.05
+	}
+#БОЖИЙ ГЛАС
+	gods_voice = {
+		enable = { always = yes }
+		remove_trigger = { NOT = { country_exists = LWV } }
+		icon = GFX_impassable_icon
+		
+		local_manpower = 0.05
+		compliance_growth = 0.01
+		resistance_growth = -0.01
+		army_defence_factor = 0.05
+		local_building_slots_factor = 0.1
+	}
+#ПЕСНЬ БЛАГОДАТИ
+	song_of_grace = {
+		enable = { always = yes }
+		remove_trigger = { NOT = { country_exists = LWV } }
+		icon = GFX_impassable_icon
+		
+		local_manpower = 0.1
+		army_defence_factor = 0.1
+		local_building_slots_factor = 0.3
+		production_speed_buildings_factor = 0.1
+		local_supplies_for_controller = 0.1
+		army_attack_factor = -0.05
 	}
 #СВЯТАЯ ПОСТУПЬ
-    sviataya_postup = {
+	sviataya_postup = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
@@ -56,7 +83,7 @@
 		}
 	}
 #СУДНЫЙ ДЕНЬ
-    sudni_den = {
+	sudni_den = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
@@ -82,7 +109,7 @@
 
 
 #засилие тварей
-      congestion_of_creatures = {
+	congestion_of_creatures = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		production_speed_buildings_factor = -0.25
@@ -92,14 +119,14 @@
 		
 }
 #дикие деревни
-      wild_tribes = {
+	wild_tribes = {
 		enable = { always = yes }
 		icon = GFX_wild_tribes_icon
 		production_speed_buildings_factor = -0.05
 		attrition = +0.1			
 }
 #аномальная активность
-      abnormal_activity = {
+	abnormal_activity = {
 		enable = { always = yes }
 		icon = GFX_modifiers_refugees_icon
 		production_speed_buildings_factor = -0.4
@@ -110,7 +137,7 @@
 		
 }
 #искажение молчание
-      distortion_of_silence = {
+	distortion_of_silence = {
 		enable = { always = yes }
 		icon = GFX_modifiers_unplanned_offensive_icon
 		
@@ -124,18 +151,18 @@
 		
 }
 #лучевой буран
-      radiant_storm = {
+	radiant_storm = {
 		enable = { always = yes }
 		icon = GFX_modifiers_unplanned_offensive_icon
 		production_speed_buildings_factor = -0.1
 		attrition = +0.05
 		army_speed_factor = -0.25
-        army_fuel_consumption_factor = +0.1
+		army_fuel_consumption_factor = +0.1
 		
 }
 
 #Бонусы специализации гарнизона
-      garnizon_baff = {
+	garnizon_baff = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
@@ -148,7 +175,7 @@
 }
 
 #Бонусы специализации переферии
-      pereferia_baff = {
+	pereferia_baff = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
@@ -160,7 +187,7 @@
 }
 
 #Бонусы специализации сырьевого
-      sirievoi_baff = {
+	sirievoi_baff = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 			
@@ -171,7 +198,7 @@
 }
 
 #Бонусы специализации промышленного
-      promishlenni_baff = {
+	promishlenni_baff = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
@@ -424,18 +451,18 @@
 		state_production_speed_buildings_factor = -0.15
 	}
 	coalition_popularity_modifier = {
-    	enable = { always = yes }
+		enable = { always = yes }
 		
-    	political_power_factor = coalition_modifier
-    	stability_factor = coalition_modifier
-    	production_speed_buildings_factor = coalition_modifier
+		political_power_factor = coalition_modifier
+		stability_factor = coalition_modifier
+		production_speed_buildings_factor = coalition_modifier
 	}
 	banned_popularity_modifier = {
 		enable = { always = yes }
 
-    	political_power_factor = banned_modifier
-    	stability_factor = banned_modifier
-    	production_speed_buildings_factor = banned_modifier
+		political_power_factor = banned_modifier
+		stability_factor = banned_modifier
+		production_speed_buildings_factor = banned_modifier
 	}
 	PB_Automation_Crisis_Dynamic_Modifier = {
 		enable = { always = yes }

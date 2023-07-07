@@ -8,24 +8,20 @@ LWV_boji_perst = {
 	}
 	priority = 85
 }
-LWV_sviatost_regionov = {
+LWV_holiness = {
 	icon = saf_anti_colonialist_crusade
-	allowed = {
-		original_tag = LWV
-	}
-	visible = {
-		has_country_flag = reshenia_na_sviatost_regionov		
-	}
+	picture = GFX_nixilus_picture
+	allowed = { original_tag = LWV }
+	visible = { has_country_flag = decision_for_holiness }
+	visible_when_empty = yes
 	priority = 85
 }
-LWV_prepare_the_ground = {
+LWV_unity_in_holiness = {
 	icon = saf_anti_colonialist_crusade
-	allowed = {
-		original_tag = LWV
-	}
-	visible = {
-		has_country_flag = decisions_prepare_the_ground	
-	}
+	picture = GFX_nixilus_picture #GFX_unity_in_holiness_picture
+	allowed = { original_tag = LWV }
+	visible = { has_country_flag = decision_for_holiness }
+	visible_when_empty = yes
 	priority = 85
 }
 LWV_balance_of_power_category = {
