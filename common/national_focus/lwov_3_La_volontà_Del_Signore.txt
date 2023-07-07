@@ -14,7 +14,7 @@ focus_tree = {
 	
 	focus = {
 		id = LWV_osviatit_land
-		icon = GFX_Korol_charodei
+		icon = GFX_osviatit_land
 		x = 10
 		y = 0
 		cost = 5
@@ -28,13 +28,16 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 50
 						
-			all_neighbor_country = { country_event = LWV.31 days = 1 }
-						
+			all_neighbor_country = { country_event = LWV.31 days = 1 }		
+			country_event = {
+				id = LWV.38
+				days = 1
+			}			
 		}
 	}	
 	focus = {
 		id = LWV_nizlojit_sektantov
-		icon = GFX_Korol_charodei
+		icon = GFX_nizlojit_sektantov
 		x = 10
 		y = 1
 		cost = 5
@@ -52,7 +55,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_boji_gnev
-		icon = GFX_Korol_charodei
+		icon = GFX_boji_gnev
 		x = 8
 		y = 2
 		cost = 5
@@ -122,7 +125,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_voorujitsia_veroy
-		icon = GFX_Korol_charodei
+		icon = GFX_voorujitsia_veroy
 		x = 10
 		y = 2
 		cost = 5
@@ -156,7 +159,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_blagie_namerineya
-		icon = GFX_Korol_charodei
+		icon = GFX_blagie_namerineya
 		x = 12
 		y = 2
 		cost = 5
@@ -190,7 +193,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_kajdi_doljen_uslishat
-		icon = GFX_Korol_charodei
+		icon = GFX_kajdi_doljen_uslishat
 		x = 10
 		y = 3
 		cost = 5
@@ -207,7 +210,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_osviatit_bessarabiu
-		icon = GFX_Korol_charodei
+		icon = GFX_osviatit_bessarabiu
 		x = 6
 		y = 4
 		cost = 5
@@ -222,7 +225,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_osviatit_sever
-		icon = GFX_Korol_charodei
+		icon = GFX_osviatit_sever
 		x = 8
 		y = 4
 		cost = 5
@@ -237,7 +240,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_osviatit_iug
-		icon = GFX_Korol_charodei
+		icon = GFX_osviatit_iug
 		x = 10
 		y = 4
 		cost = 5
@@ -252,7 +255,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_osviatit_malorossiu
-		icon = GFX_Korol_charodei
+		icon = GFX_osviatit_malorossiu
 		x = 12
 		y = 4
 		cost = 5
@@ -267,7 +270,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_osviatit_dikie_lesa
-		icon = GFX_Korol_charodei
+		icon = GFX_osviatit_dikie_lesa
 		x = 14
 		y = 4
 		cost = 5
@@ -282,7 +285,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_kievan_vselen_sobor
-		icon = GFX_Korol_charodei
+		icon = GFX_kievan_vselen_sobor
 		x = 10
 		y = 5
 		cost = 5
@@ -302,13 +305,16 @@ focus_tree = {
 		completion_reward = {
 		
 		remove_country_leader_trait = New_vera
-		add_country_leader_trait = LWV_avtor_sviatosti
-		
+		add_country_leader_trait = LWV_avtor_sviatosti		
+		country_event = {
+			id = LWV.39 
+			days = 1
+		}
 		}
 	}
 	focus = {
 		id = LWV_sviatoe_pisanie
-		icon = GFX_Korol_charodei
+		icon = GFX_sviatoe_pisanie
 		x = 10
 		y = 6
 		cost = 5
@@ -318,12 +324,16 @@ focus_tree = {
 		prerequisite = { focus = LWV_kievan_vselen_sobor }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		add_political_power = 100
+			add_political_power = 100
+			country_event = {
+				id = LWV.40 
+				days = 1
+			}
 		}
 	}
 	focus = {
 		id = LWV_new_ikonopis
-		icon = GFX_Korol_charodei
+		icon = GFX_new_ikonopis
 		x = 10
 		y = 7
 		cost = 5
@@ -338,7 +348,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_religion_isskustvo
-		icon = GFX_Korol_charodei
+		icon = GFX_religion_isskustvo
 		x = 8
 		y = 8
 		cost = 5
@@ -351,16 +361,16 @@ focus_tree = {
 		add_political_power = 50
 		
 		random_owned_state = {
-		add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 1
 		}
 		random_owned_state = {
-		add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 1
 		}
 		random_owned_state = {
-		add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 1
 		}
 		random_owned_state = {
-		add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 1
 		}
 		
 		
@@ -368,7 +378,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_rukopolojit_vernih
-		icon = GFX_Korol_charodei
+		icon = GFX_rukopolojit_vernih
 		x = 10
 		y = 9
 		cost = 5
@@ -379,13 +389,13 @@ focus_tree = {
 		prerequisite = { focus = LWV_religion_isskustvo }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			recruit_character = LWV_miroslav_popov
 		}
 	}
 	
 	focus = {
 		id = LWV_religion_obrazovanie
-		icon = GFX_Korol_charodei
+		icon = GFX_religion_obrazovanie
 		x = 12
 		y = 10
 		cost = 5
@@ -395,12 +405,12 @@ focus_tree = {
 		prerequisite = { focus = LWV_rukopolojit_vernih }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		add_political_power = 50
+			add_political_power = 50
 		}
 	}
 	focus = {
 		id = LWV_vzrastit_unih
-		icon = GFX_Korol_charodei
+		icon = GFX_vzrastit_unih
 		x = 10
 		y = 11
 		cost = 5
@@ -410,18 +420,14 @@ focus_tree = {
 		prerequisite = { focus = LWV_rukopolojit_vernih }
 		prerequisite = { focus = LWV_religion_obrazovanie }
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-		add_ideas = LWV_rianost_yonih
-		
-		recruit_character = LWV_MARIA
-		
-		
+		completion_reward = {	
+			add_ideas = LWV_rianost_yonih	
+			recruit_character = LWV_MARIA	
 		}
 	}
 	focus = {
 		id = LWV_uprazdnit_troitsy
-		icon = GFX_Korol_charodei
+		icon = GFX_uprazdnit_troitsy
 		x = 10
 		y = 12
 		cost = 5
@@ -431,9 +437,9 @@ focus_tree = {
 		prerequisite = { focus = LWV_vzrastit_unih }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		add_stability = -0.15
-		add_political_power = 200
-		set_country_flag = uprazdnit_troitsy			
+			add_stability = -0.15
+			add_political_power = 200
+			set_country_flag = uprazdnit_troitsy			
 		}
 	}
 	
@@ -442,7 +448,7 @@ focus_tree = {
 		
 	focus = {
 		id = LWV_vernii
-		icon = GFX_Korol_charodei
+		icon = GFX_vernii
 		x = 40
 		y = 0
 		cost = 5
@@ -450,16 +456,20 @@ focus_tree = {
 		factor = 1
 		}
 		available = {
-		has_country_flag = uprazdnit_troitsy
+			has_country_flag = uprazdnit_troitsy
 		}	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_war_support	= 0.01
+			country_event = {
+				id = LWV.37 
+				days = 1
+			}
 		}
 	}	
 	focus = {
 		id = LWV_uchredit_boji_perst
-		icon = GFX_Korol_charodei
+		icon = GFX_uchredit_boji_perst
 		x = 39
 		y = 1
 		cost = 5
@@ -468,16 +478,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = LWV_vernii }
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-		add_ideas = LWV_boji_perst_cut
-		
-		set_country_flag = reshenia_na_boji_perst		
+		completion_reward = {		
+			add_ideas = LWV_boji_perst_cut		
+			set_country_flag = reshenia_na_boji_perst		
 		}
 	}
 	focus = {
 		id = LWV_blagoslovlenie
-		icon = GFX_Korol_charodei
+		icon = GFX_blagoslovlenie
 		x = 41
 		y = 1
 		cost = 5
@@ -498,7 +506,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_presledovat_otstupnikov
-		icon = GFX_Korol_charodei
+		icon = GFX_presledovat_otstupnikov
 		x = 38
 		y = 2
 		cost = 5
@@ -519,7 +527,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_rasprostraniat_religiu
-		icon = GFX_Korol_charodei
+		icon = GFX_rasprostraniat_religiu
 		x = 37
 		y = 3
 		cost = 5
@@ -533,8 +541,10 @@ focus_tree = {
 		custom_effect_tooltip = rrrreshenia_region_sviat
 		
 		if = {
-		limit = { is_core_of = LWV } 
-		add_dynamic_modifier = {
+			limit = { 
+				is_core_of = LWV 
+			} 
+			add_dynamic_modifier = {
 				modifier = sviatoost
 				scope = LWV
 			}
@@ -552,12 +562,15 @@ focus_tree = {
 			scope = LWV
 		}
 		set_country_flag = reshenia_na_sviatost_regionov	
-		
+		country_event = {
+			id = LWV.46
+			days = 1
+		}	
 		}
 	}
 	focus = {
 		id = LWV_pooshrit_dostoinih
-		icon = GFX_Korol_charodei
+		icon = GFX_pooshrit_dostoinih
 		x = 42
 		y = 2
 		cost = 5
@@ -567,12 +580,12 @@ focus_tree = {
 		prerequisite = { focus = LWV_blagoslovlenie }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = -100
 		}
 	}
 	focus = {
 		id = LWV_vruchit_sviatii_gramoti
-		icon = GFX_Korol_charodei
+		icon = GFX_vruchit_sviatii_gramoti
 		x = 43
 		y = 3
 		cost = 5
@@ -582,12 +595,12 @@ focus_tree = {
 		prerequisite = { focus = LWV_pooshrit_dostoinih }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_ideas = LWV_holy_gramots
 		}
 	}	
 	focus = {
 		id = LWV_razoslat_misionerov
-		icon = GFX_Korol_charodei
+		icon = GFX_razoslat_misionerov
 		x = 36
 		y = 4
 		cost = 5
@@ -604,7 +617,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_kovat_mechi
-		icon = GFX_Korol_charodei
+		icon = GFX_kovat_mechi
 		x = 38
 		y = 4
 		cost = 5
@@ -629,7 +642,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_nasitit_narod
-		icon = GFX_Korol_charodei
+		icon = GFX_nasitit_narod
 		x = 42
 		y = 4
 		cost = 5
@@ -639,12 +652,18 @@ focus_tree = {
 		prerequisite = { focus = LWV_vruchit_sviatii_gramoti }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
 		id = LWV_zvon_kolocolov
-		icon = GFX_Korol_charodei
+		icon = GFX_zvon_kolocolov
 		x = 44
 		y = 4
 		cost = 5
@@ -654,12 +673,12 @@ focus_tree = {
 		prerequisite = { focus = LWV_vruchit_sviatii_gramoti }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 10
 		}
 	}	
 	focus = {
 		id = LWV_podgotovit_pochvu
-		icon = GFX_Korol_charodei
+		icon = GFX_podgotovit_pochvu
 		x = 35
 		y = 5
 		cost = 5
@@ -669,28 +688,31 @@ focus_tree = {
 		prerequisite = { focus = LWV_razoslat_misionerov }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			unlock_decision_category_tooltip = LWV_prepare_the_ground
 		}
 	}
 	focus = {
 		id = LWV_zavershit_industrialization
-		icon = GFX_Korol_charodei
+		icon = GFX_zavershit_industrialization
 		x = 40
 		y = 5
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_nasitit_narod }
-		prerequisite = { focus = LWV_kovat_mechi }
+		prerequisite = { focus = LWV_nasitit_narod focus = LWV_kovat_mechi }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_ideas = LWV_new_promishlenost
+			country_event = {
+				id = LWV.41
+				days = 1
+			}
 		}
 	}
 	focus = {
 		id = LWV_tserkovni_hor
-		icon = GFX_Korol_charodei
+		icon = GFX_tserkovni_hor
 		x = 45
 		y = 5
 		cost = 5
@@ -700,13 +722,13 @@ focus_tree = {
 		prerequisite = { focus = LWV_zvon_kolocolov }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 10		
 		}
 	}
 	
 	focus = {
 		id = LWV_zaseet_semena_pravednosti
-		icon = GFX_Korol_charodei
+		icon = GFX_zaseet_semena_pravednosti
 		x = 34
 		y = 6
 		cost = 5
@@ -716,12 +738,12 @@ focus_tree = {
 		prerequisite = { focus = LWV_podgotovit_pochvu }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 50		
 		}
 	}	
 	focus = {
 		id = LWV_concentrirovat_promku
-		icon = GFX_Korol_charodei
+		icon = GFX_concentrirovat_promku
 		x = 38
 		y = 6
 		cost = 5
@@ -732,12 +754,21 @@ focus_tree = {
 		prerequisite = { focus = LWV_zavershit_industrialization }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost
+				add_idea = LWV_new_promishlenost1
+			}
+			add_tech_bonus = {
+				name = concentrated_industry_bonus
+				bonus = 1
+				uses = 1
+				technology = concentrated_industry
+			}
 		}
 	}
 	focus = {
 		id = LWV_rasssredotochit_promku
-		icon = GFX_Korol_charodei
+		icon = GFX_rasssredotochit_promku
 		x = 42
 		y = 6
 		cost = 5
@@ -748,12 +779,21 @@ focus_tree = {
 		prerequisite = { focus = LWV_zavershit_industrialization }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_tech_bonus = {
+				name = dispersed_industry_bonus
+				bonus = 1
+				uses = 1
+				technology = dispersed_industry
+			}	
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost
+				add_idea = LWV_new_promishlenost11
+			}	
 		}
 	}
 	focus = {
 		id = LWV_blesk_kresta
-		icon = GFX_Korol_charodei
+		icon = GFX_blesk_kresta
 		x = 46
 		y = 6
 		cost = 5
@@ -763,12 +803,12 @@ focus_tree = {
 		prerequisite = { focus = LWV_tserkovni_hor }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 10		
 		}
 	}
 	focus = {
 		id = LWV_Our_bog
-		icon = GFX_Korol_charodei
+		icon = GFX_Our_bog
 		x = 33
 		y = 7
 		cost = 5
@@ -778,12 +818,16 @@ focus_tree = {
 		prerequisite = { focus = LWV_zaseet_semena_pravednosti }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 5
+			country_event = {
+				id = LWV.33
+				days = 1
+			}
 		}
 	}
 	focus = {
 		id = LWV_effektivnost
-		icon = GFX_Korol_charodei
+		icon = GFX_effektivnost
 		x = 37
 		y = 7
 		cost = 5
@@ -793,12 +837,15 @@ focus_tree = {
 		prerequisite = { focus = LWV_concentrirovat_promku }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost1
+				add_idea = LWV_new_promishlenost2
+			}			
 		}
 	}
 	focus = {
 		id = LWV_vosstanovlenie
-		icon = GFX_Korol_charodei
+		icon = GFX_vosstanovlenie
 		x = 40
 		y = 7
 		cost = 5
@@ -808,12 +855,15 @@ focus_tree = {
 		prerequisite = { focus = LWV_concentrirovat_promku focus = LWV_rasssredotochit_promku }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost4
+				add_idea = LWV_new_promishlenost5
+			}			
 		}
 	}
 	focus = {
 		id = LWV_kolichestvo
-		icon = GFX_Korol_charodei
+		icon = GFX_kolichestvo
 		x = 43
 		y = 7
 		cost = 5
@@ -823,12 +873,15 @@ focus_tree = {
 		prerequisite = { focus = LWV_rasssredotochit_promku }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost11
+				add_idea = LWV_new_promishlenost12
+			}		
 		}
 	}
 	focus = {
 		id = LWV_our_creator
-		icon = GFX_Korol_charodei
+		icon = GFX_our_creator
 		x = 47
 		y = 7
 		cost = 5
@@ -838,12 +891,16 @@ focus_tree = {
 		prerequisite = { focus = LWV_blesk_kresta }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 20
+			country_event = {
+				id = LWV.35 
+				days = 1
+			}	
 		}
 	}	
 	focus = {
 		id = LWV_Create_us
-		icon = GFX_Korol_charodei
+		icon = GFX_Create_us
 		x = 32
 		y = 8
 		cost = 5
@@ -853,12 +910,16 @@ focus_tree = {
 		prerequisite = { focus = LWV_Our_bog }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 5		
+			country_event = {
+				id = LWV.36 
+				days = 1
+			}
 		}
 	}
 	focus = {
 		id = LWV_obuchit_upravlentsev
-		icon = GFX_Korol_charodei
+		icon = GFX_obuchit_upravlentsev
 		x = 36
 		y = 8
 		cost = 5
@@ -868,12 +929,15 @@ focus_tree = {
 		prerequisite = { focus = LWV_effektivnost }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost2
+				add_idea = LWV_new_promishlenost3
+			}			
 		}
 	}
 	focus = {
 		id = LWV_expand_ifrastructure
-		icon = GFX_Korol_charodei
+		icon = GFX_expand_ifrastructure
 		x = 40
 		y = 8
 		cost = 5
@@ -883,12 +947,22 @@ focus_tree = {
 		prerequisite = { focus = LWV_vosstanovlenie }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost5
+				add_idea = LWV_new_promishlenost6
+			}		
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}				
+			}	
 		}
 	}
 	focus = {
 		id = LWV_pooshriat_vernost
-		icon = GFX_Korol_charodei
+		icon = GFX_pooshriat_vernost
 		x = 44
 		y = 8
 		cost = 5
@@ -898,12 +972,19 @@ focus_tree = {
 		prerequisite = { focus = LWV_kolichestvo }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost12
+				add_idea = LWV_new_promishlenost13
+			}	
+			country_event = {
+				id = LWV.45 
+				days = 1
+			}
 		}
 	}
 	focus = {
 		id = LWV_give_mind_to_us
-		icon = GFX_Korol_charodei
+		icon = GFX_give_mind_to_us
 		x = 48
 		y = 8
 		cost = 5
@@ -913,12 +994,16 @@ focus_tree = {
 		prerequisite = { focus = LWV_our_creator }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 20	
+			country_event = {
+				id = LWV.42
+				days = 1
+			}	
 		}
 	}
 	focus = {
 		id = LWV_but_why
-		icon = GFX_Korol_charodei
+		icon = GFX_but_why
 		x = 31
 		y = 9
 		cost = 5
@@ -928,12 +1013,16 @@ focus_tree = {
 		prerequisite = { focus = LWV_Create_us }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 5	
+			country_event = {
+				id = LWV.34 
+				days = 1
+			}
 		}
 	}
 	focus = {
 		id = LWV_new_metod
-		icon = GFX_Korol_charodei
+		icon = GFX_new_metod
 		x = 35
 		y = 9
 		cost = 5
@@ -943,12 +1032,22 @@ focus_tree = {
 		prerequisite = { focus = LWV_obuchit_upravlentsev }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost3
+				add_idea = LWV_new_promishlenost4
+			}	
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 2
+				category = industry
+			   }	
 		}
 	}
 	focus = {
 		id = LWV_razvit_regioni
-		icon = GFX_Korol_charodei
+		icon = GFX_razvit_regioni
 		x = 40
 		y = 9
 		cost = 5
@@ -963,7 +1062,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LWV_adaptirovat_tradition
-		icon = GFX_Korol_charodei
+		icon = GFX_adaptirovat_tradition
 		x = 45
 		y = 9
 		cost = 5
@@ -973,12 +1072,15 @@ focus_tree = {
 		prerequisite = { focus = LWV_pooshriat_vernost }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost13
+				add_idea = LWV_new_promishlenost14
+			}			
 		}
 	}
 	focus = {
 		id = LWV_zochem
-		icon = GFX_Korol_charodei
+		icon = GFX_zochem
 		x = 49
 		y = 9
 		cost = 5
@@ -988,25 +1090,32 @@ focus_tree = {
 		prerequisite = { focus = LWV_give_mind_to_us }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_political_power = 30
+			country_event = {
+				id = LWV.43
+				days = 1
+			}
 		}
 	}	
 	
 	focus = {
 		id = LWV_sut_mira
-		icon = GFX_Korol_charodei
+		icon = GFX_sut_mira
 		x = 40
 		y = 11
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_zochem }
-		prerequisite = { focus = LWV_but_why }
+		prerequisite = { focus = LWV_zochem focus = LWV_but_why }
 		prerequisite = { focus = LWV_new_metod  focus = LWV_adaptirovat_tradition }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			add_stability = -0.3
+			country_event = {
+				id = LWV.44
+				days = 1
+			}
 		}
 	}
 }

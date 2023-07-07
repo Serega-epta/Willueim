@@ -249,3 +249,36 @@ LWV_balance_of_power_category = {
 		cost = 0
 	}
 }
+
+LWV_prepare_the_ground = {
+	prepare_the_ground = {
+		icon = generic_scorched_earth
+		visible = { 
+			FROM = {
+				is_owned_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		available = {		
+			has_dynamic_modifier = sviataya_postup
+		}
+
+		modifier = {
+		}
+		days_remove = 100
+		cost = 60
+		complete_effect = {
+			FROM ={
+				add_dynamic_modifier = { modifier = sudni_den }			
+			}			
+		}
+		remove_effect = {
+			FROM ={
+				add_dynamic_modifier = { modifier = sviataya_postup }	
+				remove_dynamic_modifier = { modifier = sudni_den }		
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+	}		
+}
