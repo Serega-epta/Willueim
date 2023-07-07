@@ -357,6 +357,124 @@ LWV_unity_in_holiness = {
 	}
 }
 
+
+
+
+LWV_rasprostranenie_veri = {
+	send_misiioners = {
+		icon = generic_scorched_earth
+
+		visible = {
+			FROM = {
+				OR = {
+				AND = {
+				NOT = { is_controlled_by = LWV }
+					is_controlled_by = FROM
+					}
+				}
+				is_owned_by = FROM
+				any_neighbor_state = { is_controlled_by = LWV }
+			}
+		}
+		available = {
+		LWV = { 
+		any_neighbor_country = { 
+			any_state = {
+			NOT = { is_owned_by = LWV }
+			is_fully_controlled_by = FROM
+			} 
+		}
+		}		
+		}	
+		modifier = {
+		}
+		days_remove = 30
+		days_re_enable = 100
+		cost = 30
+		complete_effect = {
+		}
+		remove_effect = {
+		FROM ={
+			add_dynamic_modifier = { modifier = sviataya_postup days = 100 }			
+			set_state_flag = has_missioineri
+			country_event = { id = LWV.3333 }
+			}			
+		}
+		state_target = yes
+		on_map_mode = map_only
+	}
+}
+LWV_podgotovit_pochvu = {
+	prepare_the_groundd = {
+		icon = generic_scorched_earth
+		visible = {
+			FROM = {
+				OR = {
+				AND = {
+				NOT = { is_controlled_by = LWV }
+					is_controlled_by = FROM
+					}
+				}
+				is_owned_by = FROM
+				any_neighbor_state = { is_controlled_by = LWV }
+			}
+		}
+		available = {
+		LWV = { 
+		any_neighbor_country = { 
+			any_state = {
+			NOT = { is_owned_by = LWV }
+			is_fully_controlled_by = FROM
+			} 
+		}
+		}		
+		}	
+		modifier = {
+		}
+		days_remove = 1
+		days_re_enable = 110
+		cost = 60
+		complete_effect = {
+		}
+		remove_effect = {
+		FROM ={
+			remove_dynamic_modifier = { modifier = sviataya_postup }
+			add_dynamic_modifier = { modifier = sudni_den days = 100 }			
+			}			
+		}
+		state_target = yes
+		on_map_mode = map_only
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 LWV_balance_of_power_category = {
 	LWV_bop_mission_1 = {
 	

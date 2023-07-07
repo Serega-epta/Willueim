@@ -1,0 +1,142 @@
+guiTypes = {
+	containerWindowType = {
+		name = "creating_a_submarines"
+		size = { width = 600 height = 800 }
+		position = { x = 0 y = 0 }   
+		orientation = center
+		origo = center
+		moveable = no
+
+		iconType = {
+			name = "fonrodiniii"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_rodina_map2"	
+		}
+		instantTextBoxType = {
+				name = "opisanie"
+				position = { x = 0 y = 400 }
+				maxWidth = 450
+				maxHeight = 800
+				format = center
+				font = "hoi_32mbs"
+				text = tekst_opisania_polodok 
+		}
+##########################################################################################################################################################################################################################################		
+		
+		iconType = {
+			name = "chertedj_naiden_1"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_find_chertedj"	
+		}	
+		iconType = {
+			name = "chertedj_naiden_2"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_find_chertedj"	
+		}	
+		iconType = {
+			name = "chertedj_naiden_3"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_find_chertedj"	
+		}
+		iconType = {
+			name = "chertedj_naiden_4"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_find_chertedj"	
+		}	
+		iconType = {
+			name = "chertedj_naiden_5"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_find_chertedj"	
+		}	
+		iconType = {
+			name = "chertedj_naiden_6"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_find_chertedj"	
+		}	
+		iconType = {
+			name = "chertedj_naiden_7"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_find_chertedj"	
+		}	
+		iconType = {
+			name = "chertedj_naiden_8"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_find_chertedj"	
+		}	
+						
+##########################################################################################################################################################################################################################################	
+		
+		buttonType = {
+			name = "karelia_button" 
+			position = { x = 65 y = 0 }
+			quadTextureSprite = "GFX_karelia_button"
+			clicksound = click_default	
+			pdx_tooltip = "karelia_tt"	
+			maxHeight = 100	
+			maxWidth = 100			
+		}
+		buttonType = {
+			name = "primorie_Left_button" 
+			position = { x = 160 y = 10 }
+			quadTextureSprite = "GFX_primorie_Left_button"
+			clicksound = click_default
+			pdx_tooltip = "pomorie_tt"	
+			maxHeight = 100	
+			maxWidth = 100			
+		}
+		buttonType = {
+			name = "primorie_Right_button" 
+			position = { x = 339 y = -3 }
+			quadTextureSprite = "GFX_primorie_Right_button"
+			clicksound = click_default	
+			pdx_tooltip = "pomorie2_tt"
+			maxHeight = 100	
+			maxWidth = 100				
+		}
+		buttonType = {
+			name = "ural_button" 
+			position = { x = 305 y = 125 }
+			quadTextureSprite = "GFX_ural_button"
+			clicksound = click_default	
+			pdx_tooltip = "urral_tt"	
+			maxHeight = 100	
+			maxWidth = 100				
+		}
+		buttonType = {
+			name = "central_russia_button" 
+			position = { x = 125 y = 195 }
+			quadTextureSprite = "GFX_central_russia_button"
+			clicksound = click_default	
+			pdx_tooltip = "central_russia_tt"		
+			maxHeight = 10	
+			maxWidth = 10				
+		}
+		buttonType = {
+			name = "baltic_button" 
+			position = { x = 30 y = 145 }
+			quadTextureSprite = "GFX_baltic_button"
+			clicksound = click_default	
+			pdx_tooltip = "balticsd_tt"		
+			maxHeight = 50	
+			maxWidth = 50				
+		}
+		buttonType = {
+			name = "ukraine_button" 
+			position = { x = 40 y = 300 }
+			quadTextureSprite = "GFX_ukraine_button"
+			clicksound = click_default	
+			pdx_tooltip = "ukrainaa_tt"		
+			maxHeight = 50	
+			maxWidth = 50				
+		}
+		buttonType = {
+			name = "belarus_button" 
+			position = { x = 3 y = 233 }
+			quadTextureSprite = "GFX_belarus_button"
+			clicksound = click_default	
+			pdx_tooltip = "bbelarus_tt"		
+			maxHeight = 40	
+			maxWidth = 50				
+		}
+    }
+}
