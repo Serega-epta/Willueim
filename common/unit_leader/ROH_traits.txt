@@ -1,0 +1,39 @@
+leader_traits = {
+
+	hero_of_great_motherland = { 
+		type = land
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+			breakthrough_factor = 0.5
+			army_defence_factor = 0.5	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	monster_hunter = { 
+		type = land
+		trait_type = personality_trait 
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+			acclimatization_cold_climate_gain_factor = 0.2
+			army_attack_factor = 0.5
+			army_strength_factor = 0.5
+			land_night_attack = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+}
