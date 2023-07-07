@@ -191,6 +191,7 @@ LWV_unity_in_holiness = {
 		days_re_enable = 30
 		complete_effect = {
 			country_event = { id = unity_in_holiness.1 }
+			subtract_from_variable = { unity_in_holiness = 2 }
 		}
 	}
 	bring_down_gods_wrath = {
@@ -206,6 +207,7 @@ LWV_unity_in_holiness = {
 			random_owned_controlled_state = {
 				create_unit = { division = "name = \"bojiya_dlan\" division_template = \"bojiya_dlan\" start_experience_factor = 1.0"  owner = LWV }
 			}
+			subtract_from_variable = { unity_in_holiness = 10 }
 		}
 	}
 	bless_the_work = {
@@ -222,6 +224,7 @@ LWV_unity_in_holiness = {
 				idea = LWV_blessing_of_labor
 				days = 60
 			}
+			subtract_from_variable = { unity_in_holiness = 3 }
 		}
 	}
 	forging_iron = {
@@ -240,6 +243,7 @@ LWV_unity_in_holiness = {
 					amount = 5
 				}
 			}
+			subtract_from_variable = { unity_in_holiness = 5 }
 		}
 	}
 	bless_the_fight = {
@@ -257,6 +261,7 @@ LWV_unity_in_holiness = {
 				create_unit = { division = "name = \"sviatoe_opolchenie\" division_template = \"sviatoe_opolchenie\" start_experience_factor = 1.0"  owner = LWV }
 				create_unit = { division = "name = \"sviatoe_opolchenie\" division_template = \"sviatoe_opolchenie\" start_experience_factor = 1.0"  owner = LWV }
 			}
+			subtract_from_variable = { unity_in_holiness = 5 }
 		}
 	}
 	stone_skin = {
@@ -272,7 +277,8 @@ LWV_unity_in_holiness = {
 			add_timed_idea = {
 				idea = LWV_blessing_with_stone_skin
 				days = 30
-			}			
+			}
+			subtract_from_variable = { unity_in_holiness = 3 }			
 		}
 	}
 	asceticism = {
@@ -293,6 +299,7 @@ LWV_unity_in_holiness = {
     					instant_build = yes
 				}	
 			}
+			subtract_from_variable = { unity_in_holiness = 7 }
 		}
 	}
 	blessing_with_provisions = {
@@ -315,6 +322,7 @@ LWV_unity_in_holiness = {
 				amount = 35
 				producer = LWV
 			}
+			subtract_from_variable = { unity_in_holiness = 3 }
 		}
 	}
 	prepare_provisions = {
@@ -331,6 +339,7 @@ LWV_unity_in_holiness = {
 				idea = LWV_preparation_of_provisions
 				days = 60
 			}
+			subtract_from_variable = { unity_in_holiness = 3 }
 		}
 	}
 	debug_holiness = {
