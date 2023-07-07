@@ -204,13 +204,7 @@ LWV_unity_in_holiness = {
 		days_re_enable = 100
 		complete_effect = {
 			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"bojiya_dlan\" 
-					division_template = \"bojiya_dlan\" 
-					start_experience_factor = 0.5"
-					owner = LWV
-					count = 1
-				}
+				create_unit = { division = "name = \"bojiya_dlan\" division_template = \"bojiya_dlan\" start_experience_factor = 1.0"  owner = LWV }
 			}
 		}
 	}
@@ -259,13 +253,9 @@ LWV_unity_in_holiness = {
 		days_re_enable = 70
 		complete_effect = {
 			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"sviatoe_opolchenie\" 
-					division_template = \"sviatoe_opolchenie\" 
-					start_experience_factor = 1.0 start_equipment_factor = 1.0"
-					owner = LWV
-					count = 3
-				}		
+				create_unit = { division = "name = \"sviatoe_opolchenie\" division_template = \"sviatoe_opolchenie\" start_experience_factor = 1.0"  owner = LWV }
+				create_unit = { division = "name = \"sviatoe_opolchenie\" division_template = \"sviatoe_opolchenie\" start_experience_factor = 1.0"  owner = LWV }
+				create_unit = { division = "name = \"sviatoe_opolchenie\" division_template = \"sviatoe_opolchenie\" start_experience_factor = 1.0"  owner = LWV }
 			}
 		}
 	}

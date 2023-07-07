@@ -8,23 +8,24 @@ LWV_boji_perst = {
 	}
 	priority = 85
 }
+
 LWV_holiness = {
 	icon = saf_anti_colonialist_crusade
-	picture = GFX_nixilus_picture
-	allowed = { original_tag = LWV }
-	visible = { has_country_flag = decision_for_holiness }
-	visible_when_empty = yes
-	priority = 85
-}
-LWV_unity_in_holiness = {
-	icon = saf_anti_colonialist_crusade
-	picture = GFX_nixilus_picture #GFX_unity_in_holiness_picture
+	picture = GFX_holiness_picture
 	allowed = { original_tag = LWV }
 	visible = { has_country_flag = decision_for_holiness }
 	visible_when_empty = yes
 	priority = 85
 }
 
+LWV_unity_in_holiness = {
+	icon = saf_anti_colonialist_crusade
+	picture = GFX_unity_in_holiness_picture
+	allowed = { original_tag = LWV }
+	visible = { has_country_flag = decision_for_holiness }
+	visible_when_empty = yes
+	priority = 85
+}
 
 LWV_rasprostranenie_veri = {
 	icon = saf_anti_colonialist_crusade

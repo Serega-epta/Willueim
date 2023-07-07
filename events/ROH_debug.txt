@@ -144,3 +144,33 @@ country_event = {
 		country_event = { id = ARM.998  days = 1 }			
 	}
 }
+
+#Ивент на проверку работоспособности механики Святости БНГВ
+	id = ROH_debug.5
+	title = ROH_debug.5.t
+	desc = ROH_debug.5.d
+	picture = 
+
+    	fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+		name = ROH_debug.5.a
+		LWV = { 
+			annex_country = {
+    			target = COA
+    			transfer_troops = no
+			}	
+			annex_country = {
+    			target = SWR
+    			transfer_troops = no
+			}	
+			annex_country = {
+    			target = BGD
+    			transfer_troops = no
+			}	
+			set_country_flag = decision_for_holiness 
+		}
+	}
+}
