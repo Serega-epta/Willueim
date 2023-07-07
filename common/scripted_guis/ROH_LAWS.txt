@@ -227,12 +227,12 @@ RoH_law_priziv = {
 					}
 					add_ideas = free_recruting
 					add_political_power = -100
-					add_to_variable = { Chernii_rubli = -500 }
+					add_to_variable = { Chernii_rubli = -5000 }
 				}	
 		}
 		limited_recruting_click = {	
 			if = {
-					limit = { has_political_power > 150 }
+					limit = { has_political_power > 100  }
 					remove_ideas = {
 						free_recruting
 						mass_recruting
@@ -240,13 +240,13 @@ RoH_law_priziv = {
 						admiral_recruting
 					}
 					add_ideas = limited_recruting
-					add_political_power = -150
-					add_to_variable = { Chernii_rubli = -1000 }
+					add_political_power = -100
+					add_to_variable = { Chernii_rubli = -5000 }
 				}
 		}
 		mass_recruting_click = {	
 			if = {
-					limit = { has_political_power > 200 }
+					limit = { has_political_power > 100  }
 					remove_ideas = {
 						free_recruting
 						limited_recruting
@@ -254,13 +254,13 @@ RoH_law_priziv = {
 						admiral_recruting
 					}
 					add_ideas = mass_recruting
-					add_political_power = -200
-					add_to_variable = { Chernii_rubli = -1500 }
+					add_political_power = -100
+					add_to_variable = { Chernii_rubli = -5000 }
 				}
 		}
 		total_recruting_click = {	
 			if = {
-					limit = { has_political_power > 250 }
+					limit = { has_political_power > 100  }
 					remove_ideas = {
 						free_recruting
 						limited_recruting
@@ -268,15 +268,15 @@ RoH_law_priziv = {
 						admiral_recruting
 					}
 					add_ideas = total_recruting
-					add_political_power = -250
-					add_to_variable = { Chernii_rubli = -2000 }
+					add_political_power = -100
+					add_to_variable = { Chernii_rubli = -5000 }
 				}
 		}
 		admiral_recruting_click = {	
 		if = {
-			limit = { original_tag = ODS }
+			limit = { has_country_flag = vetka_naumova_proidena }
 			if = {
-					limit = { has_political_power > 50 }
+					limit = { has_political_power > 100  }
 					remove_ideas = {
 						free_recruting
 						limited_recruting
@@ -284,8 +284,23 @@ RoH_law_priziv = {
 						total_recruting
 					}
 					add_ideas = admiral_recruting
-					add_political_power = -50
-					add_to_variable = { Chernii_rubli = -250 }
+					add_political_power = -100
+					add_to_variable = { Chernii_rubli = -5000 }
+				}
+		}
+		if = {
+			limit = { original_tag = ODS }
+			if = {
+					limit = { has_political_power > 100  }
+					remove_ideas = {
+						free_recruting
+						limited_recruting
+						mass_recruting
+						total_recruting
+					}
+					add_ideas = admiral_recruting
+					add_political_power = -100
+					add_to_variable = { Chernii_rubli = -5000 }
 				}
 		}				
 		}
@@ -317,12 +332,12 @@ RoH_law_trud = {
 					}
 					add_ideas = naem_trud
 					add_political_power = -100
-					add_to_variable = { Chernii_rubli = -500 }
+					add_to_variable = { Chernii_rubli = -5000 }
 				}	
 	}
 	trud222_click = {
 		if = {
-					limit = { has_political_power > 150 }
+					limit = { has_political_power > 100  }
 					remove_ideas = {
 						naem_trud
 						slaves_trud
@@ -330,13 +345,13 @@ RoH_law_trud = {
 						avtomatizated_trud
 					}
 					add_ideas = trud_povinn
-					add_political_power = -150
-					add_to_variable = { Chernii_rubli = -1000 }
+					add_political_power = -100
+					add_to_variable = { Chernii_rubli = -5000 }
 				}	
 	}
 	trud333_click = {
 		if = {
-					limit = { has_political_power > 200 }
+					limit = { has_political_power > 100  }
 					remove_ideas = {
 						trud_povinn
 						naem_trud
@@ -344,13 +359,13 @@ RoH_law_trud = {
 						avtomatizated_trud
 					}
 					add_ideas = slaves_trud
-					add_political_power = -200
-					add_to_variable = { Chernii_rubli = -1500 }
+					add_political_power = -100
+					add_to_variable = { Chernii_rubli = -5000 }
 				}	
 	}
 	trud444_click = { 
 		if = {
-					limit = { has_political_power > 250 }
+					limit = { has_political_power > 100  }
 					remove_ideas = {
 						trud_povinn
 						naem_trud
@@ -358,13 +373,13 @@ RoH_law_trud = {
 						avtomatizated_trud
 					}
 					add_ideas = mixed_trud
-					add_political_power = -250
-					add_to_variable = { Chernii_rubli = -2000 }
+					add_political_power = -100
+					add_to_variable = { Chernii_rubli = -5000 }
 				}	
 	}
 	trud555_click = {
 		if = {
-			limit = { has_political_power > 50 }
+			limit = { has_political_power > 100  }
 				remove_ideas = {
 					trud_povinn
 					naem_trud
@@ -372,8 +387,8 @@ RoH_law_trud = {
 					mixed_trud
 				}
 				add_ideas = avtomatizated_trud
-				add_political_power = -50
-				add_to_variable = { Chernii_rubli = -250 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 		}	
 	}	
 	}
@@ -405,12 +420,12 @@ RoH_law_faith = {
 				}
 				add_ideas = klassic_faith
 				add_political_power = -100
-				add_to_variable = { Chernii_rubli = -500 }
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		faith222_click = {
 			if = {
-				limit = { has_political_power > 150 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					klassic_faith
 					ateizm
@@ -419,13 +434,13 @@ RoH_law_faith = {
 					villiumi
 				}
 				add_ideas = kultizm
-				add_political_power = -150
-				add_to_variable = { Chernii_rubli = -1000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		faith333_click = {
 			if = {
-				limit = { has_political_power > 200 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					kultizm
 					klassic_faith
@@ -434,13 +449,13 @@ RoH_law_faith = {
 					villiumi
 				}
 				add_ideas = ateizm
-				add_political_power = -200
-				add_to_variable = { Chernii_rubli = -1500 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		faith444_click = {
 			if = {
-				limit = { has_political_power > 250 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					kultizm
 					ateizm
@@ -449,15 +464,15 @@ RoH_law_faith = {
 					villiumi
 				}
 				add_ideas = free_faith
-				add_political_power = -250
-				add_to_variable = { Chernii_rubli = -2000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}	
 		}
 		faith555_click = {
 		if = {
 			limit = { original_tag = LWV }
 			if = {
-				limit = { has_political_power > 50 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					kultizm
 					ateizm
@@ -466,8 +481,8 @@ RoH_law_faith = {
 					villiumi
 				}
 				add_ideas = istinoborchestvo
-				add_political_power = -50
-				add_to_variable = { Chernii_rubli = -250 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}			
 		}
@@ -475,7 +490,7 @@ RoH_law_faith = {
 		if = {
 			limit = { original_tag = VOZ }
 			if = {
-				limit = { has_political_power > 50 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					kultizm
 					ateizm
@@ -484,7 +499,7 @@ RoH_law_faith = {
 					klassic_faith
 				}
 				add_ideas = villiumi
-				add_political_power = -50
+				add_political_power = -100
 				add_to_variable = { Chernii_rubli = -50 }
 			}
 		}
@@ -518,46 +533,46 @@ RoH_law_smi = {
 				}
 				add_ideas = papers
 				add_political_power = -100
-				add_to_variable = { Chernii_rubli = -500 }
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		smi222_click = {
 			if = {
-				limit = { has_political_power > 150 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					papers
 					televizor
 					internet
 				}
 				add_ideas = radiio
-				add_political_power = -150
-				add_to_variable = { Chernii_rubli = -1000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		smi333_click = {
 			if = {
-				limit = { has_political_power > 200 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					radiio
 					papers
 					internet
 				}
 				add_ideas = televizor
-				add_political_power = -200
-				add_to_variable = { Chernii_rubli = -1500 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		smi444_click = {
 			if = {
-				limit = { has_political_power > 250 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					radiio
 					televizor
 					papers
 				}
 				add_ideas = internet
-				add_political_power = -250
-				add_to_variable = { Chernii_rubli = -2000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 	}
@@ -589,12 +604,12 @@ RoH_law_migrant = {
 			}
 			add_ideas = closed_borders
 			add_political_power = -100
-			add_to_variable = { Chernii_rubli = -500 }
+			add_to_variable = { Chernii_rubli = -5000 }
 		}
 		}
 		migrant222_click = {
 		if = {
-			limit = { has_political_power > 150 }
+			limit = { has_political_power > 100  }
 			remove_ideas = {
 				closed_borders
 				pogran_control
@@ -602,13 +617,13 @@ RoH_law_migrant = {
 				migration_otbor
 			}
 			add_ideas = opend_borders
-			add_political_power = -150
-			add_to_variable = { Chernii_rubli = -1000 }
+			add_political_power = -100
+			add_to_variable = { Chernii_rubli = -5000 }
 		}
 		}
 		migrant333_click = {
 		if = {
-			limit = { has_political_power > 200 }
+			limit = { has_political_power > 100  }
 			remove_ideas = {
 				closed_borders
 				opend_borders
@@ -616,13 +631,13 @@ RoH_law_migrant = {
 				migration_otbor
 			}
 			add_ideas = pogran_control
-			add_political_power = -200
-			add_to_variable = { Chernii_rubli = -1500 }
+			add_political_power = -100
+			add_to_variable = { Chernii_rubli = -5000 }
 		}
 		}
 		migrant444_click = {
 		if = {
-			limit = { has_political_power > 250 }
+			limit = { has_political_power > 100  }
 			remove_ideas = {
 				opend_borders
 				pogran_control
@@ -630,15 +645,15 @@ RoH_law_migrant = {
 				migration_otbor
 			}
 			add_ideas = propusk_punkt
-			add_political_power = -250
-			add_to_variable = { Chernii_rubli = -2000 }
+			add_political_power = -100
+			add_to_variable = { Chernii_rubli = -5000 }
 		}
 		}
 		migrant555_click = {
 		if = {
-			limit = { original_tag = IMP }
+			limit = { has_country_flag = vetka_menshikova_proidena }
 			if = {
-				limit = { has_political_power > 50 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					opend_borders
 					pogran_control
@@ -646,8 +661,24 @@ RoH_law_migrant = {
 					closed_borders
 				}
 				add_ideas = migration_otbor
-				add_political_power = -50
-				add_to_variable = { Chernii_rubli = -250 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
+			}
+		
+		}
+		if = {
+			limit = { original_tag = IMP }
+			if = {
+				limit = { has_political_power > 100  }
+				remove_ideas = {
+					opend_borders
+					pogran_control
+					propusk_punkt
+					closed_borders
+				}
+				add_ideas = migration_otbor
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		
 		}
@@ -679,46 +710,46 @@ RoH_law_iskajenia = {
 				}
 				add_ideas = ignore_iskajenia
 				add_political_power = -100
-				add_to_variable = { Chernii_rubli = -500 }
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		iskajenia222_click = {
 			if = {
-				limit = { has_political_power > 150 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					ignore_iskajenia
 					likvidation_iskajenii
 					limited_recearchig_iskajenii	
 				}
 				add_ideas = sderjivanie_iskajenii
-				add_political_power = -150
-				add_to_variable = { Chernii_rubli = -1000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}			
 		}
 		iskajenia333_click = {
 			if = {
-				limit = { has_political_power > 200 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					sderjivanie_iskajenii
 					ignore_iskajenia
 					limited_recearchig_iskajenii	
 				}
 				add_ideas = likvidation_iskajenii
-				add_political_power = -200
-				add_to_variable = { Chernii_rubli = -1500 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}		
 		}
 		iskajenia444_click = {
 			if = {
-				limit = { has_political_power > 250 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					sderjivanie_iskajenii
 					likvidation_iskajenii
 					ignore_iskajenia	
 				}
 				add_ideas = limited_recearchig_iskajenii
-				add_political_power = -250
-				add_to_variable = { Chernii_rubli = -2000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}		
 		}	
 	}
@@ -749,12 +780,12 @@ RoH_law_explotaation = {
 				}
 				add_ideas = mixed_rejim
 				add_political_power = -100
-				add_to_variable = { Chernii_rubli = -500 }
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		explotaation222_click = {
 			if = {
-				limit = { has_political_power > 150 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					mixed_rejim
 					sutochnii_raboti
@@ -762,13 +793,13 @@ RoH_law_explotaation = {
 					krov_i_pot
 				}
 				add_ideas = long_smeni
-				add_political_power = -150
-				add_to_variable = { Chernii_rubli = -1000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		explotaation333_click = {
 			if = {
-				limit = { has_political_power > 200 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					long_smeni
 					mixed_rejim
@@ -776,13 +807,13 @@ RoH_law_explotaation = {
 					krov_i_pot
 				}
 				add_ideas = sutochnii_raboti
-				add_political_power = -200
-				add_to_variable = { Chernii_rubli = -1500 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		explotaation444_click = {
 			if = {
-				limit = { has_political_power > 250 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					long_smeni
 					sutochnii_raboti
@@ -790,13 +821,15 @@ RoH_law_explotaation = {
 					krov_i_pot
 				}
 				add_ideas = unstopble_work
-				add_political_power = -250
-				add_to_variable = { Chernii_rubli = -2000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		explotaation555_click = {
 			if = {
-				limit = { has_political_power > 50 }
+				limit = { has_country_flag = vetka_samoilova_proidena  }
+			if = {
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					long_smeni
 					sutochnii_raboti
@@ -804,8 +837,9 @@ RoH_law_explotaation = {
 					mixed_rejim
 				}
 				add_ideas = krov_i_pot
-				add_political_power = -50
-				add_to_variable = { Chernii_rubli = -250 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
+			}
 			}
 		}
 	}
@@ -836,46 +870,46 @@ RoH_law_social = {
 				}
 				add_ideas = ignore_social
 				add_political_power = -100
-				add_to_variable = { Chernii_rubli = -500 }
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		social222_click = {
 			if = {
-				limit = { has_political_power > 150 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					ignore_social				
 					podavlenie_social
 					genocide
 				}
 				add_ideas = sderjivanie_social
-				add_political_power = -150
-				add_to_variable = { Chernii_rubli = -1000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		social333_click = {
 			if = {
-				limit = { has_political_power > 200 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					sderjivanie_social				
 					ignore_social
 					genocide
 				}
 				add_ideas = podavlenie_social
-				add_political_power = -200
-				add_to_variable = { Chernii_rubli = -1500 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 		social444_click = {
 			if = {
-				limit = { has_political_power > 250 }
+				limit = { has_political_power > 100  }
 				remove_ideas = {
 					sderjivanie_social				
 					podavlenie_social
 					ignore_social
 				}
 				add_ideas = genocide
-				add_political_power = -250
-				add_to_variable = { Chernii_rubli = -2000 }
+				add_political_power = -100
+				add_to_variable = { Chernii_rubli = -5000 }
 			}
 		}
 	}

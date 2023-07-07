@@ -1,6 +1,4 @@
 guiTypes = {
-
-
    containerWindowType = {
         name = "panel_gosudarstva" 
         position = { x = -325 y = -50 }		   
@@ -30,9 +28,8 @@ guiTypes = {
 		   clicksound = click_close
         }	  
    }
-
     ################################### сюда гос устройство
-      containerWindowType = {
+    containerWindowType = {
         name = "Okno_gosustroistva" 
         position = { x = -325 y = 349 }		   
 		size = { width = 550 height = 850 }
@@ -40,22 +37,10 @@ guiTypes = {
 		origo = center
 		moveable = no
 		click_to_front = no
-		clipping = no
-		
-		instantTextboxType = {
-			name = "military_sfera_text"
-			position = { x = 0 y = 150 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Наша военная система"
-			maxWidth = 550
-			maxHeight = 800
-			fixedsize = yes
-		}
-				
+		clipping = no	
+	
 		instantTextBoxType = {
-			name ="kaznatekxt"
+			name ="kazndddatekxt"
 			position = { x = 110 y = 20 }
 			font = "hoi_18mbs"
 			text = "Имеется: [?ochki_gos_progressa|G] Очков государственных реформ"
@@ -64,16 +49,49 @@ guiTypes = {
 			#pdx_tooltip = "ochki_reform_tt"
 			pdx_tooltip_delayed = "ochki_reform_tt"
 		}
-		
-		
-		
-		
-		
-		
+		instantTextBoxType = {
+			name ="kaznddda333tekxt"
+			position = { x = 50 y = 420 }
+			font = "hoi_36mbs"
+			text = "*Делайте выбор с умом, в дальнейшем изменить его можно будет только особыми событиями"
+			maxWidth = 500
+			maxHeight = 500
+			#pdx_tooltip = "ochki_reform_tt"
+			pdx_tooltip_delayed = "ochki_reform_tt"
+		}
+#########################################################################################################кнопки когда уже прожато
+		buttonType ={ 
+           name ="BUTTON_Open_okno_military_system_OFF"
+		   position = { x= 330 y= 80 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "military_system_button_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_Open_okno_civil_system_OFF"
+		   position = { x= 130 y= 80 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "civil_system_button_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_Open_okno_ststegos_system_OFF"
+		   position = { x= 230 y= 260 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "ststegos_system_button_tt"
+		   clicksound = click_close
+        }	
+#########################################################################################################кнопки когда уже прожато
 		buttonType ={ 
            name ="BUTTON_Open_okno_military_system"
-		   position = { x= 230 y= 40 }
-		   quadTextureSprite = "GFX_okno_military_system"
+		   position = { x= 330 y= 80 }
+		   quadTextureSprite = "GFX_Lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "military_system_button_tt"
@@ -81,19 +99,24 @@ guiTypes = {
         }	
 		instantTextboxType = {
 			name = "civil_sfra_text"
-			position = { x = 0 y = 300 }
+			position = { x = 335 y = 140 }
 			font = "hoi_18mbs"
 			format = center
 			borderSize = {x = 0 y = 0}
-			text = "Наша гражданская система"
-			maxWidth = 550
-			maxHeight = 800
+			text = "Cистема Меньшикова"
+			maxWidth = 95
+			maxHeight = 50
 			fixedsize = yes
+		}		
+		iconType = {
+			name ="l44ya1"
+			position = { x= 170 y= 120 }
+			quadTextureSprite = "GFX_vzaimoiskuchenieX"
 		}
 		buttonType ={ 
            name ="BUTTON_Open_okno_civil_system"
-		   position = { x= 230 y= 190 }
-		   quadTextureSprite = "GFX_okno_civil_system"
+		   position = { x= 130 y= 80 }
+		   quadTextureSprite = "GFX_Lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "civil_system_button_tt"
@@ -101,1044 +124,2330 @@ guiTypes = {
         }	
 		instantTextboxType = {
 			name = "state_sfra_text"
-			position = { x = 0 y = 470 }
+			position = { x = 135 y = 140 }
 			font = "hoi_18mbs"
 			format = center
 			borderSize = {x = 0 y = 0}
-			text = "Наша государственная система"
-			maxWidth = 550
-			maxHeight = 800
+			text = "Система Самойлова"
+			maxWidth = 95
+			maxHeight = 50
 			fixedsize = yes
 		}
 		buttonType ={ 
            name ="BUTTON_Open_okno_ststegos_system"
-		   position = { x= 230 y= 360 }
-		   quadTextureSprite = "GFX_okno_ststegos_system"
+		   position = { x= 230 y= 260 }
+		   quadTextureSprite = "GFX_Lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "ststegos_system_button_tt"
 		   clicksound = click_close
         }	
+		instantTextboxType = {
+			name = "military_sfera_text"
+			position = { x = 235 y = 320 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Система Наумова"
+			maxWidth = 95
+			maxHeight = 50
+			fixedsize = yes
+		}	
 	   background = {
 			name = "Background3"	
 			spriteType = "GFX_tiled_window"
 		}	  
    }
-   
-   
-    ################################### воеенную систему
+    ################################### МОДЕЛЬ МЕНШИКОВА 111111111111
     containerWindowType = {
-        name = "military_system_tree" 
-        position = { x = 440 y = 5 }	  
-		size = { width = 1000 height = 1010 }
+        name = "menshikov_system_tree" 
+        position = { x = 340 y = 405 }	  
+		size = { width = 800 height = 1810 }
 		orientation = center
 		origo = center
 		moveable = no
 		click_to_front = no
-		clipping = no
+		clipping = yes				
+		
+		buttonType ={ 
+           name ="BUTTON_Vnizz"
+		   position = { x= 730 y= 950 }
+		   quadTextureSprite = "GFX_vniz"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "vniz_tt"
+		   clicksound = click_close
+        }
+		
+		buttonType ={ 
+           name ="BUTTON_choise_mensh_model"
+		   position = { x= 50 y= 10 }
+		   quadTextureSprite = "GFX_main_lobby_button"
+		   buttonFont = "hoi_36mbs"
+		   text = "ВЫБРАТЬ :"
+		   format = center   
+		   clicksound = click_close
+        }
 		
 		instantTextboxType = {
 			name = "military_system_tree_text"
-			position = { x = 200 y = 50 }
+			position = { x = 130 y = 20 }
 			font = "hoi_18mbs"
 			format = center
 			borderSize = {x = 0 y = 0}
-			text = "УПРАВЛЕНИЕ НАШЕЙ ВОЕННОЙ СИСЕМТОЙ :"
+			text = "МОДЕЛЬ МЕНШИКОВА :"
 			maxWidth = 550
-			maxHeight = 800
+			maxHeight = 50
 			fixedsize = yes
 		}
-		
-		
-		
-		
-		
+
+#########################################################################################################кнопки когда уже прожато
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m"
-		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_MeSaNa_add"
+           name ="BUTTON_menshik1_ooff"
+		   position = { x= 250 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "1milita_tt"
+		   pdx_tooltip = "1menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m1"
-		   position = { x= 420 y= 250 }
-		   quadTextureSprite = "GFX_Samoilov_add"
+           name ="BUTTON_menshik2_ooff"
+		   position = { x= 450 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "2milita_tt"
+		   pdx_tooltip = "2menshk_tt"
+		   clicksound = click_close
+        }			
+		buttonType ={ 
+           name ="BUTTON_menshik3_ooff"
+		   position = { x= 250 y= 160 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3menshk_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_menshik4_ooff"
+		   position = { x= 450 y= 160 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m2"
-		   position = { x= 420 y= 400 }
-		   quadTextureSprite = "GFX_Samoilov_add"
+           name ="BUTTON_menshik5_ooff"
+		   position = { x= 355 y= 350 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "3milita_tt"
+		   pdx_tooltip = "5menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m3"
-		   position = { x= 420 y= 550 }
-		   quadTextureSprite = "GFX_Samoilov_add"
+           name ="BUTTON_menshik6_ooff"
+		   position = { x= 250 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "4milita_tt"
+		   pdx_tooltip = "6menshk_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_menshik7_ooff"
+		   position = { x= 450 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7menshk_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_menshik8_ooff"
+		   position = { x= 250 y= 620 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m4"
-		   position = { x= 420 y= 700 }
-		   quadTextureSprite = "GFX_Samoilov_add"
+           name ="BUTTON_menshik9_ooff"
+		   position = { x= 450 y= 620 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "5milita_tt"
+		   pdx_tooltip = "9menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m5"
-		   position = { x= 420 y= 850 }
-		   quadTextureSprite = "GFX_Samoilov_add"
+           name ="BUTTON_menshik10_ooff"
+		   position = { x= 355 y= 730 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "6milita_tt"
+		   pdx_tooltip = "10menshk_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_menshik11_ooff"
+		   position = { x= 150 y= 850 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m6"
-		   position = { x= 130 y= 250 }
-		   quadTextureSprite = "GFX_Menshikov_add"
+           name ="BUTTON_menshik12_ooff"
+		   position = { x= 355 y= 850 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "7milita_tt"
+		   pdx_tooltip = "12menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m7"
-		   position = { x= 130 y= 400 }
-		   quadTextureSprite = "GFX_Menshikov_add"
+           name ="BUTTON_menshik13_ooff"
+		   position = { x= 555 y= 850 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "8milita_tt"
+		   pdx_tooltip = "13menshk_tt"
 		   clicksound = click_close
-        }
+        }	
+#########################################################################################################кнопки когда уже прожато
 		buttonType ={ 
-           name ="BUTTON_start_bonus_m8"
-		   position = { x= 130 y= 550 }
-		   quadTextureSprite = "GFX_Menshikov_add"
+           name ="BUTTON_menshik1"
+		   position = { x= 250 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_on"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "9milita_tt"
+		   pdx_tooltip = "1menshk_tt"
 		   clicksound = click_close
         }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_m9"
-		   position = { x= 130 y= 700 }
-		   quadTextureSprite = "GFX_Menshikov_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "10milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_m10"
-		   position = { x= 130 y= 850 }
-		   quadTextureSprite = "GFX_Menshikov_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "11milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_m11"
-		   position = { x= 730 y= 250 }
-		   quadTextureSprite = "GFX_Naumov_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "12milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_m12"
-		   position = { x= 730 y= 400 }
-		   quadTextureSprite = "GFX_Naumov_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "13milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_m13"
-		   position = { x= 730 y= 550 }
-		   quadTextureSprite = "GFX_Naumov_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "14milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_m14"
-		   position = { x= 730 y= 700 }
-		   quadTextureSprite = "GFX_Naumov_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "15milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_m15"
-		   position = { x= 730 y= 850 }
-		   quadTextureSprite = "GFX_Naumov_add"
-		   quadTextureSprite = "GFX_Naumov_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "16milita_tt"
-		   clicksound = click_close
-        }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		# после включения
-		buttonType ={ 
-           name ="BUTTON_start_1bonus_m"
-		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_MeSaNa_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "17milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_2bonus_m1"
-		   position = { x= 420 y= 250 }
-		   quadTextureSprite = "GFX_Samoilov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "18milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_3bonus_m2"
-		   position = { x= 420 y= 400 }
-		   quadTextureSprite = "GFX_Samoilov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "19milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_4bonus_m3"
-		   position = { x= 420 y= 550 }
-		   quadTextureSprite = "GFX_Samoilov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "20milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_5bonus_m4"
-		   position = { x= 420 y= 700 }
-		   quadTextureSprite = "GFX_Samoilov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "21milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_6bonus_m5"
-		   position = { x= 420 y= 850 }
-		   quadTextureSprite = "GFX_Samoilov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "22milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_7bonus_m6"
-		   position = { x= 130 y= 250 }
-		   quadTextureSprite = "GFX_Menshikov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "23milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_8bonus_m7"
-		   position = { x= 130 y= 400 }
-		   quadTextureSprite = "GFX_Menshikov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "24milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_9bonus_m8"
-		   position = { x= 130 y= 550 }
-		   quadTextureSprite = "GFX_Menshikov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "25milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_10bonus_m9"
-		   position = { x= 130 y= 700 }
-		   quadTextureSprite = "GFX_Menshikov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "26milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_11bonus_m10"
-		   position = { x= 130 y= 850 }
-		   quadTextureSprite = "GFX_Menshikov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "27milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_12bonus_m11"
-		   position = { x= 730 y= 250 }
-		   quadTextureSprite = "GFX_Naumov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "28milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_13bonus_m12"
-		   position = { x= 730 y= 400 }
-		   quadTextureSprite = "GFX_Naumov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "29milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_14bonus_m13"
-		   position = { x= 730 y= 550 }
-		   quadTextureSprite = "GFX_Naumov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "30milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_15bonus_m14"
-		   position = { x= 730 y= 700 }
-		   quadTextureSprite = "GFX_Naumov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "31milita_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_16bonus_m15"
-		   position = { x= 730 y= 850 }
-		   quadTextureSprite = "GFX_Naumov_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "32milita_tt"
-		   clicksound = click_close
-        }
-		
-		iconType = {
-			name ="liniya"
-			position = { x= 105 y= 83 }
-			quadTextureSprite = "GFX_liniya"
+		instantTextboxType = {
+			name = "menshik1_text"
+			position = { x = 260 y = 110 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Материаловедение"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
 		}
-		
+		buttonType ={ 
+           name ="BUTTON_menshik2"
+		   position = { x= 450 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "2menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik2_text"
+			position = { x = 460 y = 110 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Плотная компановка"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}			
+		buttonType ={ 
+           name ="BUTTON_menshik3"
+		   position = { x= 250 y= 160 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik3_text"
+			position = { x = 260 y = 220 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Нисходящие потоки"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_menshik4"
+		   position = { x= 450 y= 160 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik4_text"
+			position = { x = 460 y = 220 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Восходящие потоки"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_menshik5"
+		   position = { x= 355 y= 350 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "5menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik5_text"
+			position = { x = 360 y = 410 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Наше будущие"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_menshik6"
+		   position = { x= 250 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "6menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik6_text"
+			position = { x = 255 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Профтехучилища"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_menshik7"
+		   position = { x= 450 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik7_text"
+			position = { x = 455 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Рабфакультеты"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_menshik8"
+		   position = { x= 250 y= 620 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik8_text"
+			position = { x = 255 y = 680 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Ветераны труда"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_menshik9"
+		   position = { x= 450 y= 620 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "9menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik9_text"
+			position = { x = 455 y = 685 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Герои труда"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_menshik10"
+		   position = { x= 355 y= 730 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "10menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik10_text"
+			position = { x = 360 y = 785 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Кооперация Индустрии"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_menshik11"
+		   position = { x= 150 y= 850 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik11_text"
+			position = { x = 155 y = 905 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Разработанно для жизни"
+			maxWidth = 99
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_menshik12"
+		   position = { x= 355 y= 850 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "12menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik12_text"
+			position = { x = 360 y = 905 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Возлюби ближнего своего"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_menshik13"
+		   position = { x= 555 y= 850 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "13menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik13_text"
+			position = { x = 560 y = 905 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Местное крыло"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+#########################################################################################################ИКОНКИ СОЕДЕНЕНИЯ немного шизово в следущей ветке сделаю по другому
+		iconType = {
+			name ="liniya11"
+			position = { x= 350 y= 120 }
+			quadTextureSprite = "GFX_liniagorizontalLLLLLLL"
+		}	
+		iconType = {
+			name ="liniya2"
+			position = { x= 400 y= 125 }
+			quadTextureSprite = "GFX_liniavertikalLLLLL"
+		}	
+		iconType = {
+			name ="liniy66a2"
+			position = { x= 190 y= 950 }
+			quadTextureSprite = "GFX_liniavertikalLLLLL"
+		}			
+		iconType = {
+			name ="lin7iya2"
+			position = { x= 395 y= 950 }
+			quadTextureSprite = "GFX_liniavertikalLLLLL"
+		}	
+		iconType = {
+			name ="liniy2a2"
+			position = { x= 600 y= 950 }
+			quadTextureSprite = "GFX_liniavertikalLLLLL"
+		}				
+		iconType = {
+			name ="liniya3"
+			position = { x= 380 y= 220 }
+			quadTextureSprite = "GFX_vzaimoiskuchenie"
+		}	
+		iconType = {
+			name ="liniya222"
+			position = { x= 290 y= 260 }
+			quadTextureSprite = "GFX_liniavertikal"
+		}
+		iconType = {
+			name ="liniya2222"
+			position = { x= 490 y= 260 }
+			quadTextureSprite = "GFX_liniavertikal"
+		}	
+		iconType = {
+			name ="linггiya222"
+			position = { x= 290 y= 580 }
+			quadTextureSprite = "GFX_liniavertikal"
+		}
+		iconType = {
+			name ="liniyуууa2222"
+			position = { x= 490 y= 580 }
+			quadTextureSprite = "GFX_liniavertikal"
+		}	
+		iconType = {
+			name ="liniyуууa122222"
+			position = { x= 400 y= 825 }
+			quadTextureSprite = "GFX_liniavertikal"
+		}				
+		iconType = {
+			name ="l5iddya11111"
+			position = { x= 200 y= 870 }
+			quadTextureSprite = "GFX_liniagorizontalLLLLLLL"
+		}		
+		iconType = {
+			name ="li8ddya11111"
+			position = { x= 300 y= 870 }
+			quadTextureSprite = "GFX_liniagorizontalLLLLLLL"
+		}		
+		iconType = {
+			name ="li8dd77ya11111"
+			position = { x= 400 y= 870 }
+			quadTextureSprite = "GFX_liniagorizontalLLLLLLL"
+		}	
+		iconType = {
+			name ="lidd0ya11111"
+			position = { x= 500 y= 870 }
+			quadTextureSprite = "GFX_liniagorizontalLLLLLLL"
+		}
+		iconType = {
+			name ="liddya11111"
+			position = { x= 350 y= 680 }
+			quadTextureSprite = "GFX_liniagorizontalLLLLLLL"
+		}
+		iconType = {
+			name ="liniyуууyyya2222"
+			position = { x= 400 y= 685 }
+			quadTextureSprite = "GFX_liniavertikal"
+		}
+		iconType = {
+			name ="liniya11111"
+			position = { x= 295 y= 306 }
+			quadTextureSprite = "GFX_liniagorizontalLLLLLLL"
+		}
+		iconType = {
+			name ="liniya1ddd1111"
+			position = { x= 395 y= 306 }
+			quadTextureSprite = "GFX_liniagorizontalLLLLLLL"
+		}
+		iconType = {
+			name ="2liniya2222"
+			position = { x= 400 y= 310 }
+			quadTextureSprite = "GFX_liniavertikal"
+		}
+		iconType = {
+			name ="liooiya2"
+			position = { x= 400 y= 450 }
+			quadTextureSprite = "GFX_liniavertikalLLLLL"
+		}
+		iconType = {
+			name ="liniyappp3"
+			position = { x= 380 y= 540 }
+			quadTextureSprite = "GFX_vzaimoiskuchenie"
+		}	
 	    background = {
 			name = "Background4"	
 			spriteType = "GFX_tiled_window"
 		}	  
     }
-   
-   
-    ################################### гражданскую систему
-    containerWindowType = {
-        name = "civil_system_tree" 
-        position = { x = 440 y = 5 }			   
-		size = { width = 1000 height = 1010 }
+	containerWindowType = {
+        name = "menshikov_system_tree2222" 
+        position = { x = 340 y = 405 }	  
+		size = { width = 800 height = 1810 }
 		orientation = center
 		origo = center
 		moveable = no
 		click_to_front = no
-		clipping = no
-		
-		instantTextboxType = {
-			name = "civil_system_tree_text"
-			position = { x = 200 y = 50 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "УПРАВЛЕНИЕ НАШЕЙ ГРАЖДАНСКОЙ СИСТЕМОЙ :"
-			maxWidth = 550
-			maxHeight = 800
-			fixedsize = yes
-		}
-			
-			
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c"
-		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_MeSaNa_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "1civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c1"
-		   position = { x= 420 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "2civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c2"
-		   position = { x= 420 y= 400 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "3civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c3"
-		   position = { x= 420 y= 550 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "4civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c4"
-		   position = { x= 420 y= 700 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "5civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c5"
-		   position = { x= 420 y= 850 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "6civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c6"
-		   position = { x= 130 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "7civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c7"
-		   position = { x= 130 y= 400 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "8civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c8"
-		   position = { x= 130 y= 550 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "9civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c9"
-		   position = { x= 130 y= 700 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "10civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c10"
-		   position = { x= 130 y= 850 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "11civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c11"
-		   position = { x= 730 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "12civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c12"
-		   position = { x= 730 y= 400 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "13civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c13"
-		   position = { x= 730 y= 550 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "14civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c14"
-		   position = { x= 730 y= 700 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "15civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_c15"
-		   position = { x= 730 y= 850 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "16civill_tt"
-		   clicksound = click_close
-        }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		# после включения
-		buttonType ={ 
-           name ="BUTTON_start_1bonus_c"
-		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_MeSaNa_added"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "17civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_2bonus_c1"
-		   position = { x= 420 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "18civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_3bonus_c2"
-		   position = { x= 420 y= 400 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "19civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_4bonus_c3"
-		   position = { x= 420 y= 550 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "20civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_5bonus_c4"
-		   position = { x= 420 y= 700 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "21civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_6bonus_c5"
-		   position = { x= 420 y= 850 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "22civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_7bonus_c6"
-		   position = { x= 130 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "23civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_8bonus_c7"
-		   position = { x= 130 y= 400 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "24civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_9bonus_c8"
-		   position = { x= 130 y= 550 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "25civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_10bonus_c9"
-		   position = { x= 130 y= 700 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "26civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_11bonus_c10"
-		   position = { x= 130 y= 850 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "27civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_12bonus_c11"
-		   position = { x= 730 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "28civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_13bonus_c12"
-		   position = { x= 730 y= 400 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "29civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_14bonus_c13"
-		   position = { x= 730 y= 550 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "30civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_15bonus_c14"
-		   position = { x= 730 y= 700 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "31civill_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_16bonus_c15"
-		   position = { x= 730 y= 850 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "32civill_tt"
-		   clicksound = click_close
-        }
-		
-		iconType = {
-			name ="liniya1"
-			position = { x= 105 y= 83 }
-			quadTextureSprite = "GFX_liniya"
-		}		
-		
-	   background = {
-			name = "Background5"	
-			spriteType = "GFX_tiled_window"
-		}	  
-    }
-    ################################### госсистему
-    containerWindowType = {
-        name = "gosudar_system_tree" 
-        position = { x = 440 y = 5 }		   
-		size = { width = 1000 height = 1010 }
-		orientation = center
-		origo = center
-		moveable = no
-		click_to_front = no
-		clipping = no
-		
-		instantTextboxType = {
-			name = "gosudar_system_tree_text"
-			position = { x = 200 y = 50 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "УПРАВЛЕНИЕ НАШЕЙ ГОСУДАРСТВЕНННОЙ СИСТЕМОЙ :"
-			maxWidth = 550
-			maxHeight = 800
-			fixedsize = yes
-		}
-		
-			
-		
-		
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g"
-		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_MeSaNa_add"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "1gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g1"
-		   position = { x= 420 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "2gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g2"
-		   position = { x= 420 y= 400 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "3gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g3"
-		   position = { x= 420 y= 550 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "4gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g4"
-		   position = { x= 420 y= 700 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "5gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g5"
-		   position = { x= 420 y= 850 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "6gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g6"
-		   position = { x= 130 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "7gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g7"
-		   position = { x= 130 y= 400 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "8gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g8"
-		   position = { x= 130 y= 550 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "9gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g9"
-		   position = { x= 130 y= 700 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "10gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g10"
-		   position = { x= 130 y= 850 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "11gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g11"
-		   position = { x= 730 y= 250 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "12gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g12"
-		   position = { x= 730 y= 400 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "13gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g13"
-		   position = { x= 730 y= 550 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "14gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g14"
-		   position = { x= 730 y= 700 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "15gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_bonus_g15"
-		   position = { x= 730 y= 850 }
-		   quadTextureSprite = "GFX_lisa_off"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "16gos_tt"
-		   clicksound = click_close
-        }
-		
+		clipping = yes					
 
+		iconType = {
+			name ="2li454ya2222"
+			position = { x= 0 y= 0 }
+			quadTextureSprite = "GFX_fonovayaiconkamenshikov"
+		}
+		buttonType ={ 
+           name ="BUTTON_Vverh"
+		   position = { x= 730 y= 20 }
+		   quadTextureSprite = "GFX_vverh"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "vverh_tt"
+		   clicksound = click_close
+        }
+#########################################################################################################кнопки когда уже прожато	
 		
-		# после включения
 		buttonType ={ 
-           name ="BUTTON_start_1bonus_g"
-		   position = { x= 420 y= 100 }
-		   quadTextureSprite = "GFX_MeSaNa_added"
+           name ="BUTTON_menshik14_ooff"
+		   position = { x= 250 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "17gos_tt"
+		   pdx_tooltip = "14menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_2bonus_g1"
-		   position = { x= 420 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
+           name ="BUTTON_menshik15_ooff"
+		   position = { x= 450 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "18gos_tt"
+		   pdx_tooltip = "15menshk_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_menshik16_ooff"
+		   position = { x= 250 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_3bonus_g2"
-		   position = { x= 420 y= 400 }
-		   quadTextureSprite = "GFX_lisa_on"
+           name ="BUTTON_menshik17_ooff"
+		   position = { x= 450 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "19gos_tt"
+		   pdx_tooltip = "17menshk_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_menshik18_ooff"
+		   position = { x= 250 y= 310 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18menshk_tt"
 		   clicksound = click_close
         }
 		buttonType ={ 
-           name ="BUTTON_start_4bonus_g3"
-		   position = { x= 420 y= 550 }
-		   quadTextureSprite = "GFX_lisa_on"
+           name ="BUTTON_menshik19_ooff"
+		   position = { x= 450 y= 310 }
+		   quadTextureSprite = "GFX_Lisa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
-		   pdx_tooltip = "20gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_5bonus_g4"
-		   position = { x= 420 y= 700 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "21gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_6bonus_g5"
-		   position = { x= 420 y= 850 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "22gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_7bonus_g6"
-		   position = { x= 130 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "23gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_8bonus_g7"
-		   position = { x= 130 y= 400 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "24gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_9bonus_g8"
-		   position = { x= 130 y= 550 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "25gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_10bonus_g9"
-		   position = { x= 130 y= 700 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "26gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_11bonus_g10"
-		   position = { x= 130 y= 850 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "27gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_12bonus_g11"
-		   position = { x= 730 y= 250 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "28gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_13bonus_g12"
-		   position = { x= 730 y= 400 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "29gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_14bonus_g13"
-		   position = { x= 730 y= 550 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "30gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_15bonus_g14"
-		   position = { x= 730 y= 700 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "31gos_tt"
-		   clicksound = click_close
-        }
-		buttonType ={ 
-           name ="BUTTON_start_16bonus_g15"
-		   position = { x= 730 y= 850 }
-		   quadTextureSprite = "GFX_lisa_on"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "32gos_tt"
+		   pdx_tooltip = "19menshk_tt"
 		   clicksound = click_close
         }	
-		
-		iconType = {
-			name ="liniya2"
-			position = { x= 105 y= 83 }
-			quadTextureSprite = "GFX_liniya"
-		}
-		
-	   background = {
-			name = "Background6"	
+		buttonType ={ 
+           name ="BUTTON_menshik20_ooff"
+		   position = { x= 350 y= 440 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20menshk_tt"
+		   clicksound = click_close
+        }			
+		buttonType ={ 
+           name ="BUTTON_menshik21_ooff"
+		   position = { x= 150 y= 570 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21menshk_tt"
+		   clicksound = click_close
+        }			
+		buttonType ={ 
+           name ="BUTTON_menshik22_ooff"
+		   position = { x= 350 y= 570 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "22menshk_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_menshik23_ooff"
+		   position = { x= 550 y= 570 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "23menshk_tt"
+		   clicksound = click_close
+        }			
+		buttonType ={ 
+           name ="BUTTON_menshik24_ooff"
+		   position = { x= 350 y= 700 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "24menshk_tt"
+		   clicksound = click_close
+        }					
+#########################################################################################################кнопки когда уже прожато		
+
+		buttonType ={ 
+           name ="BUTTON_menshik14"
+		   position = { x= 250 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "14menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik14_text"
+			position = { x = 255 y = 110 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Строгий регламент"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_menshik15"
+		   position = { x= 450 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "15menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik15_text"
+			position = { x = 455 y = 110 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Гибкий регламент"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_menshik16"
+		   position = { x= 250 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik16_text"
+			position = { x = 245 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Садаводчиские товарищества"
+			maxWidth = 120
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_menshik17"
+		   position = { x= 450 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "17menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik17_text"
+			position = { x = 455 y = 250 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "СельОтряды"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_menshik18"
+		   position = { x= 250 y= 310 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik18_text"
+			position = { x = 255 y = 370 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Состязательное право"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_menshik19"
+		   position = { x= 450 y= 310 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "19menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik19_text"
+			position = { x = 445 y = 370 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Кодекс честной конкуренции"
+			maxWidth = 120
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_menshik20"
+		   position = { x= 350 y= 440 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik20_text"
+			position = { x = 345 y = 500 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Аутсорсинг"
+			maxWidth = 120
+			maxHeight = 50
+			fixedsize = yes
+		}				
+		buttonType ={ 
+           name ="BUTTON_menshik21"
+		   position = { x= 150 y= 570 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik21_text"
+			position = { x = 145 y = 630 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Торговая Инициатива"
+			maxWidth = 120
+			maxHeight = 50
+			fixedsize = yes
+		}			
+		buttonType ={ 
+           name ="BUTTON_menshik22"
+		   position = { x= 350 y= 570 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "22menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik22_text"
+			position = { x = 340 y = 635 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "ГОСТ"
+			maxWidth = 120
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_menshik23"
+		   position = { x= 550 y= 570 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "23menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik23_text"
+			position = { x = 545 y = 630 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Все в оборот"
+			maxWidth = 120
+			maxHeight = 50
+			fixedsize = yes
+		}			
+		buttonType ={ 
+           name ="BUTTON_menshik24"
+		   position = { x= 350 y= 700 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "24menshk_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "menshik24_text"
+			position = { x = 345 y = 760 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Оплот гуманизма"
+			maxWidth = 120
+			maxHeight = 50
+			fixedsize = yes
+		}		
+	    background = {
+			name = "Backgroun444d4"	
 			spriteType = "GFX_tiled_window"
 		}	  
     }
- 
+	
+########################################################################################################################################## SAMOILOV MODEL	1111
+    containerWindowType = {
+        name = "smoilov_system_tree" 
+        position = { x = 340 y = 405 }	  
+		size = { width = 800 height = 1810 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = yes	
+
+		iconType = {
+			name ="2li45ddddddd2"
+			position = { x= 0 y= 0 }
+			quadTextureSprite = "GFX_fonovayaiconkasamoilov"
+		}
+		buttonType ={ 
+           name ="BUTTON_Vnizzz"
+		   position = { x= 730 y= 950 }
+		   quadTextureSprite = "GFX_vniz"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "vniz_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_choise_samoil_model"
+		   position = { x= 50 y= 10 }
+		   quadTextureSprite = "GFX_main_lobby_button"
+		   buttonFont = "hoi_36mbs"
+		   text = "ВЫБРАТЬ :"
+		   format = center   
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoil_system_tree_text"
+			position = { x = 130 y = 20 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "МОДЕЛЬ САМОЙЛОВА :"
+			maxWidth = 550
+			maxHeight = 50
+			fixedsize = yes
+		}
+#########################################################################################################кнопки когда уже прожато
+		buttonType ={ 
+           name ="BUTTON_samoliv1_ooff"
+		   position = { x= 350 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "1samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv2_ooff"
+		   position = { x= 150 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "2samoilvv_tt"
+		   clicksound = click_close
+        }			
+		buttonType ={ 
+           name ="BUTTON_samoliv3_ooff"
+		   position = { x= 350 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3samoilvv_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_samoliv4_ooff"
+		   position = { x= 550 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv5_ooff"
+		   position = { x= 250 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "5samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv6_ooff"
+		   position = { x= 450 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "6samoilvv_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_samoliv7_ooff"
+		   position = { x= 450 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7samoilvv_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_samoliv8_ooff"
+		   position = { x= 250 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv9_ooff"
+		   position = { x= 350 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "9samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv10_ooff"
+		   position = { x= 250 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "10samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv11_ooff"
+		   position = { x= 450 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11samoilvv_tt"
+		   clicksound = click_close
+        }
+#########################################################################################################кнопки когда уже прожато
+		buttonType ={ 
+           name ="BUTTON_samoliv1"
+		   position = { x= 350 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "1samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov1_text"
+			position = { x = 360 y = 110 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Фундамент прошлого"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv2"
+		   position = { x= 150 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "2samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov2_text"
+			position = { x = 160 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "За семью печатями"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}			
+		buttonType ={ 
+           name ="BUTTON_samoliv3"
+		   position = { x= 350 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov3_text"
+			position = { x = 360 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Без лишних хлопот"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_samoliv4"
+		   position = { x= 550 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov4_text"
+			position = { x = 550 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Наш дом - наша крепость"
+			maxWidth = 110
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv5"
+		   position = { x= 250 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "5samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov5_text"
+			position = { x = 255 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Сельское ополчение"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv6"
+		   position = { x= 450 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "6samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov6_text"
+			position = { x = 455 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Заводское ополчение"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_samoliv7"
+		   position = { x= 450 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov7_text"
+			position = { x = 455 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Резка земли"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_samoliv8"
+		   position = { x= 250 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov8_text"
+			position = { x = 255 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Соскребая по сусекам"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv9"
+		   position = { x= 350 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "9samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov9_text"
+			position = { x = 360 y = 690 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "В один миг"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv10"
+		   position = { x= 250 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "10samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov10_text"
+			position = { x = 255 y = 840 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Опричная длань"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv11"
+		   position = { x= 450 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov11_text"
+			position = { x = 455 y = 840 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Очищение переферии"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+	    background = {
+			name = "Background4"	
+			spriteType = "GFX_tiled_window"
+		}	  
+    }	
+	
+	
+########################################################################################################################################## SAMOILOV MODEL	2222222
+    containerWindowType = {
+        name = "smoilov_system_tree2222" 
+        position = { x = 340 y = 405 }	  
+		size = { width = 800 height = 1810 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = yes	
+
+		iconType = {
+			name ="2li45dddddwwwdddd2"
+			position = { x= 0 y= 0 }
+			quadTextureSprite = "GFX_fonovayaiconkasamoilovdvav"
+		}
+		buttonType ={ 
+           name ="BUTTON_Vvverh"
+		   position = { x= 730 y= 20 }
+		   quadTextureSprite = "GFX_vverh"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "vverh_tt"
+		   clicksound = click_close
+        }
+#########################################################################################################кнопки когда уже прожато
+		buttonType ={ 
+           name ="BUTTON_samoliv12_ooff"
+		   position = { x= 350 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "12samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv13_ooff"
+		   position = { x= 150 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "13samoilvv_tt"
+		   clicksound = click_close
+        }			
+		buttonType ={ 
+           name ="BUTTON_samoliv14_ooff"
+		   position = { x= 350 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "14samoilvv_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_samoliv15_ooff"
+		   position = { x= 550 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "15samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv16_ooff"
+		   position = { x= 250 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv17_ooff"
+		   position = { x= 450 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "17samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv18_ooff"
+		   position = { x= 350 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18samoilvv_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_samoliv19_ooff"
+		   position = { x= 250 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "19samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv20_ooff"
+		   position = { x= 450 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20samoilvv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_samoliv21_ooff"
+		   position = { x= 350 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21samoilvv_tt"
+		   clicksound = click_close
+        }	
+#########################################################################################################кнопки когда уже прожато
+		buttonType ={ 
+           name ="BUTTON_samoliv12"
+		   position = { x= 350 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "12samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov12_text"
+			position = { x = 355 y = 110 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Аномалии - к черту!"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv13"
+		   position = { x= 150 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "13samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov13_text"
+			position = { x = 155 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Битва за семью"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}			
+		buttonType ={ 
+           name ="BUTTON_samoliv14"
+		   position = { x= 350 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "14samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov14_text"
+			position = { x = 355 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Военные займы"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_samoliv15"
+		   position = { x= 550 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "15samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov15_text"
+			position = { x = 555 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Из камней и палок"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv16"
+		   position = { x= 250 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov16_text"
+			position = { x = 255 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Автономные батареи"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv17"
+		   position = { x= 450 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "17samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov17_text"
+			position = { x = 455 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Подконтрольные батареи"
+			maxWidth = 100
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_samoliv18"
+		   position = { x= 350 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov18_text"
+			position = { x = 355 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Первенцы Спарты"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_samoliv19"
+		   position = { x= 250 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "19samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov19_text"
+			position = { x = 255 y = 690 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Нервы на пределе"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv20"
+		   position = { x= 450 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov20_text"
+			position = { x = 455 y = 690 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Стальная хватка"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_samoliv21"
+		   position = { x= 350 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21samoilvv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "samoilov21_text"
+			position = { x = 355 y = 840 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Потом и кровью"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+	    background = {
+			name = "Background4"	
+			spriteType = "GFX_tiled_window"
+		}	  
+    }	
+	
+	
+########################################################################################################################################## NAUMOV MODEL	1111
+    containerWindowType = {
+        name = "naumov_system_tree" 
+        position = { x = 340 y = 405 }	  
+		size = { width = 800 height = 1810 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = yes	
+
+		iconType = {
+			name ="2li45dddddrrrsddd2"
+			position = { x= 0 y= 0 }
+			quadTextureSprite = "GFX_fonovayaiconkanaumov"
+		}
+
+		buttonType ={ 
+           name ="BUTTON_VVVVnizzz"
+		   position = { x= 730 y= 950 }
+		   quadTextureSprite = "GFX_vniz"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "vniz_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_choise_naumov_model"
+		   position = { x= 50 y= 10 }
+		   quadTextureSprite = "GFX_main_lobby_button"
+		   buttonFont = "hoi_36mbs"
+		   text = "ВЫБРАТЬ :"
+		   format = center   
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov_system_tree_text"
+			position = { x = 130 y = 20 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "МОДЕЛЬ НАУМОВА :"
+			maxWidth = 550
+			maxHeight = 50
+			fixedsize = yes
+		}
+#########################################################################################################кнопки когда уже прожато
+		buttonType ={ 
+           name ="BUTTON_naumov1_ooff"
+		   position = { x= 350 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "1naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov2_ooff"
+		   position = { x= 250 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "2naumovv_tt"
+		   clicksound = click_close
+        }		
+		buttonType ={ 
+           name ="BUTTON_naumov3_ooff"
+		   position = { x= 450 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov4_ooff"
+		   position = { x= 50 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov5_ooff"
+		   position = { x= 250 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "5naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov6_ooff"
+		   position = { x= 450 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "6naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov7_ooff"
+		   position = { x= 650 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7naumovv_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_naumov8_ooff"
+		   position = { x= 150 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8naumovv_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_naumov9_ooff"
+		   position = { x= 550 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "9naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov10_ooff"
+		   position = { x= 350 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "10naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov11_ooff"
+		   position = { x= 250 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov12_ooff"
+		   position = { x= 450 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "12naumovv_tt"
+		   clicksound = click_close
+        }
+#########################################################################################################кнопки когда уже прожато
+		buttonType ={ 
+           name ="BUTTON_naumov1"
+		   position = { x= 350 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "1naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov1_text"
+			position = { x = 350 y = 110 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Общий долг - общее право"
+			maxWidth = 100
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_naumov2"
+		   position = { x= 250 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "2naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov2_text"
+			position = { x = 260 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Суть бытия"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_naumov3"
+		   position = { x= 450 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "3naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov3_text"
+			position = { x = 460 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Ужас бытия"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}			
+		buttonType ={ 
+           name ="BUTTON_naumov4"
+		   position = { x= 50 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "4naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov4_text"
+			position = { x = 55 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Заботливое Око"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov5"
+		   position = { x= 250 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "5naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov5_text"
+			position = { x = 245 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Занимательное наблюдение"
+			maxWidth = 120
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov6"
+		   position = { x= 450 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "6naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov6_text"
+			position = { x = 460 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Техническая революция"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov7"
+		   position = { x= 650 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "7naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov7_text"
+			position = { x = 660 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Культурная революция"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov8"
+		   position = { x= 150 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "8naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov8_text"
+			position = { x = 155 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Выживание обеспечено"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_naumov9"
+		   position = { x= 550 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "9naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov9_text"
+			position = { x = 555 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Соразмерная плата"
+			maxWidth = 95
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov10"
+		   position = { x= 350 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "10naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov10_text"
+			position = { x = 355 y = 690 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Солдат без упрека"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov11"
+		   position = { x= 250 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "11naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov11_text"
+			position = { x = 255 y = 840 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Формулы для всего"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov12"
+		   position = { x= 450 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "12naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov12_text"
+			position = { x = 455 y = 840 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Первичный бульон"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+	    background = {
+			name = "Backgroeeewund4"	
+			spriteType = "GFX_tiled_window"
+		}	  
+    }	
+	
+	
+########################################################################################################################################## NAUMOV MODEL	2222222
+    containerWindowType = {
+        name = "naumov_system_tree222ss2" 
+        position = { x = 340 y = 405 }	  
+		size = { width = 800 height = 1810 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = yes	
+		
+		iconType = {
+			name ="2lezxcq22dddddrrrsddd2"
+			position = { x= 0 y= 0 }
+			quadTextureSprite = "GFX_fonovayaiconkanaumovdva"
+		}
+		buttonType ={ 
+           name ="BUTTON_VvvCCCDerh"
+		   position = { x= 730 y= 20 }
+		   quadTextureSprite = "GFX_vverh"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "vverh_tt"
+		   clicksound = click_close
+        }
+#########################################################################################################кнопки когда уже прожато			
+		buttonType ={ 
+           name ="BUTTON_naumov13_ooff"
+		   position = { x= 350 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "13naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov14_ooff"
+		   position = { x= 350 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "14naumovv_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_naumov15_ooff"
+		   position = { x= 450 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "15naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov16_ooff"
+		   position = { x= 250 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16naumovv_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_naumov17_ooff"
+		   position = { x= 650 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "17naumovv_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_naumov18_ooff"
+		   position = { x= 50 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov19_ooff"
+		   position = { x= 250 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "19naumovv_tt"
+		   clicksound = click_close
+        }	
+		buttonType ={ 
+           name ="BUTTON_naumov20_ooff"
+		   position = { x= 450 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20naumovv_tt"
+		   clicksound = click_close
+        }
+		buttonType ={ 
+           name ="BUTTON_naumov21_ooff"
+		   position = { x= 350 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_off"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21naumovv_tt"
+		   clicksound = click_close
+        }	
+#########################################################################################################кнопки когда уже прожато
+		
+		buttonType ={ 
+           name ="BUTTON_naumov13"
+		   position = { x= 350 y= 50 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "13naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov13_text"
+			position = { x = 350 y = 110 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Цветы жизни"
+			maxWidth = 100
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType ={ 
+           name ="BUTTON_naumov14"
+		   position = { x= 350 y= 180 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "14naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov14_text"
+			position = { x = 355 y = 240 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Планы их жизни"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		buttonType ={ 
+           name ="BUTTON_naumov15"
+		   position = { x= 450 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "15naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov15_text"
+			position = { x = 460 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Отриньте сомнения"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov16"
+		   position = { x= 250 y= 330 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "16naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov16_text"
+			position = { x = 260 y = 390 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Реализаця потенциала"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov17"
+		   position = { x= 650 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "17naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov17_text"
+			position = { x = 660 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Порядок в мыслях"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov18"
+		   position = { x= 50 y= 480 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "18naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov18_text"
+			position = { x = 60 y = 540 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Единство кровью"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov19"
+		   position = { x= 250 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "19naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov19_text"
+			position = { x = 255 y = 690 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Человек - сознание"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+		buttonType ={ 
+           name ="BUTTON_naumov20"
+		   position = { x= 450 y= 630 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "20naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov20_text"
+			position = { x = 455 y = 690 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Когнитивная война"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}		
+		
+		buttonType ={ 
+           name ="BUTTON_naumov21"
+		   position = { x= 350 y= 780 }
+		   quadTextureSprite = "GFX_Lisa_on"
+		   buttonFont = "hoi_18mbs"
+		   format = center   
+		   pdx_tooltip = "21naumovv_tt"
+		   clicksound = click_close
+        }
+		instantTextboxType = {
+			name = "naumov21_text"
+			position = { x = 355 y = 840 }
+			font = "hoi_18mbs"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "Границы тела"
+			maxWidth = 90
+			maxHeight = 50
+			fixedsize = yes
+		}	
+	    background = {
+			name = "Backgrou78724nd4"	
+			spriteType = "GFX_tiled_window"
+		}	  
+    }	
+		
+	
+	
+	
+	
+	
 }

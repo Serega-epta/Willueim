@@ -1,0 +1,132 @@
+focus_tree = {
+id = vo_ima_boge
+country = {
+factor = 0
+
+modifier = {
+add = 10
+tag = LWV
+}
+}
+continuous_focus_position = { x = 50 y = 1600 }
+default = no
+
+focus = {
+id = LWV_Nepreodolimei_zov
+icon = GFX_istinnaya_scherkov
+x = 6
+y = 0
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = { 
+}
+}
+
+focus = {
+id = LWV_ovci_bez_pastuha
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_Nepreodolimei_zov }
+x = 6
+y = 2
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+}
+}
+
+focus = {
+id = LWV_neizvestnost
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_ovci_bez_pastuha }
+x = 6
+y = 4
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+}
+}
+
+focus = {
+id = LWV_strah
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_neizvestnost }
+x = 6
+y = 6
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+}
+}
+
+focus = {
+id = LWV_gnev
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_strah }
+x = 6
+y = 8
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+}
+}
+
+focus = {
+id = LWV_pechal
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_gnev }
+x = 6
+y = 10
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+}
+}
+
+focus = {
+id = LWV_apatia
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_pechal }
+x = 6
+y = 12
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+}
+}
+
+focus = {
+id = LWV_osoznanie
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_apatia }
+x = 6
+y = 14
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+}
+}
+}

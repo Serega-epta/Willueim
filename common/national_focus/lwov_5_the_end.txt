@@ -1,0 +1,332 @@
+focus_tree = {
+	id = LWV_last_phaze
+	country = {
+		factor = 0
+		modifier = {
+		add = 10
+		tag = LWV
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	focus = {
+		id = LWV_bojii_darovania
+		icon = GFX_Korol_charodei
+		x = 14
+		y = 0
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = LWV
+				is_fully_controlled_by = ROOT
+			}
+			create_unit = {
+				division = "division_template = \"bojiya_dlan\" start_experience_factor = 1 start_equipment_factor = 1.0"
+				owner = ROOT
+				count = 10
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		}
+	}
+
+	focus = {
+		id = LWV_edinie
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_bojii_darovania }
+		x = 12
+		y = 1
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}
+	
+	focus = {
+		id = LWV_freedom
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_edinie }
+		x = 10
+		y = 2
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}
+	
+	focus = {
+		id = LWV_bezhitrostnii
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_freedom }
+		x = 8
+		y = 3
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}
+	
+	focus = {
+		id = LWV_silniii
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_bezhitrostnii }
+		x = 10
+		y = 4
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}
+	focus = {
+		id = LWV_pokornii
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_silniii }
+		x = 12
+		y = 5
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}
+	focus = {
+		id = LWV_otstoyat
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_bojii_darovania }
+		x = 16
+		y = 1
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}	
+	focus = {
+		id = LWV_viderjat
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_otstoyat }
+		x = 18
+		y = 2
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}	
+	focus = {
+		id = LWV_slomit
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_viderjat }
+		x = 20
+		y = 3
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}	
+	focus = {
+		id = LWV_dognat
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_slomit }
+		x = 18
+		y = 4
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}	
+	focus = {
+		id = LWV_unichtojit
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_dognat }
+		x = 16
+		y = 5
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}	
+	focus = {
+		id = LWV_golos
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_pokornii }
+		prerequisite = { focus = LWV_unichtojit }
+		x = 14
+		y = 6
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА ТУТ НУЖНО УДАЛИТЬ ВСЕ ЧЕРТЫ
+			remove_country_leader_trait = New_vera
+			remove_country_leader_trait = Absolyut 
+			remove_country_leader_trait = LWV_paranoid 			
+			remove_country_leader_trait = LWV_avtor_sviatosti 			
+			remove_country_leader_trait = LWV_defender_of_faith 
+			remove_country_leader_trait = LWV_archiepiskop 
+			remove_country_leader_trait = LWV_bisnes_sviashenik 			
+		}
+	}
+	focus = {
+		id = LWV_last_steeps
+		icon = GFX_Korol_charodei
+		x = 16
+		y = 3
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
+		}
+	}
+
+	focus = {
+		id = LWV_opend_eyes
+		icon = GFX_Korol_charodei
+		x = 12
+		y = 3
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА  УДАЛИТЬ ВСЕ НАЦ ДУХИ 
+			add_political_power = -1000
+			add_stability = -2
+		}
+	}
+	focus = {
+		id = LWV_uslishat_ZOV
+		icon = GFX_Korol_charodei
+		prerequisite = { focus = LWV_last_steeps }
+		prerequisite = { focus = LWV_opend_eyes }
+		x = 14
+		y = 4
+		cost = 10
+		ai_will_do = {
+		factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}	
+}

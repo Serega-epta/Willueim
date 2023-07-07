@@ -3,19 +3,12 @@ scripted_gui = {
 		context_type = player_context
 		parent_window_token = politics_tab
 		window_name = "panel_gosudarstva"
-
 		visible = {
 			always = yes
-		}
-		
-		properties = { 
-			
-        	}
-		
-		effects = {
-		
-		
-		
+		}		
+		properties = { 			
+       	}		
+		effects = {	
 		BUTTON_Open_okno_gosustroistva_click = {	
 				if = {
 					limit = { 
@@ -24,26 +17,26 @@ scripted_gui = {
 					set_variable = { gos_usroistvo = 1 }
 					set_variable = { government_laws = 0 }		
 				}
-#				else = {
-#					set_variable = { gos_usroistvo = 0 }
-#				}				
-			}
-			
+				else = {
+					set_variable = { gos_usroistvo = 0 }
+					set_variable = { government_laws = 0 }		
+				}				
+			}			
 		BUTTON_Open_okno_zakona_click = {	
 				if = {
 					limit = { 
-						check_variable = { gos_usroistvo = 1 }
+						check_variable = { government_laws = 0 }
 					}
 					set_variable = { gos_usroistvo = 0 }
 					set_variable = { government_laws = 1 }
 				}
-#				else = {
-#					set_variable = { gos_usroistvo = 0 }
-#				}
+				else = {
+					set_variable = { gos_usroistvo = 0 }
+					set_variable = { government_laws = 0 }
+				}
 			}				
 		}
 	}	
-
 	Okno_gosustroistva = {
 		context_type = player_context
 		parent_window_token = politics_tab
@@ -57,67 +50,181 @@ scripted_gui = {
 		else = {
 		always = no
 		}
-		}
-		
-		properties = { 
-			
+		}	
+		properties = { 	
         }
 		
-		effects = {
-		
-		
-		BUTTON_Open_okno_military_system_click = {	
+		triggers = {		
+			BUTTON_Open_okno_military_system_OFF_visible = {
 				if = {
-					limit = { check_variable = { military_system = 0 } }
-					set_variable = { military_system = 1 }
-					set_variable = { civil_system = 0 }	
-					set_variable = { ststegos_system = 0 }
+					limit = { check_variable = { samoilov_system_vibrana = 1 } }
+					always = yes
 				}
 				else = {
-				set_variable = { military_system = 0 }
-				set_variable = { civil_system = 0 }	
-				set_variable = { ststegos_system = 0 }
+				if = {
+					limit = { check_variable = { naumov_system_vibrana = 1 } }
+					always = yes
 				}
-				
+				else = {
+					always = no
+				}
+				}
+			}
+			BUTTON_Open_okno_civil_system_OFF_visible = {
+				if = {
+					limit = { check_variable = { menshikk_system_vibrana = 1 } }
+					always = yes
+				}
+				else = {
+				if = {
+					limit = { check_variable = { naumov_system_vibrana = 1 } }
+					always = yes
+				}
+				else = {
+					always = no
+				}
+				}
+			}
+			BUTTON_Open_okno_ststegos_system_OFF_visible = {
+				if = {
+					limit = { check_variable = { menshikk_system_vibrana = 1 } }
+					always = yes
+				}
+				else = {
+				if = {
+					limit = { check_variable = { samoilov_system_vibrana = 1 } }
+					always = yes
+				}
+				else = {
+					always = no
+				}
+				}
+			}
+			BUTTON_Open_okno_military_system_visible = {
+				if = {
+					limit = { check_variable = { naumov_system_vibrana = 0 } }
+					if = {
+					limit = { check_variable = { samoilov_system_vibrana = 0 } }
+					always = yes
+					}
+					else = {
+					always = no
+					}
+				}
+				else = {
+				if = {
+					limit = { check_variable = { samoilov_system_vibrana = 0 } }
+					if = {
+					limit = { check_variable = { naumov_system_vibrana = 0 } }
+					always = yes
+					}
+					else = {
+					always = no
+					}
+				}	
+				}
+			}
+			BUTTON_Open_okno_civil_system_visible = {
+				if = {
+					limit = { check_variable = { menshikk_system_vibrana = 0 } }
+					if = {
+					limit = { check_variable = { naumov_system_vibrana = 0 } }
+					always = yes
+					}
+					else = {
+					always = no
+					}
+				}
+				else = {
+				if = {
+					limit = { check_variable = { naumov_system_vibrana = 0 } }
+					if = {
+					limit = { check_variable = { menshikk_system_vibrana = 0 } }
+					always = yes
+					}
+					else = {
+					always = no
+					}
+				}	
+				}
+			}
+			BUTTON_Open_okno_ststegos_system_visible = {
+				if = {
+					limit = { check_variable = { menshikk_system_vibrana = 0 } }
+					if = {
+					limit = { check_variable = { samoilov_system_vibrana = 0 } }
+					always = yes
+					}
+					else = {
+					always = no
+					}
+				}
+				else = {
+				if = {
+					limit = { check_variable = { samoilov_system_vibrana = 0 } }
+					if = {
+					limit = { check_variable = { menshikk_system_vibrana = 0 } }
+					always = yes
+					}
+					else = {
+					always = no
+					}
+				}	
+				}
+			}
+		}
+		effects = {	
+		BUTTON_Open_okno_military_system_click = {	
+				if = {
+					limit = { check_variable = { menshikk_system_open = 0 } }
+					set_variable = { menshikk_system_open = 1 }
+					set_variable = { samoilov_system_open = 0 }	
+					set_variable = { naumov_system_open = 0 }
+				}
+				else = {
+				set_variable = { menshikk_system_open = 0 }
+				set_variable = { samoilov_system_open = 0 }	
+				set_variable = { naumov_system_open = 0 }
+				}		
 		}			
 		BUTTON_Open_okno_civil_system_click = {	
 				if = {
-					limit = { check_variable = { civil_system = 0 } }
-					set_variable = { civil_system = 1 }
-					set_variable = { ststegos_system = 0 }	
-					set_variable = { military_system = 0 }
+					limit = { check_variable = { samoilov_system_open = 0 } }
+					set_variable = { samoilov_system_open = 1 }
+					set_variable = { menshikk_system_open = 0 }	
+					set_variable = { naumov_system_open = 0 }
 				}
 				else = {
-				set_variable = { civil_system = 0 }
-				set_variable = { civil_system = 0 }	
-				set_variable = { ststegos_system = 0 }
+				set_variable = { menshikk_system_open = 0 }
+				set_variable = { samoilov_system_open = 0 }	
+				set_variable = { naumov_system_open = 0 }
 				}
 		}						
 		BUTTON_Open_okno_ststegos_system_click = {	
 				if = {
-					limit = { check_variable = { ststegos_system = 0 } }
-					set_variable = { ststegos_system = 1 }
-					set_variable = { civil_system = 0 }	
-					set_variable = { military_system = 0 }
+					limit = { check_variable = { naumov_system_open = 0 } }
+					set_variable = { naumov_system_open = 1 }
+					set_variable = { samoilov_system_open = 0 }	
+					set_variable = { menshikk_system_open = 0 }
 				}
 				else = {
-				set_variable = { ststegos_system = 0 }
-				set_variable = { civil_system = 0 }	
-				set_variable = { ststegos_system = 0 }
+				set_variable = { menshikk_system_open = 0 }
+				set_variable = { samoilov_system_open = 0 }	
+				set_variable = { naumov_system_open = 0 }
 				}
 		}				
 		}
 	}
 	
 	
-	#военное древо
-	military_system_tree = {
+#####################################################################################################################################################################################################################МОДЕЛЬ МЕНШИКОВА    1
+	menshikov_system_tree = {
 		context_type = player_context
 		parent_window_token = politics_tab
-		window_name = "military_system_tree"
+		window_name = "menshikov_system_tree"
 		visible = {
 		if = {
-		limit = { check_variable = { military_system = 1 } }
+		limit = { check_variable = { menshikk_system_open = 1 } }
 			always = yes
 		}
 		else = {
@@ -126,1510 +233,1548 @@ scripted_gui = {
 		}		
 		properties = { 			
         }
-		
-		triggers = {
-			BUTTON_start_bonus_m_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff0 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+		triggers = {		
+			BUTTON_menshik1_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_1_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m1_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff1 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik2_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_2_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m2_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff2 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik3_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_3_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m3_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff3 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik4_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_4_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m4_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff4 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik5_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_5_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m5_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff5 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik6_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_6_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m6_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff6 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik7_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_7_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m7_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff7 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik8_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_8_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m8_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff8 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik9_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_9_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m9_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff9 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik10_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_10_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m10_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff10 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik11_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_11_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m11_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff11 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik12_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_12_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m12_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff12 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik13_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_13_najata = 1 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m13_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff13 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik1_visible = {
+				if = { limit = { check_variable = { knopka_naumova_1_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m14_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff14 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik2_visible = {
+				if = { limit = { check_variable = { knopka_naumova_2_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_bonus_m15_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff15 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik3_visible = {
+				if = { limit = { check_variable = { knopka_naumova_3_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_1bonus_m_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff0 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik4_visible = {
+				if = { limit = { check_variable = { knopka_naumova_4_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_2bonus_m1_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff1 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik5_visible = {
+				if = { limit = { check_variable = { knopka_naumova_5_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_3bonus_m2_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff2 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik6_visible = {
+				if = { limit = { check_variable = { knopka_naumova_6_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_4bonus_m3_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff3 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik7_visible = {
+				if = { limit = { check_variable = { knopka_naumova_7_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_5bonus_m4_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff4 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik8_visible = {
+				if = { limit = { check_variable = { knopka_naumova_8_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_6bonus_m5_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff5 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik9_visible = {
+				if = { limit = { check_variable = { knopka_naumova_9_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_7bonus_m6_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff6 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik10_visible = {
+				if = { limit = { check_variable = { knopka_naumova_10_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_8bonus_m7_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff7 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik11_visible = {
+				if = { limit = { check_variable = { knopka_naumova_11_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_9bonus_m8_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff8 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
+			BUTTON_menshik12_visible = {
+				if = { limit = { check_variable = { knopka_naumova_12_najata = 0 } } always = yes } else = { always = no }
 			}
-			BUTTON_start_10bonus_m9_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff9 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_11bonus_m10_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff10 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_12bonus_m11_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff11 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_13bonus_m12_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff12 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_14bonus_m13_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff13 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_15bonus_m14_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff14 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_16bonus_m15_visible = {					
-						if = {
-						limit = { check_variable = { arm_baff15 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}				
+			BUTTON_menshik13_visible = {
+				if = { limit = { check_variable = { knopka_naumova_13_najata = 0 } } always = yes } else = { always = no }
+			}	
 		}
-			
-		
-		effects = {
-		
-		BUTTON_start_bonus_m_click = {	
+		effects = {		
+			BUTTON_Vnizz_click = {	
+				if = {
+					limit = { check_variable = { vtrayastranitsa_menshikova = 0 } }
+					set_variable = { vtrayastranitsa_menshikova = 1 }			
+				}
+				else = {
+					set_variable = { vtrayastranitsa_menshikova = 0 }
+				}
+			}
+			BUTTON_choise_mensh_model_click = {	
+				if = {
+					set_variable = { menshikk_system_vibrana = 1 }
+				}	
+			}
+			BUTTON_menshik1_click = {
 			if = {
-				limit = { check_variable = { ochki_gos_progressa > 9 }}				
-				set_variable = { arm_baff0 = 1 }
-				add_to_variable = { ochki_gos_progressa = -10 }
-				add_ideas = arm_baf0 
-				}
-		}
-		BUTTON_start_bonus_m1_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 19 }}
+			limit = { check_variable = { menshikk_system_vibrana = 1 } }
 				if = {
-				limit = { check_variable = { arm_baff0 = 1 }}
+					limit = { check_variable = { ochki_gos_progressa > 10 } }
+					add_to_variable = { ochki_gos_progressa = -10 }
+					set_variable = { knopka_naumova_1_najata = 1 }
 					if = {
-						limit = { check_variable = { arm_baff6 = 0 }}
-							if = {
-								limit = { check_variable = { arm_baff11 = 0 }}		
-				set_variable = { arm_baff1 = 1 }
-				add_to_variable = { ochki_gos_progressa = -20 }
-				add_ideas = arm_baf1
-				}
-				}
-				}
-				}
-		}
-		BUTTON_start_bonus_m2_click = {		
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {
-				limit = { check_variable = { arm_baff1 = 1 }}	
-				set_variable = { arm_baff2 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = arm_baf2
-				}
-		}				
-		}
-		BUTTON_start_bonus_m3_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {
-				limit = { check_variable = { arm_baff2 = 1 }}	
-				set_variable = { arm_baff3 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = arm_baf3
-				}
-			}				
-		}
-		BUTTON_start_bonus_m4_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
-				if = {
-				limit = { check_variable = { arm_baff3 = 1 }}	
-				set_variable = { arm_baff4 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = arm_baf4 
-				}
-				}
-		}
-		BUTTON_start_bonus_m5_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {
-				limit = { check_variable = { arm_baff4 = 1 }}			
-				set_variable = { arm_baff5 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = arm_baf5 
-				}
-				}
-		}
-		BUTTON_start_bonus_m6_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 19 }}
-				if = {
-				limit = { check_variable = { arm_baff0 = 1 }}
-					if = {
-						limit = { check_variable = { arm_baff1 = 0 }}
-							if = {
-								limit = { check_variable = { arm_baff11 = 0 }}		
-				set_variable = { arm_baff6 = 1 }
-				add_to_variable = { ochki_gos_progressa = -20 }
-				add_ideas = arm_baf6 
-				}
-				}
-				}
-				}
-		}
-		BUTTON_start_bonus_m7_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {
-				limit = { check_variable = { arm_baff6 = 1 }}			
-				set_variable = { arm_baff7 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = arm_baf7
-				}
-				}
-		}
-		BUTTON_start_bonus_m8_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {
-				limit = { check_variable = { arm_baff7 = 1 }}				
-				set_variable = { arm_baff8 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = arm_baf8
-				}
-		}				
-		}
-		BUTTON_start_bonus_m9_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
-				if = {
-				limit = { check_variable = { arm_baff8 = 1 }}		
-				set_variable = { arm_baff9 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = arm_baf9 
-				}
-				}
-		}
-		BUTTON_start_bonus_m10_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {
-				limit = { check_variable = { arm_baff9 = 1 }}				
-				set_variable = { arm_baff10 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = arm_baf10
-				}
-				}
-		}
-		BUTTON_start_bonus_m11_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 19 }}
-				if = {
-				limit = { check_variable = { arm_baff0 = 1 }}
-					if = {
-						limit = { check_variable = { arm_baff1 = 0 }}
-							if = {
-								limit = { check_variable = { arm_baff6 = 0 }}	
-				set_variable = { arm_baff11 = 1 }
-				add_to_variable = { ochki_gos_progressa = -20 }
-				add_ideas = arm_baf11 
-				}
-				}
-				}
-				}
-		}
-		BUTTON_start_bonus_m12_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {
-				limit = { check_variable = { arm_baff11 = 1 }}		
-				set_variable = { arm_baff12 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = arm_baf12 
-				}
-				}
-		}
-		BUTTON_start_bonus_m13_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {
-				limit = { check_variable = { arm_baff12 = 1 }}				
-				set_variable = { arm_baff13 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = arm_baf13
-				}
-				}
-		}
-		BUTTON_start_bonus_m14_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
-				if = {
-				limit = { check_variable = { arm_baff13 = 1 }}				
-				set_variable = { arm_baff14 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = arm_baf14
-				}
-				}
-		}
-		BUTTON_start_bonus_m15_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {
-				limit = { check_variable = { arm_baff14 = 1 }}				
-				set_variable = { arm_baff15 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = arm_baf15
-				}
-				}
-		}
-		}
-	}
-	#гражданское древо
-	civil_system_tree = {
-		context_type = player_context
-		parent_window_token = politics_tab
-		window_name = "civil_system_tree"
-		visible = {
-		if = {
-		limit = { check_variable = { civil_system = 1 } }
-			always = yes
-		}
-		else = {
-		always = no
-		}
-		}		
-		properties = { 			
-        }
-		
-		triggers = {
-			BUTTON_start_bonus_c_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff0 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c1_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff1 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c2_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff2 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c3_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff3 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c4_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff4 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c5_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff5 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c6_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff6 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c7_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff7 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c8_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff8 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c9_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff9 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c10_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff10 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c11_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff11 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c12_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff12 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c13_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff13 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c14_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff14 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_c15_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff15 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_1bonus_c_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff0 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_2bonus_c1_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff1 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_3bonus_c2_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff2 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_4bonus_c3_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff3 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_5bonus_c4_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff4 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_6bonus_c5_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff5 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_7bonus_c6_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff6 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_8bonus_c7_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff7 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_9bonus_c8_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff8 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_10bonus_c9_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff9 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_11bonus_c10_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff10 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_12bonus_c11_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff11 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_13bonus_c12_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff12 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_14bonus_c13_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff13 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_15bonus_c14_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff14 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_16bonus_c15_visible = {					
-						if = {
-						limit = { check_variable = { carm_baff15 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}				
-		}	
-		effects = {
-		
-		BUTTON_start_bonus_c_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 9 }}		
-				set_variable = { carm_baff0 = 1 }
-				add_to_variable = { ochki_gos_progressa = -10 }
-				add_ideas = carm_baf0 
-				}
-		}
-		BUTTON_start_bonus_c1_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 19 }}
-				if = {
-				limit = { check_variable = { carm_baff0 = 1 }}
-					if = {
-						limit = { check_variable = { carm_baff6 = 0 }}
-							if = {
-								limit = { check_variable = { carm_baff11 = 0 }}		
-				set_variable = { carm_baff1 = 1 }
-				add_to_variable = { ochki_gos_progressa = -20 }
-				add_ideas = carm_baf1
-				}
-				}
-				}
-				}
-		}
-		BUTTON_start_bonus_c2_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {
-				limit = { check_variable = { carm_baff1 = 1 }}	
-				set_variable = { carm_baff2 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = carm_baf2 
-				}
-				}
-		}
-		BUTTON_start_bonus_c3_click = {
-			if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {
-				limit = { check_variable = { carm_baff2 = 1 }}	
-				set_variable = { carm_baff3 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = carm_baf3 
-				}
-				}
-		}
-		BUTTON_start_bonus_c4_click = {	
-			if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
-				if = {
-				limit = { check_variable = { carm_baff3 = 1 }}			
-				set_variable = { carm_baff4 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = carm_baf4 
-				}
-				}
-		}
-		BUTTON_start_bonus_c5_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {
-				limit = { check_variable = { carm_baff4 = 1 }}				
-				set_variable = { carm_baff5 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = carm_baf5 
-				}
-				}
-		}
-		BUTTON_start_bonus_c6_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 19 }}
-				if = {
-				limit = { check_variable = { carm_baff0 = 1 }}
-					if = {
-						limit = { check_variable = { carm_baff1 = 0 }}
-							if = {
-								limit = { check_variable = { carm_baff11 = 0 }}		
-				set_variable = { carm_baff6 = 1 }
-				add_to_variable = { ochki_gos_progressa = -20 }
-				add_ideas = carm_baf6 
-				}
-				}
-				}
-				}
-		}
-		BUTTON_start_bonus_c7_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {
-				limit = { check_variable = { carm_baff6 = 1 }}				
-				set_variable = { carm_baff7 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = carm_baf7
-				}
-				}
-		}
-		BUTTON_start_bonus_c8_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {
-				limit = { check_variable = { carm_baff7 = 1 }}				
-				set_variable = { carm_baff8 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = carm_baf8 
-				}
-				}
-		}
-		BUTTON_start_bonus_c9_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
-				if = {
-				limit = { check_variable = { carm_baff8 = 1 }}				
-				set_variable = { carm_baff9 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = carm_baf9 
-				}
-				}
-		}
-		BUTTON_start_bonus_c10_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {
-				limit = { check_variable = { carm_baff9 = 1 }}				
-				set_variable = { carm_baff10 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = carm_baf10
-				}
-				}
-		}
-		BUTTON_start_bonus_c11_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 19 }}
-				if = {
-				limit = { check_variable = { carm_baff0 = 1 }}
-					if = {
-						limit = { check_variable = { carm_baff1 = 0 }}
-							if = {
-								limit = { check_variable = { carm_baff6 = 0 }}			
-				set_variable = { carm_baff11 = 1 }
-				add_to_variable = { ochki_gos_progressa = -20 }
-				add_ideas = carm_baf11 
-				}
-				}
-				}
-				}
-		}
-		BUTTON_start_bonus_c12_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {
-				limit = { check_variable = { carm_baff11 = 1 }}		
-				set_variable = { carm_baff12 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = carm_baf12 
-				}
-				}
-		}
-		BUTTON_start_bonus_c13_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {
-				limit = { check_variable = { carm_baff12 = 1 }}				
-				set_variable = { carm_baff13 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = carm_baf13
-				}
-				}
-		}
-		BUTTON_start_bonus_c14_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
-				if = {
-				limit = { check_variable = { carm_baff13 = 1 }}				
-				set_variable = { carm_baff14 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = carm_baf14
-				}
-				}
-		}
-		BUTTON_start_bonus_c15_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {
-				limit = { check_variable = { carm_baff14 = 1 }}				
-				set_variable = { carm_baff15 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = carm_baf15
-				}
-				}
-		}
-	
-		}
-	}
-	#государственоге древо
-	gosudar_system_tree = {
-		context_type = player_context
-		parent_window_token = politics_tab
-		window_name = "gosudar_system_tree"
-		visible = {
-		if = {
-		limit = { check_variable = { ststegos_system = 1 } }
-			always = yes
-		}
-		else = {
-		always = no
-		}
-		}		
-		properties = { 			
-        }
-		
-		
-		triggers = {
-			BUTTON_start_bonus_g_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff0 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g1_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff1 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g2_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff2 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g3_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff3 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g4_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff4 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g5_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff5 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g6_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff6 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g7_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff7 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g8_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff8 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g9_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff9 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g10_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff10 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g11_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff11 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g12_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff12 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g13_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff13 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g14_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff14 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_bonus_g15_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff15 = 0 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_1bonus_g_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff0 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_2bonus_g1_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff1 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_3bonus_g2_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff2 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_4bonus_g3_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff3 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_5bonus_g4_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff4 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_6bonus_g5_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff5 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_7bonus_g6_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff6 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_8bonus_g7_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff7 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_9bonus_g8_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff8 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_10bonus_g9_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff9 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_11bonus_g10_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff10 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_12bonus_g11_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff11 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_13bonus_g12_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff12 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_14bonus_g13_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff13 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_15bonus_g14_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff14 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}
-			BUTTON_start_16bonus_g15_visible = {					
-						if = {
-						limit = { check_variable = { garm_baff15 = 1 }}
-						always = yes
-						}
-						else = {
-						always = no
-						}							
-			}				
-		}
-		
-		
-		
-		
-		
-		
-		effects = {
-			
-		BUTTON_start_bonus_g_click = { 
-			if = {
-				limit = { check_variable = { ochki_gos_progressa > 9 }}
-				set_variable = { garm_baff0 = 1 }
-				add_to_variable = { ochki_gos_progressa = -10 }
-				add_ideas = garm_baf0 			
-			}
-		}
-		BUTTON_start_bonus_g1_click = {		
-			if = {
-				limit = { check_variable = { ochki_gos_progressa > 19 }}
-				if = {
-				limit = { check_variable = { garm_baff0 = 1 }}
-					if = {
-						limit = { check_variable = { garm_baff6 = 0 }}
-							if = {
-								limit = { check_variable = { garm_baff11 = 0 }}						
-									set_variable = { garm_baff1 = 1 }
-									add_to_variable = { ochki_gos_progressa = -20 }
-									add_ideas = garm_baf1
-								}
+					limit = { check_variable = { uroven_vetki_mensh = 1 } }
+						set_variable = { uroven_vetki_mensh = 3 }
 					}
-				}				
-			}	
-		}
-		BUTTON_start_bonus_g2_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {
-				limit = { check_variable = { garm_baff1 = 1 }}
-				set_variable = { garm_baff2 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = garm_baf2 
-				}
-		}
-		}
-		BUTTON_start_bonus_g3_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {
-				limit = { check_variable = { garm_baff2 = 1 }}		
-				set_variable = { garm_baff3 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = garm_baf3 
+					else = {
+						set_variable = { uroven_vetki_mensh = 1 }
+					}								
+					add_ideas = mensikov_bonus1								
 				}
 			}
-		}
-		BUTTON_start_bonus_g4_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
+			}
+			BUTTON_menshik2_click = {	
+			if = {
+			limit = { check_variable = { menshikk_system_vibrana = 1 } }
 				if = {
-				limit = { check_variable = { garm_baff3 = 1 }}			
-				set_variable = { garm_baff4 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = garm_baf4 
-				}
-		}
-		}
-		BUTTON_start_bonus_g5_click = {		
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {	
-				limit = { check_variable = { garm_baff4 = 1 }}						
-				set_variable = { garm_baff5 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = garm_baf5 
-				}
-			}	
-		}
-		BUTTON_start_bonus_g6_click = {	
-		if = {
-			limit = { check_variable = { ochki_gos_progressa > 19 }}
-				if = {
-				limit = { check_variable = { garm_baff0 = 1 }}
+					limit = { check_variable = { ochki_gos_progressa > 10 } }
+					add_to_variable = { ochki_gos_progressa = -10 }
+					set_variable = { knopka_naumova_2_najata = 1 }	
 					if = {
-						limit = { check_variable = { garm_baff1 = 0 }}
-							if = {
-								limit = { check_variable = { garm_baff11 = 0 }}			
-				set_variable = { garm_baff6 = 1 }
-				add_to_variable = { ochki_gos_progressa = -20 }
-				add_ideas = garm_baf6 
-				}
-				}
-				}
-				}
-		}
-		BUTTON_start_bonus_g7_click = {	
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {	
-				limit = { check_variable = { garm_baff6 = 1 }}			
-				set_variable = { garm_baff7 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = garm_baf7
-				}
-				}
-		}
-		BUTTON_start_bonus_g8_click = {		
-			if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {	
-				limit = { check_variable = { garm_baff7 = 1 }}				
-				set_variable = { garm_baff8 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = garm_baf8 
+					limit = { check_variable = { uroven_vetki_mensh = 1 } }
+						set_variable = { uroven_vetki_mensh = 3 }
+					}
+					else = {
+						set_variable = { uroven_vetki_mensh = 1 }
+					}					
+					add_ideas = mensikov_bonus2							
 				}
 			}
-		}
-		BUTTON_start_bonus_g9_click = {	
-			if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
-				if = {	
-				limit = { check_variable = { garm_baff8 = 1 }}				
-				set_variable = { garm_baff9 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = garm_baf9 
-				}
-				}
-		}
-		BUTTON_start_bonus_g10_click = {
-			if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {	
-				limit = { check_variable = { garm_baff9 = 1 }}				
-				set_variable = { garm_baff10 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = garm_baf10
-				}
 			}
-		}
-		BUTTON_start_bonus_g11_click = {
-		if = {
-			limit = { check_variable = { ochki_gos_progressa > 19 }}
+			BUTTON_menshik3_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 2 } }
 				if = {
-				limit = { check_variable = { garm_baff0 = 1 }}
+					limit = { check_variable = { ochki_gos_progressa > 20 } }
 					if = {
-						limit = { check_variable = { garm_baff1 = 0 }}
-							if = {
-								limit = { check_variable = { garm_baff6 = 0 }}		
-				set_variable = { garm_baff11 = 1 }
-				add_to_variable = { ochki_gos_progressa = -20 }
-				add_ideas = garm_baf11 
+						limit = { check_variable = { leftrigt_choise_1 = 0 } }
+						set_variable = { leftrigt_choise_1 = 1 }
+						add_to_variable = { ochki_gos_progressa = -20 }
+						set_variable = { knopka_naumova_3_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus3					
+					}							
 				}
+			}				
+			}		
+			BUTTON_menshik4_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 2 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 20 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_1 = 0 } }
+						set_variable = { leftrigt_choise_1 = 1 }
+						add_to_variable = { ochki_gos_progressa = -20 }
+						set_variable = { knopka_naumova_4_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus4					
+					}							
 				}
+			}				
+			}
+			BUTTON_menshik5_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 3 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 30 } }		
+						add_to_variable = { ochki_gos_progressa = -30 }
+						set_variable = { knopka_naumova_5_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus5																
 				}
+			}
+			}
+			BUTTON_menshik6_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 4 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 40 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_2 = 0 } }
+						set_variable = { leftrigt_choise_2 = 1 }
+						add_to_variable = { ochki_gos_progressa = -40 }
+						set_variable = { knopka_naumova_6_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus6	
+						set_variable = { provteh_uchilisha = 1 }
+					}							
 				}
+			}
+			}
+			BUTTON_menshik7_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 4 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 40 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_2 = 0 } }
+						set_variable = { leftrigt_choise_2 = 1 }
+						add_to_variable = { ochki_gos_progressa = -40 }
+						set_variable = { knopka_naumova_7_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus7							
+					}							
+				}
+			}
+			}
+			BUTTON_menshik8_click = {	
+			if = {
+			limit = { check_variable = { provteh_uchilisha = 1 } }
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 5 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 50 } }		
+						add_to_variable = { ochki_gos_progressa = -50 }
+						set_variable = { knopka_naumova_8_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus8															
+				}
+			}
+			}			
+			}
+			BUTTON_menshik9_click = {	
+			if = {
+			limit = { check_variable = { provteh_uchilisha = 0 } }
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 5 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 50 } }		
+						add_to_variable = { ochki_gos_progressa = -50 }
+						set_variable = { knopka_naumova_9_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus9														
+				}
+			}
+			}
+			}
+			BUTTON_menshik10_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 6 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 60 } }		
+						add_to_variable = { ochki_gos_progressa = -60 }
+						set_variable = { knopka_naumova_10_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus10																
+				}
+			}
+			}
+			BUTTON_menshik11_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 7 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 70 } }		
+						add_to_variable = { ochki_gos_progressa = -70 }
+						set_variable = { knopka_naumova_11_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus11																
+				}
+			}
+			}
+			BUTTON_menshik12_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 7 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 70 } }		
+						add_to_variable = { ochki_gos_progressa = -70 }
+						set_variable = { knopka_naumova_12_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus12																
+				}
+			}
+			}
+			BUTTON_menshik13_click = {	
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 7 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 70 } }		
+						add_to_variable = { ochki_gos_progressa = -70 }
+						set_variable = { knopka_naumova_13_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus13																
+				}
+			}
+			}
 		}
-		BUTTON_start_bonus_g12_click = {
+	}
+#####################################################################################################################################################################################################################МОДЕЛЬ МЕНШИКОВА    2
+	menshikov_system_tree2222 = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "menshikov_system_tree2222"
+		visible = {
 		if = {
-				limit = { check_variable = { ochki_gos_progressa > 29 }}
-				if = {	
-				limit = { check_variable = { garm_baff11 = 1 }}	
-				set_variable = { garm_baff12 = 1 }
-				add_to_variable = { ochki_gos_progressa = -30 }
-				add_ideas = garm_baf12 
-				}
-				}
+		limit = { check_variable = { vtrayastranitsa_menshikova = 1 } }
+			always = yes
 		}
-		BUTTON_start_bonus_g13_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 39 }}
-				if = {	
-				limit = { check_variable = { garm_baff12 = 1 }}			
-				set_variable = { garm_baff13 = 1 }
-				add_to_variable = { ochki_gos_progressa = -40 }
-				add_ideas = garm_baf13
-				}
-				}
+		else = {
+		always = no
 		}
-		BUTTON_start_bonus_g14_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 49 }}
-				if = {	
-				limit = { check_variable = { garm_baff13 = 1 }}			
-				set_variable = { garm_baff14 = 1 }
-				add_to_variable = { ochki_gos_progressa = -50 }
-				add_ideas = garm_baf14
+		}		
+		properties = { 			
+        }
+		triggers = {
+			BUTTON_menshik14_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_14_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik15_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_15_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik16_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_16_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik17_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_17_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik18_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_18_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik19_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_19_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik20_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_20_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik21_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_21_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik22_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_22_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik23_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_23_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik24_ooff_visible = {
+				if = { limit = { check_variable = { knopka_naumova_24_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik14_visible = {
+				if = { limit = { check_variable = { knopka_naumova_14_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik15_visible = {
+				if = { limit = { check_variable = { knopka_naumova_15_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik16_visible = {
+				if = { limit = { check_variable = { knopka_naumova_16_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik17_visible = {
+				if = { limit = { check_variable = { knopka_naumova_17_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik18_visible = {
+				if = { limit = { check_variable = { knopka_naumova_18_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik19_visible = {
+				if = { limit = { check_variable = { knopka_naumova_19_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik20_visible = {
+				if = { limit = { check_variable = { knopka_naumova_20_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik21_visible = {
+				if = { limit = { check_variable = { knopka_naumova_21_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik22_visible = {
+				if = { limit = { check_variable = { knopka_naumova_22_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik23_visible = {
+				if = { limit = { check_variable = { knopka_naumova_23_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_menshik24_visible = {
+				if = { limit = { check_variable = { knopka_naumova_24_najata = 0 } } always = yes } else = { always = no }
+			}		
+		}	
+		effects = {		
+			BUTTON_Vverh_click = {	
+				if = {
+					limit = { check_variable = { vtrayastranitsa_menshikova = 1 } }
+					set_variable = { vtrayastranitsa_menshikova = 0 }			
 				}
+				else = {
+					set_variable = { vtrayastranitsa_menshikova = 1 }
 				}
+			}
+
+			BUTTON_menshik14_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 10 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 80 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_3 = 0 } }
+						set_variable = { leftrigt_choise_3 = 1 }
+						add_to_variable = { ochki_gos_progressa = -80 }
+						set_variable = { knopka_naumova_14_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus14						
+					}							
+				}
+			}
+			}
+			BUTTON_menshik15_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 10 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 80 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_3 = 0 } }
+						set_variable = { leftrigt_choise_3 = 1 }
+						add_to_variable = { ochki_gos_progressa = -80 }
+						set_variable = { knopka_naumova_15_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus15						
+					}							
+				}
+			}
+			}
+			BUTTON_menshik16_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 11 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 90 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_4 = 0 } }
+						set_variable = { leftrigt_choise_4 = 1 }
+						add_to_variable = { ochki_gos_progressa = -90 }
+						set_variable = { knopka_naumova_16_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus16						
+					}							
+				}
+			}
+			}
+			BUTTON_menshik17_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 11 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 90 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_4 = 0 } }
+						set_variable = { leftrigt_choise_4 = 1 }
+						add_to_variable = { ochki_gos_progressa = -90 }
+						set_variable = { knopka_naumova_17_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus17						
+					}							
+				}
+			}
+			}
+			BUTTON_menshik18_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 12 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 100 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_5 = 0 } }
+						set_variable = { leftrigt_choise_5 = 1 }
+						add_to_variable = { ochki_gos_progressa = -100 }
+						set_variable = { knopka_naumova_18_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus18						
+					}							
+				}
+			}
+			}
+			BUTTON_menshik19_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 12 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 100 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_5 = 0 } }
+						set_variable = { leftrigt_choise_5 = 1 }
+						add_to_variable = { ochki_gos_progressa = -100 }
+						set_variable = { knopka_naumova_19_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus19						
+					}							
+				}
+			}
+			}
+			BUTTON_menshik20_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 13 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 110 } }		
+						add_to_variable = { ochki_gos_progressa = -110 }
+						set_variable = { knopka_naumova_20_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus20																
+				}
+			}			
+			}
+			BUTTON_menshik21_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 14 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 120 } }		
+						add_to_variable = { ochki_gos_progressa = -120 }
+						set_variable = { knopka_naumova_21_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus21																
+				}
+			}
+			}
+			BUTTON_menshik22_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 14 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 120 } }		
+						add_to_variable = { ochki_gos_progressa = -120 }
+						set_variable = { knopka_naumova_22_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus22																
+				}
+			}
+			}
+			BUTTON_menshik23_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 14 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 120 } }		
+						add_to_variable = { ochki_gos_progressa = -120 }
+						set_variable = { knopka_naumova_23_najata = 1 }
+						add_to_variable = { uroven_vetki_mensh = 1 }																
+						add_ideas = mensikov_bonus23																
+				}
+			}
+			}
+			BUTTON_menshik24_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_mensh > 17 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 200 } }		
+						add_to_variable = { ochki_gos_progressa = -200 }
+						set_variable = { knopka_naumova_24_najata = 1 }
+															
+						set_country_flag = vetka_menshikova_proidena									
+				}
+			}
+			}
 		}
-		BUTTON_start_bonus_g15_click = {
-		if = {
-				limit = { check_variable = { ochki_gos_progressa > 59 }}
-				if = {	
-				limit = { check_variable = { garm_baff14 = 1 }}	
-				set_variable = { garm_baff15 = 1 }
-				add_to_variable = { ochki_gos_progressa = -60 }
-				add_ideas = garm_baf15
-				}
-				}
-		}
-	
-		}
-			
-		
 	}
 	
+#####################################################################################################################################################################################################################МОДЕЛЬ SAMOILOVAAA   1111
 
-	
+smoilov_system_tree = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "smoilov_system_tree"
+		visible = {
+		if = {
+		limit = { check_variable = { samoilov_system_open = 1 } }
+			always = yes
+		}
+		else = {
+		always = no
+		}
+		}		
+		properties = { 			
+        }
+		triggers = {		
+			BUTTON_samoliv1_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_1_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv2_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_2_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv3_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_3_najata = 1 } } always = yes } else = { always = no }
+			}			
+			BUTTON_samoliv4_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_4_najata = 1 } } always = yes } else = { always = no }
+			}			
+			BUTTON_samoliv5_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_5_najata = 1 } } always = yes } else = { always = no }
+			}			
+			BUTTON_samoliv6_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_6_najata = 1 } } always = yes } else = { always = no }
+			}			
+			BUTTON_samoliv7_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_7_najata = 1 } } always = yes } else = { always = no }
+			}			
+			BUTTON_samoliv8_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_8_najata = 1 } } always = yes } else = { always = no }
+			}			
+			BUTTON_samoliv9_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_9_najata = 1 } } always = yes } else = { always = no }
+			}			
+			BUTTON_samoliv10_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_10_najata = 1 } } always = yes } else = { always = no }
+			}			
+			BUTTON_samoliv11_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_11_najata = 1 } } always = yes } else = { always = no }
+			}					
+			BUTTON_samoliv1_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_1_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv2_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_2_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv3_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_3_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv4_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_4_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv5_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_5_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv6_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_6_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv7_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_7_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv8_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_8_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv9_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_9_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv10_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_10_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv11_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_11_najata = 0 } } always = yes } else = { always = no }
+			}	
+		}
+		effects = {		
+			BUTTON_Vnizzz_click = {	
+				if = {
+					limit = { check_variable = { vtrayastranitsa_samoilova = 0 } }
+					set_variable = { vtrayastranitsa_samoilova = 1 }			
+				}
+				else = {
+					set_variable = { vtrayastranitsa_samoilova = 0 }
+				}
+			}
+			BUTTON_choise_samoil_model_click = {	
+				if = {
+					set_variable = { samoilov_system_vibrana = 1 }
+				}	
+			}
+			
+			BUTTON_samoliv1_click = {
+			if = {
+			limit = { check_variable = { samoilov_system_vibrana = 1 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 10 } }
+					add_to_variable = { ochki_gos_progressa = -10 }
+					set_variable = { knopka_samoilova_1_najata = 1 }
+					set_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus1								
+				}
+			}
+			}
+			BUTTON_samoliv2_click = {
+			if = {
+			limit = { check_variable = { uroven_vetki_samoilova > 0 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 20 } }
+					add_to_variable = { ochki_gos_progressa = -20 }
+					set_variable = { knopka_samoilova_2_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus2							
+				}
+			}
+			}
+			BUTTON_samoliv3_click = {
+			if = {
+			limit = { check_variable = { uroven_vetki_samoilova > 0 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 20 } }
+					add_to_variable = { ochki_gos_progressa = -20 }
+					set_variable = { knopka_samoilova_3_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus3								
+				}
+			}
+			}
+			BUTTON_samoliv4_click = {
+			if = {
+			limit = { check_variable = { uroven_vetki_samoilova > 0 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 20 } }
+					add_to_variable = { ochki_gos_progressa = -20 }
+					set_variable = { knopka_samoilova_4_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus4								
+				}
+			}
+			}
+			BUTTON_samoliv5_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 3 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 30 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_6 = 0 } }
+						set_variable = { leftrigt_choise_6 = 1 }
+						add_to_variable = { ochki_gos_progressa = -30 }
+						set_variable = { knopka_samoilova_5_najata = 1 }
+						add_to_variable = { uroven_vetki_samoilova = 1 }																
+						add_ideas = samoilov_bonus5					
+					}							
+				}
+			}
+			}
+			BUTTON_samoliv6_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 3 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 30 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_6 = 0 } }
+						set_variable = { leftrigt_choise_6 = 1 }
+						add_to_variable = { ochki_gos_progressa = -30 }
+						set_variable = { knopka_samoilova_6_najata = 1 }
+						add_to_variable = { uroven_vetki_samoilova = 1 }																
+						add_ideas = samoilov_bonus6				
+					}							
+				}
+			}
+			}
+			BUTTON_samoliv7_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 4 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 40 } }
+					add_to_variable = { ochki_gos_progressa = -40 }
+					set_variable = { knopka_samoilova_7_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus7							
+				}
+			}
+			}
+			BUTTON_samoliv8_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 4 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 40 } }
+					add_to_variable = { ochki_gos_progressa = -40 }
+					set_variable = { knopka_samoilova_8_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus8							
+				}
+			}
+			}
+			BUTTON_samoliv9_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 6 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 50 } }
+					add_to_variable = { ochki_gos_progressa = -50 }
+					set_variable = { knopka_samoilova_9_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus9						
+				}
+			}
+			}
+			BUTTON_samoliv10_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 7 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 60 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_7 = 0 } }
+						set_variable = { leftrigt_choise_7 = 1 }
+						add_to_variable = { ochki_gos_progressa = -60 }
+						set_variable = { knopka_samoilova_20_najata = 1 }
+						add_to_variable = { uroven_vetki_samoilova = 1 }																
+						add_ideas = samoilov_bonus10			
+					}							
+				}
+			}
+			}
+			BUTTON_samoliv11_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 7 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 60 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_7 = 0 } }
+						set_variable = { leftrigt_choise_7 = 1 }
+						add_to_variable = { ochki_gos_progressa = -60 }
+						set_variable = { knopka_samoilova_11_najata = 1 }
+						add_to_variable = { uroven_vetki_samoilova = 1 }																
+						add_ideas = samoilov_bonus11			
+					}							
+				}
+			}
+			}
+		}
+	}
+#####################################################################################################################################################################################################################МОДЕЛЬ SAMOILOVAAA   22222
+
+smoilov_system_tree2222 = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "smoilov_system_tree2222"
+		visible = {
+		if = {
+		limit = { check_variable = { vtrayastranitsa_samoilova = 1 } }
+			always = yes
+		}
+		else = {
+		always = no
+		}
+		}		
+		properties = { 			
+        }
+		triggers = {		
+			BUTTON_samoliv12_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_12_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv13_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_13_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv14_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_14_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv15_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_15_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv16_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_16_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv17_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_17_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv18_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_18_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv19_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_19_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv20_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_20_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv21_ooff_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_21_najata = 1 } } always = yes } else = { always = no }
+			}	
+			BUTTON_samoliv12_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_12_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv13_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_13_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv14_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_14_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv15_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_15_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv16_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_16_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv17_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_17_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv18_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_18_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv19_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_19_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv20_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_20_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_samoliv21_visible = {
+				if = { limit = { check_variable = { knopka_samoilova_21_najata = 0 } } always = yes } else = { always = no }
+			}
+		}
+		effects = {		
+			BUTTON_Vvverh_click = {	
+				if = {
+					limit = { check_variable = { vtrayastranitsa_samoilova = 1 } }
+					set_variable = { vtrayastranitsa_samoilova = 0 }			
+				}
+				else = {
+					set_variable = { vtrayastranitsa_samoilova = 1 }
+				}
+			}
+			BUTTON_samoliv12_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 8 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 70 } }
+					add_to_variable = { ochki_gos_progressa = -70 }
+					set_variable = { knopka_samoilova_12_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus12					
+				}
+			}
+			}
+			BUTTON_samoliv13_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 9 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 80 } }
+					add_to_variable = { ochki_gos_progressa = -80 }
+					set_variable = { knopka_samoilova_13_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus13					
+				}
+			}
+			}
+			BUTTON_samoliv14_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 9 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 80 } }
+					add_to_variable = { ochki_gos_progressa = -80 }
+					set_variable = { knopka_samoilova_14_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus14					
+				}
+			}
+			}
+			BUTTON_samoliv15_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 9 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 80 } }
+					add_to_variable = { ochki_gos_progressa = -80 }
+					set_variable = { knopka_samoilova_15_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus15					
+				}
+			}
+			}
+			BUTTON_samoliv16_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 12 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 90 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_8 = 0 } }
+						set_variable = { leftrigt_choise_8 = 1 }
+						add_to_variable = { ochki_gos_progressa = -90 }
+						set_variable = { knopka_samoilova_16_najata = 1 }
+						add_to_variable = { uroven_vetki_samoilova = 1 }																
+						add_ideas = samoilov_bonus16			
+					}							
+				}
+			}
+			}
+			BUTTON_samoliv17_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 12 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 90 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_8 = 0 } }
+						set_variable = { leftrigt_choise_8 = 1 }
+						add_to_variable = { ochki_gos_progressa = -90 }
+						set_variable = { knopka_samoilova_17_najata = 1 }
+						add_to_variable = { uroven_vetki_samoilova = 1 }																
+						add_ideas = samoilov_bonus17			
+					}							
+				}
+			}
+			}
+			BUTTON_samoliv18_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 13 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 100 } }
+					add_to_variable = { ochki_gos_progressa = -100 }
+					set_variable = { knopka_samoilova_18_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus18					
+				}
+			}
+			}
+			BUTTON_samoliv19_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 14 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 110 } }
+					add_to_variable = { ochki_gos_progressa = -110 }
+					set_variable = { knopka_samoilova_19_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus19					
+				}
+			}
+			}
+			BUTTON_samoliv20_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 14 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 110 } }
+					add_to_variable = { ochki_gos_progressa = -110 }
+					set_variable = { knopka_samoilova_20_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					add_ideas = samoilov_bonus20					
+				}
+			}		
+			}
+			BUTTON_samoliv21_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_samoilova > 16 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 200 } }
+					add_to_variable = { ochki_gos_progressa = -200 }
+					set_variable = { knopka_samoilova_21_najata = 1 }
+					add_to_variable = { uroven_vetki_samoilova = 1 }				
+					set_country_flag = vetka_samoilova_proidena
+				}
+			}
+			}			
+		}
+	}
+
+#####################################################################################################################################################################################################################МОДЕЛЬ НАУМОВАА   1111
+
+naumov_system_tree = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "naumov_system_tree"
+		visible = {
+		if = {
+		limit = { check_variable = { naumov_system_open = 1 } }
+			always = yes
+		}
+		else = {
+		always = no
+		}
+		}		
+		properties = { 			
+        }
+		triggers = {			
+			BUTTON_naumov1_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_1_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov2_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_2_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov3_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_3_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov4_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_4_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov5_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_5_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov6_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_6_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov7_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_7_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov8_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_8_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov9_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_9_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov10_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_10_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov11_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_11_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov12_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_12_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov1_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_1_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov2_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_2_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov3_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_3_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov4_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_4_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov5_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_5_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov6_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_6_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov7_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_7_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov8_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_8_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov9_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_9_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov10_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_10_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov11_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_11_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov12_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_12_najata = 0 } } always = yes } else = { always = no }
+			}
+		}
+		effects = {		
+			BUTTON_VVVVnizzz_click = {	
+				if = {
+					limit = { check_variable = { vtrayastranitsa_naumova = 0 } }
+					set_variable = { vtrayastranitsa_naumova = 1 }			
+				}
+				else = {
+					set_variable = { vtrayastranitsa_naumova = 0 }
+				}
+			}
+			BUTTON_choise_naumov_model_click = {	
+				if = {
+					set_variable = { naumov_system_vibrana = 1 }
+				}	
+			}
+			BUTTON_naumov1_click = {
+				if = {
+				limit = { check_variable = { naumov_system_vibrana = 1 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 10 } }
+						add_to_variable = { ochki_gos_progressa = -10 }
+						set_variable = { knopka_nnnnaumova_1_najata = 1 }
+						set_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus1								
+					}
+				}
+			}
+			BUTTON_naumov2_click = {
+				if = {
+				limit = { check_variable = { uroven_vetki_naummova > 0 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 20 } }
+						add_to_variable = { ochki_gos_progressa = -20 }
+						set_variable = { knopka_nnnnaumova_2_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus2		
+
+						set_variable = { suut_bitia = 1 }							
+					}
+				}			
+			}
+			BUTTON_naumov3_click = {
+				if = {
+				limit = { check_variable = { uroven_vetki_naummova > 0 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 20 } }
+						add_to_variable = { ochki_gos_progressa = -20 }
+						set_variable = { knopka_nnnnaumova_3_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus3	
+
+						set_variable = { ujas_bitia = 1 }						
+					}
+				}			
+			}
+			BUTTON_naumov4_click = {
+			if = {
+				limit = { check_variable = { suut_bitia = 1 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 30 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_9 = 0 } }
+						set_variable = { leftrigt_choise_9 = 1 }
+						add_to_variable = { ochki_gos_progressa = -30 }
+						set_variable = { knopka_nnnnaumova_4_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }																
+						add_ideas = naumov_bonus4		
+
+						add_to_variable = { suut_bitia = 1 }		
+						
+					}							
+				}
+			}
+			}
+			BUTTON_naumov5_click = {
+			if = {
+				limit = { check_variable = { suut_bitia = 1 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 30 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_9 = 0 } }
+						set_variable = { leftrigt_choise_9 = 1 }
+						add_to_variable = { ochki_gos_progressa = -30 }
+						set_variable = { knopka_nnnnaumova_5_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }																
+						add_ideas = naumov_bonus5	
+						
+						add_to_variable = { suut_bitia = 1 }	
+
+					}							
+				}
+			}
+			}
+			BUTTON_naumov6_click = {
+			if = {
+				limit = { check_variable = {  ujas_bitia = 1 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 30 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_10 = 0 } }
+						set_variable = { leftrigt_choise_10 = 1 }
+						add_to_variable = { ochki_gos_progressa = -30 }
+						set_variable = { knopka_nnnnaumova_6_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }																
+						add_ideas = naumov_bonus6
+						
+						add_to_variable = { ujas_bitia = 1 }	
+						
+					}							
+				}
+			}
+			}	
+			BUTTON_naumov7_click = {
+			if = {
+				limit = { check_variable = {  ujas_bitia = 1 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 30 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_10 = 0 } }
+						set_variable = { leftrigt_choise_10 = 1 }
+						add_to_variable = { ochki_gos_progressa = -30 }
+						set_variable = { knopka_nnnnaumova_7_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }																
+						add_ideas = naumov_bonus7
+						
+						add_to_variable = { ujas_bitia = 1 }	
+						
+					}							
+				}
+			}
+			}
+			BUTTON_naumov8_click = {
+				if = {
+					limit = { check_variable = { suut_bitia = 2 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 40 } }
+						add_to_variable = { ochki_gos_progressa = -40 }
+						set_variable = { knopka_nnnnaumova_8_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus8								
+					}
+				}
+			}
+			BUTTON_naumov9_click = {
+				if = {
+					limit = { check_variable = { ujas_bitia = 2 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 40 } }
+						add_to_variable = { ochki_gos_progressa = -40 }
+						set_variable = { knopka_nnnnaumova_9_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus9							
+					}
+				}
+			}
+			BUTTON_naumov10_click = {
+				if = {
+					limit = { check_variable = { uroven_vetki_naummova > 6 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 50 } }
+						add_to_variable = { ochki_gos_progressa = -50 }
+						set_variable = { knopka_nnnnaumova_10_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus10							
+					}
+				}			
+			}
+			BUTTON_naumov11_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_naummova > 7 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 60 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_11 = 0 } }
+						set_variable = { leftrigt_choise_11 = 1 }
+						add_to_variable = { ochki_gos_progressa = -60 }
+						set_variable = { knopka_nnnnaumova_11_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }																
+						add_ideas = naumov_bonus11	
+					}							
+				}
+			}
+			}
+			BUTTON_naumov12_click = {
+			if = {
+				limit = { check_variable = { uroven_vetki_naummova > 7 } }
+				if = {
+					limit = { check_variable = { ochki_gos_progressa > 60 } }
+					if = {
+						limit = { check_variable = { leftrigt_choise_11 = 0 } }
+						set_variable = { leftrigt_choise_11 = 1 }
+						add_to_variable = { ochki_gos_progressa = -60 }
+						set_variable = { knopka_nnnnaumova_12_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }																
+						add_ideas = naumov_bonus12		
+					}							
+				}
+			}
+			}
+		}
 }
+
+#####################################################################################################################################################################################################################МОДЕЛЬ НАУМОВАА   2222
+naumov_system_tree222ss2 = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "naumov_system_tree222ss2"
+		visible = {
+		if = {
+		limit = { check_variable = { vtrayastranitsa_naumova = 1 } }
+			always = yes
+		}
+		else = {
+		always = no
+		}
+		}		
+		properties = { 			
+        }
+		triggers = {		
+			BUTTON_naumov13_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_13_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov14_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_14_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov15_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_15_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov16_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_16_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov17_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_17_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov18_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_18_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov19_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_19_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov20_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_20_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov21_ooff_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_21_najata = 1 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov13_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_13_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov14_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_14_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov15_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_15_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov16_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_16_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov17_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_17_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov18_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_18_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov19_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_19_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov20_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_20_najata = 0 } } always = yes } else = { always = no }
+			}
+			BUTTON_naumov21_visible = {
+				if = { limit = { check_variable = { knopka_nnnnaumova_21_najata = 0 } } always = yes } else = { always = no }
+			}	
+		}
+		effects = {		
+			BUTTON_VvvCCCDerh_click = {	
+				if = {
+					limit = { check_variable = { vtrayastranitsa_naumova = 1 } }
+					set_variable = { vtrayastranitsa_naumova = 0 }			
+				}
+				else = {
+					set_variable = { vtrayastranitsa_naumova = 1 }
+				}
+			}
+			BUTTON_naumov13_click = {
+				if = {
+					limit = { check_variable = { uroven_vetki_naummova > 8 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 70 } }
+						add_to_variable = { ochki_gos_progressa = -70 }
+						set_variable = { knopka_nnnnaumova_13_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus13							
+					}
+				}
+			}
+			BUTTON_naumov14_click = {
+				if = {
+					limit = { check_variable = { uroven_vetki_naummova > 9 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 80 } }
+						add_to_variable = { ochki_gos_progressa = -80 }
+						set_variable = { knopka_nnnnaumova_14_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus14							
+					}
+				}			
+			}
+			BUTTON_naumov15_click = {
+				if = {
+					limit = { check_variable = { uroven_vetki_naummova > 10 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 90 } }
+						add_to_variable = { ochki_gos_progressa = -90 }
+						set_variable = { knopka_nnnnaumova_15_najata = 1 }
+						
+						set_variable = { right_vetkaa = 1 }
+						
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus15						
+					}
+				}	
+			}
+			BUTTON_naumov16_click = {
+				if = {
+					limit = { check_variable = { uroven_vetki_naummova > 10 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 90 } }
+						add_to_variable = { ochki_gos_progressa = -90 }
+						set_variable = { knopka_nnnnaumova_16_najata = 1 }
+						
+						set_variable = { left_vetkaa = 1 }
+						
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus16							
+					}
+				}	
+			}
+			
+			
+			
+			
+			BUTTON_naumov17_click = {
+				if = {
+					limit = { check_variable = { right_vetkaa = 1 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 100 } }
+						add_to_variable = { ochki_gos_progressa = -100 }
+						set_variable = { knopka_nnnnaumova_17_najata = 1 }
+						
+						add_to_variable = { right_vetkaa = 1 }
+						
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus17							
+					}
+				}
+			}
+			BUTTON_naumov18_click = {
+				if = {
+					limit = { check_variable = { left_vetkaa = 1 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 100 } }
+						add_to_variable = { ochki_gos_progressa = -100 }
+						set_variable = { knopka_nnnnaumova_18_najata = 1 }
+						
+						add_to_variable = { left_vetkaa = 1 }
+						
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus18						
+					}
+				}			
+			}
+			BUTTON_naumov19_click = {
+				if = {
+					limit = { check_variable = { left_vetkaa = 2 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 110 } }
+						add_to_variable = { ochki_gos_progressa = -110 }
+						set_variable = { knopka_nnnnaumova_19_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus19							
+					}
+				}
+			}
+			BUTTON_naumov20_click = {
+				if = {
+					limit = { check_variable = { right_vetkaa = 2 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 110 } }
+						add_to_variable = { ochki_gos_progressa = -110 }
+						set_variable = { knopka_nnnnaumova_20_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus20							
+					}
+				}			
+			}
+			BUTTON_naumov21_click = {
+				if = {
+					limit = { check_variable = { uroven_vetki_naummova > 16 } }
+					if = {
+						limit = { check_variable = { ochki_gos_progressa > 200 } }
+						add_to_variable = { ochki_gos_progressa = -200 }
+						set_variable = { knopka_nnnnaumova_21_najata = 1 }
+						add_to_variable = { uroven_vetki_naummova = 1 }				
+						add_ideas = naumov_bonus21	
+						set_country_flag = vetka_naumova_proidena
+					}
+				}	
+			}
+
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+			
+		}
+}
+}
+	
