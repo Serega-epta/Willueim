@@ -11,5 +11,25 @@ ARM_creating_a_submarines = {
 	icon = saf_anti_colonialist_crusade
 	scripted_gui = creating_a_submarines
 	allowed = { original_tag = ARM }
+	#visible = { has_country_flag = ARM_nachat_stroitelstvo_podlodok }
 	priority = { base = 5 }
 }
+
+
+ARM_creating_a_submarines_vtoraya_fazza = {
+	icon = saf_anti_colonialist_crusade
+	scripted_gui = creating_a_submarines2_faza
+	allowed = { original_tag = ARM }
+	#visible = { has_country_flag = ARM_nachat_stroitelstvo_podlodok_vtoratya_fazza }
+	priority = { base = 5 }
+}
+
+ARM_creating_a_submarines_tretia_fazza = {
+	icon = saf_anti_colonialist_crusade
+	scripted_gui = creating_a_submarines3_faza
+	allowed = { original_tag = ARM }
+	#visible = { has_country_flag = ARM_nachat_stroitelstvo_podlodok_trretia_fazza }
+	priority = { base = 5 }
+}
+
+

@@ -44,7 +44,6 @@ on_actions = {
 			set_variable = { s_a = 0 }	
 
 
-
 		############################# ПЕРЕМЕННЫЕ НАЕМНИКОВ 
 		set_variable = { wagnera = 0 }	
 		set_variable = { ahmat = 0 }	
@@ -650,7 +649,12 @@ on_actions = {
 			
 			
 			set_variable = { Rashod_rublei_zavodi_dlya_opisaniyaa = Rashod_rublei_zavodi }
-			set_variable = { Rashod_rublei_soldatami_dlya_opisaniyaa = Rashod_rublei_soldatami }		
+			set_variable = { Rashod_rublei_soldatami_dlya_opisaniyaa = Rashod_rublei_soldatami }	
+			
+			
+			######################## подлодкии в 4/5 фазе АВ
+			add_to_variable = { Rashod_rublei = vlivaemie_rubli }
+			
 			add_to_variable = { Rashod_rublei = Rashod_rublei_zavodi }
 			add_to_variable = { Rashod_rublei = Rashod_rublei_soldatami }
 			add_to_variable = { Rashod_rublei = rashod_rublei_naemnikamy }

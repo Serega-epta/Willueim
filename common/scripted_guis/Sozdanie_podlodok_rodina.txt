@@ -13,19 +13,180 @@ scripted_gui = {
 		effects = {
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 		}
 	}
+	
+	creating_a_submarines2_faza  = {
+		context_type = decision_category
+		window_name = "creating_a_submarines2_faza"
+		visible = { always = yes }
+		
+		triggers = {		
+			pusto4_visible = {
+				if = {
+					limit = { check_variable = { gruzovoi_ottss_vibran = 0 }}
+						if = {
+							limit = { check_variable = { trans_ottss_vibran = 0 }}
+							always = yes
+						}
+				}
+				else = {
+					always = no
+				}
+			}
+			gruz_icon4_visible = {
+				if = {
+					limit = { check_variable = { gruzovoi_ottss_vibran = 1 }}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}	
+			trans_icon4_visible = {
+				if = {
+					limit = { check_variable = { trans_ottss_vibran = 1 }}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+			pusto3_visible = {
+				if = {
+					limit = { check_variable = { big_dvigg_vibran = 0 }}
+						if = {
+							limit = { check_variable = { little_dlig_vibran = 0 }}
+							always = yes
+						}
+				}
+				else = {
+					always = no
+				}
+			}
+			litle_dvig3_visible = {
+				if = {
+					limit = { check_variable = { little_dlig_vibran = 1 }}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+			big_dvig3_visible = {
+				if = {
+					limit = { check_variable = { big_dvigg_vibran = 1 }}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+			
+			pusto2_visible = {
+				if = {
+					limit = { check_variable = { new_corp_vibran = 0 }}
+						if = {
+							limit = { check_variable = { old_corp_vibran = 0 }}
+							always = yes
+						}
+				}
+				else = {
+					always = no
+				}
+			}
+			old_corp2_visible = {
+				if = {
+					limit = { check_variable = { old_corp_vibran = 1 }}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+			new_corp2_visible = {
+				if = {
+					limit = { check_variable = { new_corp_vibran = 1 }}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+			
+			
+			pusto1_visible = {
+				if = {
+					limit = { check_variable = { anomal_systema_vibran = 0 }}
+						if = {
+							limit = { check_variable = { modernn_sistema_vibran = 0 }}
+							always = yes
+						}
+				}
+				else = {
+					always = no
+				}
+			}
+			sistem_anomal1_visible = {
+				if = {
+					limit = { check_variable = { anomal_systema_vibran = 1 }}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+			sistem_modern1_visible = {
+				if = {
+					limit = { check_variable = { modernn_sistema_vibran = 1 }}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		effects = {
+
+		}
+	}
+
+	
+	
+	creating_a_submarines3_faza  = {
+		context_type = decision_category
+		window_name = "creating_a_submarines3_faza"
+		visible = { always = yes }
+		
+		triggers = {			
+
+		}
+		effects = {
+		
+
+		}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 

@@ -2262,41 +2262,712 @@ ARM_partisans = {
 ###################################################################################################### Механика подводных лодок ######################################################################################################
 ###################################################################################################### Механика подводных лодок ######################################################################################################
 ARM_creating_a_submarines = {
-    ARM_test = {
+    ARM_FIND_CHERTEDJ_1 = {
         available = { 
-        }
-        cost = 50
+			NOT = {	
+			has_country_flag = idut_poiski_cherteja			
+			}	
+		}
+        cost = 20
         complete_effect = { 
+			set_country_flag = idut_poiski_cherteja		
+			set_country_flag = naiden_chertedj_old_korpus
+			custom_effect_tooltip = budet_naiden_cherteddj
         }
+		days_remove = 30
+		remove_effect = {	
+			clr_country_flag = idut_poiski_cherteja			
+		}	
         ai_will_do = {
             factor = 1
         }
     }	
-	mission_poiski_v_karelii = { 
-		icon = GFX_decision_eng_trade_unions_support
-		allowed = { original_tag = ARM }
-		activation = { 
-			
+    ARM_FIND_CHERTEDJ_2 = {
+        available = { 
+			NOT = {	
+			has_country_flag = idut_poiski_cherteja			
+			}	
 		}
-		available = { 
+        cost = 20
+        complete_effect = { 
+			set_country_flag = naiden_chertedj_little_dvijok
+			custom_effect_tooltip = budet_naiden_cherteddj
+			set_country_flag = idut_poiski_cherteja		
+        }
+		days_remove = 30
+		remove_effect = {	
+			clr_country_flag = idut_poiski_cherteja			
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }	
+    ARM_FIND_CHERTEDJ_3 = {
+        available = { 
+			NOT = {	
+			has_country_flag = idut_poiski_cherteja			
+			}	
+		}
+        cost = 20
+        complete_effect = { 
+			set_country_flag = naiden_chertedj_transport_slot
+			custom_effect_tooltip = budet_naiden_cherteddj
+			set_country_flag = idut_poiski_cherteja		
+        }
+		days_remove = 30
+		remove_effect = {	
+			clr_country_flag = idut_poiski_cherteja			
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }	
+	ARM_FIND_CHERTEDJ_4 = {
+        available = { 
+			NOT = {	
+			has_country_flag = idut_poiski_cherteja			
+			}	
+		}
+        cost = 20
+        complete_effect = { 
+			set_country_flag = naiden_chertedj_big_dvijok
+			set_country_flag = idut_poiski_cherteja		
+			custom_effect_tooltip = budet_naiden_cherteddj
+        }
+		days_remove = 30
+		remove_effect = {	
+			clr_country_flag = idut_poiski_cherteja			
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }	
+	ARM_FIND_CHERTEDJ_5 = {
+        available = { 
+			NOT = {	
+			has_country_flag = idut_poiski_cherteja			
+			}	
+		}
+        cost = 20
+        complete_effect = { 
+			set_country_flag = naiden_chertedj_modern_systen_sviazi
+			set_country_flag = idut_poiski_cherteja		
+			custom_effect_tooltip = budet_naiden_cherteddj
+        }
+		days_remove = 30
+		remove_effect = {	
+			clr_country_flag = idut_poiski_cherteja			
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }	
+	ARM_FIND_CHERTEDJ_6 = {
+        available = { 
+			NOT = {	
+			has_country_flag = idut_poiski_cherteja			
+			}	
+		}
+        cost = 20
+        complete_effect = { 
+			set_country_flag = naiden_chertedj_sistema_obnarujenia_anomaly
+			set_country_flag = idut_poiski_cherteja		
+			custom_effect_tooltip = budet_naiden_cherteddj
+        }
+		days_remove = 30
+		remove_effect = {	
+			clr_country_flag = idut_poiski_cherteja			
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }	
+	ARM_FIND_CHERTEDJ_7 = {
+        available = { 
+			NOT = {
+			has_country_flag = idut_poiski_cherteja			
+			}
+		}
+        cost = 20
+        complete_effect = { 
+			set_country_flag = naiden_chertedj_modern_korppus
+			set_country_flag = idut_poiski_cherteja		
+			custom_effect_tooltip = budet_naiden_cherteddj
+        }
+		days_remove = 30
+		remove_effect = {	
+			clr_country_flag = idut_poiski_cherteja			
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }	
+	ARM_FIND_CHERTEDJ_8 = {
+        available = { 
+			NOT = {
+			has_country_flag = idut_poiski_cherteja			
+			}	
+		}
+        cost = 20
+        complete_effect = { 
+			set_country_flag = naiden_chertedj_gruzovoi_otsek
+			set_country_flag = idut_poiski_cherteja		
+			custom_effect_tooltip = budet_naiden_cherteddj
+        }
+		days_remove = 30
+		remove_effect = {	
+			clr_country_flag = idut_poiski_cherteja			
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }	
+	ARM_start_2_faza_podlodok = {
+        available = { 
+			has_country_flag = naiden_chertedj_old_korpus	
+			has_country_flag = naiden_chertedj_little_dvijok		
+			has_country_flag = naiden_chertedj_transport_slot		
+			has_country_flag = naiden_chertedj_big_dvijok		
+			has_country_flag = naiden_chertedj_modern_systen_sviazi		
+			has_country_flag = naiden_chertedj_sistema_obnarujenia_anomaly		
+			has_country_flag = naiden_chertedj_modern_korppus		
+			has_country_flag = naiden_chertedj_gruzovoi_otsek		
+		}
+        cost = 0
+        complete_effect = { 
+			custom_effect_tooltip = nnnachinaem_2_fazu
+			clr_country_flag = ARM_nachat_stroitelstvo_podlodok
+			set_country_flag = ARM_nachat_stroitelstvo_podlodok_vtoratya_fazza
+        }	
+        ai_will_do = {
+            factor = 1
+        }
+    }			
+}
+
+
+
+
+ARM_creating_a_submarines_vtoraya_fazza = {
+    gruzovaya = {
+        available = { 
+			NOT = {
+			OR = {
+				check_variable = { gruzovoi_ottss_vibran = 1 }
+				check_variable = { trans_ottss_vibran = 1 }
+			}
+			}
+			NOT = {
+				OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+				}
+			}
+		}
+        cost = 0
+        complete_effect = { 
 		
+				set_variable = { gruzovoi_ottss_vibran = 1 }
+        }
+		days_remove = 20
+		remove_effect = {	
+			set_country_flag = gruz_ots_vibr
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    tranportnaya = {
+        available = { 
+			NOT = {
+			OR = {
+				check_variable = { gruzovoi_ottss_vibran = 1 }
+				check_variable = { trans_ottss_vibran = 1 }
+			}
+			}
+			NOT = {
+				OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+				}
+			}
 		}
-		days_mission_timeout = 10
-		is_good = no
-		selectable_mission = no
-		timeout_effect = {
-							
+        cost = 0
+        complete_effect = { 
+		
+				set_variable = { trans_ottss_vibran = 1 }
+        }
+		days_remove = 20
+		remove_effect = {	
+				set_country_flag = trans_ots_vibr
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    bolshoi_dvig = {
+        available = { 
+			OR = {
+				check_variable = { gruzovoi_ottss_vibran = 1 }
+				check_variable = { trans_ottss_vibran = 1 }
+			}
+			OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+				}
+			NOT = {
+			OR = {
+				check_variable = { big_dvigg_vibran = 1 }
+				check_variable = { little_dlig_vibran = 1 }
+			}
+			}
+			NOT = {
+			OR = {
+				has_country_flag = big_dvisssgg_vibran
+				has_country_flag = maaaliy_dvisssgg_vibran
+			}
+			}
 		}
-	}	
+        cost = 0
+        complete_effect = { 
+				set_variable = { big_dvigg_vibran = 1 }	
+        }
+		days_remove = 20
+		remove_effect = {	
+		
+			set_country_flag = big_dvisssgg_vibran		
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    mali_dvidd = {
+        available = { 
+			OR = {
+				check_variable = { gruzovoi_ottss_vibran = 1 }
+				check_variable = { trans_ottss_vibran = 1 }
+			}
+			OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+				}
+			NOT = {
+			OR = {
+				check_variable = { big_dvigg_vibran = 1 }
+				check_variable = { little_dlig_vibran = 1 }
+			}
+			}
+			NOT = {
+			OR = {
+				has_country_flag = big_dvisssgg_vibran
+				has_country_flag = maaaliy_dvisssgg_vibran
+			}
+			}
+		}
+        cost = 0
+        complete_effect = { 
+			custom_effect_tooltip = mali_dvigattel_opisannie		
+			set_variable = { little_dlig_vibran = 1 }	
+        }
+		days_remove = 20
+		remove_effect = {	
+			
+			set_country_flag = maaaliy_dvisssgg_vibran		
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    olddd_corp = {
+        available = { 
+			OR = {
+				check_variable = { gruzovoi_ottss_vibran = 1 }
+				check_variable = { trans_ottss_vibran = 1 }
+			}
+			OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+				}
+			NOT = {
+			OR = {
+				check_variable = { old_corp_vibran = 1 }
+				check_variable = { new_corp_vibran = 1 }
+			}
+			}
+			NOT = {
+			OR = {
+				has_country_flag = nvovi_corp_vibran
+				has_country_flag = sstari_corp_vibran
+			}
+			}
+		}
+        cost = 0
+        complete_effect = { 
+			custom_effect_tooltip = starii_corpus_opisannie	
+	
+			set_variable = { old_corp_vibran = 1 }			
+			
+        }
+		days_remove = 20
+		remove_effect = {	
+				set_country_flag = sstari_corp_vibran	
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    neew_coorp = {
+        available = { 
+			OR = {
+				check_variable = { gruzovoi_ottss_vibran = 1 }
+				check_variable = { trans_ottss_vibran = 1 }
+			}
+			OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+				}
+			NOT = {
+			OR = {
+				check_variable = { old_corp_vibran = 1 }
+				check_variable = { new_corp_vibran = 1 }
+			}
+			}
+			NOT = {
+			OR = {
+				has_country_flag = nvovi_corp_vibran
+				has_country_flag = sstari_corp_vibran
+			}
+			}
+		}
+        cost = 0
+        complete_effect = {			
+			set_variable = { new_corp_vibran = 1 }			
+        }
+		days_remove = 20
+		remove_effect = {	
+			set_country_flag = nvovi_corp_vibran	
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+   anomal_systema = {
+        available = { 
+			OR = {
+				check_variable = { gruzovoi_ottss_vibran = 1 }
+				check_variable = { trans_ottss_vibran = 1 }
+			}
+			OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+				}
+			NOT = {
+			OR = {
+				check_variable = { anomal_systema_vibran = 1 }
+				check_variable = { modernn_sistema_vibran = 1 }
+			}
+			}
+			NOT = {
+			OR = {
+				has_country_flag = anomal_systemadddd_vibran
+				has_country_flag = sovremenaya_systemadddd_vibran
+			}
+			}
+		}
+        cost = 0
+        complete_effect = {
+			set_variable = { anomal_systema_vibran = 1 }		
+        }
+		days_remove = 20
+		remove_effect = {	
+			
+			set_country_flag = anomal_systemadddd_vibran
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    modernn_sistema = {
+        available = { 
+			OR = {
+				check_variable = { gruzovoi_ottss_vibran = 1 }
+				check_variable = { trans_ottss_vibran = 1 }
+			}
+			OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+				}
+			NOT = {
+			OR = {
+				check_variable = { anomal_systema_vibran = 1 }
+				check_variable = { modernn_sistema_vibran = 1 }
+			}
+			}
+			NOT = {
+			OR = {
+				has_country_flag = anomal_systemadddd_vibran
+				has_country_flag = sovremenaya_systemadddd_vibran
+			}
+			}
+		}
+        cost = 0
+        complete_effect = { 	
+			custom_effect_tooltip = moderrrn_sys_opisannie
+			set_variable = { modernn_sistema_vibran = 1 }			
+        }
+		days_remove = 20
+		remove_effect = {	
+			set_country_flag = sovremenaya_systemadddd_vibran	
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-	
-	
-	
-	
-	
 
-	
-	
-	
+    complite_first_proect = {
+        available = { 
+			OR = {
+				has_country_flag = anomal_systemadddd_vibran
+				has_country_flag = sovremenaya_systemadddd_vibran
+			}
+			OR = {
+				has_country_flag = nvovi_corp_vibran
+				has_country_flag = sstari_corp_vibran
+			}
+			OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+			}
+			OR = {
+				has_country_flag = big_dvisssgg_vibran
+				has_country_flag = maaaliy_dvisssgg_vibran
+			}
+		}
+		
+		fire_only_once = yes
+		
+        cost = 0
+        complete_effect = { 	
+			clr_country_flag = anomal_systemadddd_vibran
+			clr_country_flag = sovremenaya_systemadddd_vibran
+			clr_country_flag = nvovi_corp_vibran
+			clr_country_flag = sstari_corp_vibran	
+			if = {
+			limit = { has_country_flag = gruz_ots_vibr }
+				clr_country_flag = gruz_ots_vibr
+				set_country_flag = trans_ots_vibr
+				clear_variable = gruzovoi_ottss_vibran
+				set_variable = { trans_ottss_vibran = 1 }
+			}
+			else = {
+				clr_country_flag = trans_ots_vibr
+				set_country_flag = gruz_ots_vibr
+				clear_variable = trans_ottss_vibran
+				set_variable = { gruzovoi_ottss_vibran = 1 }
+			}			
+			clr_country_flag = big_dvisssgg_vibran
+			clr_country_flag = maaaliy_dvisssgg_vibran		
+			clear_variable = big_dvigg_vibran
+			clear_variable = little_dlig_vibran
+			clear_variable = new_corp_vibran
+			clear_variable = old_corp_vibran
+			clear_variable = anomal_systema_vibran
+			clear_variable = modernn_sistema_vibran		
+			
+			set_country_flag = razrabotka_vtogo_tipa_lodki
+        }
+		days_remove = 1
+		remove_effect = {		
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    nachat_tretiu_fazu = {
+        available = { 
+			OR = {
+				has_country_flag = anomal_systemadddd_vibran
+				has_country_flag = sovremenaya_systemadddd_vibran
+			}
+			OR = {
+				has_country_flag = nvovi_corp_vibran
+				has_country_flag = sstari_corp_vibran
+			}
+			OR = {
+				has_country_flag = gruz_ots_vibr
+				has_country_flag = trans_ots_vibr
+			}
+			OR = {
+				has_country_flag = big_dvisssgg_vibran
+				has_country_flag = maaaliy_dvisssgg_vibran
+			}
+		}
+		
+		visible = {
+			has_country_flag = razrabotka_vtogo_tipa_lodki
+		}
+		
+		fire_only_once = yes
+		
+        cost = 0
+        complete_effect = { 	
+				set_variable = { transportnii_lodki = 0 }			
+				set_variable = { gruz_lodki = 0 }	
+				set_variable = { chislo_rabochih = 0 }	
+				set_variable = { verfi_na_gruz = 0 }	
+				set_variable = { verfi_na_tras = 0 }	
+				set_variable = { vlivaemie_rubli = 0 }	
+				set_variable = { effectivnost = 0 }	
+				
+				
+				set_variable = { proizvodstvo_gruz = 0 }	
+				set_variable = { proizvodstvo_tras = 0 }	
+				
+				
+				set_country_flag = ARM_nachat_stroitelstvo_podlodok_trretia_fazza 
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
 	
 }
+
+
+ARM_creating_a_submarines_tretia_fazza = {
+    obuchit_rabochih = {
+        available = { 		
+		}
+        cost = 0
+        complete_effect = { 
+			add_manpower = -300
+        }
+		days_remove = 60
+		remove_effect = {	
+			add_to_variable = { chislo_rabochih = 300 }	
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    vlivat_rubli = {
+        available = { 	
+		}
+        cost = 0
+        complete_effect = { 
+			add_to_variable = { vlivaemie_rubli = 200 }	
+        }	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    postroit_gruz_verf = {
+        available = { 
+			
+		}
+        cost = 0
+        complete_effect = { 
+			add_to_variable = { Chernii_rubli = -200 }
+        }
+		days_remove = 20
+		remove_effect = {	
+			add_to_variable = { verfi_na_gruz = 1 }
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    postroit_gruz_verf5 = {
+        available = { 
+			
+		}
+        cost = 0
+        complete_effect = { 
+			add_to_variable = { Chernii_rubli = -1000 }		
+        }
+		days_remove = 80
+		remove_effect = {	
+			add_to_variable = { verfi_na_gruz = 5 }
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    postroit_trans_verf = {
+        available = { 
+			
+		}
+        cost = 0
+        complete_effect = { 
+		add_to_variable = { Chernii_rubli = -200 }
+        }
+		days_remove = 20
+		remove_effect = {	
+			add_to_variable = { verfi_na_tras = 1 }
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    postroit_trans_verf5 = {
+        available = { 
+
+		}
+        cost = 0
+        complete_effect = { 
+			add_to_variable = { Chernii_rubli = -1000 }
+        }
+		days_remove = 80
+		remove_effect = {	
+			add_to_variable = { verfi_na_tras = 5 }
+		}	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
+
+
+
+
+
+
+
+    zavershit_proizvodstvo = {
+        available = { 
+			custom_trigger_tooltip = {
+				tooltip = zzzavershenie
+				AND = {
+				check_variable = { transportnii_lodki > 39 }			
+				check_variable = { gruz_lodki > 19 }	
+				}
+			} 
+		}
+        cost = 0
+        complete_effect = { 
+				set_variable = { transportnii_lodki = 0 }			
+				set_variable = { gruz_lodki = 0 }	
+				set_variable = { chislo_rabochih = 0 }	
+				set_variable = { verfi_na_gruz = 0 }	
+				set_variable = { verfi_na_tras = 0 }	
+				set_variable = { vlivaemie_rubli = 0 }	
+				set_variable = { effectivnost = 0 }		
+
+				clr_country_flag = ARM_nachat_stroitelstvo_podlodok_trretia_fazza 		
+        }	
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
+
+
+
+
+
+
+
