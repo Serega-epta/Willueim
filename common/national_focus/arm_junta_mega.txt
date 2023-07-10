@@ -26,6 +26,10 @@
 		completion_reward = {
 			add_command_power = 20
 			add_political_power = 150
+			country_event = {
+				id = ARM.43
+				days = 1
+			}
 		}
 	}
 	
@@ -90,6 +94,10 @@
 
 		completion_reward = {
 			add_political_power = 50
+			country_event = {
+				id = ARM.44
+				days = 1
+			}
 		}
 	}
 	
@@ -199,6 +207,10 @@
 				remove_idea = ARM_universal_employment
 				add_idea = ARM_universal_employment2
 			}
+			country_event = {
+				id = ARM.45
+				days = 1
+			}
 		}
 	}
 	
@@ -246,6 +258,10 @@
 					add_idea = ARM_universal_employment21
 				}
 			}
+			country_event = {
+				id = ARM.32
+				days = 1
+			}	
 		}
 	}
 	
@@ -309,6 +325,10 @@
 		completion_reward = {
 			add_manpower = 10000
 			add_command_power = 10
+			add_popularity = {
+				ideology = patriots
+				popularity = -0.2
+			}
 		}
 	}
 	
@@ -325,6 +345,10 @@
 
 		completion_reward = {
 			add_ideas = ARM_bloody_terror
+			country_event = {
+				id = ARM.33
+				days = 1
+			}
 		}
 	}
 	
@@ -341,7 +365,10 @@
 		completion_reward = {
 			add_manpower = -10000
 			add_stability = 0.15
-			country_event = { id = ARM.31 days = 1 }
+			country_event = {
+				id = ARM.31
+				days = 1
+			}
 		}
 	}
 	
@@ -392,6 +419,10 @@
 			swap_ideas = {
 				remove_idea = ARM_bloody_terror
 				add_idea = ARM_bloody_terror1
+			}
+			country_event = {
+				id = ARM.34
+				days = 1
 			}
 		}
 	}
@@ -452,6 +483,10 @@
 
 		completion_reward = {
 			add_stability = -0.2
+			country_event = {
+				id = ARM.35
+				days = 1
+			}
 		}
 	}
 	
@@ -483,6 +518,10 @@
 
 		completion_reward = {
 			add_political_power = 200
+			country_event = {
+				id = ARM.36
+				days = 1
+			}
 		}
 	}
 	
@@ -625,8 +664,16 @@
 
 		completion_reward = {
 			swap_ideas = {
-				remove_ideas = ARM_living_earth
+				remove_idea = ARM_living_earth
 				add_idea = ARM_living_earth1
+			}
+			add_popularity = {
+				ideology = patriots
+				popularity = -0.1
+			}
+			country_event = {
+				id = ARM.37
+				days = 1
 			}
 		}
 	}
@@ -645,6 +692,10 @@
 				remove_idea = ARM_underground_treasures
 				add_idea = ARM_underground_treasures1
 			}
+			country_event = {
+				id = ARM.38
+				days = 1
+			}
 		}
 	}
 	
@@ -659,6 +710,10 @@
 
 		completion_reward = {
 			add_ideas = ARM_all_to_the_front
+			country_event = {
+				id = ARM.39
+				days = 1
+			}
 		}
 	}
 	
@@ -677,6 +732,10 @@
 
 		completion_reward = {	
 			add_war_support = 0.1
+			country_event = {
+				id = ARM.42
+				days = 1
+			}
 		}
 	}
 	
@@ -707,7 +766,10 @@
 
 		completion_reward = {
 			# Стоимость создания конфликтов снижается. (500 пех.снаряжения, 500 людей будет стоить)
-			# Ивент "Каратели"
+			country_event = {
+				id = ARM.40
+				days = 1
+			}
 		}
 	}
 	
@@ -801,6 +863,10 @@
 			swap_ideas = {
 				remove_idea = ARM_all_to_the_front1
 				add_idea = ARM_all_to_the_front2
+			}
+			country_event = {
+				id = ARM.41
+				days = 1
 			}
 		}
 	}
