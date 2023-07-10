@@ -16,6 +16,18 @@ LWV_holiness = {
 	visible = { has_country_flag = decision_for_holiness }
 	visible_when_empty = yes
 	priority = 85
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = { 
+			any_owned_state = {
+				NOT = { 
+					has_dynamic_modifier = { modifier = integrated_state_others } 
+				}
+			}
+		}
+		name = holiness_map_category
+		zoom = 150
+	}
 }
 
 LWV_unity_in_holiness = {
@@ -37,6 +49,7 @@ LWV_rasprostranenie_veri = {
 	}
 	priority = 85
 }
+
 LWV_podgotovit_pochvu = {
 	icon = saf_anti_colonialist_crusade
 	allowed = {
@@ -47,10 +60,6 @@ LWV_podgotovit_pochvu = {
 	}
 	priority = 85
 }
-
-
-
-
 
 LWV_balance_of_power_category = {
 	icon = GFX_decision_category_power_struggle

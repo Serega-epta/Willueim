@@ -21,9 +21,9 @@ LWV_boji_perst = {
 		}
 		remove_effect = {
 			swap_ideas ={
-						remove_idea = LWV_boji_perst_cut
-						add_idea = LWV_boji_perst_full
-					}
+				remove_idea = LWV_boji_perst_cut
+				add_idea = LWV_boji_perst_full
+			}
 		}		
 	}
 		
@@ -49,9 +49,9 @@ LWV_boji_perst = {
 		}
 		remove_effect = {
 			swap_ideas ={
-						remove_idea = LWV_boji_perst_full
-						add_idea = LWV_boji_perst_cut
-					}
+				remove_idea = LWV_boji_perst_full
+				add_idea = LWV_boji_perst_cut
+			}
 		}		
 	}
 }
@@ -74,12 +74,14 @@ LWV_holiness = {
 				}
 			}
 		}
-		available = {		
+		available = {	
+			hidden_trigger = {	
 			FROM = {
-				NOT = {
-					has_state_flag = whisper_of_holiness
-					has_state_flag = gods_voice
-					has_state_flag = song_of_grace
+					NOT = {
+						has_state_flag = whisper_of_holiness
+						has_state_flag = gods_voice
+						has_state_flag = song_of_grace
+					}
 				}
 			}
 		}
@@ -114,11 +116,13 @@ LWV_holiness = {
 				}
 			}
 		}
-		available = {		
-			FROM = {
-				NOT = {
-					has_state_flag = gods_voice
-					has_state_flag = song_of_grace
+		available = {
+			hidden_trigger = {	
+				FROM = {
+					NOT = {
+						has_state_flag = gods_voice
+						has_state_flag = song_of_grace
+					}
 				}
 			}
 		}
@@ -154,10 +158,12 @@ LWV_holiness = {
 				}
 			}
 		}
-		available = {		
-			FROM = {
-				NOT = {
-					has_state_flag = song_of_grace
+		available = {
+			hidden_trigger = {		
+				FROM = {
+					NOT = {
+						has_state_flag = song_of_grace
+					}
 				}
 			}
 		}
@@ -168,7 +174,8 @@ LWV_holiness = {
 		remove_effect = {
 			FROM ={
 				remove_dynamic_modifier = { modifier = gods_voice }
-				add_dynamic_modifier = { modifier = song_of_grace }	
+				add_dynamic_modifier = { modifier = song_of_grace }
+				add_dynamic_modifier = { modifier = integrated_state_others }
 				clr_state_flag = gods_voice
 				set_state_flag = song_of_grace
 			}
