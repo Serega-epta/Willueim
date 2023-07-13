@@ -1,9 +1,9 @@
 spriteTypes = {	
 
-	 spriteType = {
-	 	name = "GFX_nullobject"
-	 	texturefile = "gfx//interface//thisisdog.dds"
-	 }
+	spriteType = {
+		name = "GFX_nullobject"
+		texturefile = "gfx//interface//thisisdog.dds"
+	}
 
 	spriteType = {
 		name = "GFX_logo"
@@ -42,9 +42,20 @@ spriteTypes = {
 		colortwo = { 1.0 0.0 0.0 }
 		textureFile1 = "gfx//interface//LoadingScreen_Progress_2.dds"
 		textureFile2 = "gfx//interface//LoadingScreen_Progress_1.dds"
-		size = { x = 403 y = 20 }
+		size = { x = 1920 y = 50 }
 		effectFile = "gfx//FX//progress.lua"
 		horizontal = yes
 		steps = 1000000
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_loading_logo"
+		texturefile = "gfx/interface/loading_logo_animated.dds"
+		noOfFrames = 30	
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0 
+		#effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 }
