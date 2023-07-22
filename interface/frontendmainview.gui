@@ -54,7 +54,7 @@ guiTypes = {
 			name ="pdx_int_logo"
 			quadTextureSprite = "GFX_pdx_int_logo"
 			position = { x= 85 y = 15 }
-			web_link = ""
+			web_link = "https://vk.com/requiemofhumankind"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -68,10 +68,11 @@ guiTypes = {
 		Orientation = CENTER
 		Origo = center
 				
-		background = {
-			name = "Background"	
+		iconType = {
+			name = "main_menu_black_pencil_green_pencil_big_banana_pencil"	
 			spriteType ="GFX_main_menu"
 			position = { x=-13 y=-368 }
+			allwaystransparent = yes
 		}	
 			
 		ButtonType = {
@@ -163,6 +164,7 @@ guiTypes = {
 			name = "Background"	
 			spriteType ="GFX_main_menu"
 			position = { x=-13 y=-368 }
+			allwaystransparent = yes
 		}	
 		
 		ButtonType = {
