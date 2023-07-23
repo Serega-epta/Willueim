@@ -679,6 +679,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ARM.50.a
+		country_event = {
+			id = ARM.69
+			days = 1
+		}
 	}
 }
 
@@ -690,6 +694,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ARM.51.a
+		country_event = {
+			id = ARM.70
+			days = 1
+		}
 	}
 }
 
@@ -701,6 +709,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ARM.52.a
+		country_event = {
+			id = ARM.71
+			days = 1
+		}
 	}
 }
 
@@ -877,6 +889,39 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ARM.68.a
+	}
+}
+
+country_event = {
+	id = ARM.69
+	title = ARM.69.t
+	desc = ARM.69.d
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+		name = ARM.69.a
+	}
+}
+
+country_event = {
+	id = ARM.70
+	title = ARM.70.t
+	desc = ARM.70.d
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+		name = ARM.70.a
+	}
+}
+
+country_event = {
+	id = ARM.71
+	title = ARM.71.t
+	desc = ARM.71.d
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+		name = ARM.71.a
 	}
 }
 
