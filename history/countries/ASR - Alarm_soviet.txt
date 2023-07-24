@@ -12,7 +12,7 @@ set_technology = {
     fuel_silos = 1
 }
 
-set_convoys = 20
+set_convoys = 0
 
 set_politics = {
     ruling_party = patriots
@@ -24,4 +24,8 @@ set_popularities = {
     bandits = 0
     patriots = 100
     professariat = 0
+}
+add_opinion_modifier = {
+    target = GLS
+    modifier = endless_hatred
 }

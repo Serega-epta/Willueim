@@ -1,40 +1,115 @@
-capital = 1
+# Чтобы ориентироваться по содержанию, необходимо выделить нужную часть (без знака комментария и кружка) и нажать ctrl+f
+# Содержание:
+# ○ Столица и базовые значения
+# ○ Стартовые технологии
+# ○ Армия и "флот"
+# ○ Идеи/нац.духи
+# ○ Внутренняя политика
+# ○ Лидеры, советники, генералы, адмиралы и прочие людишки
+# ○ Дипломатия
 
-oob = base #"GLS_1936"
 
+# Столица и базовые значения
+capital = 1002
+set_research_slots = 2
+set_stability = 0.7
+set_war_support = 0.5
+
+# Стартовые технологии
 set_technology = {
+    #Категория пехоты
     infantry_weapons = 1
     infantry_weapons1 = 1
-    tech_support = 1
-    tech_engineers = 1
+    infantry_odejda  = 1
+    infantry_odejda1 = 1
     motorised_infantry = 1
-    early_fighter = 1
+    motorised_infantry2 = 1
+    #Категория поддержки
+    tech_support = 1
+    tech_recon = 1
+    tech_rhbz = 1
+    #Категория артиллерии
+    gw_artillery = 1
+    stvolartillery = 1
+    boepripas = 1
+    #Категория электроники
+    electronic_mechanical_engineering = 1
+    electronic_mechanical_engineering2 = 1
+    #Категория индустрии
+    basic_machine_tools = 1
+    construction1 = 1
     fuel_silos = 1
 }
+if = {
+	limit = { not = { has_dlc = "By Blood Alone" } }
+    set_technology = {
+        #Категория самолетов
+        early_fighter = 1
+    }
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+    set_technology = {
+        #Категория самолетов
+        iw_small_airframe = 1
+        iw_medium_airframe = 1
+        iw_large_airframe = 1
+    }
+}
+if = {
+	limit = { not = { has_dlc = "No Step Back" } }
+    set_technology = {
+        #Категория танков
+        gwtank = 1
+    }
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+    set_technology = {
+        #Категория танков
+        gwtank_chassis = 1
+        obtvtorogourovnya = 1
+    }
+}
 
-set_convoys = 20
+# Армия и "флот"
+oob = base          #"GLS_1936" <- скопируйте, когда файл с дивизиями будете делать
+set_convoys = 0
 
+# Идеи/нац.духи
+add_ideas = {
+    #идей нет
+}
+
+# Внутренняя политика ۩۞۩
 set_politics = {
     ruling_party = patriots
-    last_election = "1933.6.21"
-    election_frequency = 48
-    elections_allowed = no
+    elections_allowed = no              #Выборы, выборы, кандидаты.... а где?
 }
+set_popularities = {
+    patriots = 100                      #ЛИКВИДАТОРЫ СТРОНГ
+	free = 0
+    sacraments = 0
+    gelerteria = 0
+    militarists = 0
+	gumanists = 0
+	svobod = 0
+	technocracies = 0
+	opportunists = 0
+    forestry = 0
+    juntas = 0
+    professariat = 0
+    bandits = 0
+}
+
+# Лидеры, советники, генералы и прочие людишки
 recruit_character = GLS_Iron_Dimon
 recruit_character = GLS_Ivan_Sykhoy
 recruit_character = GLS_Airat_Kabirov
 recruit_character = GLS_Almaz_Gabbasin
 
-create_country_leader = {
-	name = GLS_Iron_Dimon
-	picture = "gfx/leaders/GLS/Iron_Dimon.dds"
-	ideology = patriots_1
-	traits={ Neprikloni_predsedatel }
-	expire = "1965.1.1.1"
-	desc = GLS_Iron_Dimon_desc
-}
-set_popularities = {
-    bandits = 0
-    patriots = 100
-    svobod = 0
+# Дипломатия
+add_opinion_modifier = {
+    target = ASR
+    modifier = endless_hatred
 }
