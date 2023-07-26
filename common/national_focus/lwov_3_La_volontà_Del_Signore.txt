@@ -735,7 +735,7 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = LWV_new_promishlenost
-				add_idea = LWV_new_promishlenost1
+				add_idea = LWV_new_promishlenost_concetrirovat_1
 			}
 			add_tech_bonus = {
 				name = concentrated_industry_bonus
@@ -766,7 +766,7 @@ focus_tree = {
 			}	
 			swap_ideas = {
 				remove_idea = LWV_new_promishlenost
-				add_idea = LWV_new_promishlenost11
+				add_idea = LWV_new_promishlenost_raspredelit_1
 			}	
 		}
 	}
@@ -816,10 +816,26 @@ focus_tree = {
 		prerequisite = { focus = LWV_concentrirovat_promku }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost1
-				add_idea = LWV_new_promishlenost2
-			}			
+			if = {
+				limit = {has_idea = LWV_new_promishlenost_concetrirovat_1}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_concetrirovat_1
+					add_idea = LWV_new_promishlenost_concetrirovat_2
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_contsetrirovat_vostanovleniye_1}
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_vostanovleniye_1
+					add_idea = LWV_contsetrirovat_vostanovleniye_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_raschirit_1
+					add_idea = LWV_contsetrirovat_raschirit_2
+				}
+			}	
 		}
 	}
 	focus = {
@@ -834,10 +850,62 @@ focus_tree = {
 		prerequisite = { focus = LWV_concentrirovat_promku focus = LWV_rasssredotochit_promku }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+		if = {
+			limit = { has_idea = LWV_new_promishlenost_concetrirovat_1 }
 			swap_ideas = {
-				remove_idea = LWV_new_promishlenost4
-				add_idea = LWV_new_promishlenost5
+				remove_idea = LWV_new_promishlenost_concetrirovat_1
+				add_idea = LWV_contsetrirovat_vostanovleniye_1
 			}			
+		}
+		else_if = {
+			limit = {has_idea = LWV_new_promishlenost_raspredelit_1}
+			swap_ideas = {
+			remove_idea = LWV_new_promishlenost_raspredelit_1
+			add_idea = LWV_raspredelit_vostanovleniye_1
+			}
+		}
+		if = {
+			limit = { has_idea = LWV_new_promishlenost_concetrirovat_2 }
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost_concetrirovat_2
+				add_idea = LWV_contsetrirovat_vostanovleniye_2
+			}			
+		}
+		else_if = {
+			limit = {has_idea = LWV_new_promishlenost_raspredelit_2}
+			swap_ideas = {
+			remove_idea = LWV_new_promishlenost_raspredelit_2
+			add_idea = LWV_raspredelit_vostanovleniye_2
+			}
+		}
+		if = {
+			limit = { has_idea = LWV_new_promishlenost_concetrirovat_3 }
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost_concetrirovat_3
+				add_idea = LWV_contsetrirovat_vostanovleniye_3
+			}			
+		}
+		else_if = {
+			limit = {has_idea = LWV_new_promishlenost_raspredelit_3}
+			swap_ideas = {
+			remove_idea = LWV_new_promishlenost_raspredelit_3
+			add_idea = LWV_raspredelit_vostanovleniye_3
+			}
+		}
+		if = {
+			limit = { has_idea = LWV_new_promishlenost_concetrirovat_4 }
+			swap_ideas = {
+				remove_idea = LWV_new_promishlenost_concetrirovat_4
+				add_idea = LWV_contsetrirovat_vostanovleniye_4
+			}			
+		}
+		else_if = {
+			limit = {has_idea = LWV_new_promishlenost_raspredelit_4}
+			swap_ideas = {
+			remove_idea = LWV_new_promishlenost_raspredelit_4
+			add_idea = LWV_raspredelit_vostanovleniye_4
+			}
+		}
 		}
 	}
 	focus = {
@@ -852,10 +920,26 @@ focus_tree = {
 		prerequisite = { focus = LWV_rasssredotochit_promku }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost11
-				add_idea = LWV_new_promishlenost12
-			}		
+			if = {
+				limit = {has_idea = LWV_new_promishlenost_concetrirovat_1}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_raspredelit_1
+					add_idea = LWV_new_promishlenost_raspredelit_2
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_contsetrirovat_vostanovleniye_1}
+				swap_ideas = {
+					remove_idea = LWV_raspredelit_vostanovleniye_1
+					add_idea = LWV_raspredelit_vostanovleniye_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = LWV_raspredelit_raschirit_1
+					add_idea = LWV_raspredelit_raschirit_2
+				}
+			}			
 		}
 	}
 	focus = {
@@ -908,9 +992,25 @@ focus_tree = {
 		prerequisite = { focus = LWV_effektivnost }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost2
-				add_idea = LWV_new_promishlenost3
+			if = {
+				limit = {has_idea = LWV_new_promishlenost_concetrirovat_2}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_concetrirovat_2
+					add_idea = LWV_new_promishlenost_concetrirovat_3
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_contsetrirovat_vostanovleniye_2}
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_vostanovleniye_2
+					add_idea = LWV_contsetrirovat_vostanovleniye_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_raschirit_2
+					add_idea = LWV_raspredelit_raschirit_3
+				}
 			}			
 		}
 	}
@@ -926,10 +1026,62 @@ focus_tree = {
 		prerequisite = { focus = LWV_vosstanovlenie }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+		if = {
+			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_1 }
 			swap_ideas = {
-				remove_idea = LWV_new_promishlenost5
-				add_idea = LWV_new_promishlenost6
-			}		
+				remove_idea = LWV_contsetrirovat_vostanovleniye_1
+				add_idea = LWV_contsetrirovat_raschirit_1
+			}			
+		}
+		else_if = {
+			limit = {has_idea = LWV_raspredelit_vostanovleniye_1}
+			swap_ideas = {
+			remove_idea = LWV_raspredelit_vostanovleniye_1
+			add_idea = LWV_raspredelit_raschirit_1
+			}
+		}
+		if = {
+			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_2 }
+			swap_ideas = {
+				remove_idea = LWV_contsetrirovat_vostanovleniye_2
+				add_idea = LWV_contsetrirovat_raschirit_2
+			}			
+		}
+		else_if = {
+			limit = {has_idea = LWV_raspredelit_vostanovleniye_2}
+			swap_ideas = {
+			remove_idea = LWV_new_promishlenost_raspredelit_2
+			add_idea = LWV_raspredelit_raschirit_2
+			}
+		}
+		if = {
+			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_3 }
+			swap_ideas = {
+				remove_idea = LWV_contsetrirovat_vostanovleniye_3
+				add_idea = LWV_contsetrirovat_raschirit_3
+			}			
+		}
+		else_if = {
+			limit = {has_idea = LWV_raspredelit_vostanovleniye_3}
+			swap_ideas = {
+			remove_idea = LWV_raspredelit_vostanovleniye_3
+			add_idea = LWV_raspredelit_vostanovleniye_3
+			}
+		}
+		if = {
+			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_4 }
+			swap_ideas = {
+				remove_idea = LWV_contsetrirovat_vostanovleniye_4
+				add_idea = LWV_contsetrirovat_raschirit_4
+			}			
+		}
+		else_if = {
+			limit = {has_idea = LWV_raspredelit_vostanovleniye_4}
+			swap_ideas = {
+			remove_idea = LWV_raspredelit_vostanovleniye_4
+			add_idea = LWV_raspredelit_raschirit_4
+			}
+		}
 			every_owned_state = {
 				add_building_construction = {
 					type = infrastructure
@@ -951,9 +1103,25 @@ focus_tree = {
 		prerequisite = { focus = LWV_kolichestvo }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost12
-				add_idea = LWV_new_promishlenost13
+			if = {
+				limit = {has_idea = LWV_new_promishlenost_raspredelit_2}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_raspredelit_2
+					add_idea = LWV_new_promishlenost_raspredelit_3
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_raspredelit_vostanovleniye_2}
+				swap_ideas = {
+					remove_idea =  LWV_raspredelit_vostanovleniye_2
+					add_idea =  LWV_raspredelit_vostanovleniye_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = LWV_raspredelit_raschirit_2
+					add_idea = LWV_raspredelit_raschirit_3
+				}
 			}	
 			country_event = {
 				id = LWV.45 
@@ -1011,9 +1179,25 @@ focus_tree = {
 		prerequisite = { focus = LWV_obuchit_upravlentsev }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost3
-				add_idea = LWV_new_promishlenost4
+			if = {
+				limit = {has_idea = LWV_new_promishlenost_concetrirovat_3}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_concetrirovat_3
+					add_idea = LWV_new_promishlenost_concetrirovat_4
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_contsetrirovat_vostanovleniye_3}
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_vostanovleniye_3
+					add_idea = LWV_contsetrirovat_vostanovleniye_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_raschirit_3
+					add_idea = LWV_raspredelit_raschirit_4
+				}
 			}	
 			add_tech_bonus = {
 				name = industry_bonus
@@ -1051,9 +1235,25 @@ focus_tree = {
 		prerequisite = { focus = LWV_pooshriat_vernost }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost13
-				add_idea = LWV_new_promishlenost14
+			if = {
+				limit = {has_idea = LWV_new_promishlenost_raspredelit_3}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_raspredelit_3
+					add_idea = LWV_new_promishlenost_raspredelit_4
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_raspredelit_vostanovleniye_3}
+				swap_ideas = {
+					remove_idea =  LWV_raspredelit_vostanovleniye_3
+					add_idea =  LWV_raspredelit_vostanovleniye_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = LWV_raspredelit_raschirit_3
+					add_idea = LWV_raspredelit_raschirit_4
+				}
 			}			
 		}
 	}
