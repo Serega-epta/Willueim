@@ -513,20 +513,19 @@ heaven_on_earth_4 = {
 	LWV_scared_war_upgrate_ultra = {
 		picture = cute_knightboy
 		modifier = {
-		conscription =  0.025
-		offence = 0.15
-		defence = 0.1
-		special_forces_attack_factor = 0.2
-		defensive_war_stability_factor = 0.2
-		offensive_war_stability_factor = 0.2
-		justify_war_goal_time = -0.25
-
-		equipment_bonus = {
+			conscription =  0.025
+			offence = 0.15
+			defence = 0.1
+			special_forces_attack_factor = 0.2
+			defensive_war_stability_factor = 0.2
+			offensive_war_stability_factor = 0.2
+			justify_war_goal_time = -0.25
+			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.2
 					instant = yes
 				}
-		}
+			}
 		}
 	}
 	LWV_blessing_of_labor = {
@@ -547,28 +546,24 @@ heaven_on_earth_4 = {
 			production_speed_buildings_factor = 0.1
 		}
 	}
-	}
-
 	LWV_scared_war_upgrate_ultra1 = {
 		picture = cute_knightboy
 		modifier = {
-		conscription =  0.025
-		offence = 0.25
-		defence = 0.1
-		special_forces_attack_factor = 0.2
-		defensive_war_stability_factor = 0.2
-		offensive_war_stability_factor = 0.2
-		justify_war_goal_time = -0.25
-
-		equipment_bonus = {
+			conscription =  0.025
+			offence = 0.25
+			defence = 0.1
+			special_forces_attack_factor = 0.2
+			defensive_war_stability_factor = 0.2
+			offensive_war_stability_factor = 0.2
+			justify_war_goal_time = -0.25
+			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.2
 					instant = yes
 				}
-		}
+			}
 		}
 	}
-
 	LWV_usil_cher = {
 		picture = cute_knightboy
 		modifier = {
@@ -576,15 +571,16 @@ heaven_on_earth_4 = {
 			political_power_factor = -0.05
 		}
 	}
-
 	LWV_prorok = {
 		picture = cute_knightboy
 		modifier = {
-			# stability_factor = -0.2
-			# political_power_factor = -0.05
+			targeted_modifier = {
+				tag = VOZ
+				attack_bonus_against = 0.05
+				defence_bonus_against = 0.05
+			}
 		}
 	}
-
 	LWV_prorok1 = {
 		picture = cute_knightboy
 		modifier = {
@@ -592,7 +588,6 @@ heaven_on_earth_4 = {
 			# political_power_factor = -0.05
 		}
 	}
-
 	LWV_prorok2 = {
 		picture = cute_knightboy
 		modifier = {
@@ -600,7 +595,6 @@ heaven_on_earth_4 = {
 			# political_power_factor = -0.05
 		}
 	}
-
 	LWV_prorok3 = {
 		picture = cute_knightboy
 		modifier = {
@@ -608,7 +602,6 @@ heaven_on_earth_4 = {
 			# political_power_factor = -0.05
 		}
 	}
-
 	LWV_prorok4 = {
 		picture = cute_knightboy
 		modifier = {

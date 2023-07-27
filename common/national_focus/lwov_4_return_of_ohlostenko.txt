@@ -21,20 +21,21 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
+			add_ideas = LWV_prorok
 			if = {
     			limit = {
         			has_idea = LWV_boji_perst_cut
     			}
 				remove_idea = LWV_boji_perst_cut			
 			}
-			else = {
+			else_if = {
     			limit = {
         			has_idea = LWV_boji_perst_full
     			}
 				remove_idea = LWV_boji_perst_full
 			}
-			remove_ideas = LWV_scared_war_upgrate_ultra1
-			add_ideas = LWV_prorok
+			remove_idea = LWV_scared_war_upgrate_ultra1
+			
 		}
 	}	
 
