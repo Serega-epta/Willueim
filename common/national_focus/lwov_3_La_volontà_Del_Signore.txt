@@ -1220,7 +1220,18 @@ focus_tree = {
 		prerequisite = { focus = LWV_expand_ifrastructure }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			if = {
+				limit = {
+					has_state_category = rural
+				}
+				set_state_category = town
+			}
+			else_if = {
+				limit = {
+					has_state_category = pastoral
+				}
+				set_state_category = rural
+			}
 		}
 	}
 	focus = {
