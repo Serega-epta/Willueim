@@ -315,7 +315,6 @@ focus = {
 		}
 	}
 }
-
 focus = { 
 	id = LWV_pol9
 	icon = GFX_Restoration_of_the_CSF
@@ -331,7 +330,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
 		891 = {
-			add_dynamic_modifier = kanon_absol
+			add_dynamic_modifier = { modifier = kanon_absol }
 		}
 		country_event = {
 			id = LWV.60
@@ -339,7 +338,6 @@ focus = {
 		}
 	}
 }
-
 focus = { 
 	id = LWV_pol10
 	icon = GFX_Restoration_of_the_CSF
