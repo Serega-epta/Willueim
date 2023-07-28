@@ -54,13 +54,36 @@ focus_tree = {
 			add_political_power = -50
 			add_stability = -0.01
 			add_war_support = 0.03
-			swap_ideas = {
-				remove_idea = LWV_prorok
-				add_idea = LWV_prorok1
+			if = {
+				limit = { has_idea = LWV_prorok }
+				swap_ideas = {
+					remove_idea = LWV_prorok
+					add_idea = LWV_prorok1
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok1 }
+				swap_ideas = {
+					remove_idea = LWV_prorok1
+					add_idea = LWV_prorok2
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok2}
+				swap_ideas = {
+					remove_idea = LWV_prorok2
+					add_idea = LWV_prorok3
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok3}
+				swap_ideas = {
+					remove_idea = LWV_prorok3
+					add_idea = LWV_prorok4
+				}
 			}
 		}
-	}	
-
+	}
 	focus = {
 		id = LWV_ret3
 		icon = GFX_Korol_charodei
@@ -76,9 +99,68 @@ focus_tree = {
 			add_political_power = -45
 			add_stability = -0.01
 			add_war_support = 0.03
-			swap_ideas = {
-				remove_idea = LWV_prorok1
-				add_idea = LWV_prorok2
+			if = {
+				limit = { has_idea = LWV_prorok1 }
+				swap_ideas = {
+					remove_idea = LWV_prorok1
+					add_idea = LWV_prorok2
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok2 }
+				swap_ideas = {
+					remove_idea = LWV_prorok2
+					add_idea = LWV_prorok3
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok3}
+				swap_ideas = {
+					remove_idea = LWV_prorok3
+					add_idea = LWV_prorok4
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok4}
+				swap_ideas = {
+					remove_idea = LWV_prorok4
+					add_idea = LWV_prorok5
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok5}
+				swap_ideas = {
+					remove_idea = LWV_prorok5
+					add_idea = LWV_prorok6
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok6}
+				swap_ideas = {
+					remove_idea = LWV_prorok6
+					add_idea = LWV_prorok7
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok7}
+				swap_ideas = {
+					remove_idea = LWV_prorok7
+					add_idea = LWV_prorok8
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok9}
+				swap_ideas = {
+					remove_idea = LWV_prorok9
+					add_idea = LWV_prorok10
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok8}
+				swap_ideas = {
+					remove_idea = LWV_prorok8
+					add_idea = LWV_prorok9
+				}
 			}
 		}
 	}	
@@ -99,9 +181,47 @@ focus_tree = {
 			add_political_power = -40
 			add_stability = -0.01
 			add_war_support = 0.03		
-			swap_ideas = {
-				remove_idea = LWV_prorok2
-				add_idea = LWV_prorok3
+			if = {
+				limit = { has_idea = LWV_prorok2 }
+				swap_ideas = {
+					remove_idea = LWV_prorok2
+					add_idea = LWV_prorok3
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok3 }
+				swap_ideas = {
+					remove_idea = LWV_prorok3
+					add_idea = LWV_prorok4
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok4}
+				swap_ideas = {
+					remove_idea = LWV_prorok4
+					add_idea = LWV_prorok5
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok5}
+				swap_ideas = {
+					remove_idea = LWV_prorok5
+					add_idea = LWV_prorok6
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok6}
+				swap_ideas = {
+					remove_idea = LWV_prorok6
+					add_idea = LWV_prorok7
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok7}
+				swap_ideas = {
+					remove_idea = LWV_prorok7
+					add_idea = LWV_prorok8
+				}
 			}
 		}
 	}	
@@ -122,11 +242,49 @@ focus_tree = {
 			add_political_power = -30	
 			add_stability = -0.01
 			add_war_support = 0.03		
-			swap_ideas = {
-				remove_idea = LWV_prorok5
-				add_idea = LWV_prorok6
-			}			
-		}
+			if = {
+				limit = { has_idea = LWV_prorok4 }
+				swap_ideas = {
+					remove_idea = LWV_prorok4
+					add_idea = LWV_prorok5
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok5 }
+				swap_ideas = {
+					remove_idea = LWV_prorok5
+					add_idea = LWV_prorok6
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok6}
+				swap_ideas = {
+					remove_idea = LWV_prorok6
+					add_idea = LWV_prorok7
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok7}
+				swap_ideas = {
+					remove_idea = LWV_prorok7
+					add_idea = LWV_prorok8
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok8}
+				swap_ideas = {
+					remove_idea = LWV_prorok8
+					add_idea = LWV_prorok9
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok9}
+				swap_ideas = {
+					remove_idea = LWV_prorok9
+					add_idea = LWV_prorok10
+				}
+			}
+		}			
 	}	
 
 	focus = {
@@ -144,10 +302,41 @@ focus_tree = {
 			add_political_power = -30	
 			add_stability = -0.01
 			add_war_support = 0.03	
-			swap_ideas = {
-				remove_idea = LWV_prorok8
-				add_idea = LWV_prorok9
-			}		
+			if = {
+				limit = { has_idea = LWV_prorok }
+				swap_ideas = {
+					remove_idea = LWV_prorok
+					add_idea = LWV_prorok1
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok1 }
+				swap_ideas = {
+					remove_idea = LWV_prorok1
+					add_idea = LWV_prorok2
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok2}
+				swap_ideas = {
+					remove_idea = LWV_prorok2
+					add_idea = LWV_prorok3
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok3}
+				swap_ideas = {
+					remove_idea = LWV_prorok3
+					add_idea = LWV_prorok4
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok4}
+				swap_ideas = {
+					remove_idea = LWV_prorok4
+					add_idea = LWV_prorok5
+				}
+			}			
 		}
 	}	
 
@@ -167,10 +356,48 @@ focus_tree = {
 			add_political_power = -35
 			add_stability = -0.01
 			add_war_support = 0.03	
-			swap_ideas = {
-				remove_idea = LWV_prorok3
-				add_idea = LWV_prorok4
-			}		
+			if = {
+				limit = { has_idea = LWV_prorok2 }
+				swap_ideas = {
+					remove_idea = LWV_prorok2
+					add_idea = LWV_prorok3
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok3 }
+				swap_ideas = {
+					remove_idea = LWV_prorok3
+					add_idea = LWV_prorok4
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok4}
+				swap_ideas = {
+					remove_idea = LWV_prorok4
+					add_idea = LWV_prorok5
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok5}
+				swap_ideas = {
+					remove_idea = LWV_prorok5
+					add_idea = LWV_prorok6
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok6}
+				swap_ideas = {
+					remove_idea = LWV_prorok6
+					add_idea = LWV_prorok7
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok7}
+				swap_ideas = {
+					remove_idea = LWV_prorok7
+					add_idea = LWV_prorok8
+				}
+			}				
 		}
 	}	
 
@@ -190,9 +417,40 @@ focus_tree = {
 			add_political_power = -30	
 			add_stability = -0.01
 			add_war_support = 0.03	
-			swap_ideas = {
-				remove_idea = LWV_prorok6
-				add_idea = LWV_prorok7
+			if = {
+				limit = { has_idea = LWV_prorok6 }
+				swap_ideas = {
+					remove_idea = LWV_prorok6
+					add_idea = LWV_prorok7
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok7 }
+				swap_ideas = {
+					remove_idea = LWV_prorok7
+					add_idea = LWV_prorok8
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok8}
+				swap_ideas = {
+					remove_idea = LWV_prorok8
+					add_idea = LWV_prorok9
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok9}
+				swap_ideas = {
+					remove_idea = LWV_prorok9
+					add_idea = LWV_prorok10
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok10}
+				swap_ideas = {
+					remove_idea = LWV_prorok10
+					add_idea = LWV_prorok11
+				}
 			}	
 			remove_ideas = LWV_rianost_yonih
 			891 = {
@@ -217,9 +475,68 @@ focus_tree = {
 			add_stability = -0.01
 			add_war_support = 0.03	
 			remove_idea = zapoved		
-			swap_ideas = {
-				remove_idea = LWV_prorok9
-				add_idea = LWV_prorok10
+			if = {
+				limit = { has_idea = LWV_prorok1 }
+				swap_ideas = {
+					remove_idea = LWV_prorok1
+					add_idea = LWV_prorok2
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok2 }
+				swap_ideas = {
+					remove_idea = LWV_prorok2
+					add_idea = LWV_prorok3
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok3}
+				swap_ideas = {
+					remove_idea = LWV_prorok3
+					add_idea = LWV_prorok4
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok4}
+				swap_ideas = {
+					remove_idea = LWV_prorok4
+					add_idea = LWV_prorok5
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok5}
+				swap_ideas = {
+					remove_idea = LWV_prorok5
+					add_idea = LWV_prorok6
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok6}
+				swap_ideas = {
+					remove_idea = LWV_prorok6
+					add_idea = LWV_prorok7
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok7}
+				swap_ideas = {
+					remove_idea = LWV_prorok7
+					add_idea = LWV_prorok8
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok9}
+				swap_ideas = {
+					remove_idea = LWV_prorok9
+					add_idea = LWV_prorok10
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok8}
+				swap_ideas = {
+					remove_idea = LWV_prorok8
+					add_idea = LWV_prorok9
+				}
 			}
 			country_event = {
 				id = LWV.53
@@ -243,9 +560,47 @@ focus_tree = {
 			add_political_power = -30
 			add_stability = -0.01
 			add_war_support = 0.03	
-			swap_ideas = {
-				remove_idea = LWV_prorok4
-				add_idea = LWV_prorok5
+			if = {
+				limit = { has_idea = LWV_prorok1 }
+				swap_ideas = {
+					remove_idea = LWV_prorok1
+					add_idea = LWV_prorok2
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok2 }
+				swap_ideas = {
+					remove_idea = LWV_prorok2
+					add_idea = LWV_prorok3
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok3}
+				swap_ideas = {
+					remove_idea = LWV_prorok3
+					add_idea = LWV_prorok4
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok4}
+				swap_ideas = {
+					remove_idea = LWV_prorok4
+					add_idea = LWV_prorok5
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok5}
+				swap_ideas = {
+					remove_idea = LWV_prorok5
+					add_idea = LWV_prorok6
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok6}
+				swap_ideas = {
+					remove_idea = LWV_prorok6
+					add_idea = LWV_prorok7
+				}
 			}		
 			remove_idea = LWV_holy_gramots	
 		}
@@ -267,9 +622,47 @@ focus_tree = {
 			add_political_power = -30	
 			add_stability = -0.01
 			add_war_support = 0.03	
-			swap_ideas = {
-				remove_idea = LWV_prorok7
-				add_idea = LWV_prorok8
+			if = {
+				limit = { has_idea = LWV_prorok4 }
+				swap_ideas = {
+					remove_idea = LWV_prorok4
+					add_idea = LWV_prorok5
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok5 }
+				swap_ideas = {
+					remove_idea = LWV_prorok5
+					add_idea = LWV_prorok6
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok6}
+				swap_ideas = {
+					remove_idea = LWV_prorok6
+					add_idea = LWV_prorok7
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok7}
+				swap_ideas = {
+					remove_idea = LWV_prorok7
+					add_idea = LWV_prorok8
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok8}
+				swap_ideas = {
+					remove_idea = LWV_prorok8
+					add_idea = LWV_prorok9
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok9}
+				swap_ideas = {
+					remove_idea = LWV_prorok9
+					add_idea = LWV_prorok10
+				}
 			}		
 			remove_idea = LWV_new_promishlenost				
 		}
@@ -292,16 +685,32 @@ focus_tree = {
 			add_stability = -0.01
 			add_war_support = 0.03	
 			if = {
-    			limit = {
-        			has_idea = holy_nadely_5
-    			}
-				remove_idea = holy_nadely_5			
+				limit = { has_idea = LWV_prorok8 }
+				swap_ideas = {
+					remove_idea = LWV_prorok8
+					add_idea = LWV_prorok9
+				}
 			}
-			else = {
-    			limit = {
-        			has_idea = holy_nadely_4
-    			}
-				remove_idea = holy_nadely_4
+			else_if = {
+				limit = { has_idea = LWV_prorok9 }
+				swap_ideas = {
+					remove_idea = LWV_prorok9
+					add_idea = LWV_prorok10
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok10}
+				swap_ideas = {
+					remove_idea = LWV_prorok10
+					add_idea = LWV_prorok11
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok11}
+				swap_ideas = {
+					remove_idea = LWV_prorok11
+					add_idea = LWV_prorok12
+				}
 			}	
 			country_event = {
 				id = LWV.54
@@ -322,7 +731,35 @@ focus_tree = {
 		factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		completion_reward = {
+			if = {
+				limit = { has_idea = LWV_prorok8 }
+				swap_ideas = {
+					remove_idea = LWV_prorok8
+					add_idea = LWV_prorok9
+				}
+			}
+			else_if = {
+				limit = { has_idea = LWV_prorok9 }
+				swap_ideas = {
+					remove_idea = LWV_prorok9
+					add_idea = LWV_prorok10
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok10}
+				swap_ideas = {
+					remove_idea = LWV_prorok10
+					add_idea = LWV_prorok11
+				}
+			}
+			else_if = {
+				limit = {has_idea = LWV_prorok11}
+				swap_ideas = {
+					remove_idea = LWV_prorok11
+					add_idea = LWV_prorok12
+				}
+			}
 			country_event = {
 				id = LWV.55
 				days = 1
@@ -347,8 +784,10 @@ focus_tree = {
 			add_stability = -0.01
 			add_war_support = 0.03			
 			swap_ideas = {
-				remove_idea = LWV_prorok10
-				add_idea = LWV_prorok11
+				swap_ideas = {
+					remove_idea = LWV_prorok12
+					add_idea = LWV_prorok13
+				}
 				custom_effect_tooltip = LWV_something_happened_tt					
 			}	
 		}
