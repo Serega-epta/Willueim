@@ -2929,14 +2929,6 @@ ARM_creating_a_submarines_tretia_fazza = {
         }
     }
 
-
-
-
-
-
-
-
-
     zavershit_proizvodstvo = {
         available = { 
 			custom_trigger_tooltip = {
@@ -2963,6 +2955,1063 @@ ARM_creating_a_submarines_tretia_fazza = {
             factor = 1
         }
     }
+}
+
+
+
+#Гражданская война в Армии Возрождении
+
+ARM_civil_war = {
+	#Общие решения
+	ARM_get_political_point = {
+        cost = 50
+        complete_effect = { 
+			add_to_variable = {
+				var = political_point
+				value = 1
+			}
+			custom_effect_tooltip = get_political_point	
+        }
+		days_remove = 15
+        ai_will_do = {
+            factor = 1
+        }
+	}
+	ARM_get_the_region_on_your_side_in_ural = {
+        visible = { 
+			has_country_flag = cw_ural_button_clicked
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_three_political_point
+				check_variable = {
+					var = political_point
+					value = 3
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+        complete_effect = { 
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}
+			add_to_variable = {
+				var = strength_in_ural
+				value = 5
+			}
+			custom_effect_tooltip = increasing_strength_in_ural_by_ten
+        }
+		days_remove = 20
+        ai_will_do = {
+            factor = 1
+        }
+	}
+	ARM_get_the_division_on_your_side_in_ural = {
+        visible = { 
+			has_country_flag = cw_ural_button_clicked
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_one_political_point
+				check_variable = {
+					var = political_point
+					value = 1
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+        complete_effect = { 
+			subtract_from_variable = {
+				var = political_point
+				value = 1
+			}
+			if = {
+				limit = { 
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				}
+				add_to_variable = {
+					var = count_of_division_Podolyakin
+					value = 2
+				}
+				subtract_from_variable = {
+					var = count_of_division_Onufrenko
+					value = 2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				}
+				add_to_variable = {
+					var = count_of_division_Onufrenko
+					value = 2
+				}
+				subtract_from_variable = {
+					var = count_of_division_Podolyakin
+					value = 2
+				}
+			}
+			custom_effect_tooltip = get_more_division	
+        }
+		days_remove = 10
+        ai_will_do = {
+            factor = 1
+        }
+	}
+	ARM_get_the_region_on_your_side_in_central_russia = {
+        visible = { 
+			has_country_flag = cw_central_russia_button_clicked
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_three_political_point
+				check_variable = {
+					var = political_point
+					value = 3
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+        complete_effect = { 
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}
+			add_to_variable = {
+				var = strength_in_central_russia
+				value = 5
+			}
+			custom_effect_tooltip = increasing_strength_in_central_russia_by_ten	
+        }
+		days_remove = 20
+        ai_will_do = {
+            factor = 1
+        }
+	}
+	ARM_get_the_division_on_your_side_in_central_russia = {
+        visible = { 
+			has_country_flag = cw_central_russia_button_clicked
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_one_political_point
+				check_variable = {
+					var = political_point
+					value = 1
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+        complete_effect = {
+			subtract_from_variable = {
+				var = political_point
+				value = 1
+			} 
+			if = {
+				limit = { 
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				}
+				add_to_variable = {
+					var = count_of_division_Podolyakin
+					value = 2
+				}
+				subtract_from_variable = {
+					var = count_of_division_Onufrenko
+					value = 2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				}
+				add_to_variable = {
+					var = count_of_division_Onufrenko
+					value = 2
+				}
+				subtract_from_variable = {
+					var = count_of_division_Podolyakin
+					value = 2
+				}
+			}
+			custom_effect_tooltip = get_more_division	
+        }
+		days_remove = 10
+        ai_will_do = {
+            factor = 1
+        }
+	}
+	ARM_get_the_region_on_your_side_in_primorye = {
+        visible = { 
+			has_country_flag = cw_primorye_button_clicked
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_three_political_point
+				check_variable = {
+					var = political_point
+					value = 3
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+        complete_effect = { 
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}
+			add_to_variable = {
+				var = strength_in_primorye
+				value = 5
+			}
+			custom_effect_tooltip = increasing_strength_in_primorye_by_ten
+        }
+		days_remove = 20
+        ai_will_do = {
+            factor = 1
+        }
+	}
+	ARM_get_the_division_on_your_side_in_primorye = {
+        visible = { 
+			has_country_flag = cw_primorye_button_clicked
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_one_political_point
+				check_variable = {
+					var = political_point
+					value = 1
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+        complete_effect = { 
+			subtract_from_variable = {
+				var = political_point
+				value = 1
+			}	
+			if = {
+				limit = { 
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				}
+				add_to_variable = {
+					var = count_of_division_Podolyakin
+					value = 2
+				}
+				subtract_from_variable = {
+					var = count_of_division_Onufrenko
+					value = 2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				}
+				add_to_variable = {
+					var = count_of_division_Onufrenko
+					value = 2
+				}
+				subtract_from_variable = {
+					var = count_of_division_Podolyakin
+					value = 2
+				}
+			}
+			custom_effect_tooltip = get_more_division	
+        }
+		days_remove = 10
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	#Уникальные решения Подолякина
+	ARM_friendly_meeting_in_ural = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				has_country_flag = cw_ural_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_six_political_point
+				check_variable = {
+					var = political_point
+					value = 6
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+		cost = 150
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_ural
+				value = 20
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 6
+			}	
+			custom_effect_tooltip = friendly_meeting_desc	
+			custom_effect_tooltip = increasing_strength_in_ural_by_forty	
+			if = {
+				limit = {
+					has_country_flag = dont_get_event
+				}
+				country_event = {
+					id = ARM.72
+					days = 1
+				}
+				clr_country_flag = dont_get_event
+			}		
+        }
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}	
+
+	ARM_grace_the_people_in_ural = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				has_country_flag = cw_ural_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_six_political_point
+				check_variable = {
+					var = political_point
+					value = 6
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+		
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_ural
+				value = 10
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 6
+			}	
+			custom_effect_tooltip = grace_the_people_desc	
+			custom_effect_tooltip = increasing_strength_in_ural_by_twenty	
+			add_ideas = ARM_grace
+        }
+		remove_effect = {
+			remove_idea = ARM_grace
+		}
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	ARM_cult_of_personality_in_ural = {
+        visible = { 
+			has_country_flag = cw_ural_button_clicked
+		}
+		available = {
+			if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side					
+				}
+				custom_trigger_tooltip = {
+					tooltip = have_six_political_point
+					check_variable = {
+						var = political_point
+						value = 6
+						compare = greater_than_or_equals 
+					}	
+				}
+			} 		
+			else_if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side					
+				}
+				custom_trigger_tooltip = {
+					tooltip = have_one_political_point
+					check_variable = {
+						var = political_point
+						value = 1
+						compare = greater_than_or_equals 
+					}	
+				}
+			} 
+		}
+        complete_effect = { 
+			if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side					
+				}
+				add_to_variable = {
+					var = strength_in_ural
+					value = 7
+				}	
+				subtract_from_variable = {
+					var = political_point
+					value = 6
+				}	
+				custom_effect_tooltip = cult_of_personality_Podolyakin_desc	
+				custom_effect_tooltip = increasing_strength_in_primorye_by_fifteen	
+			} 		
+			else_if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side					
+				}
+				add_to_variable = {
+					var = strength_in_ural
+					value = 7
+				}	
+				subtract_from_variable = {
+					var = political_point
+					value = 1
+				}	
+				custom_effect_tooltip = cult_of_personality_Onufrenko_desc	
+				custom_effect_tooltip = increasing_strength_in_primorye_by_fifteen	
+			} 
+        }
+		
+		days_remove = 30
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	ARM_friendly_meeting_in_central_russia = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				has_country_flag = cw_central_russia_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_six_political_point
+				check_variable = {
+					var = political_point
+					value = 6
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+		cost = 150
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_central_russia
+				value = 20
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 6
+			}	
+			custom_effect_tooltip = friendly_meeting_desc
+			custom_effect_tooltip = increasing_strength_in_central_russia_by_forty		
+			if = {
+				limit = {
+					has_country_flag = dont_get_event
+				}
+				country_event = {
+					id = ARM.72
+					days = 1
+				}
+				clr_country_flag = dont_get_event
+			}		
+        }
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}	
+
+	ARM_grace_the_people_in_central_russia = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				has_country_flag = cw_central_russia_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_six_political_point
+				check_variable = {
+					var = political_point
+					value = 6
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_central_russia
+				value = 10
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 6
+			}	
+			custom_effect_tooltip = grace_the_people_desc
+			custom_effect_tooltip = increasing_strength_in_central_russia_by_twenty	
+			add_ideas = ARM_grace
+        }
+		remove_effect = {
+			remove_idea = ARM_grace
+		}		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	ARM_cult_of_personality_in_central_russia = {
+        visible = { 
+			has_country_flag = cw_central_russia_button_clicked
+		}
+		available = {
+			if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side					
+				}
+				custom_trigger_tooltip = {
+					tooltip = have_six_political_point
+					check_variable = {
+						var = political_point
+						value = 6
+						compare = greater_than_or_equals 
+					}	
+				}
+			} 		
+			else_if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side					
+				}
+				custom_trigger_tooltip = {
+					tooltip = have_one_political_point
+					check_variable = {
+						var = political_point
+						value = 1
+						compare = greater_than_or_equals 
+					}	
+				}
+			} 
+		}
+        complete_effect = { 
+			if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side					
+				}
+				add_to_variable = {
+					var = strength_in_central_russia
+					value = 7
+				}	
+				subtract_from_variable = {
+					var = political_point
+					value = 6
+				}	
+				custom_effect_tooltip = cult_of_personality_Podolyakin_desc	
+				custom_effect_tooltip = increasing_strength_in_primorye_by_fifteen	
+			} 		
+			else_if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side					
+				}
+				add_to_variable = {
+					var = strength_in_central_russia
+					value = 7
+				}	
+				subtract_from_variable = {
+					var = political_point
+					value = 1
+				}	
+				custom_effect_tooltip = cult_of_personality_Onufrenko_desc	
+				custom_effect_tooltip = increasing_strength_in_primorye_by_fifteen	
+			} 
+        }
+		
+		days_remove = 30
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	ARM_friendly_meeting_in_primorye = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				has_country_flag = cw_primorye_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_six_political_point
+				check_variable = {
+					var = political_point
+					value = 6
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+		cost = 150
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_primorye
+				value = 20
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 6
+			}	
+			custom_effect_tooltip = friendly_meeting_desc	
+			custom_effect_tooltip = increasing_strength_in_primorye_by_forty		
+			if = {
+				limit = {
+					has_country_flag = dont_get_event
+				}
+				country_event = {
+					id = ARM.72
+					days = 1
+				}
+				clr_country_flag = dont_get_event
+			}	
+        }
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	ARM_grace_the_people_in_primorye = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+				has_country_flag = cw_primorye_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_six_political_point
+				check_variable = {
+					var = political_point
+					value = 6
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_primorye
+				value = 10
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 6
+			}	
+			custom_effect_tooltip = grace_the_people_desc	
+			custom_effect_tooltip = increasing_strength_in_primorye_by_twenty	
+			add_ideas = ARM_grace
+        }
+
+		remove_effect = {
+			remove_idea = ARM_grace
+		}		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	ARM_cult_of_personality_in_primorye = {
+        visible = { 
+			has_country_flag = cw_primorye_button_clicked
+		}
+		available = {
+			if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side					
+				}
+				custom_trigger_tooltip = {
+					tooltip = have_six_political_point
+					check_variable = {
+						var = political_point
+						value = 6
+						compare = greater_than_or_equals 
+					}	
+				}
+			} 		
+			else_if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side					
+				}
+				custom_trigger_tooltip = {
+					tooltip = have_one_political_point
+					check_variable = {
+						var = political_point
+						value = 1
+						compare = greater_than_or_equals 
+					}	
+				}
+			} 
+		}
+        complete_effect = { 
+			if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side					
+				}
+				add_to_variable = {
+					var = strength_in_primorye
+					value = 7
+				}	
+				subtract_from_variable = {
+					var = political_point
+					value = 6
+				}	
+				custom_effect_tooltip = cult_of_personality_Podolyakin_desc	
+				custom_effect_tooltip = increasing_strength_in_primorye_by_fifteen	
+			} 		
+			else_if = {
+				limit = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side					
+				}
+				add_to_variable = {
+					var = strength_in_primorye
+					value = 7
+				}	
+				subtract_from_variable = {
+					var = political_point
+					value = 1
+				}	
+				custom_effect_tooltip = cult_of_personality_Onufrenko_desc	
+				custom_effect_tooltip = increasing_strength_in_primorye_by_fifteen	
+			} 
+        }
+		
+		days_remove = 30
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	#Уникальные решения Онуфренко
+	ARM_art_of_hinting_in_ural = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				has_country_flag = cw_ural_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_three_political_point
+				check_variable = {
+					var = political_point
+					value = 3
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+		cost = 100
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_primorye
+				value = 17
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}	
+			custom_effect_tooltip = art_of_hinting_desc	
+			custom_effect_tooltip = increasing_strength_in_ural_thirty_five
+			if = {
+				limit = {
+					has_country_flag = dont_get_event
+				}
+				country_event = {
+					id = ARM.73
+					days = 1
+				}
+				clr_country_flag = dont_get_event
+			}	
+        }
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}	
+
+	ARM_art_of_hinting_in_central_russia = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				has_country_flag = cw_central_russia_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_three_political_point
+				check_variable = {
+					var = political_point
+					value = 3
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+		cost = 100
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_central_russia
+				value = 17
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}	
+			custom_effect_tooltip = art_of_hinting_desc	
+			custom_effect_tooltip = increasing_strength_in_central_russia_thirty_five
+			if = {
+				limit = {
+					has_country_flag = dont_get_event
+				}
+				country_event = {
+					id = ARM.73
+					days = 1
+				}
+				clr_country_flag = dont_get_event
+			}	
+        }
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}	
+
+	ARM_art_of_hinting_in_primorye = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				has_country_flag = cw_primorye_button_clicked
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = have_three_political_point
+				check_variable = {
+					var = political_point
+					value = 3
+					compare = greater_than_or_equals 
+				}	
+			} 		
+		}
+		cost = 100
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_primorye
+				value = 17
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}	
+			custom_effect_tooltip = art_of_hinting_desc	
+			custom_effect_tooltip = increasing_strength_in_primorye_thirty_five
+			if = {
+				limit = {
+					has_country_flag = dont_get_event
+				}
+				country_event = {
+					id = ARM.73
+					days = 1
+				}
+				clr_country_flag = dont_get_event
+			}	
+        }
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}	
+
+
+	ARM_martial_law_in_ural = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				has_country_flag = cw_ural_button_clicked
+			}
+		}
+		cost = 100
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_ural
+				value = 15
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}	
+			custom_effect_tooltip = martial_law_desc	
+			custom_effect_tooltip = increasing_strength_in_ural_thirty
+			add_idea = ARM_martial_law
+        }
+		remove_effect = {
+			add_ideas = ARM_martial_law
+		}	
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	ARM_martial_law_in_central_russia = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				has_country_flag = cw_central_russia_button_clicked
+			}
+		}
+		cost = 100
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_central_russia
+				value = 15
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}	
+			custom_effect_tooltip = martial_law_desc	
+			custom_effect_tooltip = increasing_strength_in_central_russia_thirty
+			add_ideas = ARM_martial_law
+        }
+
+		remove_effect = {
+			remove_idea = ARM_martial_law
+		}
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	ARM_martial_law_in_primorye = {
+        visible = { 
+			AND = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				has_country_flag = cw_primorye_button_clicked
+			}
+		}
+		cost = 100
+        complete_effect = { 
+			add_to_variable = {
+				var = strength_in_primorye
+				value = 15
+			}	
+			subtract_from_variable = {
+				var = political_point
+				value = 3
+			}	
+			custom_effect_tooltip = martial_law_desc	
+			custom_effect_tooltip = increasing_strength_in_primorye_thirty
+			add_ideas = ARM_martial_law
+        }
+
+		remove_effect = {
+			remove_idea = ARM_martial_law
+		}
+		
+		days_remove = 70
+        ai_will_do = {
+            factor = 1
+        }
+	}
+
+	#Миссия, где предатель набирает влияние
+	ARM_the_enemy_gains_influence = {
+        visible = { 
+			OR = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+			}
+		}
+		activation = { 
+			OR = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+			}
+		}
+		available = { 
+			hidden_trigger = { always = no } 
+		}
+		cancel_trigger = { 
+			hidden_trigger = { 
+				NOT = { 
+					OR = {
+						has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+						has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side						
+					}
+				} 
+			} 
+		}
+
+		is_good = yes
+        timeout_effect = { 
+			random_list = {
+				30 = { 	
+					subtract_from_variable = {
+						var = strength_in_central_russia
+						value = 5
+					}	
+					custom_effect_tooltip = the_enemy_gains_influence_in_central_russia					
+				}
+				30 = { 	
+					subtract_from_variable = {
+						var = strength_in_primorye
+						value = 5
+					}	
+					custom_effect_tooltip = the_enemy_gains_influence_in_primorye
+				}
+				30 = { 	
+					subtract_from_variable = {
+						var = strength_in_ural
+						value = 5
+					}	
+					custom_effect_tooltip = the_enemy_gains_influence_in_ural
+				}
+				10 = { 	
+					subtract_from_variable = {
+						var = strength_in_central_russia
+						value = 3
+					}	
+					subtract_from_variable = {
+						var = strength_in_primorye
+						value = 3
+					}	
+					subtract_from_variable = {
+						var = strength_in_ural
+						value = 3
+					}	
+					custom_effect_tooltip = the_enemy_gains_influence_in_every_region
+				}
+			}
+			hidden_effect = { activate_mission = ARM_the_enemy_gains_influence }
+        }
+		
+		days_mission_timeout = 20
+        ai_will_do = {
+            factor = 1
+        }
+	}	
 }
 
 

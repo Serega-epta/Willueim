@@ -1,7 +1,6 @@
-capital = 891
+capital = 839
 
-oob = LWV
-
+add_manpower = 500000
 
 # Starting tech
 set_technology = {
@@ -37,36 +36,31 @@ set_technology = {
 }
 
 set_research_slots = 2
-set_convoys = 20
+set_convoys = 0
 
 set_politics = {
-	ruling_party = sacraments
+	ruling_party = patriots 
 	elections_allowed = no
 }
 
 set_popularities = {
-	patriots = 1
-    militarists = 5
+	patriots = 99
+    militarists = 1
 	technocracies = 0
 	opportunists = 0
-	gumanists = 4
+	gumanists = 0
     juntas = 0
     professariat = 0
     bandits = 0
 	free = 0
-	sacraments = 90
+	sacraments = 0
     gelerteria = 0
 	svobod = 0
     forestry = 0
 }
-load_focus_tree = {
-    tree = LWV_return_of_ohlostenko
-    keep_completed = no
-}
-recruit_character = LWV_i_van
-recruit_character = LWV_evgeny_prokofiev
-recruit_character = LWV_dmitry_matveychuk
-recruit_character = LWV_andrey_markov
-recruit_character = LWV_anatoly_chernorukiy
-add_ideas = { godsdl holy_nadely uniat_nationalists }
+
+recruit_character = ARM_michael_onufrenko_rebel
+recruit_character = ARM_Yuriy_Podolika_rebel
+
+
 

@@ -1,0 +1,37 @@
+characters = {
+	ARM_Yuriy_Podolika_rebel = {
+		portraits={
+			civilian={
+				large="gfx/leaders/ARM/Yuriy_Podolika.dds"
+			}
+		}
+		country_leader={
+			ideology=patriots_1 
+			expire="333.1.1.1"
+			id=-1
+			desc = POLITICS_Yuriy_Podolika_DESC
+		}
+	}
+	ARM_michael_onufrenko_rebel = {
+		portraits={
+			army={
+				large="gfx/leaders/ARM/michael_onufrenko.dds"
+			}
+			civilian={
+				large="gfx/leaders/ARM/michael_onufrenko.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		country_leader={
+			ideology=patriots_2 
+			expire="3333.1.1.1"
+			id=-1
+		}
+	}
+}

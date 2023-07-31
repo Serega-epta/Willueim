@@ -1,0 +1,168 @@
+guiTypes = {
+#cw - civil war (гражданская война)
+	containerWindowType = {
+		name = "ARM_civil_war_gui"
+		size = { width = 600 height = 700 }
+		position = { x = 0 y = 0 }
+		orientation = center
+		origo = center
+		moveable = no
+		instantTextBoxType = {
+			name = "ARM_civil_war_Podolyakin_side_desc"
+			position = { x = 0 y = 0 }
+			maxWidth = 500
+			maxHeight = 800
+			format = center
+			font = "console_16"
+			text = ARM_civil_war_Podolyakin_side_txt_desc
+		}
+		instantTextBoxType = {
+			name = "ARM_civil_war_Onufurenko_side_desc"
+			position = { x = 0 y = 0 }
+			maxWidth = 500
+			maxHeight = 800
+			format = center
+			font = "console_16"
+			text = ARM_civil_war_Onufurenko_side_txt_desc
+		}
+		containerWindowType = {
+			name = "ARM_cw_map"
+			size = { width = 300 height = 150 }
+			position = { x = -150 y = -275 }
+			orientation = center
+			origo = center
+			moveable = no
+			buttonType = {
+				name = "cw_north_button"
+				position = { x = 100 y = 200 }
+				quadTextureSprite = "GFX_cw_north_button"
+				clicksound = click_default	
+				pdx_tooltip = "cw_north_button_tt"	
+				maxHeight = 50	
+				maxWidth = 50		
+			}	
+			buttonType = {
+				name = "cw_ural_button"
+				position = { x = 258 y = 294 }
+				quadTextureSprite = "GFX_cw_ural_button"	
+				clicksound = click_default	
+				pdx_tooltip = "cw_ural_button_tt"	
+				maxHeight = 50	
+				maxWidth = 50	
+			}
+			buttonType = {
+				name = "cw_central_russia_button"
+				position = { x = 120 y = 301 }
+				quadTextureSprite = "GFX_cw_central_russia_button"	
+				clicksound = click_default	
+				pdx_tooltip = "cw_central_russia_tt"	
+				maxHeight = 50	
+				maxWidth = 50	
+			}
+			buttonType = {
+				name = "cw_southern_suburbs_button"
+				position = { x = 50 y = 425 }
+				quadTextureSprite = "GFX_cw_southern_suburbs_button"	
+				clicksound = click_default	
+				pdx_tooltip = "cw_southern_suburbs_button_tt"	
+				maxHeight = 50	
+				maxWidth = 50			
+			}
+			buttonType = {
+				name = "cw_primorye_button"
+				position = { x = 32 y = 325 }
+				quadTextureSprite = "GFX_cw_primorye_button"	
+				clicksound = click_default	
+				pdx_tooltip = "cw_primorye_button_tt"	
+				maxHeight = 50	
+				maxWidth = 50	
+			}
+		}
+		containerWindowType = {
+			name = "ARM_cw_stength_scale"
+			size = { width = 300 height = 150 }
+			position = { x = -150 y = -250 }
+			orientation = center
+			origo = center
+			moveable = no
+			iconType = {
+				name = "cw_stength_scale_bar_primorye"
+				position = { x = 50 y = 550 }
+				spriteType = "GFX_cw_stength_scale_bar_primorye"	
+			}
+			iconType = {
+				name = "cw_stength_scale_bar_ural"
+				position = { x = 50 y = 550 }
+				spriteType = "GFX_cw_stength_scale_bar_ural"	
+			}
+			iconType = {
+				name = "cw_stength_scale_bar_central_russia"
+				position = { x = 50 y = 550 }
+				spriteType = "GFX_cw_stength_scale_bar_central_russia"	
+			}
+			instantTextBoxType = {
+				name = "ARM_cw_information_about_stength_scale_in_ural_desc"
+				position = { x = 0 y = 620 }
+				maxWidth = 500
+				maxHeight = 800
+				format = center
+				font = "console_16"
+				text = ARM_cw_information_about_stength_scale_in_ural_txt_desc
+			}
+			instantTextBoxType = {
+				name = "ARM_cw_information_about_stength_scale_in_central_russia_desc"
+				position = { x = 0 y = 620 }
+				maxWidth = 500
+				maxHeight = 800
+				format = center
+				font = "console_16"
+				text = ARM_cw_information_about_stength_scale_in_central_russia_txt_desc
+			}
+			instantTextBoxType = {
+				name = "ARM_cw_information_about_stength_scale_in_primorye_desc"
+				position = { x = 0 y = 620 }
+				maxWidth = 500
+				maxHeight = 800
+				format = center
+				font = "console_16"
+				text = ARM_cw_information_about_stength_scale_in_primorye_txt_desc
+			}
+			instantTextBoxType = {
+				name = "cw_south_full_control_by_enemy_desc"
+				position = { x = 0 y = 525 }
+				maxWidth = 500
+				maxHeight = 800
+				format = center
+				font = "console_16"
+				text = cw_south_full_control_by_enemy_txt_desc
+			}
+			instantTextBoxType = {
+				name = "cw_north_full_control_by_enemy_desc"
+				position = { x = 0 y = 525 }
+				maxWidth = 500
+				maxHeight = 800
+				format = center
+				font = "console_16"
+				text = cw_north_full_control_by_enemy_txt_desc
+			}
+			instantTextBoxType = {
+				name = "cw_south_full_control_by_us_desc"
+				position = { x = 0 y = 525 }
+				maxWidth = 500
+				maxHeight = 800
+				format = center
+				font = "console_16"
+				text = cw_south_full_control_by_us_txt_desc
+			}
+			instantTextBoxType = {
+				name = "cw_north_full_control_by_us_desc"
+				position = { x = 0 y = 525 }
+				maxWidth = 500
+				maxHeight = 800
+				format = center
+				font = "console_16"
+				text = cw_north_full_control_by_us_txt_desc
+			}
+		}
+	}	
+}

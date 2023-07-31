@@ -1002,5 +1002,22 @@ ideas = {
 				terrain_penalty_reduction = 0.5
 			}	
 		}
+
+		ARM_grace = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_speed_buildings_factor = -0.5
+				consumer_goods_factor = 0.03
+			}	
+		}
+
+		ARM_martial_law = {
+			picture = Sovet_reintegratsii
+			modifier = {
+				production_speed_buildings_factor = -0.5
+				production_factory_efficiency_gain_factor = -0.5
+				production_factory_efficiency_gain_factor = -0.5
+			}	
+		}
 	}
 }

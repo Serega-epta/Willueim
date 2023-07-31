@@ -1,0 +1,408 @@
+#Силы равны
+defined_text = {
+    name = ARM_cw_information_about_stength_scale_in_ural_desc
+    text = {
+        trigger = {
+            check_variable = { strength_in_ural = 50 }
+        }
+        localization_key = ARM_cw_information_force_equel_txt_desc
+    }
+    #Информация о доминировании Подолякина на Урале
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_ural
+                    value = 50
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_ural
+                    value = 75
+                    compare = less_than
+                } 
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_stronger_Podolyakin_side_Ural_txt_desc
+    }
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_ural
+                    value = 25
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_ural
+                    value = 50
+                    compare = less_than
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_stronger_Onufrenko_side_Ural_txt_desc        
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_ural
+                    value = 75
+                    compare = greater_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_full_control_Podolyakin_side_Ural_txt_desc        
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_ural
+                    value = 25
+                    compare = less_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_full_control_Onufrenko_side_Ural_txt_desc        
+    }
+
+    #Информация о доминировании Онуфренко на Урале
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_ural
+                    value = 50
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_ural
+                    value = 75
+                    compare = less_than
+                } 
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_stronger_Onufrenko_side_Ural_txt_desc
+    }
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_ural
+                    value = 25
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_ural
+                    value = 50
+                    compare = less_than
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_stronger_Podolyakin_side_Ural_txt_desc        
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_ural
+                    value = 75
+                    compare = greater_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_full_control_Onufrenko_side_Ural_txt_desc        
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_ural
+                    value = 25
+                    compare = less_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_full_control_Podolyakin_side_Ural_txt_desc        
+    }
+}
+defined_text = {
+    name = ARM_cw_information_about_stength_scale_in_central_russia_desc
+    text = {
+        trigger = {
+            check_variable = { strength_in_central_russia = 50 }
+        }
+        localization_key = ARM_cw_information_force_equel_txt_desc
+    }
+    #Информация о доминировании Подолякина в Центральной России
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_central_russia
+                    value = 50
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_central_russia
+                    value = 75
+                    compare = less_than
+                } 
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_stronger_Podolyakin_side_Central_Russia_txt_desc        
+    }
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_central_russia
+                    value = 25
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_central_russia
+                    value = 50
+                    compare = less_than
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_stronger_Onufrenko_side_Central_Russia_txt_desc 
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_central_russia
+                    value = 75
+                    compare = greater_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_full_control_Podolyakin_side_Central_Russia_txt_desc       
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_central_russia
+                    value = 25
+                    compare = less_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_full_control_Onufrenko_side_Central_Russia_txt_desc       
+    }
+
+    #Информация о доминировании Онуфренко в Центральной России
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_central_russia
+                    value = 25
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_central_russia
+                    value = 50
+                    compare = less_than
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_stronger_Podolyakin_side_Central_Russia_txt_desc        
+    }
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_central_russia
+                    value = 50
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_central_russia
+                    value = 75
+                    compare = less_than
+                } 
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_stronger_Onufrenko_side_Central_Russia_txt_desc 
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_central_russia
+                    value = 75
+                    compare = greater_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_full_control_Onufrenko_side_Central_Russia_txt_desc       
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_central_russia
+                    value = 25
+                    compare = less_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_full_control_Podolyakin_side_Central_Russia_txt_desc       
+    }
+}
+defined_text = {
+    name = ARM_cw_information_about_stength_scale_in_primorye_desc
+    text = {
+        trigger = {
+            check_variable = { strength_in_primorye = 50 }
+        }
+        localization_key = ARM_cw_information_force_equel_txt_desc
+    }
+    #Информация о доминировании Подолякина в Приморье
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_primorye
+                    value = 50
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_primorye
+                    value = 75
+                    compare = less_than
+                } 
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_stronger_Podolyakin_side_Primorye_txt_desc       
+    }
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_primorye
+                    value = 25
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_primorye
+                    value = 50
+                    compare = less_than
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_stronger_Onufrenko_side_Primorye_txt_desc      
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_primorye
+                    value = 75
+                    compare = greater_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_full_control_Podolyakin_side_Primorye_txt_desc        
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_primorye
+                    value = 25
+                    compare = less_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Podolyakin_full_control_Onufrenko_side_Primorye_txt_desc        
+    }
+    #Информация о доминировании Онуфренко
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_primorye
+                    value = 50
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_primorye
+                    value = 75
+                    compare = less_than
+                } 
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_stronger_Onufrenko_side_Primorye_txt_desc       
+    }
+    text = {
+        trigger = {
+            AND = { 
+                check_variable = { 
+                    var = strength_in_primorye
+                    value = 25
+                    compare = greater_than
+                } 
+                check_variable = { 
+                    var = strength_in_primorye
+                    value = 50
+                    compare = less_than
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_stronger_Podolyakin_side_Primorye_txt_desc      
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_primorye
+                    value = 75
+                    compare = greater_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_full_control_Onufrenko_side_Primorye_txt_desc        
+    }
+    text = {
+        trigger = {
+            AND = {
+                check_variable = {
+                    var = strength_in_primorye
+                    value = 25
+                    compare = less_than_or_equals 
+                }
+                has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+            }
+        }
+        localization_key = ARM_cw_information_Onufrenko_full_control_Podolyakin_side_Primorye_txt_desc        
+    }    
+}

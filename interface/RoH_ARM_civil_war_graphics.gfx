@@ -1,0 +1,48 @@
+spriteTypes = {
+	#Карта
+	spriteType = {
+		name = "GFX_cw_north_button"
+		texturefile = "gfx/interface/ARM/ARM_civil_war/cw_north_button.dds"
+	}	
+	spriteType = {
+		name = "GFX_cw_ural_button"
+		texturefile = "gfx/interface/ARM/ARM_civil_war/cw_ural_button.dds"
+	}
+	spriteType = {
+		name = "GFX_cw_central_russia_button"
+		texturefile = "gfx/interface/ARM/ARM_civil_war/cw_central_russia_button.dds"
+	}	
+	spriteType = {
+		name = "GFX_cw_southern_suburbs_button"
+		texturefile = "gfx/interface/ARM/ARM_civil_war/cw_southern_suburbs_button.dds"
+	}
+	spriteType = {
+		name = "GFX_cw_primorye_button"
+		texturefile = "gfx/interface/ARM/ARM_civil_war/cw_primorye_button.dds"
+	}
+	#Ползунок
+
+	progressbartype = {
+		name = "GFX_cw_stength_scale_bar_primorye"
+		textureFile1 = "gfx/interface/ARM/ARM_civil_war/strength_scale_twoHundred_zero_bar.dds"
+		textureFile2 = "gfx/interface/ARM/ARM_civil_war/strength_scale_zero_two_hundred_bar.dds"
+		size = { x = 400 y = 50 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbartype = {
+		name = "GFX_cw_stength_scale_bar_ural"
+		textureFile1 = "gfx/interface/ARM/ARM_civil_war/strength_scale_twoHundred_zero_bar.dds"
+		textureFile2 = "gfx/interface/ARM/ARM_civil_war/strength_scale_zero_two_hundred_bar.dds"
+		size = { x = 400 y = 50 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbartype = {
+		name = "GFX_cw_stength_scale_bar_central_russia"
+		textureFile1 = "gfx/interface/ARM/ARM_civil_war/strength_scale_twoHundred_zero_bar.dds"
+		textureFile2 = "gfx/interface/ARM/ARM_civil_war/strength_scale_zero_two_hundred_bar.dds"
+		size = { x = 400 y = 50 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

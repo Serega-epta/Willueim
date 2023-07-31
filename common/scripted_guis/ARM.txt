@@ -65,4 +65,164 @@ scripted_gui = {
 			}
 		}
 	}
+
+	ARM_civil_war_gui  = {
+		context_type = decision_category
+		window_name = "ARM_civil_war_gui"
+		visible = { 
+			always = yes
+		}
+		properties = {		
+			cw_stength_scale_bar_primorye = { frame = strength_in_primorye }
+			cw_stength_scale_bar_ural = {frame = strength_in_ural }
+			cw_stength_scale_bar_central_russia = {frame = strength_in_central_russia }
+		}
+		effects = {	
+			cw_ural_button_click = {
+				set_country_flag = cw_ural_button_clicked	
+				if = {
+					limit = { has_country_flag = cw_north_button_clicked } 
+					clr_country_flag = cw_north_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_central_russia_button_clicked } 
+					clr_country_flag = cw_central_russia_button_clicked
+				}		
+				if = {
+					limit = { has_country_flag = cw_southern_suburbs_button_clicked } 
+					clr_country_flag = cw_southern_suburbs_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_primorye_button_clicked } 
+					clr_country_flag = cw_primorye_button_clicked
+				}			
+			}
+			cw_central_russia_button_click = {
+				set_country_flag = cw_central_russia_button_clicked	
+				if = {
+					limit = { has_country_flag = cw_ural_button_clicked } 
+					clr_country_flag = cw_ural_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_north_button_clicked } 
+					clr_country_flag = cw_north_button_clicked
+				}		
+				if = {
+					limit = { has_country_flag = cw_southern_suburbs_button_clicked } 
+					clr_country_flag = cw_southern_suburbs_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_primorye_button_clicked } 
+					clr_country_flag = cw_primorye_button_clicked
+				}		
+			}
+			cw_primorye_button_click = {
+				set_country_flag = cw_primorye_button_clicked	
+				if = {
+					limit = { has_country_flag = cw_ural_button_clicked } 
+					clr_country_flag = cw_ural_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_central_russia_button_clicked } 
+					clr_country_flag = cw_central_russia_button_clicked
+				}		
+				if = {
+					limit = { has_country_flag = cw_southern_suburbs_button_clicked } 
+					clr_country_flag = cw_southern_suburbs_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_north_button_clicked } 
+					clr_country_flag = cw_north_button_clicked
+				}		
+			}
+			cw_north_button_click = {
+				set_country_flag = cw_north_button_clicked	
+				if = {
+					limit = { has_country_flag = cw_ural_button_clicked } 
+					clr_country_flag = cw_ural_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_central_russia_button_clicked } 
+					clr_country_flag = cw_central_russia_button_clicked
+				}		
+				if = {
+					limit = { has_country_flag = cw_southern_suburbs_button_clicked } 
+					clr_country_flag = cw_southern_suburbs_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_primorye_button_clicked } 
+					clr_country_flag = cw_primorye_button_clicked
+				}	
+			}
+			cw_southern_suburbs_button_click = {
+				set_country_flag = cw_southern_suburbs_button_clicked	
+				if = {
+					limit = { has_country_flag = cw_ural_button_clicked } 
+					clr_country_flag = cw_ural_button_clicked
+				}
+				if = {
+					limit = { has_country_flag = cw_central_russia_button_clicked } 
+					clr_country_flag = cw_central_russia_button_clicked
+				}		
+				if = {
+					limit = { has_country_flag = cw_primorye_button_clicked } 
+					clr_country_flag = cw_primorye_button_clicked
+				}	
+				if = {
+					limit = { has_country_flag = cw_north_button_clicked } 
+					clr_country_flag = cw_north_button_clicked
+				}		
+			}
+		}
+		triggers = {	
+			ARM_civil_war_Podolyakin_side_desc_visible = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+			}
+			ARM_civil_war_Onufurenko_side_desc_visible = {
+				has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+			}
+			cw_stength_scale_bar_primorye_visible = {
+				has_country_flag = cw_primorye_button_clicked
+			}
+			cw_stength_scale_bar_ural_visible = {
+				has_country_flag = cw_ural_button_clicked
+			}
+			cw_stength_scale_bar_central_russia_visible = {
+				has_country_flag = cw_central_russia_button_clicked
+			}
+			cw_south_full_control_by_enemy_desc_visible = {
+				AND = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+					has_country_flag = cw_southern_suburbs_button_clicked
+				}
+			}
+			cw_north_full_control_by_enemy_desc_visible = {
+				AND = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+					has_country_flag = cw_north_button_clicked
+				}
+			}
+			cw_south_full_control_by_us_desc_visible = {
+				AND = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side
+					has_country_flag = cw_southern_suburbs_button_clicked
+				}
+			}
+			cw_north_full_control_by_us_desc_visible = {
+				AND = {
+					has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side
+					has_country_flag = cw_north_button_clicked
+				}
+			}
+			ARM_cw_information_about_stength_scale_in_ural_desc_visible = {
+				has_country_flag = cw_ural_button_clicked	
+			}
+			ARM_cw_information_about_stength_scale_in_central_russia_desc_visible = {
+				has_country_flag = cw_central_russia_button_clicked
+			}
+			ARM_cw_information_about_stength_scale_in_primorye_desc_visible = {
+				has_country_flag = cw_primorye_button_clicked
+			}
+		}
+	}
 }

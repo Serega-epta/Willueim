@@ -1,0 +1,383 @@
+﻿focus_tree = {
+	id = army_junta_rodina_unite_podoliakin_tree
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = ARM
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no	
+
+	focus = {
+		id = ARM_no_place_to_rebels
+		icon = GFX_no_place_to_rebels
+		x = 8
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ARM_fighting_for_the_fate_of_the_Motherland
+		}	
+	}
+	focus = {
+		id = ARM_we_army_of_people
+		icon = GFX_we_army_of_people
+		prerequisite = { focus = ARM_no_place_to_rebels }
+		x = 5
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = ARM_show_popularyty
+		icon = GFX_show_popularyty
+		prerequisite = { focus = ARM_we_army_of_people }
+		x = 5
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.3
+			country_event = {
+				id = ARM.53
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = ARM_for_yours_future
+		icon = GFX_for_yours_future
+		prerequisite = { focus = ARM_show_popularyty }
+		x = 5
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.2
+		}
+	}
+	focus = {
+		id = ARM_dokazavshie_loyalnost
+		icon = GFX_dokazavshie_loyalnost
+		prerequisite = { focus = ARM_for_yours_future }
+		x = 5
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}	
+	focus = {
+		id = ARM_we_are_proffesional
+		icon = GFX_we_are_proffesional
+		prerequisite = { focus = ARM_no_place_to_rebels }
+		x = 8
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = ARM_no_mercy_to_enemyes
+		icon = GFX_no_mercy_to_enemyes
+		prerequisite = { focus = ARM_we_are_proffesional }
+		x = 8
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = ARM_everybody_useful
+		icon = GFX_everybody_useful
+		prerequisite = { focus = ARM_no_mercy_to_enemyes }
+		x = 8
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_fighting_for_the_fate_of_the_Motherland
+				add_idea = ARM_fighting_for_the_fate_of_the_Motherland1_pod
+			}
+		}
+	}
+	focus = {
+		id = ARM_we_win_obiazatelno
+		icon = GFX_we_win_obiazatelno
+		prerequisite = { focus = ARM_everybody_useful }
+		x = 8
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			army_experience = 100
+		}
+	}		
+	focus = {
+		id = ARM_we_smarter
+		icon = GFX_we_smarter
+		prerequisite = { focus = ARM_no_place_to_rebels }
+		x = 11
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_fighting_for_the_fate_of_the_Motherland1_pod
+				add_idea = ARM_fighting_for_the_fate_of_the_Motherland2_pod
+			}
+		}
+	}
+	focus = {
+		id = ARM_fanatichnii_bredni
+		icon = GFX_fanatichnii_bredni
+		prerequisite = { focus = ARM_we_smarter }
+		x = 11
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ARM_in_salvation
+		}
+	}
+	focus = {
+		id = ARM_kreshenie_ognem
+		icon = GFX_kreshenie_ognem
+		prerequisite = { focus = ARM_fanatichnii_bredni }
+		x = 11
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_in_salvation
+				add_idea = ARM_in_salvation1
+			}			
+		}
+	}
+	focus = {
+		id = ARM_our_faithful
+		icon = GFX_our_faithful
+		prerequisite = { focus = ARM_kreshenie_ognem }
+		x = 11
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_in_salvation1
+				add_idea = ARM_in_salvation2
+			}		
+		}
+	}	
+	
+	focus = {
+		id = ARM_seria_porajenii
+		icon = GFX_seria_porajenii
+		prerequisite = { focus = ARM_our_faithful }
+		prerequisite = { focus = ARM_we_win_obiazatelno }
+		prerequisite = { focus = ARM_dokazavshie_loyalnost }
+		available = {
+			surrender_progress > 0.25
+		}
+		x = 6
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_in_salvation2
+				add_idea = ARM_in_salvation_lose1
+			}
+		}
+	}
+
+	focus = {
+		id = ARM_mi_na_grani
+		icon = GFX_mi_na_grani
+		prerequisite = { focus = ARM_seria_porajenii }
+		available = {
+			surrender_progress > 0.5
+		}
+		x = 6
+		y = 12
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_in_salvation_lose1
+				add_idea = ARM_in_salvation_lose2
+			}
+			country_event = {
+				id = ARM.55
+				days = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = ARM_skoraya_pobeda
+		icon = GFX_skoraya_pobeda
+		prerequisite = { focus = ARM_our_faithful }
+		prerequisite = { focus = ARM_we_win_obiazatelno }
+		prerequisite = { focus = ARM_dokazavshie_loyalnost }
+		x = 10
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = ARM_in_salvation_lose1
+				}   
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_lose1
+					add_idea = ARM_in_salvation_win1_and_lose1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_in_salvation_lose2
+				}
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_lose2
+					add_idea = ARM_in_salvation_win1_and_lose2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_in_salvation2
+				}
+				swap_ideas = {
+					remove_idea = ARM_in_salvation2
+					add_idea = ARM_in_salvation_win1
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARM_ostalos_nemnogo
+		icon = GFX_ostalos_nemnogo
+		prerequisite = { focus = ARM_skoraya_pobeda }
+		x = 10
+		y = 12
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = ARM_in_salvation_win1_and_lose1
+				}   
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_win1_and_lose1
+					add_idea = ARM_in_salvation_win2_and_lose1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_in_salvation_win1_and_lose2
+				}
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_win1_and_lose2
+					add_idea = ARM_in_salvation_win2_and_lose2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ARM_in_salvation_win1
+				}
+				swap_ideas = {
+					remove_idea = ARM_in_salvation_win1
+					add_idea = ARM_in_salvation_win2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ARM_besslavni_end
+		icon = GFX_besslavni_end
+		prerequisite = { focus = ARM_ostalos_nemnogo }
+		x = 8
+		y = 14
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			load_focus_tree = {
+				tree = army_junta_podoliakin_end_tree
+				keep_completed = no
+			}
+			country_event = {
+				id = ARM.59
+				days = 1
+			}
+		}
+	}	
+}

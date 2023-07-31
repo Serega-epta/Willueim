@@ -32,4 +32,13 @@ ARM_creating_a_submarines_tretia_fazza = {
 	priority = { base = 5 }
 }
 
+ARM_civil_war = {
+	icon = saf_anti_colonialist_crusade
+	scripted_gui = ARM_civil_war_gui
+	visible_when_empty = yes
+	visible  = { OR = { has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side } }
+	allowed = { original_tag = ARM }
+	priority = { base = 5 }
+}
+
 
