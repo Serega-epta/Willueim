@@ -11,7 +11,7 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = LWV_God's_gift
+		id = LWV_bojii_darovania
 		icon = GFX_Korol_charodei
 		x = 14
 		y = 0
@@ -107,7 +107,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = LWV_United
+		id = LWV_edinie
 		icon = GFX_Korol_charodei
 		prerequisite = { focus = LWV_bojii_darovania }
 		x = 12
@@ -118,14 +118,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-				id = LWV.66
-				days = 1
-				}
-		swap_ideas = {
-				remove_idea = prorok11
-				add_idea = prorok12
-			}					
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}
 	
@@ -141,19 +134,12 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.67
-				days = 1
-			}	
-		swap_ideas = {
-				remove_idea = prorok12
-				add_idea = prorok13
-			}						
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}
 	
 	focus = {
-		id = LWV_Unsophisticated
+		id = LWV_bezhitrostnii
 		icon = GFX_Korol_charodei
 		prerequisite = { focus = LWV_freedom }
 		x = 8
@@ -164,19 +150,12 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.68
-				days = 1
-			}	
-		swap_ideas = {
-				remove_idea = prorok13
-				add_idea = prorok14
-			}						
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}
 	
 	focus = {
-		id = LWV_Strong
+		id = LWV_silniii
 		icon = GFX_Korol_charodei
 		prerequisite = { focus = LWV_bezhitrostnii }
 		x = 10
@@ -187,18 +166,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.69
-				days = 1
-			}	
-		swap_ideas = {
-				remove_idea = prorok14
-				add_idea = prorok15
-			}						
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}
 	focus = {
-		id = LWV_Submissive
+		id = LWV_pokornii
 		icon = GFX_Korol_charodei
 		prerequisite = { focus = LWV_silniii }
 		x = 12
@@ -209,14 +181,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.70
-				days = 1
-			}			
-		swap_ideas = {
-				remove_idea = prorok15
-				add_idea = prorok16
-			}						
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}
 	focus = {
@@ -231,14 +196,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.71
-				days = 1
-			}			
-				swap_ideas = {
-				remove_idea = prorok16
-				add_idea = prorok17
-			}						
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}	
 	focus = {
@@ -253,14 +211,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.72
-				days = 1
-			}		
-		swap_ideas = {
-				remove_idea = prorok17
-				add_idea = prorok18
-			}									
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}	
 	focus = {
@@ -275,14 +226,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.73
-				days = 1
-			}			
-		swap_ideas = {
-				remove_idea = prorok18
-				add_idea = prorok19
-			}						
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}	
 	focus = {
@@ -297,14 +241,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.74
-				days = 1
-			}	
-		swap_ideas = {
-				remove_idea = prorok19
-				add_idea = prorok20
-			}									
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}	
 	focus = {
@@ -319,14 +256,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = {
-				id = LWV.75
-				days = 1
-			}
-		swap_ideas = {
-				remove_idea = prorok20
-				add_idea = prorok21
-			}											
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}	
 	focus = {
@@ -342,10 +272,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-				id = LWV.61
-				days = 1
-			}			
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА ТУТ НУЖНО УДАЛИТЬ ВСЕ ЧЕРТЫ
 			remove_country_leader_trait = New_vera
 			remove_country_leader_trait = Absolyut 
 			remove_country_leader_trait = LWV_paranoid 			
@@ -366,10 +293,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
-			country_event = {
-				id = LWV.69
-				days = 1
-			}			
+			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА 
 		}
 	}
 
@@ -387,11 +311,6 @@ focus_tree = {
 			#############################ДОДЕЛАТЬ КОГДА БУДЕТ ФАЗА  УДАЛИТЬ ВСЕ НАЦ ДУХИ 
 			add_political_power = -1000
 			add_stability = -2
-			country_event = {
-				id = LWV.63
-				days = 1
-			}	
-			remove_idea = prorok21
 		}
 	}
 	focus = {
@@ -407,10 +326,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-				id = LWV.64
-				days = 1
-			}			
 		
 		}
 	}	
