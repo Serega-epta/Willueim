@@ -573,11 +573,14 @@ focus_tree = {
 				limit = {
 					has_country_flag = podoliakin_tree
 				}
-				load_focus_tree { 
-					tree = army_junta_rodina_unite_podoliakin_tree 
-					keep_completed = no 
+				ROOT = {
+					load_focus_tree { 
+						tree = army_junta_rodina_unite_podoliakin_tree 
+						keep_completed = no 
+					}
 				}
 				REA = {
+					promote_character = ARM_michael_onufrenko_rebel
 					take_north = yes
 				}
 			}
@@ -585,7 +588,9 @@ focus_tree = {
 				limit = {
 					has_country_flag = onufrenko_tree					
 				}
-				load_focus_tree = army_junta_rodina_unite_onufrenko_tree
+				ROOT = {
+					load_focus_tree = army_junta_rodina_unite_onufrenko_tree
+				}
 				REA = {
 					promote_character = ARM_Yuriy_Podolika_rebel
 					take_southern_suburbs = yes
@@ -600,7 +605,9 @@ focus_tree = {
 						compare = greater_than_or_equals 
 					}
 				}
-				take_full_central_russia = yes
+				ROOT = {
+					take_full_central_russia = yes
+				}
 			}
 			else_if = {
 				limit = {
@@ -632,7 +639,9 @@ focus_tree = {
 				REA = {
 					take_north_central_russia = yes
 				}
-				take_south_central_russia = yes
+				ROOT = {
+					take_south_central_russia = yes					
+				}
 			}
 			#Спавн в Приморье
 			if = {
@@ -643,7 +652,9 @@ focus_tree = {
 						compare = greater_than_or_equals 
 					}
 				}
-				take_full_primorye = yes
+				ROOT = {
+					take_full_primorye = yes
+				}
 			}
 			else_if = {
 				limit = {
@@ -675,7 +686,9 @@ focus_tree = {
 				REA = {
 					take_north_of_primorye = yes
 				}
-				take_south_of_primorye = yes
+				ROOT = {
+					take_south_of_primorye = yes
+				}
 			}
 			#Спавн на Урале
 			if = {
@@ -686,7 +699,9 @@ focus_tree = {
 						compare = greater_than_or_equals 
 					}
 				}
-				take_full_ural = yes
+				ROOT = {
+					take_full_ural = yes
+				}
 			}
 			else_if = {
 				limit = {
@@ -718,7 +733,9 @@ focus_tree = {
 				REA = {
 					take_north_ural = yes
 				}
-				take_south_ural = yes
+				ROOT = {
+					take_south_ural = yes
+				}
 			}
 		}
 	}
