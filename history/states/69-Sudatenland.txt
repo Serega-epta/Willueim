@@ -2,12 +2,12 @@ state=
 {
 	id=69
 	name="STATE_69"
-	manpower = 2830000
+	manpower = 2650000
 	
 	state_category = town
 	
 	resources={
-		steel=4 # was: 8
+		steel=3 # was: 8 #4
 	}
 	
 	history={
@@ -17,12 +17,9 @@ state=
 		#victory_points = {
 		#	11432 1
 		#}
-		victory_points = {
-			11401 3
-		}
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 1
 			anti_air_building = 1
 			424 =
 			{
@@ -57,7 +54,7 @@ state=
 	}
 	provinces=
 	{
-424 469 543 557 3418 3585 5283 6470 7857 9555 11401 11414 11432 11525 	}
+424 543 557 3418 3585 5283 6470 7857 9555 11432 11525 	}
 
 	local_supplies=0.0 
 }

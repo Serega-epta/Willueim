@@ -1,0 +1,81 @@
+add_namespace = iopk
+
+country_event = {
+	id = iopk.1 #Спавн ИОПК
+	title = iopk.1.t
+	desc = iopk.1.d
+	#picture =  
+
+	is_triggered_only = no
+	fire_only_once = yes
+	hidden = yes	
+
+	trigger = {
+		iopk_war_not_appeared = yes
+	}
+	
+	option = {
+		name = iopk.1.a
+		every_country = { news_event = { id = super.5 days = 5 } }
+		SMC = {
+			set_state_owner = 85
+			set_state_owner = 807
+			set_state_owner = 63
+			set_state_owner = 68
+			set_state_owner = 921
+			set_state_owner = 62
+			set_state_owner = 61
+			set_state_owner = 64
+			set_state_owner = 66
+			set_state_owner = 67
+			set_state_owner = 74
+			set_state_owner = 72
+			set_state_owner = 88
+			set_state_owner = 90
+			set_state_owner = 10
+			set_state_owner = 762
+			set_state_owner = 86
+			set_state_owner = 87
+			set_state_owner = 1008
+			set_state_owner = 1009
+			set_state_owner = 1010
+			#set_capital = { state = 64 remember_old_capital = no }
+		}		
+		TDC = {
+			set_state_owner = 46
+			set_state_owner = 81
+			set_state_owner = 84
+			set_state_owner = 79
+			set_state_owner = 1015
+			#set_capital = { state = 45 remember_old_capital = no }
+		}
+		TCL = {
+			set_state_owner = 70
+			set_state_owner = 71
+			set_state_owner = 664
+			set_state_owner = 45
+			set_state_owner = 154
+			set_state_owner = 43
+			set_state_owner = 83
+			set_state_owner = 82	
+			set_state_owner = 764
+			#set_capital = { state = 43 remember_old_capital = no }				
+		}
+		BAC = {
+			set_state_owner = 1012
+			#set_capital = { state = 1012 remember_old_capital = no }	
+		}
+		PRO = {
+			set_state_owner = 76
+			#set_capital = { state = 76 remember_old_capital = no }	
+		}
+		MAR = {
+			set_state_owner = 1013
+			#set_capital = { state = 1013 remember_old_capital = no }			
+		}
+		SYB = {
+			set_state_owner = 1014
+			#set_capital = { state = 1014 remember_old_capital = no }
+		}
+	}	
+}
