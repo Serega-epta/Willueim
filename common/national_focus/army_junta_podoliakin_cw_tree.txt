@@ -375,7 +375,9 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
-			country_exists = REA
+			NOT = {
+				country_exists = REA
+			}
 		}
 		completion_reward = {
 			load_focus_tree = {
@@ -386,6 +388,7 @@
 				id = ARM.59
 				days = 1
 			}
+			set_cosmetic_tag = ARM_Motherland_with_banner
 		}
 	}	
 }
