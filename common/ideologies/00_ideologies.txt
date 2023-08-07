@@ -1,79 +1,14 @@
 ideologies = {
-	
-	forestry = {
+
+	gelerteria = {
 	
 		types = {
-			forestry_1 = {}
+			gelerteria_1 = {}
 		}
 		
 		dynamic_faction_names = {}
 		
-		color = { 110 218 21 }
-		
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-
-		modifiers = {
-			generate_wargoal_tension = 1.00
-			join_faction_tension = 0.80
-			lend_lease_tension = 0.50
-			send_volunteers_tension = 0.50
-			guarantee_tension = 0.25
-			annex_cost_factor = 0.5
-			civilian_intel_to_others = 20.0
-			army_intel_to_others = 5.0
-			navy_intel_to_others = 20.0
-			airforce_intel_to_others = 5
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-
-	technocracies = {
-		
-		types = {
-			technocracies_1 = {}	
-		}
-		
-		dynamic_faction_names = {}
-
-		color = { 255 255 255 }
-
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}	
-	
-		modifiers = {
-			puppet_cost_factor = -0.3
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	svobod = {
-	
-		types = {
-			svobod_1 = {}
-		}
-		
-		dynamic_faction_names = {}
-		
-		color = { 255 255 0 }
+		color = { 8 37 103 }
 		
 		rules = {
 			can_create_collaboration_government = no
@@ -89,98 +24,7 @@ ideologies = {
 			army_intel_to_others = 7.5
 			navy_intel_to_others = 12.5
 			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-	
-	gumanists = {
-	
-		types = {
-			gumanists_1 = {}
-			unificators = {}
-		}
-		
-		dynamic_faction_names = {}
-		
-		color = { 89 120 203 }
-		
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}	
-	
-		modifiers = {
-			puppet_cost_factor = -0.3
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	juntas = {
-	
-		types = {
-			juntas_1 = {}
-		}
-		
-		dynamic_faction_names = {}
-		
-		color = { 93 32 32 }
-		
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}	
-	
-		modifiers = {
-			puppet_cost_factor = -0.3
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	militarists = {
-	
-		types = {
-			militarists_1 = {}
-		}
-		
-		dynamic_faction_names = {}
-		
-		color = { 128 0 0 }
-		
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}	
-	
-		modifiers = {
-			puppet_cost_factor = -0.3
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
+			hidden_modifier = { join_faction_tension = -0.1 } 
 		}
 		ai_neutral = yes
 		can_be_boosted = no
@@ -194,7 +38,7 @@ ideologies = {
 		
 		dynamic_faction_names = {}
 		
-		color = { 220 20 60 }
+		color = { 196 30 58 }
 		
 		rules = {
 			can_create_collaboration_government = no
@@ -224,97 +68,7 @@ ideologies = {
 		
 		dynamic_faction_names = {}
 		
-		color = { 255 188 8 }
-		
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}	
-	
-		modifiers = {
-			puppet_cost_factor = -0.3
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	sacraments = {
-	
-		types = {
-			sacraments_1 = {}
-		}
-		
-		dynamic_faction_names = {}
-		
-		color = { 72 35 113 }
-		
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}	
-	
-		modifiers = {
-			puppet_cost_factor = -0.3
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	gelerteria = {
-	
-		types = {
-			gelerteria_1 = {}
-		}
-		
-		dynamic_faction_names = {}
-		
-		color = { 0 0 102 }
-		
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}	
-	
-		modifiers = {
-			puppet_cost_factor = -0.3
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	bandits = {
-	
-		types = {
-			bandits_1 = {}
-		}
-		
-		dynamic_faction_names = {}
-		
-		color = { 0 0 255 }
+		color = { 204 119 34 }
 		
 		rules = {
 			can_create_collaboration_government = no
@@ -344,7 +98,157 @@ ideologies = {
 		
 		dynamic_faction_names = {}
 		
-		color = { 0 0 0 }
+		color = { 25 25 25 }
+		
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = yes
+		}	
+	
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	sacraments = {
+	
+		types = {
+			sacraments_1 = {}
+		}
+		
+		dynamic_faction_names = {}
+		
+		color = { 75 0 130 }
+		
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = yes
+		}	
+	
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	militarists = {
+	
+		types = {
+			militarists_1 = {}
+		}
+		
+		dynamic_faction_names = {}
+		
+		color = { 165 38 10 }
+		
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = yes
+		}	
+	
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	juntas = {
+	
+		types = {
+			juntas_1 = {}
+		}
+		
+		dynamic_faction_names = {}
+		
+		color = { 144 0 32 }
+		
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = yes
+		}	
+	
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	bandits = {
+	
+		types = {
+			bandits_1 = {}
+		}
+		
+		dynamic_faction_names = {}
+		
+		color = { 37 71 164 }
+		
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = yes
+		}	
+	
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	svobod = {
+	
+		types = {
+			svobod_1 = {}
+		}
+		
+		dynamic_faction_names = {}
+		
+		color = { 255 215 0 }
 		
 		rules = {
 			can_create_collaboration_government = no
@@ -374,7 +278,102 @@ ideologies = {
 		
 		dynamic_faction_names = {}
 		
-		color = { 205 202 13 }
+		color = { 230 167 17 }
+		
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = yes
+		}	
+	
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	technocracies = {
+		
+		types = {
+			technocracies_1 = {}	
+		}
+		
+		dynamic_faction_names = {}
+
+		color = { 255 250 250 }
+
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = yes
+		}	
+	
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	forestry = {
+	
+		types = {
+			forestry_1 = {}
+		}
+		
+		dynamic_faction_names = {}
+		
+		color = { 62 180 137 }
+		
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = yes
+		}
+
+		modifiers = {
+			generate_wargoal_tension = 1.00
+			join_faction_tension = 0.80
+			lend_lease_tension = 0.50
+			send_volunteers_tension = 0.50
+			guarantee_tension = 0.25
+			annex_cost_factor = 0.5
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	gumanists = {
+	
+		types = {
+			gumanists_1 = {}
+			unificators = {}
+		}
+		
+		dynamic_faction_names = {}
+		
+		color = { 65 105 225 }
 		
 		rules = {
 			can_create_collaboration_government = no
