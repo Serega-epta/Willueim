@@ -15,7 +15,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -45,7 +45,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -75,7 +75,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -105,7 +105,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -135,7 +135,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -165,7 +165,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -195,7 +195,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -225,7 +225,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -255,37 +255,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
-		}	
-	
-		modifiers = {
-			puppet_cost_factor = -0.3
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
-			hidden_modifier = { join_faction_tension = -0.1 }
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	technocracies = {
-		
-		types = {
-			technocracies_1 = {}	
-		}
-		
-		dynamic_faction_names = {}
-
-		color = { 255 250 250 }
-
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -315,7 +285,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}
 
 		modifiers = {
@@ -329,6 +299,36 @@ ideologies = {
 			army_intel_to_others = 5.0
 			navy_intel_to_others = 20.0
 			airforce_intel_to_others = 5
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	technocracies = {
+		
+		types = {
+			technocracies_1 = {}	
+		}
+		
+		dynamic_faction_names = {}
+
+		color = { 255 250 250 }
+
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = no
+		}	
+	
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
 		}
 		ai_neutral = yes
 		can_be_boosted = no
@@ -349,7 +349,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
@@ -380,7 +380,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}	
 	
 		modifiers = {
