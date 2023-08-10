@@ -1,24 +1,24 @@
-﻿ search_filters = {FOCUS_FILTER_POLITICAL}
- search_filters = {FOCUS_FILTER_RESEARCH}
- search_filters = {FOCUS_FILTER_INDUSTRY}
- search_filters = {FOCUS_FILTER_STABILITY}
- search_filters = {FOCUS_FILTER_WAR_SUPPORT}
- search_filters = {FOCUS_FILTER_MANPOWER}
- search_filters = {FOCUS_FILTER_ANNEXATION}
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
 
- focus_tree = {
-	id = odessa_focus
-	
-	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = ODS
-		}
-	}
-	continuous_focus_position = { x = 50 y = 1400 }
-	default = no
+# focus_tree = {
+#	id = odessa_focus
+#	
+#	country = {
+#		factor = 0
+#		
+#		modifier = {
+#			add = 10
+#			tag = ODS
+#		}
+#	}
+#	continuous_focus_position = { x = 50 y = 1400 }
+#	default = no
 
 	shared_focus = {
 		id = ODS_perv
@@ -32,7 +32,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 		country_event = {
-						id = ODS.12
+						id = WORe.3
 				}
 		}
 		
@@ -53,7 +53,7 @@
 			
 		completion_reward = {
 		country_event = {
-						id = ODS.1
+						id = WORe.7
 				}
 		}
 	}
@@ -72,9 +72,6 @@
 		}
 		
 		completion_reward = {
-		country_event = {
-						id = ODS.6
-				}
 			
 		}
 	}
@@ -94,7 +91,7 @@
 		
 		completion_reward = {
 			country_event = {
-						id = ODS.2
+						id = WORe.6
 				}
 		}
 	}
@@ -111,9 +108,6 @@
 		}
 		
 		completion_reward = {
-			country_event = {
-						id = ODS.11
-				}
 		}
 	}
 	shared_focus = {
@@ -129,9 +123,6 @@
 		}
 		
 		completion_reward = {
-			country_event = {
-						id = ODS.15
-				}
 		}
 	}
 	shared_focus = {
@@ -150,7 +141,7 @@
 		
 		completion_reward = {
 		country_event = {
-						id = ODS.14
+						id = WORe.13
 				}
 				
 		hidden_effect = { load_focus_tree = odessa_focus_faza2 }	
@@ -171,7 +162,7 @@
 		
 		completion_reward = {
 		country_event = {
-						id = ODS.13
+						id = WORe.4
 				}
 		}
 	}
@@ -189,7 +180,7 @@
 		
 		completion_reward = {
 		country_event = {
-						id = ODS.10
+						id = WORe.11
 				}
 		}
 	}
@@ -207,7 +198,7 @@
 		
 		completion_reward = {
 		country_event = {
-						id = ODS.9
+						id = WORe.15
 				}
 		}
 	}
@@ -225,9 +216,6 @@
 		}
 		
 		completion_reward = {
-		country_event = {
-						id = ODS.4
-				}
 		}
 	}
 	shared_focus = {
@@ -243,9 +231,6 @@
 		}
 		
 		completion_reward = {
-		country_event = {
-						id = ODS.3
-				}
 		}
 	}
 	shared_focus = {
@@ -262,7 +247,7 @@
 		
 		completion_reward = {
 		country_event = {
-						id = ODS.7
+						id = WORe.9
 				}
 		}
 	}
@@ -280,7 +265,7 @@
 		
 		completion_reward = {
 		country_event = {
-						id = ODS.8
+						id = WORe.5
 				}
 		}
 	}
@@ -298,9 +283,6 @@
 		}
 		
 		completion_reward = {
-		country_event = {
-						id = ODS.5
-				}
 		}
 	}
 	shared_focus = {
