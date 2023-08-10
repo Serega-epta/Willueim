@@ -8,11 +8,6 @@
 			add = 100
 			tag = ARM
 		}
-
-		modifier = {
-			add = 100
-			tag = REA
-		}
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no	
@@ -381,11 +376,6 @@
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		available = {
-			NOT = {
-				country_exists = REA
-			}
-		}
 		completion_reward = {
 			load_focus_tree = {
 				tree = army_junta_onufrenko_end_tree
@@ -395,7 +385,6 @@
 				id = ARM.58
 				days = 1
 			}
-			set_cosmetic_tag = ARM_Motherland_with_banner
 		}
 	}	
 }

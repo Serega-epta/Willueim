@@ -5,7 +5,7 @@
 # ○ Армия и "флот"
 # ○ Идеи/нац.духи
 # ○ Внутренняя политика
-# ○ Лидеры, советники, генералы и прочие людишки
+# ○ Лидеры, советники, генералы, адмиралы и прочие людишки
 # ○ Дипломатия
 
 
@@ -14,11 +14,7 @@ capital = 1002
 set_research_slots = 2
 set_stability = 0.7
 set_war_support = 0.5
-add_ideas = {
-GLS_kotly
-GLS_memories_of_rodina
-GLS_fathers_and_not_fathers
-}
+
 # Стартовые технологии
 set_technology = {
     #Категория пехоты
@@ -108,7 +104,6 @@ set_popularities = {
 
 # Лидеры, советники, генералы и прочие людишки
 recruit_character = GLS_Iron_Dimon
-recruit_character = GLS_Chiro
 recruit_character = GLS_Ivan_Sykhoy
 recruit_character = GLS_Airat_Kabirov
 recruit_character = GLS_Almaz_Gabbasin

@@ -468,27 +468,3 @@ kanon_absol = {
 		industrial_capacity_factory = PB_AC_ic_factory
 
 	}
-    #Уровни подчинения в Адмиралтействе
-	ODS_diversions = {
-		enable = { always = yes }
-		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
-		army_speed_factor_for_controller = -0.5
-		local_supplies_for_controller = -0.5
-		attrition_for_controller = 0.3
-		disable_strategic_redeployment_for_controller = 1
-	}
-	ODS_third_level_of_authority = {
-		enable = { always = yes }
-		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
-		production_speed_buildings_factor = 0.25
-		production_factory_efficiency_gain_factor = 0.3
-	}
-	ODS_fourth_level_of_authority = {
-		enable = { always = yes }
-		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
-		production_speed_buildings_factor = 0.5
-		monthly_population = 0.005
-	}

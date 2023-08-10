@@ -11,66 +11,39 @@ music = {
 	song = "the_requiem_ost_2"
 	chance = {
 		modifier = {
-			factor = 1
-		}	
-		modifier = {
-			factor = 2
-			has_government = gumanists
-		}	
-		modifier = {
-			factor = 2
-			tag = GLS
-		}
+			factor = 0.5
+		}		
 	}
 }
 music = {
 	song = "technocracy"
 	chance = {
 		modifier = {
-			factor = 1
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_government = technocracies
-				has_government = professariat
-			}
-		}
+			factor = 0.5
+		}		
 	}
 }
 music = {
 	song = "mirage"
 	chance = {
 		modifier = {
-			factor = 1
-		}	
-		modifier = {
 			factor = 0.5
-			has_war = yes
-		}
+		}		
 	}
 }
 music = {
 	song = "pacific_corps"
 	chance = {
 		modifier = {
-			factor = 1
-		}
-		modifier = {
 			factor = 0.5
-			has_war = yes
-		}	
+		}		
 	}
 }
 music = {
 	song = "lullaby_of_sectarians"
 	chance = {
 		modifier = {
-			factor = 1
-		}
-		modifier = {
-			factor = 2
-			has_government = sacraments
-		}	
+			factor = 0.5
+		}		
 	}
 }
