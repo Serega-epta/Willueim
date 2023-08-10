@@ -3,10 +3,11 @@ Svobod_annex = {
 	icon = saf_anti_colonialist_crusade
 
 	allowed = {
-		any_neighbor_country = { 
-		has_government = free
-		}
-		is_ai = no
+		always = no # <-- Вот нахуя нам эти решения?
+		#any_neighbor_country = { 
+		#	has_government = free
+		#}
+		#is_ai = no
 	}
 	priority = 85
 }
