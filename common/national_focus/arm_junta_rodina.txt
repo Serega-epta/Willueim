@@ -134,6 +134,7 @@ focus_tree = {
 				var = political_point
 				value = 2
 			}				
+			custom_effect_tooltip = get_political_two_point					
 		}
 	}
 	focus = {
@@ -152,6 +153,7 @@ focus_tree = {
 				var = political_point
 				value = 1
 			}
+			custom_effect_tooltip = get_political_point	
 		}
 	}
 	focus = {
@@ -189,6 +191,7 @@ focus_tree = {
 				var = political_point
 				value = 1
 			}
+			custom_effect_tooltip = get_political_point	
 		}
 	}
 	focus = {
@@ -222,6 +225,7 @@ focus_tree = {
 				var = count_of_division_Onufrenko
 				value = 3
 			}
+			custom_effect_tooltip = delete_three_division_of_Onufrenko	
 		}
 	}
 	focus = {
@@ -240,6 +244,7 @@ focus_tree = {
 				var = political_point
 				value = 4
 			}	
+			custom_effect_tooltip = get_political_four_point
 		}
 	}
 	focus = {
@@ -258,6 +263,7 @@ focus_tree = {
 				var = political_point
 				value = 2
 			}	
+			custom_effect_tooltip = get_political_two_point
 		}
 	}
 	focus = {
@@ -277,6 +283,7 @@ focus_tree = {
 				days = 1
 			}
 			set_country_flag = onufrenko_wouldnt_get_guns
+			custom_effect_tooltip = onufrenko_wouldnt_get_guns_tt
 		}
 	}
 	focus = {
@@ -383,6 +390,7 @@ focus_tree = {
 				var = political_point
 				value = 2
 			}	
+			custom_effect_tooltip = get_political_two_point
 		}
 	}
 	focus = {
@@ -401,6 +409,7 @@ focus_tree = {
 				var = political_point
 				value = 2
 			}	
+			custom_effect_tooltip = get_political_two_point
 		}
 	}
 	focus = {
@@ -435,6 +444,7 @@ focus_tree = {
 				var = political_point
 				value = 1
 			}	
+			custom_effect_tooltip = get_political_point
 		}
 	}
 	focus = {
@@ -468,6 +478,7 @@ focus_tree = {
 				var = political_point
 				value = 2
 			}	
+			custom_effect_tooltip = get_political_two_point
 		}
 	}
 	focus = {
@@ -486,6 +497,7 @@ focus_tree = {
 				var = political_point
 				value = 3
 			}	
+			custom_effect_tooltip = get_political_three_point
 		}
 	}
 	focus = {
@@ -507,6 +519,7 @@ focus_tree = {
 				var = political_point
 				value = 1
 			}	
+			custom_effect_tooltip = get_political_point
 		}
 	}
 	focus = {
@@ -522,6 +535,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_country_flag = Onufrenko_has_a_stockpiled_weapon
+			custom_effect_tooltip = onufrenko_has_a_stockpiled_weapon_tt
 		}
 	}
 	focus = {
@@ -573,22 +587,44 @@ focus_tree = {
 				limit = {
 					has_country_flag = podoliakin_tree
 				}
-				load_focus_tree { 
-					tree = army_junta_rodina_unite_podoliakin_tree 
-					keep_completed = no 
+				ARM = {
+					load_focus_tree { 
+						tree = army_junta_rodina_unite_podoliakin_tree 
+						keep_completed = no 
+					}
+					set_cosmetic_tag = Homeland_Revival_Council
 				}
 				REA = {
+					load_focus_tree { 
+						tree = army_junta_rodina_unite_onufrenko_tree 
+						keep_completed = no 
+					}
+					promote_character = ARM_michael_onufrenko_rebel
 					take_north = yes
+					set_cosmetic_tag = Crimson_Front
 				}
 			}
 			else_if = {
 				limit = {
 					has_country_flag = onufrenko_tree					
 				}
-				load_focus_tree = army_junta_rodina_unite_onufrenko_tree
+				ARM = {
+					load_focus_tree { 
+						tree = army_junta_rodina_unite_onufrenko_tree 
+						keep_completed = no 
+					}
+					promote_character = ARM_michael_onufrenko
+					retire_country_leader = ARM_Yuriy_Podolika
+					set_cosmetic_tag = Crimson_Front
+				}
 				REA = {
+					load_focus_tree { 
+						tree = army_junta_rodina_unite_podoliakin_tree 
+						keep_completed = no 
+					}
 					promote_character = ARM_Yuriy_Podolika_rebel
 					take_southern_suburbs = yes
+					set_cosmetic_tag = Homeland_Revival_Council
 				}
 			}
 			#Спавн в Центральной России
@@ -600,7 +636,9 @@ focus_tree = {
 						compare = greater_than_or_equals 
 					}
 				}
-				take_full_central_russia = yes
+				ARM = {
+					take_full_central_russia = yes
+				}
 			}
 			else_if = {
 				limit = {
@@ -629,10 +667,28 @@ focus_tree = {
 						}
 					}
 				}
-				REA = {
-					take_north_central_russia = yes
+				if = {
+					limit = {
+						has_country_flag = podoliakin_tree
+					}
+					REA = {
+						take_north_central_russia = yes
+					}
+					ARM = {
+						take_south_central_russia = yes					
+					}
 				}
-				take_south_central_russia = yes
+				else_if = {
+					limit = {
+						has_country_flag = onufrenko_tree
+					}
+					REA = {
+						take_south_central_russia = yes
+					}
+					ARM = {
+						take_north_central_russia = yes					
+					}					
+				}
 			}
 			#Спавн в Приморье
 			if = {
@@ -643,7 +699,9 @@ focus_tree = {
 						compare = greater_than_or_equals 
 					}
 				}
-				take_full_primorye = yes
+				ARM = {
+					take_full_primorye = yes
+				}
 			}
 			else_if = {
 				limit = {
@@ -672,10 +730,28 @@ focus_tree = {
 						}
 					}
 				}
-				REA = {
-					take_north_of_primorye = yes
+				if = {
+					limit = {
+						has_country_flag = podoliakin_tree
+					}
+					REA = {
+						take_north_of_primorye = yes
+					}
+					ARM = {
+						take_south_of_primorye = yes					
+					}
 				}
-				take_south_of_primorye = yes
+				else_if = {
+					limit = {
+						has_country_flag = onufrenko_tree
+					}
+					REA = {
+						take_south_of_primorye = yes
+					}
+					ARM = {
+						take_north_of_primorye = yes					
+					}					
+				}
 			}
 			#Спавн на Урале
 			if = {
@@ -686,7 +762,9 @@ focus_tree = {
 						compare = greater_than_or_equals 
 					}
 				}
-				take_full_ural = yes
+				ARM = {
+					take_full_ural = yes
+				}
 			}
 			else_if = {
 				limit = {
@@ -715,11 +793,128 @@ focus_tree = {
 						}
 					}
 				}
-				REA = {
-					take_north_ural = yes
+				if = {
+					limit = {
+						has_country_flag = podoliakin_tree
+					}
+					REA = {
+						take_north_ural = yes
+					}
+					ARM = {
+						take_south_ural = yes					
+					}
 				}
-				take_south_ural = yes
+				else_if = {
+					limit = {
+						has_country_flag = onufrenko_tree
+					}
+					REA = {
+						take_south_ural = yes
+					}
+					ARM = {
+						take_north_ural = yes					
+					}					
+				}
 			}
+
+			#Спавн дивизий
+			if = {
+				limit = {
+					has_country_flag = podoliakin_tree
+				}
+				while_loop_effect = {
+					limit = {
+						check_variable = { count_of_division_Podolyakin > 0 } 
+					}
+					random_controlled_state = {
+						limit = {
+							is_fully_controlled_by = ARM
+						}
+						create_unit = {
+							division = "name = \"lol\" division_template = \"loyalisti\" start_experience_factor = 0.5"
+							owner = ARM
+						}	
+					}
+					subtract_from_variable = {
+						var = count_of_division_Podolyakin
+						value = 1
+					}					
+				}
+	
+				while_loop_effect = {
+					limit = {
+						check_variable = { count_of_division_Onufrenko > 0 } 
+					}
+					REA = {
+						random_owned_controlled_state = {
+							limit = {
+								is_fully_controlled_by = REA
+							}
+							create_unit = {
+								division = "name = \"kek\" division_template = \"loyalisti\" start_experience_factor = 0.5"
+								owner = REA
+							}	
+						}	
+					}	
+					subtract_from_variable = {
+						var = count_of_division_Onufrenko
+						value = 1
+					}			
+				}
+			}
+
+
+			if = {
+				limit = {
+					has_country_flag = onufrenko_tree
+				}
+				while_loop_effect = {
+					limit = {
+						check_variable = { count_of_division_Podolyakin > 0 } 
+					}
+					REA = {
+						random_controlled_state = {
+							limit = {
+								is_fully_controlled_by = REA
+							}
+							create_unit = {
+								division = "name = \"lol\" division_template = \"loyalisti\" start_experience_factor = 0.5"
+								owner = REA
+							}	
+						}
+					}
+					subtract_from_variable = {
+						var = count_of_division_Podolyakin
+						value = 1
+					}					
+				}
+	
+				while_loop_effect = {
+					limit = {
+						check_variable = { count_of_division_Onufrenko > 0 } 
+					}
+					subtract_from_variable = {
+						var = count_of_division_Onufrenko
+						value = 1
+					}	
+					random_owned_controlled_state = {
+						limit = {
+							is_fully_controlled_by = ARM
+						}
+						create_unit = {
+							division = "name = \"kek\" division_template = \"loyalisti\" start_experience_factor = 0.5"
+							owner = ARM
+						}	
+					}				
+				}
+			}
+
+			REA = {
+				declare_war_on = {
+					target = ARM
+					type = annex_everything
+				}	
+			}		
 		}
 	}
 }
