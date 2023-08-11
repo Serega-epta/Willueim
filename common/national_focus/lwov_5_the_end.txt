@@ -346,13 +346,54 @@ focus_tree = {
 				id = LWV.61
 				days = 1
 			}			
-			remove_country_leader_trait = New_vera
-			remove_country_leader_trait = Absolyut 
-			remove_country_leader_trait = LWV_paranoid 			
-			remove_country_leader_trait = LWV_avtor_sviatosti 			
-			remove_country_leader_trait = LWV_defender_of_faith 
-			remove_country_leader_trait = LWV_archiepiskop 
-			remove_country_leader_trait = LWV_bisnes_sviashenik 			
+			if = {
+				limit = {
+					has_trait = New_vera
+				}
+				remove_country_leader_trait = New_vera				
+			}
+
+			else_if = {
+				limit = {
+					has_trait = Absolyut
+				}
+				remove_country_leader_trait = Absolyut				
+			}
+
+			else_if = {
+				limit = {
+					has_trait = LWV_paranoid
+				}
+				remove_country_leader_trait = LWV_paranoid				
+			}
+
+			else_if = {
+				limit = {
+					has_trait = LWV_avtor_sviatosti
+				}
+				remove_country_leader_trait = LWV_avtor_sviatosti				
+			}
+
+			else_if = {
+				limit = {
+					has_trait = LWV_defender_of_faith
+				}
+				remove_country_leader_trait = LWV_defender_of_faith				
+			}
+
+			else_if = {
+				limit = {
+					has_trait = LWV_archiepiskop
+				}
+				remove_country_leader_trait = LWV_archiepiskop				
+			}
+
+			else_if = {
+				limit = {
+					has_trait = LWV_bisnes_sviashenik
+				}
+				remove_country_leader_trait = LWV_bisnes_sviashenik				
+			} 			
 		}
 	}
 	focus = {
