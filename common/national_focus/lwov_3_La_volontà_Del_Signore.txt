@@ -1220,17 +1220,21 @@ focus_tree = {
 		prerequisite = { focus = LWV_expand_ifrastructure }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			if = {
-				limit = {
-					has_state_category = rural
+			every_owned_state = {
+				FROM = {
+					if = {
+						limit = {
+							has_state_category = rural
+						}
+						set_state_category = town
+					}
+					else_if = {
+						limit = {
+							has_state_category = pastoral
+						}
+						set_state_category = rural
+					}
 				}
-				set_state_category = town
-			}
-			else_if = {
-				limit = {
-					has_state_category = pastoral
-				}
-				set_state_category = rural
 			}
 		}
 	}
@@ -1305,6 +1309,10 @@ focus_tree = {
 			country_event = {
 				id = LWV.44
 				days = 1
+			}
+			load_focus_tree = {
+				tree = vo_ima_boge
+				keep_completed = no
 			}
 		}
 	}
