@@ -839,6 +839,21 @@ leader_traits = {
 		planning_skill_factor = 1
 	}
 
+	#““Медаль за отвагу” Великой Родины”
+	medal_of_honor_great_motherland = { 
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			army_attack_factor = 0.05 #Атака дивизии
+			army_defence_factor = 0.05 #Защита дивизии
+			army_org_factor = 0.05 #Организация
+			army_strength_factor = 0.10 #ОЗ - Очи здоровья/Прочность
+			experience_loss_factor = -0.10 #Потери опытных бойцов
+			wounded_chance_factor = 0.30 # шанс получить ранение
+			reassignment_duration_factor = 0.5 #Время перевода
+		}
+	}
 	
 ##################################
 # Field Marshal traits.
@@ -3595,5 +3610,7 @@ leader_traits = {
 			factor = 0
 		}
 	}
+	
+	
 
 }

@@ -492,3 +492,24 @@ kanon_absol = {
 		production_speed_buildings_factor = 0.5
 		monthly_population = 0.005
 	}
+	
+	baltic_reservation = { #Балтийская резервация
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		
+		conscription_factor = +0.2 #Военно обязанность населения
+		production_speed_buildings_factor = 0.1 #Скорость строительства
+		local_building_slots_factor = -0.5 #местных ячеек для строительства
+		supply_factor = 0.3 #Эффективность снабжения
+		
+	}
+	
+	baltic_resistance = { #Балтийское сопротивление
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		
+		production_speed_buildings_factor = -0.1 #Скорость строительства
+		supply_factor = -0.2 #Эффективность снабжения
+		local_building_slots_factor = -0.2 #местных ячеек для строительства
+		conscription = -0.3 #Военно обязанность населения
+	}
