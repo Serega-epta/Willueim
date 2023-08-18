@@ -326,9 +326,10 @@ integration_category = {
 		
 		visible = { 
 			FROM = {
-				is_owned_by = ROOT
-				is_fully_controlled_by = ROOT
-				has_state_flag = has_wild_tribes #Не существует триггера чтобы чекнуть модификатор в регионе, поэтому я опять использовал костыли и прикрепил к каждому стейту м дикой деревней флаг
+				# is_owned_by = ROOT
+				# is_fully_controlled_by = ROOT
+				# has_state_flag = has_wild_tribes #Не существует триггера чтобы чекнуть модификатор в регионе, поэтому я опять использовал костыли и прикрепил к каждому стейту м дикой деревней флаг
+				always = no
 			}
 		}
 
