@@ -32,7 +32,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_country_flag = ARM_partisanship_start
-
+			set_capital = {
+				state = 193
+				remember_old_capital = no
+			}
 			set_variable = { power_of_partisanship = 30 }
 			set_variable = { state_202 = 60 }
 			set_variable = { state_876 = 50 }
