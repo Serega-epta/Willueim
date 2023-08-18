@@ -1,0 +1,24 @@
+technologies = {
+	armor_shit = {		#<- это затычка, не обращайте внимания
+
+		# path = {
+		# 	leads_to_tech = stvolartillery
+		# 	research_cost_coeff = 1
+		# }
+ 
+		research_cost = 1.5
+
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}	
+}
