@@ -17,11 +17,12 @@ reunification_category = {
 		}
 
 		visible = {
-			OR = {
-				original_tag = ODS
-				original_tag = ARM
-				original_tag = LWV
-			}			
+			# OR = {
+			# 	original_tag = ODS
+			# 	original_tag = ARM
+			# 	original_tag = LWV
+			# }		
+			always = no	
 		}
 
 		complete_effect = {
@@ -76,9 +77,10 @@ reunification_category = {
 		}
 
 		visible = {
-			OR = {
-				original_tag = IMP
-			}			
+			# OR = {
+			# 	original_tag = IMP
+			# }	
+			always = no		
 		}
 
 		complete_effect = {
