@@ -241,7 +241,10 @@ focus_tree = {
 							target = COA
 							type = civil_war
 					}
-					set_cosmetic_tag = SVA_myatejniki 					
+					set_cosmetic_tag = SVA_myatejniki 
+					hidden_effect = {
+					play_song = "zov_goida"
+					}
 				}
 				}
 		}
@@ -271,6 +274,9 @@ focus_tree = {
 		type = annex_everything
 		}
 		remove_idea = Brother
+		hidden_effect = {
+			play_song = "zov_goida"
+		}
 		}
 	}
 	focus = {
@@ -322,6 +328,7 @@ focus_tree = {
 			target = COA
 			type = annex_everything
 			}
+			play_song = "zov_goida"
 		}
 	}
 	focus = {

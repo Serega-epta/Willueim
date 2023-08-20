@@ -1,6 +1,6 @@
 on_actions = {
-    on_daily  = {
-        effect = { 			
+	on_daily  = {
+		effect = { 			
 			if = {
 				limit = {
 					and = {
@@ -3049,7 +3049,7 @@ if = {
 					remove_dynamic_modifier = { modifier = radiant_storm }
 					}
 			}
-if = {
+			if = {
 				limit = {
 					and = {
 						date > 1941.12.5
@@ -4065,7 +4065,7 @@ if = {
 					remove_dynamic_modifier = { modifier = radiant_storm }
 					}
 			}
-if = {
+			if = {
 				limit = {
 					and = {
 						date > 1944.12.5
@@ -4580,7 +4580,7 @@ if = {
 						date < 1946.2.5
 					} 
 				}							
-								1000 = {
+				1000 = {
 					add_dynamic_modifier = { modifier = radiant_storm }
 					}
 				999 = {

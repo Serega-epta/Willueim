@@ -22,22 +22,6 @@ there_was_a_case_near_poltava = {
     }
 }
 
-the_hague_moment = {
-	possible = {
-		difficulty > 1
-        has_start_date < 2022.01.02
-		has_any_custom_difficulty_setting = no
-		game_rules_allow_achievements = yes
-    }
-	
-   	happened = {
-		custom_trigger_tooltip = {
-			has_country_flag = all_gases_are_used
-			tooltip = the_hague_moment_tt
-		}
-    }
-}
-
 there_is_signal = {
 	possible = {
 		difficulty > 1
@@ -100,23 +84,6 @@ defenders_of_humanity = {
 		custom_trigger_tooltip = {
 			has_country_flag = defenders_of_humanity
 			tooltip = defenders_of_humanity_tt
-		}
-    }
-}
-
-one_in_the_field_warrior = {
-	possible = {
-		difficulty > 1
-        has_start_date < 2022.01.02
-		has_any_custom_difficulty_setting = no
-		game_rules_allow_achievements = yes
-    }
-	
-   	happened = {
-		custom_trigger_tooltip = {
-			# И как блять это реализовать? Да похуй.
-			one_in_the_field_warrior_trigger = yes
-			tooltip = one_in_the_field_warrior_tt
 		}
     }
 }
