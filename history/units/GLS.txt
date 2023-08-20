@@ -1,0 +1,89 @@
+division_template = {
+	name = "otryad_vtorogo_pokoleniya"
+	division_names_group = SOV_INF_01
+	regiments = {
+		rhbzbatalion = { x = 0 y = 0 }
+		rhbzbatalion = { x = 1 y = 0 }
+		rhbzbatalion = { x = 0 y = 1 }
+		rhbzbatalion = { x = 1 y = 1 }
+        rhbzbatalion = { x = 2 y = 0 }
+		rhbzbatalion = { x = 2 y = 1 }
+	}
+	support = {
+		rhbz = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "otryad_pervogo_pokoleniya"
+	division_names_group = SOV_INF_01
+	regiments = {
+		egerskayapechota = { x = 0 y = 0 }
+		egerskayapechota = { x = 1 y = 0 }
+		egerskayapechota = { x = 0 y = 1 }
+		egerskayapechota = { x = 1 y = 1 }
+		egerskayapechota = { x = 2 y = 0 }
+		egerskayapechota = { x = 2 y = 1 }
+	}
+	support = {
+		rhbz = { x = 0 y = 0 }
+		art_stvol = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "tankovy_batalion"
+	division_names_group = SOV_INF_01
+	regiments = {
+		obt_tank = { x = 0 y = 0 }
+		obt_tank = { x = 1 y = 0 }
+		obt_tank = { x = 0 y = 1 }
+		obt_tank = { x = 1 y = 1 }
+	}
+	support = {
+		rhbz = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+units = {
+	division = {
+		name = "otryad_vtorogo_pokoleniya"
+		location = 7300
+		division_template = "otryad_vtorogo_pokoleniya"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "otryad_vtorogo_pokoleniya"
+		location = 12117
+		division_template = "otryad_vtorogo_pokoleniya"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "otryad_vtorogo_pokoleniya"
+		location = 10329
+		division_template = "otryad_vtorogo_pokoleniya"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "otryad_pervogo_pokoleniya"
+		location = 1278
+		division_template = "otryad_pervogo_pokoleniya"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "tankovy_batalion"
+		location = 1278
+		division_template = "tankovy_batalion"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+}

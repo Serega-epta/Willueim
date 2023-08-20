@@ -3,10 +3,10 @@ characters={
 		name = GLS_Iron_Dimon
 		portraits = {
 			army={
-				large=GFX_portrait_Iron_Dimon
+				large = GFX_portrait_GLS_Iron_Dimon
 			}
 			civilian={
-				large="gfx/leaders/GLS/Iron_Dimon.dds"
+				large = GFX_portrait_GLS_Iron_Dimon
 			}
 		}
 		field_marshal = {
@@ -23,6 +23,22 @@ characters={
 			id=-1
 			desc = GLS_Iron_Dimon_desc
 		}	
+	}
+
+	GLS_anarchy = {
+		name = GLS_anarchy
+		portraits = {
+			civilian={
+				large = GFX_portrait_GLS_Anarchy
+			}
+		}
+		country_leader = {
+			ideology = patriots_1
+			traits={ GLS_dead_dream }
+			expire="3333.1.1.1"
+			id=-1
+			desc = GLS_anarchy_desc
+		}
 	}
 
 	GLS_Chiro = {
@@ -47,8 +63,7 @@ characters={
 		name = GLS_Airat_Kabirov
 		portraits = {
 			army={
-				large="GFX_portrait_Airat_Kabirov"
-				
+				large = GFX_portrait_GLS_Airat_Kabirov
 			}
 		}
 		corps_commander={
@@ -64,8 +79,7 @@ characters={
 		name = GLS_Almaz_Gabbasin
 		portraits = {
 			army={
-				large="GFX_portrait_Almaz_Gabbasin"
-				
+				large = GFX_portrait_GLS_Almaz_Gabbasin
 			}
 		}
 		corps_commander={
@@ -81,8 +95,7 @@ characters={
 		name = GLS_Ivan_Sykhoy
 		portraits = {
 			army={
-				large="GFX_portrait_Ivan_Sykhoy"
-				
+				large = GFX_portrait_GLS_Ivan_Sykhoy
 			}
 		}
 		corps_commander={

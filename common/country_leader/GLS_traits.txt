@@ -1,5 +1,4 @@
 leader_traits = {
-
 	Neprikloni_predsedatel = {
 		random = no
 		political_power_factor = 0.15
@@ -9,4 +8,15 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	GLS_dead_dream = {
+		random = no
+		monthly_population = -1
+		stability_factor = -0.75
+		production_speed_buildings_factor = -0.9
+		surrender_limit = -0.95
+		
+		ai_will_do = {
+			factor = 1
+		}		
+	}	
 }

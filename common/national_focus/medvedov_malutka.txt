@@ -12,7 +12,7 @@ focus_tree = {
 
 	focus = {
 		id = GLS_old_friends
-		icon = GFX_Korol_charodei
+		icon = GFX_friends
 		x = 6
 		y = 0
 		cost = 1
@@ -29,7 +29,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_young_blood
-		icon = GFX_Korol_charodei
+		icon = GFX_young_blood
 		x = 6
 		y = 1
 		cost = 1
@@ -47,7 +47,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_fall_of_rodina
-		icon = GFX_Korol_charodei
+		icon = GFX_fall_of_rodina
 		x = 6 
 		y = 2
 		cost = 1
@@ -65,7 +65,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_our_defence
-		icon = GFX_Korol_charodei
+		icon = GFX_our_defence
 		x = 4
 		y = 3
 		cost = 2.9
@@ -102,7 +102,7 @@ focus_tree = {
 	
 	focus = {
 		id = GLS_planning_horizon
-		icon = GFX_Korol_charodei
+		icon = GFX_planning_horizon
 		x = 6 
 		y = 3
 		cost = 2.9
@@ -126,7 +126,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_massacre_number5
-		icon = GFX_Korol_charodei
+		icon = GFX_massacre_number5
 		x = 8 
 		y = 3
 		cost = 2.9
@@ -148,7 +148,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_bunches
-		icon = GFX_Korol_charodei
+		icon = GFX_bunches
 		x = 6 
 		y = 4
 		cost = 2.9
@@ -172,7 +172,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_children_of_ermak
-		icon = GFX_Korol_charodei
+		icon = GFX_children_of_ermak
 		x = 6 
 		y = 5
 		cost = 2.9
@@ -194,7 +194,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_end_of_silence
-		icon = GFX_Korol_charodei
+		icon = GFX_end_of_silence
 		x = 6 
 		y = 6
 		cost = 2.9
@@ -214,7 +214,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_this_is_what_you_were_taught
-		icon = GFX_Korol_charodei
+		icon = GFX_this_is_what_you_were_taught
 		x = 6 
 		y = 7
 		cost = 2.9
@@ -236,7 +236,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_south_mraz
-		icon = GFX_Korol_charodei
+		icon = GFX_south_mraz
 		x = 4 
 		y = 8
 		cost = 2.9
@@ -258,7 +258,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_north_mraz
-		icon = GFX_Korol_charodei
+		icon = GFX_north_mraz
 		x = 8
 		y = 8
 		cost = 2.9
@@ -281,7 +281,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_repatriation
-		icon = GFX_Korol_charodei
+		icon = GFX_repatriation
 		x = 6 
 		y = 9
 		cost = 2.9
@@ -304,7 +304,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_iron_town
-		icon = GFX_Korol_charodei
+		icon = GFX_iron_town
 		x = 6 
 		y = 10
 		cost = 2.9
@@ -322,7 +322,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_can_sleep
-		icon = GFX_Korol_charodei
+		icon = GFX_can_sleep
 		x = 6 
 		y = 11
 		cost = 2.9
@@ -344,7 +344,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GLS_iron
-		icon = GFX_Korol_charodei
+		icon = GFX_iron
 		x = 6 
 		y = 12
 		cost = 2.9
@@ -360,25 +360,29 @@ focus_tree = {
 			}
 			add_state_core = 398
 			add_research_slot = 1
-			state = 398 {
+			398 = {
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
-			}
-			state = 398 {
 				add_building_construction = {
 					type = civil_factory
 					level = 2
 					instant_build = yes
 				}
 			}
+			hidden_effect = {
+				country_event = {
+					id = GLS.33
+					days = 22
+				}
+			}
 		}
 	}
 	focus = {
 		id = GLS_survivors
-		icon = GFX_Korol_charodei
+		icon = GFX_survivors
 		x = 6 
 		y = 13
 		cost = 2.9
@@ -388,6 +392,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = GLS_iron }
 		completion_reward = {
+		load_focus_tree = GLS_medvedov_2_faza
 		declare_war_on = {
 				target = ASR
 				type = annex_everything
