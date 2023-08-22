@@ -22,5 +22,5 @@ tags={
 	"Sound"
 	"Technologies"
 }
-name="The Old Order Requiem for Humanity55"
+name="The Requiem of Humankind: First Alpha"
 supported_version="1.12.*"
