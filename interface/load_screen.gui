@@ -76,26 +76,27 @@ guiTypes = {
 			verticalBorder = ""
 			fullScreen = no
 			Orientation = "CENTER_DOWN"
+			
 				
 			iconType = {
 				name ="bg_load_screen"
 				spriteType = "GFX_loadingtip_bg"
 				position = { x= -700 y = -147 }
-			}
+			}		
 
 			instantTextBoxType = {
 				name = "text"
-				position = { x = -2000 y = -2000 }
+				position = { x = -500 y = -205 }
 				textureFile = ""
 				font = "loadscreen_tip"
 				borderSize = {x = 0 y = 0}
 				text = ""	
-				maxWidth = 900
-				maxHeight =200
+				maxWidth = 1024
+				maxHeight = 200
 				fixedsize = yes
 				format = centre
-				vertical_alignment = center				
-			}			
+				vertical_alignment = center
+			}
 		}		
 	}
 }
