@@ -15,6 +15,32 @@ set_research_slots = 2
 set_stability = 0.7
 set_war_support = 0.5
 army_experience = 10
+add_manpower = 38000
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 4150
+	producer = GLS
+}
+add_equipment_to_stockpile = {
+	type = infantry_odejda_1
+	amount = 5490
+	producer = GLS
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 250
+	producer = GLS
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 12
+	producer = GLS
+}
+add_equipment_to_stockpile = {
+	type = obt_tank_chassis_1
+	amount = 160
+	producer = GLS
+}
 add_ideas = {
 GLS_kotly
 GLS_memories_of_rodina
@@ -113,6 +139,8 @@ recruit_character = GLS_Chiro
 recruit_character = GLS_Ivan_Sykhoy
 recruit_character = GLS_Airat_Kabirov
 recruit_character = GLS_Almaz_Gabbasin
+recruit_character = GLS_Victor_Ryaznov
+recruit_character = GLS_Vladimir_Astafiev
 
 # Дипломатия
 add_opinion_modifier = {

@@ -250,7 +250,7 @@ ideas = {
 		GLS_fathers_and_not_fathers = {
 			picture = fathers_and_not_fathers
 			modifier = {
-				recruitable_population = 0.05
+				conscription = 0.05
 				offence = 0.05
 				defence = 0.05
 			}
@@ -258,7 +258,7 @@ ideas = {
 		GLS_fathers_and_not_fathers_1 = {
 			picture = fathers_and_not_fathers
 			modifier = {
-				recruitable_population = 0.06
+				conscription = 0.06
 				offence = 0.05
 				defence = 0.05
 			}
@@ -266,27 +266,27 @@ ideas = {
 		GLS_fathers_and_not_fathers_2 = {
 			picture = fathers_and_not_fathers
 			modifier = {
-				recruitable_population = 0.06
 				offence = 0.1
 				defence = 0.1
+				conscription = -0.5
 				army_speed_factor = 0.05
 			}
 		}
 		GLS_fathers_and_not_fathers_3 = {
 			picture = fathers_and_not_fathers
 			modifier = {
-			recruitable_population = 0.075
 				offence = 0.05
 				defence = 0.05
+				conscription = 1.5
 				army_org = -7
 			}
 		}
 		GLS_fathers_and_not_fathers_4 = {
 			picture = fathers_and_not_fathers
 			modifier = {
-				recruitable_population = 0.075
 				offence = 0.1
 				defence = 0.1
+				conscription = 1
 				army_speed_factor = 0.05
 				army_org = -7
 			}
@@ -294,41 +294,45 @@ ideas = {
 		GLS_fathers_and_not_fathers_5 = {
 			picture = fathers_and_not_fathers
 			modifier = {
-				recruitable_population = 0.075
 				offence = 0.1
 				defence = 0.1
 				army_speed_factor = 0.05
 				army_org = -7
+				conscription = 0.9
+				weekly_manpower = -100
 				experience_loss_factor = -0.15
 			}
 		}
 		GLS_fathers_and_not_fathers_6 = {
 			picture = fathers_and_not_fathers
 			modifier = {
-			recruitable_population = 0.075
 				offence = 0.05
 				defence = 0.05
 				army_org = -7
+				conscription = 1.4
+				weekly_manpower = -100
 				experience_loss_factor = -0.15
 			}
 		}
 		GLS_fathers_and_not_fathers_7 = {
 			picture = fathers_and_not_fathers
 			modifier = {
-			recruitable_population = 0.075
 				offence = 0.05
 				defence = 0.05
 				army_org = -17
+				conscription = 1.5
+				weekly_manpower = 200
 			}
 		}
 		GLS_fathers_and_not_fathers_8 = {
 			picture = fathers_and_not_fathers
 			modifier = {
-				recruitable_population = 0.075
 				offence = 0.1
 				defence = 0.1
 				army_speed_factor = 0.05
+				conscription = 1
 				army_org = -17
+				weekly_manpower = 200
 			}
 		}
 		GLS_memories_of_rodina = {
@@ -345,6 +349,7 @@ ideas = {
 				offensive_war_stability_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.09
 				research_speed_factor = -0.05
+
 			}
 		}
 		GLS_memories_of_rodina_2 = {
@@ -379,6 +384,17 @@ ideas = {
 				monthly_population = 0.015
 				weekly_manpower = 100
 				mobilization_speed = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+		GLS_memories_of_rodina_5 = {
+			picture = memories_of_rodina
+			modifier = {
+				offensive_war_stability_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.09
+				research_speed_factor = -0.05
+				monthly_population = 0.015
+				weekly_manpower = 100
 				research_speed_factor = 0.05
 			}
 		}

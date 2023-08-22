@@ -69,7 +69,6 @@
 				remove_idea = GLS_fathers_and_not_fathers_1
 				add_idea = GLS_fathers_and_not_fathers_2
 			}
-			set_country_flag = GLS_freedom_and_order_start
 			}
 		}
 		focus = {
@@ -101,11 +100,6 @@
 					add_idea = GLS_fathers_and_not_fathers_3
 					}
 				}
-
-				if = {
-					limit = { NOT = { has_county_flag = GLS_freedom_and_order_start } }
-					set_country_flag = GLS_freedom_and_order_start
-				}
 			}
 		}
 		focus = {
@@ -124,7 +118,6 @@
 					id = GLS.21
 					days = 1
 				}
-			set_country_flag = GLS_negotiation_process_start
 			} 
 		}
 		focus = {
@@ -283,6 +276,18 @@
 				999 = { 
 					add_manpower = 7000
 				}
+			if = {
+			limit = {has_idea = GLS_memories_of_rodina_2}
+				swap_ideas = {
+					remove_idea = {GLS_memories_of_rodina_2}
+					add_idea = {GLS_memories_of_rodina_3}
+			}
+			else_if = {
+			limit = {has_idea = GLS_memories_of_rodina_5}
+				swap_ideas = {
+					remove_idea = {GLS_memories_of_rodina_5}
+					add_idea = {GLS_memories_of_rodina_4}
+			}
 			}
 		}
 		focus = {
@@ -428,7 +433,6 @@
 					days = 1
 				}
 				add_research_slot = 1
-				set_country_flag = GLS_kurchatov_project_start
 			}
 		}
 		focus = {
@@ -460,8 +464,21 @@
 			prerequisite = {focus = GLS_kurchatov}
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = { 
-				add_stability = 0.1
-			
+				add_stability = 0.1'
+			if = {
+				limit = has_idea = {GLS_memories_of_rodina_2}
+				swap_ideas = {
+				remove_idea = GLS_memories_of_rodina_2
+				add_idea = GLS_memories_of_rodina_5
+				}
+			}
+			if_else = {
+				limit = has_idea = {GLS_memories_of_rodina_3}
+				swap_ideas = {
+				remove_idea = GLS_memories_of_rodina_3
+				add_idea = GLS_memories_of_rodina_4
+				}
+			}
 			}
 		}
 		focus = {
@@ -480,57 +497,9 @@
 					id = GLS.27
 					days = 1
 				}
-			set_country_flag = GLS_nuclear_strike_start
 			}
 		}
-		focus = {
-			id = GLS_chasing_a_dream
-			icon = GFX
-			x = 6
-			y = 11
-			cost = 2.9
-			ai_will_do = {
-			factor = 10
-			}
-			prerequisite = {focus = GLS_nibelungs}
-			prerequisite = {focus = GLS_zhukov}
-			prerequisite = {focus = GLS_clear}
-			search_filters = { FOCUS_FILTER_POLITICAL }
-			completion_reward = { 
-			declare_war_on = {
-				target = EDM
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = WPK
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = URC
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = ZAN
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = TAR
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = OCH
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = BGR
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = DIS
-				type = annex_everything
-			}
-			}
-		}
+		
 		focus = {
 			id = GLS_expedition
 			icon = GFX
@@ -633,6 +602,54 @@
 			}
 			hidden_effect = {
 			add_core = {993}
+			}
+			}
+		}
+		focus = {
+			id = GLS_chasing_a_dream
+			icon = GFX
+			x = 6
+			y = 11
+			cost = 2.9
+			ai_will_do = {
+			factor = 10
+			}
+			prerequisite = {focus = GLS_nibelungs}
+			prerequisite = {focus = GLS_zhukov}
+			prerequisite = {focus = GLS_clear}
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = { 
+			declare_war_on = {
+				target = EDM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = WPK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = URC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ZAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TAR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = OCH
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DIS
+				type = annex_everything
 			}
 			}
 		}
