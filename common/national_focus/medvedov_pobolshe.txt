@@ -1,5 +1,5 @@
-	focus_tree = {
-		id = GLS_medvedov_2_faza
+focus_tree = {
+	id = GLS_medvedov_2_faza
 		country = {
 			factor = 0
 			modifier = {
@@ -276,18 +276,24 @@
 				999 = { 
 					add_manpower = 7000
 				}
-			if = {
-			limit = {has_idea = GLS_memories_of_rodina_2}
-				swap_ideas = {
-					remove_idea = {GLS_memories_of_rodina_2}
-					add_idea = {GLS_memories_of_rodina_3}
-			}
-			else_if = {
-			limit = {has_idea = GLS_memories_of_rodina_5}
-				swap_ideas = {
-					remove_idea = {GLS_memories_of_rodina_5}
-					add_idea = {GLS_memories_of_rodina_4}
-			}
+				if = {
+					limit = {
+						has_idea = GLS_memories_of_rodina_2
+					}
+					swap_ideas = {
+						remove_idea = GLS_memories_of_rodina_2
+						add_idea = GLS_memories_of_rodina_3
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = GLS_memories_of_rodina_5
+					}
+					swap_ideas = {
+						remove_idea = {GLS_memories_of_rodina_5}
+						add_idea = {GLS_memories_of_rodina_4}
+					}
+				}
 			}
 		}
 		focus = {
@@ -464,19 +470,23 @@
 			prerequisite = {focus = GLS_kurchatov}
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = { 
-				add_stability = 0.1'
-			if = {
-				limit = has_idea = {GLS_memories_of_rodina_2}
-				swap_ideas = {
-				remove_idea = GLS_memories_of_rodina_2
-				add_idea = GLS_memories_of_rodina_5
-				}
+				add_stability = 0.1
+				if = {
+					limit = { 
+						has_idea = {GLS_memories_of_rodina_2} 
+					}
+					swap_ideas = {
+						remove_idea = GLS_memories_of_rodina_2
+						add_idea = GLS_memories_of_rodina_5
+					}
 			}
-			if_else = {
-				limit = has_idea = {GLS_memories_of_rodina_3}
+			else_if = {
+				limit = { 
+					has_idea = {GLS_memories_of_rodina_3} 
+				}
 				swap_ideas = {
-				remove_idea = GLS_memories_of_rodina_3
-				add_idea = GLS_memories_of_rodina_4
+					remove_idea = GLS_memories_of_rodina_3
+					add_idea = GLS_memories_of_rodina_4
 				}
 			}
 			}
@@ -516,7 +526,7 @@
 					id = GLS.28
 					days = 1
 				}
-			add_manpower = -1
+				add_manpower = -1
 			}
 		}
 		focus = {
@@ -601,7 +611,7 @@
 				transfer_troops = yes
 			}
 			hidden_effect = {
-			add_core = {993}
+			add_core = 993
 			}
 			}
 		}
