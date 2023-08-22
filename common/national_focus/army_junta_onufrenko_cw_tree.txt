@@ -258,6 +258,9 @@
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			surrender_progress > 0.25
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			swap_ideas = {
@@ -275,6 +278,9 @@
 		cost = 5
 		ai_will_do = {
 			factor = 10
+		}
+		available = {
+			surrender_progress > 0.5
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -372,7 +378,6 @@
 	focus = {
 		id = ARM_ih_kkonts
 		icon = GFX_ih_kkonts
-		prerequisite = { focus = ARM_vpered_sobaki_k_pobede }
 		prerequisite = { focus = ARM_finish_him }
 		x = 8
 		y = 14
