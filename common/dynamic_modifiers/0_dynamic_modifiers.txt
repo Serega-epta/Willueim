@@ -513,3 +513,10 @@ kanon_absol = {
 		local_building_slots_factor = -0.2 #местных ячеек для строительства
 		conscription = -0.3 #Военно обязанность населения
 	}
+	
+	dead_region = { #Мертвый регион
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		
+		monthly_population = -1
+	}

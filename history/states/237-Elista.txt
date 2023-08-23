@@ -2,12 +2,13 @@
 state={
 	id=237
 	name="STATE_237"
-	manpower = 169620
+	manpower = 0
 	
 	state_category = rural
 
 	history={
 		owner = SOV
+		add_dynamic_modifier = { modifier = dead_region}
 		buildings = {
 			infrastructure = 1
 		}

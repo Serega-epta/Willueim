@@ -2,7 +2,7 @@
 state = { #ЮБИЛЕЙ!!!!!
 	id = 1000
 	name = "STATE_1000"
-	manpower = 183748
+	manpower = 0
 	
 	state_category = town
 	resources = {
@@ -13,6 +13,7 @@ state = { #ЮБИЛЕЙ!!!!!
 	history = {
 		owner = NFL
 		add_core_of = NFL
+		add_dynamic_modifier = { modifier = dead_region}
 		buildings = {
 			infrastructure = 1
 		}
