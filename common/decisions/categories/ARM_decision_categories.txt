@@ -40,3 +40,12 @@ ARM_civil_war = {
 	allowed = { original_tag = ARM }
 	priority = { base = 5 }
 }
+
+ARM_combat_reconnaissance = {
+	icon = saf_anti_colonialist_crusade
+	scripted_gui = ARM_combat_reconnaissance_gui
+	visible_when_empty = yes
+	visible  = { has_country_flag = the_mechanics_of_the_combat_reconnaissance  }
+	allowed = { original_tag = ARM }
+	priority = { base = 5 }
+}

@@ -1,16 +1,13 @@
 add_namespace = ARM
+add_namespace = ARM_combat_reconnaissance
 
 #В кольце врагов
 country_event = {
 	id = ARM.1
 	title = ARM.1.t
 	desc = ARM.1.d
-	picture = 
-
-        fire_only_once = yes  
-
+    fire_only_once = yes  
 	is_triggered_only = yes
-
 	option = {
 	name = ARM.1.a	
 	add_political_power = 150
@@ -944,6 +941,69 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ARM.73.a
+	}
+}
+
+country_event = {
+	id = ARM_combat_reconnaissance.1
+	title = ARM_combat_reconnaissance.1.t
+	desc = ARM_combat_reconnaissance.1.d
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+		name = ARM_combat_reconnaissance.1.a
+	}
+}
+
+country_event = {
+	id = ARM_combat_reconnaissance.2
+	title = ARM_combat_reconnaissance.2.t
+	desc = ARM_combat_reconnaissance.2.d
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+		name = ARM_combat_reconnaissance.2.a
+	}
+}
+
+country_event = {
+	id = ARM_combat_reconnaissance.3
+	title = ARM_combat_reconnaissance.3.t
+	desc = ARM_combat_reconnaissance.3.d
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+		name = ARM_combat_reconnaissance.3.a
+	}
+}
+
+country_event = {
+	id = ARM_combat_reconnaissance.4
+	title = ARM_combat_reconnaissance.4.t
+	desc = ARM_combat_reconnaissance.4.d
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+		name = ARM_combat_reconnaissance.4.a
+		add_timed_idea = {
+			idea = shock
+			days = 50
+		}
+	}
+}
+
+country_event = {
+	id = ARM_combat_reconnaissance.5
+	title = ARM_combat_reconnaissance.5.t
+	desc = ARM_combat_reconnaissance.5.d
+    fire_only_once = yes  
+	is_triggered_only = yes
+	option = {
+		name = ARM_combat_reconnaissance.5.a
+		add_timed_idea = {
+			idea = shok_and_awe
+			days = 50
+		}
 	}
 }
 
