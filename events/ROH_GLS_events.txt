@@ -340,9 +340,18 @@ country_event = {
  	title = GLS.33.t
  	desc = GLS.33.d
  	picture = GFX_ropot_razv
- 	is_triggered_only = yes
+
+	is_triggered_only = no
+	fire_only_once = yes
+	hidden = no
+
+	trigger = {	
+		GLS_defeated_ASR = yes
+	}
+
  	option = {
- 	name = GLS.33.a	
+ 		name = GLS.33.a
+		GLS = { load_focus_tree = GLS_medvedov_2_faza }
  	}
  }
  country_event = {
@@ -361,7 +370,7 @@ country_event = {
  	id = GLS.111
  	title = GLS.111.t
  	desc = GLS.111.d
- 	picture = GFX_ropot_razv
+ 	picture = GFX_gls_negotiation_process
  	is_triggered_only = yes
  	option = {
  	name = GLS.111.a	
@@ -372,7 +381,7 @@ country_event = {
  	id = GLS.222
  	title = GLS.222.t
  	desc = GLS.222.d
- 	picture = GFX_ropot_razv
+ 	picture = GFX_gls_negotiation_process
  	is_triggered_only = yes
  	option = {
  	name = GLS.222.a	
@@ -385,7 +394,7 @@ country_event = {
  	id = GLS.1111 #Order = 100%
  	title = GLS.1111.t
  	desc = GLS.1111.d
- 	picture = GFX_ropot_razv
+ 	picture = GFX_gls_the_end
  	is_triggered_only = yes
  	option = {
  	name = GLS.1111.a	
@@ -396,7 +405,7 @@ country_event = {
  	id = GLS.2222 #Freedom = 100%
  	title = GLS.2222.t
  	desc = GLS.2222.d
- 	picture = GFX_ropot_razv
+ 	picture = GFX_gls_the_end
  	is_triggered_only = yes
  	option = {
  	name = GLS.2222.a	
@@ -407,7 +416,7 @@ country_event = {
  	id = GLS.1100 #Order = 0%
  	title = GLS.1100.t
  	desc = GLS.1100.d
- 	picture = GFX_ropot_razv
+ 	picture = GFX_gls_the_end
  	is_triggered_only = yes
  	option = {
  	name = GLS.1100.a	
@@ -418,7 +427,7 @@ country_event = {
  	id = GLS.2200 #Freedom = 0%
  	title = GLS.2200.t
  	desc = GLS.2200.d
- 	picture = GFX_ropot_razv
+ 	picture = GFX_gls_the_end
  	is_triggered_only = yes
  	option = {
  	name = GLS.2200.a	
@@ -431,7 +440,7 @@ country_event = {
  	id = GLS.666 #Нанесён ядерный удар (объект удара)
  	title = GLS.666.t
  	desc = GLS.666.d
- 	picture = GFX_report_event_nuclear_strike
+ 	picture = GFX_nuclear_strike
  	is_triggered_only = yes
  	option = {
  	name = GLS.666.a	
@@ -442,7 +451,7 @@ country_event = {
  	id = GLS.777 #Нанесён ядерный удар (ГЛК)
  	title = GLS.777.t
  	desc = GLS.777.d
- 	picture = GFX_report_event_nuclear_strike
+ 	picture = GFX_nuclear_strike
  	is_triggered_only = yes
  	option = {
  	name = GLS.777.a	
@@ -453,7 +462,7 @@ country_event = {
  	id = GLS.888 #Снятие флага
  	title = GLS.888.t
  	desc = GLS.888.d
- 	picture = GFX_ropot_razv
+ 	picture = GFX_nuclear_strike
  	is_triggered_only = yes
 	hidden = yes
  	option = {

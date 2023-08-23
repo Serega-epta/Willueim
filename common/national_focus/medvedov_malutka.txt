@@ -407,12 +407,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			hidden_effect = {
-				country_event = {
-					id = GLS.33
-					days = 22
-				}
-			}
 		}
 	}
 	focus = {
@@ -427,7 +421,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = GLS_iron }
 		completion_reward = {
-		load_focus_tree = GLS_medvedov_2_faza
 		declare_war_on = {
 				target = ASR
 				type = annex_everything

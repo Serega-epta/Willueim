@@ -519,6 +519,9 @@ focus_tree = {
 			ai_will_do = {
 			factor = 10
 			}
+			available = {
+				NOT = { country_exists = MOT }
+			}
 			prerequisite = {focus = GLS_pereputie}
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = { 
