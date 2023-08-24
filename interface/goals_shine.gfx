@@ -6361,6 +6361,48 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
+	# frameAnimatedSpriteType = {
+	# 	name = "GFX_goal_continuous_reduce_training_time"
+	# 	texturefile = "gfx/leaders/dancing_hitler.dds"
+	# 	noOfFrames = 6
+	# 	animation_rate_fps = 8
+	# 	looping = yes
+	# 	play_on_show = yes	
+			
+	# }
+
+	SpriteType = {
+		name = "GFX_Gorod_Prokazhennyh_shine"
+		texturefile = "gfx/interface/goals/Gorod_Prokazhennyh.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Gorod_Prokazhennyh.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Gorod_Prokazhennyh.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
 }
 		
 	

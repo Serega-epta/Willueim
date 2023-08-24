@@ -1,5 +1,5 @@
 focus_tree = {
-	id = odessa_focus_faza2
+	id = admiralty_phase_two
 	country = {
 		factor = 0
 		
@@ -9,8 +9,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	}
-	
+
 	focus = {
 		id = ODS_The_first_triumph_of_the_idea
 		icon = GFX_clear_perimetr
@@ -29,7 +28,7 @@ focus_tree = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = ODS_Expand_powers
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
@@ -87,7 +86,7 @@ focus = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = ODS_Audits
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_Burn_the_heads }
@@ -106,8 +105,8 @@ focus = {
 		}
 	}
 
-focus = {
-		id = ODS_"Purity"
+	focus = {
+		id = ODS_Purity
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_Burn_the_heads }
 		x = 5
@@ -125,10 +124,10 @@ focus = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = ODS_Prosperity
 		icon = GFX_clear_perimetr
-		prerequisite = { focus = ODS_"Purity" }
+		prerequisite = { focus = ODS_Purity }
 		prerequisite = { focus = ODS_Audits }
 		x = 4
 		y = 17
@@ -145,8 +144,8 @@ focus = {
 		}
 	}
 
-focus = {
-		id = ODS_The_"Bridgehead"_plan
+	focus = {
+		id = ODS_The_Bridgehead_plan
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 8
@@ -167,7 +166,7 @@ focus = {
 	focus = {
 		id = ODS_Ghosts_of_the_Past
 		icon = GFX_clear_perimetr
-		prerequisite = { focus = ODS_The_"Bridgehead"_plan }
+		prerequisite = { focus = ODS_The_Bridgehead_plan }
 		x = 8
 		y = 8
 		cost = 1
@@ -254,7 +253,7 @@ focus = {
 		}
 	}
 	
-focus = {
+	focus = {
 		id = ODS_Pacification
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
@@ -270,7 +269,7 @@ focus = {
 		}
 	}
 	
-focus = {
+	focus = {
 		id = ODS_Expand_the_powers_of_the_committees
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_Pacification }
@@ -318,7 +317,7 @@ focus = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = ODS_Destroy_their_hopes
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_The_Secret_Police }
@@ -337,7 +336,7 @@ focus = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = ODS_The_Army_of_the_Plan
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
@@ -353,7 +352,7 @@ focus = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = ODS_Expansion_plan
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_The_Army_of_the_Plan }
@@ -369,7 +368,7 @@ focus = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = ODS_Refusal
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_Expansion plan }
@@ -385,7 +384,7 @@ focus = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = ODS_Adapting_to_combat
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_Refusal }
@@ -401,7 +400,7 @@ focus = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = ODS_Squads_of_suppressors
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_Expansion_plan }
@@ -417,7 +416,7 @@ focus = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = ODS_Heavy_weapons
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_Squads_of_suppressors }
@@ -433,8 +432,8 @@ focus = {
 		}
 	}
 	
-		focus = {
-		id = ODS_Operation_"Voskhod"
+	focus = {
+		id = ODS_Operation_Voskhod
 		icon = GFX_clear_perimetr
 		prerequisite = { focus = ODS_Heavy_weapons }
 		prerequisite = { focus = ODS_Adapting_to_combat }
@@ -452,10 +451,10 @@ focus = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = ODS_Our_banner
 		icon = GFX_clear_perimetr
-		prerequisite = { focus = ODS_Operation_"Voskhod" }
+		prerequisite = { focus = ODS_Operation_Voskhod }
 		prerequisite = { focus = ODS_EMBAO }
 		prerequisite = { focus = ODS_Prosperity }
 		x = 10
@@ -472,6 +471,9 @@ focus = {
 				}
 		}
 	}
+
+}
+
 	
 	
 	
