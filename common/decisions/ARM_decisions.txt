@@ -4049,10 +4049,30 @@ ARM_combat_reconnaissance = {
 			}
 		}
 		available = {
-			has_equipment = {
-				infantry_equipment > 99
-			}	
-			has_manpower > 1999	
+			if = {
+				limit = {
+					NOT = { has_completed_focus = ARM_free_solders}
+				}
+				has_equipment = {
+					infantry_equipment > 99
+				}	
+				has_manpower > 1999	
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = ARM_free_solders
+				}
+				has_equipment = {
+					infantry_equipment > 49
+				}	
+				has_manpower > 499
+			}
+			if = {
+				limit = {
+					has_completed_focus = ARM_strict_prikazi
+				}
+				has_political_power > 50				
+			}
 			FROM = {
 				any_owned_state = {
 					is_controlled_by = FROM
@@ -4181,7 +4201,12 @@ ARM_combat_reconnaissance = {
 				amount = -100
 			}
 			add_manpower = -2000
-
+			if = {
+				limit = {
+					has_completed_focus = ARM_strict_prikazi
+				}
+				add_political_power = 50				
+			}
        	}
         ai_will_do = {
             base = 1

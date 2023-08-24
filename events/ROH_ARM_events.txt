@@ -952,6 +952,16 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ARM_combat_reconnaissance.1.a
+		if = {
+			limit = {
+				ROOT = {
+					original_tag = ARM
+				}
+			}
+			ROOT = {
+				add_command_power = 50
+			}
+		}
 	}
 }
 
