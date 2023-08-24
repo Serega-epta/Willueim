@@ -470,6 +470,15 @@ ODS_intention = {
 				has_equipment = {
 					infantry_equipment > 500
 				}
+				if = {
+					limit = {
+						NOT = { has_completed_focus = ODS_Destroy_their_hopes }
+					}
+					has_political_power > 70
+				}
+				else = {
+					has_political_power > 35			
+				}
 			}
 		}
 
@@ -491,7 +500,6 @@ ODS_intention = {
 		target_array = ODS.controlled_states
 		fire_only_once = yes
 		days_remove = 150
-		cost = 70
 		remove_effect = {
 			add_to_variable = {
 				var = intention_point
@@ -502,6 +510,15 @@ ODS_intention = {
 			}
 			add_state_core = FROM
 			add_manpower = -3000
+			if = {
+				limit = {
+					NOT = { has_completed_focus = ODS_Destroy_their_hopes }
+				}
+				add_political_power = -70
+			}
+			else = {
+				add_political_power = -35		
+			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -500
@@ -523,7 +540,17 @@ ODS_intention = {
 				has_equipment = {
 					infantry_equipment > 500
 				}
+				if = {
+					limit = {
+						NOT = { has_completed_focus = ODS_Destroy_their_hopes }
+					}
+					has_political_power > 140
+				}
+				else = {
+					has_political_power > 70			
+				}
 			}
+		
 		}
 
 		visible = {
@@ -537,7 +564,6 @@ ODS_intention = {
 		target_array = ODS.controlled_states
 		fire_only_once = yes
 		days_remove = 150
-		cost = 140
 		remove_effect = {
 			FROM = {
 				clr_state_flag = first_level_of_authority
@@ -545,6 +571,15 @@ ODS_intention = {
 				remove_dynamic_modifier = { modifier = ODS_diversions }
 			}
 			add_manpower = -3000
+			if = {
+				limit = {
+					NOT = { has_completed_focus = ODS_Destroy_their_hopes }
+				}
+				add_political_power = -140
+			}
+			else = {
+				add_political_power = -70		
+			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -500

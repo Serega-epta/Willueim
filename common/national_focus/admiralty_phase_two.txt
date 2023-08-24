@@ -330,9 +330,10 @@ focus_tree = {
 		}
 			
 		completion_reward = {
-		country_event = {
-						id = ODS.28
-				}
+			country_event = {
+				id = ODS.28
+			
+			}
 		}
 	}
 	
@@ -349,6 +350,21 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = heavy_air
+			}
 		}
 	}
 	
@@ -371,7 +387,7 @@ focus_tree = {
 	focus = {
 		id = ODS_Refusal
 		icon = GFX_clear_perimetr
-		prerequisite = { focus = ODS_Expansion plan }
+		prerequisite = { focus = ODS_Expansion_plan }
 		x = 15
 		y = 11
 		cost = 1
@@ -381,6 +397,86 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+			if = {
+				limit = {
+					has_tech = infantry_weapons
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 2000
+					producer = ODS
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons1
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2000
+					producer = ODS
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons2
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 2000
+					producer = ODS
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons3
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 2000
+					producer = ODS
+				}
+			}	
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons4
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_4
+					amount = 2000
+					producer = ODS
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons5
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_5
+					amount = 2000
+					producer = ODS
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons6
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_6
+					amount = 2000
+					producer = ODS
+				}
+			}	
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons7
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_7
+					amount = 2000
+					producer = ODS
+				}
+			}	
 		}
 	}
 	
@@ -397,6 +493,12 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+			random_unit_leader = {
+				add_unit_leader_trait = adaptable
+			}
+			random_unit_leader = {
+				add_unit_leader_trait = adaptable
+			}
 		}
 	}
 	
@@ -413,6 +515,43 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = tech_military_police }
+				}
+				set_technology = {
+					tech_military_police = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = tech_military_police
+				}
+				set_technology = {
+					tech_military_police2 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = tech_military_police2
+				}
+				set_technology = {
+					tech_military_police3 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = tech_military_police3
+				}
+				set_technology = {
+					tech_military_police4 = 1
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 500
+				producer = ODS
+			}
 		}
 	}
 	
@@ -448,6 +587,18 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SOD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = YWD
+			}
 		}
 	}
 	
