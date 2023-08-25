@@ -25,6 +25,8 @@ focus_tree = {
 		country_event = {
 						id = ODS.16
 				}
+				add_stability = -0.1
+				add_political_power = -100
 		}
 	}
 
@@ -44,6 +46,7 @@ focus_tree = {
 		country_event = {
 						id = ODS.22
 				}
+						add_idea = OKO
 		}
 	}
 	
@@ -63,6 +66,7 @@ focus_tree = {
 		country_event = {
 						id = ODS.25
 				}
+				remove_dynamic_modifier = { modifier = wild_tribes }
 		}
 	}
 
@@ -160,6 +164,7 @@ focus_tree = {
 			country_event = {
 						id = ODS.21
 				}
+				add_idea = plan
 		}
 	}
 	
@@ -350,6 +355,10 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+		swap_ideas = {
+				remove_idea = black_beret
+				add_idea = black_beret2
+		}
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -620,6 +629,10 @@ focus_tree = {
 		country_event = {
 						id = ODS.20
 				}
+				swap_ideas = {
+				remove_idea = dicarstvo4
+				add_idea = dicarstvo5
+		}
 		}
 	}
 
