@@ -3,18 +3,17 @@ Reid_category = {
 	priority = 10
 	picture = GFX_raids_picture
 	ai_will_do = {
-    		base = 12
+    	base = 12
 	}
 	allowed = {
-		has_war = no
-		
+		always = no
 	}
-	visible = {
-		has_war = no
-		NOT = {
-			tag = MOS
-			tag = SIL
-			tag = BLS
-		}
-	}
+	# visible = {
+	# 	has_war = no
+	# 	NOT = {
+	# 		tag = MOS
+	# 		tag = SIL
+	# 		tag = BLS
+	# 	}
+	# }
 }

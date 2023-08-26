@@ -3,17 +3,17 @@ expedition_category = {
 	priority = 10
 	picture = GFX_expedition_picture
 	ai_will_do = {
-    		base = 12
+    	base = 12
 	}
 	allowed = {
-		always = yes
+		always = no
 	}
 	scripted_gui = roh_expedition
-	visible = {
-		NOT = {
-			tag = MOS
-			tag = SIL
-			tag = BLS
-		}
-	}
+	# visible = {
+	# 	NOT = {
+	# 		tag = MOS
+	# 		tag = SIL
+	# 		tag = BLS
+	# 	}
+	# }
 }
