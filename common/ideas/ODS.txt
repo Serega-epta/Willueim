@@ -253,6 +253,31 @@ ideas = {
 			
 			}
 		}
+			doverie_6 = {
+			picture = nenavid_serdza
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.2
+			production_speed_buildings_factor = -30
+			conscription_factor = -0.75
+			weekly_manpower = -500
+			ax_surrender_limit_offset = -70
+			resistance_damage_to_garrison_on_our_occupied_states = -40
+			resistance_growth_on_our_occupied_states = -50
+			production_speed_buildings_factor = 0.1
+			
+			}
+		}
 			black_beret = {
 			picture = nenavid_serdza
 			
@@ -407,7 +432,35 @@ ideas = {
 			decryption_power_factor = 0.2
 		}	
 	}
-
+	OKO2 = {
+			picture = nenavid_serdza
+			
+			allowed = {
+				always = no
+					modifier = {
+				operative_slot = 2
+			encryption = 20
+			decryption_power_factor = 0.4
+		}	
+	}
+	platc = {
+			picture = nenavid_serdza
+			
+			allowed = {
+				always = no
+					modifier = {
+			industry_repair_factor = 0.4
+		}	
+	}
+	platc2 = {
+			picture = nenavid_serdza
+			
+			allowed = {
+				modifier = {
+			industry_repair_factor = 0.2
+			production_speed_industrial_complex_factor = 0.2
+		}	
+	}
 
 	food_level_one = {
 			picture = glaz_ebuchiy		
