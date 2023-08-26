@@ -188,7 +188,9 @@ focus_tree = {
 			country_event = {
 						id = ODS.21
 				}
-				add_idea = platc
+				swap_ideas = {
+				remove_idea = plan
+				add_idea = plan2
 		}
 	}
 	
@@ -206,6 +208,11 @@ focus_tree = {
 			
 		completion_reward = {
 			country_event = {
+						id = ODS.23
+				}
+					swap_ideas = {
+				remove_idea = plan2
+				add_idea = plan3
 				id = ODS.23
 			}
 			swap_ideas = {
@@ -228,6 +235,10 @@ focus_tree = {
 		}
 			
 		completion_reward = { 
+		swap_ideas = {
+				remove_idea = doverie_5
+				add_idea = doverie_6
+					}
 		}
 	}
 	
@@ -264,6 +275,10 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+		swap_ideas = {
+				remove_idea = black_beret2
+				add_idea = black_beret3
+					}
 		}
 	}
 	
@@ -280,6 +295,7 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+		add_political_power = 100
 		}
 	}
 	
@@ -296,6 +312,10 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+		swap_ideas = {
+				remove_idea = doverie_6
+				add_idea = doverie_7
+					}
 		}
 	}
 	
@@ -312,6 +332,9 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+		swap_ideas = {
+				remove_idea = doverie_7
+				add_idea = doverie_8
 		}
 	}
 	
@@ -609,15 +632,103 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
-				target = MOD
+				target = SWR
 			}
 			create_wargoal = {
 				type = annex_everything
-				target = SOD
+				target = LWV
 			}
 			create_wargoal = {
 				type = annex_everything
-				target = YWD
+				target = COA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = DIB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BAG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ARM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BIH
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = VDS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MAD
+			}
+				create_wargoal = {
+				type = annex_everything
+				target = SUM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BRD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BRI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WAC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WUH
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BGD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WOD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FUD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = AZB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CRW
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ECD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = STW
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FSR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KUH
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GAT
 			}
 		}
 	}

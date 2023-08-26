@@ -278,6 +278,59 @@ ideas = {
 			
 			}
 		}
+		doverie_7 = {
+			picture = nenavid_serdza
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.2
+			production_speed_buildings_factor = -30
+			conscription_factor = -0.75
+			weekly_manpower = -500
+			ax_surrender_limit_offset = -70
+			resistance_damage_to_garrison_on_our_occupied_states = -40
+			resistance_growth_on_our_occupied_states = -50
+			production_speed_buildings_factor = 0.1
+			ompliance_growth_on_our_occupied_states = 0.1
+			
+			}
+		}
+		doverie_8 = {
+			picture = nenavid_serdza
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.2
+			production_speed_buildings_factor = -30
+			conscription_factor = -0.75
+			weekly_manpower = -500
+			ax_surrender_limit_offset = -70
+			resistance_damage_to_garrison_on_our_occupied_states = -40
+			resistance_growth_on_our_occupied_states = -50
+			production_speed_buildings_factor = 0.1
+			ompliance_growth_on_our_occupied_states = 0.1
+			esistance_target_on_our_occupied_states = 0.4
+			
+			}
+		}
 			black_beret = {
 			picture = nenavid_serdza
 			
@@ -315,6 +368,28 @@ ideas = {
 			resistance_growth_on_our_occupied_states = -0.5
 			max_planning = 0.2
 			planning_speed = 0.2
+			
+			}
+		}
+			black_beret3 = {
+			picture = nenavid_serdza
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			resistance_damage_to_garrison_on_our_occupied_states = -0.4
+			resistance_growth_on_our_occupied_states = -0.5
+			max_planning = 0.2
+			planning_speed = 0.2
+			supply_combat_penalties_on_core_factor =  -0.05
 			
 			}
 		}
@@ -443,22 +518,28 @@ ideas = {
 			decryption_power_factor = 0.4
 		}	
 	}
-	platc = {
+	plan2 = {
 			picture = nenavid_serdza
 			
 			allowed = {
 				always = no
-					modifier = {
-			industry_repair_factor = 0.4
+					modifier = 
+		production_speed_Infrastructure_factor = 0.5 
+		production_speed_Railway_factor = 0.4
+		production_speed_Supply_hub_factor = 0.4
+		industry_repair_factor = 0.4
 		}	
 	}
-	platc2 = {
+	plan3 = {
 			picture = nenavid_serdza
 			
 			allowed = {
 				modifier = {
-			industry_repair_factor = 0.2
+			industry_repair_factor = 0.4
 			production_speed_industrial_complex_factor = 0.2
+			production_speed_Infrastructure_factor = 0.5 
+			production_speed_Railway_factor = 0.4
+			production_speed_Supply_hub_factor = 0.4
 		}	
 	}
 
