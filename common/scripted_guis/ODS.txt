@@ -34,4 +34,22 @@ scripted_gui = {
 		}		
 		
     }
+
+    ODS_operating_committee  = {
+        context_type = decision_category
+		window_name = "ODS_operating_committee_gui"
+		visible = { 
+			always = yes
+		}
+		properties = {		
+			ODS_level_of_allowance_scale = { frame = level_of_allowance }
+		}
+		effects = {	
+			#здесь могли бы быть эффекты
+		}
+		triggers = {	
+			#здесь могли бы быть тригерры
+		}		
+		
+    }
 }

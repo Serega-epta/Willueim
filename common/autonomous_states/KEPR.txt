@@ -1,0 +1,54 @@
+autonomy_state = {
+	id = KEPR
+	
+	default = no
+	is_puppet = yes
+
+	use_overlord_color = yes
+	
+	min_freedom_level = 0.4
+	
+	manpower_influence = 0.9
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		can_be_spymaster = no
+		contributes_operatives = no
+		can_create_collaboration_government = no
+	}
+	
+	modifier = {
+		enemy_operative_detection_chance = 0.25
+		required_garrison_factor = -0.25
+		recruitable_population = 0.005
+		local_factories = 0.1
+		local_resources = 0.1
+		recruitable_population_factor = 0.2
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		is_subject_of = ODS
+	}
+
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}
