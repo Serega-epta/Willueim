@@ -253,31 +253,6 @@ ideas = {
 			
 			}
 		}
-		doverie_6 = {
-			picture = nenavid_serdza
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			stability_factor = -0.2
-			production_speed_buildings_factor = -30
-			conscription_factor = -0.75
-			weekly_manpower = -500
-			ax_surrender_limit_offset = -70
-			resistance_damage_to_garrison_on_our_occupied_states = -40
-			resistance_growth_on_our_occupied_states = -50
-			production_speed_buildings_factor = 0.1
-			
-			}
-		}
 			black_beret = {
 			picture = nenavid_serdza
 			
@@ -432,59 +407,94 @@ ideas = {
 			decryption_power_factor = 0.2
 		}	
 	}
-	OKO2 = {
-			picture = nenavid_serdza
-			
-			allowed = {
-				always = no
-			}
 
-			allowed_civil_war = {
-				always = yes
-			}
 
-			removal_cost = 365
-			
+	food_level_one = {
+			picture = glaz_ebuchiy		
 			modifier = {
-			operative_slot = 2
-			encryption = 20
-			decryption_power_factor = 0.4
-		}	
-	}
-	platc = {
-			picture = nenavid_serdza
-			
-			allowed = {
-				always = no
+				stability_factor = -1
+				war_support_factor = -1
+				production_speed_buildings_factor = -0.8
 			}
+		}
 
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = 365
-			
+		food_level_two = {
+			picture = glaz_ebuchiy		
 			modifier = {
-			industry_repair_factor = 0.4
-		}	
-	}
-	platc2 = {
-			picture = nenavid_serdza
-			
-			allowed = {
-				always = no
+				stability_factor = -0.9
+				war_support_factor = -0.9
+				production_speed_buildings_factor = -0.7
 			}
+		}
 
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = 365
-			
+		food_level_three = {
+			picture = glaz_ebuchiy		
 			modifier = {
-			industry_repair_factor = 0.2
-			production_speed_industrial_complex_factor = 0.2
-		}	
-	}
+				stability_factor = -0.8
+				war_support_factor = -0.8
+				production_speed_buildings_factor = -0.6
+			}
+		}
+
+		food_level_four = {
+			picture = glaz_ebuchiy		
+			modifier = {
+				stability_factor = -0.7
+				war_support_factor = -0.7
+				production_speed_buildings_factor = -0.5
+			}
+		}
+
+		food_level_five = {
+			picture = glaz_ebuchiy		
+			modifier = {
+				stability_factor = -0.6
+				war_support_factor = -0.6
+				production_speed_buildings_factor = -0.4
+			}
+		}
+
+		food_level_six = {
+			picture = glaz_ebuchiy		
+			modifier = {
+				stability_factor = -0.5
+				war_support_factor = -0.5
+				production_speed_buildings_factor = -0.3
+			}
+		}
+
+		food_level_seven = {
+			picture = glaz_ebuchiy		
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.4
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		food_level_eight = {
+			picture = glaz_ebuchiy		
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		food_level_nine = {
+			picture = glaz_ebuchiy		
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		food_level_ten = {
+			picture = glaz_ebuchiy		
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
 }
 }
