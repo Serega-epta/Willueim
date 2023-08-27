@@ -83,9 +83,9 @@
 		
 		completion_reward = {
 			country_event = {
-						id = ODS.2
-				}
-					add_ideas = black_perimetr
+				id = ODS.2
+			}
+			add_ideas = black_perimetr
 		}
 	}
 	focus = {
@@ -103,9 +103,40 @@
 			country_event = {
 						id = ODS.11
 				}
+			if = { 
+				limit = { has_idea = doverie_1 }
 				swap_ideas = {
-				remove_idea = doverie_1
-				add_idea = doverie_2
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_2} 
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_3} 
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_4 } 
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = 	doverie_5
+				}
+			}
+			else_if = {  
+				limit = { has_idea = doverie_5 } 
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = 	doverie_6
+				}
 			}
 		}
 	}
@@ -145,48 +176,39 @@
 			if = { 
 				limit = { has_idea = dicarstvo1 }
 				swap_ideas = {
-				remove_idea = dicarstvo1
-				add_idea = dicarstvo2
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo} 
-			swap_ideas = {
-				remove_idea = dicarstvo
-				add_idea = dicarstvo1
+			else_if = { 
+				limit = { has_idea = dicarstvo} 
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
 			}
-			
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo2} 
-			swap_ideas = {
-				remove_idea = dicarstvo2
-				add_idea = dicarstvo3
+			else_if = { 
+				limit = { has_idea = dicarstvo2} 
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo3 } 
-			swap_ideas = {
-				remove_idea = dicarstvo3
-				add_idea = 	dicarstvo4
+			else_if = { 
+				limit = { has_idea = dicarstvo3 } 
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = 	dicarstvo4
+				}
 			}
-			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo4 } 
-			swap_ideas = {
-				remove_idea = dicarstvo4
-				add_idea = 	dicarstvo5
-			}
+			else_if = {  
+				limit = { has_idea = dicarstvo4 } 
+				swap_ideas = {
+					remove_idea = dicarstvo4
+					add_idea = 	dicarstvo5
+				}
 			}
 		}
-	}
-	}
-	}
-	}
-	}
-	}
-	}
 	}
 	
 	focus = {
@@ -207,48 +229,39 @@
 			if = { 
 				limit = { has_idea = dicarstvo1 }
 				swap_ideas = {
-				remove_idea = dicarstvo1
-				add_idea = dicarstvo2
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo} 
-			swap_ideas = {
-				remove_idea = dicarstvo
-				add_idea = dicarstvo1
+			else_if = { 
+				limit = { has_idea = dicarstvo} 
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
 			}
-			
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo2} 
-			swap_ideas = {
-				remove_idea = dicarstvo2
-				add_idea = dicarstvo3
+			else_if = { 
+				limit = { has_idea = dicarstvo2} 
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo3 } 
-			swap_ideas = {
-				remove_idea = dicarstvo3
-				add_idea = 	dicarstvo4
+			else_if = { 
+				limit = { has_idea = dicarstvo3 } 
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = 	dicarstvo4
+				}
 			}
-			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo4 } 
-			swap_ideas = {
-				remove_idea = dicarstvo4
-				add_idea = 	dicarstvo5
-			}
+			else_if = {  
+				limit = { has_idea = dicarstvo4 } 
+				swap_ideas = {
+					remove_idea = dicarstvo4
+					add_idea = 	dicarstvo5
+				}
 			}
 		}
-	}
-	}
-	}
-	}
-	}
-	}
-	}
 	}
 	focus = {
 		id = ODS_iskorenit_dikc
@@ -265,51 +278,42 @@
 			country_event = {
 				id = ODS.9
 			}
-				if = { 
+			if = { 
 				limit = { has_idea = dicarstvo1 }
 				swap_ideas = {
-				remove_idea = dicarstvo1
-				add_idea = dicarstvo2
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo} 
-			swap_ideas = {
-				remove_idea = dicarstvo
-				add_idea = dicarstvo1
+			else_if = { 
+				limit = { has_idea = dicarstvo} 
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
 			}
-			
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo2} 
-			swap_ideas = {
-				remove_idea = dicarstvo2
-				add_idea = dicarstvo3
+			else_if = { 
+				limit = { has_idea = dicarstvo2} 
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo3 } 
-			swap_ideas = {
-				remove_idea = dicarstvo3
-				add_idea = 	dicarstvo4
+			else_if = { 
+				limit = { has_idea = dicarstvo3 } 
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = 	dicarstvo4
+				}
 			}
-			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo4 } 
-			swap_ideas = {
-				remove_idea = dicarstvo4
-				add_idea = 	dicarstvo5
-			}
+			else_if = {  
+				limit = { has_idea = dicarstvo4 } 
+				swap_ideas = {
+					remove_idea = dicarstvo4
+					add_idea = 	dicarstvo5
+				}
 			}
 		}
-	}
-	}
-	}
-	}
-	}
-	}
-	}
 	}
 	focus = {
 		id = ODS_Veni_reshima
@@ -327,51 +331,42 @@
 			country_event = {
 				id = ODS.4
 			}
-			if = { 
+		if = { 
 				limit = { has_idea = dicarstvo1 }
 				swap_ideas = {
-				remove_idea = dicarstvo1
-				add_idea = dicarstvo2
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo} 
-			swap_ideas = {
-				remove_idea = dicarstvo
-				add_idea = dicarstvo1
+			else_if = { 
+				limit = { has_idea = dicarstvo} 
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
 			}
-			
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo2} 
-			swap_ideas = {
-				remove_idea = dicarstvo2
-				add_idea = dicarstvo3
+			else_if = { 
+				limit = { has_idea = dicarstvo2} 
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo3 } 
-			swap_ideas = {
-				remove_idea = dicarstvo3
-				add_idea = 	dicarstvo4
+			else_if = { 
+				limit = { has_idea = dicarstvo3 } 
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = 	dicarstvo4
+				}
 			}
-			}
-			else = { 
-			if = { 
-			limit = { has_idea = dicarstvo4 } 
-			swap_ideas = {
-				remove_idea = dicarstvo4
-				add_idea = 	dicarstvo5
-			}
+			else_if = {  
+				limit = { has_idea = dicarstvo4 } 
+				swap_ideas = {
+					remove_idea = dicarstvo4
+					add_idea = 	dicarstvo5
+				}
 			}
 		}
-	}
-	}
-	}
-	}
-	}
-	}
-	}
 	}
 	focus = {
 		id = ODS_osn_KOB
@@ -405,33 +400,42 @@
 			country_event = {
 				id = ODS.7
 			}
-				if = { 
-				limit = { has_idea = doverie_2 }
+			if = { 
+				limit = { has_idea = doverie_1 }
 				swap_ideas = {
-				remove_idea = doverie_2
-				add_idea = doverie_3
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
 			}
-			
-			else = { 
-			if = { 
-			limit = { has_idea = doverie_3 } 
-			swap_ideas = {
-				remove_idea = doverie_3
-				add_idea = doverie_4
+			else_if = { 
+				limit = { has_idea = doverie_2} 
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = doverie_4 } 
-			swap_ideas = {
-				remove_idea = doverie_4
-				add_idea = doverie_5
+			else_if = { 
+				limit = { has_idea = doverie_3} 
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
 			}
+			else_if = { 
+				limit = { has_idea = doverie_4 } 
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = 	doverie_5
+				}
+			}
+			else_if = {  
+				limit = { has_idea = doverie_5 } 
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = 	doverie_6
+				}
 			}
 		}
-	}
-	}
-	}
-	}
 	}
 	focus = {
 		id = ODS_rostki_blago
@@ -448,33 +452,42 @@
 			country_event = {
 				id = ODS.8
 			}
-					if = { 
-				limit = { has_idea = doverie_2 }
+			if = { 
+				limit = { has_idea = doverie_1 }
 				swap_ideas = {
-				remove_idea = doverie_2
-				add_idea = doverie_3
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
 			}
-			
-			else = { 
-			if = { 
-			limit = { has_idea = doverie_3 } 
-			swap_ideas = {
-				remove_idea = doverie_3
-				add_idea = doverie_4
+			else_if = { 
+				limit = { has_idea = doverie_2} 
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = doverie_4 } 
-			swap_ideas = {
-				remove_idea = doverie_4
-				add_idea = doverie_5
+			else_if = { 
+				limit = { has_idea = doverie_3} 
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
 			}
+			else_if = { 
+				limit = { has_idea = doverie_4 } 
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = 	doverie_5
+				}
+			}
+			else_if = {  
+				limit = { has_idea = doverie_5 } 
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = 	doverie_6
+				}
 			}
 		}
-	}
-	}
-	}
-	}
 	}
 	focus = {
 		id = ODS_arterii_rejima
@@ -492,33 +505,42 @@
 			country_event = {
 				id = ODS.5
 			}
-					if = { 
-				limit = { has_idea = doverie_2 }
+			if = { 
+				limit = { has_idea = doverie_1 }
 				swap_ideas = {
-				remove_idea = doverie_2
-				add_idea = doverie_3
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
 			}
-			
-			else = { 
-			if = { 
-			limit = { has_idea = doverie_3 } 
-			swap_ideas = {
-				remove_idea = doverie_3
-				add_idea = doverie_4
+			else_if = { 
+				limit = { has_idea = doverie_2} 
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
 			}
-			else = { 
-			if = { 
-			limit = { has_idea = doverie_4 } 
-			swap_ideas = {
-				remove_idea = doverie_4
-				add_idea = doverie_5
+			else_if = { 
+				limit = { has_idea = doverie_3} 
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
 			}
+			else_if = { 
+				limit = { has_idea = doverie_4 } 
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = 	doverie_5
+				}
+			}
+			else_if = {  
+				limit = { has_idea = doverie_5 } 
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = 	doverie_6
+				}
 			}
 		}
-	}
-	}
-	}
-	}
 	}
 	focus = {
 		id = ODS_Gumanizatsiya
