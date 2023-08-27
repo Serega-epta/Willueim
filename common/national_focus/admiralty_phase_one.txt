@@ -83,9 +83,9 @@
 		
 		completion_reward = {
 			country_event = {
-						id = ODS.2
-				}
-					add_idea = black_perimetr
+				id = ODS.2
+			}
+			add_ideas = black_perimetr
 		}
 	}
 	focus = {
@@ -103,9 +103,40 @@
 			country_event = {
 						id = ODS.11
 				}
+			if = { 
+				limit = { has_idea = doverie_1 }
 				swap_ideas = {
-				remove_idea = doverie_1
-				add_idea = doverie_2
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_2} 
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_3} 
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_4 } 
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = 	doverie_5
+				}
+			}
+			else_if = {  
+				limit = { has_idea = doverie_5 } 
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = 	doverie_6
+				}
 			}
 		}
 	}
@@ -142,9 +173,40 @@
 			country_event = {
 				id = ODS.13
 			}
-			swap_ideas = {
-				remove_idea = dicarstvo
-				add_idea = dicarstvo1
+			if = { 
+				limit = { has_idea = dicarstvo1 }
+				swap_ideas = {
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo} 
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo2} 
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo3 } 
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = 	dicarstvo4
+				}
+			}
+			else_if = {  
+				limit = { has_idea = dicarstvo4 } 
+				swap_ideas = {
+					remove_idea = dicarstvo4
+					add_idea = 	dicarstvo5
+				}
 			}
 		}
 	}
@@ -164,9 +226,40 @@
 			country_event = {
 				id = ODS.10
 			}
-			swap_ideas = {
-				remove_idea = dicarstvo2
-				add_idea = dicarstvo3
+			if = { 
+				limit = { has_idea = dicarstvo1 }
+				swap_ideas = {
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo} 
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo2} 
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo3 } 
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = 	dicarstvo4
+				}
+			}
+			else_if = {  
+				limit = { has_idea = dicarstvo4 } 
+				swap_ideas = {
+					remove_idea = dicarstvo4
+					add_idea = 	dicarstvo5
+				}
 			}
 		}
 	}
@@ -185,9 +278,40 @@
 			country_event = {
 				id = ODS.9
 			}
-			swap_ideas = {
-				remove_idea = dicarstvo1
-				add_idea = dicarstvo2
+			if = { 
+				limit = { has_idea = dicarstvo1 }
+				swap_ideas = {
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo} 
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo2} 
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo3 } 
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = 	dicarstvo4
+				}
+			}
+			else_if = {  
+				limit = { has_idea = dicarstvo4 } 
+				swap_ideas = {
+					remove_idea = dicarstvo4
+					add_idea = 	dicarstvo5
+				}
 			}
 		}
 	}
@@ -207,9 +331,40 @@
 			country_event = {
 				id = ODS.4
 			}
-			swap_ideas = {
-				remove_idea = dicarstvo3
-				add_idea = dicarstvo4
+		if = { 
+				limit = { has_idea = dicarstvo1 }
+				swap_ideas = {
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo} 
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo2} 
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo3 } 
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = 	dicarstvo4
+				}
+			}
+			else_if = {  
+				limit = { has_idea = dicarstvo4 } 
+				swap_ideas = {
+					remove_idea = dicarstvo4
+					add_idea = 	dicarstvo5
+				}
 			}
 		}
 	}
@@ -245,9 +400,40 @@
 			country_event = {
 				id = ODS.7
 			}
-			swap_ideas = {
-				remove_idea = doverie_2
-				add_idea = doverie_3
+			if = { 
+				limit = { has_idea = doverie_1 }
+				swap_ideas = {
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_2} 
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_3} 
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_4 } 
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = 	doverie_5
+				}
+			}
+			else_if = {  
+				limit = { has_idea = doverie_5 } 
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = 	doverie_6
+				}
 			}
 		}
 	}
@@ -266,9 +452,40 @@
 			country_event = {
 				id = ODS.8
 			}
-			swap_ideas = {
-				remove_idea = doverie_3
-				add_idea = doverie_4
+			if = { 
+				limit = { has_idea = doverie_1 }
+				swap_ideas = {
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_2} 
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_3} 
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_4 } 
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = 	doverie_5
+				}
+			}
+			else_if = {  
+				limit = { has_idea = doverie_5 } 
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = 	doverie_6
+				}
 			}
 		}
 	}
@@ -288,9 +505,40 @@
 			country_event = {
 				id = ODS.5
 			}
-			swap_ideas = {
-				remove_idea = doverie_4
-				add_idea = doverie_5
+			if = { 
+				limit = { has_idea = doverie_1 }
+				swap_ideas = {
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_2} 
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_3} 
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_4 } 
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = 	doverie_5
+				}
+			}
+			else_if = {  
+				limit = { has_idea = doverie_5 } 
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = 	doverie_6
+				}
 			}
 		}
 	}
@@ -330,4 +578,3 @@
 			}
 		}
 	}
-}
