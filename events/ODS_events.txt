@@ -110,6 +110,8 @@ country_event = {
 
 	option = {
 	name = ODS.8.a	
+	country_event = { id = ODS.31
+					}
 	}
 }
 country_event = {
@@ -124,6 +126,8 @@ country_event = {
 
 	option = {
 	name = ODS.9.a	
+	country_event = { id = ODS.32
+					}
 	}
 }
 country_event = {
@@ -389,6 +393,8 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+	country_event = { id = ODS.33
+					}
 	name = ODS.28.a
 	}
 }
@@ -418,5 +424,47 @@ country_event = {
 
 	option = {
 	name = ODS.30.a
+	}
+}
+country_event = {
+	id = ODS.31
+	title = ODS.31.t
+	desc = ODS.31.d
+	picture = 
+
+    fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+	name = ODS.31.a
+	}
+}
+country_event = {
+	id = ODS.32
+	title = ODS.32.t
+	desc = ODS.32.d
+	picture = 
+
+    fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+	name = ODS.32.a
+	}
+}
+country_event = {
+	id = ODS.33
+	title = ODS.33.t
+	desc = ODS.33.d
+	picture = 
+
+    fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+	name = ODS.33.a
 	}
 }

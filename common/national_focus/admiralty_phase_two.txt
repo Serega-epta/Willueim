@@ -46,7 +46,7 @@ focus_tree = {
 		country_event = {
 						id = ODS.22
 				}
-						add_idea = OKO
+						add_ideas = OKO
 		}
 	}
 	
@@ -168,7 +168,7 @@ focus_tree = {
 			country_event = {
 						id = ODS.21
 				}
-				add_idea = plan
+				add_ideas = plan
 		}
 	}
 	
@@ -186,11 +186,12 @@ focus_tree = {
 			
 		completion_reward = {
 			country_event = {
-						id = ODS.21
+						id = ODS.27
 				}
 				swap_ideas = {
 				remove_idea = plan
 				add_idea = plan2
+				}
 		}
 	}
 	
@@ -213,11 +214,6 @@ focus_tree = {
 					swap_ideas = {
 				remove_idea = plan2
 				add_idea = plan3
-				id = ODS.23
-			}
-			swap_ideas = {
-				remove_idea = platc
-				add_idea = platc2
 			}
 		}
 	}
@@ -235,11 +231,33 @@ focus_tree = {
 		}
 			
 		completion_reward = { 
-		swap_ideas = {
+			if = { 
+				limit = { has_idea = doverie_5}
+				swap_ideas = {
 				remove_idea = doverie_5
 				add_idea = doverie_6
-					}
+			}
+			
+			else = { 
+			if = { 
+			limit = { has_idea = doverie_6} 
+			swap_ideas = {
+				remove_idea = doverie_6
+				add_idea = doverie_7
+			}
+			else = { 
+			if = { 
+			limit = { has_idea = doverie_7} 
+			swap_ideas = {
+				remove_idea = doverie_7
+				add_idea = doverie_8
+			}
+			}
 		}
+	}
+	}
+	}
+	}
 	}
 	
 	focus = {
@@ -312,11 +330,33 @@ focus_tree = {
 		}
 			
 		completion_reward = {
-		swap_ideas = {
+		if = { 
+				limit = { has_idea = doverie_5}
+				swap_ideas = {
+				remove_idea = doverie_5
+				add_idea = doverie_6
+			}
+			
+			else = { 
+			if = { 
+			limit = { has_idea = doverie_6} 
+			swap_ideas = {
 				remove_idea = doverie_6
 				add_idea = doverie_7
-					}
+			}
+			else = { 
+			if = { 
+			limit = { has_idea = doverie_7} 
+			swap_ideas = {
+				remove_idea = doverie_7
+				add_idea = doverie_8
+			}
+			}
 		}
+	}
+	}
+	}
+	}
 	}
 	
 	focus = {
@@ -332,10 +372,33 @@ focus_tree = {
 		}
 			
 		completion_reward = {
-		swap_ideas = {
+			if = { 
+				limit = { has_idea = doverie_5}
+				swap_ideas = {
+				remove_idea = doverie_5
+				add_idea = doverie_6
+			}
+			
+			else = { 
+			if = { 
+			limit = { has_idea = doverie_6} 
+			swap_ideas = {
+				remove_idea = doverie_6
+				add_idea = doverie_7
+			}
+			else = { 
+			if = { 
+			limit = { has_idea = doverie_7} 
+			swap_ideas = {
 				remove_idea = doverie_7
 				add_idea = doverie_8
+			}
+			}
 		}
+	}
+	}
+	}
+	}
 	}
 	
 	focus = {
@@ -424,6 +487,10 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+		swap_ideas = {
+				remove_idea = black_beret2
+				add_idea = black_beret3
+		}
 		}
 	}
 	
@@ -611,6 +678,11 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1
+				uses = 4
+				category = armor
+			}
 		}
 	}
 	
@@ -751,14 +823,45 @@ focus_tree = {
 		country_event = {
 						id = ODS.20
 				}
+	if = { 
+				limit = { has_idea = dicarstvo1 }
 				swap_ideas = {
+				remove_idea = dicarstvo1
+				add_idea = dicarstvo2
+			}
+			
+			else = { 
+			if = { 
+			limit = { has_idea = dicarstvo2} 
+			swap_ideas = {
+				remove_idea = dicarstvo2
+				add_idea = dicarstvo3
+			}
+			else = { 
+			if = { 
+			limit = { has_idea = dicarstvo3 } 
+			swap_ideas = {
+				remove_idea = dicarstvo3
+				add_idea = 	dicarstvo4
+			}
+			}
+			else = { 
+			if = { 
+			limit = { has_idea = dicarstvo4 } 
+			swap_ideas = {
 				remove_idea = dicarstvo4
-				add_idea = dicarstvo5
-		}
+				add_idea = 	dicarstvo5
+			}
+			}
 		}
 	}
-
+	}
+	}
+	}
+	}
+	}
 }
+ 
  
 	
 	
