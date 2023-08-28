@@ -146,6 +146,7 @@ country_event = {
 }
 
 #Ивент на проверку работоспособности механики Святости БНГВ
+country_event = {
 	id = ROH_debug.5
 	title = ROH_debug.5.t
 	desc = ROH_debug.5.d
@@ -172,5 +173,24 @@ country_event = {
 			}	
 			set_country_flag = decision_for_holiness 
 		}
+	}
+}
+
+#Ивент на проверку работоспособности ачивок
+country_event = {
+	id = ROH_debug.6
+	title = ROH_debug.6.t
+	desc = ROH_debug.6.d
+	picture = 
+
+    	fire_only_once = yes  
+
+	is_triggered_only = yes
+
+	option = {
+		name = ROH_debug.6.a
+		set_country_flag = enemies_of_humanity_achievement
+		set_country_flag = take_the_greatcoat_achievement
+		set_country_flag = king_of_mountain_achievement
 	}
 }

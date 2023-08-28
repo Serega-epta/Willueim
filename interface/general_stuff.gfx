@@ -185,7 +185,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_missing_resources_strip"
 		texturefile = "gfx/interface/missing_resources_strip.dds"
-		noOfFrames = 6
+		noOfFrames = 8
 	}
 	
 	spriteType = {
@@ -270,16 +270,11 @@ spriteTypes = {
 	
 	maskedShieldType = {
 		name = "GFX_flag_small2"
-		textureFile1 = "gfx/interface/flag_overlay_2_new.dds"
-		textureFile2 = "gfx/interface/flag_mask_11.tga"
+		textureFile1 = "gfx/interface/flag_overlay_small.dds"
+		textureFile2 = "gfx/interface/shield_small_mask.tga"
 		effectFile = "gfx/FX/maskedflag.lua"
 	}	
-	maskedShieldType = {
-		name = "GFX_flag_small3"
-		textureFile1 = "gfx/interface/flag_overlay_new.dds"
-		textureFile2 = "gfx/interface/flag_mask_5.tga"
-		effectFile = "gfx/FX/maskedflag.lua"
-	}	
+
 	spriteType = {
 		name = "GFX_major_country_flag_overlay"
 		texturefile = "gfx/interface/major_country_flag_overlay.dds"

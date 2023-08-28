@@ -1,12 +1,15 @@
 guiTypes = {
 	containerWindowType = {
 		name = "RoH_laws_gui"	
-		position = { x = 0 y = 425 } 	   
+		position = { x = 0 y = 445 } 	   
 		size = { width = 550 height = 850 }
-		background = {
-			name = "Background"
-			quadTextureSprite ="GFX_tiled_window"
-		}
+
+			background = {
+				position = { x = 0 y = -20 } 
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window"
+			}
+
 			iconType ={
 				name ="category_header_laws"
 				spriteType = "GFX_category_header_laws"

@@ -1,7 +1,7 @@
 guiTypes = {
    containerWindowType = {
         name = "panel_gosudarstva" 
-        position = { x = -325 y = -50 }		   
+        position = { x = -685 y = -48 }		   
 		size = { width = 550 height = 150 }
 		orientation = center
 		origo = center
@@ -31,7 +31,7 @@ guiTypes = {
     ################################### сюда гос устройство
     containerWindowType = {
         name = "Okno_gosustroistva" 
-        position = { x = -325 y = 349 }		   
+        position = { x = -688 y = 349 }		   
 		size = { width = 550 height = 850 }
 		orientation = center
 		origo = center
@@ -107,6 +107,7 @@ guiTypes = {
 			maxWidth = 95
 			maxHeight = 50
 			fixedsize = yes
+			alwaystransparent = yes
 		}		
 		iconType = {
 			name ="l44ya1"
@@ -132,6 +133,7 @@ guiTypes = {
 			maxWidth = 95
 			maxHeight = 50
 			fixedsize = yes
+			alwaystransparent = yes
 		}
 		buttonType ={ 
            name ="BUTTON_Open_okno_ststegos_system"
@@ -152,6 +154,7 @@ guiTypes = {
 			maxWidth = 95
 			maxHeight = 50
 			fixedsize = yes
+			alwaystransparent = yes
 		}	
 	   background = {
 			name = "Background3"	
@@ -161,7 +164,7 @@ guiTypes = {
     ################################### МОДЕЛЬ МЕНШИКОВА 111111111111
     containerWindowType = {
         name = "menshikov_system_tree" 
-        position = { x = 340 y = 405 }	  
+        position = { x = -20 y = 405 }	  
 		size = { width = 800 height = 1810 }
 		orientation = center
 		origo = center
@@ -205,7 +208,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik1_ooff"
 		   position = { x= 250 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Materialovedenie_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1menshk_tt"
@@ -214,7 +217,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik2_ooff"
 		   position = { x= 450 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Plotnaya_komponovka_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "2menshk_tt"
@@ -223,7 +226,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik3_ooff"
 		   position = { x= 250 y= 160 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Niskhodyaschie_potoki_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "3menshk_tt"
@@ -232,7 +235,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik4_ooff"
 		   position = { x= 450 y= 160 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Voskhodyaschie_potoki_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "4menshk_tt"
@@ -241,7 +244,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik5_ooff"
 		   position = { x= 355 y= 350 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Nashe_buduschee_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "5menshk_tt"
@@ -250,7 +253,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik6_ooff"
 		   position = { x= 250 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "ProfTekhUchilischa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "6menshk_tt"
@@ -259,7 +262,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik7_ooff"
 		   position = { x= 450 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "RabFakultety_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "7menshk_tt"
@@ -268,7 +271,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik8_ooff"
 		   position = { x= 250 y= 620 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Veterany_Truda_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "8menshk_tt"
@@ -277,7 +280,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik9_ooff"
 		   position = { x= 450 y= 620 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Geroi_Truda_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "9menshk_tt"
@@ -286,7 +289,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik10_ooff"
 		   position = { x= 355 y= 730 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Kooperatsia_industrii_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "10menshk_tt"
@@ -295,7 +298,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik11_ooff"
 		   position = { x= 150 y= 850 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Razrabotano_dlya_zhizni_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "11menshk_tt"
@@ -304,7 +307,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik12_ooff"
 		   position = { x= 355 y= 850 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Vozlyubi_blizhnego_svoego_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "12menshk_tt"
@@ -313,7 +316,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik13_ooff"
 		   position = { x= 555 y= 850 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Mestnoe_krylo_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "13menshk_tt"
@@ -323,7 +326,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik1"
 		   position = { x= 250 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Materialovedenie"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1menshk_tt"
@@ -343,7 +346,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik2"
 		   position = { x= 450 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Plotnaya_komponovka"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "2menshk_tt"
@@ -363,7 +366,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik3"
 		   position = { x= 250 y= 160 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Niskhodyaschie_potoki"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "3menshk_tt"
@@ -383,7 +386,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik4"
 		   position = { x= 450 y= 160 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Voskhodyaschie_potoki"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "4menshk_tt"
@@ -403,7 +406,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik5"
 		   position = { x= 355 y= 350 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Nashe_buduschee"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "5menshk_tt"
@@ -423,7 +426,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik6"
 		   position = { x= 250 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "ProfTekhUchilischa"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "6menshk_tt"
@@ -443,7 +446,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik7"
 		   position = { x= 450 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "RabFakultety"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "7menshk_tt"
@@ -463,7 +466,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik8"
 		   position = { x= 250 y= 620 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Veterany_Truda"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "8menshk_tt"
@@ -483,7 +486,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik9"
 		   position = { x= 450 y= 620 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Geroi_Truda"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "9menshk_tt"
@@ -503,7 +506,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik10"
 		   position = { x= 355 y= 730 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Kooperatsia_industrii"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "10menshk_tt"
@@ -523,7 +526,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik11"
 		   position = { x= 150 y= 850 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Razrabotano_dlya_zhizni"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "11menshk_tt"
@@ -543,7 +546,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik12"
 		   position = { x= 355 y= 850 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Vozlyubi_blizhnego_svoego"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "12menshk_tt"
@@ -563,7 +566,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik13"
 		   position = { x= 555 y= 850 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Mestnoe_krylo"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "13menshk_tt"
@@ -698,7 +701,7 @@ guiTypes = {
     }
 	containerWindowType = {
         name = "menshikov_system_tree2222" 
-        position = { x = 340 y = 405 }	  
+        position = { x = -20 y = 405 }	  
 		size = { width = 800 height = 1810 }
 		orientation = center
 		origo = center
@@ -725,7 +728,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik14_ooff"
 		   position = { x= 250 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Strogiy_reglament_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "14menshk_tt"
@@ -734,7 +737,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik15_ooff"
 		   position = { x= 450 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Gibkiy_reglament_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "15menshk_tt"
@@ -743,7 +746,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik16_ooff"
 		   position = { x= 250 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Sadovodcheskie_Tovarischestva_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "16menshk_tt"
@@ -752,7 +755,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik17_ooff"
 		   position = { x= 450 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "SelOtryady_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17menshk_tt"
@@ -761,7 +764,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik18_ooff"
 		   position = { x= 250 y= 310 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Sostyazatelnoe_pravo_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "18menshk_tt"
@@ -770,7 +773,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik19_ooff"
 		   position = { x= 450 y= 310 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Kodex_chestnoy_konkurentsii_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "19menshk_tt"
@@ -779,7 +782,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik20_ooff"
 		   position = { x= 350 y= 440 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Autsorsing_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "20menshk_tt"
@@ -788,7 +791,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik21_ooff"
 		   position = { x= 150 y= 570 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Torgovaya_initsiativa_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "21menshk_tt"
@@ -797,7 +800,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik22_ooff"
 		   position = { x= 350 y= 570 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "GOST_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "22menshk_tt"
@@ -806,7 +809,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik23_ooff"
 		   position = { x= 550 y= 570 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Vsyo_v_oborot_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "23menshk_tt"
@@ -815,7 +818,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik24_ooff"
 		   position = { x= 350 y= 700 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Oplot_gumanizma_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "24menshk_tt"
@@ -826,7 +829,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik14"
 		   position = { x= 250 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Strogiy_reglament"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "14menshk_tt"
@@ -846,7 +849,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik15"
 		   position = { x= 450 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Gibkiy_reglament"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "15menshk_tt"
@@ -866,7 +869,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik16"
 		   position = { x= 250 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Sadovodcheskie_Tovarischestva"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "16menshk_tt"
@@ -886,7 +889,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik17"
 		   position = { x= 450 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "SelOtryady"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17menshk_tt"
@@ -906,7 +909,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik18"
 		   position = { x= 250 y= 310 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Sostyazatelnoe_pravo"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "18menshk_tt"
@@ -926,7 +929,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik19"
 		   position = { x= 450 y= 310 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Kodex_chestnoy_konkurentsii"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "19menshk_tt"
@@ -946,7 +949,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik20"
 		   position = { x= 350 y= 440 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Autsorsing"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "20menshk_tt"
@@ -966,7 +969,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik21"
 		   position = { x= 150 y= 570 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Torgovaya_initsiativa"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "21menshk_tt"
@@ -986,7 +989,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik22"
 		   position = { x= 350 y= 570 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "GOST"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "22menshk_tt"
@@ -1006,7 +1009,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik23"
 		   position = { x= 550 y= 570 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Vsyo_v_oborot"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "23menshk_tt"
@@ -1026,7 +1029,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_menshik24"
 		   position = { x= 350 y= 700 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Oplot_gumanizma"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "24menshk_tt"
@@ -1052,7 +1055,7 @@ guiTypes = {
 ########################################################################################################################################## SAMOILOV MODEL	1111
     containerWindowType = {
         name = "smoilov_system_tree" 
-        position = { x = 340 y = 405 }	  
+        position = { x = -20 y = 405 }	  
 		size = { width = 800 height = 1810 }
 		orientation = center
 		origo = center
@@ -1098,7 +1101,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv1_ooff"
 		   position = { x= 350 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Fundament_proshlogo_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1samoilvv_tt"
@@ -1107,7 +1110,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv2_ooff"
 		   position = { x= 150 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Za_semyu_pechatyami_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "2samoilvv_tt"
@@ -1116,7 +1119,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv3_ooff"
 		   position = { x= 350 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Bez_lishnikh_khlopot_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "3samoilvv_tt"
@@ -1125,7 +1128,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv4_ooff"
 		   position = { x= 550 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Nash_dom_-_nasha_krepost_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "4samoilvv_tt"
@@ -1134,7 +1137,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv5_ooff"
 		   position = { x= 250 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Selskoe_opolchenie_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "5samoilvv_tt"
@@ -1143,7 +1146,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv6_ooff"
 		   position = { x= 450 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Zavodskoe_opolchenie_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "6samoilvv_tt"
@@ -1152,7 +1155,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv7_ooff"
 		   position = { x= 450 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Rezka_zemli_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "7samoilvv_tt"
@@ -1161,7 +1164,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv8_ooff"
 		   position = { x= 250 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Skrebya_po_susekam_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "8samoilvv_tt"
@@ -1170,7 +1173,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv9_ooff"
 		   position = { x= 350 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "V_odin_mig_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "9samoilvv_tt"
@@ -1179,7 +1182,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv10_ooff"
 		   position = { x= 250 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Oprichnaya_dlan_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "10samoilvv_tt"
@@ -1188,7 +1191,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv11_ooff"
 		   position = { x= 450 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Ochischenie_periferii_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "11samoilvv_tt"
@@ -1198,7 +1201,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv1"
 		   position = { x= 350 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Fundament_proshlogo"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1samoilvv_tt"
@@ -1218,7 +1221,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv2"
 		   position = { x= 150 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Za_semyu_pechatyami"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "2samoilvv_tt"
@@ -1238,7 +1241,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv3"
 		   position = { x= 350 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Bez_lishnikh_khlopot"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "3samoilvv_tt"
@@ -1258,7 +1261,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv4"
 		   position = { x= 550 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Nash_dom_-_nasha_krepost"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "4samoilvv_tt"
@@ -1278,7 +1281,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv5"
 		   position = { x= 250 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Selskoe_opolchenie"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "5samoilvv_tt"
@@ -1298,7 +1301,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv6"
 		   position = { x= 450 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Zavodskoe_opolchenie"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "6samoilvv_tt"
@@ -1318,7 +1321,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv7"
 		   position = { x= 450 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Rezka_zemli"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "7samoilvv_tt"
@@ -1338,7 +1341,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv8"
 		   position = { x= 250 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Skrebya_po_susekam"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "8samoilvv_tt"
@@ -1358,7 +1361,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv9"
 		   position = { x= 350 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "V_odin_mig"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "9samoilvv_tt"
@@ -1378,7 +1381,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv10"
 		   position = { x= 250 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Oprichnaya_dlan"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "10samoilvv_tt"
@@ -1398,7 +1401,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv11"
 		   position = { x= 450 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Ochischenie_periferii"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "11samoilvv_tt"
@@ -1425,7 +1428,7 @@ guiTypes = {
 ########################################################################################################################################## SAMOILOV MODEL	2222222
     containerWindowType = {
         name = "smoilov_system_tree2222" 
-        position = { x = 340 y = 405 }	  
+        position = { x = -20 y = 405 }	  
 		size = { width = 800 height = 1810 }
 		orientation = center
 		origo = center
@@ -1451,7 +1454,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv12_ooff"
 		   position = { x= 350 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Anomalii_-_k_chyortu_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "12samoilvv_tt"
@@ -1460,7 +1463,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv13_ooff"
 		   position = { x= 150 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Bitva_za_semyu_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "13samoilvv_tt"
@@ -1469,7 +1472,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv14_ooff"
 		   position = { x= 350 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Voennye_zaymy_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "14samoilvv_tt"
@@ -1478,7 +1481,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv15_ooff"
 		   position = { x= 550 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Iz_kamney_i_palok_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "15samoilvv_tt"
@@ -1487,7 +1490,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv16_ooff"
 		   position = { x= 250 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Avtonomnye_batarei_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "16samoilvv_tt"
@@ -1496,7 +1499,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv17_ooff"
 		   position = { x= 450 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Podkontrolnye_batarei_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17samoilvv_tt"
@@ -1505,7 +1508,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv18_ooff"
 		   position = { x= 350 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Perventsy_Sparty_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "18samoilvv_tt"
@@ -1514,7 +1517,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv19_ooff"
 		   position = { x= 250 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Nervy_na_predele_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "19samoilvv_tt"
@@ -1523,7 +1526,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv20_ooff"
 		   position = { x= 450 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Stalnaya_khvatka_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "20samoilvv_tt"
@@ -1532,7 +1535,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv21_ooff"
 		   position = { x= 350 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Potom_i_krovyu_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "21samoilvv_tt"
@@ -1542,7 +1545,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv12"
 		   position = { x= 350 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Anomalii_-_k_chyortu"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "12samoilvv_tt"
@@ -1562,7 +1565,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv13"
 		   position = { x= 150 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Bitva_za_semyu"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "13samoilvv_tt"
@@ -1582,7 +1585,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv14"
 		   position = { x= 350 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Voennye_zaymy"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "14samoilvv_tt"
@@ -1602,7 +1605,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv15"
 		   position = { x= 550 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Iz_kamney_i_palok"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "15samoilvv_tt"
@@ -1622,7 +1625,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv16"
 		   position = { x= 250 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Avtonomnye_batarei"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "16samoilvv_tt"
@@ -1642,7 +1645,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv17"
 		   position = { x= 450 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Podkontrolnye_batarei"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17samoilvv_tt"
@@ -1662,7 +1665,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv18"
 		   position = { x= 350 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Perventsy_Sparty"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "18samoilvv_tt"
@@ -1682,7 +1685,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv19"
 		   position = { x= 250 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Nervy_na_predele"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "19samoilvv_tt"
@@ -1702,7 +1705,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv20"
 		   position = { x= 450 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Stalnaya_khvatka"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "20samoilvv_tt"
@@ -1722,7 +1725,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_samoliv21"
 		   position = { x= 350 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Potom_i_krovyu"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "21samoilvv_tt"
@@ -1749,7 +1752,7 @@ guiTypes = {
 ########################################################################################################################################## NAUMOV MODEL	1111
     containerWindowType = {
         name = "naumov_system_tree" 
-        position = { x = 340 y = 405 }	  
+        position = { x = -20 y = 405 }	  
 		size = { width = 800 height = 1810 }
 		orientation = center
 		origo = center
@@ -1796,7 +1799,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov1_ooff"
 		   position = { x= 350 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Obschiy_dolg_-_obschee_pravo_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1naumovv_tt"
@@ -1805,7 +1808,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov2_ooff"
 		   position = { x= 250 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Sut_bytia_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "2naumovv_tt"
@@ -1814,7 +1817,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov3_ooff"
 		   position = { x= 450 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Uzhas_bytia_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "3naumovv_tt"
@@ -1823,7 +1826,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov4_ooff"
 		   position = { x= 50 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Zabotlivoe_Oko_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "4naumovv_tt"
@@ -1832,7 +1835,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov5_ooff"
 		   position = { x= 250 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Zanimatelnoe_nablyudeni_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "5naumovv_tt"
@@ -1841,7 +1844,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov6_ooff"
 		   position = { x= 450 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Tekhnicheskaya_revolyutsia_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "6naumovv_tt"
@@ -1850,7 +1853,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov7_ooff"
 		   position = { x= 650 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Kulturnaya_revolyutsia_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "7naumovv_tt"
@@ -1859,7 +1862,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov8_ooff"
 		   position = { x= 150 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Vyzhivanie_obespecheno_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "8naumovv_tt"
@@ -1868,7 +1871,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov9_ooff"
 		   position = { x= 550 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Sorazmernaya_plata_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "9naumovv_tt"
@@ -1877,7 +1880,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov10_ooff"
 		   position = { x= 350 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Soldat_bez_upreka_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "10naumovv_tt"
@@ -1886,7 +1889,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov11_ooff"
 		   position = { x= 250 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Formuly_dlya_vsego_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "11naumovv_tt"
@@ -1895,7 +1898,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov12_ooff"
 		   position = { x= 450 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Pervichny_bulion_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "12naumovv_tt"
@@ -1905,7 +1908,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov1"
 		   position = { x= 350 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Obschiy_dolg_-_obschee_pravo"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "1naumovv_tt"
@@ -1925,7 +1928,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov2"
 		   position = { x= 250 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Sut_bytia"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "2naumovv_tt"
@@ -1945,7 +1948,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov3"
 		   position = { x= 450 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Uzhas_bytia"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "3naumovv_tt"
@@ -1965,7 +1968,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov4"
 		   position = { x= 50 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Zabotlivoe_Oko"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "4naumovv_tt"
@@ -1985,7 +1988,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov5"
 		   position = { x= 250 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Zanimatelnoe_nablyudeni"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "5naumovv_tt"
@@ -2005,7 +2008,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov6"
 		   position = { x= 450 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Tekhnicheskaya_revolyutsia"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "6naumovv_tt"
@@ -2025,7 +2028,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov7"
 		   position = { x= 650 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Kulturnaya_revolyutsia"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "7naumovv_tt"
@@ -2045,7 +2048,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov8"
 		   position = { x= 150 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Vyzhivanie_obespecheno"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "8naumovv_tt"
@@ -2065,7 +2068,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov9"
 		   position = { x= 550 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Sorazmernaya_plata"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "9naumovv_tt"
@@ -2085,7 +2088,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov10"
 		   position = { x= 350 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Soldat_bez_upreka"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "10naumovv_tt"
@@ -2105,7 +2108,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov11"
 		   position = { x= 250 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Formuly_dlya_vsego"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "11naumovv_tt"
@@ -2125,7 +2128,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov12"
 		   position = { x= 450 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Pervichny_bulion"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "12naumovv_tt"
@@ -2152,7 +2155,7 @@ guiTypes = {
 ########################################################################################################################################## NAUMOV MODEL	2222222
     containerWindowType = {
         name = "naumov_system_tree222ss2" 
-        position = { x = 340 y = 405 }	  
+        position = { x = -20 y = 405 }	  
 		size = { width = 800 height = 1810 }
 		orientation = center
 		origo = center
@@ -2178,7 +2181,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov13_ooff"
 		   position = { x= 350 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Tsvety_zhizni_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "13naumovv_tt"
@@ -2187,7 +2190,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov14_ooff"
 		   position = { x= 350 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Plany_Ikh_Zhizni_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "14naumovv_tt"
@@ -2196,7 +2199,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov15_ooff"
 		   position = { x= 450 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Otrinte_somnenia_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "15naumovv_tt"
@@ -2205,7 +2208,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov16_ooff"
 		   position = { x= 250 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Realizatsia_potentsiala_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "16naumovv_tt"
@@ -2214,7 +2217,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov17_ooff"
 		   position = { x= 650 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Poryadok_v_myslyakh_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17naumovv_tt"
@@ -2223,7 +2226,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov18_ooff"
 		   position = { x= 50 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Edinstvo_krovyu_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "18naumovv_tt"
@@ -2232,7 +2235,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov19_ooff"
 		   position = { x= 250 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Chelovek-Soznanie_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "19naumovv_tt"
@@ -2241,7 +2244,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov20_ooff"
 		   position = { x= 450 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Kognitivnaya_voyna_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "20naumovv_tt"
@@ -2250,7 +2253,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov21_ooff"
 		   position = { x= 350 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_off"
+		   quadTextureSprite = "Granitsy_tela_off"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "21naumovv_tt"
@@ -2261,7 +2264,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov13"
 		   position = { x= 350 y= 50 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Tsvety_zhizni"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "13naumovv_tt"
@@ -2281,7 +2284,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov14"
 		   position = { x= 350 y= 180 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Plany_Ikh_Zhizni"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "14naumovv_tt"
@@ -2301,7 +2304,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov15"
 		   position = { x= 450 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Otrinte_somnenia"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "15naumovv_tt"
@@ -2321,7 +2324,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov16"
 		   position = { x= 250 y= 330 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Realizatsia_potentsiala"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "16naumovv_tt"
@@ -2341,7 +2344,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov17"
 		   position = { x= 650 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Poryadok_v_myslyakh"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "17naumovv_tt"
@@ -2361,7 +2364,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov18"
 		   position = { x= 50 y= 480 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Edinstvo_krovyu"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "18naumovv_tt"
@@ -2381,7 +2384,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov19"
 		   position = { x= 250 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Chelovek-Soznanie"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "19naumovv_tt"
@@ -2401,7 +2404,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov20"
 		   position = { x= 450 y= 630 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Kognitivnaya_voyna"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "20naumovv_tt"
@@ -2422,7 +2425,7 @@ guiTypes = {
 		buttonType ={ 
            name ="BUTTON_naumov21"
 		   position = { x= 350 y= 780 }
-		   quadTextureSprite = "GFX_Lisa_on"
+		   quadTextureSprite = "Granitsy_tela"
 		   buttonFont = "hoi_18mbs"
 		   format = center   
 		   pdx_tooltip = "21naumovv_tt"
@@ -2443,11 +2446,5 @@ guiTypes = {
 			name = "Backgrou78724nd4"	
 			spriteType = "GFX_tiled_window"
 		}	  
-    }	
-		
-	
-	
-	
-	
-	
+    }
 }
