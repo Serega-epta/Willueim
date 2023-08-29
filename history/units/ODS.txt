@@ -1,0 +1,171 @@
+division_template = {
+	name = "OKO"
+	regiments = {
+		egerskayapechota = { x = 0 y = 0 }
+		egerskayapechota = { x = 0 y = 1 }
+		egerskayapechota = { x = 0 y = 2 }
+		egerskayapechota = { x = 1 y = 0 }
+		egerskayapechota = { x = 1 y = 1 }
+		egerskayapechota = { x = 1 y = 2 }
+		egerskayapechota = { x = 2 y = 0 }
+		egerskayapechota = { x = 2 y = 1 }
+		egerskayapechota = { x = 2 y = 2 }
+	}
+	support = {
+		art_stvol = { x = 0 y = 0 }
+		military_police = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		mot_recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "purity"
+	regiments = {
+		rhbzbatalion = { x = 0 y = 0 }
+		rhbzbatalion = { x = 0 y = 1 }
+		rhbzbatalion = { x = 0 y = 2 }
+		rhbzbatalion = { x = 1 y = 0 }
+		rhbzbatalion = { x = 1 y = 1 }
+		rhbzbatalion = { x = 1 y = 2 }
+		rhbzbatalion = { x = 2 y = 0 }
+		rhbzbatalion = { x = 2 y = 1 }
+		rhbzbatalion = { x = 2 y = 2 }
+	}
+	support = {
+		art_stvol = { x = 0 y = 0 }
+		rhbz = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "prosperity"
+	regiments = {
+		egerskayapechota = { x = 0 y = 0 }
+		egerskayapechota = { x = 0 y = 1 }
+		egerskayapechota = { x = 0 y = 2 }
+		egerskayapechota = { x = 1 y = 0 }
+		egerskayapechota = { x = 1 y = 1 }
+		egerskayapechota = { x = 1 y = 2 }
+		motopechotanabtr = { x = 2 y = 0 }
+		motopechotanabtr = { x = 2 y = 1 }
+		motopechotanabtr = { x = 2 y = 2 }
+	}
+	support = {
+		art_stvol = { x = 0 y = 0 }
+		field_hospital = { x = 0 y = 1 }
+		mot_recon = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "black_berets"
+	regiments = {
+		egerskayapechota = { x = 0 y = 0 }
+		egerskayapechota = { x = 0 y = 1 }
+		egerskayapechota = { x = 1 y = 0 }
+		egerskayapechota = { x = 1 y = 1 }
+		motopechotanabtr = { x = 2 y = 0 }
+		motopechotanabtr = { x = 2 y = 1 }
+	}
+	support = {
+		art_stvol = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "tank_group"
+	regiments = {
+		motopechotanabtr = { x = 0 y = 0 }
+		motopechotanabtr = { x = 0 y = 1 }
+		motopechotanabtr = { x = 0 y = 2 }
+		obt_tank = { x = 1 y = 0 }
+		obt_tank = { x = 1 y = 1 }
+		obt_tank = { x = 1 y = 2 }
+		obt_tank = { x = 2 y = 0 }
+		obt_tank = { x = 2 y = 1 }
+		obt_tank = { x = 2 y = 2 }
+	}
+	support = {
+		art_stvol = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "priazovtsy"
+	regiments = {
+		opolchenie = { x = 0 y = 0 }
+		opolchenie = { x = 0 y = 1 }
+		opolchenie = { x = 0 y = 2 }
+		opolchenie = { x = 1 y = 0 }
+		opolchenie = { x = 1 y = 1 }
+		opolchenie = { x = 2 y = 0 }
+		opolchenie = { x = 2 y = 1 }
+	}
+	support = {
+		art_stvol = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "black_berets"
+		location = 13276
+		division_template = "black_berets"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.65
+        start_manpower_factor = 0.9
+	}
+
+	division = {
+		name = "black_berets"
+		location = 13278
+		division_template = "black_berets"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.65
+        start_manpower_factor = 0.9
+	}
+
+	division = {
+		name = "black_berets"
+		location = 11670
+		division_template = "black_berets"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.65
+        start_manpower_factor = 0.9
+	}
+
+	division = {
+		name = "black_berets"
+		location = 11670
+		division_template = "black_berets"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.65
+        start_manpower_factor = 0.9
+	}
+
+	division = {
+		name = "tank_group"
+		location = 13283
+		division_template = "tank_group"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.4
+        start_manpower_factor = 0.9
+	}
+
+	division = {
+		name = "priazovtsy"
+		location = 13281
+		division_template = "priazovtsy"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.4
+        start_manpower_factor = 0.9
+	}
+
+	division = {
+		name = "priazovtsy"
+		location = 13281
+		division_template = "priazovtsy"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.4
+        start_manpower_factor = 0.9
+	}
+}
