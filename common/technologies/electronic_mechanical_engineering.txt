@@ -1,6 +1,7 @@
 technologies = {
 	#Ветка электроники
 	prewar_electronic_systems = {
+		research_speed_factor = 0.02	
 		path = {
 			leads_to_tech = computer_development
 			research_cost_coeff = 1
@@ -25,6 +26,7 @@ technologies = {
 	}
 
 	computer_development = {
+		research_speed_factor = 0.03
 		path = {
 			leads_to_tech = automation_of_production_facilities
 			research_cost_coeff = 1
@@ -49,6 +51,7 @@ technologies = {
 	}
 
 	automation_of_production_facilities = {
+		production_factory_start_efficiency_factor = 0.05
 		research_cost = 1
 		folder = {
 			name = electronics_folder
@@ -65,6 +68,8 @@ technologies = {
 	}
 
 	software_development = {
+		research_speed_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
 		path = {
 			leads_to_tech = internet
 			research_cost_coeff = 1
@@ -86,6 +91,7 @@ technologies = {
 
 
 	radio_enhancement  = {
+		custom_effect_tooltip = radio_enhancement_tt
 		path = {
 			leads_to_tech = improved_radio_communication
 			research_cost_coeff = 1
@@ -110,6 +116,7 @@ technologies = {
 	}
 
 	improved_radio_communication = {
+		custom_effect_tooltip = improved_radio_communication_tt
 		path = {
 			leads_to_tech = internet
 			research_cost_coeff = 1
@@ -186,6 +193,7 @@ technologies = {
 	}
 
 	internet = {
+		research_speed_factor = 0.1
 		path = {
 			leads_to_tech = quantum_internet
 			research_cost_coeff = 1
@@ -207,6 +215,7 @@ technologies = {
 
 	quantum_internet = {
 		research_cost = 1
+		research_speed_factor = 0.2
 		folder = {
 			name = electronics_folder
 			position = { x = 1 y = 8 }
@@ -251,6 +260,7 @@ technologies = {
 	}
 
 	peaceful_applications_of_nuclear_technology = {
+		research_speed_factor = 0.1
 		path = {
 			leads_to_tech = nuclear_fusion
 			research_cost_coeff = 1
@@ -296,6 +306,7 @@ technologies = {
 
 	nuclear_fusion = {
 		research_cost =  2
+		local_resources_factor = 0.1
 		folder = {
 			name = electronics_folder
 			position = { x = 9 y = 4 }
@@ -337,6 +348,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost =  2
+		enable_building = {
+			building = nuclear_reactor
+			level = 1
+		}
 		folder = {
 			name = electronics_folder
 			position = { x = 14 y = 2 }
@@ -357,6 +372,7 @@ technologies = {
 			research_cost_coeff = 1
 		}	
 		research_cost =  2
+		nuclear_production = 1
 		folder = {
 			name = electronics_folder
 			position = { x = 13 y = 4 }
@@ -389,6 +405,7 @@ technologies = {
 
 
 	radioactive_weapons = {
+		army_attack_factor = 0.05
 		path = {
 			leads_to_tech = remote_exposure_systems
 			research_cost_coeff = 1
@@ -414,6 +431,7 @@ technologies = {
 
 	remote_exposure_systems = {
 		research_cost =  2
+		army_infantry_attack_factor = 0.05
 		folder = {
 			name = electronics_folder
 			position = { x = 16 y = 6 }

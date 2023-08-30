@@ -814,10 +814,10 @@ technologies = {
 			name = support_folder
 			position = { x = 10 y = @2015 }
 		}
+		allow = { has_tech = improved_radio_communication }
 		
 		categories = {
 			support_tech
-			rhbz
 		}
 		
 		ai_will_do = {
@@ -846,7 +846,6 @@ technologies = {
 		
 		categories = {
 			support_tech
-			rhbz
 		}
 		
 		ai_will_do = {
@@ -874,7 +873,6 @@ technologies = {
 		
 		categories = {
 			support_tech
-			rhbz
 		}
 		
 		ai_will_do = {
@@ -897,7 +895,6 @@ technologies = {
 		
 		categories = {
 			support_tech
-			rhbz
 		}
 		
 		ai_will_do = {
@@ -906,6 +903,8 @@ technologies = {
 	}
 	
 	tech_radiolocationborba = {
+
+		allow = { has_tech = improved_radio_communication }
 
 		enable_subunits = {
 			radiolocationborba
@@ -925,7 +924,6 @@ technologies = {
 		
 		categories = {
 			support_tech
-			radiolocationborba
 		}
 		
 		ai_will_do = {
@@ -952,7 +950,6 @@ technologies = {
 		
 		categories = {
 			support_tech
-			radiolocationborba
 		}
 		
 		ai_will_do = {
@@ -979,7 +976,6 @@ technologies = {
 		
 		categories = {
 			support_tech
-			radiolocationborba
 		}
 		
 		ai_will_do = {
@@ -1001,7 +997,6 @@ technologies = {
 		
 		categories = {
 			support_tech
-			radiolocationborba
 		}
 		
 		ai_will_do = {
@@ -1012,11 +1007,14 @@ technologies = {
 
 
 	impulse_silencers = {	
+		enable_subunits = {
+			pulse_jammers
+		}
 		path = {
 			leads_to_tech = impulse_silencers2
 			research_cost_coeff = 1
 		}
-
+		allow = { has_tech = portable_EMI_systems }
 		research_cost = 2
 		start_year = 2015
 		folder = {
@@ -1033,7 +1031,9 @@ technologies = {
 		}
 	}
 	impulse_silencers2 = {
-		
+		pulse_jammers = {
+
+		}
 		path = {
 			leads_to_tech = impulse_silencers3
 			research_cost_coeff = 1
@@ -1055,7 +1055,9 @@ technologies = {
 		}
 	}
 	impulse_silencers3 = {
-		
+		pulse_jammers = {
+			
+		}
 		path = {
 			leads_to_tech = impulse_silencers4
 			research_cost_coeff = 1
@@ -1077,7 +1079,9 @@ technologies = {
 		}
 	}
 	impulse_silencers4 = {	
-
+        pulse_jammers = {
+			
+		}
 		research_cost = 2
 		start_year = 2045
 		folder = {
