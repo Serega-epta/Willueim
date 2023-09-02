@@ -420,6 +420,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			has_completed_focus = ARM_The_means_to_an_end
+			has_completed_focus = ARM_New_and_unbreakable
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 150
@@ -667,7 +671,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_Heavy_Cavalry
-	      prerequisite = { focus = ARM_Soldier_in_the_car }
+	    prerequisite = { focus = ARM_Soldier_in_the_car }
 		icon = GFX_Heavy_Cavalry
 		x = 19
 		y = 6
@@ -689,8 +693,8 @@ focus_tree = {
 	focus = {
 		id = ARM_New_and_unbreakable
 		icon = GFX_New_and_unbreakable
-	      	prerequisite = { focus = ARM_New_protective_equipment }
-	      	prerequisite = { focus = ARM_Heavy_Cavalry }
+	    prerequisite = { focus = ARM_New_protective_equipment }
+	    prerequisite = { focus = ARM_Heavy_Cavalry }
 		x = 17
 		y = 7
 		cost = 3.8	
