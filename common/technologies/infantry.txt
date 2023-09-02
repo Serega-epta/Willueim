@@ -14,12 +14,7 @@ technologies = {
 		path = {
 			leads_to_tech = infantry_development2
 			research_cost_coeff = 1
-		}	
-		infantry = {
-			soft_attack = 0.05
-			defense = 0.05
-			breakthrough = 0.05
-		}
+		}		
 		research_cost = 1.5
 		start_year = 2010
 		folder = {
@@ -41,12 +36,7 @@ technologies = {
 		path = {
 			leads_to_tech = infantry_development3
 			research_cost_coeff = 1
-		}	
-		infantry = {
-			soft_attack = 0.05
-			defense = 0.05
-			breakthrough = 0.05
-		}	
+		}		
 		research_cost = 1.5
 		start_year = 2020
 		folder = {
@@ -68,11 +58,6 @@ technologies = {
 		path = {
 			leads_to_tech = infantry_development4
 			research_cost_coeff = 1
-		}
-		infantry = {
-			soft_attack = 0.05
-			defense = 0.05
-			breakthrough = 0.05
 		}		
 		research_cost = 1.5
 		start_year = 2030
@@ -96,12 +81,6 @@ technologies = {
 			leads_to_tech = infantry_development5
 			research_cost_coeff = 1
 		}		
-		infantry = {
-			soft_attack = 0.05
-			defense = 0.05
-			breakthrough = 0.05
-			hard_attack = 0.05
-		}
 		research_cost = 1.5
 		start_year = 2040
 		folder = {
@@ -125,12 +104,6 @@ technologies = {
 		folder = {
 			name = infantry_folder
 			position = { x = -2 y = 25 }
-		}
-		infantry = {
-			soft_attack = 0.15
-			defense = 0.15
-			breakthrough = 0.15
-			hard_attack = 0.05
 		}
 		
 		categories = {
@@ -1325,14 +1298,7 @@ infantry_weapons7 = {
 			motorized_equipment_2
 		}
 
-		path = {
-			leads_to_tech = mechanised_infantry
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = armored_car1
-			research_cost_coeff = 1
-		}		
+	
 		
 		path = {
 			leads_to_tech = motorised_infantry3
@@ -1411,7 +1377,16 @@ infantry_weapons7 = {
 		path = {
 			leads_to_tech = motorised_infantry5
 			research_cost_coeff = 1
-		}	
+		}
+		
+		path = {
+			leads_to_tech = mechanised_infantry
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = armored_car1
+			research_cost_coeff = 1
+		}		
 		
 		research_cost = 1.5
 		start_year = 2033
@@ -1569,8 +1544,14 @@ infantry_weapons7 = {
 		enable_equipments = {
 			gw_armored_car_equipment
 		}
+		allow_branch = { has_dlc = "La Resistance" }
 		path = {
 			leads_to_tech = armored_car2
+			research_cost_coeff = 1
+		}
+					
+		path = {
+			leads_to_tech = dopolnitwearpon2
 			research_cost_coeff = 1
 		}
 
@@ -1578,7 +1559,7 @@ infantry_weapons7 = {
 		start_year = 2033
 		folder = {
 			name = infantry_folder
-			position = { x = 8 y = 5 }
+			position = { x = 8 y = 13 }
 		}
 		
 		categories = {
@@ -1604,12 +1585,16 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 					
+		path = {
+			leads_to_tech = bronelist2
+			research_cost_coeff = 1
+		}
 
 		research_cost = 1.5
 		start_year = 2040
 		folder = {
 			name = infantry_folder
-			position = { x = 8 y = 8 }
+			position = { x = 8 y = 18 }
 		}
 		
 		categories = {
@@ -1629,76 +1614,6 @@ infantry_weapons7 = {
 		enable_equipments = {
 			armored_car_equipment_2
 		}
-
-		path = {
-			leads_to_tech = armored_car4
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = dopolnitwearpon2
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2045
-		folder = {
-			name = infantry_folder
-			position = { x = 8 y = 13 }
-		}
-		
-		categories = {
-			motorized_equipment
-			armor
-			cat_armored_cars
-		}
-		
-		sub_technologies = {
-			armored_car_at_upgrade
-		}
-
-		ai_will_do = {
-			factor = 1
-			
-		}
-	}
-
-	armored_car4 = {
-		path = {
-			leads_to_tech = armored_car5
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = bronelist2
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2045
-		folder = {
-			name = infantry_folder
-			position = { x = 8 y = 18 }
-		}
-		
-		categories = {
-			motorized_equipment
-			armor
-			cat_armored_cars
-		}
-
-		ai_will_do = {
-			factor = 1
-			
-		}
-	}
-
-
-	armored_car5 = {
-
-		path = {
-			leads_to_tech = armored_car4
-			research_cost_coeff = 1
-		}
 		path = {
 			leads_to_tech = comuflage2
 			research_cost_coeff = 1
@@ -1715,6 +1630,10 @@ infantry_weapons7 = {
 			motorized_equipment
 			armor
 			cat_armored_cars
+		}
+		
+		sub_technologies = {
+			armored_car_at_upgrade
 		}
 
 		ai_will_do = {
@@ -1746,12 +1665,16 @@ infantry_weapons7 = {
 			leads_to_tech = mechanised_infantry2
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = dopolnitwearpon3
+			research_cost_coeff = 1
+		}
 
 		research_cost = 1.5
 		start_year = 2033
 		folder = {
 			name = infantry_folder
-			position = { x = 12 y = 5 }
+			position = { x = 12 y = 13 }
 		}
 		
 		categories = {
@@ -1775,12 +1698,16 @@ infantry_weapons7 = {
 			leads_to_tech = mechanised_infantry3
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = bronelist3
+			research_cost_coeff = 1
+		}
 
 		research_cost = 1.5
 		start_year = 2040
 		folder = {
 			name = infantry_folder
-			position = { x = 12 y = 8 }
+			position = { x = 12 y = 18 }
 		}
 		
 		categories = {
@@ -1800,74 +1727,11 @@ infantry_weapons7 = {
 			mechanized_equipment_3
 		}
 		path = {
-			leads_to_tech = mechanised_infantry4
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = dopolnitwearpon3
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2045
-		folder = {
-			name = infantry_folder
-			position = { x = 12 y = 13 }
-		}
-		
-		categories = {
-			motorized_equipment
-			infantry_tech
-			cat_mechanized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	mechanised_infantry4 = {
-
-		enable_equipments = {
-			mechanized_equipment_3
-		}
-		path = {
-			leads_to_tech = mechanised_infantry5
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = bronelist3
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2045
-		folder = {
-			name = infantry_folder
-			position = { x = 12 y = 18 }
-		}
-		
-		categories = {
-			motorized_equipment
-			infantry_tech
-			cat_mechanized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	mechanised_infantry5 = {
-
-		enable_equipments = {
-			mechanized_equipment_3
-		}
-
-		path = {
 			leads_to_tech = comuflage3
 			research_cost_coeff = 1
 		}
+
+
 		research_cost = 1.5
 		start_year = 2045
 		folder = {
@@ -2096,4 +1960,5 @@ infantry_weapons7 = {
 			factor = 1
 		}
 	}
+	
 }
