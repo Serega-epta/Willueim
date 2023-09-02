@@ -9,112 +9,6 @@ technologies = {
 	@2040 = 12
 	@2045 = 14
 
-	infantry_development = {
-		
-		path = {
-			leads_to_tech = infantry_development2
-			research_cost_coeff = 1
-		}		
-		research_cost = 1.5
-		start_year = 2010
-		folder = {
-			name = infantry_folder
-			position = { x = -2 y = 0 }
-		}
-		
-		categories = {
-			infantry_weapons
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	infantry_development2 = {
-		
-		path = {
-			leads_to_tech = infantry_development3
-			research_cost_coeff = 1
-		}		
-		research_cost = 1.5
-		start_year = 2020
-		folder = {
-			name = infantry_folder
-			position = { x = -2 y = 5 }
-		}
-		
-		categories = {
-			infantry_weapons
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	infantry_development3 = {
-		
-		path = {
-			leads_to_tech = infantry_development4
-			research_cost_coeff = 1
-		}		
-		research_cost = 1.5
-		start_year = 2030
-		folder = {
-			name = infantry_folder
-			position = { x = -2 y = 11 }
-		}
-		
-		categories = {
-			infantry_weapons
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	infantry_development4 = {
-		
-		path = {
-			leads_to_tech = infantry_development5
-			research_cost_coeff = 1
-		}		
-		research_cost = 1.5
-		start_year = 2040
-		folder = {
-			name = infantry_folder
-			position = { x = -2 y = 18 }
-		}
-		
-		categories = {
-			infantry_weapons
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	infantry_development5 = {
-				
-		research_cost = 1.5
-		start_year = 2050
-		folder = {
-			name = infantry_folder
-			position = { x = -2 y = 25 }
-		}
-		
-		categories = {
-			infantry_weapons
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	infantry_weapons = {
 
 		enable_equipments = {
@@ -197,7 +91,7 @@ technologies = {
 			research_cost_coeff = 1
 		}		
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2020
 		folder = {
 			name = infantry_folder
@@ -258,7 +152,7 @@ technologies = {
 			research_cost_coeff = 1
 		}		
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2025
 		folder = {
 			name = infantry_folder
@@ -321,7 +215,7 @@ technologies = {
 			research_cost_coeff = 1
 		}		
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2030
 		folder = {
 			name = infantry_folder
@@ -384,7 +278,7 @@ infantry_weapons5 = {
 			leads_to_tech = infantry_bonus5
 			research_cost_coeff = 1
 		}		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2035
 		folder = {
 			name = infantry_folder
@@ -484,7 +378,7 @@ infantry_weapons6 = {
 			leads_to_tech = infantry_bonus7
 			research_cost_coeff = 1
 		}		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2040
 		folder = {
 			name = infantry_folder
@@ -575,7 +469,7 @@ infantry_weapons7 = {
 			leads_to_tech = infantry_bonus9
 			research_cost_coeff = 1
 		}		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2045
 		folder = {
 			name = infantry_folder
@@ -722,7 +616,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}		
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2020
 		folder = {
 			name = infantry_folder
@@ -783,7 +677,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}		
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2025
 		folder = {
 			name = infantry_folder
@@ -846,7 +740,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}		
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2030
 		folder = {
 			name = infantry_folder
@@ -909,7 +803,7 @@ infantry_weapons7 = {
 			leads_to_tech = infantry_obonus5
 			research_cost_coeff = 1
 		}		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2035
 		folder = {
 			name = infantry_folder
@@ -1009,7 +903,7 @@ infantry_weapons7 = {
 			leads_to_tech = infantry_obonus7
 			research_cost_coeff = 1
 		}		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2040
 		folder = {
 			name = infantry_folder
@@ -1100,7 +994,7 @@ infantry_weapons7 = {
 			leads_to_tech = infantry_obonus9
 			research_cost_coeff = 1
 		}		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2045
 		folder = {
 			name = infantry_folder
@@ -1236,7 +1130,7 @@ infantry_weapons7 = {
 		}
 
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2010
 		folder = {
 			name = infantry_folder
@@ -1305,7 +1199,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2020
 		folder = {
 			name = infantry_folder
@@ -1343,7 +1237,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2025
 		folder = {
 			name = infantry_folder
@@ -1388,7 +1282,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}		
 		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2033
 		folder = {
 			name = infantry_folder
@@ -1428,7 +1322,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2035
 		folder = {
 			name = infantry_folder
@@ -1468,7 +1362,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2040
 		folder = {
 			name = infantry_folder
@@ -1504,7 +1398,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2045
 		folder = {
 			name = infantry_folder
@@ -1555,7 +1449,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2033
 		folder = {
 			name = infantry_folder
@@ -1590,7 +1484,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2040
 		folder = {
 			name = infantry_folder
@@ -1619,7 +1513,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2045
 		folder = {
 			name = infantry_folder
@@ -1670,7 +1564,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2033
 		folder = {
 			name = infantry_folder
@@ -1703,7 +1597,7 @@ infantry_weapons7 = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2040
 		folder = {
 			name = infantry_folder
@@ -1732,7 +1626,7 @@ infantry_weapons7 = {
 		}
 
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 2045
 		folder = {
 			name = infantry_folder

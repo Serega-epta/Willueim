@@ -63,10 +63,6 @@ technologies = {
 			leads_to_tech = tech_maintenance_company
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = impulse_silencers
-			research_cost_coeff = 1
-		}
 		research_cost = 1.0
 		start_year = 1918
 		folder = {
@@ -79,20 +75,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 2
+			factor = 2
 			
 			modifier = {
-				base = 4
+				factor = 4
 				date > "1937.1.1"
 			}
 			
 			modifier = {
-				base = 4
+				factor = 4
 				date > "1938.1.1"
 			}
 			
 			modifier = {
-				base = 4
+				factor = 4
 				date > "2025.1.1"
 			}
 		}
@@ -123,29 +119,29 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 2
+				factor = 2
 				is_major = yes
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1937.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1938.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "2025.1.1"
 			}
 			modifier = {
-				base = 10
+				factor = 10
 				date > "1940.1.1"
 			}
 		}
@@ -204,20 +200,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 2
+			factor = 2
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1941.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "2035.1.1"
 			}
 		}
@@ -275,20 +271,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 2
+			factor = 2
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1943.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1944.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "2045.1.1"
 			}
 		}
@@ -340,20 +336,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 2
+			factor = 2
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1946.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1947.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1948.1.1"
 			}
 		}
@@ -386,29 +382,29 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 2
+				factor = 2
 				is_major = yes
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1937.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1938.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "2025.1.1"
 			}
 			modifier = {
-				base = 10
+				factor = 10
 				date > "1940.1.1"
 			}
 		}
@@ -438,20 +434,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1941.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "2035.1.1"
 			}
 		}
@@ -480,20 +476,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1943.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1944.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "2045.1.1"
 			}
 		}
@@ -517,20 +513,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1946.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1947.1.1"
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				date > "1948.1.1"
 			}
 		}
@@ -560,15 +556,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 0.5
+			factor = 0.5
 			
 			modifier = {
-				base = 5
+				factor = 5
 				tag = GER
 			}
 
 			modifier = {
-				base = 10
+				factor = 10
 				tag = GER
 
 				POL = { has_capitulated = yes }
@@ -576,27 +572,27 @@ technologies = {
 			}
 			
 			modifier = {
-				base = 5
+				factor = 5
 				tag = JAP
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				tag = ITA
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				tag = ENG
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				tag = USA
 			}
 			
 			modifier = {
-				base = 2
+				factor = 2
 				has_war = yes
 			}
 		}
@@ -627,10 +623,10 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 0.5
+			factor = 0.5
 			
 			modifier = {
-				base = 2
+				factor = 2
 				has_war = yes
 			}
 		}
@@ -659,10 +655,10 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 0.5
+			factor = 0.5
 			
 			modifier = {
-				base = 2
+				factor = 2
 				has_war = yes
 			}
 		}
@@ -686,10 +682,10 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 0.5
+			factor = 0.5
 			
 			modifier = {
-				base = 2
+				factor = 2
 				has_war = yes
 			}
 		}
@@ -719,7 +715,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_politruk2 = {
@@ -745,7 +741,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_politruk3 = {
@@ -771,7 +767,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_politruk4 = {
@@ -792,7 +788,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	
@@ -821,7 +817,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_rhbz2 = {
@@ -850,7 +846,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_rhbz3 = {
@@ -878,7 +874,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_rhbz4 = {
@@ -901,7 +897,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	
@@ -929,7 +925,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_radiolocationborba2 = {
@@ -956,7 +952,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_radiolocationborba3 = {
@@ -983,7 +979,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 	tech_radiolocationborba4 = {
@@ -1005,94 +1001,13 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 		}
 	}
 
 
 
-	impulse_silencers = {	
-		path = {
-			leads_to_tech = impulse_silencers2
-			research_cost_coeff = 1
-		}
 
-		research_cost = 2
-		start_year = 2015
-		folder = {
-			name = support_folder
-			position = { x = 14 y = @2015 }
-		}
-		
-		categories = {
-			support_tech
-		}
-		
-		ai_will_do = {
-			base = 1
-		}
-	}
-	impulse_silencers2 = {
-		
-		path = {
-			leads_to_tech = impulse_silencers3
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 2025
-		folder = {
-			name = support_folder
-			position = { x = 14 y = @2025 }
-		}
-		
-		categories = {
-			support_tech
-		}
-		
-		ai_will_do = {
-			base = 1
-		}
-	}
-	impulse_silencers3 = {
-		
-		path = {
-			leads_to_tech = impulse_silencers4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 2035
-		folder = {
-			name = support_folder
-			position = { x = 14 y = 12 }
-		}
-		
-		categories = {
-			support_tech
-		}
-		
-		ai_will_do = {
-			base = 1
-		}
-	}
-	impulse_silencers4 = {	
-
-		research_cost = 2
-		start_year = 2045
-		folder = {
-			name = support_folder
-			position = { x = 14 y = 18 }
-		}
-		
-		categories = {
-			support_tech
-		}
-		
-		ai_will_do = {
-			base = 1
-		}
-	}
 
 
 
@@ -1131,20 +1046,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1937.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1938.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "2025.1.1"
 			}
 		}
@@ -1176,20 +1091,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1941.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "2035.1.1"
 			}
 		}
@@ -1220,20 +1135,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1943.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1944.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "2045.1.1"
 			}
 		}
@@ -1259,20 +1174,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1946.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1947.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1948.1.1"
 			}
 		}
@@ -1288,7 +1203,7 @@ technologies = {
 		start_year = 1910
 		folder = {
 			name = support_folder
-			position = { x = 2 y = @1918 }
+			position = { x = 0 y = @1918 }
 		}
 
 		path = {
@@ -1306,7 +1221,25 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
+			modifier = {
+				num_of_factories > 25
+				factor = 100 #might wanna get on that
+			}
+			modifier = {
+				factor = 1.2
+				date > "2010.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
 		}
 	}
 
@@ -1319,7 +1252,7 @@ technologies = {
 		start_year = 2010
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 6 }
+			position = { x = 4 y = 3 }
 		}
 		
 		categories = {
@@ -1328,11 +1261,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
 				is_major = yes
-				base = 2
+				factor = 2
 			}
 
 			modifier = {
@@ -1340,7 +1273,7 @@ technologies = {
 					TAG = GER
 					tag = SOV
 				}
-				base = 1.5
+				factor = 1.5
 			}
 		}
 	}
@@ -1354,7 +1287,7 @@ technologies = {
 		start_year = 2025
 		folder = {
 			name = support_folder
-			position = { x = 2 y = @2025 }
+			position = { x = 0 y = @2025 }
 		}
 		
 		categories = {
@@ -1362,24 +1295,24 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 2
+			factor = 2
 			
 			modifier = {
 				has_war = yes
-				base = 20
+				factor = 20
 			}
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1941.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "2035.1.1"
 			}
 		}
@@ -1407,7 +1340,7 @@ technologies = {
 		start_year = 2010
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 3 }
+			position = { x = 2 y = 3 }
 		}
 		
 		categories = {
@@ -1415,28 +1348,28 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			factor = 1
 			
 			modifier = {
 				has_war = yes
-				base = 20
+				factor = 20
 			}
 			modifier = {
 				tag = GER
-				base = 5
+				factor = 5
 			}
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1938.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "2025.1.1"
 			}
 			
 			modifier = {
-				base = 1.2
+				factor = 1.2
 				date > "1940.1.1"
 			}
 		}

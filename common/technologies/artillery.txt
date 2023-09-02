@@ -2,20 +2,23 @@ technologies = {
 
 	gw_artillery = {
 
-
-
-		path = {
-			leads_to_tech = basic_towed_artillery
-			research_cost_coeff = 1
+		enable_equipments = {
+			artillery_equipment_1
 		}
 
 		path = {
-			leads_to_tech = basic_air_defense
+			leads_to_tech = stvolartillery
 			research_cost_coeff = 1
 		}
 
+
 		path = {
-			leads_to_tech = basic_MLRS
+			leads_to_tech = reaktivartillery
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = boepripas
 			research_cost_coeff = 1
 		}
  
@@ -35,16 +38,276 @@ technologies = {
 		}
 	}
 	
-	#Ветка буксируемой артиллерии (левая ветка)
-	basic_towed_artillery = {
+	stvolartillery = {
+
+		enable_equipments = {
+			stvolartillery_equipment_1
+		}
+
+		enable_subunits = {
+		stvolland
+		stvolair
+		automatedland
+		automatezatedair
+		
+		art_stvol
+		art_auto
+		Pvo_stvol
+		Pvo_auto		
+		}
 
 		path = {
-			leads_to_tech = gerantium_complex
+			leads_to_tech = stvolartillerybonus
 			research_cost_coeff = 1
 		}
-		
+
 		research_cost = 1.5
 
+		start_year = 2015
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 2 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	stvolartillerybonus = {
+
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_auto= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = stvolartillery2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2020
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 4 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	stvolartillery2 = {
+
+		enable_equipments = {
+			stvolartillery_equipment_2
+		}
+
+		path = {
+			leads_to_tech = stvolartillerybonus2
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 1.5
+
+		start_year = 2025
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 6 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	stvolartillerybonus2 = {
+
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_auto= {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = stvolartillery3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2030
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 8 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	stvolartillery3 = {
+
+		enable_equipments = {
+			stvolartillery_equipment_3
+		}
+
+		path = {
+			leads_to_tech = stvolartillerybonus3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+
+		start_year = 2035
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 10 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	
+	stvolartillerybonus3 = {
+
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_auto= {
+			soft_attack = 0.1
+		}
+
+
+		research_cost = 1
+
+		start_year = 2040
+
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 12 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+	reaktivartillery = {
+
+		enable_equipments = {
+			reaktivartillery_equipment_1
+		}
+		enable_subunits = {
+		roketland
+		rocketair
+		automatedland
+		automatezatedair
+		
+		Pvo_auto
+		Pvo_roket
+		art_auto
+		art_roket		
+		}
+		path = {
+			leads_to_tech = reaktivartillerybonus
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 2015
 		folder = {
 			name = artillery_folder
 			position = { x = -4 y = 2 }
@@ -59,14 +322,41 @@ technologies = {
 		}
 	}
 
-	gerantium_complex = {
+	reaktivartillerybonus = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
 
 		path = {
-			leads_to_tech = advanced_towed_artillery
+			leads_to_tech = reaktivartillerybonus2
 			research_cost_coeff = 1
 		}
- 
-		research_cost = 1.5
+
+		research_cost = 1
+
+		start_year = 2020
 
 		folder = {
 			name = artillery_folder
@@ -81,17 +371,42 @@ technologies = {
 			factor = 2
 		}
 	}
+	
+	reaktivartillerybonus2 = {
 
-	advanced_towed_artillery = {
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
 
 		path = {
-			leads_to_tech = IVD_UMMS_Mfifty
+			leads_to_tech = reaktivartillery2
 			research_cost_coeff = 1
 		}
 
+		research_cost = 1
 
- 
-		research_cost = 1.5
+		start_year = 2025
 
 		folder = {
 			name = artillery_folder
@@ -106,16 +421,20 @@ technologies = {
 			factor = 2
 		}
 	}
+		
+	reaktivartillery2 = {
 
-	IVD_UMMS_Mfifty = {
+		enable_equipments = {
+			reaktivartillery_equipment_2
+		}
 
 		path = {
-			leads_to_tech = towed_artillery_of_the_future
+			leads_to_tech = reaktivartillerybonus3
 			research_cost_coeff = 1
 		}
- 
-		research_cost = 1.5
 
+		research_cost = 1.5
+		start_year = 2030
 		folder = {
 			name = artillery_folder
 			position = { x = -4 y = 8 }
@@ -130,16 +449,41 @@ technologies = {
 		}
 	}
 
-	towed_artillery_of_the_future = {
+	reaktivartillerybonus3 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
 
 		path = {
-			leads_to_tech = courtesan_project
+			leads_to_tech = reaktivartillery3
 			research_cost_coeff = 1
 		}
 
+		research_cost = 1
 
- 
-		research_cost = 1.5
+		start_year = 2035
 
 		folder = {
 			name = artillery_folder
@@ -155,10 +499,14 @@ technologies = {
 		}
 	}
 
-	courtesan_project = {
- 
-		research_cost = 1.5
+	reaktivartillery3 = {
 
+		enable_equipments = {
+			reaktivartillery_equipment_3
+		}
+
+		research_cost = 1.5
+		start_year = 2040
 		folder = {
 			name = artillery_folder
 			position = { x = -4 y = 12 }
@@ -174,156 +522,63 @@ technologies = {
 	}
 
 
-	#Ветка ПВО (центральная ветка)
-	basic_air_defense = {
+
+
+	boepripas = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
 
 		path = {
-			leads_to_tech = complex_stukach
+			leads_to_tech = boepripascalibr
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = boepripasvid
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = boepripasii
 			research_cost_coeff = 1
 		}
 
+		research_cost = 1
 
- 
-		research_cost = 1.5
-
-		folder = {
-			name = artillery_folder
-			position = { x = 0 y = 2 }
-		}
-
-		categories = {
-			artillery
-		}
-
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	complex_stukach = {
-
-		path = {
-			leads_to_tech = advanced_air_defense
-			research_cost_coeff = 1
-		}
- 
-		research_cost = 1.5
-
-		folder = {
-			name = artillery_folder
-			position = { x = 0 y = 4 }
-		}
-
-		categories = {
-			artillery
-		}
-
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	advanced_air_defense = {
-
-		path = {
-			leads_to_tech = project_rebirth
-			research_cost_coeff = 1
-		}
-
-
- 
-		research_cost = 1.5
-
-		folder = {
-			name = artillery_folder
-			position = { x = 0 y = 6 }
-		}
-
-		categories = {
-			artillery
-		}
-
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	project_rebirth = {
-
-		path = {
-			leads_to_tech = concept_development
-			research_cost_coeff = 1
-		}
- 
-		research_cost = 1.5
-
-		folder = {
-			name = artillery_folder
-			position = { x = 0 y = 8 }
-		}
-
-		categories = {
-			artillery
-		}
-
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	concept_development = {
-
-		path = {
-			leads_to_tech = air_defense_of_the_future
-			research_cost_coeff = 1
-		}
- 
-		research_cost = 1.5
-
-		folder = {
-			name = artillery_folder
-			position = { x = 0 y = 10 }
-		}
-
-		categories = {
-			artillery
-		}
-
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	air_defense_of_the_future = {
- 
-		research_cost = 1.5
-
-		folder = {
-			name = artillery_folder
-			position = { x = 0 y = 12 }
-		}
-
-		categories = {
-			artillery
-		}
-
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-
-	#Подветка РСЗО (левая ветка)
-	basic_MLRS = {
-
-		path = {
-			leads_to_tech = ARBF_shells
-			research_cost_coeff = 1
-		}
-
-
- 
-		research_cost = 1.5
+		start_year = 2015
 
 		folder = {
 			name = artillery_folder
@@ -339,14 +594,367 @@ technologies = {
 		}
 	}
 
-	ARBF_shells = {
+
+
+	boepripascalibr = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
-			leads_to_tech = complex_oko
+			leads_to_tech = boepripascalibr2
 			research_cost_coeff = 1
 		}
- 
-		research_cost = 1.5
+
+		research_cost = 1
+
+		start_year = 2020
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 4 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripascalibr2 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = boepripascalibr3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2025
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 6 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripascalibr3 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = boepripascalibr4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2030
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 8 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripascalibr4 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+		
+		path = {
+			leads_to_tech = boepripascalibr5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2035
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 10 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	boepripascalibr5 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+		
+		research_cost = 1
+
+		start_year = 2040
+
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 12 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+
+	boepripasvid = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = boepripasvid2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2020
 
 		folder = {
 			name = artillery_folder
@@ -362,14 +970,54 @@ technologies = {
 		}
 	}
 
-	complex_oko = {
+	boepripasvid2 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
-			leads_to_tech = advanced_MLRS
+			leads_to_tech = boepripasvid3
 			research_cost_coeff = 1
 		}
- 
-		research_cost = 1.5
+
+		research_cost = 1
+
+		start_year = 2025
 
 		folder = {
 			name = artillery_folder
@@ -385,16 +1033,54 @@ technologies = {
 		}
 	}
 
-	advanced_MLRS = {
+	boepripasvid3 = {
 
-		path = {
-			leads_to_tech = chain_project
-			research_cost_coeff = 1
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
 		}
 
 
- 
-		research_cost = 1.5
+		path = {
+			leads_to_tech = boepripasvid4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2030
 
 		folder = {
 			name = artillery_folder
@@ -410,14 +1096,54 @@ technologies = {
 		}
 	}
 
-	chain_project = {
+	boepripasvid4 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
 
 		path = {
-			leads_to_tech = MLRS_of_the_future
+			leads_to_tech = boepripasvid5
 			research_cost_coeff = 1
 		}
- 
-		research_cost = 1.5
+
+		research_cost = 1
+
+		start_year = 2035
 
 		folder = {
 			name = artillery_folder
@@ -433,16 +1159,367 @@ technologies = {
 		}
 	}
 
-	MLRS_of_the_future = {
- 
-		research_cost = 1.5
+	boepripasvid5 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+
+		research_cost = 1
+
+		start_year = 2040
 
 		folder = {
 			name = artillery_folder
 			position = { x = 4 y = 12 }
 		}
 
+		categories = {
+			artillery
+		}
 
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+
+
+	boepripasii = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = boepripasii2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2020
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 4 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasii2 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = boepripasii3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2025
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 6 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasii3 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = boepripasii4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2030
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 8 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasii4 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = boepripasii5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 2035
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 10 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	boepripasii5 = {
+
+		roketland = {
+			soft_attack = 0.1
+		}
+		rocketair = {
+			soft_attack = 0.1
+		}
+		automatedland = {
+			soft_attack = 0.1
+		}
+		automatezatedair = {
+			soft_attack = 0.1
+		}
+		Pvo_auto = {
+			soft_attack = 0.1
+		}
+		Pvo_roket = {
+			soft_attack = 0.1
+		}
+		art_auto = {
+			soft_attack = 0.1
+		}
+		art_roket= {
+			soft_attack = 0.1
+		}
+		stvolland = {
+			soft_attack = 0.1
+		}
+		stvolair = {
+			soft_attack = 0.1
+		}
+		art_stvol = {
+			soft_attack = 0.1
+		}
+		Pvo_stvol = {
+			soft_attack = 0.1
+		}
+
+		
+		research_cost = 1
+
+		start_year = 2040
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 12 }
+		}
 
 		categories = {
 			artillery
@@ -453,6 +1530,24 @@ technologies = {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
