@@ -1,41 +1,31 @@
-scripted_gui = { 
-    Pomex  = {
-        context_type = selected_state_context
-		parent_window_token = selected_state_view
-		window_name = "Pomex"
-		
-		visible = {
+# scripted_gui = { 
+#     Pomex = {
+#         context_type = selected_state_context
+# 		parent_window_token = selected_state_view
+# 		window_name = "Pomex"
+# 		visible = {
 		     
-		}
-		
-		effects = {
-			
-			
-		}
+# 		}
+# 		effects = {
+				
+# 		}
+# 		triggers = {
+# 			Gorod_visible = {
+# 				FROM  = {
+# 					is_controlled_by = WOD
+# 				}
+#             }
+# 			Gorod_1_visible = {
+# 				FROM  = {
+# 					is_controlled_by = WOD
+# 				}
+#             }
+# 			Gorod_2_visible = {
+# 				FROM  = {
+# 					is_controlled_by = WOD
+# 				}
+#             }	
+# 		}
+# 	}
         
-		triggers = {
-		Gorod_visible = {
-				FROM  = {
-				is_controlled_by = WOD
-				}
-				
-				
-            }
-		Gorod_1_visible = {
-				FROM  = {
-				is_controlled_by = WOD
-				}
-				
-				
-            }
-		Gorod_2_visible = {
-				FROM  = {
-				is_controlled_by = WOD
-				}
-				
-				
-            }	
-		}
-	}
-        
-}
+# }
