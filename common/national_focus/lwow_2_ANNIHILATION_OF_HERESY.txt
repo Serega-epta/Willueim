@@ -147,11 +147,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			send_equipment = {
-			equipment = infantry_equipment
-			amount = 1500
-			target = SVA
-			}
+			custom_effect_tooltip = send_equipment_to_SVA
 		}
 	}
 	focus = {
@@ -167,9 +163,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			SVA = {
-				add_ideas = Blagoslavleny
-			}
+			custom_effect_tooltip = add_idea_Blagoslavleny_to_SVA
 		}
 	}
 	focus = {
@@ -245,8 +239,8 @@ focus_tree = {
 						}
 						set_cosmetic_tag = SVA_myatejniki 
 					}
+					play_song = "zov_goida"
 				}
-				play_song = "zov_goida"
 		}
 	}
 	focus = {
