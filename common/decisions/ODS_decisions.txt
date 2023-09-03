@@ -482,17 +482,13 @@ ODS_intention = {
 			}
 		}
 
-		visible = {
-			ODS = {
-				FROM = { 
-					AND = {
-						NOT = { 
-							is_core_of = ODS 
-						}
-						is_fully_controlled_by = ODS
-					}
-				}
-			}
+		target_trigger = { 
+			FROM = { 
+				is_fully_controlled_by = ROOT
+				NOT = { 
+					is_core_of = ROOT 
+				} 
+			} 
 		}
 		on_map_mode = decision_view_only
 
@@ -936,7 +932,7 @@ ODS_operating_committee = {
 	ODS_eradicate_savagery = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
-
+		fire_only_once = yes
 		complete_effect = {
 			set_country_flag = complete_decision_ODS_eradicate_savagery
 		}
@@ -949,7 +945,7 @@ ODS_operating_committee = {
 	ODS_count_everyone = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
-
+		fire_only_once = yes
 		visible = {
 			has_country_flag = complete_decision_ODS_eradicate_savagery
 		}
@@ -966,7 +962,7 @@ ODS_operating_committee = {
 	ODS_new_citizens = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
-
+		fire_only_once = yes
 		visible = {
 			has_country_flag = complete_decision_ODS_count_everyone
 		}
@@ -983,7 +979,7 @@ ODS_operating_committee = {
 	ODS_get_the_balances_in_order = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
-
+		fire_only_once = yes
 		visible = {
 			has_country_flag = complete_decision_ODS_new_citizens
 		}
