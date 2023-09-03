@@ -4,12 +4,12 @@ bookmarks = {
 		desc = "REQUIEM_DESC"
 		date = 2022.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "ARM"
+		default_country = "ODS"
 		default = yes
 		
 		#Страны, имеющие полностью или частично (т.е осталось немного) реализованный контент
 		"ARM"={
-			history = "GATHERING_STORM_FULL_CONTENT_TEMPORARY_DESC"
+			history = "REQUIEM_OF_HUMANKIND_condition_of_ARM"
 			ideology = patriots
 			ideas = {
 				ARM_crimson_fury 
@@ -18,13 +18,13 @@ bookmarks = {
 			}
 			focuses = {
 				ARM_Fatal_Daze
-				ARM_podolyakin_choisr
-				ARM_onufrenko_choise
+				ARM_From_Nonexistence
+				ARM_Operation_Atonement
 			}
 		}
 
 		"LWV"={
-			history = "GATHERING_STORM_FULL_CONTENT_TEMPORARY_DESC"
+			history = "REQUIEM_OF_HUMANKIND_condition_of_LWV"
 			ideology = sacraments
 			ideas = {
 				godsdl 
@@ -33,15 +33,30 @@ bookmarks = {
 			}
 			focuses = {
 				LWV_Absol_svyatost
-				LWV_pol12
-				LWV_pol7
+				LWV_Skrepit_veru_klinkom
+				LWV_Net_yaz
+			}
+		}
+
+		"ODS"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_ODS"
+			ideology = opportunists
+			ideas = {				
+				dicarstvo
+				doverie_1
+				black_beret		
+			}
+			focuses = {			
+				ODS_perv
+				ODS_clear_perimetr
+				ODS_garantii_bez
 			}
 		}
 
 		#Страны, не имеющие контент (или имеющие, но слишком маленький), но которые планируются в разработке		
 		"GLS"={
 			minor = yes
-			history = "GATHERING_STORM_INCOMPLETE_CONTENT_TEMPORARY_DESC"
+			history = "REQUIEM_OF_HUMANKIND_condition_of_GLS"
 			ideology = patriots
 			ideas = {				
 				GLS_fathers_and_not_fathers
@@ -68,25 +83,9 @@ bookmarks = {
 		# 	}																		<-
 		# }																			<-																		
 
-		"ODS"={
-			minor = yes
-			history = "GATHERING_STORM_INCOMPLETE_CONTENT_TEMPORARY_DESC"
-			ideology = opportunists
-			ideas = {				
-				pocrov_zamisel
-				sumrachniy_trepet
-				pocrov_zamisel		
-			}
-			focuses = {			
-				ODS_perv
-				ODS_clear_perimetr
-				ODS_garantii_bez
-			}
-		}
-
 		"IMP"={
 			minor = yes
-			history = "GATHERING_STORM_INCOMPLETE_CONTENT_TEMPORARY_DESC"
+			history = "REQUIEM_OF_HUMANKIND_condition_of_IMP"
 			ideology = gumanists
 			ideas = {				
 				IMP_1
