@@ -147,11 +147,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			send_equipment = {
-			equipment = infantry_equipment
-			amount = 1500
-			target = SVA
-			}
+			custom_effect_tooltip = send_equipment_to_SVA
 		}
 	}
 	focus = {
@@ -167,9 +163,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			SVA = {
-				add_ideas = Blagoslavleny
-			}
+			custom_effect_tooltip = add_idea_Blagoslavleny_to_SVA
 		}
 	}
 	focus = {
@@ -187,65 +181,65 @@ focus_tree = {
 		completion_reward = {
 				add_ideas = Brother	
 				custom_effect_tooltip = holy_mjatej_tt
-					hidden_effect = {
-					
+				hidden_effect = {
 					create_dynamic_country = {
-					original_tag = SVA	
-					copy_tag = COA
-					transfer_state = 91
+						original_tag = SVA	
+						copy_tag = COA
+						transfer_state = 91
 					}
 					SVA = {
-					set_politics ={
-							ruling_Party = sacraments
+						set_politics ={
+							ruling_party = sacraments
 							elections_allowed = no
-							long_name = SVA_sacraments_l
 							name = SVA_sacraments
+							long_name = SVA_sacraments_l
 						}
-					set_popularities = {
-					sacraments = 100
-					}
-					add_ideas = Blagoslavleny
-					add_equipment 1500 infantry_equipment_1
-					
-					division_template = { 
-						name = "holyarmy"
-						division_names_group = SVA_CAM_02
-						is_locked = yes
-						regiments = {
-							opolchenie  = { x = 0 y = 0 }
-							opolchenie  = { x = 0 y = 1 }
-							opolchenie  = { x = 1 y = 0 }
-							opolchenie  = { x = 1 y = 1 }
-							opolchenie  = { x = 2 y = 0 }
-							opolchenie  = { x = 2 y = 1 }							
-							opolchenie  = { x = 0 y = 2 }
-							opolchenie  = { x = 1 y = 2 }
-							opolchenie  = { x = 2 y = 2 }							
-							opolchenie  = { x = 0 y = 3 }
-							opolchenie  = { x = 1 y = 3 }
-							opolchenie  = { x = 2 y = 3 }
+						set_popularities = {
+							sacraments = 100
 						}
-						support = {
-							engineer = { x = 0 y = 0 }
+						add_ideas = Blagoslavleny
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 1500
+							producer = SVA
+						}					
+						division_template = { 
+							name = "holyarmy"
+							division_names_group = SVA_CAM_02
+							is_locked = yes
+							regiments = {
+								opolchenie  = { x = 0 y = 0 }
+								opolchenie  = { x = 0 y = 1 }
+								opolchenie  = { x = 1 y = 0 }
+								opolchenie  = { x = 1 y = 1 }
+								opolchenie  = { x = 2 y = 0 }
+								opolchenie  = { x = 2 y = 1 }							
+								opolchenie  = { x = 0 y = 2 }
+								opolchenie  = { x = 1 y = 2 }
+								opolchenie  = { x = 2 y = 2 }							
+								opolchenie  = { x = 0 y = 3 }
+								opolchenie  = { x = 1 y = 3 }
+								opolchenie  = { x = 2 y = 3 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+							}
+							priority = 0
+						}			
+						91 = {
+							create_unit = {
+								division = "division_template = \"holyarmy\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+								owner = SVA
+								count = 10
+							}
 						}
-						priority = 0
-					}			
-					91 = {
-						create_unit = {
-							division = "division_template = \"holyarmy\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = SVA
-							count = 10
-						}
-					}
-					declare_war_on = {
+						declare_war_on = {
 							target = COA
 							type = civil_war
+						}
+						set_cosmetic_tag = SVA_myatejniki 
 					}
-					set_cosmetic_tag = SVA_myatejniki 
-					hidden_effect = {
 					play_song = "zov_goida"
-					}
-				}
 				}
 		}
 	}
