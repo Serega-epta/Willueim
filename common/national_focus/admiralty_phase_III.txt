@@ -9,23 +9,23 @@ focus_tree = {
 	}
 	default = no
 	#Стартовая ветвь#
-	focus = { #Восход Комитета Великой Родины
+	focus = {
 		id = ODS_sunrise_great_motherland_committee
 		#icon = GFX_sunrise_great_motherland_committee
 		x = 10
 		y = 0
 		cost = 1
 	}
-	focus = { #Секреты, скрытые ото всех…
+	focus = {
 		id = ODS_secrets_hidden_everyone
 		#icon = GFX_secrets_hidden_everyone
-		x = 9,5
+		x = 9.5
 		y = 1
 		cost = 1
 		prerequisite = {focus = ODS_sunrise_great_motherland_committee}
 		
 	}
-	focus = { #Истина, которую мы преподнесём народу.
+	focus = {
 		id = ODS_truth_presented_people
 		#icon = GFX_truth_presented_people
 		x = 11
@@ -33,7 +33,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_sunrise_great_motherland_committee}
 	}
-	focus = { #Адаптировать бюрократию к новым условиям.
+	focus = {
 		id = ODS_adapt_bureaucracy_new_conditions
 		#icon = GFX_adapt_bureaucracy_new_conditions
 		x = 10
@@ -42,7 +42,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_secrets_hidden_everyone}
 		prerequisite = {focus = ODS_truth_presented_people}
 	}
-	focus = { #Держать наше оружье наготове.
+	focus = {
 		id = ODS_keep_our_weapons_ready
 		#icon = GFX_keep_our_weapons_ready
 		x = 10
@@ -50,7 +50,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_adapt_bureaucracy_new_conditions}
 	}
-	focus = { #План “Абсолютный”
+	focus = {
 		id = ODS_plan_is_absolute
 		#icon = GFX_plan_is_absolute
 		x = 10
@@ -60,7 +60,7 @@ focus_tree = {
 	}
 	#-#Разветвление#-#
 	#В-1#
-	focus = { #Государство на службе идеи.
+	focus = {
 		id = ODS_state_at_service_the_idea
 		#icon = GFX_state_at_service_the_idea
 		x = 1
@@ -68,7 +68,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_plan_is_absolute}
 	}
-	focus = { #Чёткие установки и цели.
+	focus = {
 		id = ODS_clear_guidelines_and_goals
 		#icon = GFX_nclear_guidelines_and_goals
 		x = 1
@@ -76,24 +76,24 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_state_at_service_the_idea}
 	}
-	focus = { #Обеспечить верность аморфных масс
+	focus = {
 		id = ODS_ensure_loyalty_amorphous_masses
 		#icon = GFX_ensure_loyalty_amorphous_masses
 		x = 1
-		y = 7,2
+		y = 7
 		cost = 1
 		prerequisite = {focus = ODS_clear_guidelines_and_goals}
 	}
-	focus = { #Смягчение интеграции
+	focus = {
 		id = ODS_mitigation_integration
 		#icon = GFX_mitigation_integration
-		x = 0,5
+		x = 0.5
 		y = 9
 		cost = 1
 		prerequisite = {focus = ODS_ensure_loyalty_amorphous_masses}
 		mutually_exclusive = {focus = ODS_maintaining_previous_measures}
 	}
-	focus = { #Сохранение прежних мер.
+	focus = {
 		id = ODS_maintaining_previous_measures
 		#icon = GFX_maintaining_previous_measures
 		x = 2
@@ -102,7 +102,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_ensure_loyalty_amorphous_masses}
 		mutually_exclusive = {focus = ODS_mitigation_integration}
 	}
-	focus = { #Абсолютная лояльность.
+	focus = {
 		id = ODS_absolute_loyalty
 		#icon = GFX_absolute_loyalty
 		x = 1
@@ -111,7 +111,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_mitigation_integration focus = ODS_maintaining_previous_measures}
 	}
 	#В-2#
-	focus = { #Сковать волю врагов Замысла.
+	focus = {
 		id = ODS_bind_the_will_of_the_enemies_of_the_plan
 		#icon = GFX_bind_the_will_of_the_enemies_of_the_plan
 		x = 4
@@ -119,7 +119,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_plan_is_absolute}
 	}
-	focus = { #Экспериментальные разработки в области воздействия на разум.
+	focus = {
 		id = ODS_experimental_developments_in_field_mind_influence
 		#icon = GFX_experimental_developments_in_field_mind_influence
 		x = 4
@@ -127,14 +127,15 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_bind_the_will_of_the_enemies_of_the_plan}
 	}
-	focus = { #Сила разума в руках Замысла.
+	focus = {
 		id = ODS_power_of_reason_hands_of_plan
 		#icon = GFX_power_of_reason_hands_of_plan
 		x = 4
 		y = 7
 		cost = 1
 		prerequisite = {focus = ODS_experimental_developments_in_field_mind_influence}
-	}focus = { #Ускоренная интеграция новых видов вооружений.
+	}
+	focus = {
 		id = ODS_accelerated_integration_new_types_weapons
 		#icon = GFX_accelerated_integration_new_types_weapons
 		x = 4
@@ -142,7 +143,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_power_of_reason_hands_of_plan}
 	}
-	focus = { #Выжигатели мозгов
+	focus = {
 		id = ODS_brain_burner
 		#icon = GFX_brain_burner
 		x = 4
@@ -150,7 +151,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_accelerated_integration_new_types_weapons}
 	}
-	focus = { #Абсолютная стабильность.
+	focus = {
 		id = ODS_absolute_stability
 		#icon = GFX_absolute_stability
 		x = 4
@@ -159,7 +160,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_brain_burner}
 	}
 	#В-3#
-	focus = { #Механизм, созданный из организмов.
+	focus = {
 		id = ODS_mechanism_created_from_organisms
 		#icon = GFX_mechanism_created_from_organisms
 		x = 7
@@ -167,7 +168,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_plan_is_absolute}
 	}
-	focus = { #Грамотное распределение наших сил.
+	focus = {
 		id = ODS_competent_distribution_our_forces
 		#icon = GFX_сompetent_distribution_our_forces
 		x = 7
@@ -175,7 +176,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_mechanism_created_from_organisms}
 	}
-	focus = { #Решение аграрных проблем.
+	focus = {
 		id = ODS_solving_agricultural_problems
 		#icon = GFX_solving_agricultural_problems
 		x = 7
@@ -183,7 +184,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_competent_distribution_our_forces}
 	}
-	focus = { #Наладить цепочки поставок.
+	focus = {
 		id = ODS_establish_supply_chains
 		#icon = GFX_establish_supply_chains
 		x = 7
@@ -191,7 +192,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_solving_agricultural_problems}
 	}
-	focus = { #Тотальная эксплуатация.
+	focus = {
 		id = ODS_total_exploitation
 		#icon = GFX_total_exploitation
 		x = 7
@@ -199,7 +200,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_establish_supply_chains}
 	}
-	focus = { #Нет места для бездельников.
+	focus = {
 		id = ODS_there_is_no_place_idlers
 		#icon = GFX_there_is_no_place_idlers
 		x = 7
@@ -207,7 +208,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_total_exploitation}
 	}
-	focus = { #Абсолютная эффективность.
+	focus = {
 		id = ODS_absolute_efficiency
 		#icon = GFX_absolute_efficiency
 		x = 7
@@ -216,7 +217,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_there_is_no_place_idlers}
 	}
 	#В-4#
-	focus = { #Чёрный марш.
+	focus = {
 		id = ODS_black_march
 		#icon = GFX_black_march
 		x = 10
@@ -224,7 +225,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_plan_is_absolute}
 	}
-	focus = { #Взмыть в небо.
+	focus = {
 		id = ODS_soar_into_the_sky
 		#icon = GFX_soar_into_the_sky
 		x = 10
@@ -232,7 +233,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_black_march}
 	}
-	focus = { #Расширить программу подготовки военных.
+	focus = {
 		id = ODS_expand_military_training_program
 		#icon = GFX_expand_military_training_program
 		x = 10
@@ -240,7 +241,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_soar_into_the_sky}
 	}
-	focus = { #Дисциплина и повиновение.
+	focus = {
 		id = ODS_discipline_and_obedience
 		#icon = GFX_discipline_and_obedience
 		x = 10
@@ -248,7 +249,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_expand_military_training_program}
 	}
-	focus = { #Выжать максимум из военных.
+	focus = {
 		id = ODS_squeeze_most_out_of_the_military
 		#icon = GFX_squeeze_most_out_of_the_military
 		x = 10
@@ -256,7 +257,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_discipline_and_obedience}
 	}
-	focus = { #Абсолютная мощь.
+	focus = {
 		id = ODS_absolute_power
 		#icon = GFX_absolute_power
 		x = 10
@@ -265,7 +266,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_squeeze_most_out_of_the_military}
 	}
 	#В-5#
-	focus = { #Те, кто знает больше остальных…
+	focus = {
 		id = ODS_those_who_know_more_than_others 
 		#icon = GFX_those_who_know_more_than_others
 		x = 13
@@ -273,7 +274,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_plan_is_absolute}
 	}
-	focus = { #Тот, кто хранит покой России.
+	focus = {
 		id = ODS_the_one_who_keeps_peace_of_Russia
 		#icon = GFX_the_one_who_keeps_peace_of_Russia
 		x = 13
@@ -281,7 +282,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_those_who_know_more_than_others}
 	}
-	focus = { #Движимый знаниями.
+	focus = {
 		id = ODS_driven_by_knowledge
 		#icon = GFX_driven_by_knowledge
 		x = 13
@@ -289,7 +290,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_the_one_who_keeps_peace_of_Russia}
 	}
-	focus = { #Движимый ненавистью.
+	focus = {
 		id = ODS_driven_by_hatred
 		#icon = GFX_driven_by_hatred
 		x = 13
@@ -297,7 +298,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_driven_by_knowledge}
 	}
-	focus = { #Те, кто видят дальше тьмы.
+	focus = {
 		id = ODS_those_who_see_beyond_darkness
 		#icon = GFX_those_who_see_beyond_darkness
 		x = 13
@@ -305,7 +306,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_driven_by_hatred}
 	}
-	focus = { #Абсолютная слаженность.
+	focus = {
 		id = ODS_absolute_coherence
 		#icon = GFX_absolute_coherence
 		x = 13
@@ -314,7 +315,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_those_who_see_beyond_darkness}
 	}
 	#В-6#
-	focus = { #Что мертво – то не может быть убито.
+	focus = {
 		id = ODS_what_is_dead_cannot_be_killed
 		#icon = GFX_what_is_dead_cannot_be_killed
 		x = 16
@@ -322,7 +323,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_plan_is_absolute}
 	}
-	focus = { #Раскрыть секреты Откровения
+	focus = {
 		id = ODS_reveal_the_secrets_of_revelation
 		#icon = GFX_reveal_the_secrets_of_revelation
 		x = 16
@@ -330,7 +331,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_what_is_dead_cannot_be_killed}
 	}
-	focus = { #Восстановить то, что возможно…
+	focus = {
 		id = ODS_restore_what_is_possible
 		#icon = GFX_restore_what_is_possible
 		x = 16
@@ -338,7 +339,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_reveal_the_secrets_of_revelation}
 	}
-	focus = { #Наладить связь.
+	focus = {
 		id = ODS_establish_connection
 		#icon = GFX_establish_connection
 		x = 16
@@ -346,7 +347,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_restore_what_is_possible}
 	}
-	focus = { #Великие проекты.
+	focus = {
 		id = ODS_great_projects
 		#icon = GFX_great_projects
 		x = 16
@@ -354,7 +355,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_establish_connection}
 	}
-	focus = { #Абсолютный покой.
+	focus = {
 		id = ODS_absolute_peace
 		#icon = GFX_absolute_peace
 		x = 16
@@ -363,7 +364,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_great_projects}
 	}
 	#В-7#
-	focus = { #Бросить вызов апокалипсису.
+	focus = {
 		id = ODS_defy_the_apocalypse
 		#icon = GFX_defy_the_apocalypse
 		x = 19
@@ -371,7 +372,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_plan_is_absolute}
 	}
-	focus = { #Использовать накопленный опыт.
+	focus = {
 		id = ODS_use_the_accumulated_experience
 		#icon = GFX_use_the_accumulated_experience
 		x = 19
@@ -379,7 +380,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_defy_the_apocalypse}
 	}
-	focus = { #Тотальная гуманизация.
+	focus = {
 		id = ODS_total_humanization
 		#icon = GFX_total_humanization
 		x = 19
@@ -387,7 +388,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_use_the_accumulated_experience}
 	}
-	focus = { #Извлечь пользу.
+	focus = {
 		id = ODS_benefit_from
 		#icon = GFX_benefit_from
 		x = 19
@@ -395,7 +396,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_total_humanization}
 	}
-	focus = { #Изолировать наши города.
+	focus = {
 		id = ODS_isolate_our_cities
 		#icon = GFX_isolate_our_cities
 		x = 19
@@ -403,7 +404,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = {focus = ODS_benefit_from}
 	}
-	focus = { #Абсолютная тишина.
+	focus = {
 		id = ODS_absolute_silence
 		#icon = GFX_absolute_silence
 		x = 19
@@ -412,7 +413,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_isolate_our_cities}
 	}
 	#-#Конечный_фокус#-#
-	focus = { #Наша цель так близко…
+	focus = {
 		id = ODS_our_goal_so_close
 		#icon = GFX_our_goal_so_close
 		x = 10
@@ -425,8 +426,7 @@ focus_tree = {
 		prerequisite = {focus = ODS_absolute_coherence}
 		prerequisite = {focus = ODS_absolute_peace}
 		prerequisite = {focus = ODS_absolute_silence}
-	}
-	
-	Completion reward{
+		Completion reward{
+		}
 	}
 }
