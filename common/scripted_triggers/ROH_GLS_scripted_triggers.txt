@@ -4,7 +4,7 @@
 ############################
 
 GLS_defeated_ASR = {
-	tag = GLS
 	651 = { is_owned_by = GLS }
-	NOT = {	country_exists = ASR }
+	NOT = { country_exists = ASR } 
+	country_exists = GLS
 }
