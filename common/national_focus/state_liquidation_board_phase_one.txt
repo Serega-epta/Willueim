@@ -1,5 +1,5 @@
 focus_tree = {
-	id = GLS_medvedov_1_faza
+	id = state_liquidation_board_phase_one
 	country = {
 		factor = 0
 		modifier = {
@@ -12,17 +12,17 @@ focus_tree = {
 
 	focus = {
 		id = GLS_old_friends
-		icon = GFX_friends
+		icon = GFX_old_friends
 		x = 6
 		y = 0
 		cost = 1
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
 			country_event = {
-				id = GLS.1
+				id = GLS_phase_one.1
 				days = 1
 			}	
 		}
@@ -34,13 +34,13 @@ focus_tree = {
 		y = 1
 		cost = 1
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = GLS_old_friends }
 		completion_reward = {
 			country_event = {
-				id = GLS.2
+				id = GLS_phase_one.3
 				days = 1
 			}		
 		}
@@ -52,13 +52,13 @@ focus_tree = {
 		y = 2
 		cost = 1
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = GLS_young_blood }
 		completion_reward = {
 			country_event = {
-				id = GLS.3
+				id = GLS_phase_one.4
 				days = 1
 			}		
 		}
@@ -70,13 +70,13 @@ focus_tree = {
 		y = 3
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GLS_fall_of_rodina }
 		completion_reward = {
 			country_event = {
-				id = GLS.5
+				id = GLS_phase_one.6
 				days = 1
 			}
 			1002 = {
@@ -129,13 +129,13 @@ focus_tree = {
 		y = 3
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GLS_fall_of_rodina }
 		completion_reward = {
 			country_event = {
-				id = GLS.16
+				id = GLS_phase_one.7
 				days = 1
 			}
 			1002 = {
@@ -144,11 +144,9 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-			}
-			1000 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -160,19 +158,19 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GLS_massacre_number5
-		icon = GFX_massacre_number5
+		id = GLS_massacre_number_five
+		icon = GFX_massacre_number_five
 		x = 8 
 		y = 3
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_MANPOWER }
 		prerequisite = { focus = GLS_fall_of_rodina }
 		completion_reward = {
 			country_event = {
-				id = GLS.4
+				id = GLS_phase_one.5
 				days = 1
 			}
 			swap_ideas = {
@@ -182,21 +180,21 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GLS_bunches
-		icon = GFX_bunches
+		id = GLS_bunches_of_anger
+		icon = GFX_bunches_of_anger
 		x = 6 
 		y = 4
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = { focus = GLS_massacre_number5 }
+		prerequisite = { focus = GLS_massacre_number_five }
 		prerequisite = { focus = GLS_planning_horizon }
 		prerequisite = { focus = GLS_our_defence }
 		completion_reward = {
 			country_event = {
-				id = GLS.6
+				id = GLS_phase_one.8
 				days = 1
 			}
 			add_timed_idea = {
@@ -212,13 +210,13 @@ focus_tree = {
 		y = 5
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = { focus = GLS_bunches }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = { focus = GLS_bunches_of_anger }
 		completion_reward = {
 			country_event = {
-				id = GLS.7
+				id = GLS_phase_one.9
 				days = 1
 			}
 			declare_war_on = {
@@ -234,13 +232,13 @@ focus_tree = {
 		y = 6
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_STABILITY }
 		prerequisite = { focus = GLS_children_of_ermak }
 		completion_reward = {
 			country_event = {
-				id = GLS.8
+				id = GLS_phase_one.10
 				days = 1
 			}
 			add_stability = 0.02
@@ -254,16 +252,16 @@ focus_tree = {
 		y = 7
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		prerequisite = { focus = GLS_end_of_silence}
 		completion_reward = {
-		country_event = {
-				id = GLS.9
+			country_event = {
+				id = GLS_phase_one.11
 				days = 1
 			}
-		add_timed_idea = {
+			add_timed_idea = {
 				idea = GLS_ural_company
 				days = 180
 			}
@@ -276,16 +274,16 @@ focus_tree = {
 		y = 8
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		prerequisite = { focus = GLS_this_is_what_you_were_taught }
 		completion_reward = {
-		country_event = {
-				id = GLS.10
+			country_event = {
+				id = GLS_phase_one.12
 				days = 1
 			}
-		declare_war_on = {
+			declare_war_on = {
 				target = SFL
 				type = annex_everything
 			}
@@ -298,14 +296,18 @@ focus_tree = {
 		y = 8
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		available = { any_neighbor_country = {original_tag = NFL }}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = { 
+			any_neighbor_country = {
+				original_tag = NFL 
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		prerequisite = { focus = GLS_this_is_what_you_were_taught }
 		completion_reward = {
-		country_event = {
-				id = GLS.11
+			country_event = {
+				id = GLS_phase_one.13
 				days = 1
 			}
 			declare_war_on = {
@@ -321,9 +323,9 @@ focus_tree = {
 		y = 9
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_MANPOWER }
 		prerequisite = { focus = GLS_south_mraz }
 		prerequisite = { focus = GLS_north_mraz }
 		completion_reward = {
@@ -332,7 +334,7 @@ focus_tree = {
 				add_idea =  GLS_memories_of_rodina_2
 			}
 			country_event = {
-				id = GLS.12
+				id = GLS_phase_one.14
 				days = 1
 			}
 		}
@@ -344,13 +346,13 @@ focus_tree = {
 		y = 10
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		prerequisite = { focus = GLS_repatriation }
 		completion_reward = {
 			country_event = {
-				id = GLS.13
+				id = GLS_phase_one.15
 				days = 1
 			}
 		}
@@ -362,35 +364,35 @@ focus_tree = {
 		y = 11
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		prerequisite = { focus = GLS_iron_town }
 		completion_reward = {
-		country_event = {
-				id = GLS.14
+			country_event = {
+				id = GLS_phase_one.17
 				days = 1
 			}
-		annex_country = {
-			target = IRT
-			transfer_troops = yes
-		}
+			annex_country = {
+				target = IRT
+				transfer_troops = yes
+			}
 		}
 	}
 	focus = {
-		id = GLS_iron
-		icon = GFX_iron
+		id = GLS_iron_inside_and_out
+		icon = GFX_iron_inside_and_out
 		x = 6 
 		y = 12
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GLS_can_sleep }
 		completion_reward = {
 			country_event = {
-				id = GLS.15
+				id = GLS_phase_one.18
 				days = 1
 			}
 			add_state_core = 398
@@ -402,7 +404,7 @@ focus_tree = {
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = civil_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -410,18 +412,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GLS_survivors
-		icon = GFX_survivors
+		id = GLS_its_every_survivor_for_himself
+		icon = GFX_its_every_survivor_for_himself
 		x = 6 
 		y = 13
 		cost = 2.9
 		ai_will_do = {
-		factor = 10
+			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = { focus = GLS_iron }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = { focus = GLS_iron_inside_and_out }
 		completion_reward = {
-		declare_war_on = {
+			declare_war_on = {
 				target = ASR
 				type = annex_everything
 			}
