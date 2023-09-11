@@ -573,7 +573,7 @@ on_actions = {
 				}
 				GLS = { 
 					set_country_flag = GLS_freedom_and_order_endgame
-					load_focus_tree = medvedov_proebalsa_focus
+					load_focus_tree = state_liquidation_board_collapsed
 					add_ideas = GLS_dead_dream
 					remove_ideas = GLS_order
 					remove_ideas = GLS_freedom					
@@ -600,7 +600,7 @@ on_actions = {
 				}
 				GLS = { 
 					set_country_flag = GLS_freedom_and_order_endgame
-					load_focus_tree = medvedov_proebalsa_focus
+					load_focus_tree = state_liquidation_board_collapsed
 					add_ideas = GLS_dead_dream
 					remove_ideas = GLS_order
 					remove_ideas = GLS_freedom					
@@ -627,7 +627,7 @@ on_actions = {
 				}
 				GLS = { 
 					set_country_flag = GLS_freedom_and_order_endgame
-					load_focus_tree = medvedov_proebalsa_focus
+					load_focus_tree = state_liquidation_board_collapsed
 					add_ideas = GLS_dead_dream
 					remove_ideas = GLS_order
 					remove_ideas = GLS_freedom					
@@ -654,7 +654,7 @@ on_actions = {
 				}
 				GLS = { 
 					set_country_flag = GLS_freedom_and_order_endgame
-					load_focus_tree = medvedov_proebalsa_focus
+					load_focus_tree = state_liquidation_board_collapsed
 					add_ideas = GLS_dead_dream
 					remove_ideas = GLS_order
 					remove_ideas = GLS_freedom
@@ -679,7 +679,20 @@ on_actions = {
 	on_weekly_GLS = {
 		effect = {
 			####Еженедельная прибавка в 2/4 процента####
-			add_to_variable = { ready_charge = 2 }
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = GLS_sharashki
+					}
+				}
+				add_to_variable = { ready_charge = 2 }
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GLS_sharashki
+				}
+				add_to_variable = { ready_charge = 3 }			
+			}
 			if = { #Если прожали решение
 				limit = { has_country_flag = gls_2_percent_additive_for_kurchatov_project }
 				add_to_variable = { ready_charge = 2 }

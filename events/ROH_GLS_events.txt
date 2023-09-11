@@ -230,19 +230,20 @@ country_event = {
 #  		name = GLS.17.a	
 #  	}
 # }
-# country_event = {
-#  	id = GLS.18
-#  	title = GLS.18.t
-#  	desc = GLS.18.d
-#  	picture = GFX_ropot_razv
-#  	is_triggered_only = yes
-#  	option = {
-#  		name = GLS.18.a
-# 	}
-# 	option = {
-#  		name = GLS.18.b
-# 	}
-# }
+country_event = {
+ 	id = GLS.21
+ 	title = GLS.21.t
+ 	desc = GLS.21.d
+ 	picture = GFX_ropot_razv
+ 	is_triggered_only = yes
+ 	option = {
+ 		name = GLS.21.a
+		set_country_flag = start_mobilisation
+	}
+	option = {
+ 		name = GLS.21.b
+	}
+}
 # country_event = {
 #  	id = GLS.19
 #  	title = GLS.19.t
@@ -393,34 +394,18 @@ country_event = {
  #D O P E V E N T S#
  ###################
 country_event = {
- 	id = GLS.333
- 	title = GLS.333.t
- 	desc = GLS.333.d
- 	picture = GFX_ropot_razv
-	is_triggered_only = no
-	fire_only_once = yes
-	hidden = yes
-	trigger = {	
-		GLS_defeated_ASR = yes
-	}
- 	option = {
- 		name = GLS.333.a
-		GLS = { country_event = { id = GLS.33 hours = 1 } }		
- 	}
-}
-country_event = {
  	id = GLS.33
  	title = GLS.33.t
  	desc = GLS.33.d
  	picture = GFX_ropot_razv
- 	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = no
+	trigger = {	
+		GLS_defeated_ASR = yes
+	}
  	option = {
  		name = GLS.33.a
-		hidden_effect = { 
-			GLS = { 
-				load_focus_tree = state_liquidation_board_phase_two 
-			} 
-		}
+		GLS = { load_focus_tree = state_liquidation_board_phase_two }
  	}
 }
 country_event = {
