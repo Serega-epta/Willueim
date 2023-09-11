@@ -2,33 +2,27 @@
 state={
 	id=224
 	name="STATE_224"
-	manpower = 1707567
-	
-	state_category = town
 
 	history={
 		owner = BAR
 		add_core_of = IMP
 		add_core_of = BAR
 		victory_points = {
-			3335 10
-		}
-		victory_points = {
-			11325 1
-		}
-		victory_points = {
-			11229 1
+			11325 1 
 		}
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 3
 			air_base = 2
+
 		}
-		add_core_of = SOV
+
 	}
 
 	provinces={
-		315  371   11229 11298 11325 
+		315 343 371 11229 11298 11325 13300 
 	}
-
-	local_supplies=0.0 
+	manpower=1707567
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

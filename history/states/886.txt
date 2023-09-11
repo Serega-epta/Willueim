@@ -1,48 +1,26 @@
 
-state = {
-	id = 886
-	name = "STATE_886"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=886
+	name="STATE_886"
 
-	history = {
+	history={
 		owner = SIL
 		victory_points = {
-			  6520  1
+			6520 1 
 		}
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		buildings = {
-		474 = {
-				silence = 1
 
-			}
-		3412 = {
-				silence = 1
-
-			}
-		6435 = {
-				silence = 1
-
-			}
-		6520 = {
-				silence = 1
-
-			}
-		11543 = {
-				silence = 1
-
-			}
-			infrastructure = 2
-			
-		}
-		
 	}
 
-	provinces = {
-		 474 3412 6435 6520 11543 
+	provinces={
+		474 3412 6435 6520 11441 11543 
 	}
-
-	local_supplies = 6.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=6.000
 }

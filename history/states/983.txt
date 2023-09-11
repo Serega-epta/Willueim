@@ -1,38 +1,37 @@
 
-state = {
-	id = 983
-	name = "STATE_983"
-	manpower = 183748
-	
-	state_category = rural
-
-		resources={
-		energy=60
+state={
+	id=983
+	name="STATE_983"
+	resources={
+		energy=60.000
 	}
 
-	history = {
+	history={
 		owner = TAG
 		add_core_of = TAG
 		victory_points = {
-			11061 3
+			11061 3 
 		}
 		victory_points = {
-			9130 6
+			9130 6 
 		}
 		victory_points = {
-			6166 2
+			6166 2 
 		}
 		victory_points = {
-			183 1
+			183 1 
 		}
 		buildings = {
-		
+
 		}
+
 	}
 
-	provinces = {
-		3166 11177 75 72 9187 9130 3065 3064 11042 3081 6193 11061 6088 6199 9101 183 11074 6091 9202 6166 
-	} 
-
-	local_supplies = 6.0 
+	provinces={
+		72 75 183 3064 3065 3081 6088 6091 6166 6193 6199 9101 9130 9187 9202 11042 11061 11074 11177 
+	}
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=6.000
 }

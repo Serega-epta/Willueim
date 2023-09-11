@@ -4,32 +4,14 @@ state={
 	name="STATE_193" # Chernihiv
 	manpower = 1373637
 	
-	state_category = city
+	state_category = rural
 
 	history={
 		victory_points = {
-			3480 2
-		}
-                victory_points = {
-			3584 1
-		}
-                victory_points = {
-			9437 1
-		}
-                victory_points = {
-			6458 1
-		}
-                victory_points = {
-			6532 1
-		}
-                victory_points = {
-			11452 1
-		}
-                victory_points = {
-			11489 1
+			11489 2
 		}
 		owner = ARM
-		add_core = ARM
+		add_core_of = ARM
 		buildings = {
 			infrastructure = 3 #was: 5
 			air_base = 8
@@ -40,7 +22,7 @@ state={
 	}
 
 	provinces={
-		 3480  3584 6458 6508 6532 9437 11425 11489 
+		 3480 6458 6508 6532 9437 11425 11489 
 	}
 
 	local_supplies=0.0 

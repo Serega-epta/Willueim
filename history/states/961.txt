@@ -1,27 +1,31 @@
 
-state = {
-	id = 961
-	name = "STATE_961"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=961
+	name="STATE_961"
 
-	history = {
+	history={
 		owner = FHS
 		add_core_of = FHS
 		victory_points = {
-			
+
 		}
 		buildings = {
-		
+
 		}
-		victory_points = { 9538 1 }
-		victory_points = { 6564 3 }
+		victory_points = {
+			9538 1 
+		}
+		victory_points = {
+			6564 3 
+		}
+
 	}
 
-	provinces = {
-		6564 3515 11524 6491 9538 6588
-	} 
-
-	local_supplies = 6.0 
+	provinces={
+		470 3467 6491 6588 9487 9538 11091 11524 
+	}
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=6.000
 }

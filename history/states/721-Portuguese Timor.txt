@@ -2,23 +2,24 @@
 state={
 	id=721
 	name="STATE_721"
-	manpower = 455604
-	
-	state_category = pastoral
 
 	history={
-		owner = POR
+		owner = TAR
+		add_core_of = TAR
 		buildings = {
 			infrastructure = 2
-			12190 ={
-				naval_base = 1
-			}
 		}
+		victory_points = {
+			73 1 
+		}
+
 	}
 
 	provinces={
-		1326 12178 12190 12206 13001 
+		23 73 175 3017 3066 3112 3167 9065 9180 11075 11158 11180 
 	}
-
-	local_supplies=0.0 
+	manpower=455604
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

@@ -1,32 +1,30 @@
 
-state = {
-	id = 908
-	name = "STATE_908"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=908
+	name="STATE_908"
 
-	history = {
+	history={
 		owner = SIM
 		victory_points = {
-			    11342 1
-		}
-		victory_points = {
-			    11498 1
+			3320 5
 		}
 		buildings = {
-		
 			infrastructure = 2
-			
+
 		}
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		
+
 	}
 
-	provinces = {
-		233 9295 11226 11342 11498
+	provinces={
+		3320 9274 9295 11342 13281 
 	}
-
-	local_supplies = 6.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=6.000
 }

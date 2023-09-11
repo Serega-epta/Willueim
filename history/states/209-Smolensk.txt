@@ -1,26 +1,27 @@
 
 state={
 	id=209
-	name="STATE_209" # Pskov
-	manpower = 639587
-	
-	state_category = town
+	name="STATE_209"
 
 	history={
-		owner = CHU
+		owner = SMK
 		victory_points = {
-			415 3
+			6249 1 
 		}
 		buildings = {
-			infrastructure = 3 #was: 6
+			infrastructure = 3
 			air_base = 4
+
 		}
-		add_core_of = CHU
+		add_core_of = SMK
+
 	}
 
 	provinces={
-		415 3310
+		323 3219 6249 6326 9323 
 	}
-
-	local_supplies=0.0 
+	manpower=639587
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

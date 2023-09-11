@@ -1,31 +1,30 @@
 
 state={
 	id=260
-	name="STATE_260" # Voronezh
-	manpower = 2567983
-	
-	state_category = town
-
-		resources={
-		energy=82
+	name="STATE_260"
+	resources={
+		energy=82.000
 	}
 
 	history={
 		owner = MAZ
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 3
 			arms_factory = 1
-			synthetic_refinery = 1 #NSB
+			synthetic_refinery = 1
+
 		}
 		victory_points = {
-			413 5
+			413 10 
 		}
-		add_core_of = SOV
+
 	}
 
 	provinces={
-		413  9448   11540 
+		413 9312 9448 11540 
 	}
-
-	local_supplies=9.0 
+	manpower=2567983
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=9.000
 }

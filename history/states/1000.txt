@@ -1,28 +1,33 @@
 
-state = { #ЮБИЛЕЙ!!!!!
-	id = 1000
-	name = "STATE_1000"
-	manpower = 0
-	
-	state_category = town
-	resources = {
-		coal = 59
-
+state={
+	id=1000
+	name="STATE_1000"
+	resources={
+		coal=59.000
 	}
 
-	history = {
+	history={
 		owner = NFL
 		add_core_of = NFL
-		add_dynamic_modifier = { modifier = dead_region}
+		add_dynamic_modifier = {
+			modifier = dead_region
+
+		}
 		buildings = {
 			infrastructure = 1
+
 		}
-		victory_points = { 12527 1 }
+		victory_points = {
+			12527 1 
+		}
+
 	}
 
-	provinces = {
-		10216 4874 12527 
+	provinces={
+		278 4874 10216 12187 12527 
 	}
-
-	local_supplies = 6.0 
+	manpower=100
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=6.000
 }

@@ -1,43 +1,26 @@
 
-state = {
-	id = 922
-	name = "STATE_922"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=922
+	name="STATE_922"
 
-	history = {
-		owner =OKS
+	history={
+		owner = OKS
+		add_core_of = OKS
 		victory_points = {
-			    11153 1
-		}
-		victory_points = {
-			    11150 2
-		}
-		victory_points = {
-			    70 1
+			70 1 
 		}
 		buildings = {
-		
-			11153 = {
+			infrastructure = 1
 
-			}
-			11150 = {
-
-			}
-			70 = {
-
-			}
-			11059 = {
-
-			}
 		}
-		
+
 	}
 
-	provinces = {
-		11153 11150 11059 70
+	provinces={
+		70 9164 9197 11059 
 	}
-
-	local_supplies = 6.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

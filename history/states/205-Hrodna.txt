@@ -1,25 +1,26 @@
 
 state={
 	id=205
-	name="STATE_205" # Kaluga
-	manpower = 1121004
-	
-	state_category = town
+	name="STATE_205"
 
 	history={
 		owner = SMX
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 3
+
 		}
 		add_core_of = SMX
 		victory_points = {
-			382 1
+			382 3 
 		}
+
 	}
 
 	provinces={
-		 382 3308 3377 
+		274 382 3263 3308 3377 
 	}
-
-	local_supplies=10.0 
+	manpower=1121004
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=10.000
 }

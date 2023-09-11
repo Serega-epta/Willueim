@@ -1,29 +1,17 @@
 
-state = {
-	id = 929
-	name = "STATE_929"
-	manpower = 183748
-	
-	state_category = rural
-
-	resources = {
-		coal = 9
-
+state={
+	id=929
+	name="STATE_929"
+	resources={
+		coal=9.000
 	}
 
-	history = {
-		owner =HOH
+	history={
+		owner = HOH
 		victory_points = {
-			    11109 1
-		}
-		victory_points = {
-			    320 1
-		}
-		victory_points = {
-			    9331 1
+			11109 1 
 		}
 		buildings = {
-		
 			320 = {
 
 			}
@@ -35,14 +23,19 @@ state = {
 			}
 
 		}
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		
+
 	}
 
-	provinces = {
-		320 9234 9331 11109
+	provinces={
+		248 320 6225 9234 11109 
 	}
-
-	local_supplies = 6.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

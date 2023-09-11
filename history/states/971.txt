@@ -1,40 +1,25 @@
 
-state = {
-	id = 971
-	name = "STATE_971"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=971
+	name="STATE_971"
 
-	history = {
+	history={
 		owner = TTS
 		add_core_of = TTS
 		victory_points = {
-			86 1
-		}
-		victory_points = {
-			3067 1
-		}
-		victory_points = {
-			176 1
-		}
-		victory_points = {
-			3189 1
-		}
-		victory_points = {
-			11181 1
-		}
-		victory_points = {
-			11045 1
+			86 1 
 		}
 		buildings = {
-		
+
 		}
+
 	}
 
-	provinces = {
-		3008 86 6029 3189 9195 11045 36 176 9198 11181 3067
-	} 
-
-	local_supplies = 6.0 
+	provinces={
+		36 86 176 3008 3067 3189 6029 9195 9198 11045 11181 
+	}
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

@@ -1,24 +1,20 @@
 
-state = {
-	id = 924
-	name = "STATE_924"
-	manpower = 183748
-	
-	state_category = rural
-		resources={
-		energy=99
+state={
+	id=924
+	name="STATE_924"
+	resources={
+		energy=99.000
 	}
 
-	history = {
-		owner =BLT
+	history={
+		owner = BLT
 		victory_points = {
-			    79 1
+			79 1 
 		}
 		victory_points = {
-			    6174 1
+			6174 1 
 		}
 		buildings = {
-		
 			79 = {
 
 			}
@@ -28,13 +24,16 @@ state = {
 			6174 = {
 
 			}
+
 		}
-		
+
 	}
 
-	provinces = {
-		79 11068 6174
+	provinces={
+		79 6174 11068 
 	}
-
-	local_supplies = 6.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=6.000
 }

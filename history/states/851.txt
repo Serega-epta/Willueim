@@ -1,27 +1,25 @@
 
-state = {
-	id = 851
-	name = "STATE_851"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=851
+	name="STATE_851"
 
-	history = {
-		owner = KUB
+	history={
+		owner = POP
 		victory_points = {
-			13268 2
+			318 2 
 		}
 		buildings = {
-		
 			infrastructure = 2
-			
+
 		}
-		
+
 	}
 
-	provinces = {
-		13267 13268 13269 13297
+	provinces={
+		318 3281 13268 13269 
 	}
-
-	local_supplies = 6.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=6.000
 }

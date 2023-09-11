@@ -7,6 +7,7 @@ replace_path="common/scripted_localisation"
 replace_path="history/countries"
 replace_path="history/states"
 replace_path="map/strategicregions"
+replace_path="gfx/loadingscreens"
 version="1"
 tags={
 	"Military"

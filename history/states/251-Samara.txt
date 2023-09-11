@@ -2,32 +2,30 @@
 state={
 	id=251
 	name="STATE_251"
-	manpower = 1391819
-	
-	state_category = town
 
 	history={
 		owner = MOT
 		victory_points = {
-			11225 10
+			11225 10 
 		}
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 3
 			arms_factory = 2
 			air_base = 1
+
 		}
 		add_core_of = MOT
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 3
-			}
+		victory_points = {
+			3357 1 
 		}
-		victory_points = { 3357 1 }
+
 	}
 
 	provinces={
-		338 365 393 497 3216 9243 9365 9391 11225 11348 11377 3357 3486 9445 6379 6424 6515 11433 3330 
+		338 365 393 497 3216 9243 9365 9391 11225 11348 11377 
 	}
-
-	local_supplies=0.0 
+	manpower=1391819
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }

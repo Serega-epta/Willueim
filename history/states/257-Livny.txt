@@ -1,30 +1,30 @@
 
 state={
 	id=257
-	name="STATE_257" # Tambov
-	manpower = 1779583
-	
-	state_category = rural
-	
+	name="STATE_257"
 	resources={
-		chromium=7 # was: 10
-		coal = 1
+		chromium=7.000
+		coal=1.000
 	}
 
 	history={
 		owner = TAB
 		buildings = {
 			infrastructure = 2
+
 		}
 		add_core_of = TAB
 		victory_points = {
-			11351 1
+			11351 3 
 		}
+
 	}
 
 	provinces={
-		232 275 340 367 396  3332 3389 9245 9312 9367  11227 11296 11323 11351 11381 
+		232 275 396 3389 9245 9367 11227 11258 11323 11351 11381 
 	}
-
-	local_supplies=0.0 
+	manpower=1779583
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

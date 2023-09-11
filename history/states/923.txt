@@ -1,24 +1,14 @@
 
-state = {
-	id = 923
-	name = "STATE_923"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=923
+	name="STATE_923"
 
-	history = {
-		owner =KOC
+	history={
+		owner = KOC
 		victory_points = {
-			    9098 1
-		}
-		victory_points = {
-			    3089 1
-		}
-		victory_points = {
-			    11304 1
+			9319 1 
 		}
 		buildings = {
-		
 			9331 = {
 
 			}
@@ -40,15 +30,21 @@ state = {
 			9098 = {
 
 			}
+
 		}
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		
+
 	}
 
-	provinces = {
-		95 3089 9098 9319 11072 11304
+	provinces={
+		9319 9331 11304 
 	}
-
-	local_supplies = 6.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

@@ -1,27 +1,14 @@
 
-state = {
-	id = 925
-	name = "STATE_925"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=925
+	name="STATE_925"
 
-	history = {
-		owner =NVC
+	history={
+		owner = NVC
 		victory_points = {
-			    117 1
-		}
-		victory_points = {
-			    11032 1
-		}
-		victory_points = {
-			    11186 1
-		}
-		victory_points = {
-			    181 1
+			117 3 
 		}
 		buildings = {
-		
 			104 = {
 
 			}
@@ -58,13 +45,16 @@ state = {
 			11186 = {
 
 			}
+
 		}
-		
+
 	}
 
-	provinces = {
-		104 117 181 3120 6139 6197 9097 9197 11032 11080 11139 11186 3072 9164
+	provinces={
+		117 3072 3089 11072 
 	}
-
-	local_supplies = 6.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=6.000
 }

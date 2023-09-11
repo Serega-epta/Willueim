@@ -1,33 +1,29 @@
 
-state = {
-	id = 829
-	name = "STATE_829" #Volga Germany
-	manpower = 618530
-	
-	state_category = rural
-	
-	resources = {
-		steel = 14 # was: 40
-		tungsten = 6 # was: 34
+state={
+	id=829
+	name="STATE_829"
+	resources={
+		steel=14.000
+		tungsten=6.000
 	}
 
-	history = {
-		owner = DRW
+	history={
+		owner = PVS
+		add_core_of = PVS
 		buildings = {
 			infrastructure = 3
-		}
 
-		victory_points = {
-			11523 2
 		}
 		victory_points = {
-			9432 1
+			11523 3 
 		}
 	}
 
-	provinces = {
-		 11460 
+	provinces={
+		9432 9577 11421 11523 
 	}
-
-	local_supplies = 9.0 
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=9.000
 }
