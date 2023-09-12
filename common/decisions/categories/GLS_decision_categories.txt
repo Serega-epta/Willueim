@@ -22,7 +22,7 @@ GLS_negotiation_process = {
 	priority = { base = 5 }
 	
 	on_map_area = {
-		targets = { 999 401 251 652 407 406 994 }
+		targets = { 999 251 652 407 406 994 }
 		target_trigger = { 
 			FROM = {
 				NOT = { is_controlled_by = GLS }
