@@ -418,6 +418,7 @@ country_event = {
  		name = GLS.34.a	
  	}
 }
+
 ######################################
 
 country_event = {
@@ -439,6 +440,23 @@ country_event = {
  	is_triggered_only = yes
  	option = {
  		name = GLS.222.a	
+ 	}
+}
+
+country_event = {
+ 	id = GLS.333 #Удаление Альянса
+ 	title = GLS.333.t
+ 	desc = GLS.333.d
+ 	picture = GFX_gls_negotiation_process
+ 	is_triggered_only = no
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		UralTreaty_defeated_GLS = yes
+	}
+ 	option = {
+ 		name = GLS.333.a
+		URC = { dismantle_faction = yes }
  	}
 }
 
