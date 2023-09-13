@@ -4,7 +4,7 @@ GLS_freedom_and_order = {
 		priority = 110		
 		allowed = { original_tag = GLS }	
 		#available = {  }
-		cost = 15
+		cost = 75
 		days_re_enable = 25
 
 		complete_effect = {
@@ -19,7 +19,7 @@ GLS_freedom_and_order = {
 		priority = 110		
 		allowed = { original_tag = GLS }	
 		#available = {  }
-		cost = 15
+		cost = 75
 		days_re_enable = 25
 
 		complete_effect = {
@@ -34,7 +34,7 @@ GLS_freedom_and_order = {
 		priority = 110		
 		allowed = { original_tag = GLS }	
 		#available = {  }
-		cost = 100	
+		cost = 150	
 		days_re_enable = 25
 		
 		complete_effect = {
@@ -49,7 +49,7 @@ GLS_freedom_and_order = {
 		priority = 110		
 		allowed = { original_tag = GLS }	
 		#available = {  }
-		cost = 100	
+		cost = 150	
 		days_re_enable = 25
 		
 		complete_effect = {
@@ -131,9 +131,6 @@ GLS_negotiation_process = {
 					country_exists = ISK
 				}
 				999 = {
-					is_owned_by = GLS
-				}
-				401 = {
 					is_owned_by = GLS
 				}
 				251 = {
@@ -241,8 +238,8 @@ GLS_kurchatov_project = {
 		allowed = { original_tag = GLS }	
 		available = {  
 			custom_trigger_tooltip = {
-				tooltip = gls_more_that_750_rubles
-				check_variable = { Chernii_rubli > 749 }
+				tooltip = gls_more_that_2500_rubles
+				check_variable = { Chernii_rubli > 2499 }
 			}			
 		}
 		visible= {
@@ -254,7 +251,7 @@ GLS_kurchatov_project = {
 		complete_effect = {
 			custom_effect_tooltip = gls_allocate_additional_resources_tt
 			hidden_effect = {
-				subtract_from_variable = { Chernii_rubli = 750 }	
+				subtract_from_variable = { Chernii_rubli = 2500 }	
 				country_event = { id = GLS.750 days = 1 }
 			}
 		}
