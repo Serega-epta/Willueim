@@ -361,27 +361,29 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		declare_war_on = {
-		target = MAD
-		type = annex_everything
-		}
-		declare_war_on = {
-		target = BAG
-		type = annex_everything
-		}
-		declare_war_on = {
-		target = BIH
-		type = annex_everything
-		}
-		hidden_effect = {
-		
-		load_focus_tree = army_junta_unite_focus
-		
-		country_event = {
-		id = ARM.13
-		days = 7		
-		}		
-		}
+			declare_war_on = {
+				target = MAD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BAG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BIH
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DIB
+				type = annex_everything
+			}
+			hidden_effect = {
+				load_focus_tree = army_junta_unite_focus
+				country_event = {
+					id = ARM.13
+					days = 7		
+				}		
+			}
 		}
 	}
 }
