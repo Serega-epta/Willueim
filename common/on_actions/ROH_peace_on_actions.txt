@@ -1,13 +1,17 @@
 on_actions = {
 	on_capitulation = {
 		effect = {
+			#set_global_flag = show_peace_popup_alert
+			log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
 			FROM = {
 				save_global_event_target_as = winning_country
 			}
 			ROOT = {
 				save_global_event_target_as = losing_country
 			}
-			
+
+			log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
+
 			if = {
 				limit = {
 					OR = {
@@ -35,6 +39,9 @@ on_actions = {
 								annex_country = {
 									target = PREV
 									transfer_troops = no
+								}
+								every_state = {
+									remove_core_of = ROOT
 								}
 							}
 						}
