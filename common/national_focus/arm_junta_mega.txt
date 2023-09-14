@@ -515,23 +515,23 @@
 		y = 24
 		cost = 10
 		available_if_capitulated = no
-		available = {
-			has_completed_focus = ARM_evrebody_knows_his_role
-			has_completed_focus = ARM_raspredelit_v_kolhozi	
-			has_completed_focus = ARM_iskuplenie_pod_zemley	
-			has_completed_focus = ARM_ritm_effectivnosty	
-			has_completed_focus = ARM_predskazuemaya_pobeda
-		}
+		# available = {
+		# 	has_completed_focus = ARM_evrebody_knows_his_role
+		# 	has_completed_focus = ARM_raspredelit_v_kolhozi	
+		# 	has_completed_focus = ARM_iskuplenie_pod_zemley	
+		# 	has_completed_focus = ARM_ritm_effectivnosty	
+		# 	has_completed_focus = ARM_predskazuemaya_pobeda
+		# }
 		completion_reward = {
 			add_political_power = 200
 			country_event = {
 				id = ARM.36
 				days = 1
 			}
-			load_focus_tree = { 
-				tree = army_junta_rodina_unite
-				keep_completed = yes 
-			}
+			# load_focus_tree = { 
+			# 	tree = army_junta_rodina_unite
+			# 	keep_completed = yes 
+			# }
 		}
 	}
 	
