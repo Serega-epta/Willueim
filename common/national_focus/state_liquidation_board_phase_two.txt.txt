@@ -60,6 +60,14 @@ focus_tree = {
 			}
 			prerequisite = { focus = GLS_process }
 			search_filters = { FOCUS_FILTER_POLITICAL }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = has_clicked_continue_practice
+					hidden_trigger = {
+						has_country_flag = continue_practice
+					}	
+				}
+			}
 			completion_reward = { 
 				country_event = {
 					id = GLS.23
@@ -76,6 +84,7 @@ focus_tree = {
     					instant_build = yes
 					}
 				}
+				clr_country_flag = continue_practice
 			}
 		}
 		focus = {
