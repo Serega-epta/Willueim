@@ -12,7 +12,7 @@ focus_tree = {
 	
 		focus = {
 			id = GLS_lawmaking
-			icon = GFX
+			icon = GFX_lawmaking
 			x = 6
 			y = 0
 			cost = 2.9
@@ -30,7 +30,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_process
-			icon = GFX
+			icon = GFX_process
 			x = 6
 			y = 1
 			cost = 2.9
@@ -51,7 +51,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_cursed
-			icon = GFX
+			icon = GFX_cursed
 			x = 8
 			y = 3
 			cost = 2.9
@@ -80,7 +80,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_romance
-			icon = GFX
+			icon = GFX_romance
 			x = 4
 			y = 3
 			cost = 2.9
@@ -88,11 +88,11 @@ focus_tree = {
 				base = 10
 			}
 			available = {
-				hidden_trigger = {
-					has_country_flag = start_mobilisation
-				}
 				custom_trigger_tooltip = {
-					tooltip = has_clicked_start_mobilisation	
+					tooltip = has_clicked_start_mobilisation
+					hidden_trigger = {
+						has_country_flag = start_mobilisation
+					}	
 				}
 			}
 			prerequisite = {focus = GLS_process}
@@ -123,11 +123,12 @@ focus_tree = {
     					instant_build = yes
 					}
 				}
+				clr_country_flag = start_mobilisation
 			}
 		}
 		focus = {
 			id = GLS_pereputie
-			icon = GFX
+			icon = GFX_pereputie
 			x = 6
 			y = 5
 			cost = 2.9
@@ -147,7 +148,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_south
-			icon = GFX
+			icon = GFX_south
 			x = 0
 			y = 6
 			#relative_position_id = GLS_south
@@ -171,7 +172,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_chess
-			icon = GFX
+			icon = GFX_chess
 			x = 0
 			y = 3
 			relative_position_id = GLS_south
@@ -196,7 +197,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_madness
-			icon = GFX
+			icon = GFX_madness
 			x = 0
 			y = 4
 			relative_position_id = GLS_south
@@ -215,7 +216,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_the_weakest_sex
-			icon = GFX
+			icon = GFX_the_weakest_sex
 			x = 0
 			y = 5
 			relative_position_id = GLS_south
@@ -234,7 +235,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_sufferers
-			icon = GFX
+			icon = GFX_sufferers
 			x = 0
 			y = 6
 			relative_position_id = GLS_south
@@ -253,7 +254,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_The_Thing
-			icon = GFX
+			icon = GFX_The_Thing
 			x = 0
 			y = 7
 			relative_position_id = GLS_south
@@ -276,7 +277,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_zhukov
-			icon = GFX
+			icon = GFX_zhukov
 			x = 0
 			y = 8
 			relative_position_id = GLS_south
@@ -330,7 +331,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_power_and_love
-			icon = GFX
+			icon = GFX_power_and_love
 			x = 6
 			y = 6
 			cost = 2.9
@@ -353,7 +354,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_hell
-			icon = GFX
+			icon = GFX_hell
 			x = 4
 			y = 7
 			cost = 2.9
@@ -372,7 +373,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_holy_book
-			icon = GFX
+			icon = GFX_holy_book
 			x = 8
 			y = 7
 			cost = 2.9
@@ -396,7 +397,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_KALASH
-			icon = GFX
+			icon = GFX_KALASH
 			x = 4
 			y = 8
 			cost = 2.9
@@ -447,7 +448,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_mascs
-			icon = GFX
+			icon = GFX_mascs
 			x = 8
 			y = 8
 			cost = 2.9
@@ -498,7 +499,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_kurchatov
-			icon = GFX
+			icon = GFX_kurchatov
 			x = 6
 			y = 9
 			cost = 2.9
@@ -519,7 +520,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_sharashki
-			icon = GFX
+			icon = GFX_sharashki
 			x = 4
 			y = 10
 			cost = 2.9
@@ -538,7 +539,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_free_mind
-			icon = GFX
+			icon = GFX_free_mind
 			x = 8
 			y = 10
 			cost = 2.9
@@ -574,7 +575,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_nibelungs
-			icon = GFX
+			icon = GFX_nibelungs
 			x = 6
 			y = 11
 			cost = 2.9
@@ -597,7 +598,7 @@ focus_tree = {
 		
 		focus = {
 			id = GLS_expedition
-			icon = GFX
+			icon = GFX_expedition
 			x = 12
 			y = 6
 			cost = 2.9
@@ -619,7 +620,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_marouders
-			icon = GFX
+			icon = GFX_marouders
 			relative_position_id = GLS_expedition
 			x = 0
 			y = 4
@@ -639,7 +640,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_punisher
-			icon = GFX
+			icon = GFX_punisher
 			relative_position_id = GLS_expedition
 			x = 0
 			y = 5
@@ -659,7 +660,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_prayers
-			icon = GFX
+			icon = GFX_prayers
 			relative_position_id = GLS_expedition
 			x = 0
 			y = 6
@@ -679,7 +680,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_clear
-			icon = GFX
+			icon = GFX_clear
 			relative_position_id = GLS_expedition
 			x = 0
 			y = 8
@@ -705,7 +706,7 @@ focus_tree = {
 		}
 		focus = {
 			id = GLS_chasing_a_dream
-			icon = GFX
+			icon = GFX_chasing_a_dream
 			x = 6
 			y = 15
 			cost = 2.9
@@ -739,10 +740,6 @@ focus_tree = {
 				}
 				declare_war_on = {
 					target = OCH
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = BGR
 					type = annex_everything
 				}
 				declare_war_on = {
