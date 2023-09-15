@@ -263,18 +263,18 @@ ideas = {
 				defence = 0.05
 			}
 		}
-		GLS_fathers_and_not_fathers_2 = {
-			picture = fathers_and_not_fathers
-			modifier = {
-				offence = 0.1
-				defence = 0.1
-				conscription = 0.04
-			}
-		}
 		GLS_fathers_and_not_fathers_3 = {
 			picture = fathers_and_not_fathers
 			modifier = {
 				conscription = 0.07
+			}
+		}
+		GLS_fathers_and_not_fathers_31 = {	#<- вот эта идея добавляется в фокусе 'Прокляты и забыты'
+			picture = fathers_and_not_fathers
+			modifier = {
+				conscription = 0.02
+				offence = 0.1
+				defence = 0.1
 			}
 		}
 		GLS_fathers_and_not_fathers_4 = {
@@ -354,8 +354,18 @@ ideas = {
 			picture = fathers_and_not_fathers
 			modifier = {
 				conscription = 0.07
-				weekly_manpower = 0.1
-				army_org = -0.1
+				weekly_manpower = 10
+				army_org_factor = -0.1
+			}
+		}
+		GLS_fathers_and_not_fathers_111 = {
+			picture = fathers_and_not_fathers
+			modifier = {
+				conscription = 0.02
+				offence = 0.1
+				defence = 0.1
+				weekly_manpower = 10
+				army_org_factor = -0.1
 			}
 		}
 		GLS_fathers_and_not_fathers_12 = {
@@ -364,8 +374,8 @@ ideas = {
 				offence = 0.05
 				defence = 0.05
 				conscription = 0.05
-				weekly_manpower = 0.1
-				army_org = -0.1
+				weekly_manpower = 10
+				army_org_factor = -0.1
 			}
 		}
 		GLS_fathers_and_not_fathers_13 = {
@@ -375,8 +385,8 @@ ideas = {
 				mobilization_speed = 0.05
 				production_factory_efficiency_gain_factor = 0.07
 				production_factory_start_efficiency_factor = 0.1
-				weekly_manpower = 0.1
-				army_org = -0.1
+				weekly_manpower = 10
+				army_org_factor = -0.1
 			}
 		}
 		GLS_fathers_and_not_fathers_14 = {
@@ -389,12 +399,11 @@ ideas = {
 				mobilization_speed = 0.05
 				production_factory_efficiency_gain_factor = 0.07
 				production_factory_start_efficiency_factor = 0.1
-				weekly_manpower = 0.1
-				army_org = -0.1
+				weekly_manpower = 10
+				army_org_factor = -0.1
 			}
 		}
-		##############
-		#Свободный разум свободен во всем
+
 		
 		GLS_memories_of_rodina = {
 			picture = memories_of_rodina
@@ -421,88 +430,7 @@ ideas = {
 				weekly_manpower = 350
 			}
 		}
-		GLS_memories_of_rodina_3 = {
-			picture = memories_of_rodina
-			modifier = {
-				offensive_war_stability_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.16
-				production_factory_start_efficiency_factor = 0.1
-				research_speed_factor = -0.05
-				monthly_population = 0.015
-				weekly_manpower = 100
-				mobilization_speed = 0.05
-			}
-		}
-		#Маски сброшены
-		GLS_fathers_and_not_fathers_11 = {
-			picture = fathers_and_not_fathers
-			modifier = {
-				conscription = 0.07
-				weekly_manpower = 0.1
-				army_org = -0.1
-			}
-		}
-		GLS_fathers_and_not_fathers_12 = {
-			picture = fathers_and_not_fathers
-			modifier = {
-				offence = 0.05
-				defence = 0.05
-				conscription = 0.05
-				weekly_manpower = 0.1
-				army_org = -0.1
-			}
-		}
-		GLS_fathers_and_not_fathers_13 = {
-			picture = fathers_and_not_fathers
-			modifier = {
-				conscription = 0.07
-				mobilization_speed = 0.05
-				production_factory_efficiency_gain_factor = 0.07
-				production_factory_start_efficiency_factor = 0.1
-				weekly_manpower = 0.1
-				army_org = -0.1
-			}
-		}
-		GLS_fathers_and_not_fathers_14 = {
-			picture = fathers_and_not_fathers
-			modifier = {
-				offence = 0.05
-				defence = 0.05
-				conscription = 0.05
-				army_speed_factor = 0.05
-				mobilization_speed = 0.05
-				production_factory_efficiency_gain_factor = 0.07
-				production_factory_start_efficiency_factor = 0.1
-				weekly_manpower = 0.1
-				army_org = -0.1
-			}
-		}
-		
-		GLS_memories_of_rodina = {
-			picture = memories_of_rodina
-			modifier = {
-				offensive_war_stability_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.05
-				research_speed_factor = -0.05
-			}
-		}
-		GLS_memories_of_rodina_1 = {
-			picture = memories_of_rodina
-			modifier = {
-				offensive_war_stability_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.09
-				research_speed_factor = -0.05
-			}
-		}
-		GLS_memories_of_rodina_2 = {
-			picture = memories_of_rodina
-			modifier = {
-				offensive_war_stability_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.09
-				research_speed_factor = -0.05
-				weekly_manpower = 350
-			}
-		}
+
 		#Наследие Жукова
 		GLS_memories_of_rodina_3 = {
 			picture = memories_of_rodina
