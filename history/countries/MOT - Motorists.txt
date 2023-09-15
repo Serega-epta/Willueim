@@ -1,6 +1,6 @@
 capital = 1
 
-oob = base #none
+oob = MOT
 
 add_ideas = {
 	ZHELEZO
@@ -10,7 +10,10 @@ set_technology = {
 }
 
 set_convoys = 20
-
+add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 1000
+}
 set_politics = {
     ruling_party = svobod
     last_election = "1933.6.21"
