@@ -45,7 +45,7 @@ replace_path="gfx/interface/equipmentdesigner"
 replace_path="gfx/interface/equipmentdesigner/graphic_db"
 replace_path="events"
 replace_path="music"
-version="1"
+version="0.0.1.1"
 tags={
 	"Military"
 	"Map"
