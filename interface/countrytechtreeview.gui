@@ -922,14 +922,14 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "nsb_armour_subtitles"
-				position = { x = 0 y = 40 }
+				position = { x = 750 y = 40 }
 				size = { width = 600 height = 80% }
-				orientation = center_up
-				origo = center_up
+				orientation = upper_left
+				origo = upper_left
 
 				instantTextBoxType = {
 					name = "armour_subtitle_heavy"
-					position = { x = 100 y = 55 }
+					position = { x = 275k  y = 50 }
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = {x = 0 y = 4}
@@ -942,7 +942,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "armour_subtitle_medium"
-					position = { x = -25 y = 300 }
+					position = { x = 150 y = 300 }
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = {x = 0 y = 4}
@@ -955,7 +955,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "armour_subtitle_light"
-					position = { x = -325 y = 55  }
+					position = { x = -140 y = 55  }
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = {x = 0 y = 4}
@@ -967,7 +967,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "armour_subtitle_amphibious"
-					position = { x = -530 y = 305 }
+					position = { x = -400 y = 305 }
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = {x = 0 y = 4}
@@ -982,26 +982,26 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "gwtank_chassis_tree"
-				position = { x= -250 y = 40 }
+				position = { x= 750 y = 40 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
-				format = "UP"
+				format = "UPPER_LEFT"
 			}
 
 			gridboxtype = {
 				name = "armor_tech_1_tree"
-				position = { x = 250 y = 40 }
+				position = { x = 0 y = 40 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
-				format = "UP"
+				format = "UPPER_LEFT"
 			}
 
 			gridboxtype = {
 				name = "engine_tech_1_tree"
-				position = { x = 450 y = 40 }
+				position = { x = 175 y = 40 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
-				format = "UP"
+				format = "UPPER_LEFT"
 			}
 		}
 
@@ -2178,6 +2178,18 @@ guiTypes = {
 				format = center
 				Orientation = "UPPER_LEFT"
 				pdx_tooltip = "nav_bomber_equipment_desc"
+			}
+
+			containerWindowType = {
+				name = "tiled_research_bg"
+				position = { x=180 y=807 }
+				size = { width = 775 height = 200 }
+				clipping = no
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_research_bg"
+				}
 			}
 
 			gridboxtype = {
