@@ -1,8 +1,9 @@
 on_actions = {
 	on_capitulation = {
 		effect = {
-			set_global_flag = show_peace_popup_alert
 			log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
+			
+			set_global_flag = show_peace_popup_alert
 			FROM = {
 				save_global_event_target_as = winning_country
 			}
@@ -11,6 +12,8 @@ on_actions = {
 			}
 
 			log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
+			
+			add_to_variable = { global.peace_popup_dirty = 1 }
 
 			if = {
 				limit = {
@@ -25,8 +28,10 @@ on_actions = {
 				}
 				log = "war_won"
 				set_global_flag = war_won
+				
 				if = {
 					limit = { NOT = { has_global_flag = skip_default_capitulation } }
+					log = "Default Capitulation"
 					FROM = {
 						every_enemy_country = {
 							limit = {
@@ -48,9 +53,9 @@ on_actions = {
 							}
 						}
 					}
-					set_global_flag = skip_default_capitulation
-				}
+				}				
 			}
+			clr_global_flag = skip_default_capitulation
 		}
 	}
 }
