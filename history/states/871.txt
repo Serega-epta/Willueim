@@ -2,13 +2,17 @@
 state={
 	id=871
 	name="STATE_871"
+	resources={
+		oil=50.000
+	}
 
 	history={
 		owner = SDC
 		add_core_of = SDC
 		buildings = {
 			infrastructure = 2
-
+			synthetic_refinery = 1
+			fuel_silo = 1
 		}
 		victory_points = {
 			312 3 
