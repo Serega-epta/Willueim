@@ -18,6 +18,86 @@ on_actions = {
 			if = {
 				limit = {
 					OR = {
+						ROOT = {
+							original_tag = MOT
+						}
+						ROOT = {
+							original_tag = URA
+						}
+						ROOT = {
+							original_tag = EDM
+						}
+						ROOT = {
+							original_tag = URC
+						}
+						ROOT = {
+							original_tag = WPK
+						}
+						ROOT = {
+							original_tag = ZAN
+						}
+						ROOT = {
+							original_tag = OCH
+						}
+						ROOT = {
+							original_tag = TAR
+						}
+					}
+					FROM = {
+						original_tag = GLS
+					}
+					GLS = { has_country_flag = GLS_negotiation_process_fail }
+				}
+
+				every_country = {
+					limit = { has_war_with = GLS }
+					white_peace = GLS
+				}
+				
+				FROM = {
+					annex_country = {
+						target = MOT
+						transfer_troops = no
+					}
+					annex_country = {
+						target = URA
+						transfer_troops = no
+					}
+					annex_country = {
+						target = EDM
+						transfer_troops = no
+					}
+					annex_country = {
+						target = URC
+						transfer_troops = no
+					}
+					annex_country = {
+						target = WPK
+						transfer_troops = no
+					}
+					annex_country = {
+						target = ZAN
+						transfer_troops = no
+					}
+					annex_country = {
+						target = OCH
+						transfer_troops = no
+					}
+					annex_country = {
+						target = TAR
+						transfer_troops = no
+					}
+					every_state = {
+						remove_core_of = ROOT
+					}
+					clr_country_flag = GLS_negotiation_process_fail
+				}
+				set_global_flag = skip_default_capitulation
+			}
+
+			else_if = {
+				limit = {
+					OR = {
 						ROOT = { is_in_faction = no }
 						ROOT = {
 							all_allied_country = {
