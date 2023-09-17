@@ -460,20 +460,36 @@ country_event = {
  ###################
  #D O P E V E N T S#
  ###################
-country_event = {
- 	id = GLS.33
- 	title = GLS.33.t
- 	desc = GLS.33.d
- 	picture = GFX_ropot_razv
-	fire_only_once = yes
-	hidden = no
-	trigger = {	
+ country_event = {
+	id = GLS.332
+	title = GLS.332.t
+	desc = GLS.332.d
+	picture = GFX_ropot_razv
+    is_triggered_only = no
+    fire_only_once = yes
+    hidden = yes
+    trigger = {	
 		GLS_defeated_ASR = yes
+    }
+	option = {
+		name = GLS.332.a
+	    GLS = { country_event = { id = GLS.33 hours = 1 } }		
 	}
- 	option = {
- 		name = GLS.33.a
-		GLS = { load_focus_tree = state_liquidation_board_phase_two }
- 	}
+}
+country_event = {
+	id = GLS.33
+	title = GLS.33.t
+	desc = GLS.33.d
+	picture = GFX_ropot_razv
+	is_triggered_only = yes
+	option = {
+		name = GLS.33.a
+	    hidden_effect = { 
+		    GLS = { 
+			   load_focus_tree = state_liquidation_board_phase_two 
+		    } 
+	    }
+	}
 }
 country_event = {
  	id = GLS.34
