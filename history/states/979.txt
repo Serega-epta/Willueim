@@ -1,28 +1,30 @@
 
-state = {
-	id = 979
-	name = "STATE_979"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=979
+	name="STATE_979"
 
-	history = {
+	history={
 		owner = SDI
 		add_core_of = SDI
 		victory_points = {
-			9099 4
+			13447 2 
 		}
 		buildings = {
-		
+
 		}
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		
+
 	}
 
-	provinces = {
-		10207 13309 13310 9099
-	} 
-
-	local_supplies = 6.0 
+	provinces={
+		9099 13309 13310 13416 13422 13426 13435 13447 
+	}
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

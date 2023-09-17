@@ -1,29 +1,30 @@
 
-state = {
-	id = 982
-	name = "STATE_982"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=982
+	name="STATE_982"
 
-	history = {
+	history={
 		owner = TRO
 		add_core_of = TRO
 		victory_points = {
-		10723 3
-			
+			13452 3 
 		}
 		buildings = {
-		
+
 		}
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		
+
 	}
 
-	provinces = {
-		11098 10723
-	} 
-
-	local_supplies = 6.0 
+	provinces={
+		10723 11098 12502 13428 13432 13438 13443 13444 13445 13446 13448 13451 13452 13453 13456 13463 13465 
+	}
+	manpower=183748
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

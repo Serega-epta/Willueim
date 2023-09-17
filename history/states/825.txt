@@ -1,32 +1,30 @@
 
-state = {
-	id = 825
-	name = "STATE_825" # Nenets
-	manpower = 21795
-	
-	state_category = rural
+state={
+	id=825
+	name="STATE_825"
 
-	history = {
+	history={
 		victory_points = {
-			105 1 
+			13469 1 
 		}
 		owner = POV
 		buildings = {
 			infrastructure = 1
-			12530 = {
-				naval_base = 1
-			}
-
 		}
 		add_core_of = POV
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		
+
 	}
 
-	provinces = {
-		105 11182
+	provinces={
+		11182 13375 13376 13454 13461 13464 13469 13478 
 	}
-
-	local_supplies = 0.0 
+	manpower=21795
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
 }
