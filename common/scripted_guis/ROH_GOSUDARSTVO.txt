@@ -1,13 +1,13 @@
 scripted_gui = {
 	panel_gosudarstva = {
-		context_type = player_context
+		#context_type = player_context
 		parent_window_token = politics_tab
 		window_name = "panel_gosudarstva"
+
 		visible = {
 			always = yes
-		}		
-		properties = { 			
-       	}		
+		}	
+
 		effects = {	
 		BUTTON_Open_okno_gosustroistva_click = {	
 				if = {

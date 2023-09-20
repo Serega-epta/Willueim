@@ -2,15 +2,16 @@ guiTypes = {
 	containerWindowType = {
 		name = "sinopsis"
                 position = { x = 0 y = 0 }
-		Orientation = UPPER_LEFT
 		
 		buttonType = {
 			name = "sinopsis"
-			position = { x = 37 y = 208 }			
+			position = { x = 42 y = 195 }			
 			quadTextureSprite = "GFX_sinopsis_icon"
 			clicksound = click_default
 			Orientation = UPPER_LEFT
-			pdx_tooltip = "example_1_tooltip"
+			text = "СИНОПСИС"
+			font = "hoi_16mbs"
+			#pdx_tooltip = "example_1_tooltip"
 		}
     }
 }
