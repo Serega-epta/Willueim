@@ -4,10 +4,27 @@ bookmarks = {
 		desc = "REQUIEM_DESC"
 		date = 2022.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "ODS"
+		default_country = "GLS"
 		default = yes
 		
 		#Страны, имеющие полностью или частично (т.е осталось немного) реализованный контент
+
+		"GLS"={
+			minor = yes
+			history = "REQUIEM_OF_HUMANKIND_condition_of_GLS"
+			ideology = patriots
+			ideas = {				
+				GLS_fathers_and_not_fathers
+				GLS_memories_of_rodina
+				GLS_kotly			
+			}
+			focuses = {
+				GLS_old_friends
+				GLS_young_blood
+				GLS_fall_of_rodina
+			}
+		}
+
 		"ARM"={
 			history = "REQUIEM_OF_HUMANKIND_condition_of_ARM"
 			ideology = patriots
@@ -53,22 +70,7 @@ bookmarks = {
 			}
 		}
 
-		#Страны, не имеющие контент (или имеющие, но слишком маленький), но которые планируются в разработке		
-		"GLS"={
-			minor = yes
-			history = "REQUIEM_OF_HUMANKIND_condition_of_GLS"
-			ideology = patriots
-			ideas = {				
-				GLS_fathers_and_not_fathers
-				GLS_memories_of_rodina
-				GLS_kotly			
-			}
-			focuses = {
-				GLS_old_friends
-				GLS_young_blood
-				GLS_fall_of_rodina
-			}
-		}
+		#Страны, не имеющие контент (или имеющие, но слишком маленький), но которые планируются в разработке
 
 		# "AGE"={																	<-      
 		# 	minor = yes																<-
