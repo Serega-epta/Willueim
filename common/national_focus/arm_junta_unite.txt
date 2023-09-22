@@ -195,10 +195,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {			
-				Swap_ideas ={
-					Remove_idea = ARM_insubordination
-					Add_idea = ARM_Everything_is_under_control
-				}
+			Swap_ideas ={
+				Remove_idea = ARM_insubordination
+				Add_idea = ARM_Everything_is_under_control
+			}
 			country_event = {
 				id = ARM.21
 				days = 1
@@ -428,12 +428,145 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 150
 			add_ideas = ARM_Charter
+			custom_effect_tooltip = restore_order_in_southern_suburbs	
 			country_event = {
 				id = ARM.25
 				days = 1
 			}
 			hidden_effect = {		
-				load_focus_tree = army_junta_mega_focus		
+				load_focus_tree = army_junta_mega_focus	
+				create_wargoal = {
+					type = annex_everything
+					target = BOD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = HER
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CRI
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KUB
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LUG
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = DOM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SWR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LWV
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = COA
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = DIB
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BAG
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ODS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BIH
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = VDS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MAD
+				}
+					create_wargoal = {
+					type = annex_everything
+					target = SUM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BRD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BRI
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = WAC
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MOD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SOD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YWD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BGD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = WOD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FUD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = HAN
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = AZB
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CRW
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ECD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = STW
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FSR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KUH
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GAT
+				}	
 			}
 		}
 		
