@@ -1,0 +1,19 @@
+ideas = {
+
+	country = {
+		PLC_puli_v_magazine = {			#Пули в чужом магазине
+			picture = 		
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				monthly_population -15%
+				stability_factor -30%
+			}
+		}
+	}
+}
