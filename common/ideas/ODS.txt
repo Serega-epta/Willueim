@@ -174,7 +174,7 @@ ideas = {
 			stability_factor = -0.3
 			production_speed_buildings_factor = -0.3
 			conscription_factor = -0.01
-			weekly_manpower = -1000
+			weekly_manpower = -500
 			ax_surrender_limit_offset = -0.7
 			resistance_damage_to_garrison_on_our_occupied_states = -0.4
 			resistance_growth_on_our_occupied_states = -0.5
@@ -198,7 +198,7 @@ ideas = {
 			stability_factor = -0.3
 			production_speed_buildings_factor = -0.3
 			conscription_factor = 0.035
-			weekly_manpower = -1000
+			weekly_manpower = -250
 			ax_surrender_limit_offset = -0.7
 			resistance_damage_to_garrison_on_our_occupied_states = -0.4
 			resistance_growth_on_our_occupied_states = -0.5
@@ -222,7 +222,7 @@ ideas = {
 			stability_factor = -0.2
 			production_speed_buildings_factor = -0.3
 			conscription_factor = 0.035
-			weekly_manpower = -500
+			weekly_manpower = 250
 			ax_surrender_limit_offset = -0.7
 			resistance_damage_to_garrison_on_our_occupied_states = -0.4
 			resistance_growth_on_our_occupied_states = -0.5
@@ -409,64 +409,6 @@ ideas = {
 			modifier = {
 		production_speed_bunker_factor = 0.7
 			
-			}
-		}
-		nenavid_serdza = {
-			picture = nenavid_serdza
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_speed_factor = -0.5
-				army_org_factor = -0.5
-				army_org_regain = -0.5
-				
-			}
-		}
-		sumrachniy_trepet = {
-			picture = sumrachniy_trepet
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_speed_factor = -0.25
-				army_org_factor = -0.25
-				army_org_regain = -0.25
-			}
-		}
-		pocrov_zamisel = {
-			picture = glaz_ebuchiy
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_speed_factor = -0.1
-				army_org_factor = -0.1
-				army_org_regain = -0.1
 			}
 		}
 		plan = {

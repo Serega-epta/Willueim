@@ -168,7 +168,10 @@ focus_tree = {
 			country_event = {
 						id = ODS.21
 				}
-				add_ideas = plan
+				add_timed_idea = {
+					idea = plan
+					days = 360
+				}
 		}
 	}
 	
@@ -188,9 +191,10 @@ focus_tree = {
 			country_event = {
 						id = ODS.27
 				}
-				swap_ideas = {
-				remove_idea = plan
-				add_idea = plan2
+				remove_ideas = plan
+				add_timed_idea = {
+					idea = plan2
+					days = 360
 				}
 		}
 	}
@@ -211,10 +215,11 @@ focus_tree = {
 			country_event = {
 						id = ODS.23
 				}
-					swap_ideas = {
-				remove_idea = plan2
-				add_idea = plan3
-			}
+				remove_ideas = plan2
+				add_timed_idea = {
+					idea = plan3
+					days = 360
+				}
 		}
 	}
 	

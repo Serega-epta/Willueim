@@ -85,7 +85,10 @@
 			country_event = {
 				id = ODS.2
 			}
-			add_ideas = black_perimetr
+			add_timed_idea = {
+				idea = black_perimetr
+				days = 365
+			}
 		}
 	}
 	focus = {
@@ -108,34 +111,6 @@
 				swap_ideas = {
 					remove_idea = doverie_1
 					add_idea = doverie_2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_2} 
-				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_3} 
-				swap_ideas = {
-					remove_idea = doverie_3
-					add_idea = doverie_4
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_4 } 
-				swap_ideas = {
-					remove_idea = doverie_4
-					add_idea = 	doverie_5
-				}
-			}
-			else_if = {  
-				limit = { has_idea = doverie_5 } 
-				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = 	doverie_6
 				}
 			}
 		}
@@ -401,13 +376,6 @@
 				id = ODS.7
 			}
 			if = { 
-				limit = { has_idea = doverie_1 }
-				swap_ideas = {
-					remove_idea = doverie_1
-					add_idea = doverie_2
-				}
-			}
-			else_if = { 
 				limit = { has_idea = doverie_2} 
 				swap_ideas = {
 					remove_idea = doverie_2
@@ -419,20 +387,6 @@
 				swap_ideas = {
 					remove_idea = doverie_3
 					add_idea = doverie_4
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_4 } 
-				swap_ideas = {
-					remove_idea = doverie_4
-					add_idea = 	doverie_5
-				}
-			}
-			else_if = {  
-				limit = { has_idea = doverie_5 } 
-				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = 	doverie_6
 				}
 			}
 		}
@@ -453,13 +407,6 @@
 				id = ODS.8
 			}
 			if = { 
-				limit = { has_idea = doverie_1 }
-				swap_ideas = {
-					remove_idea = doverie_1
-					add_idea = doverie_2
-				}
-			}
-			else_if = { 
 				limit = { has_idea = doverie_2} 
 				swap_ideas = {
 					remove_idea = doverie_2
@@ -471,20 +418,6 @@
 				swap_ideas = {
 					remove_idea = doverie_3
 					add_idea = doverie_4
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_4 } 
-				swap_ideas = {
-					remove_idea = doverie_4
-					add_idea = 	doverie_5
-				}
-			}
-			else_if = {  
-				limit = { has_idea = doverie_5 } 
-				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = 	doverie_6
 				}
 			}
 		}
@@ -506,38 +439,10 @@
 				id = ODS.5
 			}
 			if = { 
-				limit = { has_idea = doverie_1 }
-				swap_ideas = {
-					remove_idea = doverie_1
-					add_idea = doverie_2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_2} 
-				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_3} 
-				swap_ideas = {
-					remove_idea = doverie_3
-					add_idea = doverie_4
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_4 } 
+				limit = { has_idea = doverie_4 }
 				swap_ideas = {
 					remove_idea = doverie_4
-					add_idea = 	doverie_5
-				}
-			}
-			else_if = {  
-				limit = { has_idea = doverie_5 } 
-				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = 	doverie_6
+					add_idea = doverie_5
 				}
 			}
 		}
@@ -578,3 +483,4 @@
 			}
 		}
 	}
+}
