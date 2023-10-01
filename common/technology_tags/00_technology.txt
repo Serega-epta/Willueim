@@ -1,5 +1,5 @@
-# Do not change tags in here without changing every other reference to them.
-# If adding new technology, make sure they are uniquely named.
+# Не изменяйте здесь теги, не изменив все остальные ссылки на них.
+# При добавлении новых технологий убедитесь, что они имеют уникальные имена.
 
 technology_categories = {
 	light_air
@@ -114,17 +114,12 @@ technology_folders = {
 	}
 	armour_folder = {
 		ledger = army
-		available = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
+		available = { NOT = { has_dlc = "No Step Back" }
 		}
 	}
 	nsb_armour_folder = {
 		ledger = army
-		available = {
-			has_dlc = "No Step Back"
-		}
+		available = { has_dlc = "No Step Back" }
 	}
 	artillery_folder = {
 		ledger = army
@@ -134,28 +129,8 @@ technology_folders = {
 		ledger = air
 	}
 	bba_air_techs_folder = {
-		available = {
-			has_dlc = "By Blood Alone"
-		}
+		available = { has_dlc = "By Blood Alone" }
 		ledger = air
-	}
-	naval_folder = {
-		available = {
-			not = { has_dlc = "Man the Guns" }
-		}
-		ledger = navy
-	}
-	mtgnavalfolder = {
-		available = {
-			has_dlc = "Man the Guns"
-		}
-		ledger = navy
-	}
-	mtgnavalsupportfolder = {
-		available = {
-			has_dlc = "Man the Guns"
-		}
-		ledger = navy
 	}
 	industry_folder = {
 		ledger = civilian
@@ -175,7 +150,6 @@ technology_folders = {
 	electronics_folder = {
 		ledger = civilian
 	}
-	#secret_weapons_folder
 }
 
  

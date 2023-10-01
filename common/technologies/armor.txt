@@ -302,4 +302,223 @@ technologies = {
 			factor = 2
 		}
 	}
+
+	#Подветка брони
+	armor_1 = {	
+		path = {
+			leads_to_tech = armor_2
+			research_cost_coeff = 1
+		}
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = 0 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	armor_2 = {	
+
+		path = {
+		 	leads_to_tech = armor_3
+		 	research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = 2 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	armor_3 = {	
+
+		path = {
+			leads_to_tech = armor_4
+			research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = 4 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	armor_4 = {	
+		path = {
+			leads_to_tech = armor_5
+			research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = 6 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+	armor_5 = {	
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = 8 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+	#Подветка двигателей
+	engine_1 = {	
+		path = {
+			leads_to_tech = engine_2
+			research_cost_coeff = 1
+		}
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = -8 y = 0 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	engine_2 = {	
+
+		path = {
+		 	leads_to_tech = engine_3
+		 	research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = -8 y = 2 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	engine_3 = {	
+
+		path = {
+			leads_to_tech = engine_4
+			research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = -8 y = 4 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	engine_4 = {	
+		path = {
+			leads_to_tech = engine_5
+			research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = -8 y = 6 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+	engine_5 = {	
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = armour_folder
+			position = { x = -8 y = 8 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
 }

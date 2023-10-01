@@ -1,849 +1,525 @@
 technologies = {
+	nsb_pre_war_OPV = {	
 
+		path = {
+			leads_to_tech = nsb_basic_nsb_specialized_OPF
+			research_cost_coeff = 1
+		}
 
-	@2010 = 0
-	@2015 = 4
-	@2020 = 5
-	@2025 = 6
-	@2030 = 7
-	@2035 = 7
-	@2040 = 8
-	@2045 = 9
+		path = {
+			leads_to_tech = nsb_basic_mass_OPF
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = nsb_basic_ai_OPF
+			research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	#Подветка специализированных танков
 	
-	gwtank_chassis = { #Leichttraktor
+	nsb_basic_nsb_specialized_OPF = {	
 
-		enable_equipments = {
-			obt_tank_chassis_0
-		}
-		enable_subunits = {
-			obt_tank	
-			tank_podderjka			
-		}
 		path = {
-			leads_to_tech = obtvtorogourovnya
+			leads_to_tech = nsb_improved_nsb_specialized_OPF
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
-		start_year = 2010
+		XOR = { nsb_basic_mass_OPF nsb_basic_ai_OPF }
+ 
+		research_cost = 2.5
+
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 0 }
+			position = { x = 0 y = 2 }
+		}
+
+		categories = {
+			armor
 		}
 
 		ai_will_do = {
-			factor = 1
-		}
-		categories = {
-			armor
-			cat_light_armor
+			factor = 2
 		}
 	}
 
-	obtvtorogourovnya = { 
+	nsb_improved_nsb_specialized_OPF = {	
 
-		enable_equipments = {
-			obt_tank_chassis_1
-		}
-		
 		path = {
-			leads_to_tech = obtvtorogourovnya2
+		 	leads_to_tech = nsb_advanced_nsb_specialized_OPF
+		 	research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	nsb_advanced_nsb_specialized_OPF = {	
+
+		path = {
+			leads_to_tech = nsb_specialized_OPF_of_the_future
+			research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 6 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	nsb_specialized_OPF_of_the_future = {	
+
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 8 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	#Подветка массовых танков
+	nsb_basic_mass_OPF = {	
+
+		path = {
+			leads_to_tech = nsb_improved_mass_OPF
+			research_cost_coeff = 1
+		}
+		XOR = { nsb_basic_nsb_specialized_OPF nsb_basic_ai_OPF }
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 2 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	nsb_improved_mass_OPF = {	
+
+		path = {
+		 	leads_to_tech = nsb_advanced_mass_OPF
+		 	research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 4 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	nsb_advanced_mass_OPF = {	
+
+		path = {
+			leads_to_tech = nsb_mass_OPF_of_the_future
+			research_cost_coeff = 1
+		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 6 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	nsb_mass_OPF_of_the_future = {	
+
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 8 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	#Подветка ИИ - танков
+	nsb_basic_ai_OPF = {	
+
+		path = {
+			leads_to_tech = nsb_improved_ai_OPF
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
-		start_year = 2015
+		XOR = { nsb_basic_nsb_specialized_OPF nsb_basic_mass_OPF }
+		research_cost = 2.5
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 2 }
+			position = { x = 4 y = 2 }
+		}
+
+		categories = {
+			armor
 		}
 
 		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
+			factor = 2
 		}
 	}
 
-	obtvtorogourovnya2 = { 
-
-		enable_equipments = {
-			obt_tank_chassis_2
-		}
-		
+	nsb_improved_ai_OPF = {	
 
 		path = {
-			leads_to_tech = kachestveniitank
-			research_cost_coeff = 1
+		 	leads_to_tech = nsb_advanced_ai_OPF
+		 	research_cost_coeff = 1
 		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 4 y = 4 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	nsb_advanced_ai_OPF = {	
 
 		path = {
-			leads_to_tech = massovitank
+			leads_to_tech = nsb_ai_OPF_of_the_future
 			research_cost_coeff = 1
 		}
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 4 y = 6 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	nsb_ai_OPF_of_the_future = {	
+
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 4 y = 8 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+	#Подветка брони
+	nsb_armor_1 = {	
+		path = {
+			leads_to_tech = nsb_armor_2
+			research_cost_coeff = 1
+		}
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 8 y = 0 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	nsb_armor_2 = {	
 
 		path = {
-			leads_to_tech = volshebnitank
-			research_cost_coeff = 1
+		 	leads_to_tech = nsb_armor_3
+		 	research_cost_coeff = 1
 		}
-
-
-		research_cost = 2
-		start_year = 2020
+ 
+		research_cost = 2.5
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 4 }
+			position = { x = 8 y = 2 }
+		}
+
+		categories = {
+			armor
 		}
 
 		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
+			factor = 2
 		}
 	}
 
-	kachestveniitank = { 
-
-		enable_equipments = {
-			spec_tank_chassis_0
-		}
-
-		enable_subunits = {
-			special_tank
-		}		
+	nsb_armor_3 = {	
 
 		path = {
-			leads_to_tech = kachestveniitank2
+			leads_to_tech = nsb_armor_4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 2
-		start_year = 2025
+ 
+		research_cost = 2.5
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 6 y = 6 }
+			position = { x = 8 y = 4 }
+		}
+
+		categories = {
+			armor
 		}
 
 		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
+			factor = 2
 		}
 	}
 
-	kachestveniitank2 = { 
-
-		enable_equipments = {
-			spec_tank_chassis_1
-		}
+	nsb_armor_4 = {	
 		path = {
-			leads_to_tech = kachestveniitank3
+			leads_to_tech = nsb_armor_5
 			research_cost_coeff = 1
 		}
-		research_cost = 2
-		start_year = 2030
+ 
+		research_cost = 2.5
+
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 6 y = 8 }
+			position = { x = 8 y = 6 }
 		}
-		ai_will_do = {
-			factor = 0.8
-		}
+
 		categories = {
 			armor
-			cat_heavy_armor
+		}
+
+		ai_will_do = {
+			factor = 2
 		}
 	}
 
-	kachestveniitank3 = { 
 
-		enable_equipments = {
-			spec_tank_chassis_2
-		}		
+	nsb_armor_5 = {	
+ 
+		research_cost = 2.5
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 8 y = 8 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+
+	#Подветка двигателей
+	nsb_engine_1 = {	
 		path = {
-			leads_to_tech = kachestveniitank4
+			leads_to_tech = nsb_engine_2
 			research_cost_coeff = 1
 		}
-		research_cost = 2
-		start_year = 2035
+		research_cost = 2.5
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 6 y = 10 }
+			position = { x = -8 y = 0 }
+		}
+
+		categories = {
+			armor
 		}
 
 		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
+			factor = 2
 		}
 	}
 
-	kachestveniitank4 = { 
-
-		enable_equipments = {
-			spec_tank_chassis_3
-		}
-		research_cost = 2
-		start_year = 2040
-
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 6 y = 12 }
-		}
-
-		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
-		}
-	}
-
-
-
-
-
-	massovitank = { 
-
-		enable_equipments = {
-			mass_tank_chassis_0
-		}
-		enable_subunits = {
-			massovi_tank
-		}
-		path = {
-			leads_to_tech = massovitank2
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 2025
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 2 y = 6 }
-		}
-		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
-		}
-	}
-
-	massovitank2 = { 
-
-		enable_equipments = {
-			mass_tank_chassis_1
-		}
+	nsb_engine_2 = {	
 
 		path = {
-			leads_to_tech = massovitank3
-			research_cost_coeff = 1
+		 	leads_to_tech = nsb_engine_3
+		 	research_cost_coeff = 1
 		}
-
-		research_cost = 2
-		start_year = 2030
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 2 y = 8 }
-		}
-		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
-		}
-	}
-
-	massovitank3 = { 
-
-		enable_equipments = {
-			mass_tank_chassis_2
-		}
-		
-		path = {
-			leads_to_tech = massovitank4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 2035
+ 
+		research_cost = 2.5
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 10 }
+			position = { x = -8 y = 2 }
+		}
+
+		categories = {
+			armor
 		}
 
 		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
+			factor = 2
 		}
 	}
 
-	massovitank4 = { 
-
-		enable_equipments = {
-			mass_tank_chassis_3
-		}		
-		research_cost = 2
-		start_year = 2040
-
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 2 y = 12 }
-		}
-
-		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
-		}
-	}
-
-	
-	volshebnitank = { 
-
-		enable_equipments = {
-			ii_tank_chassis_0
-		}
-
-		enable_subunits = {
-			automatizated_tank
-		}
+	nsb_engine_3 = {	
 
 		path = {
-			leads_to_tech = volshebnitank2
+			leads_to_tech = nsb_engine_4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 2
-		start_year = 2025
+ 
+		research_cost = 2.5
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -2 y = 6 }
+			position = { x = -8 y = 4 }
+		}
+
+		categories = {
+			armor
 		}
 
 		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
+			factor = 2
 		}
 	}
 
-	volshebnitank2 = { 
-
-		enable_equipments = {
-			ii_tank_chassis_1
-		}
-
+	nsb_engine_4 = {	
 		path = {
-			leads_to_tech = volshebnitank3
+			leads_to_tech = nsb_engine_5
 			research_cost_coeff = 1
 		}
-
-		research_cost = 2
-		start_year = 2030
-
-		folder = {
-			name = nsb_armour_folder
-			position = { x = -2 y = 8 }
-		}
-
-		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
-		}
-	}
-
-	volshebnitank3 = { 
-
-		enable_equipments = {
-			ii_tank_chassis_2
-		}
-
-		
-		path = {
-			leads_to_tech = volshebnitank4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 2035
+ 
+		research_cost = 2.5
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -2 y = 10 }
+			position = { x = -8 y = 6 }
+		}
+
+		categories = {
+			armor
 		}
 
 		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
-		}
-	}
-
-	volshebnitank4 = { 
-
-		enable_equipments = {
-			ii_tank_chassis_3
-		}
-
-
-		research_cost = 2
-		start_year = 2040
-
-		folder = {
-			name = nsb_armour_folder
-			position = { x = -2 y = 12 }
-		}
-
-		ai_will_do = {
-			factor = 0.8
-		}
-		categories = {
-			armor
-			cat_heavy_armor
+			factor = 2
 		}
 	}
 
 
+	nsb_engine_5 = {	
+ 
+		research_cost = 2.5
 
-
-	
-	armor_tech_1 = {
-		enable_equipment_modules = {
-			tank_welded_armor
-		}
-
-		path = {
-			leads_to_tech = armor_tech_2
-			research_cost_coeff = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_1_tt
-		}
-		show_effect_as_desc = yes
-
-		research_cost = 1
-		start_year = 1936
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 3 y = 4 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			position = { x = -8 y = 8 }
 		}
 
 		categories = {
 			armor
 		}
-	}
-
-	armor_tech_2 = {
-
-		enable_equipment_modules = {
-			armor_skirts
-		}
-		path = {
-			leads_to_tech = armor_tech_3
-			research_cost_coeff = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_2_tt
-		}
-		show_effect_as_desc = yes
-
-		research_cost = 1
-		start_year = 1936
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 3 y = 6 }
-		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	armor_tech_3 = {
-
-
-		path = {
-			leads_to_tech = armor_tech_4
-			research_cost_coeff = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_3_tt
-		}
-		show_effect_as_desc = yes
-
-		research_cost = 1
-		start_year = 1941
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 3 y = 8 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	armor_tech_4 = {
-
-		research_cost = 1
-		start_year = 1944
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 3 y = 10 }
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_4_tt
-		}
-		show_effect_as_desc = yes
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	engine_tech_1 = {
-
-
-		path = {
-			leads_to_tech = engine_tech_2
-			research_cost_coeff = 1
-		}
-		on_research_complete = {
-			custom_effect_tooltip = engine_tech_1_tt
-		}
-		show_effect_as_desc = yes
-		research_cost = 1
-		start_year = 1934
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 2 y = 4 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	engine_tech_2 = {
-
-
-		path = {
-			leads_to_tech = engine_tech_3
-			research_cost_coeff = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = engine_tech_2_tt
-		}
-		show_effect_as_desc = yes
-
-		research_cost = 1
-		start_year = 1936
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 2 y = 6 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	engine_tech_3 = {
-
-
-		path = {
-			leads_to_tech = engine_tech_4
-			research_cost_coeff = 1
-		}
-		on_research_complete = {
-			custom_effect_tooltip = engine_tech_3_tt
-		}
-		show_effect_as_desc = yes
-		research_cost = 1
-		start_year = 1941
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 2 y = 8 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	engine_tech_4 = {
-
-		research_cost = 1
-		start_year = 1944
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 2 y = 10 }
-		}
-		on_research_complete = {
-			custom_effect_tooltip = engine_tech_4_tt
-		}
-		show_effect_as_desc = yes
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-		}
-
-		categories = {
-			armor
+			factor = 2
 		}
 	}
 }
