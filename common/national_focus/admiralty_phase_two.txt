@@ -35,7 +35,7 @@ focus_tree = {
 		icon = GFX_Expand_powers
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 4
-		y = 5
+		y = 1
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -55,7 +55,7 @@ focus_tree = {
 		icon = GFX_Hunting
 		prerequisite = { focus = ODS_Expand_powers }
 		x = 4
-		y = 8
+		y = 3
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -76,7 +76,7 @@ focus_tree = {
 		icon = GFX_Burn_the_heads
 		prerequisite = { focus = ODS_Hunting }
 		x = 4
-		y = 11
+		y = 5
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -99,7 +99,7 @@ focus_tree = {
 		icon = GFX_Audits
 		prerequisite = { focus = ODS_Burn_the_heads }
 		x = 3
-		y = 14
+		y = 7
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -118,7 +118,7 @@ focus_tree = {
 		icon = GFX_Purity
 		prerequisite = { focus = ODS_Burn_the_heads }
 		x = 5
-		y = 14
+		y = 7
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -138,7 +138,7 @@ focus_tree = {
 		prerequisite = { focus = ODS_Purity }
 		prerequisite = { focus = ODS_Audits }
 		x = 4
-		y = 17
+		y = 10
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -157,7 +157,7 @@ focus_tree = {
 		icon = GFX_The_Bridgehead_plan
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 8
-		y = 5
+		y = 1
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -180,7 +180,7 @@ focus_tree = {
 		icon = GFX_Ghosts_of_the_Past
 		prerequisite = { focus = ODS_The_Bridgehead_plan }
 		x = 8
-		y = 8
+		y = 3
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -204,7 +204,7 @@ focus_tree = {
 		icon = GFX_Types_of_the_future
 		prerequisite = { focus = ODS_Ghosts_of_the_Past }
 		x = 8
-		y = 11
+		y = 5
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -228,7 +228,7 @@ focus_tree = {
 		icon = GFX_Mobilize_the_population
 		prerequisite = { focus = ODS_Types_of_the_future }
 		x = 7
-		y = 14
+		y = 7
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -265,7 +265,7 @@ focus_tree = {
 		icon = GFX_Continue_integration
 		prerequisite = { focus = ODS_Types_of_the_future }
 		x = 9
-		y = 14
+		y = 7
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -285,7 +285,7 @@ focus_tree = {
 		prerequisite = { focus = ODS_Mobilize_the_population }
 		prerequisite = { focus = ODS_Continue_integration }
 		x = 8
-		y = 17
+		y = 10
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -305,7 +305,7 @@ focus_tree = {
 		icon = GFX_Pacification
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 12
-		y = 5
+		y = 1
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -322,7 +322,7 @@ focus_tree = {
 		icon = GFX_Expand_the_powers_of_the_committees
 		prerequisite = { focus = ODS_Pacification }
 		x = 12
-		y = 8
+		y = 3
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -359,7 +359,7 @@ focus_tree = {
 		icon = GFX_The_Secret_Police
 		prerequisite = { focus = ODS_Expand_the_powers_of_the_committees }
 		x = 12
-		y = 11
+		y = 5
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -396,7 +396,7 @@ focus_tree = {
 		icon = GFX_Suppress_the_mercenaries
 		prerequisite = { focus = ODS_The_Secret_Police }
 		x = 11
-		y = 14
+		y = 7
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -404,6 +404,11 @@ focus_tree = {
 		}
 			
 		completion_reward = {
+				declare_war_on = {
+				target = AZB
+				type = annex_everything
+			}
+			
 		}
 	}
 	
@@ -412,7 +417,7 @@ focus_tree = {
 		icon = GFX_Destroy_their_hopes
 		prerequisite = { focus = ODS_The_Secret_Police }
 		x = 13
-		y = 14
+		y = 7
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -432,7 +437,7 @@ focus_tree = {
 		icon = GFX_The_Army_of_the_Plan
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 16
-		y = 5
+		y = 1
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -469,7 +474,7 @@ focus_tree = {
 		icon = GFX_Expansion_plan
 		prerequisite = { focus = ODS_The_Army_of_the_Plan }
 		x = 16
-		y = 8
+		y = 3
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -489,7 +494,7 @@ focus_tree = {
 		icon = GFX_Refusal
 		prerequisite = { focus = ODS_Expansion_plan }
 		x = 15
-		y = 11
+		y = 5
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -585,7 +590,7 @@ focus_tree = {
 		icon = GFX_Adapting_to_combat
 		prerequisite = { focus = ODS_Refusal }
 		x = 15
-		y = 14
+		y = 7
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -607,7 +612,7 @@ focus_tree = {
 		icon = GFX_Squads_of_suppressors
 		prerequisite = { focus = ODS_Expansion_plan }
 		x = 17
-		y = 11
+		y = 5
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -660,7 +665,7 @@ focus_tree = {
 		icon = GFX_Heavy_weapons
 		prerequisite = { focus = ODS_Squads_of_suppressors }
 		x = 17
-		y = 14
+		y = 7
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -684,7 +689,7 @@ focus_tree = {
 		prerequisite = { focus = ODS_Destroy_their_hopes }
 		prerequisite = { focus = ODS_Suppress_the_mercenaries }
 		x = 14
-		y = 17
+		y = 10
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -792,6 +797,18 @@ focus_tree = {
 				type = annex_everything
 				target = GAT
 			}
+						create_wargoal = {
+				type = annex_everything
+				target = BOD
+			}
+						create_wargoal = {
+				type = annex_everything
+				target = DOM
+			}
+						create_wargoal = {
+				type = annex_everything
+				target = LUG
+			}
 		}
 	}
 	
@@ -801,8 +818,8 @@ focus_tree = {
 		prerequisite = { focus = ODS_Operation_Voskhod }
 		prerequisite = { focus = ODS_EMBAO }
 		prerequisite = { focus = ODS_Prosperity }
-		x = 10
-		y = 20
+		x = 9
+		y = 12
 		cost = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
@@ -854,6 +871,7 @@ focus_tree = {
 			}
 		}
 	}
+}
  
  
 	
