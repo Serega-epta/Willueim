@@ -66,10 +66,20 @@ focus_tree = {
 		}
 			
 		completion_reward = {
-		country_event = {
-						id = ODS.25
+			country_event = {
+				id = ODS.25
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. OKO\" division_template = \"OKO\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
 				}
-				remove_dynamic_modifier = { modifier = wild_tribes }
+				create_unit = {
+					division = "name = \"1. OKO\" division_template = \"OKO\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
+			}
+			add_stability = 0.05
 		}
 	}
 
@@ -296,10 +306,27 @@ focus_tree = {
 		}
 			
 		completion_reward = {
-		swap_ideas = {
+			if = {
+				limit = { has_idea = black_beret }
+				swap_ideas = {
+					remove_idea = black_beret
+					add_idea = black_beret2
+				}
+			}
+			else_if = {
+				limit = { has_idea = black_beret2 }
+				swap_ideas = {
 				remove_idea = black_beret2
 				add_idea = black_beret3
-					}
+				}
+			}
+			else_if = {
+				limit = { has_idea = black_beret3 }
+				swap_ideas = {
+				remove_idea = black_beret3
+				add_idea = black_beret4
+				}
+			}
 		}
 	}
 	
@@ -448,10 +475,20 @@ focus_tree = {
 		}
 			
 		completion_reward = {
-		swap_ideas = {
-				remove_idea = black_beret
-				add_idea = black_beret2
-		}
+			if = {
+				limit = { has_idea = black_beret }
+				swap_ideas = {
+					remove_idea = black_beret
+					add_idea = black_beret2
+				}
+			}
+			else_if = {
+				limit = { has_idea = black_beret2 }
+				swap_ideas = {
+					remove_idea = black_beret2
+					add_idea = black_beret3
+				}
+			}
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -485,10 +522,18 @@ focus_tree = {
 		}
 			
 		completion_reward = {
-		swap_ideas = {
-				remove_idea = black_beret2
-				add_idea = black_beret3
-		}
+			if = {
+				limit = { has_idea = black_beret2 }
+				swap_ideas = {
+					remove_idea = black_beret2
+					add_idea = black_beret3
+				}
+			}
+			else_if = {
+				limit = { has_idea = black_beret3 }
+				remove_idea = black_beret3
+				add_idea = black_beret4
+			}
 		}
 	}
 	

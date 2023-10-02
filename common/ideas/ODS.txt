@@ -389,6 +389,28 @@ ideas = {
 			
 			}
 		}
+			black_beret4 = {
+			picture = nenavid_serdza
+
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_damage_to_garrison_on_our_occupied_states = 0.4
+				resistance_growth_on_our_occupied_states = 0.5
+				max_planning = 0.2
+				planning_speed = 0.2
+				supply_combat_penalties_on_core_factor = -0.05
+				army_leader_start_level = 1
+			}
+		}
 			black_perimetr = {
 			picture = nenavid_serdza
 			
