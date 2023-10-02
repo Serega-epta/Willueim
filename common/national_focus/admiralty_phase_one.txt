@@ -46,6 +46,7 @@
 			country_event = {
 				id = ODS.1
 			}
+			army_experience = 100
 		}
 	}
 
@@ -464,17 +465,17 @@
 			country_event = {
 				id = ODS.14
 			}
-			create_wargoal = {
-				type = annex_everything
+			declare_war_on = {
 				target = MOD
-			}
-			create_wargoal = {
 				type = annex_everything
+			}
+			declare_war_on = {
 				target = SOD
-			}
-			create_wargoal = {
 				type = annex_everything
+			}
+			declare_war_on = {
 				target = YWD
+				type = annex_everything
 			}
 				
 			load_focus_tree = {

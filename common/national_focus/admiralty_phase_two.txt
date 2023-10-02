@@ -16,6 +16,9 @@ focus_tree = {
 		x = 10
 		y = 0
 		cost = 3
+		available = {
+			has_war = no
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
