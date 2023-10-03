@@ -29,7 +29,7 @@ focus_tree = {
 						id = ODS.16
 				}
 				add_stability = 0.1
-				add_political_power = -100
+				add_political_power = 100
 		}
 	}
 
@@ -531,8 +531,10 @@ focus_tree = {
 			}
 			else_if = {
 				limit = { has_idea = black_beret3 }
-				remove_idea = black_beret3
-				add_idea = black_beret4
+				swap_ideas = {
+					remove_idea = black_beret3
+					add_idea = black_beret4
+				}
 			}
 		}
 	}
