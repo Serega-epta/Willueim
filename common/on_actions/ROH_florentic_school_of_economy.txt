@@ -1470,28 +1470,6 @@ on_actions = {
 			
 			
 			
-			if = {
-				limit = { check_variable = { Chernii_rubli < -1000 } }
-				add_ideas = defolt_economiki 
-			}
-			else_if = {
-				limit = { 
-					check_variable = { Chernii_rubli < -1000 } 
-					has_idea = defolt_economiki
-				}
-				remove_ideas = defolt_economiki
-			}
-			if = {
-				limit = { check_variable = { Chernii_rubli < -10000 } }
-				add_ideas = { bankrotstvo_economiki }
-			}
-			else_if = {
-				limit = { 
-					check_variable = { Chernii_rubli < -10000 } 
-					has_idea = bankrotstvo_economiki
-				}
-				remove_ideas = bankrotstvo_economiki
-			}
 			#ПРОЦВЕТАНИЕ
 			if = {
 				limit = { check_variable = { grfic_week1 < 100 } }

@@ -1510,31 +1510,5 @@ ideas = {
 
 
 		#дефолт и банкротство экономики
-		defolt_economiki = {
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
-			picture = defolt_dlya_economiki
-			modifier = {
-			army_attack_factor = -0.5
-			army_defence_factor = -0.5
-			production_speed_buildings_factor = -0.5 
-			line_change_production_efficiency_factor = -0.5
-			consumer_goods_factor = 0.5		
-			}
-		}
-		bankrotstvo_economiki = {
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
-			picture = bankrotstvo_economiki
-			modifier = {
-			army_attack_factor = -1.5
-			army_defence_factor = -1.5
-			production_speed_buildings_factor = -1.5 
-			line_change_production_efficiency_factor = -1.5
-			consumer_goods_factor = 1.5			
-			}
-		}
 	}
 }
