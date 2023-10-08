@@ -24,16 +24,16 @@ guiTypes = {
 		iconType = {
 			name = "icon"
 			spriteType = "GFX_select_date_1936"
-			position = { x = 27 y = 28 }
+			position = { x = 107 y = 28 }
 			alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "date"
-			position = { x = 22 y = 147 }
+			position = { x = -5000 y = 147 }
 			font = "3270_20_outline"
 			borderSize = {x = 0 y = 0}
-			text = "FE_BOOKMARK_DATE"
+			text = ""
 			maxWidth = 185
 			maxHeight = 20
 			fixedsize = yes
@@ -511,7 +511,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 120 y = 14 }
+			position = { x = 120 y = 11 }
 			textureFile = ""
 			font = "3270_20_outline"
 			borderSize = {x = 0 y = 0}
@@ -528,14 +528,14 @@ guiTypes = {
 
 		containerWindowType = {
 			name ="bookmarks"
-			position = { x = 43 y = 55 }
+			position = { x = 8 y = 40 }
 			size = { width = -10 height = 120}
 
 			gridboxType = {
 				name ="bookmarks_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100%% height = 100%% }
-				slotsize = { width = 260 height = 0 }
+				slotsize = { width = 1260 height = 0 }
 				add_horizontal = yes
 				max_slots_vertical = 1
 				format = "UPPER_LEFT"
