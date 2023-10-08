@@ -439,7 +439,8 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.15
 			add_political_power = 200
-			set_country_flag = uprazdnit_troitsy			
+			set_country_flag = uprazdnit_troitsy
+			mark_focus_tree_layout_dirty = yes			
 		}
 	}
 	
@@ -457,9 +458,9 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = uprazdnit_troitsy
-			custom_trigger_tooltip = {
-				tooltip = scroll_to_the_left		
-			}
+		}
+		allow_branch = {
+			has_country_flag = uprazdnit_troitsy
 		}	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {

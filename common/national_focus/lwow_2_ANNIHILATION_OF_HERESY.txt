@@ -348,23 +348,25 @@ focus_tree = {
 		x = 0
 		y = 6
 		cost = 10
-		set_country_flag = pipapupa
+		available = { has_war = no }
 		prerequisite = { focus = LWV_luboy focus = LWV_pryamo }
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-			id = LWV.19
-		}	
-		add_manpower = -50000
-		add_state_core = 91
-		add_state_core = 93
-		add_state_core = 199
-		add_state_core = 201
-		add_state_core = 198
-		}
+			set_country_flag = otmshenie_flag
+			mark_focus_tree_layout_dirty = yes
+			country_event = {
+				id = LWV.19
+			}	
+			add_manpower = -50000
+			add_state_core = 91
+			add_state_core = 93
+			add_state_core = 199
+			add_state_core = 201
+			add_state_core = 198
+			}
 	}
 	focus = {
 		id = LWV_otkrovenie
@@ -373,8 +375,11 @@ focus_tree = {
 		y = 0
 		cost = 10
 		available = {
-            has_completed_focus = LWV_otmshenie
+            has_completed_focus = LWV_otmshenie 
         }
+		allow_branch = {
+			has_country_flag = otmshenie_flag
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -472,6 +477,8 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			set_country_flag = fatum_flag
+			mark_focus_tree_layout_dirty = yes
 		country_event = {
 			id = LWV.23
 		}
@@ -488,6 +495,9 @@ focus_tree = {
 		available = {
             has_completed_focus = LWV_fatum
         }
+		allow_branch = {
+			has_country_flag = fatum_flag
+		}
 		ai_will_do = {
 			factor = 10
 		}
