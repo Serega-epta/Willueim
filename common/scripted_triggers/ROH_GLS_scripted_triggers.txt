@@ -5,16 +5,17 @@
 
 GLS_defeated_ASR = {
 	651 = { is_owned_by = GLS }
+	729 = { is_owned_by = GLS }
 	NOT = { country_exists = ASR } 
 	country_exists = GLS
 }
 
 UralTreaty_defeated_GLS = {
-	NOT = { country_exists = GLS }
-	1001 = { NOT = { is_owned_by = GLS } }
-	1002 = { NOT = { is_owned_by = GLS } }
-	MOT = { is_in_faction = yes }
-	URA = { is_in_faction = yes }
+	GLS = { has_cosmetic_tag = GLS_URAL_MANDATE }
+	OR = {
+		MOT = { is_in_faction = yes }
+		URA = { is_in_faction = yes }
+	}
 	EDM = { is_in_faction = yes }
 	URC = { is_in_faction = yes }
 	WPK = { is_in_faction = yes }
