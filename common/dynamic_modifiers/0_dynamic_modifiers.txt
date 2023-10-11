@@ -428,7 +428,48 @@ kanon_absol = {
 		production_speed_buildings_factor = 0.5
 		monthly_population = 0.005
 	}
-	
+
+########Типы специализации стейтов в Адмиралтействе####################
+	ods_industrial_region = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_impassable_icon
+		local_factories = 0.15
+		state_production_speed_buildings_factor = 0.15
+		local_manpower = 0.1
+		local_resources = 0.1
+		local_building_slots_factor = 0.05
+	}
+	ods_resource_region = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_impassable_icon
+		local_manpower = 0.1
+		local_resources = 0.3
+		local_building_slots_factor = 0.05
+		state_production_speed_buildings_factor = 0.05
+	}
+	ods_agricultural_region = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_impassable_icon
+		local_manpower = 0.15
+		local_resources = 0.2
+		local_building_slots_factor = 0.05
+		state_production_speed_buildings_factor = 0.05	
+	}
+	ods_research_region = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_impassable_icon
+		research_speed_factor = 0.01
+		local_manpower = 0.1
+		local_resources = 0.1
+		local_building_slots_factor = 0.05
+		state_production_speed_buildings_factor = 0.05
+	}
+#######################################################################
+
 	baltic_reservation = { #Балтийская резервация
 		enable = { always = yes }
 		icon = GFX_impassable_icon

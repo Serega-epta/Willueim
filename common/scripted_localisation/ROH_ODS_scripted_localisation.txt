@@ -1,0 +1,66 @@
+defined_text = { 
+	name = ods_region_type
+	text = {
+		trigger = {
+			FROM = { 
+				has_dynamic_modifier = { 
+					modifier = ods_industrial_region
+				}
+			}
+		}
+		localization_key = "ods_industrial_region"
+	}
+	text = {
+		trigger = {
+			FROM = { 
+				has_dynamic_modifier = { 
+					modifier = ods_resource_region
+				} 
+			}
+		}
+		localization_key = "ods_resource_region"
+	}
+	text = {
+		trigger = {
+			FROM = { 
+				has_dynamic_modifier = { 
+					modifier = ods_agricultural_region 
+				}
+			}
+		}
+		localization_key = "ods_agricultural_region"
+	}
+	text = {
+		trigger = {
+			FROM = { 
+				has_dynamic_modifier = { 
+					modifier = ods_research_region
+				} 
+			}
+		}
+		localization_key = "ods_research_region"
+	}
+	text = {
+		trigger = {
+			FROM = { 
+				NOT = {
+					OR = { 
+						has_dynamic_modifier = { 
+							modifier = ods_industrial_region
+						} 
+						has_dynamic_modifier = { 
+							modifier = ods_resource_region
+						} 
+						has_dynamic_modifier = { 
+							modifier = ods_agricultural_region 
+						} 
+						has_dynamic_modifier = { 
+							modifier = ods_research_region
+						} 
+					}
+				}
+			}
+		}
+		localization_key = "ods_non_region"
+	}
+}
