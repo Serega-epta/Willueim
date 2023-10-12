@@ -71,49 +71,57 @@ scripted_gui = {
 				}
 			}
 			ods_industrial_region_button_click = {
-				limit = { 
-					check_variable = { Chernii_rubli > 199 }
-					has_political_power > 1
-				}
-				add_political_power = -2
-				subtract_from_variable = { Chernii_rubli = 200 }
-				FROM = {
-					add_dynamic_modifier = { modifier = ods_industrial_region }
+				if = {
+					limit = { 
+						ODS = { check_variable = { Chernii_rubli > 199 } }
+						ODS = { has_political_power > 1 }
+					}
+					ODS = { add_political_power = -2 }
+					ODS = { subtract_from_variable = { Chernii_rubli = 200 } }
+					FROM = {
+						add_dynamic_modifier = { modifier = ods_industrial_region }
+					}
 				}
 			}
 			ods_resource_region_button_click = {
-				limit = { 
-					check_variable = { Chernii_rubli > 199 }
-					has_political_power > 1
+				if = {
+					limit = { 
+						ODS = { check_variable = { Chernii_rubli > 199 } }
+						ODS = { has_political_power > 1 }
+					}
+					ODS = { add_political_power = -2 }
+					ODS = { subtract_from_variable = { Chernii_rubli = 200 } }
+					FROM = {
+						add_dynamic_modifier = { modifier = ods_resource_region }
+					}
 				}
-				add_political_power = -2
-				subtract_from_variable = { Chernii_rubli = 200 }
-				FROM = {
-					add_dynamic_modifier = { modifier = ods_resource_region }
-				}				
 			}
 			ods_agricultural_region_button_click = {
-				limit = { 
-					check_variable = { Chernii_rubli > 199 }
-					has_political_power > 1
+				if = {
+					limit = { 
+						ODS = { check_variable = { Chernii_rubli > 199 } }
+						ODS = { has_political_power > 1 }
+					}
+					ODS = { add_political_power = -2 }
+					ODS = { subtract_from_variable = { Chernii_rubli = 200 } }
+					FROM = {
+						add_dynamic_modifier = { modifier = ods_agricultural_region }
+					}
 				}
-				add_political_power = -2
-				subtract_from_variable = { Chernii_rubli = 200 }
-				FROM = {
-					add_dynamic_modifier = { modifier = ods_agricultural_region }
-				}				
 			}
 			ods_research_region_button_click = {
-				limit = { 
-					check_variable = { Chernii_rubli > 199 }
-					has_political_power > 1
-				}	
-				add_political_power = -2
-				subtract_from_variable = { Chernii_rubli = 200 }
-				FROM = {
-					add_dynamic_modifier = { modifier = ods_research_region }
-				}			
-			}	
+				if = {
+					limit = { 
+						ODS = { check_variable = { Chernii_rubli > 199 } }
+						ODS = { has_political_power > 1 }
+					}	
+					ODS = { add_political_power = -2 }
+					ODS = { subtract_from_variable = { Chernii_rubli = 200 } }
+					FROM = {
+						add_dynamic_modifier = { modifier = ods_research_region }
+					}
+				}
+			}
 		}
 		triggers = {
 			ods_specializations_of_regions_button_visible = {
