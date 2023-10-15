@@ -17,7 +17,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -42,7 +42,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -59,7 +59,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -81,7 +81,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -91,7 +91,10 @@ technologies = {
 
 
 	radio_enhancement  = {
-		# custom_effect_tooltip = radio_enhancement_tt
+		on_research_complete = {
+			custom_effect_tooltip = radio_enhancement_tt
+			set_country_flag = acess_to_radio
+		}
 		path = {
 			leads_to_tech = improved_radio_communication
 			research_cost_coeff = 1
@@ -107,7 +110,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -116,7 +119,14 @@ technologies = {
 	}
 
 	improved_radio_communication = {
-		# custom_effect_tooltip = improved_radio_communication_tt
+		on_research_complete = {
+			custom_effect_tooltip = improved_radio_communication_tt
+			set_country_flag = acess_to_TV
+		}
+		enable_building = {
+			building = radar_station
+			level = 6
+		}
 		path = {
 			leads_to_tech = internet
 			research_cost_coeff = 1
@@ -128,7 +138,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -137,6 +147,9 @@ technologies = {
 	}
 
 	EMI = {
+		category_army = {
+			defense = 0.1
+		}
 		path = {
 			leads_to_tech = stationary_EMI_systems
 			research_cost_coeff = 1
@@ -148,7 +161,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -157,6 +170,9 @@ technologies = {
 	}
 
 	stationary_EMI_systems = {
+		category_army = {
+			soft_attack = 0.05
+		}
 		path = {
 			leads_to_tech = portable_EMI_systems
 			research_cost_coeff = 1
@@ -168,7 +184,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -177,6 +193,10 @@ technologies = {
 	}
 
 	portable_EMI_systems = {
+		on_research_complete = {
+			custom_effect_tooltip = portable_EMI_systems_tt
+			set_country_flag = acess_to_pulse_jammers
+		}
 		research_cost = 1
 		folder = {
 			name = electronics_folder
@@ -184,7 +204,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -205,7 +225,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -222,7 +242,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -251,7 +271,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -276,7 +296,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -296,7 +316,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -313,7 +333,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -322,6 +342,10 @@ technologies = {
 	}
 
 	NPP_construction_resumption = {
+		enable_building = {
+			building = nuclear_reactor
+			level = 1
+		}
 		research_cost =  2
 		folder = {
 			name = electronics_folder
@@ -329,7 +353,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -358,7 +382,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -367,6 +391,7 @@ technologies = {
 	}
 
 	classic_nuclear_weapon = {
+		nuclear_production = 1
 		path = {
 			leads_to_tech = nuclear_rockets
 			research_cost_coeff = 1
@@ -379,7 +404,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -395,7 +420,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -421,7 +446,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -438,7 +463,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
@@ -454,7 +479,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 30
+			factor = 30
 		}
 		
 		categories = {
