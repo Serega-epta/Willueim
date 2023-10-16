@@ -405,28 +405,37 @@ kanon_absol = {
 
 	}
     #Уровни подчинения в Адмиралтействе
-	ODS_diversions = {
+	ODS_new_land = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
 		icon = GFX_impassable_icon
-		army_speed_factor_for_controller = -0.5
-		local_supplies_for_controller = -0.5
-		attrition_for_controller = 0.3
-		disable_strategic_redeployment_for_controller = 1
+		local_manpower = -0.1
+		local_resources = -0.5
 	}
-	ODS_third_level_of_authority = {
+	ODS_reinforced_veil = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
 		icon = GFX_impassable_icon
-		production_speed_buildings_factor = 0.25
-		production_factory_efficiency_gain_factor = 0.3
+		local_manpower = 0.05
+		local_resources = -0.5
 	}
-	ODS_fourth_level_of_authority = {
+	ODS_focused_eye = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
 		icon = GFX_impassable_icon
-		production_speed_buildings_factor = 0.5
-		monthly_population = 0.005
+		local_manpower = 0.05
+		local_resources = -0.1
+		local_building_slots = 1
+	}
+	ODS_informed_society = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_impassable_icon
+		local_manpower = 0.1
+		local_resources = 0.1
+		local_building_slots = 1
+		state_production_speed_industrial_complex_factor = 0.05
+		state_production_speed_arms_factory_factor = 0.05
 	}
 
 ########Типы специализации стейтов в Адмиралтействе####################

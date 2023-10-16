@@ -63,17 +63,17 @@ ODS_kuban = {
 	}
 }
 
-# ╔═══╗╔══╗╔╗──╔╗╔╗──╔╗╔══╗╔═══╗─╔══╗
-# ╚══╗║║╔╗║║║──║║║║──║║║╔═╝║╔══╝─║╔╗║
-# ─╔═╝║║╚╝║║╚╗╔╝║║╚══╣║║║──║╚══╗─║║║║
-# ─╚═╗║║╔╗║║╔╗╔╗║║╔═╗║║║║──║╔══╝─║║║║
-# ╔══╝║║║║║║║╚╝║║║╚═╝║║║╚═╗║╚══╗╔╝║║║
-# ╚═══╝╚╝╚╝╚╝──╚╝╚═══╩╝╚══╝╚═══╝╚═╝╚╝
+# ╔══╗╔══╗─╔══╗─╔╗╔╗╔╗╔╗╔╗╔╗╔═══╗╔╗╔╗╔╗╔╗╔═══╗
+# ║╔╗║║╔╗║─║╔╗║─║║║║║║║║║║║║║╔══╝║║║║║║║║║╔══╝
+# ║║║║║║║║─║║║║─║╚╝║║║║║║╚╝║║╚══╗║╚╝║║║║║║╚══╗
+# ║║║║║║║║─║║║║─╚═╗║║║╔║║╔╗║║╔══╝║╔╗║║║╔║║╔══╝
+# ║║║║║╚╝║╔╝╚╝╚╗──║║║╚╝║║║║║║╚══╗║║║║║╚╝║║╚══╗
+# ╚╝╚╝╚══╝╚════╝──╚╝╚══╝╚╝╚╝╚═══╝╚╝╚╝╚══╝╚═══╝
+
 #Сделал Sum Tea Jay
 
-ODS_intention = {
-	#Создать вуаль
-	ODS_create_a_veil = {
+ODS_subordination = {
+	ODS_veil_reinforcement = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
@@ -81,19 +81,9 @@ ODS_intention = {
 		}
 		available = {
 			AND = {
-				has_manpower > 3000		
-				has_equipment = {
-					infantry_equipment > 500
-				}
-				if = {
-					limit = {
-						NOT = { has_completed_focus = ODS_Destroy_their_hopes }
-					}
-					has_political_power > 70
-				}
-				else = {
-					has_political_power > 35			
-				}
+				has_manpower > 499
+				check_variable = { Chernii_rubli > 99 } 
+				has_political_power > 1
 			}
 		}
 
@@ -102,6 +92,7 @@ ODS_intention = {
 				is_fully_controlled_by = ROOT
 				NOT = { 
 					is_core_of = ROOT 
+					has_country_flag = first_level_of_authority
 				} 
 			} 
 		}
@@ -110,36 +101,26 @@ ODS_intention = {
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
-		days_remove = 150
-		remove_effect = {
+		complete_effect = {
+			FROM = {
+				set_state_flag = first_level_of_authority
+				add_dynamic_modifier = { modifier = ODS_reinforced_veil }
+				remove_dynamic_modifier = { modifier = ODS_new_land }
+			}
 			add_to_variable = {
 				var = intention_point
 				value = 1
 			}		
-			FROM = {
-				set_state_flag = first_level_of_authority	
-			}
-			add_state_core = FROM
-			add_manpower = -3000
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ODS_Destroy_their_hopes }
-				}
-				add_political_power = -70
-			}
-			else = {
-				add_political_power = -35		
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -500
-				producer = ODS
-			}
+			subtract_from_variable = {
+				var = Chernii_rubli
+				value = 100
+			}		
+			add_manpower = -500
+			add_political_power = -2
 		}
 	}
 
-	#Установить аудит
-	ODS_set_audit = {
+	ODS_focus_on = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
@@ -147,21 +128,13 @@ ODS_intention = {
 		}
 		available = {
 			AND = {
-				has_manpower > 3000		
-				has_equipment = {
-					infantry_equipment > 500
+				custom_trigger_tooltip = {
+					tooltip = two_hundred_people_in_the_capital_tt	
+					839 = { has_manpower > 199 }
 				}
-				if = {
-					limit = {
-						NOT = { has_completed_focus = ODS_Destroy_their_hopes }
-					}
-					has_political_power > 140
-				}
-				else = {
-					has_political_power > 70			
-				}
+				check_variable = { Chernii_rubli > 99 } 
+				has_political_power > 1
 			}
-		
 		}
 
 		visible = {
@@ -174,44 +147,36 @@ ODS_intention = {
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
-		days_remove = 150
-		remove_effect = {
+		complete_effect = {
 			FROM = {
 				clr_state_flag = first_level_of_authority
 				set_state_flag = second_level_of_authority
-				remove_dynamic_modifier = { modifier = ODS_diversions }
+				add_dynamic_modifier = { modifier = ODS_focused_eye }
+				remove_dynamic_modifier = { modifier = ODS_reinforced_veil }
 			}
-			add_manpower = -3000
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ODS_Destroy_their_hopes }
-				}
-				add_political_power = -140
-			}
-			else = {
-				add_political_power = -70		
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -500
-				producer = ODS
-			}
+			add_to_variable = {
+				var = intention_point
+				value = 1
+			}		
+			subtract_from_variable = {
+				var = Chernii_rubli
+				value = 100
+			}		
+			839 = { add_manpower = -200 }
+			add_manpower = 500
+			add_political_power = -2
 		}
 	}
 
-	#Начать процесс реабилитации
-	ODS_start_the_rehabilitation_process = {
+	ODS_promoting_mindfulness_in = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
 			base = 100	
 		}
 		available = {
-			check_variable = {
-				var = intention_point
-				value = 1
-				compare = greater_than_or_equals 
-			}
+			check_variable = { Chernii_rubli > 199 } 
+			has_political_power > 1
 		}
 
 		visible = {
@@ -227,56 +192,15 @@ ODS_intention = {
 		days_remove = 150
 		remove_effect = {
 			FROM = {
-				add_dynamic_modifier = { modifier = ODS_third_level_of_authority }
+				add_dynamic_modifier = { modifier = ODS_informed_society }
+				remove_dynamic_modifier = { modifier = ODS_focused_eye }				
 				clr_state_flag = second_level_of_authority
-				set_state_flag = third_level_of_authority
-			}
-			subtract_from_variable = {
-				var = intention_point
-				value = 1
-			}
-		}
-	}
-
-	#Начать программу убеждения
-	ODS_start_a_persuasion_programme = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-		ai_will_do = {
-			base = 100	
-		}
-		available = {
-			check_variable = {
-				var = intention_point
-				value = 1
-				compare = greater_than_or_equals 
-			}	
-		}
-
-		visible = {
-			FROM = {
-				has_state_flag = third_level_of_authority
-			}
-		}
-		on_map_mode = decision_view_only
-
-		state_target = yes
-		target_array = ODS.controlled_states
-		fire_only_once = yes
-		remove_effect = {
-			FROM = {
-				clr_state_flag = third_level_of_authority 
-				remove_dynamic_modifier = { modifier = ODS_fourth_level_of_authority }
-				add_dynamic_modifier = { modifier = ODS_fourth_level_of_authority }
-			}
-			subtract_from_variable = {
-				var = intention_point
-				value = 1
 			}
 			add_to_variable = {
-				var = intention
-				value = 0.4
-			}
+				var = intention_point
+				value = 1
+			}	
+			add_state_core = FROM
 		}
 	}
 }
