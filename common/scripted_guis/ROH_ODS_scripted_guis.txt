@@ -22,14 +22,7 @@ scripted_gui = {
 		parent_window_token = selected_state_view
 		window_name = "ODS_specializations_of_regions_gui"
 		visible = {
-			AND = {
-				has_country_flag = ODS_access_to_specialization_of_regions
-				has_focus_tree = admiralty_phase_two
-				has_dynamic_modifier = {
-					modifier = ODS_informed_society
-					scope = state
-				}
-			}
+			has_country_flag = ODS_access_to_specialization_of_regions
 		}
 		effects = {
 			ods_specializations_of_regions_button_click = {
