@@ -22,7 +22,7 @@ scripted_gui = {
 		parent_window_token = selected_state_view
 		window_name = "ODS_specializations_of_regions_gui"
 		visible = {
-			has_country_flag = ODS_access_to_specialization_of_regions
+			NOT = { is_core_of = ODS }
 		}
 		effects = {
 			ods_specializations_of_regions_button_click = {
