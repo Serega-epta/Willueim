@@ -17,6 +17,24 @@ scripted_gui = {
 		
     }
 
+    ODS_intention  = {
+        context_type = decision_category
+		window_name = "ODS_intention_gui"
+		visible = { 
+			always = yes
+		}
+		properties = {		
+			ODS_intention_scale = { frame = intention }
+		}
+		effects = {	
+			#здесь могли бы быть эффекты
+		}
+		triggers = {	
+			#здесь могли бы быть тригерры
+		}		
+		
+    }
+
     ODS_operating_committee  = {
         context_type = decision_category
 		window_name = "ODS_operating_committee_gui"
@@ -41,11 +59,6 @@ scripted_gui = {
 		window_name = "ODS_specializations_of_regions_gui"
 		visible = {
 			ODS = { has_country_flag = ODS_access_to_specialization_of_regions }
-			ODS = { has_focus_tree = admiralty_phase_two }
-			has_dynamic_modifier = {
-                modifier = ODS_informed_society
-                scope = state
-            }
 		}
 		effects = {
 			ods_specializations_of_regions_button_click = {

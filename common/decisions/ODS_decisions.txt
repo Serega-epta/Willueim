@@ -204,3 +204,353 @@ ODS_subordination = {
 		}
 	}
 }
+
+
+
+# █───█─███─██─██─████─█──█─█──█─█──█─████────█──█─████─█───█─█──█─███─███─███─████─████─────████─█──█─████─████───██─█─█─████─███─████─█──█──█──█─█──█
+# ██─██─█────███──█──█─█──█─█──█─█─█──█──█────█─█──█──█─██─██─█──█──█──█────█──█──█─█──██────█──█─█─█──█──█─█──█──█─█─█─█─█──█──█──█──█─█──█──█──█─█──█
+# █─█─█─███───█───████─████─█─██─██───████────██───█──█─█─█─█─█─██──█──███──█──█──█─████───────██─██───█────█──█─█──█─███─████──█──████─█──█──█─██─█─██
+# █───█─█────███──█──█─█──█─██─█─█─█──█──█────█─█──█──█─█───█─██─█──█──█────█──█──█─█──██────█──█─█─█──█──█─█──█─█──█───█─█──█──█──█──█─█──█──██─█─██─█
+# █───█─███─██─██─█──█─█──█─█──█─█──█─█──█────█──█─████─█───█─█──█──█──███──█──████─████─────████─█──█─████─█──█─█──█─███─█──█──█──█──█─█████─█──█─█──█
+#Сделал Sum Tea Jay
+ODS_operating_committee = {
+	ODS_set_the_KESR = {
+		icon = GFX_decision_diplo_kuban
+		priority = 100
+		target_non_existing = yes
+		target_array = ODS.occupied_countries
+		on_map_mode = decision_view_only
+		fire_only_once = yes
+		visible = {
+			FROM = {
+				exists = no
+			}
+		}
+		complete_effect = {
+			ODS = {
+				release_autonomy = {
+					target = FROM
+					autonomy_state = KESR
+					freedom_level = 0.1
+				}
+			}
+			FROM = {
+				set_country_flag = KESR_decisions
+			}
+			add_to_array = {
+				array = count_of_KESH
+				value = THIS.id
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = phase_two
+						has_country_flag = phase_three
+						has_country_flag = phase_four
+						has_country_flag = phase_five
+					}
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 100
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_two
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 33
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_three
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 18
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_four
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 9
+				}				
+			}
+		}
+		ai_will_do = {
+			base = 10	
+		}					
+	}
+
+	ODS_set_the_KEPR = {
+		icon = GFX_decision_diplo_kuban
+		priority = 100
+		target_non_existing = yes
+		target_array = ODS.occupied_countries
+		on_map_mode = decision_view_only
+		fire_only_once = yes
+		visible = {
+			FROM = {
+				exists = no
+			}
+		}
+		complete_effect = {
+			ODS = {
+				release_autonomy = {
+					target = FROM
+					autonomy_state = KEPR
+					freedom_level = 0.1
+				}
+			}
+			FROM = {
+				set_country_flag = KEPR_decisions
+			}
+			add_to_array = {
+				array = count_of_KESH
+				value = THIS.id
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = phase_two
+						has_country_flag = phase_three
+						has_country_flag = phase_four
+						has_country_flag = phase_five
+					}
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 100
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_two
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 33
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_three
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 18
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_four
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 9
+				}				
+			}
+		}
+		ai_will_do = {
+			base = 10	
+		}					
+	}
+
+	ODS_set_the_KESH = {
+		icon = GFX_decision_diplo_kuban
+		priority = 100
+		target_non_existing = yes
+		target_array = ODS.occupied_countries
+		on_map_mode = decision_view_only
+		fire_only_once = yes
+		visible = {
+			FROM = {
+				exists = no
+			}
+		}
+		complete_effect = {
+			ODS = {
+				release_autonomy = {
+					target = FROM
+					autonomy_state = KESH
+					freedom_level = 0.1
+				}
+			}
+			FROM = {
+				set_country_flag = KESH_decisions
+			}
+			add_to_array = {
+				array = count_of_KESH
+				value = THIS.id
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = phase_two
+						has_country_flag = phase_three
+						has_country_flag = phase_four
+						has_country_flag = phase_five
+					}
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 100
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_two
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 33
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_three
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 18
+				}				
+			}
+
+			if = {
+				limit = {
+					has_country_flag = phase_four
+				}
+				add_to_variable = {
+					var = level_of_allowance
+					value = 9
+				}				
+			}
+		}
+		ai_will_do = {
+			base = 10	
+		}					
+	}
+	ODS_integration_point = {
+		activation = { 
+			always = yes
+		}
+		available = { 
+			hidden_trigger = { always = no } 
+		}
+
+		is_good = yes
+        timeout_effect = { 
+			add_to_variable = {
+				var = integration_point
+				value = 1
+			}
+			hidden_effect = { activate_mission = ODS_get_integration_point }
+        }
+		
+		days_mission_timeout = 20
+        ai_will_do = {
+            factor = 1
+        }
+	}	
+
+	#Искоренить дикость
+	ODS_eradicate_savagery = {
+		icon = GFX_decision_diplo_kuban
+		priority = 100
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = complete_decision_ODS_eradicate_savagery
+		}
+		ai_will_do = {
+			base = 10	
+		}				
+	}
+
+	#Подсчитать каждого
+	ODS_count_everyone = {
+		icon = GFX_decision_diplo_kuban
+		priority = 100
+		fire_only_once = yes
+		visible = {
+			has_country_flag = complete_decision_ODS_eradicate_savagery
+		}
+		complete_effect = {
+			clr_country_flag = complete_decision_ODS_eradicate_savagery
+			set_country_flag = complete_decision_ODS_count_everyone
+		}
+		ai_will_do = {
+			base = 10	
+		}				
+	}
+
+	#Новые граждане
+	ODS_new_citizens = {
+		icon = GFX_decision_diplo_kuban
+		priority = 100
+		fire_only_once = yes
+		visible = {
+			has_country_flag = complete_decision_ODS_count_everyone
+		}
+		complete_effect = {
+			clr_country_flag = complete_decision_ODS_count_everyone
+			set_country_flag = complete_decision_ODS_new_citizens
+		}
+		ai_will_do = {
+			base = 10	
+		}				
+	}
+
+	#Привести части в порядок
+	ODS_get_the_balances_in_order = {
+		icon = GFX_decision_diplo_kuban
+		priority = 100
+		fire_only_once = yes
+		visible = {
+			has_country_flag = complete_decision_ODS_new_citizens
+		}
+		complete_effect = {
+			set_country_flag = can_integrate_committee
+			clr_country_flag = complete_decision_ODS_new_citizens
+		}
+		ai_will_do = {
+			base = 10	
+		}				
+	}
+
+	#интегрировать Комитет
+	ODS_integrate_committee = {
+		icon = GFX_decision_diplo_kuban
+		priority = 100
+		target_array = ODS.subject_countries
+		on_map_mode = map_only
+		visible = {
+			has_country_flag = can_integrate_committee
+		}
+		complete_effect = {
+			ODS = {
+				annex_country = {
+					target = FROM
+					transfer_troops = no
+				}	
+			}
+		}
+		ai_will_do = {
+			base = 10	
+		}				
+	}
+}
+
