@@ -1,0 +1,28 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			set_variable = { intention_point = 0}
+		}
+
+	}
+
+	on_daily = {
+		effect = {
+			if = {
+				limit = { has_country_flag = third_phase}
+				clamp_variable = {
+					var = intention_point
+					min = 0
+					max = 100
+				}
+			}	
+			else = {
+				clamp_variable = {
+					var = intention_point
+					min = 0
+					max = 40
+				}
+			}		
+		}
+	}
+}
