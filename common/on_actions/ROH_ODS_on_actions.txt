@@ -24,36 +24,37 @@ on_actions = {
 				}
 			}	
 		}
+	}
 
-		ODS = {
-			all_controlled_state = {
-				FROM = {
-					if = {
-						limit = { 
-							AND = {
-								NOT = { 
-									is_core_of = ODS 
-									has_dynamic_modifier = {
-										modifier = ODS_new_land
-										scope = ODS
-									}
-									has_dynamic_modifier = {
-										modifier = ODS_reinforced_veil
-										scope = ODS
-									}
-									has_dynamic_modifier = {
-										modifier = ODS_focused_eye
-										scope = ODS
-									}
-									has_dynamic_modifier = {
-										modifier = ODS_informed_society
-										scope = ODS
-									}
-								} 
-							}
-						}
-						add_dynamic_modifier = { ODS_new_land }
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = ODS }
+					FROM.FROM = { 
+						NOT = { 
+							is_core_of = ODS 
+							has_state_flag = second_level_of_authority
+							has_state_flag = first_level_of_authority
+						} 
 					}
+				}
+				FROM.FROM = {
+					add_dynamic_modifier = { modifier = ODS_new_land }
+				}
+			}
+			if = {
+				limit = {
+					FROM.FROM = { 
+						NOT = { 
+							is_core_of = ODS 
+							is_controlled_by = ODS
+						} 
+						has_dynamic_modifier = { modifier = ODS_new_land }
+					}
+				}
+				FROM.FROM = {
+					remove_dynamic_modifier = { modifier = ODS_new_land }
 				}
 			}
 		}
