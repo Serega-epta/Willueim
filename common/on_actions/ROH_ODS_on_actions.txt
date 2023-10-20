@@ -6,7 +6,7 @@ on_actions = {
 
 	}
 
-	on_daily = {
+	on_daily_ODS = {
 		effect = {
 			if = {
 				limit = { has_country_flag = third_phase}
@@ -22,7 +22,40 @@ on_actions = {
 					min = 0
 					max = 40
 				}
-			}		
+			}	
+		}
+
+		ODS = {
+			all_controlled_state = {
+				FROM = {
+					if = {
+						limit = { 
+							AND = {
+								NOT = { 
+									is_core_of = ODS 
+									has_dynamic_modifier = {
+										modifier = ODS_new_land
+										scope = ODS
+									}
+									has_dynamic_modifier = {
+										modifier = ODS_reinforced_veil
+										scope = ODS
+									}
+									has_dynamic_modifier = {
+										modifier = ODS_focused_eye
+										scope = ODS
+									}
+									has_dynamic_modifier = {
+										modifier = ODS_informed_society
+										scope = ODS
+									}
+								} 
+							}
+						}
+						add_dynamic_modifier = { ODS_new_land }
+					}
+				}
+			}
 		}
 	}
 }
