@@ -442,7 +442,7 @@ kanon_absol = {
 	ods_industrial_region = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
+		icon = GFX_ods_industrial_region_icon
 		local_factories = 0.15
 		state_production_speed_buildings_factor = 0.15
 		local_manpower = 0.1
@@ -452,7 +452,7 @@ kanon_absol = {
 	ods_resource_region = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
+		icon = GFX_ods_resource_region_icon
 		local_manpower = 0.1
 		local_resources = 0.3
 		local_building_slots_factor = 0.05
@@ -461,7 +461,7 @@ kanon_absol = {
 	ods_agricultural_region = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
+		icon = GFX_ods_agricultural_region_icon
 		local_manpower = 0.15
 		local_resources = 0.2
 		local_building_slots_factor = 0.05
@@ -470,7 +470,7 @@ kanon_absol = {
 	ods_research_region = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
+		icon = GFX_ods_research_region_icon
 		research_speed_factor = 0.01
 		local_manpower = 0.1
 		local_resources = 0.1
@@ -483,10 +483,10 @@ kanon_absol = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
-		conscription_factor = +0.2 #Военно обязанность населения
-		production_speed_buildings_factor = 0.1 #Скорость строительства
-		local_building_slots_factor = -0.5 #местных ячеек для строительства
-		supply_factor = 0.3 #Эффективность снабжения
+		conscription_factor = +0.2 
+		production_speed_buildings_factor = 0.1 
+		local_building_slots_factor = -0.5 
+		supply_factor = 0.3 
 		
 	}
 	
@@ -494,10 +494,10 @@ kanon_absol = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
-		production_speed_buildings_factor = -0.1 #Скорость строительства
-		supply_factor = -0.2 #Эффективность снабжения
-		local_building_slots_factor = -0.2 #местных ячеек для строительства
-		conscription = -0.3 #Военно обязанность населения
+		production_speed_buildings_factor = -0.1 
+		supply_factor = -0.2 
+		local_building_slots_factor = -0.2 
+		conscription = -0.3 
 	}
 	
 	dead_region = { #Мертвый регион
