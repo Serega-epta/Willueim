@@ -305,6 +305,10 @@ technologies = {
 
 	#Подветка брони
 	armor_1 = {	
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		path = {
 			leads_to_tech = armor_2
 			research_cost_coeff = 1
@@ -326,7 +330,10 @@ technologies = {
 	}
 
 	armor_2 = {	
-
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		path = {
 		 	leads_to_tech = armor_3
 		 	research_cost_coeff = 1
@@ -349,7 +356,10 @@ technologies = {
 	}
 
 	armor_3 = {	
-
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		path = {
 			leads_to_tech = armor_4
 			research_cost_coeff = 1
@@ -372,6 +382,10 @@ technologies = {
 	}
 
 	armor_4 = {	
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		path = {
 			leads_to_tech = armor_5
 			research_cost_coeff = 1
@@ -395,7 +409,10 @@ technologies = {
 
 
 	armor_5 = {	
- 
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		} 
 		research_cost = 2.5
 
 		folder = {
@@ -414,7 +431,11 @@ technologies = {
 
 
 	#Подветка двигателей
-	engine_1 = {	
+	engine_1 = {
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}	
 		path = {
 			leads_to_tech = engine_2
 			research_cost_coeff = 1
@@ -436,7 +457,10 @@ technologies = {
 	}
 
 	engine_2 = {	
-
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}
 		path = {
 		 	leads_to_tech = engine_3
 		 	research_cost_coeff = 1
@@ -459,7 +483,10 @@ technologies = {
 	}
 
 	engine_3 = {	
-
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}
 		path = {
 			leads_to_tech = engine_4
 			research_cost_coeff = 1
@@ -481,7 +508,11 @@ technologies = {
 		}
 	}
 
-	engine_4 = {	
+	engine_4 = {
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}	
 		path = {
 			leads_to_tech = engine_5
 			research_cost_coeff = 1
@@ -505,7 +536,10 @@ technologies = {
 
 
 	engine_5 = {	
- 
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		} 
 		research_cost = 2.5
 
 		folder = {

@@ -306,6 +306,10 @@ technologies = {
 
 	#Подветка брони
 	nsb_armor_1 = {	
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		path = {
 			leads_to_tech = nsb_armor_2
 			research_cost_coeff = 1
@@ -327,7 +331,10 @@ technologies = {
 	}
 
 	nsb_armor_2 = {	
-
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		path = {
 		 	leads_to_tech = nsb_armor_3
 		 	research_cost_coeff = 1
@@ -350,7 +357,10 @@ technologies = {
 	}
 
 	nsb_armor_3 = {	
-
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		path = {
 			leads_to_tech = nsb_armor_4
 			research_cost_coeff = 1
@@ -373,6 +383,10 @@ technologies = {
 	}
 
 	nsb_armor_4 = {	
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		path = {
 			leads_to_tech = nsb_armor_5
 			research_cost_coeff = 1
@@ -396,7 +410,10 @@ technologies = {
 
 
 	nsb_armor_5 = {	
- 
+		category_tanks = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
 		research_cost = 2.5
 
 		folder = {
@@ -415,7 +432,11 @@ technologies = {
 
 
 	#Подветка двигателей
-	nsb_engine_1 = {	
+	nsb_engine_1 = {
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}	
 		path = {
 			leads_to_tech = nsb_engine_2
 			research_cost_coeff = 1
@@ -437,7 +458,10 @@ technologies = {
 	}
 
 	nsb_engine_2 = {	
-
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}	
 		path = {
 		 	leads_to_tech = nsb_engine_3
 		 	research_cost_coeff = 1
@@ -460,7 +484,10 @@ technologies = {
 	}
 
 	nsb_engine_3 = {	
-
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}	
 		path = {
 			leads_to_tech = nsb_engine_4
 			research_cost_coeff = 1
@@ -483,6 +510,10 @@ technologies = {
 	}
 
 	nsb_engine_4 = {	
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}	
 		path = {
 			leads_to_tech = nsb_engine_5
 			research_cost_coeff = 1
@@ -506,7 +537,10 @@ technologies = {
 
 
 	nsb_engine_5 = {	
- 
+		category_tanks = {
+			maximum_speed = 0.05
+			breakthrough = 0.02
+		}	
 		research_cost = 2.5
 
 		folder = {
