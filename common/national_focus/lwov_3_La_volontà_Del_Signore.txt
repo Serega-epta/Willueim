@@ -32,7 +32,8 @@ focus_tree = {
 			country_event = {
 				id = LWV.38
 				days = 1
-			}			
+			}
+			set_cosmetic_tag = LWV_Holy_Land			
 		}
 	}	
 	focus = {
@@ -219,8 +220,20 @@ focus_tree = {
 		}
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = { has_war = no }
 		completion_reward = {
-		
+				declare_war_on = {
+				target = WOD
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = YWD
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = MOD
+				type = annex_everything
+			}
 		}
 	}
 	focus = {
@@ -234,8 +247,20 @@ focus_tree = {
 		}
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = { has_war = no }
 		completion_reward = {
-		
+				declare_war_on = {
+				type = annex_everything
+				target = MAP
+			}
+				declare_war_on = {
+				target = POP
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = CST
+				type = annex_everything
+			}
 		}
 	}
 	focus = {
@@ -249,8 +274,36 @@ focus_tree = {
 		}
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = { has_war = no }
 		completion_reward = {
-		
+				declare_war_on = {
+				target = ODS
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = HER
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = CRI
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = BOD
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = SOD
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = CRW
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = KUB
+				type = annex_everything
+			}
 		}
 	}
 	focus = {
@@ -264,8 +317,56 @@ focus_tree = {
 		}
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = { has_war = no }
 		completion_reward = {
-		
+				declare_war_on = {
+				target = FUD
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = AZB
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = ECD
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = KUH
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = HAN
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = BRI
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = FSR
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = BRD
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = WAC
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = STW
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = DOM
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = LUG
+				type = annex_everything
+			}	
 		}
 	}
 	focus = {
@@ -279,8 +380,36 @@ focus_tree = {
 		}
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = { has_war = no }
 		completion_reward = {
-		
+				declare_war_on = {
+				target = VDS
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = DIB
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = BIH
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = BAG
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = ARM
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = MAD
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = SUM
+				type = annex_everything
+			}
 		}
 	}
 	focus = {
