@@ -92,7 +92,7 @@ Rabochii_moleben = {
 			}
 		}	
 Brother = {
-			picture = GFX_idea_brother
+			picture = brother
 			modifier = {
 				send_volunteers_tension = -1
 				send_volunteer_divisions_required = -1
@@ -501,13 +501,14 @@ heaven_on_earth_4 = {
 		defence = 0.1
 		special_forces_attack_factor = 0.2
 
+		
+	
+		}
 		equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.2
 					instant = yes
 				}
-		}
-	
 		}
 	}
 	LWV_scared_war_upgrate_ultra = {
@@ -520,12 +521,13 @@ heaven_on_earth_4 = {
 			defensive_war_stability_factor = 0.2
 			offensive_war_stability_factor = 0.2
 			justify_war_goal_time = -0.25
-			equipment_bonus = {
+			
+			}
+		equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.2
 					instant = yes
 				}
-			}
 		}
 	}
 	LWV_blessing_of_labor = {
