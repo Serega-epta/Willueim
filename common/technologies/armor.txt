@@ -1,6 +1,6 @@
 technologies = {
 	pre_war_OPV = {	
-
+		enable_equipments = { pre_war_OPV_equipment }
 		path = {
 			leads_to_tech = basic_specialized_OPF
 			research_cost_coeff = 1
@@ -35,7 +35,7 @@ technologies = {
 	#Подветка специализированных танков
 	
 	basic_specialized_OPF = {	
-
+		enable_equipments = { basic_specialized_OPF_equipment }
 		path = {
 			leads_to_tech = improved_specialized_OPF
 			research_cost_coeff = 1
@@ -60,7 +60,7 @@ technologies = {
 	}
 
 	improved_specialized_OPF = {	
-
+		enable_equipments = { improved_specialized_OPF_equipment }
 		path = {
 		 	leads_to_tech = advanced_specialized_OPF
 		 	research_cost_coeff = 1
@@ -83,7 +83,7 @@ technologies = {
 	}
 
 	advanced_specialized_OPF = {	
-
+		enable_equipments = { advanced_specialized_OPF_equipment }
 		path = {
 			leads_to_tech = specialized_OPF_of_the_future
 			research_cost_coeff = 1
@@ -106,8 +106,7 @@ technologies = {
 	}
 
 	specialized_OPF_of_the_future = {	
-
- 
+		enable_equipments = { specialized_OPF_of_the_future_equipment }
 		research_cost = 2.5
 
 		folder = {
@@ -126,7 +125,7 @@ technologies = {
 
 	#Подветка массовых танков
 	basic_mass_OPF = {	
-
+		enable_equipments = { basic_mass_OPF_equipment }
 		path = {
 			leads_to_tech = improved_mass_OPF
 			research_cost_coeff = 1
@@ -149,7 +148,7 @@ technologies = {
 	}
 
 	improved_mass_OPF = {	
-
+		enable_equipments = { improved_mass_OPF_equipment }
 		path = {
 		 	leads_to_tech = advanced_mass_OPF
 		 	research_cost_coeff = 1
@@ -172,7 +171,7 @@ technologies = {
 	}
 
 	advanced_mass_OPF = {	
-
+		enable_equipments = { advanced_mass_OPF_equipment }
 		path = {
 			leads_to_tech = mass_OPF_of_the_future
 			research_cost_coeff = 1
@@ -195,7 +194,7 @@ technologies = {
 	}
 
 	mass_OPF_of_the_future = {	
-
+		enable_equipments = { mass_OPF_of_the_future_equipment }
  
 		research_cost = 2.5
 
@@ -215,7 +214,7 @@ technologies = {
 
 	#Подветка ИИ - танков
 	basic_ai_OPF = {	
-
+		enable_equipments = { basic_ai_OPF_equipment }
 		path = {
 			leads_to_tech = improved_ai_OPF
 			research_cost_coeff = 1
@@ -239,7 +238,7 @@ technologies = {
 	}
 
 	improved_ai_OPF = {	
-
+		enable_equipments = { improved_ai_OPF_equipment }
 		path = {
 		 	leads_to_tech = advanced_ai_OPF
 		 	research_cost_coeff = 1
@@ -262,7 +261,7 @@ technologies = {
 	}
 
 	advanced_ai_OPF = {	
-
+		enable_equipments = { advanced_ai_OPF_equipment }
 		path = {
 			leads_to_tech = ai_OPF_of_the_future
 			research_cost_coeff = 1
@@ -285,7 +284,7 @@ technologies = {
 	}
 
 	ai_OPF_of_the_future = {	
-
+		enable_equipments = { ai_OPF_of_the_future_equipment }
  
 		research_cost = 2.5
 

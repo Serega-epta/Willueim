@@ -1,6 +1,6 @@
 technologies = {
 	nsb_pre_war_OPV = {	
-
+		enable_equipments = { pre_war_OPV_chassis }
 		path = {
 			leads_to_tech = nsb_basic_nsb_specialized_OPF
 			research_cost_coeff = 1
@@ -35,7 +35,7 @@ technologies = {
 	#Подветка специализированных танков
 	
 	nsb_basic_nsb_specialized_OPF = {	
-
+		enable_equipments = { specialized_tank_chassis_0 }
 		path = {
 			leads_to_tech = nsb_improved_nsb_specialized_OPF
 			research_cost_coeff = 1
@@ -60,7 +60,7 @@ technologies = {
 	}
 
 	nsb_improved_nsb_specialized_OPF = {	
-
+		enable_equipments = { specialized_tank_chassis_1 }
 		path = {
 		 	leads_to_tech = nsb_advanced_nsb_specialized_OPF
 		 	research_cost_coeff = 1
@@ -83,7 +83,7 @@ technologies = {
 	}
 
 	nsb_advanced_nsb_specialized_OPF = {	
-
+		enable_equipments = { specialized_tank_chassis_2 }
 		path = {
 			leads_to_tech = nsb_specialized_OPF_of_the_future
 			research_cost_coeff = 1
@@ -106,7 +106,7 @@ technologies = {
 	}
 
 	nsb_specialized_OPF_of_the_future = {	
-
+		enable_equipments = { specialized_tank_chassis_3 }
  
 		research_cost = 2.5
 
@@ -126,7 +126,7 @@ technologies = {
 
 	#Подветка массовых танков
 	nsb_basic_mass_OPF = {	
-
+		enable_equipments = { mass_tank_chassis_0 }
 		path = {
 			leads_to_tech = nsb_improved_mass_OPF
 			research_cost_coeff = 1
@@ -149,7 +149,7 @@ technologies = {
 	}
 
 	nsb_improved_mass_OPF = {	
-
+		enable_equipments = { mass_tank_chassis_1 }
 		path = {
 		 	leads_to_tech = nsb_advanced_mass_OPF
 		 	research_cost_coeff = 1
@@ -172,7 +172,7 @@ technologies = {
 	}
 
 	nsb_advanced_mass_OPF = {	
-
+		enable_equipments = { mass_tank_chassis_2 }
 		path = {
 			leads_to_tech = nsb_mass_OPF_of_the_future
 			research_cost_coeff = 1
@@ -195,7 +195,7 @@ technologies = {
 	}
 
 	nsb_mass_OPF_of_the_future = {	
-
+		enable_equipments = { mass_tank_chassis_3 }
  
 		research_cost = 2.5
 
@@ -215,7 +215,7 @@ technologies = {
 
 	#Подветка ИИ - танков
 	nsb_basic_ai_OPF = {	
-
+		enable_equipments = { ai_tank_chassis_0 }
 		path = {
 			leads_to_tech = nsb_improved_ai_OPF
 			research_cost_coeff = 1
@@ -239,7 +239,7 @@ technologies = {
 	}
 
 	nsb_improved_ai_OPF = {	
-
+		enable_equipments = { ai_tank_chassis_1 }
 		path = {
 		 	leads_to_tech = nsb_advanced_ai_OPF
 		 	research_cost_coeff = 1
@@ -262,7 +262,7 @@ technologies = {
 	}
 
 	nsb_advanced_ai_OPF = {	
-
+		enable_equipments = { ai_tank_chassis_2 }
 		path = {
 			leads_to_tech = nsb_ai_OPF_of_the_future
 			research_cost_coeff = 1
@@ -285,7 +285,7 @@ technologies = {
 	}
 
 	nsb_ai_OPF_of_the_future = {	
-
+		enable_equipments = { ai_tank_chassis_3 }
  
 		research_cost = 2.5
 
