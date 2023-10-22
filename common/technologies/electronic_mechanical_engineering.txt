@@ -305,6 +305,10 @@ technologies = {
 	}
 
 	laser_design = {
+		category_tanks = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
 		path = {
 			leads_to_tech = nuclear_fusion
 			research_cost_coeff = 1
@@ -363,6 +367,9 @@ technologies = {
 
 
 	nuclear_weapon = {
+		category_tanks = {
+			defense = 0.05
+		}
 		path = {
 			leads_to_tech = classic_nuclear_weapon
 			research_cost_coeff = 1
@@ -413,6 +420,9 @@ technologies = {
 	}
 
 	nuclear_rockets = {
+		category_fighter = {
+			air_attack = 0.05
+		}
 		research_cost =  2
 		folder = {
 			name = electronics_folder
@@ -455,6 +465,10 @@ technologies = {
 	}
 
 	remote_exposure_systems = {
+		category_all_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
 		research_cost =  2
 		army_infantry_attack_factor = 0.05
 		folder = {
@@ -472,6 +486,9 @@ technologies = {
 	}
 
 	radioactive_bombs = {
+		category_fighter = {
+			air_attack = 0.1
+		}
 		research_cost =  2
 		folder = {
 			name = electronics_folder
