@@ -80,11 +80,12 @@ ODS_subordination = {
 			base = 100	
 		}
 		available = {
-			AND = {
-				has_manpower > 499
+			has_manpower > 499
+			custom_trigger_tooltip = {
+				tooltip = has_more_than_one_hundred_black_rubles_tt
 				check_variable = { Chernii_rubli > 99 } 
-				has_political_power > 1
 			}
+			has_political_power > 1
 		}
 
 		target_trigger = { 
@@ -129,14 +130,15 @@ ODS_subordination = {
 			base = 100	
 		}
 		available = {
-			AND = {
-				custom_trigger_tooltip = {
-					tooltip = two_hundred_people_in_the_capital_tt	
-					839 = { state_population > 199 }
-				}
-				check_variable = { Chernii_rubli > 99 } 
-				has_political_power > 1
+			custom_trigger_tooltip = {
+				tooltip = two_hundred_people_in_the_capital_tt	
+				839 = { state_population > 199 }
 			}
+			custom_trigger_tooltip = {
+				tooltip = has_more_than_one_hundred_black_rubles_tt
+				check_variable = { Chernii_rubli > 99 } 
+			}
+			has_political_power > 1
 		}
 
 		visible = {
@@ -183,7 +185,10 @@ ODS_subordination = {
 			base = 100	
 		}
 		available = {
-			check_variable = { Chernii_rubli > 199 } 
+			custom_trigger_tooltip = { 
+				tooltip = has_more_than_two_hundred_black_rubles_tt
+				check_variable = { Chernii_rubli > 99 } 
+			}
 			has_political_power > 1
 		}
 
