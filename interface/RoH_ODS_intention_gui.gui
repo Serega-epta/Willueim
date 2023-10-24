@@ -1,39 +1,16 @@
 guiTypes = {
 	containerWindowType = {
 		name = "ODS_intention_gui"
-		size = { width = 300 height = 350 }
+		size = { width = 300 height = 65 }
 		position = { x = 0 y = 0 }
 		orientation = center
 		origo = center
-		moveable = no
-		iconType = {
-			name = "ODS_intention_icon"
-			position = { x = 5 y = -20 }
-			spriteType = "GFX_intention_icon"	
-		}
+		#moveable = no
 		iconType = {
 			name = "ODS_intention_scale"
-			position = { x = 20 y = 150 }
-			spriteType = "GFX_intention_scale"	
+			position = { x = 20 y = 10 }
+			spriteType = "GFX_intention_scale"
 			pdx_tooltip = "information_about_intention_point_tt"
-		}
-		instantTextBoxType = {
-			name = "ODS_intention_first_string_desc"
-			position = { x = 5 y = 220 }
-			maxWidth = 500
-			maxHeight = 800
-			format = center
-			font = "console_16"
-			text = ODS_intention_first_string_desc_loc
-		}
-		instantTextBoxType = {
-			name = "ODS_intention_strings_desc"
-			position = { x = 5 y = 235 }
-			maxWidth = 500
-			maxHeight = 800
-			format = left
-			font = "console_16"
-			text = ODS_intention_strings_desc_loc
 		}
 	}	
 }

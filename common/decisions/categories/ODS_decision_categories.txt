@@ -13,16 +13,18 @@ ODS_kuban = {
 
 ODS_intention = {
 	icon = saf_anti_colonialist_crusade
+	picture = GFX_intention_picture
 	scripted_gui = ODS_intention
 	visible_when_empty = yes
 	visible  = { original_tag = ODS  }
 	allowed = { original_tag = ODS }
-	priority = { base = 5 }		
+	priority = { base = 5 }
+		
 }
 
 ODS_subordination = {
 	icon = saf_anti_colonialist_crusade
-	scripted_gui = ODS_subordination
+	picture = GFX_subordination_picture
 	visible_when_empty = yes
 	visible  = { original_tag = ODS  }
 	allowed = { original_tag = ODS }
