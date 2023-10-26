@@ -20,13 +20,20 @@ sub_units = {
 			category_army
 		}
 		max_strength = 3
-		max_organisation = 35
+		max_organisation = 0.05
+		default_morale = 0.3
 		manpower = 100
 		training_time = 40
+
+		
+		weight = 0.3
 		supply_consumption = 0.01
-				
-		# defense = 10
-		# soft_attack = 5
+		recon = 1.5
+
+		attack = 0.01
+		defense = 0.03
+
+		maximum_speed = 0.02
 		essential = {
 			support_equipment
 		}

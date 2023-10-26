@@ -1,5 +1,5 @@
 sub_units = {
-	recon = { 
+	drg = { 
 		abbreviation = "CREC"
 		sprite = infantry
 		map_icon_category = infantry
@@ -18,13 +18,12 @@ sub_units = {
 			category_front_line
 			category_support_battalions
 			category_army
-			category_recon
+			category_drg
 		}
 
 		max_strength = 3
 		max_organisation = 35
 		default_morale = 0.3
-		manpower = 350
 		training_time = 180
 
 		
@@ -49,32 +48,7 @@ sub_units = {
 			infantry_equipment = 200
 			support_equipment = 30
 		}
-
-		# forest = {
-		# 	movement = 0.05
-		# }
-		# hills = {
-		# 	movement = 0.10
-		# }
-		# mountain = {
-		# 	movement = 0.10
-		# }
-		# jungle = {
-		# 	movement = 0.10
-		# }
-		# marsh = {
-		# 	movement = 0.10
-		# }
-		# plains = {
-		# 	movement = 0.05
-		# }
-		# desert = {
-		# 	movement = 0.05
-		# }
-		# river = {
-		# 	movement = 0.1
-		# }
 		
-		same_support_type = recon
+		same_support_type = drg
 	}
 }

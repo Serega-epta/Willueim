@@ -34,12 +34,12 @@ technologies = {
 		}	
 		
 		path = {
-			leads_to_tech = tech_radiolocationborba
+			leads_to_tech = tech_gamekeepers
 			research_cost_coeff = 1
 		}	
 				
 		path = {
-			leads_to_tech = tech_recon
+			leads_to_tech = tech_drg
 			research_cost_coeff = 1
 		}	
 		path = {
@@ -52,7 +52,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = tech_military_police
+			leads_to_tech = tech_ghounds
 			research_cost_coeff = 1
 		}
 		path = {
@@ -262,14 +262,14 @@ technologies = {
 		}
 	}	
 	
-	tech_recon = {
+	tech_drg = {
 
 		enable_subunits = {
-			recon
+			drg
 		}
 		
 		path = {
-			leads_to_tech = tech_recon2
+			leads_to_tech = tech_drg2
 			research_cost_coeff = 1
 		}
 
@@ -290,18 +290,18 @@ technologies = {
 		}
 	}
 	
-	tech_recon2 = {
+	tech_drg2 = {
 
-		category_recon = {
-			recon = 1.5
-			defense = 0.0004
+		category_drg = {
+			recon = 1
+			defense = 0.04
 			breakthrough = 0.04
 			soft_attack = 0.3
 			hard_attack = 0.1
 		}
 		
 		path = {
-			leads_to_tech = tech_recon3
+			leads_to_tech = tech_drg3
 			research_cost_coeff = 1
 		}
 
@@ -322,17 +322,17 @@ technologies = {
 		}
 	}
 	
-	tech_recon3 = {
+	tech_drg3 = {
 
-		category_recon = {
-			recon = 1.5
+		category_drg = {
+			recon = 1
 			defense = 0.04
 			breakthrough = 0.04
 			soft_attack = 0.3
-			hard_attack = 01
+			hard_attack = 0.1
 		}
 		path = {
-			leads_to_tech = tech_recon4
+			leads_to_tech = tech_drg4
 			research_cost_coeff = 1
 		}
 
@@ -352,14 +352,14 @@ technologies = {
 			factor = 1
 		}
 	}
-	tech_recon4 = {
+	tech_drg4 = {
 
-		category_recon = {
-			recon = 1.5
+		category_drg = {
+			recon = 1
 			defense = 0.04
 			breakthrough = 0.04
 			soft_attack = 0.3
-			hard_attack = 01
+			hard_attack = 0.1
 		}
 
 		research_cost = 1.5
@@ -379,14 +379,14 @@ technologies = {
 		}
 	}
 	
-	tech_military_police = {
+	tech_ghounds = {
 
 		enable_subunits = {
-			military_police
+			ghounds
 		}
 		
 		path = {
-			leads_to_tech = tech_military_police2
+			leads_to_tech = tech_ghounds2
 			research_cost_coeff = 1
 		}
 
@@ -399,7 +399,7 @@ technologies = {
 		
 		categories = {
 			support_tech
-			military_police_tech
+			ghounds_tech
 		}
 		
 		ai_will_do = {
@@ -407,15 +407,15 @@ technologies = {
 		}
 	}
 	
-	tech_military_police2 = {
+	tech_ghounds2 = {
 
-		military_police = {
-			suppression_factor = 0.1
+		ghounds = {
+			suppression_factor = 0.15
 		}
 		
 		
 		path = {
-			leads_to_tech = tech_military_police3
+			leads_to_tech = tech_ghounds3
 			research_cost_coeff = 1
 		}
 
@@ -428,7 +428,7 @@ technologies = {
 		
 		categories = {
 			support_tech
-			military_police_tech
+			ghounds_tech
 		}
 		
 		ai_will_do = {
@@ -436,13 +436,13 @@ technologies = {
 		}
 	}
 	
-	tech_military_police3 = {
+	tech_ghounds3 = {
 
-		military_police = {
-			suppression_factor = 0.1
+		ghounds = {
+			suppression_factor = 0.15
 		}
 		path = {
-			leads_to_tech = tech_military_police4
+			leads_to_tech = tech_ghounds4
 			research_cost_coeff = 1
 		}
 
@@ -455,17 +455,17 @@ technologies = {
 		
 		categories = {
 			support_tech
-			military_police_tech
+			ghounds_tech
 		}
 		
 		ai_will_do = {
 			factor = 0.5
 		}
 	}
-	tech_military_police4 = {
+	tech_ghounds4 = {
 
-		military_police = {
-			suppression_factor = 0.1
+		ghounds = {
+			suppression_factor = 0.15
 		}
 
 		research_cost = 1.5
@@ -477,7 +477,7 @@ technologies = {
 		
 		categories = {
 			support_tech
-			military_police_tech
+			ghounds_tech
 		}
 		
 		ai_will_do = {
@@ -514,7 +514,10 @@ technologies = {
 	tech_standard_bearer2 = {
 
 		standard_bearer = {
-			max_organisation = 30
+			max_organisation = 0.5
+			attack = 0.01
+			defense = 0.03
+			maximum_speed = 0.02
 		}
 		army_org_factor = 0.05
 		path = {
@@ -538,7 +541,10 @@ technologies = {
 	tech_standard_bearer3 = {
 
 		standard_bearer = {
-			max_organisation = 30
+			max_organisation = 0.5
+			attack = 0.01
+			defense = 0.03
+			maximum_speed = 0.02
 		}
 		path = {
 			leads_to_tech = tech_standard_bearer4
@@ -563,7 +569,10 @@ technologies = {
 	tech_standard_bearer4 = {
 
 		standard_bearer = {
-			max_organisation = 3
+			max_organisation = 0.5
+			attack = 0.01
+			defense = 0.03
+			maximum_speed = 0.02
 		}
 		research_cost = 2
 		start_year = 2040
@@ -582,12 +591,9 @@ technologies = {
 	}
 	
 	tech_rhbz = {
-
 		enable_subunits = {
 			rhbz
 		}
-		
-		
 		path = {
 			leads_to_tech = tech_rhbz2
 			research_cost_coeff = 1
@@ -610,15 +616,11 @@ technologies = {
 		}
 	}
 	tech_rhbz2 = {
-
-	
 		rhbz = {
 			recon = 0.5	
 			movement = 0.05
 			defense = 0.01
 		}
-		
-		
 		path = {
 			leads_to_tech = tech_rhbz3
 			research_cost_coeff = 1
@@ -640,14 +642,11 @@ technologies = {
 		}
 	}
 	tech_rhbz3 = {
-
-		
 		rhbz = {
 			recon = 0.5	
 			movement = 0.05
 			defense = 0.01
 		}
-		
 		path = {
 			leads_to_tech = tech_rhbz4
 			research_cost_coeff = 1
@@ -669,14 +668,11 @@ technologies = {
 		}
 	}
 	tech_rhbz4 = {
-
-		
 		rhbz = {
 			recon = 0.5	
 			movement = 0.05
 			defense = 0.01
-		}	
-
+		}
 		research_cost = 2
 		start_year = 2010
 		folder = {
@@ -693,16 +689,16 @@ technologies = {
 		}
 	}
 	
-	tech_radiolocationborba = {
+	tech_gamekeepers = {
 
 		allow = { has_tech = improved_radio_communication }
 
 		enable_subunits = {
-			radiolocationborba
+			gamekeepers
 		}
 		
 		path = {
-			leads_to_tech = tech_radiolocationborba2
+			leads_to_tech = tech_gamekeepers2
 			research_cost_coeff = 1
 		}
 
@@ -721,14 +717,25 @@ technologies = {
 			factor = 1
 		}
 	}
-	tech_radiolocationborba2 = {
+	tech_gamekeepers2 = {
 
-		radiolocationborba = {
-			default_morale = 1
+		gamekeepers = {
+			forest = {
+				movement = 0.03
+			}
+			hills = {
+				movement = 0.03
+			}
+			mountain = {
+				movement = 0.03
+			}
+			marsh = {
+				movement = 0.03
+			}
 		}
 		
 		path = {
-			leads_to_tech = tech_radiolocationborba3
+			leads_to_tech = tech_gamekeepers3
 			research_cost_coeff = 1
 		}
 
@@ -747,14 +754,25 @@ technologies = {
 			factor = 1
 		}
 	}
-	tech_radiolocationborba3 = {
+	tech_gamekeepers3 = {
 
-		radiolocationborba = {
-			default_morale = 1
+		gamekeepers = {
+			forest = {
+				movement = 0.03
+			}
+			hills = {
+				movement = 0.03
+			}
+			mountain = {
+				movement = 0.03
+			}
+			marsh = {
+				movement = 0.03
+			}
 		}
 		
 		path = {
-			leads_to_tech = tech_radiolocationborba4
+			leads_to_tech = tech_gamekeepers4
 			research_cost_coeff = 1
 		}
 
@@ -773,10 +791,21 @@ technologies = {
 			factor = 1
 		}
 	}
-	tech_radiolocationborba4 = {
+	tech_gamekeepers4 = {
 
-		radiolocationborba = {
-			default_morale = 1
+		gamekeepers = {
+			forest = {
+				movement = 0.03
+			}
+			hills = {
+				movement = 0.03
+			}
+			mountain = {
+				movement = 0.03
+			}
+			marsh = {
+				movement = 0.03
+			}
 		}		
 
 		research_cost = 2
@@ -823,7 +852,8 @@ technologies = {
 	}
 	impulse_silencers2 = {
 		pulse_jammers = {
-
+			ap_attack = 0.05
+			air_attack = 0.05
 		}
 		path = {
 			leads_to_tech = impulse_silencers3
@@ -847,7 +877,8 @@ technologies = {
 	}
 	impulse_silencers3 = {
 		pulse_jammers = {
-			
+			ap_attack = 0.05
+			air_attack = 0.05
 		}
 		path = {
 			leads_to_tech = impulse_silencers4
@@ -870,8 +901,9 @@ technologies = {
 		}
 	}
 	impulse_silencers4 = {	
-        pulse_jammers = {
-			
+		pulse_jammers = {
+			ap_attack = 0.05
+			air_attack = 0.05
 		}
 		research_cost = 2
 		start_year = 2045
@@ -1019,11 +1051,6 @@ technologies = {
 			leads_to_tech = wartime_train
 			research_cost_coeff = 1
 		}
-
-		path = {
-			leads_to_tech = armored_train
-			research_cost_coeff = 1
-		}
 		
 		categories = {
 			train_tech
@@ -1052,25 +1079,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 2
-			
-			modifier = {
-				has_war = yes
-				factor = 20
-			}
-			modifier = {
-				factor = 1.2
-				date > "1940.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "2035.1.1"
-			}
 		}
 	}
 }
