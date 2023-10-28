@@ -6,15 +6,7 @@ scripted_gui = {
 			always = yes
 		}
 		properties = {		
-			ODS_intention_scale = { frame = intention_point }
-		}			
-    }
-
-    ODS_subordination = {
-        context_type = decision_category
-		window_name = "ODS_subordination_gui"
-		visible = { 
-			always = yes
+			ODS_intention_scale = { frame = Conception_var }
 		}			
     }
 
@@ -24,7 +16,12 @@ scripted_gui = {
 		window_name = "ODS_specializations_of_regions_gui"
 		visible = {
 			ODS = { has_country_flag = ODS_access_to_specialization_of_regions }
-			#NOT = { is_core_of = ODS }
+			FROM = { has_dynamic_modifier = { modifier = ODS_informed_society } }
+		}
+		properties = {
+			ods_specializations_of_regions_button = {
+				image = "[ods_specializations_of_regions_button_icon]"	
+			}
 		}
 		effects = {
 			ods_specializations_of_regions_button_click = {

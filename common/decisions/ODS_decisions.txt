@@ -5,11 +5,7 @@ ODS_kuban = {
 		ai_will_do = {
 			base = 100	
 		}
-		allowed = {
-			original_tag = ODS
-		}
 		visible = {
-			original_tag = ODS
 			has_country_flag = Kuban_in_fire
 		}
 		available = {
@@ -111,14 +107,12 @@ ODS_subordination = {
 			add_to_variable = {
 				var = intention_point
 				value = 1
-			}			
-			hidden_effect = {
-				add_manpower = -500
-				add_political_power = -2
-				subtract_from_variable = {
-					var = Chernii_rubli
-					value = 100
-				}	
+			}		
+			add_manpower = -500
+			add_political_power = -2
+			subtract_from_variable = {
+				var = Chernii_rubli
+				value = 100
 			}
 		}
 	}
@@ -167,13 +161,11 @@ ODS_subordination = {
 				value = 100
 			}
 			839 = { add_manpower = -200 }
-			add_manpower = 500		
-			hidden_effect = { 
-				add_political_power = -2 
-				subtract_from_variable = {
-					var = Chernii_rubli
-					value = 100
-				}
+			add_manpower = 500	
+			add_political_power = -2 
+			subtract_from_variable = {
+				var = Chernii_rubli
+				value = 100
 			}
 		}
 	}
@@ -212,23 +204,11 @@ ODS_subordination = {
 				value = 1
 			}	
 			add_state_core = FROM
-			hidden_effect = { 
-				add_political_power = -2 
-				subtract_from_variable = {
-					var = Chernii_rubli
-					value = 200
-				}
+			add_political_power = -2 
+			subtract_from_variable = {
+				var = Chernii_rubli
+				value = 200
 			}
 		}
 	}
 }
-
-# ███─████─█───█─█───█─████─███───██ 
-# ──█─█──█─██─██─█───█─█──█─█────█─█  
-# ███─████─█─█─█─███─█─█────███─█──█  
-# ──█─█──█─█───█─█─█─█─█──█─█───█──█   
-# ███─█──█─█───█─███─█─████─███─█──█  
-#Механика Замысла (сделал Sum Tea Jay)  
-ODS_intention = { 
-	#Да, механика пустая по решениям. Но ее основная суть заключается в отображении информации, так что лучше загляните в common/scripted_guis/ROH_ODS_scripted_guis.txt
-} 
