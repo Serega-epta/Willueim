@@ -4,6 +4,12 @@ defined_text = {
 	name = GetAnarchyGUIImage
 	text = {
 		trigger = {
+			has_country_flag = no_war_with_LWV
+		}
+		localization_key = "GFX_Anarchy_SIL"
+	}
+	text = {
+		trigger = {
 			original_tag = BLS
 		}
 		localization_key = "GFX_Anarchy_BLS"
@@ -20,6 +26,12 @@ defined_text = {
 	name = GetAnarchyGUIToolTip
 	text = {
 		trigger = {
+			has_country_flag = no_war_with_LWV
+		}
+		localization_key = "RoH_anarchy_SIL_tt"
+	}
+	text = {
+		trigger = {
 			original_tag = BLS
 		}
 		localization_key = "RoH_anarchy_BLS_tt"
@@ -34,6 +46,12 @@ defined_text = {
 
 defined_text = {
 	name = GetAnarchyGUIToolTipDelayed
+	text = {
+		trigger = {
+			has_country_flag = no_war_with_LWV
+		}
+		localization_key = "RoH_anarchy_SIL_tt_delayed"
+	}
 	text = {
 		trigger = {
 			original_tag = BLS
