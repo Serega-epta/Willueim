@@ -1,7 +1,7 @@
 technologies = {
 	
 	bba_pre_war_fighter = {	
-	
+		enable_equipments = { pre_war_fighter_equipment }
 		path = {
 			leads_to_tech = basic_specialized_aircraft
 			research_cost_coeff = 1
@@ -36,6 +36,7 @@ technologies = {
 	#Ветка специализированной авиации (центральная ветка)
 
 	basic_specialized_aircraft = {	
+		enable_equipments = { pre_war_fighter_equipment }
 		XOR = { prewar_drone basic_mass_airplane }	
 		path = {
 			leads_to_tech = basic_specialized_bomber
@@ -63,7 +64,7 @@ technologies = {
 	}
 
 	basic_specialized_bomber = {	
-	
+		enable_equipments = { basic_specialized_bomber_equipment }
 		path = {
 			leads_to_tech = improved_specialized_bomber
 			research_cost_coeff = 1
@@ -90,7 +91,7 @@ technologies = {
 	}
 
 	improved_specialized_bomber = {	
-	
+		enable_equipments = { improved_specialized_bomber_equipment }
 		path = {
 			leads_to_tech = advanced_specialized_bomber
 			research_cost_coeff = 1
@@ -112,7 +113,7 @@ technologies = {
 	}
 
 	advanced_specialized_bomber = {	
-	
+		enable_equipments = { advanced_specialized_bomber_equipment }
 		path = {
 			leads_to_tech = specialized_bomber_of_the_future
 			research_cost_coeff = 1
@@ -134,7 +135,7 @@ technologies = {
 	}
 
 	specialized_bomber_of_the_future = {	
-		
+		enable_equipments = { specialized_bomber_of_the_future_equipment }
 		research_cost = 2
 		folder = {
 			name = bba_air_techs_folder
@@ -152,7 +153,7 @@ technologies = {
 
 
 	basic_specialized_fighter = {	
-	
+		enable_equipments = { basic_specialized_fighter_equipment }
 		path = {
 			leads_to_tech = improved_specialized_fighter
 			research_cost_coeff = 1
@@ -179,7 +180,7 @@ technologies = {
 	}
 
 	improved_specialized_fighter = {	
-	
+		enable_equipments = { improved_specialized_fighter_equipment }
 		path = {
 			leads_to_tech = advanced_specialized_fighter
 			research_cost_coeff = 1
@@ -201,7 +202,7 @@ technologies = {
 	}
 
 	advanced_specialized_fighter = {	
-	
+		enable_equipments = { advanced_specialized_fighter_equipment }
 		path = {
 			leads_to_tech = specialized_fighter_of_the_future
 			research_cost_coeff = 1
@@ -223,7 +224,7 @@ technologies = {
 	}
 
 	specialized_fighter_of_the_future = {	
-		
+		enable_equipments = { specialized_fighter_of_the_future_equipment }
 		research_cost = 2
 		folder = {
 			name = bba_air_techs_folder
@@ -241,7 +242,7 @@ technologies = {
 
 
 	basic_specialized_helicopter = {	
-	
+		enable_equipments = { basic_specialized_helicopter_equipment }
 		path = {
 			leads_to_tech = improved_specialized_helicopter
 			research_cost_coeff = 1
@@ -263,7 +264,7 @@ technologies = {
 	}
 
 	improved_specialized_helicopter = {	
-	
+		enable_equipments = { improved_specialized_helicopter_equipment }
 		path = {
 			leads_to_tech = specialized_helicopter_of_the_future
 			research_cost_coeff = 1
@@ -285,7 +286,7 @@ technologies = {
 	}
 
 	specialized_helicopter_of_the_future = {	
-		
+		enable_equipments = { specialized_helicopter_of_the_future_equipment }
 		research_cost = 2
 		folder = {
 			name = bba_air_techs_folder
@@ -305,7 +306,7 @@ technologies = {
 	#Ветка массовой авиации (левая)
 
 	basic_mass_airplane = {	
-		
+		enable_equipments = { basic_mass_airplane_equipment }
 		research_cost = 2
 
 		path = {
@@ -335,7 +336,7 @@ technologies = {
 	}
 
 	basic_mass_bomber = {	
-	
+		enable_equipments = { basic_mass_bomber_equipment }
 		path = {
 			leads_to_tech = improved_mass_bomber
 			research_cost_coeff = 1
@@ -362,7 +363,7 @@ technologies = {
 	}
 
 	improved_mass_bomber = {	
-	
+		enable_equipments = { improved_mass_bomber_equipment }
 		path = {
 			leads_to_tech = advanced_mass_bomber
 			research_cost_coeff = 1
@@ -384,7 +385,7 @@ technologies = {
 	}
 
 	advanced_mass_bomber = {	
-	
+		enable_equipments = { advanced_mass_bomber_equipment }
 		path = {
 			leads_to_tech = mass_bomber_of_the_future
 			research_cost_coeff = 1
@@ -406,7 +407,7 @@ technologies = {
 	}
 
 	mass_bomber_of_the_future = {	
-		
+		enable_equipments = { mass_bomber_of_the_future_equipment }
 		research_cost = 2
 		folder = {
 			name = bba_air_techs_folder
@@ -423,7 +424,7 @@ technologies = {
 	}
 
 	basic_mass_fighter = {	
-	
+		enable_equipments = { basic_mass_fighter_equipment }
 		path = {
 			leads_to_tech = improved_mass_fighter
 			research_cost_coeff = 1
@@ -450,7 +451,7 @@ technologies = {
 	}
 
 	improved_mass_fighter = {	
-	
+		enable_equipments = { improved_mass_fighter_equipment }
 		path = {
 			leads_to_tech = advanced_mass_fighter
 			research_cost_coeff = 1
@@ -472,7 +473,7 @@ technologies = {
 	}
 
 	advanced_mass_fighter = {	
-	
+		enable_equipments = { advanced_mass_fighter_equipment }
 		path = {
 			leads_to_tech = mass_fighter_of_the_future
 			research_cost_coeff = 1
@@ -494,7 +495,7 @@ technologies = {
 	}
 
 	mass_fighter_of_the_future = {	
-		
+		enable_equipments = { mass_fighter_of_the_future_equipment }
 		research_cost = 2
 		folder = {
 			name = bba_air_techs_folder
@@ -511,7 +512,7 @@ technologies = {
 	}
 
 	basic_mass_helicopter = {	
-	
+		enable_equipments = { basic_mass_helicopter_equipment }
 		path = {
 			leads_to_tech = improved_mass_helicopter
 			research_cost_coeff = 1
@@ -533,7 +534,7 @@ technologies = {
 	}
 
 	improved_mass_helicopter = {	
-	
+		enable_equipments = { improved_mass_helicopter_equipment }
 		path = {
 			leads_to_tech = mass_helicopter_of_the_future
 			research_cost_coeff = 1
@@ -555,7 +556,7 @@ technologies = {
 	}
 
 	mass_helicopter_of_the_future = {	
-		
+		enable_equipments = { mass_helicopter_of_the_future_equipment }
 		research_cost = 2
 		folder = {
 			name = bba_air_techs_folder
@@ -574,7 +575,7 @@ technologies = {
 
 	#Ветка беспилотников (правая ветка)
 	prewar_drone = {	
-		
+		enable_equipments = { prewar_drone_equipment }
 		research_cost = 2
 		XOR = { basic_specialized_aircraft basic_mass_airplane}
 		path = {
@@ -601,7 +602,7 @@ technologies = {
 	}
 
 	basic_attack_drone = {	
-		
+		enable_equipments = { basic_attack_drone_equipment }
 		research_cost = 2
 		path = {
 			leads_to_tech = improved_attack_drone
@@ -622,7 +623,7 @@ technologies = {
 	}
 
 	improved_attack_drone = {	
-		
+		enable_equipments = { improved_attack_drone_equipment }
 		research_cost = 2
 		path = {
 			leads_to_tech = advanced_attack_drone
@@ -643,7 +644,7 @@ technologies = {
 	}
 
 	advanced_attack_drone = {	
-		
+		enable_equipments = { advanced_attack_drone_equipment }
 		research_cost = 2
 		path = {
 			leads_to_tech = attack_drone_of_the_future
@@ -664,7 +665,7 @@ technologies = {
 	}
 
 	attack_drone_of_the_future = {	
-		
+		enable_equipments = { attack_drone_of_the_future_equipment }
 		research_cost = 2
 
 		folder = {
@@ -683,7 +684,7 @@ technologies = {
 
 
 	basic_kamikaze_drone = {	
-		
+		enable_equipments = { basic_kamikaze_drone_equipment }
 		research_cost = 2
 		path = {
 			leads_to_tech = improved_kamikaze_drone
@@ -704,7 +705,7 @@ technologies = {
 	}
 
 	improved_kamikaze_drone = {	
-		
+		enable_equipments = { improved_kamikaze_drone_equipment }
 		research_cost = 2
 		path = {
 			leads_to_tech = advanced_kamikaze_drone
@@ -725,7 +726,7 @@ technologies = {
 	}
 
 	advanced_kamikaze_drone = {	
-		
+		enable_equipments = { advanced_kamikaze_drone_equipment }
 		research_cost = 2
 		path = {
 			leads_to_tech = kamikaze_drone_of_the_future
@@ -746,7 +747,7 @@ technologies = {
 	}
 
 	kamikaze_drone_of_the_future = {	
-		
+		enable_equipments = { kamikaze_drone_of_the_future_equipment }
 		research_cost = 2
 
 		folder = {
