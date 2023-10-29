@@ -6,18 +6,19 @@ oob = base #"ODS_1936"
 # Starting tech
 set_technology = {
     infantry_weapons = 1
+	infantry_odejda  = 1
 }
 
-set_research_slots = 5
-set_convoys = 20
+set_research_slots = 2
 
 set_politics = {
-	ruling_party = opportunists
+	ruling_party = sacraments
 	elections_allowed = no
 }
 
 set_popularities = {
-	opportunists = 75
-	gelerteria = 10
-	sacraments = 15
+	sacraments = 100
 }
+
+recruit_character = SIL_Varash
+recruit_character = SIL_Zaglushka #Чтобы работал Вараш

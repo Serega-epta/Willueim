@@ -43,7 +43,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 		add_stability = 0.05
-		add_manpower = -7000
+		89 = { add_manpower = -1000 }
+		884 = { add_manpower = -1000 }
+		73 = { add_manpower = -1000 }
+		889 = { add_manpower = -1000 }
+		80 = { add_manpower = -1000 }
+		882 = { add_manpower = -1000 }
+		883 = { add_manpower = -1000 }
+		78 = { add_manpower = -1000 }
 		add_state_core = 89
 		add_state_core = 884
 		add_state_core = 73
@@ -283,7 +290,14 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		add_manpower = -25000
+		89 = { add_manpower = -3200 }
+		884 = { add_manpower = -3200 }
+		73 = { add_manpower = -3200 }
+		889 = { add_manpower = -3200 }
+		80 = { add_manpower = -3200 }
+		882 = { add_manpower = -3200 }
+		883 = { add_manpower = -3200 }
+		78 = { add_manpower = -3200 }
 		}
 	}
 	focus = {
@@ -357,7 +371,11 @@ focus_tree = {
 			country_event = {
 				id = LWV.19
 			}	
-			add_manpower = -50000
+			91 = { add_manpower = -10000 }
+			93 = { add_manpower = -10000 }
+			199 = { add_manpower = -10000 }
+			198 = { add_manpower = -10000 }
+			201 = { add_manpower = -10000 }
 			add_state_core = 91
 			add_state_core = 93
 			add_state_core = 199
@@ -620,16 +638,26 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-				Swap_ideas ={
-					Remove_idea = heaven_on_earth_3
-					Add_idea = heaven_on_earth_4
-				}
-				load_focus_tree = Lwov_focus_tretia_faza	
+			Swap_ideas ={
+				Remove_idea = heaven_on_earth_3
+				Add_idea = heaven_on_earth_4
+			}	
 			country_event = {
 				id = LWV.29
 			}
 			hidden_effect = {
 				set_country_flag = access_to_justifications_of_war
+				load_focus_tree = Lwov_focus_tretia_faza
+				SIL = {
+					country_event = {
+						id = SIL.1
+					}
+					clr_country_flag = no_war_with_LWV
+				}
+				country_event = {
+					id = LWV.78
+					days = 5
+				}
 			}	
 		}
 	}

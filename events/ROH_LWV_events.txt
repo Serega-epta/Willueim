@@ -182,11 +182,11 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = LWV.15.a1
+		name = LWV.15.a2
 		complete_national_focus = LWV_nozhi
 	}
 	option = {
-		name = LWV.15.a2
+		name = LWV.15.a1
 		complete_national_focus = LWV_oralo
 	}
 }
@@ -981,9 +981,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	country_event = {
-	id = LWV.77
-	days = 1
-	name = LWV.76.a
+		id = LWV.77
+		days = 1
+		name = LWV.76.a
+		}
 	}
 }
 country_event = {
@@ -995,6 +996,17 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 	name = LWV.77.a
+	}
+}
+country_event = {
+	id = LWV.78
+	title = LWV.78.t
+	desc = LWV.78.d
+	picture = GFX_news_event_001
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { 
+		name = LWV.78.a
 	}
 }
 
