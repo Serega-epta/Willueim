@@ -367,6 +367,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_country_flag = otmshenie_flag
+			set_country_flag = LWV_war_in_the_shadows_flag
+			set_variable = {
+				var = points_of_loyalty
+				value = 0
+			}
+			set_variable = {
+				var = points_of_markov
+				value = 10
+			}
 			mark_focus_tree_layout_dirty = yes
 			country_event = {
 				id = LWV.19
@@ -457,10 +466,10 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-			id = LWV.21
+			country_event = {
+				id = LWV.21
+			}
 		}
-	}
 	}
 	focus = {
 		id = LWV_exkalation
@@ -486,6 +495,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 5
+		available = {
+			has_country_flag = LWV_kill_Markov_flag
+		}
 		prerequisite = { focus = LWV_exkalation }
 		ai_will_do = {
 			factor = 10
