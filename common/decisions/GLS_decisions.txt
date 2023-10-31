@@ -239,8 +239,8 @@ GLS_kurchatov_project = {
 		allowed = { original_tag = GLS }	
 		available = {  
 			custom_trigger_tooltip = {
-				tooltip = gls_more_that_2500_rubles
-				check_variable = { Chernii_rubli > 2499 }
+				tooltip = gls_more_that_5000_rubles
+				check_variable = { Chernii_rubli > 4999 }
 			}			
 		}
 		visible= {
@@ -252,7 +252,7 @@ GLS_kurchatov_project = {
 		complete_effect = {
 			custom_effect_tooltip = gls_allocate_additional_resources_tt
 			hidden_effect = {
-				subtract_from_variable = { Chernii_rubli = 2500 }	
+				subtract_from_variable = { Chernii_rubli = 5000 }	
 				country_event = { id = GLS.750 days = 1 }
 			}
 		}
@@ -262,13 +262,13 @@ GLS_kurchatov_project = {
 		priority = 110		
 		allowed = { original_tag = GLS }	
 		available = {  	
-			has_manpower > 2000
+			has_manpower > 3000
 		}
 		cost = 150	
 		days_re_enable = 20
 		
 		complete_effect = {
-			add_manpower = -2000
+			add_manpower = -3000
 			custom_effect_tooltip = gls_allocate_additional_staff_tt
 			hidden_effect = {
 				add_to_variable = { ready_charge = 5 }
