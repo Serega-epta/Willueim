@@ -1,5 +1,14 @@
 technologies = {
 
+	@2010 = -1
+	@2015 = 5
+	@2020 = 10
+	@2025 = 15
+	@2030 = 20
+	@2035 = 25
+	@2040 = 30
+	@2045 = 35
+
 	infantry_weapons = {
 
 		enable_equipments = {
@@ -28,7 +37,7 @@ technologies = {
 		start_year = 2010
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = -1 }
+			position = { x = -2 y = @2010 }
 		}
 		
 		categories = {
@@ -55,7 +64,7 @@ technologies = {
 		start_year = 2015
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 2 }
+			position = { x = -2 y = @2015 }
 		}
 		
 		categories = {
@@ -86,7 +95,7 @@ technologies = {
 		start_year = 2020
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 5 }
+			position = { x = -2 y = @2020 }
 		}
 		
 		categories = {
@@ -106,7 +115,7 @@ technologies = {
 		start_year = 2020
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 5 }
+			position = { x = 0 y = @2020 }
 		}
 		
 		categories = {
@@ -137,7 +146,7 @@ technologies = {
 		start_year = 2025
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 8 }
+			position = { x = -2 y = @2025 }
 		}
 		
 		categories = {
@@ -157,7 +166,7 @@ technologies = {
 		start_year = 2025
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 8 }
+			position = { x = 0 y = @2025 }
 		}
 		
 		categories = {
@@ -189,7 +198,7 @@ technologies = {
 		start_year = 2030
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 11 }
+			position = { x = -2 y = @2030 }
 		}
 		
 		categories = {
@@ -211,7 +220,7 @@ technologies = {
 		start_year = 2030
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 11 }
+			position = { x = 0 y = @2030 }
 		}
 		
 		categories = {
@@ -224,7 +233,7 @@ technologies = {
 	}	
 	
 	
-infantry_weapons5 = {
+	infantry_weapons5 = {
 
 		enable_equipments = {
 			infantry_equipment_5
@@ -246,7 +255,7 @@ infantry_weapons5 = {
 		start_year = 2035
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 14 }
+			position = { x = -2 y = @2035 }
 		}
 		
 		categories = {
@@ -265,7 +274,7 @@ infantry_weapons5 = {
 		start_year = 2035
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 13 }
+			position = { x = 0 y = 26 }
 		}
 		
 		categories = {
@@ -285,7 +294,7 @@ infantry_weapons5 = {
 		start_year = 2035
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 15 }
+			position = { x = 0 y = 24 }
 		}
 		
 		categories = {
@@ -297,7 +306,7 @@ infantry_weapons5 = {
 		}
 	}			
 	
-infantry_weapons6 = {
+	infantry_weapons6 = {
 
 		enable_equipments = {
 			infantry_equipment_6
@@ -319,7 +328,7 @@ infantry_weapons6 = {
 		start_year = 2040
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 18 }
+			position = { x = -2 y = @2040 }
 		}
 		
 		categories = {
@@ -339,7 +348,7 @@ infantry_weapons6 = {
 		start_year = 2040
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 17 }
+			position = { x = 0 y = 31 }
 		}
 		
 		categories = {
@@ -358,7 +367,7 @@ infantry_weapons6 = {
 		start_year = 2040
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 19 }
+			position = { x = 0 y = 29 }
 		}
 		
 		categories = {
@@ -371,7 +380,7 @@ infantry_weapons6 = {
 	}			
 	
 	
-infantry_weapons7 = {
+	infantry_weapons7 = {
 
 		enable_equipments = {
 			infantry_equipment_7
@@ -389,7 +398,7 @@ infantry_weapons7 = {
 		start_year = 2045
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 22 }
+			position = { x = -2 y = @2045 }
 		}
 		
 		categories = {
@@ -409,7 +418,7 @@ infantry_weapons7 = {
 		start_year = 2045
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 21 }
+			position = { x = 0 y = 34 }
 		}
 		
 		categories = {
@@ -429,7 +438,7 @@ infantry_weapons7 = {
 		start_year = 2045
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 23 }
+			position = { x = 0 y = 36 }
 		}
 		
 		categories = {
@@ -457,7 +466,7 @@ infantry_weapons7 = {
 		start_year = 2010
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = -1 }
+			position = { x = 2 y = @2010 }
 		}
 		
 		categories = {
@@ -484,7 +493,7 @@ infantry_weapons7 = {
 		start_year = 2015
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 2 }
+			position = { x = 2 y = @2015 }
 		}
 		
 		categories = {
@@ -515,7 +524,7 @@ infantry_weapons7 = {
 		start_year = 2020
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 5 }
+			position = { x = 2 y = @2020 }
 		}
 		
 		categories = {
@@ -543,7 +552,7 @@ infantry_weapons7 = {
 		start_year = 2020
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 5 }
+			position = { x = 4 y = @2020 }
 		}
 		
 		categories = {
@@ -574,7 +583,7 @@ infantry_weapons7 = {
 		start_year = 2025
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 8 }
+			position = { x = 2 y = @2025 }
 		}
 		
 		categories = {
@@ -602,7 +611,7 @@ infantry_weapons7 = {
 		start_year = 2025
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 8 }
+			position = { x = 4 y = @2025 }
 		}
 		
 		categories = {
@@ -634,7 +643,7 @@ infantry_weapons7 = {
 		start_year = 2030
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 11 }
+			position = { x = 2 y = @2030 }
 		}
 		
 		categories = {
@@ -660,7 +669,7 @@ infantry_weapons7 = {
 		start_year = 2030
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 11 }
+			position = { x = 4 y = @2030 }
 		}
 		
 		categories = {
@@ -695,7 +704,7 @@ infantry_weapons7 = {
 		start_year = 2035
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 14 }
+			position = { x = 2 y = @2035 }
 		}
 		
 		categories = {
@@ -726,7 +735,7 @@ infantry_weapons7 = {
 		start_year = 2035
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 13 }
+			position = { x = 4 y = 24 }
 		}
 		
 		categories = {
@@ -759,7 +768,7 @@ infantry_weapons7 = {
 		start_year = 2035
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 15 }
+			position = { x = 4 y = 26 }
 		}
 		
 		categories = {
@@ -793,7 +802,7 @@ infantry_weapons7 = {
 		start_year = 2040
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 18 }
+			position = { x = 2 y = @2040 }
 		}
 		
 		categories = {
@@ -822,7 +831,7 @@ infantry_weapons7 = {
 		start_year = 2040
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 17 }
+			position = { x = 4 y = 29 }
 		}
 		
 		categories = {
@@ -850,7 +859,7 @@ infantry_weapons7 = {
 		start_year = 2040
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 19 }
+			position = { x = 4 y = 31 }
 		}
 		
 		categories = {
@@ -881,7 +890,7 @@ infantry_weapons7 = {
 		start_year = 2045
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 22 }
+			position = { x = 2 y = @2045 }
 		}
 		
 		categories = {
@@ -910,7 +919,7 @@ infantry_weapons7 = {
 		start_year = 2045
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 21 }
+			position = { x = 4 y = 34 }
 		}
 		
 		categories = {
@@ -938,7 +947,7 @@ infantry_weapons7 = {
 		start_year = 2045
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = 23 }
+			position = { x = 4 y = 36 }
 		}
 		
 		categories = {
@@ -973,16 +982,12 @@ infantry_weapons7 = {
 		start_year = 2010
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = -1 }
+			position = { x = 2 y = @2010 }
 		}
 		
 		folder = {
 			name = support_folder
 			position = { x = 7 y = 9 }
-		}
-		
-		sub_technologies = {
-			motorized_rocket_unit
 		}
 		
 		categories = {
@@ -1015,7 +1020,7 @@ infantry_weapons7 = {
 		start_year = 2015
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 2 }
+			position = { x = 2 y = @2015 }
 		}
 		
 		folder = {
@@ -1053,7 +1058,7 @@ infantry_weapons7 = {
 		start_year = 2020
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 8 }
+			position = { x = 2 y = @2025 }
 		}
 		
 		categories = {
@@ -1084,7 +1089,7 @@ infantry_weapons7 = {
 		start_year = 2025
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 13 }
+			position = { x = 2 y = @2025 }
 		}
 		
 
@@ -1109,7 +1114,7 @@ infantry_weapons7 = {
 		start_year = 2035
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = 20 }
+			position = { x = 2 y = 20 }
 		}
 		
 
@@ -1138,7 +1143,7 @@ infantry_weapons7 = {
 		start_year = 2020
 		folder = {
 			name = infantry_folder
-			position = { x = 8 y = 5 }
+			position = { x = 6 y = @2020 }
 		}
 		
 		categories = {
@@ -1167,7 +1172,7 @@ infantry_weapons7 = {
 		start_year = 2025
 		folder = {
 			name = infantry_folder
-			position = { x = 8 y = 11 }
+			position = { x = 6 y = @2030 }
 		}
 		
 		categories = {
@@ -1195,7 +1200,7 @@ infantry_weapons7 = {
 		start_year = 2025
 		folder = {
 			name = infantry_folder
-			position = { x = 8 y = 17 }
+			position = { x = 6 y = @2025 }
 		}
 		
 		categories = {
@@ -1218,7 +1223,7 @@ infantry_weapons7 = {
 		start_year = 2025
 		folder = {
 			name = infantry_folder
-			position = { x = 8 y = 25 }
+			position = { x = 6 y = 25 }
 		}
 		
 		categories = {
