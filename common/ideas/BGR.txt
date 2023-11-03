@@ -1,0 +1,21 @@
+ideas = {
+
+	country = {
+		BGR_red_paths = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1			
+			modifier = {
+				stability_factor =0.03
+				war_support_factor =0.03
+				political_power_factor =0.1
+				defence =0.3
+				offence =-0.05
+			}
+		}
+	}
+}
