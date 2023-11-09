@@ -22,11 +22,8 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = { 
-				tooltip = ARM_junta_united_tt 
-				AND = {
-					has_war = no
-					ARM_junta_united = yes
-				}
+				tooltip = ARM_junta_united_tt
+				ARM_junta_united = yes
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
