@@ -284,10 +284,6 @@ technologies = {
 		path = {
 			leads_to_tech = nuclear_fusion
 			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = NPP_construction_resumption
-			research_cost_coeff = 1
 		}	
 		research_cost =  2
 		folder = {
@@ -345,33 +341,13 @@ technologies = {
 		}
 	}
 
-	NPP_construction_resumption = {
-		enable_building = {
-			building = nuclear_reactor
-			level = 1
-		}
-		research_cost =  2
-		folder = {
-			name = electronics_folder
-			position = { x = 11 y = 4 }
-		}
-		
-		ai_will_do = {
-			factor = 30
-		}
-		
-		categories = {
-			nuclear
-		}
-	}
-
 
 	nuclear_weapon = {
 		category_tanks = {
 			defense = 0.05
 		}
 		path = {
-			leads_to_tech = classic_nuclear_weapon
+			leads_to_tech = nuclear_rockets
 			research_cost_coeff = 1
 		}	
 		path = {
@@ -397,28 +373,6 @@ technologies = {
 		}
 	}
 
-	classic_nuclear_weapon = {
-		nuclear_production = 1
-		path = {
-			leads_to_tech = nuclear_rockets
-			research_cost_coeff = 1
-		}	
-		research_cost =  2
-		nuclear_production = 1
-		folder = {
-			name = electronics_folder
-			position = { x = 13 y = 4 }
-		}
-		
-		ai_will_do = {
-			factor = 30
-		}
-		
-		categories = {
-			nuclear
-		}
-	}
-
 	nuclear_rockets = {
 		category_fighter = {
 			air_attack = 0.05
@@ -426,7 +380,7 @@ technologies = {
 		research_cost =  2
 		folder = {
 			name = electronics_folder
-			position = { x = 13 y = 6 }
+			position = { x = 13 y = 4 }
 		}
 		
 		ai_will_do = {
