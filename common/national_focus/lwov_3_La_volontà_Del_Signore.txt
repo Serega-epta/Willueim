@@ -15,7 +15,6 @@ focus_tree = {
 	focus = {
 		id = LWV_osviatit_land
 		icon = GFX_osviatit_land
-		available = { has_war = no }
 		x = 10
 		y = 0
 		cost = 5
@@ -24,12 +23,15 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LWV = { country_event = LWV.30 days = 1 }
 			add_ideas = LWV_begushie_otstupniki		
 			add_stability = 0.05
-			add_political_power = 50
-						
-			all_neighbor_country = { country_event = LWV.31 days = 1 }		
+			add_political_power = 50		
+			all_neighbor_country = { 
+				country_event { 
+					id = LWV.31 
+					days = 1 
+				}
+			}		
 			country_event = {
 				id = LWV.38
 				days = 1
@@ -671,8 +673,6 @@ focus_tree = {
 		prerequisite = { focus = LWV_presledovat_otstupnikov }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			custom_effect_tooltip = rrrreshenia_region_sviat
-			set_country_flag = decision_for_holiness
 		}
 	}
 	focus = {
