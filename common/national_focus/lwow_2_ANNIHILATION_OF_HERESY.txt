@@ -17,7 +17,7 @@ focus_tree = {
 		icon = GFX_cleaning
 		x = 6
 		y = 0
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 10
@@ -67,7 +67,7 @@ focus_tree = {
 		icon = GFX_sword
 		x = 6
 		y = 2
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_fire_and_sopkes }
 		ai_will_do = {
 			factor = 10
@@ -87,7 +87,7 @@ focus_tree = {
 		icon = GFX_nozhi
 		x = 4
 		y = 3
-		cost = 0.1
+		cost = 5
 		available = {
 		always = no
 		}
@@ -113,7 +113,7 @@ focus_tree = {
 		icon = GFX_oralo
 		x = 8
 		y = 3
-		cost = 0.1
+		cost = 5
 		available = {
 		always = no
 		}
@@ -147,7 +147,7 @@ focus_tree = {
 		relative_position_id = LWV_nozhi
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_nozhi }
 		ai_will_do = {
 			factor = 10
@@ -163,7 +163,7 @@ focus_tree = {
 		relative_position_id = LWV_hitrost
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5
 		prerequisite = { focus = LWV_hitrost }
 		ai_will_do = {
 			factor = 10
@@ -256,7 +256,7 @@ focus_tree = {
 		relative_position_id = LWV_nozhi
 		x = 0
 		y = 4
-		cost = 10 
+		cost = 5 
 		prerequisite = { focus = LWV_plamya }
 		ai_will_do = {
 			factor = 10
@@ -283,7 +283,7 @@ focus_tree = {
 		relative_position_id = LWV_oralo
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_oralo }
 		ai_will_do = {
 			factor = 10
@@ -306,7 +306,7 @@ focus_tree = {
 		relative_position_id = LWV_slabost
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5
 		prerequisite = { focus = LWV_slabost }
 		ai_will_do = {
 			factor = 10
@@ -322,7 +322,7 @@ focus_tree = {
 		relative_position_id = LWV_zapoved
 		x = 0
 		y = 1
-		cost = 4
+		cost = 5
 		prerequisite = { focus = LWV_zapoved }
 		ai_will_do = {
 			factor = 10
@@ -358,7 +358,7 @@ focus_tree = {
 		relative_position_id = LWV_swordaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 		x = 0
 		y = 6
-		cost = 10
+		cost = 5
 		available = { has_war = no }
 		prerequisite = { focus = LWV_luboy focus = LWV_pryamo }
 		ai_will_do = {
@@ -397,7 +397,7 @@ focus_tree = {
 		icon = GFX_otkrovenie
 		x = 13
 		y = 0
-		cost = 10
+		cost = 5
 		available = {
             has_completed_focus = LWV_otmshenie 
         }
@@ -419,7 +419,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = -2
 		y = 1
-		cost = 7
+		cost = 5
 		mutually_exclusive = { focus = LWV_notexit }
 		prerequisite = { focus = LWV_otkrovenie }
 		ai_will_do = {
@@ -439,7 +439,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 2
 		y = 1
-		cost = 7
+		cost = 5
 		mutually_exclusive = { focus = LWV_vstar }
 		prerequisite = { focus = LWV_otkrovenie }
 		ai_will_do = {
@@ -459,7 +459,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 0
 		y = 2
-		cost = 3
+		cost = 5
 		prerequisite = { focus = LWV_vstar focus = LWV_notexit }
 		ai_will_do = {
 			factor = 10
@@ -477,7 +477,7 @@ focus_tree = {
 		relative_position_id = LWV_shadow_warrior
 		x = 0
 		y = 1
-		cost = 4
+		cost = 5
 		prerequisite = { focus = LWV_shadow_warrior }
 		ai_will_do = {
 			factor = 10
@@ -518,7 +518,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 6
 		y = 0
-		cost = 2
+		cost = 5
 		available = {
             has_completed_focus = LWV_fatum
         }
@@ -542,7 +542,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_ochi }
 		ai_will_do = {
 			factor = 10
@@ -561,7 +561,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = -2
 		y = 2
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_ushi }
 		ai_will_do = {
 			factor = 10
@@ -590,7 +590,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 2
 		y = 2
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_ushi }
 		ai_will_do = {
 			factor = 10
@@ -620,7 +620,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 3
-		cost = 1.5
+		cost = 5
 		prerequisite = { focus = LWV_ruki }
 		prerequisite = { focus = LWV_hearts }
 		ai_will_do = {
@@ -643,7 +643,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 4
-		cost = 3
+		cost = 5
 		prerequisite = { focus = LWV_razum }
 		ai_will_do = {
 			factor = 10
