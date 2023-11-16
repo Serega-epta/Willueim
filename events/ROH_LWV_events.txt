@@ -1018,14 +1018,158 @@ country_event = {
 			limit = {
 				has_state_flag = widespread_holiness
 			}
-			add_core_of = { LWV }
+			add_core_of = LWV
 		}
 	}
 }
-
-
-
-
+#Неожиданное убийство
+country_event = {
+	id = LWV.80
+	title = LWV.80.t
+	desc = LWV.80.d
+	picture = GFX_news_event_001
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = LWV.80.a
+		clr_country_flag =  LWV_war_in_the_shadows_flag
+		kill_country_leader = yes
+		LWV_andrey_markov = {
+			set_nationality = WOW
+		}
+		WOW = {
+			add_country_leader_role = {
+				character = LWV_andrey_markov
+				promote_leader = yes
+				country_leader = {
+					ideology = sacraments_1
+					expire = "2050.1.1.1"
+					traits = {}
+				}
+			}
+		}
+		every_controlled_state = {
+			add_core_of = WOW
+			set_state_owner_to = WOW
+		}
+	}
+}
+#Сектантский реванш
+country_event = {
+	id = LWV.81
+	title = LWV.81.t
+	desc = LWV.81.d
+	picture = GFX_news_event_001
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = LWV.81.a
+		trigger = {
+			any_controlled_state = {
+				is_in_array = { PREV.transfer_states_from_LWV_to_WOW = THIS }
+			}
+			any_controlled_state = {
+				NOT = {
+					is_in_array = { PREV.transfer_states_from_LWV_to_WOW = THIS }
+				}
+			}
+		}
+		clr_country_flag =  LWV_war_in_the_shadows_flag
+		LWV_andrey_markov = {
+			set_nationality = WOW
+		}
+		for_each_scope_loop = {
+			array = transfer_states_from_LWV_to_WOW
+			if = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				transfer_state_to = WOW
+			}
+		}
+		custom_effect_tooltip = WOW_gets_states_in_civ_war
+		WOW = {
+			add_country_leader_role = {
+				character = LWV_andrey_markov
+				promote_leader = yes
+				country_leader = {
+					ideology = sacraments_1
+					expire = "2050.1.1.1"
+					traits = {}
+				}
+			}
+			for_loop_effect = {
+				end = 10
+				random_controlled_state = {
+					create_unit = {
+						division = "name = \"Sectants\" division_template = \"Sectants\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+						owner = WOW
+					}
+				}
+			}
+			custom_effect_tooltip = WOW_gets_10_divisions
+			declare_war_on = {
+				target = LWV
+				type = civil_war
+			}
+		}
+		clear_array = transfer_states_from_LWV_to_WOW
+	}
+	option = {
+		name = LWV.81.b
+		trigger = {
+			NOT = {
+				AND = {
+					any_controlled_state = {
+						is_in_array = { PREV.transfer_states_from_LWV_to_WOW = THIS }
+					}
+					any_controlled_state = {
+						NOT = {
+							is_in_array = { PREV.transfer_states_from_LWV_to_WOW = THIS }
+						}
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = poluchi_jope
+	}
+}
+#Сектанты
+country_event = {
+	id = LWV.82
+	title = LWV.82.t
+	desc = LWV.82.d
+	picture = GFX_news_event_001
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = LWV.82.a
+	}
+}
+#Милость, подкреплённая гневом
+country_event = {
+	id = LWV.83
+	title = LWV.83.t
+	desc = LWV.83.d
+	picture = GFX_news_event_001
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = LWV.83.a
+	}
+}
+#Падение “Сознающего”
+country_event = {
+	id = LWV.84
+	title = LWV.84.t
+	desc = LWV.84.d
+	picture = GFX_news_event_001
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = LWV.84.a
+	}
+}
 
 
 
