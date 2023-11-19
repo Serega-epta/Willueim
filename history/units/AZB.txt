@@ -11,6 +11,21 @@ division_template = {
 	}
 	priority = 1
 }
+division_template = {
+	name = "Patrulnaya Diviziya"
+
+	division_names_group = SOV_INF_01
+
+	regiments = {
+		egerskayapechota  = { x = 0 y = 0 }
+		egerskayapechota  = { x = 1 y = 0 }
+		egerskayapechota  = { x = 0 y = 1 }
+		egerskayapechota  = { x = 1 y = 1 }
+	 	egerskayapechota  = { x = 0 y = 2 }
+		egerskayapechota  = { x = 2 y = 0 }
+	}
+	priority = 1
+}
 
 units = {
 	division = {
@@ -33,6 +48,38 @@ units = {
 		name = "Bandits"
 		location = 6596
 		division_template = "Bandits"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.5
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Patrulnaya Diviziya"
+		location = 3767
+		division_template = "Patrulnaya Diviziya"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.5
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Patrulnaya Diviziya"
+		location = 6596
+		division_template = "Patrulnaya Diviziya"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.5
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Patrulnaya Diviziya"
+		location = 3767
+		division_template = "Patrulnaya Diviziya"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.5
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Patrulnaya Diviziya"
+		location = 6596
+		division_template = "Patrulnaya Diviziya"
         	start_experience_factor = 0.1
         	start_equipment_factor = 0.5
         	start_manpower_factor = 1.0
