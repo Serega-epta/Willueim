@@ -23,11 +23,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 		country_event = {
-						id = ODS.12
+					id = ODS.12
 				}
 				add_stability = -0.1
 		}
-		
 	}
 
 	focus = {
@@ -64,9 +63,9 @@
 		
 		completion_reward = {
 		country_event = {
-						id = ODS.6
+					id = ODS.6
 				}
-			add_war_support = -0.4
+			add_war_support = 0.3
 		}
 	}
 
@@ -88,7 +87,7 @@
 			}
 			add_timed_idea = {
 				idea = black_perimetr
-				days = 365
+				days = 500
 			}
 		}
 	}
@@ -105,15 +104,9 @@
 		
 		completion_reward = {
 			country_event = {
-						id = ODS.11
+					id = ODS.11
 				}
-			if = { 
-				limit = { has_idea = doverie_1 }
-				swap_ideas = {
-					remove_idea = doverie_1
-					add_idea = doverie_2
-				}
-			}
+			ODS_renewal_national_spirit_doverie_effect = yes
 		}
 	}
 	focus = {
@@ -129,7 +122,7 @@
 		
 		completion_reward = {
 			country_event = {
-						id = ODS.15
+					id = ODS.15
 				}
 			add_stability = 0.05
 		}
@@ -149,41 +142,7 @@
 			country_event = {
 				id = ODS.13
 			}
-			if = { 
-				limit = { has_idea = dicarstvo1 }
-				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo} 
-				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
-				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
-				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
-				}
-			}
+			ODS_renewal_national_spirit_dicarstvo_effect = yes
 		}
 	}
 	
@@ -202,41 +161,7 @@
 			country_event = {
 				id = ODS.10
 			}
-			if = { 
-				limit = { has_idea = dicarstvo1 }
-				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo} 
-				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
-				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
-				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
-				}
-			}
+			ODS_renewal_national_spirit_dicarstvo_effect = yes
 		}
 	}
 	focus = {
@@ -254,41 +179,7 @@
 			country_event = {
 				id = ODS.9
 			}
-			if = { 
-				limit = { has_idea = dicarstvo1 }
-				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo} 
-				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
-				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
-				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
-				}
-			}
+			ODS_renewal_national_spirit_dicarstvo_effect = yes
 		}
 	}
 	focus = {
@@ -307,41 +198,7 @@
 			country_event = {
 				id = ODS.4
 			}
-		if = { 
-				limit = { has_idea = dicarstvo1 }
-				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo} 
-				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
-				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
-				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
-				}
-			}
+			ODS_renewal_national_spirit_dicarstvo_effect = yes
 		}
 	}
 	focus = {
@@ -356,9 +213,10 @@
 		}
 		
 		completion_reward = {
-		country_event = {
-						id = ODS.3
+			country_event = {
+					id = ODS.3
 				}
+			ODS_renewal_national_spirit_doverie_effect = yes
 		}
 	}
 	focus = {
@@ -376,20 +234,7 @@
 			country_event = {
 				id = ODS.7
 			}
-			if = { 
-				limit = { has_idea = doverie_2} 
-				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_3} 
-				swap_ideas = {
-					remove_idea = doverie_3
-					add_idea = doverie_4
-				}
-			}
+			ODS_renewal_national_spirit_doverie_effect = yes
 		}
 	}
 	focus = {
@@ -407,20 +252,7 @@
 			country_event = {
 				id = ODS.8
 			}
-			if = { 
-				limit = { has_idea = doverie_2} 
-				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_3} 
-				swap_ideas = {
-					remove_idea = doverie_3
-					add_idea = doverie_4
-				}
-			}
+			ODS_renewal_national_spirit_doverie_effect = yes
 		}
 	}
 	focus = {
@@ -439,13 +271,7 @@
 			country_event = {
 				id = ODS.5
 			}
-			if = { 
-				limit = { has_idea = doverie_4 }
-				swap_ideas = {
-					remove_idea = doverie_4
-					add_idea = doverie_5
-				}
-			}
+			ODS_renewal_national_spirit_doverie_effect = yes
 		}
 	}
 	focus = {
