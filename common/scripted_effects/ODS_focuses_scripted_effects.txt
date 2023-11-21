@@ -1,4 +1,4 @@
-# Эффект обновления нацдуха "Дикарство" (для 1 фазы фокусов Адмиралтейства)
+# Эффект обновления нацдуха "Дикарство" (для фокусов Адмиралтейства)
 
 ODS_renewal_national_spirit_dicarstvo_effect = {
 	if = { 
@@ -35,11 +35,18 @@ ODS_renewal_national_spirit_dicarstvo_effect = {
 			remove_idea = dicarstvo4
 			add_idea = dicarstvo5
 		}
+	}
+	else_if = { 
+		limit = { has_idea = dicarstvo5 } 
+		swap_ideas = {
+			remove_idea = dicarstvo5
+			add_idea = dicarstvo6
+		}
 	}	
 }
 
 
-# Эффект обновления нацдуха "Доверие" (для 1 фазы фокусов Адмиралтейства)
+# Эффект обновления нацдуха "Доверие" (для фокусов Адмиралтейства)
 
 ODS_renewal_national_spirit_doverie_effect = {
 	if = { 
