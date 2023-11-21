@@ -130,7 +130,32 @@ ideas = {
 				supply_factor = 0.1
 				production_factory_efficiency_gain_factor = -0.15
 				production_factory_max_efficiency_factor = -0.15
+				resistance_damage_to_garrison = -0.2
+				stability_factor = 0.03
+			}
+		}
+		}
+		dicarstvo6 = {
+			picture = Veny_reshima
 			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_surrender_limit_offset = 0.7
+				production_speed_buildings_factor = -0.2
+				supply_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				resistance_damage_to_garrison = -0.2
+				stability_factor = 0.03
 			}
 		}
 			doverie_1 = {
@@ -462,23 +487,53 @@ ideas = {
 			removal_cost = 365
 			
 			modifier = {
-			operative_slot = +2
-			encryption = +20
-			decryption_power_factor = +0.2
-		}	
-	}
-	OKO2 = {
+				stability_weekly_factor = 0.1
+				resistance_growth = -0.25
+				resistance_damage_to_garrison -20%
+			}	
+		}
+		OKO2 = {
 			picture = OKO
-			
+				
 			allowed = {
 				always = no
-				}
-					modifier = {
-				operative_slot = +2
-			encryption = +20
-			decryption_power_factor = +0.4
-		}	
-	}
+			}
+			modifier = {
+				stability_weekly_factor = 0.15
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+			}	
+		}
+		OKO3 = {
+			picture = OKO
+
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly_factor = 0.2
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+				monthly_population = -0.05
+			}
+		}
+		OKO4 = {
+			picture = OKO
+
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly_factor = 0.2
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+				monthly_population = -0.03
+				attrition = -0.1
+			}
+		}
 	plan2 = {
 			picture = nenavid_serdza
 			
