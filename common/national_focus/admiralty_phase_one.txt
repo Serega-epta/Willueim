@@ -22,7 +22,7 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
+			country_event = {
 					id = ODS.12
 				}
 				add_stability = -0.1
@@ -62,7 +62,7 @@
 		}
 		
 		completion_reward = {
-		country_event = {
+			country_event = {
 					id = ODS.6
 				}
 			add_war_support = 0.3
@@ -106,7 +106,13 @@
 			country_event = {
 					id = ODS.11
 				}
-			ODS_renewal_national_spirit_doverie_effect = yes
+			if = { 
+				limit = { has_idea = doverie_1 }
+				swap_ideas = {
+					remove_idea = doverie_1
+					add_idea = doverie_2
+				}
+			}
 		}
 	}
 	focus = {
@@ -142,7 +148,13 @@
 			country_event = {
 				id = ODS.13
 			}
-			ODS_renewal_national_spirit_dicarstvo_effect = yes
+			if = { 
+				limit = { has_idea = dicarstvo }
+				swap_ideas = {
+					remove_idea = dicarstvo
+					add_idea = dicarstvo1
+				}
+			}
 		}
 	}
 	
@@ -161,7 +173,20 @@
 			country_event = {
 				id = ODS.10
 			}
-			ODS_renewal_national_spirit_dicarstvo_effect = yes
+			if = { 
+				limit = { has_idea = dicarstvo1 }
+				swap_ideas = {
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo2 }
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
+			}
 		}
 	}
 	focus = {
@@ -179,7 +204,20 @@
 			country_event = {
 				id = ODS.9
 			}
-			ODS_renewal_national_spirit_dicarstvo_effect = yes
+			if = { 
+				limit = { has_idea = dicarstvo1 }
+				swap_ideas = {
+					remove_idea = dicarstvo1
+					add_idea = dicarstvo2
+				}
+			}
+			else_if = { 
+				limit = { has_idea = dicarstvo2 }
+				swap_ideas = {
+					remove_idea = dicarstvo2
+					add_idea = dicarstvo3
+				}
+			}
 		}
 	}
 	focus = {
@@ -198,7 +236,13 @@
 			country_event = {
 				id = ODS.4
 			}
-			ODS_renewal_national_spirit_dicarstvo_effect = yes
+			if = { 
+				limit = { has_idea = dicarstvo3 }
+				swap_ideas = {
+					remove_idea = dicarstvo3
+					add_idea = dicarstvo4
+				}
+			}
 		}
 	}
 	focus = {
@@ -216,7 +260,13 @@
 			country_event = {
 					id = ODS.3
 				}
-			ODS_renewal_national_spirit_doverie_effect = yes
+			if = { 
+				limit = { has_idea = doverie_2 }
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
+			}
 		}
 	}
 	focus = {
@@ -234,7 +284,20 @@
 			country_event = {
 				id = ODS.7
 			}
-			ODS_renewal_national_spirit_doverie_effect = yes
+			if = { 
+				limit = { has_idea = doverie_3 }
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_4 }
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = doverie_5
+				}
+			}
 		}
 	}
 	focus = {
@@ -252,7 +315,20 @@
 			country_event = {
 				id = ODS.8
 			}
-			ODS_renewal_national_spirit_doverie_effect = yes
+			if = { 
+				limit = { has_idea = doverie_3 }
+				swap_ideas = {
+					remove_idea = doverie_3
+					add_idea = doverie_4
+				}
+			}
+			else_if = { 
+				limit = { has_idea = doverie_4 }
+				swap_ideas = {
+					remove_idea = doverie_4
+					add_idea = doverie_5
+				}
+			}
 		}
 	}
 	focus = {
@@ -271,7 +347,13 @@
 			country_event = {
 				id = ODS.5
 			}
-			ODS_renewal_national_spirit_doverie_effect = yes
+			if = { 
+				limit = { has_idea = doverie_5 }
+				swap_ideas = {
+					remove_idea = doverie_5
+					add_idea = doverie_6
+				}
+			}
 		}
 	}
 	focus = {
