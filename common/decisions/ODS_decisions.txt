@@ -76,15 +76,18 @@ ODS_subordination = {
 			base = 100	
 		}
 		available = {
-			has_manpower > 499
+			has_manpower > 299
 			custom_trigger_tooltip = {
-				tooltip = has_more_than_one_hundred_black_rubles_tt
-				check_variable = { Chernii_rubli > 99 } 
+				tooltip = has_more_than_three_hundred_black_rubles_tt
+				check_variable = { Chernii_rubli > 299 } 
 			}
-			has_political_power > 1
+			has_political_power > 9
+			from = { 
+				has_dynamic_modifier = { modifier = ODS_new_land }
+			}
 		}
 
-		target_trigger = { 
+		target_trigger = { т
 			FROM = { 
 				is_fully_controlled_by = ROOT
 				NOT = { 
@@ -98,7 +101,8 @@ ODS_subordination = {
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
-		complete_effect = {
+		days_remove = 21
+		remove_effect = {
 			FROM = {
 				set_state_flag = first_level_of_authority
 				add_dynamic_modifier = { modifier = ODS_reinforced_veil }
@@ -108,11 +112,11 @@ ODS_subordination = {
 				var = intention_point
 				value = 1
 			}		
-			add_manpower = -500
-			add_political_power = -2
+			add_manpower = -300
+			add_political_power = -10
 			subtract_from_variable = {
 				var = Chernii_rubli
-				value = 100
+				value = 300
 			}
 		}
 	}
@@ -126,13 +130,13 @@ ODS_subordination = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = two_hundred_people_in_the_capital_tt	
-				839 = { state_population > 199 }
+				839 = { state_population > 9999 }
 			}
 			custom_trigger_tooltip = {
-				tooltip = has_more_than_one_hundred_black_rubles_tt
-				check_variable = { Chernii_rubli > 99 } 
+				tooltip = has_more_than_two_hundred_black_rubles_tt
+				check_variable = { Chernii_rubli > 199 } 
 			}
-			has_political_power > 1
+			has_political_power > 9
 		}
 
 		visible = {
@@ -145,7 +149,8 @@ ODS_subordination = {
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
-		complete_effect = {
+		days_remove = 21
+		remove_effect = {
 			FROM = {
 				clr_state_flag = first_level_of_authority
 				set_state_flag = second_level_of_authority
@@ -158,14 +163,14 @@ ODS_subordination = {
 			}		
 			subtract_from_variable = {
 				var = Chernii_rubli
-				value = 100
+				value = 200
 			}
-			839 = { add_manpower = -200 }
+			839 = { add_manpower = -50 }
 			add_manpower = 500	
 			add_political_power = -2 
 			subtract_from_variable = {
 				var = Chernii_rubli
-				value = 100
+				value = 200
 			}
 		}
 	}
@@ -178,10 +183,10 @@ ODS_subordination = {
 		}
 		available = {
 			custom_trigger_tooltip = { 
-				tooltip = has_more_than_two_hundred_black_rubles_tt
-				check_variable = { Chernii_rubli > 99 } 
+				tooltip = has_more_than_three_hundred_black_rubles_tt
+				check_variable = { Chernii_rubli > 299 } 
 			}
-			has_political_power > 1
+			has_political_power > 9
 		}
 
 		visible = {
@@ -194,7 +199,8 @@ ODS_subordination = {
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
-		complete_effect = {
+		days_remove = 21
+		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = { modifier = ODS_informed_society }
 				remove_dynamic_modifier = { modifier = ODS_focused_eye }				
@@ -204,10 +210,10 @@ ODS_subordination = {
 				value = 1
 			}	
 			add_state_core = FROM
-			add_political_power = -2 
+			add_political_power = -10
 			subtract_from_variable = {
 				var = Chernii_rubli
-				value = 200
+				value = 300
 			}
 		}
 	}
