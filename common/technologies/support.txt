@@ -1,37 +1,31 @@
 technologies = {
+	@2010 = 0
 	@2015 = 4
 	@2025 = 9
 	@2035 = 14
 	@2045 = 19
 
 	tech_support = {
-
 		enable_equipments = {
 			support_equipment_1
 		}
 		
-		
 		path = {
 			leads_to_tech = tech_engineers
 			research_cost_coeff = 1
-		}	
-		
-		
+		}		
 		path = {
 			leads_to_tech = tech_standard_bearer
 			research_cost_coeff = 1
 		}	
-		
 		path = {
 			leads_to_tech = tech_rhbz
 			research_cost_coeff = 1
-		}	
-		
+		}		
 		path = {
 			leads_to_tech = tech_gamekeepers
 			research_cost_coeff = 1
-		}	
-				
+		}			
 		path = {
 			leads_to_tech = tech_drg
 			research_cost_coeff = 1
@@ -40,32 +34,19 @@ technologies = {
 			leads_to_tech = tech_field_hospital
 			research_cost_coeff = 1
 		}					
-
-		path = {
-			leads_to_tech = tech_logistics_company
-			research_cost_coeff = 1
-		}
 		path = {
 			leads_to_tech = tech_ghounds
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = tech_signal_company
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_maintenance_company
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = impulse_silencers
+			leads_to_tech = tech_impulse_silencers
 			research_cost_coeff = 1
 		}
 		research_cost = 1.0
 		start_year = 1918
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1918 }
+			position = { x = 0 y = @2010 }
 		}
 		
 		categories = {
@@ -820,12 +801,12 @@ technologies = {
 
 
 
-	impulse_silencers = {	
+	tech_impulse_silencers = {	
 		enable_subunits = {
 			pulse_jammers
 		}
 		path = {
-			leads_to_tech = impulse_silencers2
+			leads_to_tech = tech_impulse_silencers2
 			research_cost_coeff = 1
 		}
 		allow = { has_tech = portable_EMI_systems }
@@ -844,13 +825,13 @@ technologies = {
 			factor = 1
 		}
 	}
-	impulse_silencers2 = {
+	tech_impulse_silencers2 = {
 		pulse_jammers = {
 			ap_attack = 0.05
 			air_attack = 0.05
 		}
 		path = {
-			leads_to_tech = impulse_silencers3
+			leads_to_tech = tech_impulse_silencers3
 			research_cost_coeff = 1
 		}
 
@@ -869,13 +850,13 @@ technologies = {
 			factor = 1
 		}
 	}
-	impulse_silencers3 = {
+	tech_impulse_silencers3 = {
 		pulse_jammers = {
 			ap_attack = 0.05
 			air_attack = 0.05
 		}
 		path = {
-			leads_to_tech = impulse_silencers4
+			leads_to_tech = tech_impulse_silencers4
 			research_cost_coeff = 1
 		}
 
@@ -894,7 +875,7 @@ technologies = {
 			factor = 1
 		}
 	}
-	impulse_silencers4 = {	
+	tech_impulse_silencers4 = {	
 		pulse_jammers = {
 			ap_attack = 0.05
 			air_attack = 0.05
