@@ -2,9 +2,9 @@
 	id = admiralty_phase_one
 	
 	country = {
-		factor = 0	
+		factor = 0
 		modifier = {
-			add = 10
+			add = 15
 			tag = ODS
 		}
 	}
@@ -16,18 +16,17 @@
 		icon = GFX_Gorod_Prokazhennyh
 		x = 0
 		y = 0
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-						id = ODS.12
+			country_event = {
+					id = ODS.12
 				}
 				add_stability = -0.1
 		}
-		
 	}
 
 	focus = {
@@ -36,7 +35,7 @@
 		prerequisite = { focus = ODS_perv }
 		x = -1
 		y = 1
-		cost = 1
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -46,6 +45,7 @@
 			country_event = {
 				id = ODS.1
 			}
+			army_experience = 100
 		}
 	}
 
@@ -55,17 +55,17 @@
 		prerequisite = { focus = ODS_perv }
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 		
 		completion_reward = {
-		country_event = {
-						id = ODS.6
+			country_event = {
+					id = ODS.6
 				}
-			add_war_support = -0.4
+			add_war_support = 0.3
 		}
 	}
 
@@ -76,7 +76,7 @@
 		prerequisite = { focus = ODS_garantii_bez }
 		x = 0
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -85,7 +85,10 @@
 			country_event = {
 				id = ODS.2
 			}
-			add_ideas = black_perimetr
+			add_timed_idea = {
+				idea = black_perimetr
+				days = 500
+			}
 		}
 	}
 	focus = {
@@ -94,48 +97,20 @@
 		prerequisite = { focus = ODS_black_fortress }
 		x = 0
 		y = 3
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			country_event = {
-						id = ODS.11
+					id = ODS.11
 				}
 			if = { 
 				limit = { has_idea = doverie_1 }
 				swap_ideas = {
 					remove_idea = doverie_1
 					add_idea = doverie_2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_2} 
-				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_3} 
-				swap_ideas = {
-					remove_idea = doverie_3
-					add_idea = doverie_4
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_4 } 
-				swap_ideas = {
-					remove_idea = doverie_4
-					add_idea = 	doverie_5
-				}
-			}
-			else_if = {  
-				limit = { has_idea = doverie_5 } 
-				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = 	doverie_6
 				}
 			}
 		}
@@ -146,16 +121,16 @@
 		prerequisite = { focus = ODS_Blago }
 		x = 0
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			country_event = {
-						id = ODS.15
+					id = ODS.15
 				}
-				stability_factor = -10
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -164,7 +139,7 @@
 		prerequisite = { focus = ODS_Blago }
 		x = -3
 		y = 5
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -174,38 +149,10 @@
 				id = ODS.13
 			}
 			if = { 
-				limit = { has_idea = dicarstvo1 }
-				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo} 
+				limit = { has_idea = dicarstvo }
 				swap_ideas = {
 					remove_idea = dicarstvo
 					add_idea = dicarstvo1
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
-				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
-				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
 				}
 			}
 		}
@@ -217,7 +164,7 @@
 		prerequisite = { focus = ODS_KEB }
 		x = -2
 		y = 6
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -234,31 +181,10 @@
 				}
 			}
 			else_if = { 
-				limit = { has_idea = dicarstvo} 
-				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
+				limit = { has_idea = dicarstvo2 }
 				swap_ideas = {
 					remove_idea = dicarstvo2
 					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
-				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
 				}
 			}
 		}
@@ -269,7 +195,7 @@
 		prerequisite = { focus = ODS_KEB }
 		x = -4
 		y = 6
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -286,31 +212,10 @@
 				}
 			}
 			else_if = { 
-				limit = { has_idea = dicarstvo} 
-				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
+				limit = { has_idea = dicarstvo2 }
 				swap_ideas = {
 					remove_idea = dicarstvo2
 					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
-				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
 				}
 			}
 		}
@@ -322,7 +227,7 @@
 		prerequisite = { focus = ODS_iskorenit_dikc }
 		x = -3
 		y = 7
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -331,39 +236,11 @@
 			country_event = {
 				id = ODS.4
 			}
-		if = { 
-				limit = { has_idea = dicarstvo1 }
-				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo} 
-				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
-				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
+			if = { 
+				limit = { has_idea = dicarstvo3 }
 				swap_ideas = {
 					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
+					add_idea = dicarstvo4
 				}
 			}
 		}
@@ -374,15 +251,22 @@
 		prerequisite = { focus = ODS_Blago }
 		x = 3
 		y = 5
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
-		country_event = {
-						id = ODS.3
+			country_event = {
+					id = ODS.3
 				}
+			if = { 
+				limit = { has_idea = doverie_2 }
+				swap_ideas = {
+					remove_idea = doverie_2
+					add_idea = doverie_3
+				}
+			}
 		}
 	}
 	focus = {
@@ -391,7 +275,7 @@
 		prerequisite = { focus = ODS_osn_KOB }
 		x = 2
 		y = 6
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -401,38 +285,17 @@
 				id = ODS.7
 			}
 			if = { 
-				limit = { has_idea = doverie_1 }
-				swap_ideas = {
-					remove_idea = doverie_1
-					add_idea = doverie_2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_2} 
-				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_3} 
+				limit = { has_idea = doverie_3 }
 				swap_ideas = {
 					remove_idea = doverie_3
 					add_idea = doverie_4
 				}
 			}
 			else_if = { 
-				limit = { has_idea = doverie_4 } 
+				limit = { has_idea = doverie_4 }
 				swap_ideas = {
 					remove_idea = doverie_4
-					add_idea = 	doverie_5
-				}
-			}
-			else_if = {  
-				limit = { has_idea = doverie_5 } 
-				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = 	doverie_6
+					add_idea = doverie_5
 				}
 			}
 		}
@@ -443,7 +306,7 @@
 		prerequisite = { focus = ODS_osn_KOB }
 		x = 4
 		y = 6
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -453,38 +316,17 @@
 				id = ODS.8
 			}
 			if = { 
-				limit = { has_idea = doverie_1 }
-				swap_ideas = {
-					remove_idea = doverie_1
-					add_idea = doverie_2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_2} 
-				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_3} 
+				limit = { has_idea = doverie_3 }
 				swap_ideas = {
 					remove_idea = doverie_3
 					add_idea = doverie_4
 				}
 			}
 			else_if = { 
-				limit = { has_idea = doverie_4 } 
+				limit = { has_idea = doverie_4 }
 				swap_ideas = {
 					remove_idea = doverie_4
-					add_idea = 	doverie_5
-				}
-			}
-			else_if = {  
-				limit = { has_idea = doverie_5 } 
-				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = 	doverie_6
+					add_idea = doverie_5
 				}
 			}
 		}
@@ -496,7 +338,7 @@
 		prerequisite = { focus = ODS_rostki_blago }
 		x = 3
 		y = 7
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -506,38 +348,10 @@
 				id = ODS.5
 			}
 			if = { 
-				limit = { has_idea = doverie_1 }
-				swap_ideas = {
-					remove_idea = doverie_1
-					add_idea = doverie_2
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_2} 
-				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_3} 
-				swap_ideas = {
-					remove_idea = doverie_3
-					add_idea = doverie_4
-				}
-			}
-			else_if = { 
-				limit = { has_idea = doverie_4 } 
-				swap_ideas = {
-					remove_idea = doverie_4
-					add_idea = 	doverie_5
-				}
-			}
-			else_if = {  
-				limit = { has_idea = doverie_5 } 
+				limit = { has_idea = doverie_5 }
 				swap_ideas = {
 					remove_idea = doverie_5
-					add_idea = 	doverie_6
+					add_idea = doverie_6
 				}
 			}
 		}
@@ -550,7 +364,7 @@
 		prerequisite = { focus = ODS_arterii_rejima }
 		x = 0
 		y = 8
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -559,17 +373,17 @@
 			country_event = {
 				id = ODS.14
 			}
-			create_wargoal = {
-				type = annex_everything
+			declare_war_on = {
 				target = MOD
-			}
-			create_wargoal = {
 				type = annex_everything
+			}
+			declare_war_on = {
 				target = SOD
-			}
-			create_wargoal = {
 				type = annex_everything
+			}
+			declare_war_on = {
 				target = YWD
+				type = annex_everything
 			}
 				
 			load_focus_tree = {
@@ -578,3 +392,4 @@
 			}
 		}
 	}
+}

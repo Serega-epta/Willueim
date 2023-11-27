@@ -20,7 +20,7 @@
 		icon = GFX_third_faza_pic1
 		x = 9
 		y = 0
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -29,6 +29,10 @@
 			country_event = {
 				id = ARM.43
 				days = 1
+			}
+			custom_effect_tooltip = can_declare_war_tt
+			hidden_effect = {
+				set_country_flag = access_to_justifications_of_war
 			}
 		}
 	}
@@ -40,7 +44,7 @@
 		x = 9
 		y = 2
 		relative_position_ = politic_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -59,7 +63,7 @@
 		x = 12
 		y = 4
 		relative_position_ = politic_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -74,7 +78,7 @@
 		x = 5
 		y = 4
 		relative_position_ = politic_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -89,7 +93,7 @@
 		x = 5
 		y = 6
 		relative_position_ = politic3_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -108,7 +112,7 @@
 		x = 12
 		y = 6
 		relative_position_ = politic2_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -129,7 +133,7 @@
 		x = 5
 		y = 8
 		relative_position_ = politic4_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -145,7 +149,7 @@
 		x = 3
 		y = 10
 		relative_position_ = politic6_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_stability = 0.1
@@ -161,7 +165,7 @@
 		x = 7
 		y = 10
 		relative_position_ = politic6_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -180,7 +184,7 @@
 		x = 7
 		y = 12
 		relative_position_ = politic7_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -199,7 +203,7 @@
 		x = 3
 		y = 12
 		relative_position_ = politic8_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -221,7 +225,7 @@
 		x = 5
 		y = 14
 		relative_position_ = politic8_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -236,7 +240,7 @@
 		x = 5
 		y = 16
 		relative_position_ = politic11_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -272,7 +276,7 @@
 		x = 5
 		y = 18
 		relative_position_ = politic12_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -287,7 +291,7 @@
 		x = 5
 		y = 20
 		relative_position_ = politic13_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -303,7 +307,7 @@
 		x = 5
 		y = 22
 		relative_position_ = politic14_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -319,7 +323,7 @@
 		x = 14
 		y = 8
 		relative_position_ = politic6_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -340,7 +344,7 @@
 		x = 10
 		y = 8
 		relative_position_ = politic5_ARM
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -359,7 +363,7 @@
 		prerequisite = { focus = politic17_ARM focus = politic16_ARM }
 		x = 12
 		y = 10
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -378,7 +382,7 @@
 		prerequisite = { focus = ARM_mochit_v_sortirah }
 		x = 12
 		y = 12
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -394,7 +398,7 @@
 		mutually_exclusive = { focus = ARM_all_do_meloochei }
 		x = 10
 		y = 14
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -412,7 +416,7 @@
 		mutually_exclusive = { focus = ARM_little_dobicha_ne_interesuet }
 		x = 14
 		y = 14
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -433,7 +437,7 @@
 		prerequisite = { focus = ARM_all_do_meloochei focus = ARM_little_dobicha_ne_interesuet}
 		x = 12
 		y = 16
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -464,7 +468,7 @@
 		prerequisite = { focus = ARM_bezopasnost_w_glushi}
 		x = 12
 		y = 18
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -478,7 +482,7 @@
 		prerequisite = { focus = ARM_fallen_idols}
 		x = 12
 		y = 20
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -496,7 +500,7 @@
 		prerequisite = { focus = ARM_destroy_crestofans}
 		x = 12
 		y = 22
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -513,15 +517,25 @@
 		prerequisite = { focus = politic15_ARM}
 		x = 9
 		y = 24
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
-
+		# available = {
+		# 	has_completed_focus = ARM_evrebody_knows_his_role
+		# 	has_completed_focus = ARM_raspredelit_v_kolhozi	
+		# 	has_completed_focus = ARM_iskuplenie_pod_zemley	
+		# 	has_completed_focus = ARM_ritm_effectivnosty	
+		# 	has_completed_focus = ARM_predskazuemaya_pobeda
+		# }
 		completion_reward = {
 			add_political_power = 200
 			country_event = {
 				id = ARM.36
 				days = 1
 			}
+			# load_focus_tree = { 
+			# 	tree = army_junta_rodina_unite
+			# 	keep_completed = yes 
+			# }
 		}
 	}
 	
@@ -533,7 +547,7 @@
 		icon = GFX_state_economy
 		x = 26
 		y = 0
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -550,7 +564,7 @@
 		prerequisite = { focus = ARM_state_economy }
 		x = 22
 		y = 2
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -564,7 +578,7 @@
 		prerequisite = { focus = ARM_state_economy }
 		x = 26
 		y = 2
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -578,7 +592,7 @@
 		prerequisite = { focus = ARM_state_economy }
 		x = 30
 		y = 2
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -603,7 +617,7 @@
 		prerequisite = { focus = ARM_jitnitsa_rodini }
 		x = 22
 		y = 4
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -617,7 +631,7 @@
 		prerequisite = { focus = ARM_sokrovisha_pod_zemley }
 		x = 26
 		y = 4
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {		
@@ -645,7 +659,7 @@
 		prerequisite = { focus = ARM_dim_trub }
 		x = 30
 		y = 4
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -659,7 +673,7 @@
 		prerequisite = { focus = ARM_ojvit_teretory }
 		x = 22
 		y = 6
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -684,7 +698,7 @@
 		prerequisite = { focus = ARM_vijat_do_kapli }
 		x = 26
 		y = 6
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -705,7 +719,7 @@
 		prerequisite = { focus = ARM_strategic_planing }
 		x = 30
 		y = 6
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -727,7 +741,7 @@
 		icon = GFX_ring_rasshirilos
 		x = 26
 		y = 8
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {	
@@ -745,7 +759,7 @@
 		prerequisite = { focus = ARM_ring_rasshirilos }
 		x = 26
 		y = 10
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -761,7 +775,7 @@
 		mutually_exclusive = { focus = ARM_strict_prikazi }
 		x = 23
 		y = 12
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -780,7 +794,7 @@
 		mutually_exclusive = { focus = ARM_free_solders }
 		x = 29
 		y = 12
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -794,7 +808,7 @@
 		prerequisite = { focus = ARM_free_solders focus = ARM_strict_prikazi }
 		x = 26
 		y = 14
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -808,7 +822,7 @@
 		prerequisite = { focus = ARM_naladit_prosses }
 		x = 26
 		y = 16
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -826,7 +840,7 @@
 		prerequisite = { focus = ARM_nedastaushie_chasti }
 		x = 23
 		y = 18
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -839,7 +853,7 @@
 		prerequisite = { focus = ARM_nedastaushie_chasti }
 		x = 29
 		y = 18
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -856,7 +870,7 @@
 		prerequisite = { focus = ARM_red_wings }
 		x = 23
 		y = 20
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -876,7 +890,7 @@
 		prerequisite = { focus = ARM_steel_comanders }
 		x = 29
 		y = 20
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -893,7 +907,7 @@
 		prerequisite = { focus = ARM_who_deram_to_be_a_pilot }
 		x = 23
 		y = 22
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -909,7 +923,7 @@
 		prerequisite = { focus = ARM_vishe_skorost }
 		x = 29
 		y = 22
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -928,21 +942,10 @@
 		prerequisite = { focus = ARM_kara_s_nebes }
 		x = 26
 		y = 24
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
-		available = {
-			has_completed_focus = ARM_evrebody_knows_his_role
-			has_completed_focus = ARM_raspredelit_v_kolhozi	
-			has_completed_focus = ARM_iskuplenie_pod_zemley	
-			has_completed_focus = ARM_ritm_effectivnosty			
-		}
-		completion_reward = {
-			
-		load_focus_tree = { 
-			tree = army_junta_rodina_unite
-			keep_completed = yes 
-		}		
-		add_ideas = ARM_invincible_and_legendary	
+		completion_reward = {		
+			add_ideas = ARM_invincible_and_legendary	
 		}
 	}
 	

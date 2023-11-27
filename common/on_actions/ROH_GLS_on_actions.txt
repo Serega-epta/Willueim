@@ -22,8 +22,26 @@ on_actions = {
 						check_variable = { freedom = order }
 					}
 				}
-				remove_ideas = GLS_order
 				remove_ideas = GLS_freedom
+				remove_ideas = GLS_freedom_1
+				remove_ideas = GLS_freedom_2
+				remove_ideas = GLS_freedom_3
+				remove_ideas = GLS_freedom_4
+				remove_ideas = GLS_freedom_5
+				remove_ideas = GLS_freedom_6
+				remove_ideas = GLS_freedom_7
+				remove_ideas = GLS_freedom_8
+				remove_ideas = GLS_freedom_9
+
+				remove_ideas = GLS_order
+				remove_ideas = GLS_order_2
+				remove_ideas = GLS_order_3
+				remove_ideas = GLS_order_4
+				remove_ideas = GLS_order_5
+				remove_ideas = GLS_order_6
+				remove_ideas = GLS_order_7
+				remove_ideas = GLS_order_8
+				remove_ideas = GLS_order_9
 			}
 
 			########################
@@ -573,10 +591,25 @@ on_actions = {
 				}
 				GLS = { 
 					set_country_flag = GLS_freedom_and_order_endgame
-					load_focus_tree = medvedov_proebalsa_focus
-					add_ideas = GLS_dead_dream
+					load_focus_tree = state_liquidation_board_collapsed
+					remove_ideas = GLS_freedom
+					remove_ideas = GLS_freedom_2
+					remove_ideas = GLS_freedom_3
+					remove_ideas = GLS_freedom_4
+					remove_ideas = GLS_freedom_5
+					remove_ideas = GLS_freedom_6
+					remove_ideas = GLS_freedom_7
+					remove_ideas = GLS_freedom_8
+					remove_ideas = GLS_freedom_9
 					remove_ideas = GLS_order
-					remove_ideas = GLS_freedom					
+					remove_ideas = GLS_order_2
+					remove_ideas = GLS_order_3
+					remove_ideas = GLS_order_4
+					remove_ideas = GLS_order_5
+					remove_ideas = GLS_order_6
+					remove_ideas = GLS_order_7
+					remove_ideas = GLS_order_8
+					remove_ideas = GLS_order_9			
 					country_event = {
 						id = GLS.1111
 						days = 1
@@ -600,10 +633,25 @@ on_actions = {
 				}
 				GLS = { 
 					set_country_flag = GLS_freedom_and_order_endgame
-					load_focus_tree = medvedov_proebalsa_focus
-					add_ideas = GLS_dead_dream
+					load_focus_tree = state_liquidation_board_collapsed
+					remove_ideas = GLS_freedom
+					remove_ideas = GLS_freedom_2
+					remove_ideas = GLS_freedom_3
+					remove_ideas = GLS_freedom_4
+					remove_ideas = GLS_freedom_5
+					remove_ideas = GLS_freedom_6
+					remove_ideas = GLS_freedom_7
+					remove_ideas = GLS_freedom_8
+					remove_ideas = GLS_freedom_9
 					remove_ideas = GLS_order
-					remove_ideas = GLS_freedom					
+					remove_ideas = GLS_order_2
+					remove_ideas = GLS_order_3
+					remove_ideas = GLS_order_4
+					remove_ideas = GLS_order_5
+					remove_ideas = GLS_order_6
+					remove_ideas = GLS_order_7
+					remove_ideas = GLS_order_8
+					remove_ideas = GLS_order_9				
 					country_event = {
 						id = GLS.2222
 						days = 1
@@ -627,10 +675,25 @@ on_actions = {
 				}
 				GLS = { 
 					set_country_flag = GLS_freedom_and_order_endgame
-					load_focus_tree = medvedov_proebalsa_focus
-					add_ideas = GLS_dead_dream
+					load_focus_tree = state_liquidation_board_collapsed
+					remove_ideas = GLS_freedom
+					remove_ideas = GLS_freedom_2
+					remove_ideas = GLS_freedom_3
+					remove_ideas = GLS_freedom_4
+					remove_ideas = GLS_freedom_5
+					remove_ideas = GLS_freedom_6
+					remove_ideas = GLS_freedom_7
+					remove_ideas = GLS_freedom_8
+					remove_ideas = GLS_freedom_9
 					remove_ideas = GLS_order
-					remove_ideas = GLS_freedom					
+					remove_ideas = GLS_order_2
+					remove_ideas = GLS_order_3
+					remove_ideas = GLS_order_4
+					remove_ideas = GLS_order_5
+					remove_ideas = GLS_order_6
+					remove_ideas = GLS_order_7
+					remove_ideas = GLS_order_8
+					remove_ideas = GLS_order_9					
 					country_event = {
 						id = GLS.1100
 						days = 2
@@ -654,10 +717,25 @@ on_actions = {
 				}
 				GLS = { 
 					set_country_flag = GLS_freedom_and_order_endgame
-					load_focus_tree = medvedov_proebalsa_focus
-					add_ideas = GLS_dead_dream
-					remove_ideas = GLS_order
+					load_focus_tree = state_liquidation_board_collapsed
 					remove_ideas = GLS_freedom
+					remove_ideas = GLS_freedom_2
+					remove_ideas = GLS_freedom_3
+					remove_ideas = GLS_freedom_4
+					remove_ideas = GLS_freedom_5
+					remove_ideas = GLS_freedom_6
+					remove_ideas = GLS_freedom_7
+					remove_ideas = GLS_freedom_8
+					remove_ideas = GLS_freedom_9
+					remove_ideas = GLS_order
+					remove_ideas = GLS_order_2
+					remove_ideas = GLS_order_3
+					remove_ideas = GLS_order_4
+					remove_ideas = GLS_order_5
+					remove_ideas = GLS_order_6
+					remove_ideas = GLS_order_7
+					remove_ideas = GLS_order_8
+					remove_ideas = GLS_order_9
 					country_event = {
 						id = GLS.2200
 						days = 2
@@ -679,7 +757,20 @@ on_actions = {
 	on_weekly_GLS = {
 		effect = {
 			####Еженедельная прибавка в 2/4 процента####
-			add_to_variable = { ready_charge = 2 }
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = GLS_sharashki
+					}
+				}
+				add_to_variable = { ready_charge = 2 }
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GLS_sharashki
+				}
+				add_to_variable = { ready_charge = 3 }			
+			}
 			if = { #Если прожали решение
 				limit = { has_country_flag = gls_2_percent_additive_for_kurchatov_project }
 				add_to_variable = { ready_charge = 2 }

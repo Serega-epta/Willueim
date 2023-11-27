@@ -1,16 +1,23 @@
-capital = 1
+capital = 397
 
-oob = base #none
+oob = DIS
+add_ideas= DIS_another_mind
 
 set_technology = {
     infantry_weapons = 1
+    infantry_odejda  = 1
 }
 
-set_convoys = 20
+add_manpower = 10000
 
+set_convoys = 20
+add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 600
+}
 set_politics = {
     ruling_party = free
-    last_election = "1933.6.21"
+    last_election = "2000.6.21"
     election_frequency = 48
     elections_allowed = no
 }
@@ -19,3 +26,6 @@ set_popularities = {
     patriots = 0
     free = 100
 }
+
+recruit_character = DIS_distorted_pool 
+

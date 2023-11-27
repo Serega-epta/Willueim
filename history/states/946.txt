@@ -1,39 +1,21 @@
 
-state = {
-	id = 946
-	name = "STATE_946"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=946
+	name="STATE_946"
 
-	history = {
+	history={
 		owner = MOS
 		victory_points = {
-			6362      1
+			357 1 
 		}
-		buildings = {
-		3202 = {
-				silence = 1
 
-			}
-		3339 = {
-				silence = 1
-
-			}
-		6231 = {
-				silence = 1
-
-			}
-		11295 = {
-				silence = 1
-
-			}
-		}
 	}
 
-	provinces = {
-		3202 3339  6231 6362 11295   
+	provinces={
+		357 3202 3268 3339 3370 6231 6295 6362 6392 11295 
 	}
-
-	local_supplies = 6.0 
+	manpower=60000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=6.000
 }

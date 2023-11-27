@@ -3,45 +3,14 @@ bookmarks = {
 		name = "REQUIEM_NAME"
 		desc = "REQUIEM_DESC"
 		date = 2022.1.1.12
-		picture = "GFX_select_date_1936"
-		default_country = "ARM"
+		picture = "GFX_select_date_2022"
+		default_country = "GLS"
 		default = yes
 		
 		#Страны, имеющие полностью или частично (т.е осталось немного) реализованный контент
-		"ARM"={
-			history = "GATHERING_STORM_FULL_CONTENT_TEMPORARY_DESC"
-			ideology = patriots
-			ideas = {
-				ARM_crimson_fury 
-				ARM_punitive_fervor
-				ARM_ripped_veins
-			}
-			focuses = {
-				ARM_Fatal_Daze
-				ARM_podolyakin_choisr
-				ARM_onufrenko_choise
-			}
-		}
 
-		"LWV"={
-			history = "GATHERING_STORM_FULL_CONTENT_TEMPORARY_DESC"
-			ideology = sacraments
-			ideas = {
-				godsdl 
-				holy_nadely 
-				uniat_nationalists
-			}
-			focuses = {
-				LWV_Absol_svyatost
-				LWV_pol12
-				LWV_pol7
-			}
-		}
-
-		#Страны, не имеющие контент (или имеющие, но слишком маленький), но которые планируются в разработке		
 		"GLS"={
-			minor = yes
-			history = "GATHERING_STORM_INCOMPLETE_CONTENT_TEMPORARY_DESC"
+			history = "REQUIEM_OF_HUMANKIND_condition_of_GLS"
 			ideology = patriots
 			ideas = {				
 				GLS_fathers_and_not_fathers
@@ -54,6 +23,53 @@ bookmarks = {
 				GLS_fall_of_rodina
 			}
 		}
+
+		"ARM"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_ARM"
+			ideology = patriots
+			ideas = {
+				ARM_crimson_fury 
+				ARM_punitive_fervor
+				ARM_ripped_veins
+			}
+			focuses = {
+				ARM_Fatal_Daze
+				ARM_From_Nonexistence
+				ARM_Operation_Atonement
+			}
+		}
+
+		"LWV"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_LWV"
+			ideology = sacraments
+			ideas = {
+				godsdl 
+				holy_nadely 
+				uniat_nationalists
+			}
+			focuses = {
+				LWV_Absol_svyatost
+				LWV_Skrepit_veru_klinkom
+				LWV_Net_yaz
+			}
+		}
+
+		"ODS"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_ODS"
+			ideology = opportunists
+			ideas = {				
+				dicarstvo
+				doverie_1
+				black_beret		
+			}
+			focuses = {			
+				ODS_perv
+				ODS_clear_perimetr
+				ODS_garantii_bez
+			}
+		}
+
+		#Страны, не имеющие контент (или имеющие, но слишком маленький), но которые планируются в разработке
 
 		# "AGE"={																	<-      
 		# 	minor = yes																<-
@@ -68,25 +84,9 @@ bookmarks = {
 		# 	}																		<-
 		# }																			<-																		
 
-		"ODS"={
-			minor = yes
-			history = "GATHERING_STORM_INCOMPLETE_CONTENT_TEMPORARY_DESC"
-			ideology = opportunists
-			ideas = {				
-				pocrov_zamisel
-				sumrachniy_trepet
-				pocrov_zamisel		
-			}
-			focuses = {			
-				ODS_perv
-				ODS_clear_perimetr
-				ODS_garantii_bez
-			}
-		}
-
 		"IMP"={
 			minor = yes
-			history = "GATHERING_STORM_INCOMPLETE_CONTENT_TEMPORARY_DESC"
+			history = "REQUIEM_OF_HUMANKIND_condition_of_IMP"
 			ideology = gumanists
 			ideas = {				
 				IMP_1

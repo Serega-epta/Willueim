@@ -1,28 +1,31 @@
 
-state = {
-	id = 997
-	name = "STATE_997"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=997
+	name="STATE_997"
 
-	history = {
-		owner = WPK
-		add_core_of = WPK
+	history={
+		owner = URC
+		add_core_of = URC
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+
 		}
 		victory_points = {
-			6124 3
+			6124 5 
 		}
 		victory_points = {
-			3027 1
+			3027 1 
 		}
+
 	}
 
-	provinces = {
-		11365 6297 3270 3027 3139 3264 9370 6124 272 359 11087 146 3363 31 6288 11124
+	provinces={
+		31 146 272 359 3027 3139 3264 3270 3294 3363 6124 6148 6162 6274 6288 6297 9370 11087 11124 11365 
 	}
-
-	local_supplies = 6.0 
+	manpower=300000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=6.000
 }

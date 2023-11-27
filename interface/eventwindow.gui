@@ -505,6 +505,17 @@ guiTypes = {
 			position = { x=0 y=138 }	
 			size = { width = 580 height = 385 }
 			Orientation = UPPER_LEFT
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 1 bottom = 0 }
+
+			gridBoxType = {
+				name = "news_event_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 440 height = 240 }
+				slotsize = { width = 430 height = 230 }
+				format = "UPPER_LEFT"
+			}
+
 			instantTextBoxType = {
 				name = "Description"
 				position = { x = 43 y = 165 }

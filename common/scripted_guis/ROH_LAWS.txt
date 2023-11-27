@@ -1,9 +1,8 @@
 scripted_gui = {
     RoH_laws_gui = {
-		context_type = player_context
+		#context_type = player_context
 		parent_window_token = politics_tab
 		window_name = "RoH_laws_gui"
-		dirty = country_laws
 	
 		visible = {
 			always = yes
@@ -215,6 +214,39 @@ RoH_law_priziv = {
 			always = no
 		}
 	}
+
+	triggers = {
+		Outline_of_laws_1_1_visible = {
+			AND = {
+				check_variable = { okno_zakonow_priziva_opend = 1 }
+				has_idea = free_recruting 
+			}
+		}
+		Outline_of_laws_2_1_visible = {
+			AND = {
+				check_variable = { okno_zakonow_priziva_opend = 1 }
+				has_idea = limited_recruting  
+			}
+		}			
+		Outline_of_laws_3_1_visible = {
+			AND = {
+				check_variable = { okno_zakonow_priziva_opend = 1 }
+				has_idea = mass_recruting  
+			}
+		}
+		Outline_of_laws_4_1_visible = {
+			AND = {
+				check_variable = { okno_zakonow_priziva_opend = 1 }
+				has_idea = total_recruting  
+			}
+		}
+		Outline_of_laws_5_1_visible = {
+			AND = {
+				check_variable = { okno_zakonow_priziva_opend = 1 }
+				has_idea = admiral_recruting
+			}
+		}			
+	}		
 	effects = {
 		free_recruting_click = {	
 			if = {
@@ -302,9 +334,9 @@ RoH_law_priziv = {
 					add_political_power = -100
 					add_to_variable = { Chernii_rubli = -5000 }
 				}
-		}				
+			}				
 		}
-	}
+	}		
 }
 RoH_law_trud = {
 	context_type = player_context	
@@ -319,6 +351,38 @@ RoH_law_trud = {
 		else = {
 			always = no
 		}
+	}
+	triggers = {
+		Outline_of_laws_1_2_visible = {
+			AND = {
+				check_variable = { okno_zakonow_truda_opend = 1 }
+				has_idea = naem_trud
+			}
+		}
+		Outline_of_laws_2_2_visible = {
+			AND = {
+				check_variable = { okno_zakonow_truda_opend = 1 }
+				has_idea = trud_povinn 
+			}
+		}			
+		Outline_of_laws_3_2_visible = {
+			AND = {
+				check_variable = { okno_zakonow_truda_opend = 1 }
+				has_idea = slaves_trud
+			}
+		}
+		Outline_of_laws_4_2_visible = {
+			AND = {
+				check_variable = { okno_zakonow_truda_opend = 1 }
+				has_idea = mixed_trud
+			}
+		}
+		Outline_of_laws_5_2_visible = {
+			AND = {
+				check_variable = { okno_zakonow_truda_opend = 1 }
+				has_idea = avtomatizated_trud 
+			}
+		}			
 	}
 	effects = {
 	trud111_click = {
@@ -407,6 +471,44 @@ RoH_law_faith = {
 			always = no
 		}
 	}
+	triggers = {
+		Outline_of_laws_1_3_visible = {
+			AND = {
+				check_variable = { okno_zakonow_religii_opend = 1 }
+				has_idea = klassic_faith
+			}
+		}
+		Outline_of_laws_2_3_visible = {
+			AND = {
+				check_variable = { okno_zakonow_religii_opend = 1 }
+				has_idea = kultizm
+			}
+		}			
+		Outline_of_laws_3_3_visible = {
+			AND = {
+				check_variable = { okno_zakonow_religii_opend = 1 }
+				has_idea = ateizm
+			}
+		}
+		Outline_of_laws_4_3_visible = {
+			AND = {
+				check_variable = { okno_zakonow_religii_opend = 1 }
+				has_idea = free_faith
+			}
+		}
+		Outline_of_laws_5_3_visible = {
+			AND = {
+				check_variable = { okno_zakonow_religii_opend = 1 }
+				has_idea = istinoborchestvo
+			}
+		}
+		Outline_of_laws_6_3_visible = {
+			AND = {
+				check_variable = { okno_zakonow_religii_opend = 1 }
+				has_idea = villiumi
+			}
+		}		
+	}	
 	effects = {		
 		faith111_click = {
 			if = {
@@ -522,6 +624,32 @@ RoH_law_smi = {
 			always = no
 		}
 	}
+	triggers = {
+		Outline_of_laws_1_4_visible = {
+			AND = {
+				check_variable = { okno_zakonow_smi_opend = 1 }
+				has_idea = papers
+			}
+		}
+		Outline_of_laws_2_4_visible = {
+			AND = {
+				check_variable = { okno_zakonow_smi_opend = 1 }
+				has_idea = radiio
+			}
+		}			
+		Outline_of_laws_3_4_visible = {
+			AND = {
+				check_variable = { okno_zakonow_smi_opend = 1 }
+				has_idea = televizor
+			}
+		}
+		Outline_of_laws_4_4_visible = {
+			AND = {
+				check_variable = { okno_zakonow_smi_opend = 1 }
+				has_idea = internet
+			}
+		}		
+	}		
 	effects = {		
 		smi111_click = {
 			if = {
@@ -592,6 +720,38 @@ RoH_law_migrant = {
 			always = no
 		}
 	}
+	triggers = {
+		Outline_of_laws_1_5_visible = {
+			AND = {
+				check_variable = { okno_zakonow_migration_opend = 1 }
+				has_idea = closed_borders
+			}
+		}
+		Outline_of_laws_2_5_visible = {
+			AND = {
+				check_variable = { okno_zakonow_migration_opend = 1 }
+				has_idea = opend_borders 
+			}
+		}			
+		Outline_of_laws_3_5_visible = {
+			AND = {
+				check_variable = { okno_zakonow_migration_opend = 1 }
+				has_idea = pogran_control 
+			}
+		}
+		Outline_of_laws_4_5_visible = {
+			AND = {
+				check_variable = { okno_zakonow_migration_opend = 1 }
+				has_idea = propusk_punkt 
+			}
+		}
+		Outline_of_laws_5_5_visible = {
+			AND = {
+				check_variable = { okno_zakonow_migration_opend = 1 }
+				has_idea = migration_otbor 
+			}
+		}			
+	}		
 	effects = {	
 		migrant111_click = {
 		if = {
@@ -699,6 +859,32 @@ RoH_law_iskajenia = {
 			always = no
 		}
 	}
+	triggers = {
+		Outline_of_laws_1_6_visible = {
+			AND = {
+				check_variable = { okno_zakonow_iskajennia_opend = 1 }
+				has_idea = ignore_iskajenia 
+			}
+		}
+		Outline_of_laws_2_6_visible = {
+			AND = {
+				check_variable = { okno_zakonow_iskajennia_opend = 1 }
+				has_idea = sderjivanie_iskajenii 
+			}
+		}			
+		Outline_of_laws_3_6_visible = {
+			AND = {
+				check_variable = { okno_zakonow_iskajennia_opend = 1 }
+				has_idea = likvidation_iskajenii 
+			}
+		}
+		Outline_of_laws_4_6_visible = {
+			AND = {
+				check_variable = { okno_zakonow_iskajennia_opend = 1 }
+				has_idea = limited_recearchig_iskajenii 
+			}
+		}			
+	}		
 	effects = {	
 		iskajenia111_click = {
 			if = {
@@ -768,6 +954,38 @@ RoH_law_explotaation = {
 			always = no
 		}
 	}
+	triggers = {
+		Outline_of_laws_1_7_visible = {
+			AND = {
+				check_variable = { okno_zakonow_explotatioon_opend = 1 }
+				has_idea = mixed_rejim 
+			}
+		}
+		Outline_of_laws_2_7_visible = {
+			AND = {
+				check_variable = { okno_zakonow_explotatioon_opend = 1 }
+				has_idea = long_smeni 
+			}
+		}			
+		Outline_of_laws_3_7_visible = {
+			AND = {
+				check_variable = { okno_zakonow_explotatioon_opend = 1 }
+				has_idea = sutochnii_raboti 
+			}
+		}
+		Outline_of_laws_4_7_visible = {
+			AND = {
+				check_variable = { okno_zakonow_explotatioon_opend = 1 }
+				has_idea = unstopble_work 
+			}
+		}
+		Outline_of_laws_5_7_visible = {
+			AND = {
+				check_variable = { okno_zakonow_explotatioon_opend = 1 }
+				has_idea = krov_i_pot 
+			}
+		}		
+	}		
 	effects = {	
 		explotaation111_click = {
 			if = {
@@ -859,6 +1077,32 @@ RoH_law_social = {
 			always = no
 		}
 	}
+	triggers = {
+		Outline_of_laws_1_8_visible = {
+			AND = {
+				check_variable = { okno_zakonow_social_opend = 1 }
+				has_idea = ignore_social 
+			}
+		}
+		Outline_of_laws_2_8_visible = {
+			AND = {
+				check_variable = { okno_zakonow_social_opend = 1 }
+				has_idea = sderjivanie_social 
+			}
+		}			
+		Outline_of_laws_3_8_visible = {
+			AND = {
+				check_variable = { okno_zakonow_social_opend = 1 }
+				has_idea = podavlenie_social 
+			}
+		}
+		Outline_of_laws_4_8_visible = {
+			AND = {
+				check_variable = { okno_zakonow_social_opend = 1 }
+				has_idea = genocide 
+			}
+		}		
+	}	
 	effects = {	
 		social111_click = {
 			if = {

@@ -1,4 +1,4 @@
-capital = 843
+capital = 874
 
 
 oob = "BRI"
@@ -6,12 +6,33 @@ oob = "BRI"
 
 # Starting tech
 set_technology = {
+    #Категория пехоты
     infantry_weapons = 1
+    infantry_weapons1 = 1
+    infantry_odejda  = 1
+    infantry_odejda1 = 1
+    motorised_infantry = 1
+    motorised_infantry2 = 1
+    #Категория поддержки
+    tech_support = 1
+    tech_recon = 1
+    tech_rhbz = 1
+    #Категория артиллерии
+    gw_artillery = 1
+    stvolartillery = 1
+    boepripas = 1
+    #Категория электроники
+    electronic_mechanical_engineering = 1
+    electronic_mechanical_engineering2 = 1
+    #Категория индустрии
+    basic_machine_tools = 1
+    construction1 = 1
+    fuel_silos = 1
 }
 
 set_research_slots = 2
 set_convoys = 20
-
+add_manpower = 75000
 set_politics = {
 	ruling_party = juntas 
 	elections_allowed = no

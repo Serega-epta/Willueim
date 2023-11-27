@@ -1,35 +1,29 @@
 
-state = {
-	id = 898
-	name = "STATE_898"
-	manpower = 183748
-	
-	state_category = rural
-
+state={
+	id=898
+	name="STATE_898"
 	resources={
-		energy=21 #Магнитная аномалия
+		energy=21.000
 	}
 
-	history = {
+	history={
 		owner = COR
 		add_core_of = IMP
 		victory_points = {
-			  9355   1
-		}
-		victory_points = {
-			  9261   1
+			6355 1 
 		}
 		buildings = {
-		
 			infrastructure = 2
-			
+
 		}
-		
+
 	}
 
-	provinces = {
-		9261 9328 9355 9384 9411 11284
+	provinces={
+		6355 9384 9411 
 	}
-
-	local_supplies = 6.0 
+	manpower=113000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=6.000
 }

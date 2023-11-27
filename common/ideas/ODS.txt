@@ -1,8 +1,7 @@
 ideas = {
-
 	country = {
 		dicarstvo = {
-			picture = nenavid_serdza
+			picture = Dikarstvo
 			
 			allowed = {
 				always = no
@@ -15,16 +14,17 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_surrender_limit_offset = -0.85
+				#max_surrender_limit_offset = -0.85
+				surrender_limit = -0.85
 				production_speed_buildings_factor = -0.3
-				supply_factor = 0.2
+				supply_factor = -0.2
 				production_factory_efficiency_gain_factor = -0.25
 				production_factory_max_efficiency_factor = -0.25
 			
 			}
 		}	
-		dicarstvo1 = {
-			picture = nenavid_serdza
+		dicarstvo1 = { # Меняется на фокусе Основать КЭБ
+			picture = Dikarstvo
 			
 			allowed = {
 				always = no
@@ -37,16 +37,15 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_surrender_limit_offset = -0.85
-				production_speed_buildings_factor = -0.2
-				supply_factor = 0.2
-				production_factory_efficiency_gain_factor = -0.15
+				surrender_limit = -0.85
+				production_speed_buildings_factor = -0.2 # +10%
+				supply_factor = -0.1 # +10%
+				production_factory_efficiency_gain_factor = -0.15 # +10%
 				production_factory_max_efficiency_factor = -0.25
-			
 			}
 		}
-		dicarstvo2 = {
-			picture = nenavid_serdza
+		dicarstvo2 = { # Меняется на фокусе Искоренить дикость
+			picture = Dikarstvo
 			
 			allowed = {
 				always = no
@@ -59,16 +58,15 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_surrender_limit_offset = -0.85
-				production_speed_buildings_factor = -0.2
-				supply_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
+				surrender_limit = -0.85
+				production_speed_buildings_factor = 0.0 # +20%
+				supply_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05 # +10%
 				production_factory_max_efficiency_factor = -0.25
-			
 			}
 		}
-			dicarstvo3 = {
-			picture = nenavid_serdza
+		dicarstvo3 = { # Меняется на фокусе Реализовать каждого
+			picture = Dikarstvo
 			
 			allowed = {
 				always = no
@@ -81,16 +79,15 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_surrender_limit_offset = -0.85
-				production_speed_buildings_factor = -0.2
-				supply_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = -0.15
-			
+				surrender_limit = -0.85
+				production_speed_buildings_factor = 0.0
+				supply_factor = 0.0 # +10%
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05 # +20%
 			}
 		}
-		dicarstvo4 = {
-			picture = nenavid_serdza
+		dicarstvo4 = { # Меняется на фокусе Вены режима
+			picture = Veny_reshima
 			
 			allowed = {
 				always = no
@@ -103,16 +100,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_surrender_limit_offset = -0.85
-				production_speed_buildings_factor = -0.2
-				supply_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = -0.15
-			
+				surrender_limit = -0.85
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
 			}
 		}
 		dicarstvo5 = {
-			picture = nenavid_serdza
+			picture = Veny_reshima
 			
 			allowed = {
 				always = no
@@ -125,16 +120,16 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_surrender_limit_offset = -0.15
-				production_speed_buildings_factor = -0.2
-				supply_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = -0.15
-			
+				surrender_limit = -0.85
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				resistance_damage_to_garrison = -0.2
+				stability_factor = 0.03
+				production_speed_buildings_factor = 0.1
 			}
 		}
-			doverie_1 = {
-			picture = nenavid_serdza
+		dicarstvo6 = {
+			picture = Veny_reshima
 			
 			allowed = {
 				always = no
@@ -147,18 +142,16 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.4
-			production_speed_buildings_factor = -0.3
-			conscription_factor = -0.01
-			weekly_manpower = -1000
-			ax_surrender_limit_offset = -0.7
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			
+				surrender_limit = -0.15
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				resistance_damage_to_garrison = -0.2
+				stability_factor = 0.03
+				production_speed_buildings_factor = 0.1
 			}
 		}
-			doverie_2 = {
-			picture = nenavid_serdza
+		doverie_1 = {
+			picture = doverie
 			
 			allowed = {
 				always = no
@@ -171,18 +164,17 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.3
-			production_speed_buildings_factor = -0.3
-			conscription_factor = -0.01
-			weekly_manpower = -1000
-			ax_surrender_limit_offset = -0.7
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			
+				stability_factor = -0.4
+				recruitable_population_factor = -0.01
+				production_speed_buildings_factor = -0.3
+				weekly_manpower = -1000
+				max_surrender_limit_offset = -0.7
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		doverie_3 = {
-			picture = nenavid_serdza
+		doverie_2 = { # Меняется на фокусе Политика Благоприятствования
+			picture = doverie
 			
 			allowed = {
 				always = no
@@ -195,18 +187,17 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.3
-			production_speed_buildings_factor = -0.3
-			conscription_factor = 0.035
-			weekly_manpower = -1000
-			ax_surrender_limit_offset = -0.7
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			
+				stability_factor = -0.3
+				recruitable_population_factor = -0.01
+				production_speed_buildings_factor = -0.3
+				weekly_manpower = -500
+				max_surrender_limit_offset = -0.7
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		doverie_4 = {
-			picture = nenavid_serdza
+		doverie_3 = { # Меняется на фокусе Основать КОБ
+			picture = doverie
 			
 			allowed = {
 				always = no
@@ -219,18 +210,17 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.2
-			production_speed_buildings_factor = -0.3
-			conscription_factor = 0.035
-			weekly_manpower = -500
-			ax_surrender_limit_offset = -0.7
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			
+				stability_factor = -0.25 # +5%
+				recruitable_population_factor = -0.01
+				production_speed_buildings_factor = -0.3
+				weekly_manpower = -500
+				max_surrender_limit_offset = -0.7
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		doverie_5 = {
-			picture = nenavid_serdza
+		doverie_4 = { # Меняется на фокусе Новый гражданин
+			picture = doverie
 			
 			allowed = {
 				always = no
@@ -243,18 +233,17 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.2
-			production_speed_buildings_factor = -0.3
-			conscription_factor = 0.035
-			weekly_manpower = -500
-			ax_surrender_limit_offset = -0.7
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			
+				stability_factor = -0.25
+				recruitable_population_factor = 0.02 # + 3%
+				production_speed_buildings_factor = -0.3
+				weekly_manpower = -250 # +250
+				max_surrender_limit_offset = -0.7
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-			doverie_6 = {
-			picture = nenavid_serdza
+		doverie_5 = { # Меняется на фокусе Ростки благоразумия
+			picture = doverie
 			
 			allowed = {
 				always = no
@@ -267,19 +256,40 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.2
-			production_speed_buildings_factor = -0.3
-			conscription_factor = 0.035
-			weekly_manpower = -500
-			ax_surrender_limit_offset = -70
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			production_speed_buildings_factor = 0.1
+				stability_factor = -0.15 # +10%
+				recruitable_population_factor = 0.02
+				production_speed_buildings_factor = -0.3
+				weekly_manpower = 250 # +500
+				max_surrender_limit_offset = -0.7
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
+			}
+		}
+		doverie_6 = { # Меняется на фокусе Артерии режима. Получает новое название
+			picture = doverie
 			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				recruitable_population_factor = 0.02
+				production_speed_buildings_factor = -0.3
+				weekly_manpower = 500
+				army_speed_factor = 0.05
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
 		doverie_7 = {
-			picture = nenavid_serdza
+			picture = doverie
 			
 			allowed = {
 				always = no
@@ -292,20 +302,18 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.2
-			production_speed_buildings_factor = -0.3
-			conscription_factor = 0.035
-			weekly_manpower = -500
-			ax_surrender_limit_offset = -0.7
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			production_speed_buildings_factor = 0.1
-			ompliance_growth_on_our_occupied_states = 0.1
-			
+				stability_factor = -0.2
+				production_speed_buildings_factor = -0.1
+				conscription_factor = 0.035
+				weekly_manpower = 500
+				max_surrender_limit_offset = -0.7
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
+				ompliance_growth_on_our_occupied_states = 0.1
 			}
 		}
 		doverie_8 = {
-			picture = nenavid_serdza
+			picture = doverie
 			
 			allowed = {
 				always = no
@@ -318,21 +326,19 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.2
-			production_speed_buildings_factor = -0.3
-			conscription_factor = 0.035
-			weekly_manpower = -500
-			ax_surrender_limit_offset = -0.7
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			production_speed_buildings_factor = 0.1
-			ompliance_growth_on_our_occupied_states = 0.1
-			esistance_target_on_our_occupied_states = 0.4
-			
+				stability_factor = -0.2
+				production_speed_buildings_factor = 0.1
+				conscription_factor = 0.035
+				weekly_manpower = 500
+				max_surrender_limit_offset = -0.7
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
+				ompliance_growth_on_our_occupied_states = 0.1
+				esistance_target_on_our_occupied_states = 0.4
 			}
 		}
-			black_beret = {
-			picture = nenavid_serdza
+		black_beret = {
+			picture = black_berets
 			
 			allowed = {
 				always = no
@@ -345,13 +351,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			resistance_damage_to_garrison_on_our_occupied_states = -0.4
-			resistance_growth_on_our_occupied_states = -0.5
-			
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-				black_beret2 = {
-			picture = nenavid_serdza
+		black_beret2 = {
+			picture = black_berets
 			
 			allowed = {
 				always = no
@@ -364,15 +369,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			resistance_damage_to_garrison_on_our_occupied_states = 0.4
-			resistance_growth_on_our_occupied_states = 0.5
-			max_planning = 0.2
-			planning_speed = 0.2
-			
+				resistance_damage_to_garrison_on_our_occupied_states = 0.4
+				resistance_growth_on_our_occupied_states = 0.5
 			}
 		}
-			black_beret3 = {
-			picture = nenavid_serdza
+		black_beret3 = {
+			picture = black_berets
 			
 			allowed = {
 				always = no
@@ -385,16 +387,38 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			resistance_damage_to_garrison_on_our_occupied_states = 0.4
-			resistance_growth_on_our_occupied_states = 0.5
-			max_planning = 0.2
-			planning_speed = 0.2
-			supply_combat_penalties_on_core_factor =  0.05
-			
+				resistance_damage_to_garrison_on_our_occupied_states = 0.4
+				resistance_growth_on_our_occupied_states = 0.5
+				max_planning = 0.2
+				planning_speed = 0.2
+				supply_combat_penalties_on_core_factor =  0.05
+				army_leader_start_level = 1
 			}
 		}
-			black_perimetr = {
-			picture = nenavid_serdza
+		black_beret4 = {
+			picture = black_berets
+
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_damage_to_garrison_on_our_occupied_states = 0.4
+				resistance_growth_on_our_occupied_states = 0.5
+				max_planning = 0.2
+				planning_speed = 0.2
+				supply_combat_penalties_on_core_factor = -0.05
+				army_leader_start_level = 1
+			}
+		}
+		black_perimetr = {
+			picture = black_perimeter
 			
 			allowed = {
 				always = no
@@ -407,66 +431,8 @@ ideas = {
 			removal_cost = 360
 			
 			modifier = {
-		production_speed_bunker_factor = 0.7
-			
-			}
-		}
-		nenavid_serdza = {
-			picture = nenavid_serdza
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_speed_factor = -0.5
-				army_org_factor = -0.5
-				army_org_regain = -0.5
-				
-			}
-		}
-		sumrachniy_trepet = {
-			picture = sumrachniy_trepet
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_speed_factor = -0.25
-				army_org_factor = -0.25
-				army_org_regain = -0.25
-			}
-		}
-		pocrov_zamisel = {
-			picture = glaz_ebuchiy
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_speed_factor = -0.1
-				army_org_factor = -0.1
-				army_org_regain = -0.1
+				production_speed_bunker_factor = 0.5
+				production_speed_infrastructure_factor = 0.2
 			}
 		}
 		plan = {
@@ -483,13 +449,13 @@ ideas = {
 			removal_cost = 365
 			
 			modifier = {
-		production_speed_Infrastructure_factor = 0.5 
-		production_speed_Railway_factor = 0.4
-		production_speed_Supply_hub_factor = 0.4
+				production_speed_Infrastructure_factor = 0.5 
+				production_speed_Railway_factor = 0.4
+				production_speed_Supply_hub_factor = 0.4
 			}
 		}	
 		OKO = {
-			picture = nenavid_serdza
+			picture = OKO
 			
 			allowed = {
 				always = no
@@ -502,53 +468,86 @@ ideas = {
 			removal_cost = 365
 			
 			modifier = {
-			operative_slot = +2
-			encryption = +20
-			decryption_power_factor = +0.2
-		}	
-	}
-	OKO2 = {
-			picture = nenavid_serdza
-			
+				stability_weekly_factor = 0.1
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+			}	
+		}
+		OKO2 = {
+			picture = OKO
+				
 			allowed = {
 				always = no
-				}
-					modifier = {
-				operative_slot = +2
-			encryption = +20
-			decryption_power_factor = +0.4
-		}	
-	}
-	plan2 = {
+			}
+			modifier = {
+				stability_weekly_factor = 0.15
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+			}	
+		}
+		OKO3 = {
+			picture = OKO
+
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly_factor = 0.2
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+				monthly_population = -0.05
+			}
+		}
+		OKO4 = {
+			picture = OKO
+
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly_factor = 0.2
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+				monthly_population = -0.03
+				attrition = -0.1
+			}
+		}
+		plan2 = {
 			picture = nenavid_serdza
 			
 			allowed = {
 				always = nо
-				}
-					modifier = {
-		production_speed_Infrastructure_factor = 0.5 
-		production_speed_Railway_factor = 0.4
-		production_speed_Supply_hub_factor = 0.4
-		industry_repair_factor = 0.4
-		}	
-	}
-	plan3 = {
-			picture = nenavid_serdza
+			}
+
+			modifier = {
+				production_speed_Infrastructure_factor = 0.5 
+				production_speed_Railway_factor = 0.4
+				production_speed_Supply_hub_factor = 0.4
+				industry_repair_factor = 0.4
+			}	
+		}
+		plan3 = {
+			picture = Plan_Platsdarm
 			
 			allowed = {
-			always = nо
-				}
-				modifier = {
-			industry_repair_factor = 0.4
-			production_speed_industrial_complex_factor = 0.2
-			production_speed_Infrastructure_factor = 0.5 
-			production_speed_Railway_factor = 0.4
-			production_speed_Supply_hub_factor = 0.4
-		}	
-	}
+				always = nо
+			}
 
-	food_level_one = {
-			picture = glaz_ebuchiy		
+			modifier = {
+				industry_repair_factor = 0.4
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_Infrastructure_factor = 0.5 
+				production_speed_Railway_factor = 0.4
+				production_speed_Supply_hub_factor = 0.4
+			}	
+		}
+
+		food_level_one = {
+			picture = glaz_ebuchiy
+
 			modifier = {
 				stability_factor = -1
 				war_support_factor = -1
@@ -634,5 +633,5 @@ ideas = {
 				war_support_factor = -0.1
 			}
 		}
-}
+	}
 }

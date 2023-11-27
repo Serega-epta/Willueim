@@ -1,6 +1,6 @@
 guiTypes = {
 	containerWindowType = {
-		name = "roh_station_faceplate"
+		name = "roh_music_faceplate"
 		position = { x=0 y=0 }
 		size = { width = 590 height = 46 }
 
@@ -10,11 +10,11 @@ guiTypes = {
 			position = { x= 0 y = 0 }
 			alwaystransparent = yes
 		}
-		
+
 		instantTextboxType = {
 			name = "track_name"
 			position = { x = 72 y = 20 }
-			font = "hoi_18b"
+			font = "hoi_20b"
 			text = "Roger Pontare - Nar vindarna viskar mitt namn"
 			maxWidth = 450
 			maxHeight = 25
@@ -111,7 +111,7 @@ guiTypes = {
 	}
 
 	containerWindowType={
-		name = "roh_station_stations_entry"
+		name = "roh_music_stations_entry"
 		size = { width = 162 height = 130 }
 		
 		checkBoxType = {

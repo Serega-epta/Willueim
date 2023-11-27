@@ -9,4 +9,12 @@ on_actions = {
 			}
 		}
 	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { original_tag = ODS }
+				add_dynamic_modifier = { ODS_new_land }
+			}
+		}
+	}
 }

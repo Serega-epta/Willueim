@@ -17,7 +17,7 @@ focus_tree = {
 		icon = GFX_cleaning
 		x = 6
 		y = 0
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 10
@@ -43,7 +43,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 		add_stability = 0.05
-		add_manpower = -7000
+		89 = { add_manpower = -1000 }
+		884 = { add_manpower = -1000 }
+		73 = { add_manpower = -1000 }
+		889 = { add_manpower = -1000 }
+		80 = { add_manpower = -1000 }
+		882 = { add_manpower = -1000 }
+		883 = { add_manpower = -1000 }
+		78 = { add_manpower = -1000 }
 		add_state_core = 89
 		add_state_core = 884
 		add_state_core = 73
@@ -60,7 +67,7 @@ focus_tree = {
 		icon = GFX_sword
 		x = 6
 		y = 2
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_fire_and_sopkes }
 		ai_will_do = {
 			factor = 10
@@ -80,7 +87,7 @@ focus_tree = {
 		icon = GFX_nozhi
 		x = 4
 		y = 3
-		cost = 0.1
+		cost = 5
 		available = {
 		always = no
 		}
@@ -106,7 +113,7 @@ focus_tree = {
 		icon = GFX_oralo
 		x = 8
 		y = 3
-		cost = 0.1
+		cost = 5
 		available = {
 		always = no
 		}
@@ -140,18 +147,14 @@ focus_tree = {
 		relative_position_id = LWV_nozhi
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_nozhi }
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			send_equipment = {
-			equipment = infantry_equipment
-			amount = 1500
-			target = SVA
-			}
+			custom_effect_tooltip = send_equipment_to_SVA
 		}
 	}
 	focus = {
@@ -160,16 +163,14 @@ focus_tree = {
 		relative_position_id = LWV_hitrost
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5
 		prerequisite = { focus = LWV_hitrost }
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			SVA = {
-				add_ideas = Blagoslavleny
-			}
+			custom_effect_tooltip = add_idea_Blagoslavleny_to_SVA
 		}
 	}
 	focus = {
@@ -178,7 +179,7 @@ focus_tree = {
 		relative_position_id = LWV_nozhi
 		x = 0
 		y = 3
-		cost = 4
+		cost = 5
 		prerequisite = { focus = LWV_rostochki }
 		ai_will_do = {
 			factor = 10
@@ -187,65 +188,65 @@ focus_tree = {
 		completion_reward = {
 				add_ideas = Brother	
 				custom_effect_tooltip = holy_mjatej_tt
-					hidden_effect = {
-					
+				hidden_effect = {
 					create_dynamic_country = {
-					original_tag = SVA	
-					copy_tag = COA
-					transfer_state = 91
+						original_tag = SVA	
+						copy_tag = COA
+						transfer_state = 91
 					}
 					SVA = {
-					set_politics ={
-							ruling_Party = sacraments
+						set_politics ={
+							ruling_party = sacraments
 							elections_allowed = no
-							long_name = SVA_sacraments_l
 							name = SVA_sacraments
+							long_name = SVA_sacraments_l
 						}
-					set_popularities = {
-					sacraments = 100
-					}
-					add_ideas = Blagoslavleny
-					add_equipment 1500 infantry_equipment_1
-					
-					division_template = { 
-						name = "holyarmy"
-						division_names_group = SVA_CAM_02
-						is_locked = yes
-						regiments = {
-							opolchenie  = { x = 0 y = 0 }
-							opolchenie  = { x = 0 y = 1 }
-							opolchenie  = { x = 1 y = 0 }
-							opolchenie  = { x = 1 y = 1 }
-							opolchenie  = { x = 2 y = 0 }
-							opolchenie  = { x = 2 y = 1 }							
-							opolchenie  = { x = 0 y = 2 }
-							opolchenie  = { x = 1 y = 2 }
-							opolchenie  = { x = 2 y = 2 }							
-							opolchenie  = { x = 0 y = 3 }
-							opolchenie  = { x = 1 y = 3 }
-							opolchenie  = { x = 2 y = 3 }
+						set_popularities = {
+							sacraments = 100
 						}
-						support = {
-							engineer = { x = 0 y = 0 }
+						add_ideas = Blagoslavleny
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 1500
+							producer = SVA
+						}					
+						division_template = { 
+							name = "holyarmy"
+							division_names_group = SVA_CAM_02
+							is_locked = yes
+							regiments = {
+								opolchenie  = { x = 0 y = 0 }
+								opolchenie  = { x = 0 y = 1 }
+								opolchenie  = { x = 1 y = 0 }
+								opolchenie  = { x = 1 y = 1 }
+								opolchenie  = { x = 2 y = 0 }
+								opolchenie  = { x = 2 y = 1 }							
+								opolchenie  = { x = 0 y = 2 }
+								opolchenie  = { x = 1 y = 2 }
+								opolchenie  = { x = 2 y = 2 }							
+								opolchenie  = { x = 0 y = 3 }
+								opolchenie  = { x = 1 y = 3 }
+								opolchenie  = { x = 2 y = 3 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+							}
+							priority = 0
+						}			
+						91 = {
+							create_unit = {
+								division = "division_template = \"holyarmy\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+								owner = SVA
+								count = 10
+							}
 						}
-						priority = 0
-					}			
-					91 = {
-						create_unit = {
-							division = "division_template = \"holyarmy\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = SVA
-							count = 10
-						}
-					}
-					declare_war_on = {
+						declare_war_on = {
 							target = COA
 							type = civil_war
+						}
+						set_cosmetic_tag = SVA_myatejniki 
 					}
-					set_cosmetic_tag = SVA_myatejniki 
-					hidden_effect = {
 					play_song = "zov_goida"
-					}
-				}
 				}
 		}
 	}
@@ -255,7 +256,7 @@ focus_tree = {
 		relative_position_id = LWV_nozhi
 		x = 0
 		y = 4
-		cost = 5
+		cost = 5 
 		prerequisite = { focus = LWV_plamya }
 		ai_will_do = {
 			factor = 10
@@ -274,9 +275,6 @@ focus_tree = {
 		type = annex_everything
 		}
 		remove_idea = Brother
-		hidden_effect = {
-			play_song = "zov_goida"
-		}
 		}
 	}
 	focus = {
@@ -285,14 +283,21 @@ focus_tree = {
 		relative_position_id = LWV_oralo
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_oralo }
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		add_manpower = -25000
+		89 = { add_manpower = -3200 }
+		884 = { add_manpower = -3200 }
+		73 = { add_manpower = -3200 }
+		889 = { add_manpower = -3200 }
+		80 = { add_manpower = -3200 }
+		882 = { add_manpower = -3200 }
+		883 = { add_manpower = -3200 }
+		78 = { add_manpower = -3200 }
 		}
 	}
 	focus = {
@@ -301,7 +306,7 @@ focus_tree = {
 		relative_position_id = LWV_slabost
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5
 		prerequisite = { focus = LWV_slabost }
 		ai_will_do = {
 			factor = 10
@@ -317,7 +322,7 @@ focus_tree = {
 		relative_position_id = LWV_zapoved
 		x = 0
 		y = 1
-		cost = 4
+		cost = 5
 		prerequisite = { focus = LWV_zapoved }
 		ai_will_do = {
 			factor = 10
@@ -353,34 +358,52 @@ focus_tree = {
 		relative_position_id = LWV_swordaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 		x = 0
 		y = 6
-		cost = 10
-		set_country_flag = pipapupa
+		cost = 5
+		available = { has_war = no }
 		prerequisite = { focus = LWV_luboy focus = LWV_pryamo }
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-			id = LWV.19
-		}	
-		add_manpower = -50000
-		add_state_core = 91
-		add_state_core = 93
-		add_state_core = 199
-		add_state_core = 201
-		add_state_core = 198
-		}
+			set_country_flag = otmshenie_flag
+			set_country_flag = LWV_war_in_the_shadows_flag
+			set_variable = {
+				var = points_of_loyalty
+				value = 0
+			}
+			set_variable = {
+				var = points_of_markov
+				value = 10
+			}
+			mark_focus_tree_layout_dirty = yes
+			country_event = {
+				id = LWV.19
+			}	
+			91 = { add_manpower = -10000 }
+			93 = { add_manpower = -10000 }
+			199 = { add_manpower = -10000 }
+			198 = { add_manpower = -10000 }
+			201 = { add_manpower = -10000 }
+			add_state_core = 91
+			add_state_core = 93
+			add_state_core = 199
+			add_state_core = 201
+			add_state_core = 198
+			}
 	}
 	focus = {
 		id = LWV_otkrovenie
 		icon = GFX_otkrovenie
 		x = 13
 		y = 0
-		cost = 10
+		cost = 5
 		available = {
-            has_completed_focus = LWV_otmshenie
+            has_completed_focus = LWV_otmshenie 
         }
+		allow_branch = {
+			has_country_flag = otmshenie_flag
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -396,7 +419,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = -2
 		y = 1
-		cost = 7
+		cost = 5
 		mutually_exclusive = { focus = LWV_notexit }
 		prerequisite = { focus = LWV_otkrovenie }
 		ai_will_do = {
@@ -416,7 +439,7 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 2
 		y = 1
-		cost = 7
+		cost = 5
 		mutually_exclusive = { focus = LWV_vstar }
 		prerequisite = { focus = LWV_otkrovenie }
 		ai_will_do = {
@@ -436,17 +459,17 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 0
 		y = 2
-		cost = 3
+		cost = 5
 		prerequisite = { focus = LWV_vstar focus = LWV_notexit }
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		country_event = {
-			id = LWV.21
+			country_event = {
+				id = LWV.21
+			}
 		}
-	}
 	}
 	focus = {
 		id = LWV_exkalation
@@ -454,7 +477,7 @@ focus_tree = {
 		relative_position_id = LWV_shadow_warrior
 		x = 0
 		y = 1
-		cost = 4
+		cost = 5
 		prerequisite = { focus = LWV_shadow_warrior }
 		ai_will_do = {
 			factor = 10
@@ -472,12 +495,17 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 5
+		available = {
+			has_country_flag = LWV_kill_Markov_flag
+		}
 		prerequisite = { focus = LWV_exkalation }
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			set_country_flag = fatum_flag
+			mark_focus_tree_layout_dirty = yes
 		country_event = {
 			id = LWV.23
 		}
@@ -490,10 +518,13 @@ focus_tree = {
 		relative_position_id = LWV_otkrovenie
 		x = 6
 		y = 0
-		cost = 2
+		cost = 5
 		available = {
             has_completed_focus = LWV_fatum
         }
+		allow_branch = {
+			has_country_flag = fatum_flag
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -511,7 +542,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_ochi }
 		ai_will_do = {
 			factor = 10
@@ -530,7 +561,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = -2
 		y = 2
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_ushi }
 		ai_will_do = {
 			factor = 10
@@ -559,7 +590,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 2
 		y = 2
-		cost = 2
+		cost = 5
 		prerequisite = { focus = LWV_ushi }
 		ai_will_do = {
 			factor = 10
@@ -589,7 +620,7 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 3
-		cost = 1.5
+		cost = 5
 		prerequisite = { focus = LWV_ruki }
 		prerequisite = { focus = LWV_hearts }
 		ai_will_do = {
@@ -612,34 +643,33 @@ focus_tree = {
 		relative_position_id = LWV_ochi
 		x = 0
 		y = 4
-		cost = 3
+		cost = 5
 		prerequisite = { focus = LWV_razum }
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-				Swap_ideas ={
-					Remove_idea = heaven_on_earth_3
-					Add_idea = heaven_on_earth_4
-				}
-				
-				
-				
-				
-				
-				load_focus_tree = Lwov_focus_tretia_faza
-				
-				
-				
-				
-				
-				
-				
-				
-				
+			Swap_ideas ={
+				Remove_idea = heaven_on_earth_3
+				Add_idea = heaven_on_earth_4
+			}	
 			country_event = {
 				id = LWV.29
+			}
+			hidden_effect = {
+				set_country_flag = access_to_justifications_of_war
+				load_focus_tree = Lwov_focus_tretia_faza
+				SIL = {
+					country_event = {
+						id = SIL.1
+					}
+					clr_country_flag = no_war_with_LWV
+				}
+				country_event = {
+					id = LWV.78
+					days = 5
+				}
 			}	
 		}
 	}

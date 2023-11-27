@@ -1,399 +1,3 @@
-ODS_annex = {
-	ODS_dey_1 = { #Зачистка формирований 
-		priority = 320
-
-		icon = GFX_decision_generic_prepare_civil_war
-
-		ai_will_do = {
-			base = 100
-		}
-
-		allowed = {
-			original_tag = ODS
-			has_equipment = {
-				infantry_equipment > 100
-			}
-		}
-
-		available = {
-			original_tag = ODS
-		}
-
-		visible = {
-			original_tag = ODS
-		}
-		cost = 20
-
-
-		days_remove = 10
-		state_target = yes
-		
-		target_array = controlled_states
-		fire_only_once = yes
-		
-		remove_effect = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -100
-			}
-			add_to_variable = { podchin = 25 } 
-			hidden_effect = {
-				FROM = {
-					set_state_flag = dey1
-				}
-			}
-		}
-		
-	}
-	
-	ODS_dey_2 = { #Подавление сопротивления
-		priority = 320
-
-		icon = GFX_decision_generic_civil_support
-
-		ai_will_do = {
-			base = 100
-		}
-
-		allowed = {
-			original_tag = ODS
-			has_equipment = {
-				infantry_equipment > 100
-			}
-			has_manpower > 1000
-		}
-
-		available = {
-			original_tag = ODS
-		}
-
-		visible = {
-			original_tag = ODS
-			check_variable = { podchin > 24 }
-			FROM = {
-			has_state_flag = dey1
-			}
-		}
-		cost = 20
-
-
-		days_remove = 10
-		state_target = yes
-		
-		target_array = controlled_states
-		fire_only_once = yes
-		
-		remove_effect = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -100
-			}
-			add_manpower = -1000
-			hidden_effect ={
-				FROM = {
-				set_state_flag = dey2
-				clr_state_flag = dey1
-				}
-			}	
-			add_to_variable = { podchin = 30 }
-		}
-	}
-	ODS_dey_3 = { #Террор против населения
-		priority = 320
-
-		icon = GFX_decision_generic_scorched_earth
-
-		ai_will_do = {
-			base = 100
-			
-		}
-
-		allowed = {
-			original_tag = ODS
-			has_equipment = {
-				infantry_equipment > 500
-			}
-			command_power > 30
-		}
-
-		available = {
-			original_tag = ODS
-		}
-
-		visible = {
-			original_tag = ODS
-			check_variable = { podchin > 54 }
-			FROM = {
-			has_state_flag = dey2
-			}
-		}
-		cost = 50
-
-
-		days_remove = 10
-		state_target = yes
-		
-		target_array = controlled_states
-		fire_only_once = yes
-
-		remove_effect = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -500
-			}
-			add_to_variable = { podchin = 45 }
-			FROM=
-			{
-			add_dynamic_modifier = {
-				modifier = interg_1
-			}
-			}
-			FROM = {
-				set_state_flag = dey3
-			}
-			FROM = {
-				clr_state_flag = dey2
-			}
-			
-		}	
-	}
-	ODS_dey_4 = { #Создание блокпостов и укрепрайонов
-		priority = 320
-
-		icon = GFX_decision_hol_draw_up_staff_plans
-
-		ai_will_do = {
-			base = 100
-			
-		}
-
-		allowed = {
-			original_tag = ODS
-		}
-
-		available = {
-			check_variable = { podchin > 19 }
-			original_tag = ODS
-		}
-
-		visible = {
-			has_equipment = {
-			infantry_equipment > 100
-			}
-			original_tag = ODS
-			check_variable = { podchin > 19 }
-		}
-		cost = 25
-
-
-		days_remove = 15
-		on_map_mode = map_only
-		target_array = controlled_states
-		fire_only_once = yes
-		
-		remove_effect = {
-			subtract_from_variable = { podchin = 20 }
-			production_speed_buildings_factor = -0.05
-			set_variable = {
-				var = integr
-				value = 0
-			}
-			add_to_variable = { integr = 5 }
-		}
-		
-	}
-	ODS_dey_5 = { #Восстановление гражданской инфраструктуры
-		priority = 320
-
-		icon = GFX_decision_generic_factory
-		state_target = yes
-		target_array = controlled_states
-		ai_will_do = {
-			base = 100
-			
-		}
-
-		allowed = {
-			original_tag = ODS
-		}
-
-		available = {
-			original_tag = ODS
-		}
-
-		visible = {
-			original_tag = ODS
-			check_variable = { podchin > 19 }
-		}
-		cost = 25
-
-		on_map_mode = map_only
-		days_remove = 15
-		fire_only_once = yes
-		modifier = {
-			consumer_goods_factor = 0.05
-		}
-		remove_effect = {
-			add_to_variable = { integr = 5 }
-			production_speed_buildings_factor = -0.1
-			subtract_from_variable = { podchin = 20 }
-		}
-		
-	}
-	ODS_dey_6 = { #Размещение гарнизонов 
-		priority = 320
-
-		icon = GFX_decision_hol_draw_up_staff_plans
-		state_target = yes
-		target_array = controlled_states
-		ai_will_do = {
-			base = 100
-			
-		}
-
-		allowed = {
-			original_tag = ODS
-			FROM =	{
-				has_dynamic_modificator = {
-				modifier = interg_1
-				}
-			}
-		}
-		available = {
-			original_tag = ODS
-		}
-
-		visible = {			
-			original_tag = ODS
-			check_variable = { podchin > 24 }
-		}
-		cost = 25
-
-		on_map_mode = map_only
-		days_remove = 15
-		fire_only_once = yes
-		modifier = {
-			industrial_capacity_factory = -0.15
-		}
-		remove_effect = {
-			add_to_variable = { integr = 5 }
-			add_manpower = -1000 
-			add_equipment_to_stockpile = {
-				type = infantry_equipment 
-				amount = -1000
-			}
-			subtract_from_variable = { podchin = 25 }
-		}
-		
-	}
-	ODS_dey_7 = { #Идеологическая обработка местного населения 
-		priority = 320
-
-		icon = GFX_decision_eng_propaganda_campaigns
-		state_target = yes
-		target_array = controlled_states
-		ai_will_do = {
-			base = 100
-			
-		}
-
-		allowed = {
-			original_tag = ODS
-		}
-		available = {
-			original_tag = ODS
-		}
-
-		visible = {
-			
-			FROM = {
-			has_state_flag = dey3
-			}
-			check_variable = { podchin > 34 }
-			original_tag = ODS
-		}
-		cost = 100
-
-		on_map_mode = map_only
-		days_remove = 15
-		fire_only_once = yes
-		modifier = {
-			industrial_capacity_factory = -0.3
-		}
-
-		remove_effect = {
-			add_to_variable = { integr = 5 }
-			FROM=
-			{
-			add_dynamic_modifier = {
-				modifier = interg_2
-			}
-			}
-			FROM = {
-				set_state_flag = dey7
-			}
-			consumer_goods_factor = 0.05		
-			subtract_from_variable = { podchin = 35 }		
-		}
-		
-	}
-	ODS_dey_8 = { #Интеграция региона
-		priority = 320
-
-		icon = GFX_decision_infiltrate_state
-		state_target = yes
-		target_array = controlled_states
-		ai_will_do = {
-			base = 100
-			
-		}
-
-		allowed = {
-			original_tag = ODS
-		}
-		available = {
-			original_tag = ODS
-		}
-
-		visible = {
-				FROM = {
-					has_state_flag = dey3
-				}
-				FROM = {
-					has_state_flag = dey7
-				}
-			check_variable = { integr > 10 }
-			original_tag = ODS
-		}
-		cost = 50
-
-
-		days_remove = 30
-		fire_only_once = yes
-		modifier = {
-			industrial_capacity_factory = -0.3
-			consumer_goods_factor = 0.05
-			political_power_cost = 0.5
-		}
-		remove_effect = {
-			add_to_variable = { integr = 5 }
-			FROM=
-			{
-			add_dynamic_modifier = {
-				modifier = interg_3
-			}
-			}
-			FROM = {
-				add_core_of = ODS
-			}
-
-			consumer_goods_factor = 0.05
-			subtract_from_variable = { integr = 10 }
-		}
-		
-	}
-}
-
 ODS_kuban = {
 	krasnodar_annex = {
 		icon = GFX_decision_diplo_kuban
@@ -401,11 +5,7 @@ ODS_kuban = {
 		ai_will_do = {
 			base = 100	
 		}
-		allowed = {
-			original_tag = ODS
-		}
 		visible = {
-			original_tag = ODS
 			has_country_flag = Kuban_in_fire
 		}
 		available = {
@@ -440,117 +40,103 @@ ODS_kuban = {
 			custom_effect_tooltip = krasnodar_annex_tt
 			hidden_effect = {
 				random_list = {
-					50 = { ODS = { clr_country_tag = Kuban_in_fire country_event = { id = kuban.2 } annex_country = { target = ECD transfer_troops = no } } }
-					50 = { ODS = { clr_country_tag = Kuban_in_fire country_event = { id = kuban.3 } declare_war_on = { target = ECD type = annex_everything } } KUB = { declare_war_on = { target = ECD type = annex_everything } } }
+					50 = { 
+						ODS = { 
+							clr_country_tag = Kuban_in_fire country_event = { id = kuban.2 }
+							annex_country = { target = ECD transfer_troops = no } 
+						} 
+					}
+					50 = { 
+						ODS = { 
+							clr_country_tag = Kuban_in_fire country_event = { id = kuban.3 } 
+							declare_war_on = { target = ECD type = annex_everything } 
+							KUB = { declare_war_on = { target = ECD type = annex_everything } }
+						} 
+					}
 				}
 			}
 		}		
 	}
 }
 
-# ╔═══╗╔══╗╔╗──╔╗╔╗──╔╗╔══╗╔═══╗─╔══╗
-# ╚══╗║║╔╗║║║──║║║║──║║║╔═╝║╔══╝─║╔╗║
-# ─╔═╝║║╚╝║║╚╗╔╝║║╚══╣║║║──║╚══╗─║║║║
-# ─╚═╗║║╔╗║║╔╗╔╗║║╔═╗║║║║──║╔══╝─║║║║
-# ╔══╝║║║║║║║╚╝║║║╚═╝║║║╚═╗║╚══╗╔╝║║║
-# ╚═══╝╚╝╚╝╚╝──╚╝╚═══╩╝╚══╝╚═══╝╚═╝╚╝
+# ╔══╗╔══╗─╔══╗─╔╗╔╗╔╗╔╗╔╗╔╗╔═══╗╔╗╔╗╔╗╔╗╔═══╗
+# ║╔╗║║╔╗║─║╔╗║─║║║║║║║║║║║║║╔══╝║║║║║║║║║╔══╝
+# ║║║║║║║║─║║║║─║╚╝║║║║║║╚╝║║╚══╗║╚╝║║║║║║╚══╗
+# ║║║║║║║║─║║║║─╚═╗║║║╔║║╔╗║║╔══╝║╔╗║║║╔║║╔══╝
+# ║║║║║╚╝║╔╝╚╝╚╗──║║║╚╝║║║║║║╚══╗║║║║║╚╝║║╚══╗
+# ╚╝╚╝╚══╝╚════╝──╚╝╚══╝╚╝╚╝╚═══╝╚╝╚╝╚══╝╚═══╝
+
 #Сделал Sum Tea Jay
 
-ODS_intention = {
-	#Создать вуаль
-	ODS_create_a_veil = {
+ODS_subordination = {
+	ODS_veil_reinforcement = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
 			base = 100	
 		}
 		available = {
-			AND = {
-				has_manpower > 3000		
-				has_equipment = {
-					infantry_equipment > 500
-				}
-				if = {
-					limit = {
-						NOT = { has_completed_focus = ODS_Destroy_their_hopes }
-					}
-					has_political_power > 70
-				}
-				else = {
-					has_political_power > 35			
-				}
+			has_manpower > 299
+			custom_trigger_tooltip = {
+				tooltip = has_more_than_three_hundred_black_rubles_tt
+				check_variable = { Chernii_rubli > 299 } 
+			}
+			has_political_power > 9
+			from = { 
+				has_dynamic_modifier = { modifier = ODS_new_land }
 			}
 		}
 
-		visible = {
-			ODS = {
-				FROM = { 
-					AND = {
-						NOT = { 
-							is_core_of = ODS 
-						}
-						is_fully_controlled_by = ODS
-					}
-				}
-			}
+		target_trigger = { т
+			FROM = { 
+				is_fully_controlled_by = ROOT
+				NOT = { 
+					is_core_of = ROOT 
+					has_country_flag = first_level_of_authority
+				} 
+			} 
 		}
 		on_map_mode = decision_view_only
 
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
-		days_remove = 150
+		days_remove = 21
 		remove_effect = {
+			FROM = {
+				set_state_flag = first_level_of_authority
+				add_dynamic_modifier = { modifier = ODS_reinforced_veil }
+				remove_dynamic_modifier = { modifier = ODS_new_land }
+			}
 			add_to_variable = {
 				var = intention_point
 				value = 1
 			}		
-			FROM = {
-				set_state_flag = first_level_of_authority	
-			}
-			add_state_core = FROM
-			add_manpower = -3000
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ODS_Destroy_their_hopes }
-				}
-				add_political_power = -70
-			}
-			else = {
-				add_political_power = -35		
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -500
-				producer = ODS
+			add_manpower = -300
+			add_political_power = -10
+			subtract_from_variable = {
+				var = Chernii_rubli
+				value = 300
 			}
 		}
 	}
 
-	#Установить аудит
-	ODS_set_audit = {
+	ODS_focus_on = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
 			base = 100	
 		}
 		available = {
-			AND = {
-				has_manpower > 3000		
-				has_equipment = {
-					infantry_equipment > 500
-				}
-				if = {
-					limit = {
-						NOT = { has_completed_focus = ODS_Destroy_their_hopes }
-					}
-					has_political_power > 140
-				}
-				else = {
-					has_political_power > 70			
-				}
+			custom_trigger_tooltip = {
+				tooltip = two_hundred_people_in_the_capital_tt	
+				839 = { state_population > 9999 }
 			}
-		
+			custom_trigger_tooltip = {
+				tooltip = has_more_than_two_hundred_black_rubles_tt
+				check_variable = { Chernii_rubli > 199 } 
+			}
+			has_political_power > 9
 		}
 
 		visible = {
@@ -563,44 +149,44 @@ ODS_intention = {
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
-		days_remove = 150
+		days_remove = 21
 		remove_effect = {
 			FROM = {
 				clr_state_flag = first_level_of_authority
 				set_state_flag = second_level_of_authority
-				remove_dynamic_modifier = { modifier = ODS_diversions }
+				add_dynamic_modifier = { modifier = ODS_focused_eye }
+				remove_dynamic_modifier = { modifier = ODS_reinforced_veil }
 			}
-			add_manpower = -3000
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ODS_Destroy_their_hopes }
-				}
-				add_political_power = -140
+			add_to_variable = {
+				var = intention_point
+				value = 1
+			}		
+			subtract_from_variable = {
+				var = Chernii_rubli
+				value = 200
 			}
-			else = {
-				add_political_power = -70		
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -500
-				producer = ODS
+			839 = { add_manpower = -50 }
+			add_manpower = 500	
+			add_political_power = -2 
+			subtract_from_variable = {
+				var = Chernii_rubli
+				value = 200
 			}
 		}
 	}
 
-	#Начать процесс реабилитации
-	ODS_start_the_rehabilitation_process = {
+	ODS_promoting_mindfulness_in = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
 			base = 100	
 		}
 		available = {
-			check_variable = {
-				var = intention_point
-				value = 1
-				compare = greater_than_or_equals 
+			custom_trigger_tooltip = { 
+				tooltip = has_more_than_three_hundred_black_rubles_tt
+				check_variable = { Chernii_rubli > 299 } 
 			}
+			has_political_power > 9
 		}
 
 		visible = {
@@ -613,409 +199,22 @@ ODS_intention = {
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
-		days_remove = 150
+		days_remove = 21
 		remove_effect = {
 			FROM = {
-				add_dynamic_modifier = { modifier = ODS_third_level_of_authority }
-				clr_state_flag = second_level_of_authority
-				set_state_flag = third_level_of_authority
+				add_dynamic_modifier = { modifier = ODS_informed_society }
+				remove_dynamic_modifier = { modifier = ODS_focused_eye }				
 			}
-			subtract_from_variable = {
+			add_to_variable = {
 				var = intention_point
 				value = 1
-			}
-		}
-	}
-
-	#Начать программу убеждения
-	ODS_start_a_persuasion_programme = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-		ai_will_do = {
-			base = 100	
-		}
-		available = {
-			check_variable = {
-				var = intention_point
-				value = 1
-				compare = greater_than_or_equals 
 			}	
-		}
-
-		visible = {
-			FROM = {
-				has_state_flag = third_level_of_authority
-			}
-		}
-		on_map_mode = decision_view_only
-
-		state_target = yes
-		target_array = ODS.controlled_states
-		fire_only_once = yes
-		remove_effect = {
-			FROM = {
-				clr_state_flag = third_level_of_authority 
-				remove_dynamic_modifier = { modifier = ODS_fourth_level_of_authority }
-				add_dynamic_modifier = { modifier = ODS_fourth_level_of_authority }
-			}
+			add_state_core = FROM
+			add_political_power = -10
 			subtract_from_variable = {
-				var = intention_point
-				value = 1
-			}
-			add_to_variable = {
-				var = intention
-				value = 0.4
+				var = Chernii_rubli
+				value = 300
 			}
 		}
 	}
 }
-
-
-
-# █───█─███─██─██─████─█──█─█──█─█──█─████────█──█─████─█───█─█──█─███─███─███─████─████─────████─█──█─████─████───██─█─█─████─███─████─█──█──█──█─█──█
-# ██─██─█────███──█──█─█──█─█──█─█─█──█──█────█─█──█──█─██─██─█──█──█──█────█──█──█─█──██────█──█─█─█──█──█─█──█──█─█─█─█─█──█──█──█──█─█──█──█──█─█──█
-# █─█─█─███───█───████─████─█─██─██───████────██───█──█─█─█─█─█─██──█──███──█──█──█─████───────██─██───█────█──█─█──█─███─████──█──████─█──█──█─██─█─██
-# █───█─█────███──█──█─█──█─██─█─█─█──█──█────█─█──█──█─█───█─██─█──█──█────█──█──█─█──██────█──█─█─█──█──█─█──█─█──█───█─█──█──█──█──█─█──█──██─█─██─█
-# █───█─███─██─██─█──█─█──█─█──█─█──█─█──█────█──█─████─█───█─█──█──█──███──█──████─████─────████─█──█─████─█──█─█──█─███─█──█──█──█──█─█████─█──█─█──█
-#Сделал Sum Tea Jay
-ODS_operating_committee = {
-	ODS_set_the_KESR = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-		target_non_existing = yes
-		target_array = ODS.occupied_countries
-		on_map_mode = decision_view_only
-		fire_only_once = yes
-		visible = {
-			FROM = {
-				exists = no
-			}
-		}
-		complete_effect = {
-			ODS = {
-				release_autonomy = {
-					target = FROM
-					autonomy_state = KESR
-					freedom_level = 0.1
-				}
-			}
-			FROM = {
-				set_country_flag = KESR_decisions
-			}
-			add_to_array = {
-				array = count_of_KESH
-				value = THIS.id
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = phase_two
-						has_country_flag = phase_three
-						has_country_flag = phase_four
-						has_country_flag = phase_five
-					}
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 100
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_two
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 33
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_three
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 18
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_four
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 9
-				}				
-			}
-		}
-		ai_will_do = {
-			base = 10	
-		}					
-	}
-
-	ODS_set_the_KEPR = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-		target_non_existing = yes
-		target_array = ODS.occupied_countries
-		on_map_mode = decision_view_only
-		fire_only_once = yes
-		visible = {
-			FROM = {
-				exists = no
-			}
-		}
-		complete_effect = {
-			ODS = {
-				release_autonomy = {
-					target = FROM
-					autonomy_state = KEPR
-					freedom_level = 0.1
-				}
-			}
-			FROM = {
-				set_country_flag = KEPR_decisions
-			}
-			add_to_array = {
-				array = count_of_KESH
-				value = THIS.id
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = phase_two
-						has_country_flag = phase_three
-						has_country_flag = phase_four
-						has_country_flag = phase_five
-					}
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 100
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_two
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 33
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_three
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 18
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_four
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 9
-				}				
-			}
-		}
-		ai_will_do = {
-			base = 10	
-		}					
-	}
-
-	ODS_set_the_KESH = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-		target_non_existing = yes
-		target_array = ODS.occupied_countries
-		on_map_mode = decision_view_only
-		fire_only_once = yes
-		visible = {
-			FROM = {
-				exists = no
-			}
-		}
-		complete_effect = {
-			ODS = {
-				release_autonomy = {
-					target = FROM
-					autonomy_state = KESH
-					freedom_level = 0.1
-				}
-			}
-			FROM = {
-				set_country_flag = KESH_decisions
-			}
-			add_to_array = {
-				array = count_of_KESH
-				value = THIS.id
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = phase_two
-						has_country_flag = phase_three
-						has_country_flag = phase_four
-						has_country_flag = phase_five
-					}
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 100
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_two
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 33
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_three
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 18
-				}				
-			}
-
-			if = {
-				limit = {
-					has_country_flag = phase_four
-				}
-				add_to_variable = {
-					var = level_of_allowance
-					value = 9
-				}				
-			}
-		}
-		ai_will_do = {
-			base = 10	
-		}					
-	}
-	ODS_integration_point = {
-		activation = { 
-			always = yes
-		}
-		available = { 
-			hidden_trigger = { always = no } 
-		}
-
-		is_good = yes
-        timeout_effect = { 
-			add_to_variable = {
-				var = integration_point
-				value = 1
-			}
-			hidden_effect = { activate_mission = ODS_get_integration_point }
-        }
-		
-		days_mission_timeout = 20
-        ai_will_do = {
-            factor = 1
-        }
-	}	
-
-	#Искоренить дикость
-	ODS_eradicate_savagery = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-
-		complete_effect = {
-			set_country_flag = complete_decision_ODS_eradicate_savagery
-		}
-		ai_will_do = {
-			base = 10	
-		}				
-	}
-
-	#Подсчитать каждого
-	ODS_count_everyone = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-
-		visible = {
-			has_country_flag = complete_decision_ODS_eradicate_savagery
-		}
-		complete_effect = {
-			clr_country_flag = complete_decision_ODS_eradicate_savagery
-			set_country_flag = complete_decision_ODS_count_everyone
-		}
-		ai_will_do = {
-			base = 10	
-		}				
-	}
-
-	#Новые граждане
-	ODS_new_citizens = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-
-		visible = {
-			has_country_flag = complete_decision_ODS_count_everyone
-		}
-		complete_effect = {
-			clr_country_flag = complete_decision_ODS_count_everyone
-			set_country_flag = complete_decision_ODS_new_citizens
-		}
-		ai_will_do = {
-			base = 10	
-		}				
-	}
-
-	#Привести части в порядок
-	ODS_get_the_balances_in_order = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-
-		visible = {
-			has_country_flag = complete_decision_ODS_new_citizens
-		}
-		complete_effect = {
-			set_country_flag = can_integrate_committee
-			clr_country_flag = complete_decision_ODS_new_citizens
-		}
-		ai_will_do = {
-			base = 10	
-		}				
-	}
-
-	#интегрировать Комитет
-	ODS_integrate_committee = {
-		icon = GFX_decision_diplo_kuban
-		priority = 100
-		target_array = ODS.subject_countries
-		on_map_mode = map_only
-		visible = {
-			has_country_flag = can_integrate_committee
-		}
-		complete_effect = {
-			ODS = {
-				annex_country = {
-					target = FROM
-					transfer_troops = no
-				}	
-			}
-		}
-		ai_will_do = {
-			base = 10	
-		}				
-	}
-}
-

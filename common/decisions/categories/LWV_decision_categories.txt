@@ -74,3 +74,16 @@ LWV_balance_of_power_category = {
 		
 	}
 }
+LWV_war_in_the_shadows = {
+	icon = GFX_decision_category_power_struggle
+
+	allowed = {
+		original_tag = LWV
+	}
+
+	priority = 90
+
+	visible = {
+		has_country_flag = LWV_war_in_the_shadows_flag
+	}
+}

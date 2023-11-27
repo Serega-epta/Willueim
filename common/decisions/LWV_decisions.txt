@@ -56,6 +56,8 @@ LWV_boji_perst = {
 	}
 }
 
+####################СВЯТОСТЬ###########################
+
 LWV_holiness = {
 	stage_1 = {
 		icon = generic_scorched_earth
@@ -187,13 +189,14 @@ LWV_holiness = {
 }
 
 LWV_unity_in_holiness = {
-	collect_swords = {
-		icon = 
+	collect_the_swords = {
 		visible = {
 		}
 		available = {
 		}
-		custom_cost_trigger = { check_variable = { unity_in_holiness > 1 } }
+		custom_cost_trigger = { 
+			check_variable = { unity_in_holiness > 2} 
+		}
 		custom_cost_text = decision_cost_UH_2
 		days_re_enable = 30
 		complete_effect = {
@@ -201,168 +204,141 @@ LWV_unity_in_holiness = {
 			subtract_from_variable = { unity_in_holiness = 2 }
 		}
 	}
-	bring_down_gods_wrath = {
-		icon = 
+	blessing_for_labor = {
 		visible = {
 		}
 		available = {
 		}
-		custom_cost_trigger = { check_variable = { unity_in_holiness > 9 } }
-		custom_cost_text = decision_cost_UH_10
-		days_re_enable = 100
-		complete_effect = {
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"bojiya_dlan\" division_template = \"bojiya_dlan\" start_experience_factor = 1.0"  owner = LWV }
-			}
-			subtract_from_variable = { unity_in_holiness = 10 }
+		custom_cost_trigger = {
+			check_variable = { unity_in_holiness > 3 }
 		}
-	}
-	bless_the_work = {
-		icon = 
-		visible = {
-		}
-		available = {
-		}
-		custom_cost_trigger = { check_variable = { unity_in_holiness > 2 } }
-		custom_cost_text = decision_cost_UH_3
-		days_re_enable = 30
-		complete_effect = {
-			add_timed_idea = {
-				idea = LWV_blessing_of_labor
-				days = 60
-			}
-			subtract_from_variable = { unity_in_holiness = 3 }
-		}
-	}
-	forging_iron = {
-		icon = 
-		visible = {
-		}
-		available = {
-		}
-		custom_cost_trigger = { check_variable = { check_variable = { unity_in_holiness > 4 } }
-		custom_cost_text = decision_cost_UH_5
-		days_re_enable = 30
-		complete_effect = {
-			random_owned_controlled_state = {
-				add_resource = {
-					type = steel
-					amount = 5
-				}
-			}
-			subtract_from_variable = { unity_in_holiness = 5 }
-		}
-	}
-	bless_the_fight = {
-		icon = 
-		visible = {
-		}
-		available = {
-		}
-		custom_cost_trigger = { check_variable = { unity_in_holiness > 4 } }
-		custom_cost_text = decision_cost_UH_5
-		days_re_enable = 70
-		complete_effect = {
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"sviatoe_opolchenie\" division_template = \"sviatoe_opolchenie\" start_experience_factor = 1.0"  owner = LWV }
-				create_unit = { division = "name = \"sviatoe_opolchenie\" division_template = \"sviatoe_opolchenie\" start_experience_factor = 1.0"  owner = LWV }
-				create_unit = { division = "name = \"sviatoe_opolchenie\" division_template = \"sviatoe_opolchenie\" start_experience_factor = 1.0"  owner = LWV }
-			}
-			subtract_from_variable = { unity_in_holiness = 5 }
-		}
-	}
-	stone_skin = {
-		icon = 
-		visible = {
-		}
-		available = {
-		}
-		custom_cost_trigger = { check_variable = { unity_in_holiness > 2 } }
 		custom_cost_text = decision_cost_UH_3
 		days_re_enable = 60
 		complete_effect = {
 			add_timed_idea = {
-				idea = LWV_blessing_with_stone_skin
-				days = 30
+				idea = LWV_blessing_for_labor
+				days = 60
 			}
-			subtract_from_variable = { unity_in_holiness = 3 }			
 		}
 	}
-	asceticism = {
-		icon = 
+	forge_the_iron = {
 		visible = {
 		}
 		available = {
 		}
-		custom_cost_trigger = { check_variable = { unity_in_holiness > 6 } }
+		custom_cost_trigger = { 
+			check_variable = { unity_in_holiness > 5 }
+		}
+		custom_cost_text = decision_cost_UH_5
+		days_re_enable = 120
+		complete_effect = {
+			    random_owned_controlled_state = {
+                	add_resource = {
+                    	type = steel
+                    	amount = 5
+                }
+            }
+		}
+	}
+	stone_skin = {
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = {
+			check_variable = { unity_in_holiness > 3 }
+		}
+		custom_cost_text = decision_cost_UH_3
+		days_re_enable = 60
+		complete_effect = {
+			add_timed_idea = {
+				idea = LWV_stone_skin
+				days = 30
+			}
+		}
+	}
+	ascetism = {
+		visible = {
+		}
+		available = {
+		}
+		custom_cost_trigger = {
+			check_variable = { unity_in_holiness > 7 }
+		}
 		custom_cost_text = decision_cost_UH_7
 		days_re_enable = 70
 		complete_effect = {
-			random_core_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-   	 				type = industrial_complex
-    					level = 1
-    					instant_build = yes
-				}	
-			}
-			subtract_from_variable = { unity_in_holiness = 7 }
+				random_owned_controlled_state = {
+			    	add_extra_state_shared_building_slots = 1
+			    	add_building_construction = {
+				    	type = industrial_complex
+				    	level = 1
+				    	instant_build = yes
+			    }
+		    }
 		}
 	}
-	blessing_with_provisions = {
-		icon = 
+	blessed_provision = {
 		visible = {
 		}
 		available = {
 		}
-		custom_cost_trigger = { check_variable = { unity_in_holiness > 2 } }
+		custom_cost_trigger = {
+			check_variable = { unity_in_holiness > 3 }
+		}
 		custom_cost_text = decision_cost_UH_3
 		days_re_enable = 30
 		complete_effect = {
 			add_equipment_to_stockpile = {
-				type = train_equipment
-				amount = 3
-				producer = LWV
-			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
+				type = motorized_equipment_1
 				amount = 35
 				producer = LWV
 			}
-			subtract_from_variable = { unity_in_holiness = 3 }
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 3
+				producer = LWV
+			}
 		}
 	}
-	prepare_provisions = {
-		icon = 
+	prepare_the_provision = {
 		visible = {
 		}
 		available = {
 		}
-		custom_cost_trigger = { check_variable = { unity_in_holiness > 2 } }
+		custom_cost_trigger = {
+			check_variable = { unity_in_holiness > 3 }
+		}
 		custom_cost_text = decision_cost_UH_3
 		days_re_enable = 30
 		complete_effect = {
 			add_timed_idea = {
-				idea = LWV_preparation_of_provisions
-				days = 60
+				idea = LWV_prepare_the_provision
+				days = 30
 			}
-			subtract_from_variable = { unity_in_holiness = 3 }
 		}
 	}
-	debug_holiness = {
-		icon = 
+	collect_the_sheeps = {
 		visible = {
-			is_debug = yes
 		}
 		available = {
-			is_debug = yes
 		}
+		custom_cost_trigger = {
+			check_variable = { unity_in_holiness > 2 }
+		}
+		custom_cost_text = decision_cost_UH_2
+		days_re_enable = 20
 		complete_effect = {
-			add_to_variable = { unity_in_holiness = 1000 }
+			add_manpower = 5000
+		}
+	}
+	debug_hollines = {
+		is_debug = yes
+		complete_effect = {
+			add_to_variable = { unity_in_holiness = 100 }
 		}
 	}
 }
-
 
 
 
@@ -454,6 +430,134 @@ LWV_podgotovit_pochvu = {
 }
 
 
+########################ВОЙНА В ТЕНИ#####################
+
+LWV_war_in_the_shadows = {
+	LWV_hunt_for_traitors = {
+		cost = 10
+		available = {
+			has_manpower > 500
+			has_equipment = {
+				infantry_equipment > 1500
+			}
+		}
+		days_re_enable = 0
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = { 
+				add_to_variable = { points_of_loyalty = 5 }
+				set_country_flag = LWV_hunt_for_traitors_flag
+			}
+			custom_effect_tooltip = LWV_localistion_points_of_loyalty_5
+			add_manpower = -500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1500
+			}
+		}
+	}
+	LWV_achive_loyalty = {
+		cost = 100
+		days_re_enable = 0
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = { 
+				add_to_variable = { points_of_loyalty = 10 }
+				set_country_flag = LWV_achive_loyalty_flag
+			}
+			custom_effect_tooltip = LWV_localistion_points_of_loyalty_10
+		}
+	}
+	LWV_purge_the_army = {
+		cost = 50
+		available = {
+			has_manpower > 750
+			has_army_experience > 10
+		}
+		days_re_enable = 0
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = { 
+				add_to_variable = { points_of_loyalty = 20 }
+				set_country_flag = LWV_purge_the_army_flag
+			}
+			custom_effect_tooltip = LWV_localistion_points_of_loyalty_20
+			add_manpower = -750
+			army_experience = -10
+		}
+	}
+	LWV_start_the_investigation = {
+		available = {
+			has_country_flag = LWV_hunt_for_traitors_flag
+			has_country_flag = LWV_achive_loyalty_flag
+			has_country_flag = LWV_purge_the_army_flag
+			set_temp_variable = { temp1 = points_of_loyalty }
+			set_temp_variable = { temp2 = points_of_markov }
+			subtract_from_temp_variable = { temp1 = temp 2 }
+			check_variable = { 
+				var = temp1
+				value = 10
+				compare = greater_than
+			}
+		}
+		custom_cost_text = LWV_localistion_points_of_loyalty_more_than_markov_10
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = { 
+				add_to_variable = { points_of_loyalty = 10 }
+				set_country_flag = LWV_complete_investigation
+			}
+			custom_effect_tooltip = LWV_localistion_points_of_loyalty_10
+		}
+	}
+	LWV_execution = {
+		available = {
+			set_temp_variable = { temp1 = points_of_loyalty }
+			set_temp_variable = { temp2 = points_of_markov }
+			subtract_from_temp_variable = { temp1 = temp 2}
+			check_variable = { 
+				var = temp1
+				value = 20
+				compare = greater_than
+			}
+			has_country_flag = LWV_complete_investigation
+		}
+		custom_cost_text = LWV_localistion_points_of_loyalty_more_than_markov_20
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = { 
+				add_to_variable = { points_of_loyalty = 20 }
+				set_country_flag = LWV_execution_flag
+			}
+			custom_effect_tooltip = LWV_localistion_points_of_loyalty_10
+		}
+	}
+	LWV_kill_markov = {
+		available = {
+			set_temp_variable = { temp1 = points_of_loyalty }
+			set_temp_variable = { temp2 = points_of_markov }
+			subtract_from_temp_variable = { temp1 = temp 2}
+			check_variable = { 
+				var = temp1
+				value = 40
+				compare = greater_than
+			}
+			has_country_flag = LWV_execution_flag
+			has_country_flag = LWV_complete_investigation
+		}
+		custom_cost_text = LWV_localistion_points_of_loyalty_more_than_markov_30
+		days_remove = 40
+		complete_effect = {
+			hidden_effect = {
+				clr_country_flag = LWV_execution_flag
+				clr_country_flag = LWV_complete_investigation
+				clr_country_flag = LWV_war_in_the_shadows_flag
+				set_country_flag = LWV_kill_Markov_flag
+			}
+			custom_effect_tooltip = LWV_kill_Markov
+		}
+	}
+}
 
 
 

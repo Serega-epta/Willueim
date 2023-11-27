@@ -63,8 +63,8 @@ division_template = {
 		egerskayapechota = { x = 0 y = 1 }
 		egerskayapechota = { x = 1 y = 0 }
 		egerskayapechota = { x = 1 y = 1 }
-		motopechotanabtr = { x = 2 y = 0 }
-		motopechotanabtr = { x = 2 y = 1 }
+		egerskayapechota = { x = 2 y = 0 }
+		egerskayapechota = { x = 2 y = 1 }
 	}
 	support = {
 		art_stvol = { x = 0 y = 0 }
@@ -112,7 +112,7 @@ units = {
 		division_template = "black_berets"
         start_experience_factor = 0.1
         start_equipment_factor = 0.65
-        start_manpower_factor = 0.9
+        start_manpower_factor = 1.0
 	}
 
 	division = {
@@ -121,7 +121,7 @@ units = {
 		division_template = "black_berets"
         start_experience_factor = 0.1
         start_equipment_factor = 0.65
-        start_manpower_factor = 0.9
+        start_manpower_factor = 1.0
 	}
 
 	division = {
@@ -130,7 +130,7 @@ units = {
 		division_template = "black_berets"
         start_experience_factor = 0.1
         start_equipment_factor = 0.65
-        start_manpower_factor = 0.9
+        start_manpower_factor = 1.0
 	}
 
 	division = {
@@ -139,33 +139,52 @@ units = {
 		division_template = "black_berets"
         start_experience_factor = 0.1
         start_equipment_factor = 0.65
-        start_manpower_factor = 0.9
+        start_manpower_factor = 1.0
 	}
 
+
 	division = {
-		name = "tank_group"
-		location = 13283
-		division_template = "tank_group"
-        start_experience_factor = 0.4
-        start_equipment_factor = 0.4
-        start_manpower_factor = 0.9
+		name = "priazovtsy"
+		location = 13307
+		division_template = "priazovtsy"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+        start_manpower_factor = 1.0
 	}
 
 	division = {
 		name = "priazovtsy"
-		location = 13281
+		location = 13307
 		division_template = "priazovtsy"
-        start_experience_factor = 0.4
-        start_equipment_factor = 0.4
-        start_manpower_factor = 0.9
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+        start_manpower_factor = 1.0
 	}
 
 	division = {
-		name = "priazovtsy"
-		location = 13281
-		division_template = "priazovtsy"
-        start_experience_factor = 0.4
-        start_equipment_factor = 0.4
-        start_manpower_factor = 0.9
+		name = "prosperity"
+		location = 13356
+		division_template = "prosperity"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+
+	division = {
+		name = OKO
+		location = 3686
+		division_template = "OKO"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+
+	division = {
+		name = purity
+		location = 13277
+		division_template = "purity"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
 	}
 }

@@ -1,27 +1,25 @@
 
-state = {
-	id = 940
-	name = "STATE_940"
-	manpower = 183748
-	
-	state_category = rural
+state={
+	id=940
+	name="STATE_940"
 
-	resources = {
-		coal = 61
-
-	}
-
-	history = {
+	history={
 		owner = SBT
 		victory_points = {
-			 9266  1
+			9266 1 
 		}
-		
+			buildings = {
+			infrastructure = 2
+			synthetic_refinery = 1
+		}
+
 	}
 
-	provinces = {
-		9266 9330 9395 11268
+	provinces={
+		6333 6396 9266 
 	}
-
-	local_supplies = 6.0 
+	manpower=40000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=6.000
 }

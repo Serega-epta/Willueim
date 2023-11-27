@@ -1,13 +1,17 @@
 capital = 1
 
-oob = base #none
+oob = OCH
+add_ideas = OCH_not_of_this_world
 
 set_technology = {
     infantry_weapons = 1
 }
 
 set_convoys = 20
-
+add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 1000
+}
 set_politics = {
     ruling_party = forestry
     last_election = "1933.6.21"
@@ -19,3 +23,5 @@ set_popularities = {
     forestry = 100
     svobod = 0
 }
+
+recruit_character = OCH_Okhva

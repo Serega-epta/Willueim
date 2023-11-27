@@ -1,14 +1,211 @@
 on_actions = {
 	on_capitulation = {
 		effect = {
+			log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
+			
+			set_global_flag = show_peace_popup_alert
 			FROM = {
 				save_global_event_target_as = winning_country
 			}
 			ROOT = {
 				save_global_event_target_as = losing_country
 			}
+
+			log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
 			
+			add_to_variable = { global.peace_popup_dirty = 1 }
+
 			if = {
+				limit = {
+					OR = {
+						ROOT = {
+							original_tag = MOT
+						}
+						ROOT = {
+							original_tag = URA
+						}
+						ROOT = {
+							original_tag = EDM
+						}
+						ROOT = {
+							original_tag = URC
+						}
+						ROOT = {
+							original_tag = WPK
+						}
+						ROOT = {
+							original_tag = ZAN
+						}
+						ROOT = {
+							original_tag = OCH
+						}
+						ROOT = {
+							original_tag = TAR
+						}
+					}
+					FROM = {
+						original_tag = GLS
+						has_country_flag = GLS_negotiation_process_fail
+					}
+				}
+
+				every_country = {
+					limit = { has_war_with = GLS }
+					white_peace = GLS
+				}
+				
+				FROM = {
+					annex_country = {
+						target = MOT
+						transfer_troops = no
+					}
+					annex_country = {
+						target = URA
+						transfer_troops = no
+					}
+					annex_country = {
+						target = EDM
+						transfer_troops = no
+					}
+					annex_country = {
+						target = URC
+						transfer_troops = no
+					}
+					annex_country = {
+						target = WPK
+						transfer_troops = no
+					}
+					annex_country = {
+						target = ZAN
+						transfer_troops = no
+					}
+					annex_country = {
+						target = OCH
+						transfer_troops = no
+					}
+					annex_country = {
+						target = TAR
+						transfer_troops = no
+					}
+					every_state = {
+						remove_core_of = ROOT
+					}
+					clr_country_flag = GLS_negotiation_process_fail
+				}
+				set_global_flag = skip_default_capitulation
+			}
+
+			else_if = {
+				limit = {
+					ROOT = {
+						original_tag = GLS
+						has_country_flag = GLS_negotiation_process_fail
+					}
+					OR = {
+						FROM = {
+							original_tag = MOT
+						}
+						FROM = {
+							original_tag = URA
+						}
+						FROM = {
+							original_tag = EDM
+						}
+						FROM = {
+							original_tag = URC
+						}
+						FROM = {
+							original_tag = WPK
+						}
+						FROM = {
+							original_tag = ZAN
+						}
+						FROM = {
+							original_tag = OCH
+						}
+						FROM = {
+							original_tag = TAR
+						}
+					}
+				}
+
+				every_country = {
+					limit = { has_war_with = GLS }
+					white_peace = GLS
+				}
+				
+				FROM = {
+					WPK = {
+						transfer_state = 398
+						transfer_state = 1003
+						transfer_state = 1000
+						transfer_state = 573
+						transfer_state = 729
+					}
+					MOT = {
+						transfer_state = 251
+						transfer_state = 652
+						transfer_state = 582
+					}
+					BL1 = {
+						transfer_state = 406
+						transfer_state = 994
+					}		
+					URA = {
+						transfer_state = 407
+					}	
+					ISK = {
+						transfer_state = 999
+					}
+					SI1 = {
+						transfer_state = 993
+					}					
+					URC = {
+						set_autonomy = {
+							target = GLS
+							autonomy_state = autonomy_puppet
+						}
+					}
+					every_state = {
+						remove_core_of = GLS
+					}
+				}
+				
+				ROOT = {
+					GLS = {
+						clr_country_flag = GLS_negotiation_process_fail
+						set_cosmetic_tag = GLS_URAL_MANDATE
+						load_focus_tree = state_liquidation_board_collapsed
+						kill_country_leader = yes
+						set_political_party = {
+    							ideology = gumanists
+    							popularity = 100
+						}
+						set_party_name = {
+    							ideology = patriots
+    							#long_name = GLS_patriots_party_MANDATE_long
+    							name = GLS_patriots_party_MANDATE
+						}
+						set_party_name = {
+    							ideology = gumanists
+    							long_name = GLS_gumanists_party_MANDATE_long
+    							name = GLS_gumanists_party_MANDATE
+						}
+						recruit_character = GLS_Mandate_Parliament
+						GLS_Mandate_Parliament = {
+							promote_character = yes
+							promote_character = gumanists_1
+						}
+						set_rule = {
+							can_not_declare_war = yes
+						}
+						country_lock_all_division_template = yes
+					}
+				}
+				set_global_flag = skip_default_capitulation
+			}
+
+			else_if = {
 				limit = {
 					OR = {
 						ROOT = { is_in_faction = no }
@@ -19,8 +216,12 @@ on_actions = {
 						}
 					}
 				}
+				log = "war_won"
+				set_global_flag = war_won
+				
 				if = {
 					limit = { NOT = { has_global_flag = skip_default_capitulation } }
+					log = "Default Capitulation"
 					FROM = {
 						every_enemy_country = {
 							limit = {
@@ -36,11 +237,15 @@ on_actions = {
 									target = PREV
 									transfer_troops = no
 								}
+								every_state = {
+									remove_core_of = ROOT
+								}
 							}
 						}
 					}
-				}
+				}				
 			}
+			clr_global_flag = skip_default_capitulation
 		}
 	}
 }

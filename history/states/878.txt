@@ -2,20 +2,23 @@
 state = {
 	id = 878
 	name = "STATE_878"
-	manpower = 183748
+	manpower = 25000
 	
 	state_category = rural
 
 	history = {
 		owner = DIB
 		victory_points = {
-			  9465  1
+			  504  3
 		}
 		buildings = {
 		
 			infrastructure = 2
 			
 		}
+		add_dynamic_modifier = { modifier = wild_tribes }
+		set_state_flag = has_wild_tribes
+		
 		
 	}
 

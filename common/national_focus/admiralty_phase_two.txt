@@ -15,7 +15,10 @@ focus_tree = {
 		icon = GFX_The_first_triumph_of_the_idea
 		x = 10
 		y = 0
-		cost = 1
+		cost = 5
+		available = {
+			has_war = no
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -26,7 +29,7 @@ focus_tree = {
 						id = ODS.16
 				}
 				add_stability = 0.1
-				add_political_power = -100
+				add_political_power = 100
 		}
 	}
 
@@ -35,18 +38,21 @@ focus_tree = {
 		icon = GFX_Expand_powers
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 4
-		y = 5
-		cost = 1
+		y = 1
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
-		country_event = {
-						id = ODS.22
-				}
-						add_ideas = OKO
+			country_event = {
+				id = ODS.22
+			}
+			add_ideas = OKO
+			hidden_effect = {
+				set_country_flag = ODS_access_to_specialization_of_regions
+			}
 		}
 	}
 	
@@ -55,18 +61,28 @@ focus_tree = {
 		icon = GFX_Hunting
 		prerequisite = { focus = ODS_Expand_powers }
 		x = 4
-		y = 8
-		cost = 1
+		y = 3
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
-		country_event = {
-						id = ODS.25
+			country_event = {
+				id = ODS.25
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. OKO\" division_template = \"OKO\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
 				}
-				remove_dynamic_modifier = { modifier = wild_tribes }
+				create_unit = {
+					division = "name = \"1. OKO\" division_template = \"OKO\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
+			}
+			add_stability = 0.05
 		}
 	}
 
@@ -76,8 +92,8 @@ focus_tree = {
 		icon = GFX_Burn_the_heads
 		prerequisite = { focus = ODS_Hunting }
 		x = 4
-		y = 11
-		cost = 1
+		y = 5
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -99,17 +115,18 @@ focus_tree = {
 		icon = GFX_Audits
 		prerequisite = { focus = ODS_Burn_the_heads }
 		x = 3
-		y = 14
-		cost = 1
+		y = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
-		country_event = {
-						id = ODS.17
-				}
+			country_event = {
+				id = ODS.17
+			}
+			add_stability = 0.05
 		}
 	}
 
@@ -118,8 +135,8 @@ focus_tree = {
 		icon = GFX_Purity
 		prerequisite = { focus = ODS_Burn_the_heads }
 		x = 5
-		y = 14
-		cost = 1
+		y = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -127,8 +144,12 @@ focus_tree = {
 			
 		completion_reward = {
 			country_event = {
-						id = ODS.18
-				}
+				id = ODS.18
+			}
+			swap_ideas = {
+				remove_idea = OKO2
+				add_idea = OKO3
+			}
 		}
 	}
 
@@ -138,8 +159,8 @@ focus_tree = {
 		prerequisite = { focus = ODS_Purity }
 		prerequisite = { focus = ODS_Audits }
 		x = 4
-		y = 17
-		cost = 1
+		y = 10
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -147,8 +168,12 @@ focus_tree = {
 			
 		completion_reward = {
 			country_event = {
-						id = ODS.19
-				}
+				id = ODS.19
+			}
+			swap_ideas = {
+				remove_idea = OKO3
+				add_idea = OKO4
+			}
 		}
 	}
 
@@ -157,8 +182,8 @@ focus_tree = {
 		icon = GFX_The_Bridgehead_plan
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 8
-		y = 5
-		cost = 1
+		y = 1
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -168,7 +193,10 @@ focus_tree = {
 			country_event = {
 						id = ODS.21
 				}
-				add_ideas = plan
+				add_timed_idea = {
+					idea = plan3
+					days = 360
+				}
 		}
 	}
 	
@@ -177,8 +205,8 @@ focus_tree = {
 		icon = GFX_Ghosts_of_the_Past
 		prerequisite = { focus = ODS_The_Bridgehead_plan }
 		x = 8
-		y = 8
-		cost = 1
+		y = 3
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -188,10 +216,78 @@ focus_tree = {
 			country_event = {
 						id = ODS.27
 				}
-				swap_ideas = {
-				remove_idea = plan
-				add_idea = plan2
+			862 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
+			}
+			841 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			839 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			857 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			855 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			858 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			860 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			861 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			192 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -200,8 +296,8 @@ focus_tree = {
 		icon = GFX_Types_of_the_future
 		prerequisite = { focus = ODS_Ghosts_of_the_Past }
 		x = 8
-		y = 11
-		cost = 1
+		y = 5
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -211,9 +307,68 @@ focus_tree = {
 			country_event = {
 						id = ODS.23
 				}
-					swap_ideas = {
-				remove_idea = plan2
-				add_idea = plan3
+			862 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			841 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			839 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			857 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			855 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			858 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			860 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			861 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			192 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -223,8 +378,8 @@ focus_tree = {
 		icon = GFX_Mobilize_the_population
 		prerequisite = { focus = ODS_Types_of_the_future }
 		x = 7
-		y = 14
-		cost = 1
+		y = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -260,17 +415,25 @@ focus_tree = {
 		icon = GFX_Continue_integration
 		prerequisite = { focus = ODS_Types_of_the_future }
 		x = 9
-		y = 14
-		cost = 1
+		y = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
-		country_event = {
-						id = ODS.24
-				}
+			country_event = {
+				id = ODS.24
+			}
+			if = {
+				limit = { has_idea = dicarstvo4 }
+				swap_ideas = { remove_idea = dicarstvo4 add_idea = dicarstvo5 }
+			}
+			else_if = {
+				limit = { has_idea = dicarstvo5 }
+				swap_ideas = { remove_idea = dicarstvo5 add_idea = dicarstvo6 }
+			}
 		}
 	}
 	
@@ -280,18 +443,35 @@ focus_tree = {
 		prerequisite = { focus = ODS_Mobilize_the_population }
 		prerequisite = { focus = ODS_Continue_integration }
 		x = 8
-		y = 17
-		cost = 1
+		y = 10
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
-		swap_ideas = {
+			if = {
+				limit = { has_idea = black_beret }
+				swap_ideas = {
+					remove_idea = black_beret
+					add_idea = black_beret2
+				}
+			}
+			else_if = {
+				limit = { has_idea = black_beret2 }
+				swap_ideas = {
 				remove_idea = black_beret2
 				add_idea = black_beret3
-					}
+				}
+			}
+			else_if = {
+				limit = { has_idea = black_beret3 }
+				swap_ideas = {
+				remove_idea = black_beret3
+				add_idea = black_beret4
+				}
+			}
 		}
 	}
 	
@@ -300,8 +480,8 @@ focus_tree = {
 		icon = GFX_Pacification
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 12
-		y = 5
-		cost = 1
+		y = 1
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -317,8 +497,8 @@ focus_tree = {
 		icon = GFX_Expand_the_powers_of_the_committees
 		prerequisite = { focus = ODS_Pacification }
 		x = 12
-		y = 8
-		cost = 1
+		y = 3
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -354,8 +534,8 @@ focus_tree = {
 		icon = GFX_The_Secret_Police
 		prerequisite = { focus = ODS_Expand_the_powers_of_the_committees }
 		x = 12
-		y = 11
-		cost = 1
+		y = 5
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -391,14 +571,19 @@ focus_tree = {
 		icon = GFX_Suppress_the_mercenaries
 		prerequisite = { focus = ODS_The_Secret_Police }
 		x = 11
-		y = 14
-		cost = 1
+		y = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
+				declare_war_on = {
+				target = AZB
+				type = annex_everything
+			}
+			
 		}
 	}
 	
@@ -407,8 +592,8 @@ focus_tree = {
 		icon = GFX_Destroy_their_hopes
 		prerequisite = { focus = ODS_The_Secret_Police }
 		x = 13
-		y = 14
-		cost = 1
+		y = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -417,8 +602,9 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ODS.28
-			
 			}
+			add_political_power = 50
+			add_war_support = 0.2
 		}
 	}
 	
@@ -427,18 +613,28 @@ focus_tree = {
 		icon = GFX_The_Army_of_the_Plan
 		prerequisite = { focus = ODS_The_first_triumph_of_the_idea }
 		x = 16
-		y = 5
-		cost = 1
+		y = 1
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
-		swap_ideas = {
-				remove_idea = black_beret
-				add_idea = black_beret2
-		}
+			if = {
+				limit = { has_idea = black_beret }
+				swap_ideas = {
+					remove_idea = black_beret
+					add_idea = black_beret2
+				}
+			}
+			else_if = {
+				limit = { has_idea = black_beret2 }
+				swap_ideas = {
+					remove_idea = black_beret2
+					add_idea = black_beret3
+				}
+			}
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -464,18 +660,28 @@ focus_tree = {
 		icon = GFX_Expansion_plan
 		prerequisite = { focus = ODS_The_Army_of_the_Plan }
 		x = 16
-		y = 8
-		cost = 1
+		y = 3
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
-		swap_ideas = {
-				remove_idea = black_beret2
-				add_idea = black_beret3
-		}
+			if = {
+				limit = { has_idea = black_beret2 }
+				swap_ideas = {
+					remove_idea = black_beret2
+					add_idea = black_beret3
+				}
+			}
+			else_if = {
+				limit = { has_idea = black_beret3 }
+				swap_ideas = {
+					remove_idea = black_beret3
+					add_idea = black_beret4
+				}
+			}
 		}
 	}
 	
@@ -484,8 +690,8 @@ focus_tree = {
 		icon = GFX_Refusal
 		prerequisite = { focus = ODS_Expansion_plan }
 		x = 15
-		y = 11
-		cost = 1
+		y = 5
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -571,6 +777,11 @@ focus_tree = {
 					amount = 2000
 					producer = ODS
 				}
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 500
+				producer = ODS
 			}	
 		}
 	}
@@ -580,8 +791,8 @@ focus_tree = {
 		icon = GFX_Adapting_to_combat
 		prerequisite = { focus = ODS_Refusal }
 		x = 15
-		y = 14
-		cost = 1
+		y = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -602,8 +813,8 @@ focus_tree = {
 		icon = GFX_Squads_of_suppressors
 		prerequisite = { focus = ODS_Expansion_plan }
 		x = 17
-		y = 11
-		cost = 1
+		y = 5
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -655,8 +866,8 @@ focus_tree = {
 		icon = GFX_Heavy_weapons
 		prerequisite = { focus = ODS_Squads_of_suppressors }
 		x = 17
-		y = 14
-		cost = 1
+		y = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
@@ -679,14 +890,26 @@ focus_tree = {
 		prerequisite = { focus = ODS_Destroy_their_hopes }
 		prerequisite = { focus = ODS_Suppress_the_mercenaries }
 		x = 14
-		y = 17
-		cost = 1
+		y = 10
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
+			annex_country = {
+				target = CRI
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = HER
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = KUB
+				transfer_troops = yes
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = SWR
@@ -787,6 +1010,18 @@ focus_tree = {
 				type = annex_everything
 				target = GAT
 			}
+						create_wargoal = {
+				type = annex_everything
+				target = BOD
+			}
+						create_wargoal = {
+				type = annex_everything
+				target = DOM
+			}
+						create_wargoal = {
+				type = annex_everything
+				target = LUG
+			}
 		}
 	}
 	
@@ -796,55 +1031,29 @@ focus_tree = {
 		prerequisite = { focus = ODS_Operation_Voskhod }
 		prerequisite = { focus = ODS_EMBAO }
 		prerequisite = { focus = ODS_Prosperity }
-		x = 10
-		y = 20
-		cost = 1
+		x = 9
+		y = 12
+		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 10
 		}
 			
 		completion_reward = {
-		country_event = {
-						id = ODS.20
-				}
-			if = { 
-				limit = { has_idea = dicarstvo1 }
-				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
-				}
+			country_event = {
+				id = ODS.20
 			}
-			else_if = { 
-				limit = { has_idea = dicarstvo} 
-				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
-				}
+			if = {
+				limit = { has_idea = dicarstvo4 }
+				swap_ideas = { remove_idea = dicarstvo4 add_idea = dicarstvo5 }
 			}
-			else_if = { 
-				limit = { has_idea = dicarstvo2} 
-				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
-				}
-			}
-			else_if = { 
-				limit = { has_idea = dicarstvo3 } 
-				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = 	dicarstvo4
-				}
-			}
-			else_if = {  
-				limit = { has_idea = dicarstvo4 } 
-				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = 	dicarstvo5
-				}
+			else_if = {
+				limit = { has_idea = dicarstvo5 }
+				swap_ideas = { remove_idea = dicarstvo5 add_idea = dicarstvo6 }
 			}
 		}
 	}
+}
  
  
 	

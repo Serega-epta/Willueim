@@ -1,34 +1,27 @@
 
-state = {
-	id = 897
-	name = "STATE_897"
-	manpower = 183748
+state={
+	id=897
+	name="STATE_897"
 
-	resources={
-		energy=86
-	}
-	state_category = rural
-
-	history = {
-		owner = NOR
-		add_core_of = IMP
+	history={
+		owner = VOZ
+		add_core_of = VOZ
 		victory_points = {
-			  6243 1
+			13471 1 
 		}
-		victory_points = {
-			  3345 1
-		}
+	
 		buildings = {
-		
 			infrastructure = 2
-			
+
 		}
-		
+
 	}
 
-	provinces = {
-		236 352 3345 6243 9318 11336
+	provinces={
+		105 13467 13471 13472 13474 13479 
 	}
-
-	local_supplies = 6.0 
+	manpower=12250
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

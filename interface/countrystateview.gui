@@ -278,14 +278,14 @@ guiTypes = {
 			
 			iconType = {
 				name = "terrain_picture"
-				position = { x = 10 y= -27 }
+				position = { x = 9 y= -27 }
 				spriteType = "GFX_terrain_default"
 				Orientation = "UPPER_LEFT"
 			}
 			
 			iconType = {
 				name = "province_header"
-				position = { x = 6 y= -34 }
+				position = { x = -15 y= -34 }
 				spriteType = "GFX_province_header"
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
@@ -293,7 +293,7 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "province"
-				position = { x = 23 y= -29 }
+				position = { x = 23 y= -20 }
 				font = "hoi_18mbs"
 				maxWidth = 80
 				maxHeight = 30
@@ -377,7 +377,7 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "province_building_entries"
-				position = { x = -2 y = 48 }
+				position = { x = -5000 y = 48 }
 				size = { width = 480 height = 90%% }
 				format = "UPPER_LEFT"
 				slotsize = { width = 109 height = 54 }
@@ -387,7 +387,7 @@ guiTypes = {
 			buttonType = {
 				name = "nuke_province"
 				quadTextureSprite ="GFX_nuke_button"
-				position = { x= 13 y = -11 }
+				position = { x= 120 y = -38 }
 			}
 			
 			iconType = {

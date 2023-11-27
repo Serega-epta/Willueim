@@ -1,34 +1,33 @@
 
-state = {
-	id = 981
-	name = "STATE_981"
-	manpower = 183748
-	
-	state_category = rural
-	resources = {
-		coal = 44
+state={
+	id=981
+	name="STATE_981"
+	resources={
+		coal=200.000
 	}
 
-	history = {
+	history={
 		owner = VOZ
 		add_core_of = VOZ
 		victory_points = {
-		6040 10	
-		}
-		victory_points = {
-		198 1	
+			6040 3 
 		}
 		buildings = {
-		
+
 		}
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		
+
 	}
 
-	provinces = {
-		9205 11119 6040 198 13076 12502
-	} 
-
-	local_supplies = 6.0 
+	provinces={
+		198 6040 9205 11119 13466 13468 13473 13475 13476 
+	}
+	manpower=11000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

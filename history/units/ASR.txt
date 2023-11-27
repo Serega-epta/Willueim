@@ -11,6 +11,23 @@ division_template = {
 	}
 	priority = 1
 }
+division_template = {
+	name = "Pervoe_pokolenie_squad"
+	division_names_group = SOV_INF_01
+	regiments = {
+		egerskayapechota = { x = 0 y = 0 }
+		egerskayapechota = { x = 1 y = 0 }
+		egerskayapechota = { x = 0 y = 1 }
+		egerskayapechota = { x = 1 y = 1 }
+		egerskayapechota = { x = 2 y = 0 }
+		egerskayapechota = { x = 2 y = 1 }
+	}
+	support = {
+		rhbz = { x = 0 y = 0 }
+		art_stvol = { x = 0 y = 1 }
+	}
+	priority = 1
+}
 
 units = {
 	division = {
@@ -18,7 +35,7 @@ units = {
 		location = 4354
 		division_template = "Bandits"
         	start_experience_factor = 0.1
-        	start_equipment_factor = 0.5
+        	start_equipment_factor = 1.0
         	start_manpower_factor = 1.0
 	}
 	division = {
@@ -26,7 +43,31 @@ units = {
 		location = 7403
 		division_template = "Bandits"
         	start_experience_factor = 0.1
-        	start_equipment_factor = 0.5
+        	start_equipment_factor = 1.0
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Bandits"
+		location = 273
+		division_template = "Bandits"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 1.0
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Pervoe_pokolenie_squad"
+		location = 1305
+		division_template = "Pervoe_pokolenie_squad"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 1.0
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Pervoe_pokolenie_squad"
+		location = 12216
+		division_template = "Pervoe_pokolenie_squad"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 1.0
         	start_manpower_factor = 1.0
 	}
 }

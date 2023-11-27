@@ -89,70 +89,6 @@ kanon_absol = {
 	supply_node_range = 1
 }
 
-
-
-
-
-
-
-
-
-
-
-
-#засилие тварей
-	congestion_of_creatures = {
-		enable = { always = yes }
-		icon = GFX_impassable_icon
-		production_speed_buildings_factor = -0.25
-		attrition = +0.25
-		army_speed_factor = -0.25
-		monthly_population = -0.005
-		
-}
-#дикие деревни
-	wild_tribes = {
-		enable = { always = yes }
-		icon = GFX_wild_tribes_icon
-		production_speed_buildings_factor = -0.05
-		attrition = +0.1			
-}
-#аномальная активность
-	abnormal_activity = {
-		enable = { always = yes }
-		icon = GFX_modifiers_refugees_icon
-		production_speed_buildings_factor = -0.4
-		local_resources_factor = -0.5
-		attrition = +0.5
-		army_speed_factor = -0.5
-		monthly_population = -0.01
-		
-}
-#искажение молчание
-	distortion_of_silence = {
-		enable = { always = yes }
-		icon = GFX_modifiers_unplanned_offensive_icon
-		
-		initiative_factor = -0.3
-		coordination_bonus = -0.3
-		
-		
-		army_speed_factor = -0.25
-		army_defence_factor = -0.25
-		army_attack_factor = -0.25
-		
-}
-#лучевой буран
-	radiant_storm = {
-		enable = { always = yes }
-		icon = GFX_modifiers_unplanned_offensive_icon
-		production_speed_buildings_factor = -0.1
-		attrition = +0.05
-		army_speed_factor = -0.25
-		army_fuel_consumption_factor = +0.1
-		
-}
-
 #Бонусы специализации гарнизона
 	garnizon_baff = {
 		enable = { always = yes }
@@ -469,38 +405,88 @@ kanon_absol = {
 
 	}
     #Уровни подчинения в Адмиралтействе
-	ODS_diversions = {
+	ODS_new_land = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
-		army_speed_factor_for_controller = -0.5
-		local_supplies_for_controller = -0.5
-		attrition_for_controller = 0.3
-		disable_strategic_redeployment_for_controller = 1
+		icon = GFX_ods_novaya_zemlya_icon
+		local_manpower = -0.1
+		local_resources = -0.5
 	}
-	ODS_third_level_of_authority = {
+	ODS_reinforced_veil = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
-		production_speed_buildings_factor = 0.25
-		production_factory_efficiency_gain_factor = 0.3
+		icon = GFX_ods_ukreplenie_vuali_icon
+		local_manpower = 0.05
+		local_resources = -0.5
 	}
-	ODS_fourth_level_of_authority = {
+	ODS_focused_eye = {
 		enable = { always = yes }
 		remove_trigger = { always = no }
-		icon = GFX_impassable_icon
-		production_speed_buildings_factor = 0.5
-		monthly_population = 0.005
+		icon = GFX_ods_sfokusirovat_vzor_icon
+		local_manpower = 0.05
+		local_resources = -0.1
+		local_building_slots = 1
 	}
-	
+	ODS_informed_society = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_ods_propaganda_osoznannosti_icon
+		local_manpower = 0.1
+		local_resources = 0.1
+		local_building_slots = 1
+		state_production_speed_industrial_complex_factor = 0.05
+		state_production_speed_arms_factory_factor = 0.05
+	}
+
+########Типы специализации стейтов в Адмиралтействе####################
+	ods_industrial_region = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_ods_industrial_region_icon
+		local_factories = 0.15
+		state_production_speed_buildings_factor = 0.15
+		local_manpower = 0.1
+		local_resources = 0.1
+		local_building_slots_factor = 0.05
+	}
+	ods_resource_region = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_ods_resource_region_icon
+		local_manpower = 0.1
+		local_resources = 0.3
+		local_building_slots_factor = 0.05
+		state_production_speed_buildings_factor = 0.05
+	}
+	ods_agricultural_region = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_ods_agricultural_region_icon
+		local_manpower = 0.15
+		local_resources = 0.2
+		local_building_slots_factor = 0.05
+		state_production_speed_buildings_factor = 0.05	
+	}
+	ods_research_region = {
+		enable = { always = yes }
+		remove_trigger = { always = no }
+		icon = GFX_ods_research_region_icon
+		research_speed_factor = 0.01
+		local_manpower = 0.1
+		local_resources = 0.1
+		local_building_slots_factor = 0.05
+		state_production_speed_buildings_factor = 0.05
+	}
+#######################################################################
+
 	baltic_reservation = { #Балтийская резервация
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
-		conscription_factor = +0.2 #Военно обязанность населения
-		production_speed_buildings_factor = 0.1 #Скорость строительства
-		local_building_slots_factor = -0.5 #местных ячеек для строительства
-		supply_factor = 0.3 #Эффективность снабжения
+		conscription_factor = +0.2 
+		production_speed_buildings_factor = 0.1 
+		local_building_slots_factor = -0.5 
+		supply_factor = 0.3 
 		
 	}
 	
@@ -508,10 +494,10 @@ kanon_absol = {
 		enable = { always = yes }
 		icon = GFX_impassable_icon
 		
-		production_speed_buildings_factor = -0.1 #Скорость строительства
-		supply_factor = -0.2 #Эффективность снабжения
-		local_building_slots_factor = -0.2 #местных ячеек для строительства
-		conscription = -0.3 #Военно обязанность населения
+		production_speed_buildings_factor = -0.1 
+		supply_factor = -0.2 
+		local_building_slots_factor = -0.2 
+		conscription = -0.3 
 	}
 	
 	dead_region = { #Мертвый регион

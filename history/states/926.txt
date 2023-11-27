@@ -2,27 +2,21 @@
 state = {
 	id = 926
 	name = "STATE_926"
-	manpower = 183748
+	manpower = 5000
+	resources={
+		coal=10
+		steel=4
+	}
 	
-	state_category = rural
+	state_category = pastoral
 
 	history = {
-		owner =OZE
+		owner = OZE
 		victory_points = {
-			    9120 1
+			9120 1
 		}
 		buildings = {
-		
-			3053 = {
-
-			}
-			9120 = {
-
-			}
-			9408 = {
-
-			}
-
+			infrastructure = 1
 		}
 		
 	}

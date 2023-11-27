@@ -1,6 +1,8 @@
 #generic
 
-##Калаш
+#########
+##Калаш##
+#########
 entity = {
 	name = "geo_aks74_left_entity"
 	pdxmesh = "geo_aks74_mesh"
@@ -46,23 +48,44 @@ entity = {
 ###AKM
 entity = {
 	clone = "geo_aks74_right_entity"
-	name = "geo_akm_right_entity"
-	pdxmesh = "geo_akm_mesh"
+	name = "roh_akm_right_entity"
+	pdxmesh = "roh_akm_mesh"
 }
 
 entity = {
 	clone = "geo_aks74_long_idle_entity"
-	name = "geo_akm_long_idle_entity"
-	pdxmesh = "geo_akm_mesh"
+	name = "roh_akm_long_idle_entity"
+	pdxmesh = "roh_akm_mesh"
 }
 
 entity = {
 	clone = "geo_aks74_left_entity"
-	name = "geo_akm_left_entity"
-	pdxmesh = "geo_akm_mesh"
+	name = "roh_akm_left_entity"
+	pdxmesh = "roh_akm_mesh"
 }
 
-##Эмка
+###AKS74U
+entity = {
+	clone = "geo_aks74_right_entity"
+	name = "roh_aks74u_right_entity"
+	pdxmesh = "roh_aks74u_mesh"
+}
+
+entity = {
+	clone = "geo_aks74_long_idle_entity"
+	name = "roh_aks74u_long_idle_entity"
+	pdxmesh = "roh_aks74u_mesh"
+}
+
+entity = {
+	clone = "geo_aks74_left_entity"
+	name = "roh_aks74u_left_entity"
+	pdxmesh = "roh_aks74u_mesh"
+}
+
+########
+##Эмка##
+########
 entity = {
 	name = "geo_type89_left_entity"
 	pdxmesh = "geo_type89_mesh"

@@ -1,152 +1,91 @@
-characters={
+characters = {
 	ODS_Yehor_Nikitin={
-		name=Yehor_Nikitin
-		portraits={
-			army={
-				large=GFX_portrait_Yehor_Nikitin
+		name = Yehor_Nikitin
+		portraits = {
+			army = {
+				large = GFX_portrait_ODS_Egor_Nikitin
 			}
-			civilian={
-				large="gfx/leaders/ODS/Egorische_zhestkiy.dds"
+			civilian = {
+				large = GFX_portrait_ODS_Egor_Nikitin
 			}
 		}
 		field_marshal={
-			traits={ }
-			skill=5
-			attack_skill=3
-			defense_skill=5
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=1
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 1
 		}
-		country_leader={
-			ideology=opportunists_1
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = opportunists_1
+			expire = "2090.1.1.1"
+			id = -1
 			desc = Yehor_Nikitin_desc
 		}
 	}
-	ODS_Vladislav_Vasserman={
-		name=ODS_Vladislav_Vasserman
-		portraits={
-			army={
-				large=GFX_portrait_Vladislav_Vasserman
-				small="GFX_idea_heinz_guderian"
+	ODS_Vladislav_Vasserman = {
+		name = ODS_Vladislav_Vasserman
+		portraits = {
+			army = {
+				large = GFX_portrait_ODS_Vladislav_Vasserman
 			}
-		}
-		advisor={
-			cost = 20
-			slot = theorist
-			idea_token = heinz_guderian
-			ledger = army
-			allowed = {
-				original_tag = ODS
-			}
-			traits = {
-				blitzkrieg_theorist
-			}
-		}
-		
-		corps_commander={
-			traits={ }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=2
+		}	
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = 2
 		}
 	}
-	ODS_Artem_Chigirov={
-		name=ODS_Artem_Chigirov
-		portraits={
-			army={
-				large=GFX_portrait_Artem_Chigirov
-				small="GFX_idea_heinz_guderian"
+	ODS_Artem_Chigirov = {
+		name = ODS_Artem_Chigirov
+		portraits = {
+			army = {
+				large = GFX_portrait_ODS_Artem_Chigirov
 			}
-		}
-		advisor={
-			cost = 20
-			slot = theorist
-			idea_token = heinz_guderian
-			ledger = army
-			allowed = {
-				original_tag = ODS
-			}
-			traits = {
-				blitzkrieg_theorist
-			}
-		}
-		
+		}	
 		corps_commander={
-			traits={ }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=3
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = 3
 		}
 	}
-	ODS_Pavel_Rosov={
-		name=ODS_Pavel_Rosov
-		portraits={
-			army={
-				large=GFX_portrait_Pavel_Rosov
-				small="GFX_idea_heinz_guderian"
+	ODS_Vitalyi_Stoyanov = {
+		name = ODS_Vitalyi_Stoyanov
+		portraits = {
+			army = {
+				large = GFX_portrait_ODS_Vitalyi_Stoyanov
 			}
 		}
-		advisor={
-			cost = 20
-			slot = theorist
-			idea_token = heinz_guderian
-			ledger = army
-			allowed = {
-				original_tag = ODS
-			}
-			traits = {
-				blitzkrieg_theorist
-			}
-		}
-		
-		corps_commander={
-			traits={ }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=0
-			logistics_skill=1
-			legacy_id=4
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 0
+			logistics_skill = 1
+			legacy_id = 4
 		}
 	}
-	ODS_Roman_Xan={
-		name=ODS_Roman_Xan
-		portraits={
-			army={
-				large=GFX_portrait_Roman_Xan
-				small="GFX_idea_heinz_guderian"
+	ODS_Roman_Xan = {
+		name = ODS_Roman_Xan
+		portraits = {
+			army = {
+				large = GFX_portrait_ODS_Roman_Xan
 			}
 		}
-		advisor={
-			cost = 20
-			slot = theorist
-			idea_token = heinz_guderian
-			ledger = army
-			allowed = {
-				original_tag = ODS
-			}
-			traits = {
-				blitzkrieg_theorist
-			}
-		}
-		
-		corps_commander={
-			traits={  }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=5
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 5
 		}
 	}
 }

@@ -1,43 +1,36 @@
 
-state = {
-	id = 891
-	name = "STATE_891"
-	manpower = 183748
-	
-	state_category = rural
-
-	resources = {
-		coal = 60
-
+state={
+	id=891
+	name="STATE_891"
+	resources={
+		coal=27
 	}
 
-	history = {
+	history={
 		owner = LWV
 		victory_points = {
-			  9468   1
-		}
-		victory_points = {
-			422 2
-		}
-		victory_points = {
-			11479 3
+			11479 10 
 		}
 		buildings = {
-		
 			infrastructure = 2
 			industrial_complex = 2
 			arms_factory = 2
+			industrial_complex = 1
 
-			
 		}
-		add_dynamic_modifier = { modifier = wild_tribes }
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
+		}
 		set_state_flag = has_wild_tribes
-		
+
 	}
 
-	provinces = {
-		422 536 9468 9558 11479  
+	provinces={
+		491 536 6431 9454 9468 9558 11479 13343 13345 13349 
 	}
-
-	local_supplies = 6.0 
+	manpower=100000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=6.000
 }

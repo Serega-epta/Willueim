@@ -1,6 +1,6 @@
 capital = 839
 
-oob = base #"BRA_1936"
+oob = base 
 
 
 # Starting tech
@@ -28,32 +28,32 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	gumanists = 84
-	svobod = 6
+	gumanists = 70
+	svobod = 0
 	technocracies = 10
 	opportunists = 0
-	gelerteria = 0
+	gelerteria = 10
 	sacraments = 0
-    militarists = 0
+    militarists = 5
     forestry = 0
-    juntas = 0
+    juntas = 5
     professariat = 0
     patriots = 0
     bandits = 0
     free = 0
 }
+
+puppet = SOL
+puppet = COR
+puppet = NOR
+puppet = PLR
+
 add_ideas = IMP_1
 add_ideas = IMP_2
-add_ideas = IMP_3 
-add_to_variable = { HONOR_GRISHA = 5 }
-add_to_variable = { Loyal = 5 } 
-add_ideas = neorg_army
-set_temp_variable = { temp1 = Loyal }
-multiply_temp_variable = { temp1 = 0.02 }
-set_variable = { Loyal_all = temp1 }
+
 recruit_character = IMP_Dmitry_Milenin
 recruit_character = IMP_Grig_Reznov
 recruit_character = IMP_Aleksey_Dorog
 recruit_character = IMP_Michail_Orlov
 recruit_character = IMP_Nikita_Bartonov
-recruit_character = IMP_Nikita_Bartonov2
+
