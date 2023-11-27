@@ -15,10 +15,10 @@ characters = {
 	ARM_michael_onufrenko = {
 		portraits={
 			army={
-				large="gfx/leaders/ARM/michael_onufrenko.dds"
+				large = GFX_portrait_ARM_Onufrenko
 			}
 			civilian={
-				large="gfx/leaders/ARM/michael_onufrenko_leader.dds"
+				large = GFX_portrait_ARM_Onufrenko
 			}
 		}
 		field_marshal = {
@@ -29,9 +29,10 @@ characters = {
 			logistics_skill = 3
 		}
 		country_leader={
-			ideology=patriots_1
+			ideology=militarists_1
 			expire="3333.1.1.1"
 			id=-1
+			desc = ARM_michael_onufrenko_desc
 		}
 	}
 	ARM_eduard_varfolomeev = {
@@ -75,5 +76,12 @@ characters = {
 			planning_skill = 4
 			logistics_skill = 3
 		}
-	}	
+	}
+	ARM_Pavlik_Morozov = {
+		portraits={
+			army={
+				large= GFX_portrait_ARM_Pavlik_Morozov
+			}
+		}
+	}
 }

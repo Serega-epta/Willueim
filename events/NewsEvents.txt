@@ -35,3 +35,19 @@ news_event = { # Новость об объединении после Соба�
 		name = worldnews.1.a
 	}
 }
+
+#Council_newsevent
+news_event = {
+	id = worldnews.3
+	title = worldnews.3.t
+	desc = worldnews.3.d
+	picture = GFX_news_event_council_war_on_mad
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = worldnews.3.a
+	}
+}

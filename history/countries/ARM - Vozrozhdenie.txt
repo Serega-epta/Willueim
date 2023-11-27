@@ -1,34 +1,32 @@
 capital = 193
-add_manpower = 60000
+add_manpower = 12000
+set_stability = 0.25
+set_war_support = 0.7
+army_experience = 5
 
 oob = ARM
 
 add_ideas = { 
-	ARM_crimson_fury 
-	ARM_punitive_fervor
-	ARM_ripped_veins
+	ARM_blood_on_snow
 }
 
 # Стартовые технологии
 set_technology = {
     infantry_weapons = 1
-	infantry_weapons1 = 1
-	infantry_odejda = 1
-	infantry_odejda1 = 1
-	gw_artillery = 1
-	stvolartillery = 1
-	tech_support = 1
-	tech_engineers = 1
-	tech_recon = 1
-	infantry_odejda = 1
-    infantry_odejda_1 = 1
+    infantry_odejda = 1
+    tech_support = 1
+    basic_machine_tools = 1
+    electronic_mechanical_engineering = 1
+    gw_artillery = 1
+    stvolartillery = 1
+    boepripas = 1    
 }
 
 set_research_slots = 3
 set_convoys = 0
 
 load_focus_tree = {
-    tree = army_junta_small_focus
+    tree = ARM_phase_one_tree
     keep_completed = no
 }
 
@@ -38,19 +36,48 @@ set_politics = {
 }
 
 set_popularities = {
-	patriots = 70
-    militarists = 15
-	technocracies = 5
-	opportunists = 2
-	gumanists = 1
-    juntas = 3
-    professariat = 1
-    bandits = 3	
-	free = 0
-	sacraments = 0
-    gelerteria = 0
-	svobod = 0
-    forestry = 0
+	patriots = 65
+    militarists = 30
+	svobod = 5
+}
+
+add_opinion_modifier = {
+    target = IMP
+    modifier = ARM_hatred
+}
+add_opinion_modifier = {
+    target = SUM
+    modifier = ARM_traitors
+}
+add_opinion_modifier = {
+    target = VDS
+    modifier = ARM_traitors
+}
+add_opinion_modifier = {
+    target = BIH
+    modifier = ARM_fanatics
+}
+add_opinion_modifier = {
+    target = DIB
+    modifier = ARM_fanatics
+}
+add_opinion_modifier = {
+    target = BAG
+    modifier = ARM_fanatics
+}
+create_country_leader = {
+    name = ARM_michael_onufrenko
+    desc = ARM_michael_onufrenko_desc
+    picture = GFX_portrait_ARM_Onufrenko
+    expire = "3333.1.1"
+    ideology = militarists_1
+}
+create_country_leader = {
+    name = ARM_Sergey_Rogov
+    #desc = 
+    #picture = 
+    expire = "3333.1.1"
+    ideology = svobod_1
 }
 
 recruit_character = ARM_Yuriy_Podolika
@@ -58,6 +85,7 @@ recruit_character = ARM_michael_onufrenko
 recruit_character = ARM_eduard_varfolomeev
 recruit_character = ARM_roman_morozov
 recruit_character = ARM_anatoly_mikhailov
+recruit_character = ARM_Pavlik_Morozov
 
 
 
