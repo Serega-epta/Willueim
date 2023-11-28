@@ -759,26 +759,4 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = GLS_these_arent_war_crimes
-		icon = GFX_these_arent_war_crimes
-		x = 0
-		y = 1		
-		cost = 5
-		prerequisite = { focus = GLS_chasing_a_dream }		
-		available = {
-			has_war = no
-		}			
-		allow_branch = {
-			has_completed_focus = GLS_chasing_a_dream
-		}
-		relative_position_id = GLS_chasing_a_dream
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_ideas = GLS_mint_gingerbread
-			hidden_effect = {
-				set_country_flag = access_to_justifications_of_war
-			}
-		}
-	}
 }
