@@ -1,6 +1,6 @@
 equipments = {
 
-	pre_war_OPV_chassis = {
+	pre_war_mass_tank_chassis = {
 		year = 2010
 		is_archetype = yes
 		is_buildable = no
@@ -13,136 +13,85 @@ equipments = {
 
 		
 
-		module_slots = {
-			main_armament_slot = {
-				required = yes
-				allowed_module_categories = {
-					tank_small_main_armament
-					tank_flamethrower
-				}
-			}
+		module_slots = none
 
-			turret_type_slot = {
-				required = yes
-				allowed_module_categories = {
-					tank_light_turret_type
-				}
-			}
-			suspension_type_slot = {
-				required = yes
-				allowed_module_categories = {
-					tank_suspension_type
-					tank_non_tracked_suspension_type
-				}
-			}
-
-			armor_type_slot = {
-				required = yes
-				allowed_module_categories = {
-					tank_armor_type
-				}
-			}
-
-			engine_type_slot = {
-				required = yes
-				allowed_module_categories = {
-					tank_engine_type
-				}
-			}
-
-			special_type_slot_1 = {
-				required = no
-				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
-					tank_secondary_turret
-				}
-			}
-
-			special_type_slot_2 = {
-				required = no
-				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
-					tank_secondary_turret
-				}
-			}
-
-			special_type_slot_3 = {
-				required = no
-				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
-					tank_secondary_turret
-				}
-			}
-
-			special_type_slot_4 = {
-				required = no
-				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
-					tank_secondary_turret
-				}
-			}
-			
-		}
-		module_count_limit = {
-			module = sloped_armor
-			count < 2
-		}	
-		module_count_limit = {
-			category = tank_radio_module
-			count < 2
-		}
-		module_count_limit = {
-			category = tank_secondary_turret
-			count < 2
-		}
-		module_count_limit = {
-			module = amphibious_drive
-			count < 2
+		fuel_consumption = 0
+		maximum_speed = 4
+		build_cost_ic = 1
+		reliability = 0.8
+		hardness = 0.8
+		armor_value = 5
+		resources = {
+			steel = 1
 		}
 
-		module_count_limit = {
-			module = wet_ammo_storage
-			count < 2
+	}
+	pre_war_spec_tank_chassis = {
+		year = 2010
+		is_archetype = yes
+		is_buildable = no
+
+		picture = archetype_light_tank_equipment
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor
+		priority = 2000
+
+		
+
+		module_slots = none
+
+		fuel_consumption = 0
+		maximum_speed = 4
+		build_cost_ic = 1
+		reliability = 0.8
+		hardness = 0.8
+		armor_value = 5
+		resources = {
+			steel = 1
 		}
 
-		module_count_limit = {
-			module = squeezebore_adaptor
-			count < 2
+	}
+	pre_war_ai_tank_chassis = {
+		year = 2010
+		is_archetype = yes
+		is_buildable = no
+
+		picture = archetype_light_tank_equipment
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor
+		priority = 2000
+
+		
+
+		module_slots = none
+
+		fuel_consumption = 0
+		maximum_speed = 4
+		build_cost_ic = 1
+		reliability = 0.8
+		hardness = 0.8
+		armor_value = 5
+		resources = {
+			steel = 1
 		}
 
-		module_count_limit = {
-			module = armor_skirts
-			count < 2
-		}
+	}
+	pre_war_early_tank_chassis = {
+		year = 2010
+		is_archetype = yes
+		is_buildable = no
 
-		module_count_limit = {
-			module = dozer_blade
-			count < 2
-		}
+		picture = archetype_light_tank_equipment
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor
+		priority = 2000
 
-		module_count_limit = {
-			module = easy_maintenance
-			count < 2
-		}
-		module_count_limit = {
-			module = auto_loader
-			count < 2
-		}
-		module_count_limit = {
-			module = stabilizer
-			count < 2
-		}
-		default_modules = {
-			main_armament_slot = empty
-			turret_type_slot = tank_light_one_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
-		}
+		
+
+		module_slots = none
 
 		fuel_consumption = 0
 		maximum_speed = 4
@@ -156,6 +105,41 @@ equipments = {
 
 	}
 
+	### Ранний танк
+
+	early_mbt_equipment = { 
+		abbreviation = "MBT0"
+		derived_variant_name = basic_mass_OPF_equipment
+		visual_level = 0
+		year = 2020
+		archetype = pre_war_mass_tank_chassis
+		priority = 2000
+		module_slots = none
+		upgrades = {
+			tank_nsb_engine_upgrade
+			tank_nsb_armor_upgrade
+		}
+
+		#Различные способности
+		maximum_speed = 8
+		reliability = 0.8
+
+		#Защитные свойства
+		defense = 20
+		breakthrough = 25
+		hardness = 0.8
+		armor_value = 40
+
+		#Наступательные способности
+		soft_attack = 30
+		hard_attack = 30
+		ap_attack = 54
+		air_attack = 0.5
+		
+		fuel_consumption = 3.5
+		build_cost_ic = 45
+	}
+
 	#Массовые танки
 
 	mass_tank_chassis_0 = {
@@ -163,9 +147,9 @@ equipments = {
 		derived_variant_name = basic_mass_OPF_equipment
 		visual_level = 0
 		year = 2020
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_mass_tank_chassis
 		priority = 2000
-		module_slots = inherit
+		module_slots = none
 		upgrades = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
@@ -197,9 +181,9 @@ equipments = {
 		parent = mass_tank_chassis_0
 		visual_level = 0
 		year = 2025
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_mass_tank_chassis
 		priority = 2000
-		module_slots = inherit
+		module_slots = none
 		upgrades = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
@@ -231,9 +215,9 @@ equipments = {
 		parent = mass_tank_chassis_1
 		visual_level = 0
 		year = 2030
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_mass_tank_chassis
 		priority = 2000
-		module_slots = inherit
+		module_slots = none
 		upgrades = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
@@ -265,7 +249,7 @@ equipments = {
 		parent = mass_tank_chassis_2
 		visual_level = 0
 		year = 2040
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_mass_tank_chassis
 		priority = 2000
 		module_slots = inherit
 		upgrades = {
@@ -300,9 +284,9 @@ equipments = {
 		derived_variant_name = basic_specialized_OPF_equipment
 		visual_level = 0
 		year = 2020
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_spec_tank_chassis
 		priority = 2000
-		module_slots = inherit
+		module_slots = none
 		upgrades = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
@@ -334,9 +318,9 @@ equipments = {
 		parent = specialized_tank_chassis_0
 		visual_level = 0
 		year = 2025
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_spec_tank_chassis
 		priority = 2000
-		module_slots = inherit
+		module_slots = none
 		upgrades = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
@@ -368,7 +352,7 @@ equipments = {
 		parent = specialized_tank_chassis_1
 		visual_level = 0
 		year = 2030
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_spec_tank_chassis
 		priority = 2000
 		module_slots = inherit
 		upgrades = {
@@ -402,7 +386,7 @@ equipments = {
 		parent = specialized_tank_chassis_2
 		visual_level = 0
 		year = 2040
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_spec_tank_chassis
 		priority = 2000
 		module_slots = inherit
 		upgrades = {
@@ -437,7 +421,7 @@ equipments = {
 		derived_variant_name = basic_ai_OPF_equipment
 		visual_level = 0
 		year = 2020
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_ai_tank_chassis
 		priority = 2000
 		module_slots = inherit
 		upgrades = {
@@ -471,7 +455,7 @@ equipments = {
 		parent = ai_tank_chassis_0
 		visual_level = 0
 		year = 2025
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_ai_tank_chassis
 		priority = 2000
 		module_slots = inherit
 		upgrades = {
@@ -505,7 +489,7 @@ equipments = {
 		parent = ai_tank_chassis_1
 		visual_level = 0
 		year = 2030
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_ai_tank_chassis
 		priority = 2000
 		module_slots = inherit
 		upgrades = {
@@ -539,7 +523,7 @@ equipments = {
 		parent = ai_tank_chassis_2
 		visual_level = 0
 		year = 2040
-		archetype = pre_war_OPV_chassis
+		archetype = pre_war_ai_tank_chassis
 		priority = 2000
 		module_slots = inherit
 		upgrades = {
