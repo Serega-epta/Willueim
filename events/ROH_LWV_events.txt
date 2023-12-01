@@ -345,40 +345,41 @@ country_event = {
 	name = LWV.29.a
 	}
 }
-
-
-######################### 3 FAZA ###############################
-
-
 country_event = {
-	id = LWV.3333
-	title = LWV.3333.t
-	desc = LWV.3333.d
-	picture = GFX_news_event_001
-	fire_only_once = yes	
-	is_triggered_only = yes
+	id = LWV.30
+	title = LWV.30.t
+	desc = LWV.30.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = LWV
+		NOT = {
+			country_exists = SIL
+		}
+	}
+	
 	option = {
-		name = LWV.3333.a
+	name = LWV.30.a
 	}
 }
 
+
+######################### 3 FAZA ###############################
 country_event = {
 	id = LWV.31
 	title = LWV.31.t
 	desc = LWV.31.d
-	picture = GFX_news_event_001
-	fire_only_once = yes	
-	is_triggered_only = yes
+	fire_only_once = no	
+	is_trigger_only = yes
 
 	option = {
 		name = LWV.31.a
-			ai_chance = {
-				factor = 50
-			}
+		ai_chance = {
+			factor = 90	
+		}
 		add_ideas = LWV_bejinsy_from_holy_land	
 		add_opinion_modifier = {
-		target = LWV
-		modifier = prinialy_bejensev
+			target = LWV
+			modifier = prinialy_bejensev
 		}
 		LWV = {
 			add_opinion_modifier = {
@@ -388,10 +389,11 @@ country_event = {
 		}
 	}
 
+
 	option = {
 		name = LWV.31.b
-		ai_chance = {
-			factor = 50
+		ai_will_do = {
+			base = 10	
 		}
 		add_opinion_modifier = {
 			target = LWV
@@ -399,13 +401,13 @@ country_event = {
 		}
 		LWV = {
 			add_opinion_modifier = {
-				target = ROOT
+				target = LWV
 				modifier = vidali_bejensev
 			}
-		}	
+		}
 	}
 }
-
+	
 country_event = {
 	id = LWV.32
 	title = LWV.32.t
@@ -518,14 +520,13 @@ country_event = {
 	id = LWV.38
 	title = LWV.38.t
 	desc = LWV.38.d
-	picture = GFX_news_event_001
-	fire_only_once = yes	
+	fire_only_once = yes
 	is_triggered_only = yes
+
 	option = {
-	name = LWV.38.a
+	name = LWV.38.a	
 	}
 }
-
 country_event = {
 	id = LWV.39
 	title = LWV.39.t

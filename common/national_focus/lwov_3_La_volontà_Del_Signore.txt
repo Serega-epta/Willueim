@@ -26,17 +26,15 @@ focus_tree = {
 			add_ideas = LWV_begushie_otstupniki		
 			add_stability = 0.05
 			add_political_power = 50		
-			all_neighbor_country = { 
-				country_event { 
-					id = LWV.31 
-					days = 1 
-				}
-			}		
 			country_event = {
 				id = LWV.38
 				days = 1
 			}
-			set_cosmetic_tag = LWV_Holy_Land			
+			set_cosmetic_tag = LWV_Holy_Land
+			every_neighbor_country = {
+				country_event = LWV.31
+				days = 5
+			}	
 		}
 	}	
 	focus = {

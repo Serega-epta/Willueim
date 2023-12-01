@@ -179,6 +179,329 @@ LWV_holiness = {
 		target_array = global.states
 		on_map_mode = map_only
 	}
+
+	stage_4 = {
+		icon = GFX_decision_holiness_integration_three
+		allowed = {
+			original_tag = LWV
+		}
+		visible = {
+			LWV = {
+				has_completed_focus = LWV_rasprostraniat_religiu
+				NOT = {
+					has_country_flag = sviataya_postup_flag
+					has_country_flag = sudni_den_flag
+				}
+			}
+			FROM = {
+				OR = {
+					has_state_flag = sent_missionaries
+					is_core_of = LWV
+				}
+				NOT = {
+					is_owned_by = LWV
+				}
+			}
+		}
+		available = {
+			LWV = {
+				has_completed_focus = LWV_rasprostraniat_religiu
+				NOT = {
+					has_country_flag = sviataya_postup_flag
+					has_country_flag = sudni_den_flag
+				}
+			}
+			FROM = {
+				OR = {
+					has_state_flag = sent_missionaries
+					is_core_of = LWV
+				}
+				NOT = {
+					is_owned_by = LWV
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 10
+		cost = 5
+		complete_effect = {
+			LWV = {
+				set_country_flag = sviataya_postup_flag
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = sviataya_postup
+ 					days = 30
+				}
+				owner = {
+					country_event = LWV.3333
+				}
+			}
+		}
+		state_target = yes
+		target_array = global.states
+		on_map_mode = map_only
+	}
+	sviataya_postup_mission = {
+		allowed = {
+			original_tag = LWV
+		}
+		available = {
+			LWV = {
+				NOT = {
+					has_country_flag = sviataya_postup_flag
+				}
+			}
+		}
+		activation = {
+			LWV = {
+				has_country_flag = sviataya_postup_flag
+			}
+		}
+		fire_only_once = no
+		days_mission_timeout = 40
+		timeout_effect = {
+			LWV = {
+				clr_country_flag = sviataya_postup_flag
+			}
+		}
+	}
+	stage_5 = {
+		icon = GFX_decision_holiness_integration_three
+		allowed = {
+			original_tag = LWV
+		}
+		visible = {
+			LWV = {
+				NOT = {
+					has_country_flag = sudni_den_flag
+				}
+			}
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = sviataya_postup
+				}
+			}
+		}
+		available = {
+			LWV = {
+				NOT = {
+					has_country_flag = sudni_den_flag
+				}
+			}
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = sviataya_postup
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 5
+		cost = 100
+		complete_effect = {
+			LWV = {
+				clr_country_flag = sviataya_postup_flag
+				set_country_flag = sudni_den_flag
+			}
+		}
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = sviataya_postup
+				}
+				add_dynamic_modifier = {
+					modifier = sudni_den
+ 					days = 20
+				}
+			}
+		}
+		state_target = yes
+		target_array = global.states
+		on_map_mode = map_only
+	}
+	sudni_den_mission = {
+		allowed = {
+			original_tag = LWV
+		}
+		available = {
+			LWV = {
+				NOT = {
+					has_country_flag = sudni_den_flag
+				}
+			}
+		}
+		activation = {
+			LWV = {
+				has_country_flag = sudni_den_flag
+			}
+		}
+		fire_only_once = no
+		days_mission_timeout = 25
+		timeout_effect = {
+			LWV = {
+				clr_country_flag = sviataya_postup_flag
+				clr_country_flag = sudni_den_flag
+			}
+		}
+	}
+	stage_6 = {
+		icon = GFX_decision_holiness_integration_three
+		allowed = {
+			original_tag = LWV
+		}
+		visible = {
+			LWV = {
+				has_completed_focus = LWV_podgotovit_pochvu
+				NOT = {
+					has_country_flag = podgotovlennaya_pochva_flag
+				}
+			}
+			FROM = {
+				is_core_of = LWV
+				is_owned_by = LWV
+			}
+		}
+		available = {
+			LWV = {
+				has_completed_focus = LWV_podgotovit_pochvu
+				NOT = {
+					has_country_flag = podgotovlennaya_pochva_flag
+				}
+			}
+			FROM = {
+				is_core_of = LWV
+				is_owned_by = LWV
+			}
+		}
+		fire_only_once = yes
+		days_remove = 10
+		cost = 10
+		complete_effect = {
+			LWV = {
+				set_country_flag = podgotovlennaya_pochva_flag
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = podgotovlennaya_pochva
+ 					days = 50
+				}
+			}
+		}
+		state_target = yes
+		target_array = global.states
+		on_map_mode = map_only
+	}
+	podgotovlennaya_pochva_mission = {
+		allowed = {
+			original_tag = LWV
+		}
+		available = {
+			LWV = {
+				NOT = {
+					has_country_flag = podgotovlennaya_pochva_flag
+				}
+			}
+		}
+		activation = {
+			LWV = {
+				has_country_flag = podgotovlennaya_pochva_flag
+			}
+		}
+		fire_only_once = no
+		days_mission_timeout = 60
+		timeout_effect = {
+			LWV = {
+				clr_country_flag = podgotovlennaya_pochva_flag
+			}
+		}
+	}
+	stage_7 = {
+		icon = GFX_decision_holiness_integration_three
+		allowed = {
+			original_tag = LWV
+		}
+		visible = {
+			LWV = {
+				has_completed_focus = LWV_zaseet_semena_pravednosti
+				has_country_flag = podgotovlennaya_pochva_flag
+				NOT = {
+					has_country_flag = zaseyannyje_semena_flag
+				}
+			}
+			FROM = {
+				is_core_of = LWV
+				is_owned_by = LWV
+			}
+		}
+		available = {
+			LWV = {
+				has_completed_focus = LWV_zaseet_semena_pravednosti
+				NOT = {
+					has_country_flag = zaseyannyje_semena_flag
+				}
+			}
+			FROM = {
+				is_core_of = LWV
+				is_owned_by = LWV
+				has_dynamic_modifier = {
+					modifier = podgotovlennaya_pochva
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 50
+		complete_effect = {
+			LWV = {
+				clr_country_flag = podgotovlennaya_pochva_flag
+				set_country_flag = zaseyannyje_semena_flag
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = zaseyannyje_semena
+ 					days = 30
+				}
+				remove_dynamic_modifier = {
+					modifier = podgotovlennaya_pochva
+ 					days = 30
+				}
+			}
+		}
+		state_target = yes
+		target_array = global.states
+		on_map_mode = map_only
+	}
+	zaseyannyje_semena_mission = {
+		allowed = {
+			original_tag = LWV
+		}
+		available = {
+			LWV = {
+				NOT = {
+					has_country_flag = zaseyannyje_semena_flag
+				}
+			}
+		}
+		activation = {
+			LWV = {
+				has_country_flag = zaseyannyje_semena_flag
+			}
+		}
+		fire_only_once = no
+		days_mission_timeout = 60
+		timeout_effect = {
+			LWV = {
+				clr_country_flag = podgotovlennaya_pochva_flag
+				clr_country_flag = zaseyannyje_semena_flag
+			}
+		}
+	}
 }
 
                         

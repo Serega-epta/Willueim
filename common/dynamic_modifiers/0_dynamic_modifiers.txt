@@ -10,14 +10,9 @@ centralization_dynamic_modifier = {
 sviataya_postup = {
 	enable = { always = yes }
 	icon = GFX_impassable_icon
-	
-	attrition = 0.25
-	army_speed_factor = -0.5
-	army_defence_factor = -0.25
-	
 	targeted_modifier = {
 		tag = LWV
-		defense_bonus_against = -0.05
+		defense_bonus_against = -0.15
 	}
 }
 	
@@ -25,19 +20,34 @@ sviataya_postup = {
 sudni_den = {
 	enable = { always = yes }
 	icon = GFX_impassable_icon
-	
-	attrition = 0.5
-	initiative_factor = -0.3
-	coordination_bonus = -0.3
-	army_speed_factor = -0.75
-	army_defence_factor = -0.25
-	supply_factor = -0.1
-	disable_strategic_redeployment = 1
-	max_dig_in_factor = -0.05
 	targeted_modifier = {
 		tag = LWV
-		defense_bonus_against = -0.1
+		defense_bonus_against = -0.5
+		offence_bonus_against = -0.5
+		army_defence_factor = 1.0
+		army_ofence_factor = 1.0
+		army_speed_factor = 1.0
+		army_org_factor = 1.0
+		breakthrough_factor = 1.0
 	}
+}
+#ПОДГОТОВЛЕННАЯ ПОЧВА
+podgotovlennaya_pochva = {
+	enable = { always = yes }
+	icon = GFX_impassable_icon
+	
+	production_speed_buildings_factor = 0.5
+	local_manpower = 0.5
+}
+
+#ЗАСЕЯННЫЕ СЕМЕНА
+zaseyannyje_semena = {
+	enable = { always = yes }
+	icon = GFX_impassable_icon
+	
+	production_speed_buildings_factor = 1.0
+	local_manpower = 1.0
+	local_resources = 1.0
 }
 	
 #СВЯТОСТЬ
