@@ -1264,12 +1264,15 @@ focus_tree = {
 			add_idea = LWV_raspredelit_raschirit_4
 			}
 		}
-			every_owned_state = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}				
+		every_owned_state = {
+				if = {
+					limit = { infrastructure < 3 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}	
+				}			
 			}	
 		}
 	}
@@ -1497,7 +1500,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_zochem focus = LWV_but_why }
+		prerequisite = { focus = LWV_zochem }
+		prerequisite = { focus = LWV_but_why }
 		prerequisite = { focus = LWV_new_metod  focus = LWV_adaptirovat_tradition }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
