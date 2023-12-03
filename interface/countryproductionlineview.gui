@@ -1510,6 +1510,11 @@ guiTypes = {
 			quadTextureSprite ="GFX_production_item"
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
 		}
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+			alwaystransparent = yes
+		}
 
 		iconType = {
 			name ="production_line_selected"
@@ -1545,6 +1550,18 @@ guiTypes = {
 			spriteType = "GFX_efficiency_progressbar"
 			position = { x= 252 y = 8 }
 
+		}
+		buttonType = {
+			name ="attach_manufacturer"
+			spriteType = "GFX_attach_manufacturer"
+			position = { x= 195 y = 1 }
+		}
+
+		buttonType = {
+			name ="change_manufacturer"
+			position = { x= 195 y = 1 }
+			spriteType = "GFX_attach_manufacturer"
+			scale = 0.45
 		}
 		iconType = {
 			name ="efficiency_progressbar_frame"
