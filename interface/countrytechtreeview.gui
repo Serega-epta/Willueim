@@ -68,7 +68,7 @@ guiTypes = {
 					name = "infantry_year2"
 					position = { x = 100 y = 50 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2010"
 					maxWidth = 170
@@ -81,7 +81,7 @@ guiTypes = {
 					name = "infantry_year3"
 					position = { x = 500 y = 50 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2015"
 					maxWidth = 170
@@ -93,7 +93,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year5"
 					position = { x = 850 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2020"
 					maxWidth = 170
@@ -105,7 +105,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year6"
 					position = { x = 1200 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2025"
 					maxWidth = 170
@@ -117,7 +117,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year7"
 					position = { x = 1550 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2030"
 					maxWidth = 170
@@ -129,7 +129,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year8"
 					position = { x = 1900 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2035"
 					maxWidth = 170
@@ -141,7 +141,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year9"
 					position = { x = 2250 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2040"
 					maxWidth = 170
@@ -153,7 +153,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year10"
 					position = { x = 2550 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2045"
 					maxWidth = 170
@@ -215,7 +215,7 @@ guiTypes = {
 					name = "support_year2"
 					position = { x = 135 y = 50 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2010"
 					maxWidth = 170
@@ -228,7 +228,7 @@ guiTypes = {
 					name = "support_year3"
 					position = { x = 385 y = 50 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2015"
 					maxWidth = 170
@@ -240,7 +240,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "support_year6"
 					position = { x = 735 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2025"
 					maxWidth = 170
@@ -252,7 +252,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "support_year8"
 					position = { x = 1085 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2035"
 					maxWidth = 170
@@ -264,7 +264,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "support_year10"
 					position = { x = 1435 y = 50 }
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = { x = 0 y = 0}
 					text = "2045"
 					maxWidth = 170
@@ -327,14 +327,9 @@ guiTypes = {
 				}
 				clipping = no
 
-				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_techtree_stripes"
-				}
-
 				iconType = {
 					name ="armortech_bg"
-					spriteType = "GFX_armortech_bg"
+					spriteType = "GFX_support_techtree_bg" #GFX_armortech_bg
 					position = { x=0 y=0 }
 					alwaystransparent = yes
 				}
@@ -349,7 +344,7 @@ guiTypes = {
 						name = "armour_year1"
 						position = { x = 60 y = 65 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2010"
 						maxWidth = 80
@@ -362,7 +357,7 @@ guiTypes = {
 						name = "armour_year2"
 						position = { x = 60 y = 205 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2020"
 						maxWidth = 80
@@ -375,7 +370,7 @@ guiTypes = {
 						name = "armour_year3"
 						position = { x = 60 y = 345 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2025"
 						maxWidth = 80
@@ -388,7 +383,7 @@ guiTypes = {
 						name = "armour_year4"
 						position = { x = 60 y = 485 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2030"
 						maxWidth = 80
@@ -401,7 +396,7 @@ guiTypes = {
 						name = "armour_year5"
 						position = { x = 60 y = 625 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2040"
 						maxWidth = 80
@@ -422,7 +417,7 @@ guiTypes = {
 						name = "armour_year2_left"
 						position = { x = 0 y = 65 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2010"
 						maxWidth = 80
@@ -435,7 +430,7 @@ guiTypes = {
 						name = "armour_year3_left"
 						position = { x = 0 y = 205 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2020"
 						maxWidth = 80
@@ -448,7 +443,7 @@ guiTypes = {
 						name = "armour_year4_left"
 						position = { x = 0 y = 345 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2025"
 						maxWidth = 80
@@ -461,7 +456,7 @@ guiTypes = {
 						name = "armour_year5_left"
 						position = { x = 0 y = 485 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2030"
 						maxWidth = 80
@@ -474,7 +469,7 @@ guiTypes = {
 						name = "armour_year6_left"
 						position = { x = 0 y = 625 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2040"
 						maxWidth = 80
@@ -534,11 +529,6 @@ guiTypes = {
 				}
 				clipping = no
 
-				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_techtree_stripes"
-				}
-
 				iconType = {
 					name ="armortech_bg"
 					spriteType = "GFX_armortech_bg"
@@ -556,7 +546,7 @@ guiTypes = {
 						name = "armour_year1"
 						position = { x = 60 y = 140 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2010"
 						maxWidth = 80
@@ -569,7 +559,7 @@ guiTypes = {
 						name = "armour_year2"
 						position = { x = 60 y = 280 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2020"
 						maxWidth = 80
@@ -582,7 +572,7 @@ guiTypes = {
 						name = "armour_year3"
 						position = { x = 60 y = 420 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2025"
 						maxWidth = 80
@@ -595,7 +585,7 @@ guiTypes = {
 						name = "armour_year4"
 						position = { x = 60 y = 560 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2030"
 						maxWidth = 80
@@ -608,7 +598,7 @@ guiTypes = {
 						name = "armour_year5"
 						position = { x = 60 y = 700 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2040"
 						maxWidth = 80
@@ -629,7 +619,7 @@ guiTypes = {
 						name = "armour_year2_left"
 						position = { x = 0 y = 140 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2010"
 						maxWidth = 80
@@ -642,7 +632,7 @@ guiTypes = {
 						name = "armour_year3_left"
 						position = { x = 0 y = 278 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2020"
 						maxWidth = 80
@@ -655,7 +645,7 @@ guiTypes = {
 						name = "armour_year4_left"
 						position = { x = 0 y = 420 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2025"
 						maxWidth = 80
@@ -668,7 +658,7 @@ guiTypes = {
 						name = "armour_year5_left"
 						position = { x = 0 y = 560 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2030"
 						maxWidth = 80
@@ -681,7 +671,7 @@ guiTypes = {
 						name = "armour_year7_left"
 						position = { x = 0 y = 700 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2040"
 						maxWidth = 80
@@ -742,11 +732,6 @@ guiTypes = {
 				}
 				clipping = no
 
-				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_techtree_stripes"
-				}
-
 				iconType = {
 					name ="artillery_techtree_bg"
 					spriteType = "GFX_artillery_techtree_bg"
@@ -772,7 +757,7 @@ guiTypes = {
 						name = "artillery_year2"
 						position = { x = 60 y = 140 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2015"
 						maxWidth = 170
@@ -785,7 +770,7 @@ guiTypes = {
 						name = "artillery_year3"
 						position = { x = 60 y = 278 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2020"
 						maxWidth = 170
@@ -798,7 +783,7 @@ guiTypes = {
 						name = "artillery_year4"
 						position = { x = 60 y = 420 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2023"
 						maxWidth = 170
@@ -811,7 +796,7 @@ guiTypes = {
 						name = "artillery_year5"
 						position = { x = 60 y = 560 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2025"
 						maxWidth = 170
@@ -824,7 +809,7 @@ guiTypes = {
 						name = "artillery_year6"
 						position = { x = 60 y = 698 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2027"
 						maxWidth = 170
@@ -837,7 +822,7 @@ guiTypes = {
 						name = "artillery_year7"
 						position = { x = 60 y = 838 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2030"
 						maxWidth = 170
@@ -850,7 +835,7 @@ guiTypes = {
 						name = "artillery_year8"
 						position = { x = 60 y = 978 }
 						textureFile = ""
-						font = "hoi_36header"
+						font = "3270_36_outline"
 						borderSize = {x = 0 y = 4}
 						text = "2035"
 						maxWidth = 170
@@ -863,7 +848,7 @@ guiTypes = {
 					# 	name = "artillery_year9"
 					# 	position = { x = 60 y = 1118 }
 					# 	textureFile = ""
-					# 	font = "hoi_36header"
+					# 	font = "3270_36_outline"
 					# 	borderSize = {x = 0 y = 4}
 					# 	text = "2045"
 					# 	maxWidth = 170
@@ -909,11 +894,6 @@ guiTypes = {
 				}
 				clipping = no
 
-				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_techtree_stripes"
-				}
-
 				iconType = {
 					name ="artillery_techtree_bg"
 					spriteType = "GFX_air_techtree_bg"
@@ -927,7 +907,7 @@ guiTypes = {
 				name = "airtech_year2"
 				position = { x = 30 y = 200 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2010"
 				maxWidth = 170
@@ -940,7 +920,7 @@ guiTypes = {
 				name = "airtech_year3"
 				position = { x = 30 y = 330 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2015"
 				maxWidth = 170
@@ -953,7 +933,7 @@ guiTypes = {
 				name = "airtech_year4"
 				position = { x = 30 y = 500 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2020"
 				maxWidth = 170
@@ -966,7 +946,7 @@ guiTypes = {
 				name = "airtech_year5"
 				position = { x = 30 y = 630 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2025"
 				maxWidth = 170
@@ -979,7 +959,7 @@ guiTypes = {
 				name = "airtech_year6"
 				position = { x = 30 y = 760 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2030"
 				maxWidth = 170
@@ -992,7 +972,7 @@ guiTypes = {
 				name = "airtech_year7"
 				position = { x = 30 y = 900 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2040"
 				maxWidth = 170
@@ -1011,7 +991,7 @@ guiTypes = {
 					name = "airtech_year2"
 					position = { x = 60 y = 200 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2010"
 					maxWidth = 170
@@ -1024,7 +1004,7 @@ guiTypes = {
 					name = "airtech_year3"
 					position = { x = 60 y = 330 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2015"
 					maxWidth = 170
@@ -1037,7 +1017,7 @@ guiTypes = {
 					name = "airtech_year4"
 					position = { x = 60 y = 500 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2020"
 					maxWidth = 170
@@ -1050,7 +1030,7 @@ guiTypes = {
 					name = "airtech_year5"
 					position = { x = 60 y = 630 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2025"
 					maxWidth = 170
@@ -1063,7 +1043,7 @@ guiTypes = {
 					name = "airtech_year6"
 					position = { x = 60 y = 760 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2030"
 					maxWidth = 170
@@ -1076,7 +1056,7 @@ guiTypes = {
 					name = "airtech_year7"
 					position = { x = 60 y = 900 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2040"
 					maxWidth = 170
@@ -1119,11 +1099,6 @@ guiTypes = {
 				}
 				clipping = no
 
-				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_techtree_stripes"
-				}
-
 				iconType = {
 					name ="artillery_techtree_bg"
 					spriteType = "GFX_air_techtree_bg"
@@ -1137,7 +1112,7 @@ guiTypes = {
 				name = "airtech_year2"
 				position = { x = 30 y = 200 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2010"
 				maxWidth = 170
@@ -1150,7 +1125,7 @@ guiTypes = {
 				name = "airtech_year3"
 				position = { x = 30 y = 330 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2015"
 				maxWidth = 170
@@ -1163,7 +1138,7 @@ guiTypes = {
 				name = "airtech_year4"
 				position = { x = 30 y = 500 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2020"
 				maxWidth = 170
@@ -1176,7 +1151,7 @@ guiTypes = {
 				name = "airtech_year5"
 				position = { x = 30 y = 630 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2025"
 				maxWidth = 170
@@ -1189,7 +1164,7 @@ guiTypes = {
 				name = "airtech_year6"
 				position = { x = 30 y = 760 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2030"
 				maxWidth = 170
@@ -1202,7 +1177,7 @@ guiTypes = {
 				name = "airtech_year7"
 				position = { x = 30 y = 900 }
 				textureFile = ""
-				font = "hoi_36header"
+				font = "3270_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "2040"
 				maxWidth = 170
@@ -1221,7 +1196,7 @@ guiTypes = {
 					name = "airtech_year2"
 					position = { x = 60 y = 200 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2010"
 					maxWidth = 170
@@ -1234,7 +1209,7 @@ guiTypes = {
 					name = "airtech_year3"
 					position = { x = 60 y = 330 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2015"
 					maxWidth = 170
@@ -1247,7 +1222,7 @@ guiTypes = {
 					name = "airtech_year4"
 					position = { x = 60 y = 500 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2020"
 					maxWidth = 170
@@ -1260,7 +1235,7 @@ guiTypes = {
 					name = "airtech_year5"
 					position = { x = 60 y = 630 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2025"
 					maxWidth = 170
@@ -1273,7 +1248,7 @@ guiTypes = {
 					name = "airtech_year6"
 					position = { x = 60 y = 760 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2030"
 					maxWidth = 170
@@ -1286,7 +1261,7 @@ guiTypes = {
 					name = "airtech_year7"
 					position = { x = 60 y = 900 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2040"
 					maxWidth = 170
@@ -1344,7 +1319,7 @@ guiTypes = {
 					name = "industry_year2"
 					position = { x = 0 y = 140 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2000"
 					maxWidth = 130
@@ -1357,7 +1332,7 @@ guiTypes = {
 					name = "industry_year3"
 					position = { x = 0 y = 280 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2005"
 					maxWidth = 130
@@ -1370,7 +1345,7 @@ guiTypes = {
 					name = "industry_year4"
 					position = { x = 0 y = 420 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2010"
 					maxWidth = 130
@@ -1383,7 +1358,7 @@ guiTypes = {
 					name = "industry_year5"
 					position = { x = 0 y = 560 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2015"
 					maxWidth = 130
@@ -1396,7 +1371,7 @@ guiTypes = {
 					name = "industry_year6"
 					position = { x = 0 y = 700 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2020"
 					maxWidth = 130
@@ -1409,7 +1384,7 @@ guiTypes = {
 					name = "industry_year7"
 					position = { x = 0 y = 840 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2025"
 					maxWidth = 130
@@ -1422,7 +1397,7 @@ guiTypes = {
 					name = "industry_year8"
 					position = { x = 0 y = 980 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2030"
 					maxWidth = 130
@@ -1444,7 +1419,7 @@ guiTypes = {
 					name = "industry_year2"
 					position = { x = 0 y = 140 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2000"
 					maxWidth = 130
@@ -1457,7 +1432,7 @@ guiTypes = {
 					name = "industry_year3"
 					position = { x = 0 y = 280 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2005"
 					maxWidth = 130
@@ -1470,7 +1445,7 @@ guiTypes = {
 					name = "industry_year4"
 					position = { x = 0 y = 420 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2010"
 					maxWidth = 130
@@ -1483,7 +1458,7 @@ guiTypes = {
 					name = "industry_year5"
 					position = { x = 0 y = 560 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2015"
 					maxWidth = 130
@@ -1496,7 +1471,7 @@ guiTypes = {
 					name = "industry_year6"
 					position = { x = 0 y = 700 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2020"
 					maxWidth = 130
@@ -1509,7 +1484,7 @@ guiTypes = {
 					name = "industry_year7"
 					position = { x = 0 y = 840 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2025"
 					maxWidth = 130
@@ -1522,7 +1497,7 @@ guiTypes = {
 					name = "industry_year8"
 					position = { x = 0 y = 980 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2030"
 					maxWidth = 130
@@ -1599,7 +1574,7 @@ guiTypes = {
 					name = "wonderweapon_year2"
 					position = { x = 0 y = 140 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2015"
 					maxWidth = 130
@@ -1612,7 +1587,7 @@ guiTypes = {
 					name = "wonderweapon_year3"
 					position = { x = 0 y = 260 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2020"
 					maxWidth = 130
@@ -1625,7 +1600,7 @@ guiTypes = {
 					name = "wonderweapon_year4"
 					position = { x = 0 y = 380 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2025"
 					maxWidth = 130
@@ -1638,7 +1613,7 @@ guiTypes = {
 					name = "wonderweapon_year5"
 					position = { x = 0 y = 500 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2030"
 					maxWidth = 130
@@ -1651,7 +1626,7 @@ guiTypes = {
 					name = "wonderweapon_year6"
 					position = { x = 0 y = 620 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "3270_36_outline"
 					borderSize = {x = 0 y = 4}
 					text = "2040"
 					maxWidth = 130
@@ -1844,7 +1819,7 @@ guiTypes = {
 			name = "tech_info_title"
 			position = { x = 40 y = 15 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 450
@@ -1856,7 +1831,7 @@ guiTypes = {
 			name = "tech_info_description"
 			position = { x = 27 y = 121 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 495
@@ -1887,7 +1862,7 @@ guiTypes = {
 				name = "tech_info_special_description"
 				position = { x = 0 y = 0 }
 				textureFile = ""
-				font = "hoi4_typewriter16_inverted"
+				font = "3270_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "BABALKBLLALBLAL"
 				maxWidth = 495
@@ -1934,7 +1909,7 @@ guiTypes = {
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_closebutton"
-			buttonFont = "vic_18"
+			buttonFont = "3270_18_outline"
 			position = { x=-43 y=10 }
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"
@@ -1953,7 +1928,7 @@ guiTypes = {
 			name = "tech_info_title"
 			position = { x = 40 y = 15 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 450
@@ -1965,7 +1940,7 @@ guiTypes = {
 			name = "tech_info_description"
 			position = { x = 27 y = 121 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 495
@@ -2028,7 +2003,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "tech_info_special_description"
 				position = { x = 10 y = 14 }
-				font = "hoi4_typewriter16_inverted"
+				font = "3270_16_outline"
 				maxWidth = 464
 			}
 
@@ -2073,7 +2048,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = -1 y = -21 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2084,29 +2059,20 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_infantry_folder_item"
-		position = { x=-56 y=-7 }
+		position = { x = -84 y = -24 }
 		size = { width = 183 height = 84 }
 		clipping = no
 
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+			quadTextureSprite = "GFX_technology_unavailable_item_bg"
 		}
-
-		iconType = {
-			name = "Icon"
-			position = { x=120 y=58 }
-			spriteType = "GFX_technology_medium"
-			centerposition = yes
-			alwaystransparent = yes
-		}
-
 
 		instantTextBoxType = {
 			name = "Name"
 			position = { x = 3 y = -3 }
 			textureFile = ""
-			font = "3270_20_outline"
+			font = "3270_22_outline"
 			borderSize = {x = 4 y = 4}
 			text = "Happy-Go-Lucky-Tank"
 			maxWidth = 160
@@ -2114,6 +2080,14 @@ guiTypes = {
 			fixedsize = yes
 			format = left
 		}
+		
+		iconType = {
+			name = "Icon"
+			position = { x = 119 y = 58 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}		
 
 		iconType = {
 			name = "bonus_icon"
@@ -2123,35 +2097,36 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "bonus"
-			position = { x = 111 y = -22 }
+			position = { x = 168 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
-			maxWidth = 80
+			maxWidth = 65
 			maxHeight = 20
 			format = center
 		}
 
-
 		containerWindowType = {
 			name = "sub_technology_slot_0"
-			position = { x=141 y=1 }
+			position = { x = 200 y = 91 }
 			size = { width = 35 height = 26 }
 			clipping = no
 
 			background = {
 				name = "Background"
-				spriteType ="GFX_subtechnology_unavailable_item_bg"
+				spriteType = "GFX_subtechnology_unavailable_item_bg"
 			}
 
 			iconType = {
 				name = "picture"
-				position = { x=2 y=2 }
-				spriteType = "GFX_subtech_rocket"
+				position = { x = 2 y = 2 }
+				spriteType = "GFX_subtechnology_motorised_rocket"
 				alwaystransparent = yes
 			}
 		}
+<<<<<<< HEAD
+=======
 		containerWindowType = {
 			name = "sub_technology_slot_1"
 			position = { x=141 y=1 }
@@ -2177,11 +2152,12 @@ guiTypes = {
 			scale = 0.8
 		}
 
+>>>>>>> 4506386dccfc197d62d5b70d4fe299e36556c6b0
 	}
 
 	containerWindowType = {
 		name = "techtree_support_folder_item"
-		position = { x=-56 y=-7 }
+		position = { x = -84 y = -24 }
 		size = { width = 183 height = 84 }
 		clipping = no
 
@@ -2192,7 +2168,7 @@ guiTypes = {
 
 		iconType = {
 			name = "Icon"
-			position = { x=90 y=50 }
+			position = { x = 119 y = 58 }
 			spriteType = "GFX_technology_medium"
 			centerposition = yes
 			alwaystransparent = yes
@@ -2202,7 +2178,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 3 y = -3 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = "Happy-Go-Lucky-Tank"
 			maxWidth = 166
@@ -2220,7 +2196,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 111 y = -21 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2257,7 +2233,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_support_folder_small_item"
-		position = { x=0 y=0 }
+		position = { x = -1 y = -1 }
 		size = { width = 72 height = 72 }
 		clipping = no
 
@@ -2283,7 +2259,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = -1 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2300,7 +2276,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_armour_folder_item"
-		position = { x=-55 y=0 }
+		position = { x = -84 y = -24 }
 		size = { width = 183 height = 84 }
 		clipping = no
 
@@ -2321,7 +2297,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 6 y = -1 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = "Happy-Go-Lucky-Tank"
 			maxWidth = 156
@@ -2340,7 +2316,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 111 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2436,7 +2412,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 6 y = -1 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = "Happy-Go-Lucky-Tank"
 			maxWidth = 176
@@ -2455,7 +2431,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 111 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2553,7 +2529,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 17 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 50
@@ -2594,7 +2570,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 17 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 50
@@ -2635,7 +2611,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 17 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 50
@@ -2652,7 +2628,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_artillery_folder_item"
-		position = { x=-55 y=0 }
+		position = { x = -84 y = -24 }
 		size = { width = 204 height = 72 }
 		clipping = no
 
@@ -2665,7 +2641,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 3 y = -1 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = "Lortespasserkanon"
 			maxWidth = 166
@@ -2692,7 +2668,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 111 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "bang bang klik"
 			maxWidth = 80
@@ -2709,7 +2685,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_air_techs_folder_item"
-		position = { x=-60 y=0 }
+		position = { x = -84 y = -24 }
 		size = { width = 183 height = 84 }
 		clipping = no
 
@@ -2722,7 +2698,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 3 y = -1 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = ""
 			maxWidth = 166
@@ -2749,7 +2725,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 111 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2798,7 +2774,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 3 y = -1 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = ""
 			maxWidth = 166
@@ -2825,7 +2801,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 111 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2886,7 +2862,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = -1 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2925,7 +2901,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 3 y = -1 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 270
@@ -2943,7 +2919,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 257 y = -19 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -2984,7 +2960,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = -1 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -3023,7 +2999,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 3 y = -1 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 270
@@ -3041,7 +3017,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 257 y = -19 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -3101,7 +3077,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = -1 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat guns"
 			maxWidth = 80
@@ -3140,7 +3116,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 3 y = -1 }
 			textureFile = ""
-			font = "hoi_20bs"
+			font = "3270_20_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat guns"
 			maxWidth = 270
@@ -3158,7 +3134,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = 257 y = -19 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat guns"
 			maxWidth = 80
@@ -3187,7 +3163,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_industry_folder_item"
-		position = { x=0 y=5 }
+		position = { x = -1 y = -1 }
 		size = { width = 204 height = 72 }
 		clipping = no
 
@@ -3213,7 +3189,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = -1 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -3244,7 +3220,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_electronics_folder_item"
-		position = { x=0 y=5 }
+		position = { x = -1 y = -1 }
 		size = { width = 204 height = 72 }
 		clipping = no
 
@@ -3270,7 +3246,7 @@ guiTypes = {
 			name = "bonus"
 			position = { x = -1 y = -22 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "lol boat"
 			maxWidth = 80
@@ -3369,7 +3345,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "production_resources"
 			position = { x= 5 y= 12 }
-			font = "hoi_18mbs"
+			font = "3270_18_outline"
 			maxWidth = 140
 			maxHeight = 25
 			pdx_tooltip = "PRODUCTION_RESOURCE_DESC"
@@ -3472,7 +3448,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "production_resources"
 			position = { x= 5 y= 12 }
-			font = "hoi_18mbs"
+			font = "3270_18_outline"
 			maxWidth = 140
 			maxHeight = 25
 			pdx_tooltip = "PRODUCTION_RESOURCE_DESC"
@@ -3514,7 +3490,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "label"
 			position = { x = 10 y = 5 }
-			font = "hoi4_typewriter22"
+			font = "3270_22_outline"
 			text = ""
 			maxWidth = 200
 			maxHeight = 20
@@ -3564,7 +3540,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "label"
 			position = { x = 10 y = 5 }
-			font = "hoi4_typewriter22"
+			font = "3270_22_outline"
 			text = ""
 			maxWidth = 200
 			maxHeight = 20
@@ -3614,7 +3590,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "label"
 			position = { x = 10 y = 5 }
-			font = "hoi4_typewriter22"
+			font = "3270_22_outline"
 			text = ""
 			maxWidth = 200
 			maxHeight = 20
@@ -3631,7 +3607,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "subunit_name"
 			position = { x = 160 y = 25 }
-			font = "hoi4_typewriter16"
+			font = "3270_16_outline"
 			text = "Where is the name?"
 			maxWidth = 300
 			maxHeight = 20
@@ -3679,7 +3655,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "label"
 			position = { x = 55 y = 25 }
-			font = "hoi4_typewriter22"
+			font = "3270_22_outline"
 			text = ""
 			maxWidth = 380
 			maxHeight = 20
@@ -3729,7 +3705,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "label"
 			position = { x = 120 y = -20 }
-			font = "hoi4_typewriter22"
+			font = "3270_22_outline"
 			text = ""
 			maxWidth = 200
 			maxHeight = 20
@@ -3766,7 +3742,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = -5 y = 12 }
-			font = "hoi4_typewriter16"
+			font = "3270_18_outline"
 			text = "name"
 			maxWidth = 160
 			maxHeight = 20
@@ -3777,7 +3753,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "amount"
 			position = { x = 110 y = 12 }
-			font = "hoi4_typewriter16_inverted"
+			font = "3270_18_outline"
 			text = ""
 			maxWidth = 100
 			maxHeight = 20
@@ -3787,7 +3763,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "diff"
 			position = { x = 195 y = 0 }
-			font = "hoi4_typewriter16_inverted"
+			font = "3270_18_outline"
 			text = ""
 			maxWidth = 100
 			maxHeight = 20
@@ -3809,7 +3785,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 100 y = 10 }
-			font = "hoi4_typewriter16_inverted"
+			font = "3270_16_outline"
 			text = "name"
 			maxWidth = 350
 			maxHeight = 20
@@ -3837,7 +3813,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 120 y = 10 }
-			font = "hoi4_typewriter16"
+			font = "3270_16_outline"
 			text = "name"
 			maxWidth = 300
 			maxHeight = 20
@@ -3866,7 +3842,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = -30 y = 2 }
-			font = "hoi4_typewriter16"
+			font = "3270_18_outline"
 			text = "name"
 			maxWidth = 290
 			maxHeight = 20
@@ -3876,7 +3852,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "amount"
 			position = { x = 220 y = 2 }
-			font = "hoi4_typewriter16_inverted"
+			font = "3270_18_outline"
 			text = ""
 			maxWidth = 100
 			maxHeight = 20
@@ -3886,7 +3862,7 @@ guiTypes = {
 		#instantTextboxType = {
 		#	name = "diff"
 		#	position = { x = 195 y = 0 }
-		#	font = "hoi4_typewriter16"
+		#	font = "3270_18_outline"
 		#	text = ""
 		#	maxWidth = 100
 		#	maxHeight = 20
@@ -3908,7 +3884,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = -5 y = 12 }
-			font = "hoi4_typewriter16"
+			font = "3270_16_outline"
 			text = "name"
 			maxWidth = 165
 			maxHeight = 20
@@ -3919,7 +3895,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "amount"
 			position = { x = 110 y = 12 }
-			font = "hoi4_typewriter16_inverted"
+			font = "3270_16_outline"
 			text = ""
 			maxWidth = 100
 			maxHeight = 20
@@ -3929,7 +3905,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "diff"
 			position = { x = 195 y = 0 }
-			font = "hoi4_typewriter16_inverted"
+			font = "3270_16_outline"
 			text = ""
 			maxWidth = 100
 			maxHeight = 20
@@ -3992,7 +3968,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = -30 y = 2 }
-			font = "hoi4_typewriter16"
+			font = "3270_16_outline"
 			text = "name"
 			maxWidth = 290
 			maxHeight = 20
@@ -4002,7 +3978,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "amount"
 			position = { x = 220 y = 2 }
-			font = "hoi4_typewriter16"
+			font = "3270_16_outline"
 			text = ""
 			maxWidth = 100
 			maxHeight = 20
@@ -4020,7 +3996,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "header"
 			position = { x = 130 y = 18 }
-			font = "hoi4_typewriter22"
+			font = "3270_22_outline"
 			text = "category:"
 			maxWidth = 201
 			maxHeight = 20
