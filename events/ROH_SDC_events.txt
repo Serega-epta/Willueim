@@ -1,0 +1,394 @@
+add_namespace = pautov
+country_event = {
+	id = pautov.1
+	title = pautov.1.t
+	desc = pautov.1.d
+	#picture = 
+	is_triggered_only = no
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		Pautov_unite_pomorie = yes
+	}
+	option = {
+		name = pautov.1.a
+		SDC = {
+			set_technology = { infantry_odejda = 1 }
+			set_technology = { gw_artillery = 1 }
+			set_technology = { basic_train = 1 }
+			annex_country = { target = TAG transfer_troops = no }
+			annex_country = { target = ARK transfer_troops = no }
+			annex_country = { target = UFV transfer_troops = no }
+			annex_country = { target = SDI transfer_troops = no }
+			annex_country = { target = REN transfer_troops = no }
+			annex_country = { target = MIN transfer_troops = no }
+			annex_country = { target = TRO transfer_troops = no }
+			annex_country = { target = VOZ transfer_troops = no }
+			annex_country = { target = ODJ transfer_troops = no }
+			annex_country = { target = WEC transfer_troops = no }
+			annex_country = { target = SAC transfer_troops = no }
+			annex_country = { target = SOC transfer_troops = no }
+			add_state_core = 215
+			add_state_core = 984
+			add_state_core = 985
+			add_state_core = 986
+			add_state_core = 983
+			add_state_core = 89
+			add_state_core = 884
+			add_state_core = 214
+			add_state_core = 262
+			add_state_core = 947
+			add_state_core = 581
+			add_state_core = 982
+			add_state_core = 825
+			add_state_core = 981
+			add_state_core = 897
+			add_state_core = 980
+			add_state_core = 979
+			add_state_core = 978
+			add_state_core = 919
+			set_capital = {
+				state = 214
+				remember_old_capital = no
+			}
+			214 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			884 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			977 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			871 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			979 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			983 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			89 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			262 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			947 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			581 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			982 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			825 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			981 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			897 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			980 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			919 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			978 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_manpower = 200000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 30000
+				producer = SDC
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda_0
+				amount = 40000
+				producer = SDC
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 300
+				producer = SDC
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 30
+				producer = SDC
+			}
+			country_event = { 
+				id = pautov.2
+			}
+		}
+	}
+}
+country_event = {
+	id = pautov.2
+	title = pautov.2.t
+	desc = pautov.2.d
+	#picture = 
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	option = {
+		name = pautov.2.a
+		SDC = {
+			division_template = {
+				name = "Pekhotniy polk"
+				is_locked = no
+				priority = 1
+				regiments = {
+					egerskayapechota = { x = 0 y = 0 }
+					egerskayapechota = { x = 0 y = 1 }
+					egerskayapechota = { x = 1 y = 0 }
+					egerskayapechota = { x = 1 y = 1 }
+					egerskayapechota = { x = 2 y = 0 }
+					egerskayapechota = { x = 2 y = 1 }
+				}
+				support = {
+					art_stvol = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1. Pekhotniy polk\" division_template = \"Pekhotniy polk\" start_experience_factor = 0.9 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+}
