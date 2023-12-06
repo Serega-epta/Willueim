@@ -23,3 +23,10 @@ UralTreaty_defeated_GLS = {
 	OCH = { is_in_faction = yes }
 	TAR = { is_in_faction = yes }
 }
+
+GLS_chasing_a_dream_trigger = {
+	GLS = {
+		has_war = no
+		has_completed_focus = GLS_chasing_a_dream
+	}
+}

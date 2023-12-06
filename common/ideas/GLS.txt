@@ -471,6 +471,28 @@ ideas = {
 				mobilization_speed = 0.05
 			}
 		}
+		GLS_memories_of_rodina_7 = {
+			picture = memories_of_rodina
+			modifier = {
+				offensive_war_stability_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.16
+				production_factory_start_efficiency_factor = 0.1
+				weekly_manpower = 350
+				research_speed_factor = 0.05
+				mobilization_speed = 0.05
+			}
+		}
+		GLS_memories_of_rodina_8 = {
+			picture = memories_of_rodina
+			modifier = {
+				offensive_war_stability_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.16
+				production_factory_start_efficiency_factor = 0.1
+				weekly_manpower = 350
+				research_speed_factor = 0.05
+				mobilization_speed = 0.05
+			}
+		}
 		############
 		GLS_kotly = {
 			picture = kotly
@@ -486,6 +508,20 @@ ideas = {
 				political_power_gain = 0.05
 			}
 		}
+		GLS_kotly_2 = {
+			picture = kotly
+			modifier = {
+				war_support_factor = -0.1
+				political_power_gain = 0.1
+			}
+		}
+		GLS_kotly_3 = {
+			picture = kotly
+			modifier = {
+				war_support_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
 		GLS_place_under_sun = {
 			picture = place_under_sun
 			modifier = {
@@ -499,13 +535,205 @@ ideas = {
 				special_forces_attack_factor = 0.15
 			}
 		}
-		GLS_mint_gingerbread = {
-			picture = mint_gingerbread
+		GLS_our_starvation_idea = {
+			picture = GLS_our_starvation_pic_idea
 			modifier = {
-				generate_wargoal_tension = -1
-				justify_war_goal_time = -0.9
-				send_volunteer_factor = 0.5
-				send_volunteers_tension = -1
+				stability_factor = -0.5
+				war_support_factor = -0.6
+				research_speed_factor = -0.1
+				surrender_limit = -0.3
+				political_power_cost = 0.05
+				production_factory_efficiency_gain_factor = -0.1
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea2 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.6
+				research_speed_factor = -0.1
+				surrender_limit = -0.3
+				political_power_cost = 0.05
+				production_factory_efficiency_gain_factor = -0.1
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea3 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.6
+				research_speed_factor = -0.1
+				surrender_limit = -0.3
+				production_factory_efficiency_gain_factor = -0.1
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Astafev = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.6
+				research_speed_factor = -0.1
+				surrender_limit = -0.3
+				production_factory_efficiency_gain_factor = -0.1
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Ryaznov = { #Полная Зачистка
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.3
+				research_speed_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Astafev2 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.6
+				surrender_limit = -0.3
+				production_factory_efficiency_gain_factor = -0.1
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Ryaznov2 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.3
+				production_factory_efficiency_gain_factor = -0.1
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Astafev3 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.6
+				surrender_limit = -0.3
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Ryaznov3 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.3
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Astafev4 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.5
+				surrender_limit = -0.3
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Ryaznov4 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.2
+			}
+		}
+		GLS_our_starvation_idea_Astafev5 = {
+			picture = GLS_our_starvation_pic_idea
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.3
+				conscription = -0.05
+			}
+		}
+		GLS_our_starvation_idea_Ryaznov5 = {
+			picture = 
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.6
+				surrender_limit = -0.3
+				conscription = -0.05
+			}
+		}
+		GLS_general_staff = {
+			picture = GLS_general_staff_pic
+			modifier = {
+				experience_gain_army = 0.3
+				experience_gain_air = 0.3
+				command_power_gain = 0.05
+				max_planning = 0.1
+				planning_speed = 0.1
+				justify_war_goal_time = -0.4
+				army_leader_start_logistics_level = 1 
+			}
+		}
+		GLS_KGB = {
+			picture = GLS_KBG_pic
+			modifier = {
+				political_power_gain = 0.05
+				production_lack_of_resource_penalty_factor = -0.2
+			}
+		}
+		GLS_through_fire_idea = {
+			picture = GLS_through_fire_idea_pic
+			modifier = {
+				offence = 0.05
+			}
+		}
+		GLS_through_fire_idea2 = {
+			picture = GLS_through_fire_idea_pic
+			modifier = {
+				offence = 0.05
+				defence = 0.05 
+				army_speed_factor = 0.05
+				army_org_regain = 0.1
+			}
+		}
+		GLS_faith1 = {
+			picture = GLS_faith_pic
+			modifier = {
+				political_power_factor = -0.15
+				research_speed_factor = 0.05
+			}
+		}
+		GLS_faith2 = {
+			picture = GLS_faith_pic
+			modifier = {
+				political_power_factor = 0.15
+				research_speed_factor = -0.05
+			}
+		}
+		GLS_labour_and_capital_idea1 = {
+			picture = GLS_labour_and_capital_idea_pic
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				stability_factor = 0.1
+			}
+		}
+		GLS_labour_and_capital_idea2 = {
+			picture = GLS_labour_and_capital_idea_pic
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				stability_factor = -0.1
+			}
+		}
+		GLS_Borders = {
+			picture = GLS_Borders_pic
+			modifier = {
+				weekly_manpower = 100
+				consumer_goods_factor = 0.05
+			}
+		}
+		GLS_Borders2 = {
+			picture = GLS_Borders_pic
+			modifier = {
+				weekly_manpower = -100
+				consumer_goods_factor = -0.05
 			}
 		}
 	}

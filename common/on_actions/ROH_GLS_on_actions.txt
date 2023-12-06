@@ -788,4 +788,24 @@ on_actions = {
 			}
 		}
 	}
+	on_monthly_GLS = { ####Очки гос.прогресса за фокусы 3 фазы####
+		effect = {
+			if = {
+				limit = { has_country_flag = ochki_gos_progress_5 }
+				add_to_variable = { ochki_gos_progressa = 5 }
+			}
+			if = {
+				limit = { has_country_flag = ochki_gos_progress_10 }
+				add_to_variable = { ochki_gos_progressa = 5 }
+			}
+			if = {
+				limit = { has_country_flag = ochki_gos_progress_20 }
+				add_to_variable = { ochki_gos_progressa = 10 }
+			}
+			if = {
+				limit = { has_country_flag = ochki_gos_progress_30 }
+				add_to_variable = { ochki_gos_progressa = 10 }
+			}
+		}
+	}
 }
