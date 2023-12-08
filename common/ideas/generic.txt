@@ -33,5 +33,18 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.06
 			}
 		}
+		blood_bath = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				surrender_limit = 0.20
+				defensive_war_stability_factor = 0.30
+				offensive_war_stability_factor = 0.30
+				war_support_factor = 0.20
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
 	}
 }

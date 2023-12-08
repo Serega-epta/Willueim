@@ -516,3 +516,52 @@ kanon_absol = {
 		
 		monthly_population = -1
 	}
+
+
+
+
+#Generic
+
+	apocaliptic_march = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		production_factory_max_efficiency_factor = generic_production_factory_max_efficiency_factor
+		offence = generic_offence
+		recruitable_population_factor = generic_recruitable_population_factor
+		mobilization_speed = generic_mobilization_speed
+		army_speed_factor = generic_army_speed_factor
+		army_org_regain = generic_army_org_regain
+		initiative_factor = generic_initiative_factor
+		army_core_attack_factor = generic_army_core_attack_factor
+		command_power_gain = generic_command_power_gain
+		supply_factor = generic_supply_factor
+		army_org  = generic_army_org 
+		experience_loss_factor = generic_experience_loss_factor
+
+	}
+
+	apocaliptic_realism = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		production_speed_buildings_factor = generic_production_speed_buildings_factor
+		monthly_population = generic_monthly_population
+		production_factory_efficiency_gain_factor = generic_production_factory_efficiency_gain_factor
+		local_resourses_factor = generic_local_resourses_factor
+		stability_weekly_factor = generic_stability_weekly_factor
+		consumer_goods_factor = generic_consumer_goods_factor
+		production_factory_max_efficiency_factor = generic_production_factory_max_efficiency_factor_2
+		base_fuel_gain = generic_base_fuel_gain
+	}
+
+	juridical_anomaly = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		research_speed_factor = generic_research_speed_factor
+		political_power_factor = generic_political_power_factor
+		generate_wargoal_tension = generic_generate_wargoal_tension
+		war_support_weekly = generic_war_support_weekly
+		defensive_war_stability_factor = generic_defensive_war_stability_factor
+		enemy_justify_war_goal_time = generic_enemy_justify_war_goal_time
+		enemy_declare_war_tension = generic_enemy_declare_war_tension
+		mobilization_speed = generic_mobilization_speed_2
+	}
