@@ -51,3 +51,19 @@ news_event = {
 		name = worldnews.3.a
 	}
 }
+
+news_event = {
+	id = worldnews.4
+	title = worldnews.4.t
+	desc = worldnews.4.d
+	picture = GFX_news_event_dog_clanging
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = worldnews.4.a
+		every_country = { news_event = { id = super.5 days = 1 } }
+	}
+}
