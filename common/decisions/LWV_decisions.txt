@@ -189,7 +189,7 @@ LWV_holiness = {
 			LWV = {
 				has_completed_focus = LWV_rasprostraniat_religiu
 				NOT = {
-					has_country_flag = sviataya_postup_flag
+					has_country_flag = holy_step_flag
 					has_country_flag = sudni_den_flag
 				}
 			}
@@ -200,6 +200,13 @@ LWV_holiness = {
 				}
 				NOT = {
 					is_owned_by = LWV
+				}
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = holy_step
+					}
 				}
 			}
 		}
@@ -207,8 +214,8 @@ LWV_holiness = {
 			LWV = {
 				has_completed_focus = LWV_rasprostraniat_religiu
 				NOT = {
-					has_country_flag = sviataya_postup_flag
-					has_country_flag = sudni_den_flag
+					has_country_flag = holy_step_flag
+					has_country_flag = judgment_day_flag
 				}
 			}
 			FROM = {
@@ -218,6 +225,13 @@ LWV_holiness = {
 				}
 				NOT = {
 					is_owned_by = LWV
+				}
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = holy_step
+					}
 				}
 			}
 		}
@@ -226,47 +240,26 @@ LWV_holiness = {
 		cost = 5
 		complete_effect = {
 			LWV = {
-				set_country_flag = sviataya_postup_flag
+				set_country_flag = holy_step_flag
 			}
 		}
 		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = {
-					modifier = sviataya_postup
+					modifier = holy_step
  					days = 30
 				}
 				owner = {
 					country_event = LWV.3333
 				}
 			}
+			LWV = {
+				clr_country_flag = holy_step_flag
+			}
 		}
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
-	}
-	sviataya_postup_mission = {
-		allowed = {
-			original_tag = LWV
-		}
-		available = {
-			LWV = {
-				NOT = {
-					has_country_flag = sviataya_postup_flag
-				}
-			}
-		}
-		activation = {
-			LWV = {
-				has_country_flag = sviataya_postup_flag
-			}
-		}
-		fire_only_once = no
-		days_mission_timeout = 40
-		timeout_effect = {
-			LWV = {
-				clr_country_flag = sviataya_postup_flag
-			}
-		}
 	}
 	stage_5 = {
 		icon = GFX_decision_holiness_integration_three
@@ -276,24 +269,38 @@ LWV_holiness = {
 		visible = {
 			LWV = {
 				NOT = {
-					has_country_flag = sudni_den_flag
+					has_country_flag = judgment_day_flag
 				}
 			}
 			FROM = {
 				has_dynamic_modifier = {
-					modifier = sviataya_postup
+					modifier = holy_step
+				}
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = judgment_day
+					}
 				}
 			}
 		}
 		available = {
 			LWV = {
 				NOT = {
-					has_country_flag = sudni_den_flag
+					has_country_flag = judgment_day_flag
 				}
 			}
 			FROM = {
 				has_dynamic_modifier = {
-					modifier = sviataya_postup
+					modifier = holy_step
+				}
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = judgment_day
+					}
 				}
 			}
 		}
@@ -302,49 +309,27 @@ LWV_holiness = {
 		cost = 100
 		complete_effect = {
 			LWV = {
-				clr_country_flag = sviataya_postup_flag
-				set_country_flag = sudni_den_flag
+				clr_country_flag = holy_step_flag
+				set_country_flag = judgment_day_flag
 			}
 		}
 		remove_effect = {
 			FROM = {
 				remove_dynamic_modifier = {
-					modifier = sviataya_postup
+					modifier = holy_step
 				}
 				add_dynamic_modifier = {
-					modifier = sudni_den
+					modifier = judgment_day
  					days = 20
 				}
+			}
+			LWV = {
+				clr_country_flag = judgment_day_flag
 			}
 		}
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
-	}
-	sudni_den_mission = {
-		allowed = {
-			original_tag = LWV
-		}
-		available = {
-			LWV = {
-				NOT = {
-					has_country_flag = sudni_den_flag
-				}
-			}
-		}
-		activation = {
-			LWV = {
-				has_country_flag = sudni_den_flag
-			}
-		}
-		fire_only_once = no
-		days_mission_timeout = 25
-		timeout_effect = {
-			LWV = {
-				clr_country_flag = sviataya_postup_flag
-				clr_country_flag = sudni_den_flag
-			}
-		}
 	}
 	stage_6 = {
 		icon = GFX_decision_holiness_integration_three
@@ -355,24 +340,38 @@ LWV_holiness = {
 			LWV = {
 				has_completed_focus = LWV_podgotovit_pochvu
 				NOT = {
-					has_country_flag = podgotovlennaya_pochva_flag
+					has_country_flag = prepare_the_ground_flag
 				}
 			}
 			FROM = {
 				is_core_of = LWV
 				is_owned_by = LWV
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = prepare_the_ground
+					}
+				}
 			}
 		}
 		available = {
 			LWV = {
 				has_completed_focus = LWV_podgotovit_pochvu
 				NOT = {
-					has_country_flag = podgotovlennaya_pochva_flag
+					has_country_flag = prepare_the_ground_flag
 				}
 			}
 			FROM = {
 				is_core_of = LWV
 				is_owned_by = LWV
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = prepare_the_ground
+					}
+				}
 			}
 		}
 		fire_only_once = yes
@@ -380,44 +379,23 @@ LWV_holiness = {
 		cost = 10
 		complete_effect = {
 			LWV = {
-				set_country_flag = podgotovlennaya_pochva_flag
+				set_country_flag = prepare_the_ground_flag
 			}
 		}
 		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = {
-					modifier = podgotovlennaya_pochva
+					modifier = prepare_the_ground
  					days = 50
 				}
+			}
+			LWV = {
+				clr_country_flag = prepare_the_ground_flag
 			}
 		}
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
-	}
-	podgotovlennaya_pochva_mission = {
-		allowed = {
-			original_tag = LWV
-		}
-		available = {
-			LWV = {
-				NOT = {
-					has_country_flag = podgotovlennaya_pochva_flag
-				}
-			}
-		}
-		activation = {
-			LWV = {
-				has_country_flag = podgotovlennaya_pochva_flag
-			}
-		}
-		fire_only_once = no
-		days_mission_timeout = 60
-		timeout_effect = {
-			LWV = {
-				clr_country_flag = podgotovlennaya_pochva_flag
-			}
-		}
 	}
 	stage_7 = {
 		icon = GFX_decision_holiness_integration_three
@@ -427,9 +405,8 @@ LWV_holiness = {
 		visible = {
 			LWV = {
 				has_completed_focus = LWV_zaseet_semena_pravednosti
-				has_country_flag = podgotovlennaya_pochva_flag
 				NOT = {
-					has_country_flag = zaseyannyje_semena_flag
+					has_country_flag = sow_the_seeds_flag
 				}
 			}
 			FROM = {
@@ -441,14 +418,14 @@ LWV_holiness = {
 			LWV = {
 				has_completed_focus = LWV_zaseet_semena_pravednosti
 				NOT = {
-					has_country_flag = zaseyannyje_semena_flag
+					has_country_flag = sow_the_seeds_flag
 				}
 			}
 			FROM = {
 				is_core_of = LWV
 				is_owned_by = LWV
 				has_dynamic_modifier = {
-					modifier = podgotovlennaya_pochva
+					modifier = prepare_the_ground
 				}
 			}
 		}
@@ -457,50 +434,28 @@ LWV_holiness = {
 		cost = 50
 		complete_effect = {
 			LWV = {
-				clr_country_flag = podgotovlennaya_pochva_flag
-				set_country_flag = zaseyannyje_semena_flag
+				clr_country_flag = prepare_the_ground_flag
+				set_country_flag = sown_seeds_flag
 			}
 		}
 		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = {
-					modifier = zaseyannyje_semena
+					modifier = sow_the_seeds
  					days = 30
 				}
 				remove_dynamic_modifier = {
-					modifier = podgotovlennaya_pochva
+					modifier = prepare_the_ground
  					days = 30
 				}
+			}
+			LWV = {
+				clr_country_flag = sow_the_seeds_flag
 			}
 		}
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
-	}
-	zaseyannyje_semena_mission = {
-		allowed = {
-			original_tag = LWV
-		}
-		available = {
-			LWV = {
-				NOT = {
-					has_country_flag = zaseyannyje_semena_flag
-				}
-			}
-		}
-		activation = {
-			LWV = {
-				has_country_flag = zaseyannyje_semena_flag
-			}
-		}
-		fire_only_once = no
-		days_mission_timeout = 60
-		timeout_effect = {
-			LWV = {
-				clr_country_flag = podgotovlennaya_pochva_flag
-				clr_country_flag = zaseyannyje_semena_flag
-			}
-		}
 	}
 }
 
@@ -677,7 +632,7 @@ LWV_unity_in_holiness = {
 		}
 	}
 }
-#ВОЙНА В ТЕНИ
+#Война в тени
 LWV_war_in_the_shadows = {
 	#missions
 	whisper_in_the_shadows = {
