@@ -1,1 +1,0 @@
-NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 50000
