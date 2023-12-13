@@ -1,0 +1,38 @@
+capital = 839
+
+oob = base #"ODS_1936"
+
+
+# Starting tech
+set_technology = {
+    infantry_weapons = 1
+}
+
+set_research_slots = 5
+set_convoys = 20
+
+
+add_ideas = DRG_under_the_banner_of_perun
+set_politics = {
+	ruling_party = forestry 
+	elections_allowed = no
+}
+
+set_popularities = {
+	forestry = 75
+	technocracies = 10
+	svobod = 10
+	gumanists = 5
+}
+
+
+create_country_leader = {
+    name = "DRG_pavel_glin"
+    desc = "DRG_pavel_glin_desc"
+    picture = "gfx/leaders/DRG/pavel_glin.dds"
+    ideology = forestry_1
+    traits = {
+        #
+    }
+}
+

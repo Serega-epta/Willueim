@@ -1,0 +1,149 @@
+# Чтобы ориентироваться по содержанию, необходимо выделить нужную часть (без знака комментария и кружка) и нажать ctrl+f
+# Содержание:
+# ○ Столица и базовые значения
+# ○ Стартовые технологии
+# ○ Армия и "флот"
+# ○ Идеи/нац.духи
+# ○ Внутренняя политика
+# ○ Лидеры, советники, генералы и прочие людишки
+# ○ Дипломатия
+
+
+# Столица и базовые значения
+capital = 1001
+set_research_slots = 2
+set_stability = 0.7
+set_war_support = 0.5
+army_experience = 10
+add_manpower = 38000
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 4150
+	producer = GLS
+}
+add_equipment_to_stockpile = {
+	type = infantry_odejda_1
+	amount = 5490
+	producer = GLS
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 250
+	producer = GLS
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 12
+	producer = GLS
+}
+add_equipment_to_stockpile = {
+	type = obt_tank_chassis_1
+	amount = 160
+	producer = GLS
+}
+add_ideas = {
+GLS_kotly
+GLS_memories_of_rodina
+GLS_fathers_and_not_fathers
+}
+# Стартовые технологии
+set_technology = {
+    #Категория пехоты
+    infantry_weapons = 1
+    infantry_weapons1 = 1
+    infantry_odejda  = 1
+    infantry_odejda1 = 1
+    motorised_infantry = 1
+    motorised_infantry2 = 1
+    #Категория поддержки
+    tech_support = 1
+    tech_recon = 1
+    tech_rhbz = 1
+    #Категория артиллерии
+    gw_artillery = 1
+    stvolartillery = 1
+    boepripas = 1
+    #Категория электроники
+    electronic_mechanical_engineering = 1
+    electronic_mechanical_engineering2 = 1
+    #Категория индустрии
+    basic_machine_tools = 1
+    construction1 = 1
+    fuel_silos = 1
+}
+if = {
+	limit = { not = { has_dlc = "By Blood Alone" } }
+    set_technology = {
+        #Категория самолетов
+        early_fighter = 1
+    }
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+    set_technology = {
+        #Категория самолетов
+        iw_small_airframe = 1
+        iw_medium_airframe = 1
+        iw_large_airframe = 1
+    }
+}
+if = {
+	limit = { not = { has_dlc = "No Step Back" } }
+    set_technology = {
+        #Категория танков
+        gwtank = 1
+    }
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+    set_technology = {
+        #Категория танков
+        gwtank_chassis = 1
+        obtvtorogourovnya = 1
+    }
+}
+
+# Армия и "флот"
+oob = GLS        #"GLS_1936" <- скопируйте, когда файл с дивизиями будете делать
+set_convoys = 0
+
+# Идеи/нац.духи
+add_ideas = {
+    #идей нет
+}
+
+# Внутренняя политика ۩۞۩
+set_politics = {
+    ruling_party = patriots
+    elections_allowed = no              #Выборы, выборы, кандидаты.... а где?
+}
+set_popularities = {
+    patriots = 100                      #ЛИКВИДАТОРЫ СТРОНГ
+	free = 0
+    sacraments = 0
+    gelerteria = 0
+    militarists = 0
+	gumanists = 0
+	svobod = 0
+	technocracies = 0
+	opportunists = 0
+    forestry = 0
+    juntas = 0
+    professariat = 0
+    bandits = 0
+}
+
+# Лидеры, советники, генералы и прочие людишки
+recruit_character = GLS_Iron_Dimon
+recruit_character = GLS_Chiro
+recruit_character = GLS_Ivan_Sykhoy
+recruit_character = GLS_Airat_Kabirov
+recruit_character = GLS_Almaz_Gabbasin
+recruit_character = GLS_Victor_Ryaznov
+recruit_character = GLS_Vladimir_Astafiev
+
+# Дипломатия
+add_opinion_modifier = {
+    target = ASR
+    modifier = endless_hatred
+}

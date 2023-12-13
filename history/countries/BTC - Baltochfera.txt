@@ -1,0 +1,35 @@
+capital = 189
+
+oob = "ODS_1936"
+
+add_ideas = {
+    BTC_asinis_par_asinim
+}
+# Starting tech
+set_technology = {
+    infantry_weapons = 1
+}
+
+set_research_slots = 2
+set_politics = {
+	ruling_party = svobod	
+	elections_allowed = no
+}
+
+set_popularities = {
+	sacraments = 15
+	svobod = 70
+	unificators = 15
+	
+}
+
+
+create_country_leader = {
+    name = "BTC_iohan_mil"
+    desc = "BTC_iohan_mil_DESC"
+    picture = "gfx/leaders/BTC/iohan_mil.dds"
+    ideology = svobod_1   
+    traits = { pribalt_nazi }
+}
+
+

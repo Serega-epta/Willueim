@@ -1,0 +1,38 @@
+capital = 234
+
+oob = ECD
+
+
+# Starting tech
+set_technology = {
+    infantry_weapons = 1
+    infantry_odejda = 1
+}
+
+set_research_slots = 2
+set_convoys = 20
+army_experience = 50
+add_manpower = 10000
+add_equipment_to_stockpile = {
+	type = infantry_odejda_0
+	amount = 3000
+	producer = ECD
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 1500
+	producer = ECD
+}
+set_politics = {
+	ruling_party = svobod
+	elections_allowed = no
+}
+
+set_popularities = {
+	technocracies = 15
+	free = 10
+	svobod = 75
+}
+
+recruit_character = ECD_anarchy
+add_ideas = chaos_and_awe

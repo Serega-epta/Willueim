@@ -1,0 +1,113 @@
+division_template = {
+	name = "Vtoroe_pokolenie_squad"
+	division_names_group = SOV_INF_01
+	regiments = {
+		rhbzbatalion = { x = 0 y = 0 }
+		rhbzbatalion = { x = 1 y = 0 }
+		rhbzbatalion = { x = 0 y = 1 }
+		rhbzbatalion = { x = 1 y = 1 }
+        rhbzbatalion = { x = 2 y = 0 }
+		rhbzbatalion = { x = 2 y = 1 }
+	}
+	support = {
+		rhbz = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Pervoe_pokolenie_squad"
+	division_names_group = SOV_INF_01
+	regiments = {
+		egerskayapechota = { x = 0 y = 0 }
+		egerskayapechota = { x = 1 y = 0 }
+		egerskayapechota = { x = 0 y = 1 }
+		egerskayapechota = { x = 1 y = 1 }
+		egerskayapechota = { x = 2 y = 0 }
+		egerskayapechota = { x = 2 y = 1 }
+	}
+	support = {
+		rhbz = { x = 0 y = 0 }
+		art_stvol = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Tankoviy_batalion"
+	division_names_group = SOV_INF_01
+	regiments = {
+		obt_tank = { x = 0 y = 0 }
+		obt_tank = { x = 1 y = 0 }
+		obt_tank = { x = 0 y = 1 }
+		obt_tank = { x = 1 y = 1 }
+	}
+	support = {
+		rhbz = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+units = {
+	division = {
+		name = "Vtoroe_pokolenie_squad"
+		location = 7300
+		division_template = "Vtoroe_pokolenie_squad"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Vtoroe_pokolenie_squad"
+		location = 12117
+		division_template = "Vtoroe_pokolenie_squad"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Vtoroe_pokolenie_squad"
+		location = 10329
+		division_template = "Vtoroe_pokolenie_squad"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Vtoroe_pokolenie_squad"
+		location = 12117
+		division_template = "Vtoroe_pokolenie_squad"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Vtoroe_pokolenie_squad"
+		location = 10329
+		division_template = "Vtoroe_pokolenie_squad"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Pervoe_pokolenie_squad"
+		location = 1278
+		division_template = "Pervoe_pokolenie_squad"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Pervoe_pokolenie_squad"
+		location = 1278
+		division_template = "Pervoe_pokolenie_squad"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Tankoviy_batalion"
+		location = 1278
+		division_template = "Tankoviy_batalion"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+}

@@ -1,0 +1,35 @@
+capital = 592
+
+oob = base #"CHU_1936"
+
+
+# Starting tech
+set_technology = {
+    infantry_weapons = 1
+}
+
+set_research_slots = 2
+set_convoys = 20
+add_ideas = CHU_the_seal_of_a_new_world
+set_politics = {
+	ruling_party = juntas
+	elections_allowed = no
+}
+
+set_popularities = {
+	juntas = 100
+	
+}
+
+ 
+ 
+recruit_character = CHU_Semen_Shezer 
+create_country_leader = {
+    name = "CHU_Semen_Shezer"
+    desc = "CHU_Semen_Shezer_DESC"
+    picture = "gfx/leaders/CHU/semen_shezer.dds"
+    ideology = juntas_1 
+    traits = {
+        #
+    }
+}

@@ -1,0 +1,37 @@
+capital = 839
+
+oob = base #"ODS_1936"
+
+
+# Starting tech
+set_technology = {
+    infantry_weapons = 1
+}
+
+set_research_slots = 5
+set_convoys = 20
+
+
+add_ideas = PLD_irony_as_it_is
+set_politics = {
+	ruling_party = gumanists 
+	elections_allowed = no
+}
+
+set_popularities = {
+	gumanists  = 56
+	svobod = 24
+	technocracies = 13
+	juntas = 7
+}
+
+create_country_leader = {
+    name = "PLD_anton_kitsenko"
+    desc = "PLD_anton_kitsenko_DESC"
+    picture = "gfx/leaders/PLD/anton_kitsenko.dds"
+    ideology = gumanists_1   
+    traits = {
+        #
+    }
+}
+
