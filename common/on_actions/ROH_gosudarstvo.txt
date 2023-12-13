@@ -1,0 +1,13 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			set_variable = { ochki_gos_progressa = 0 }	
+		}
+	}
+	on_weekly = {
+		effect = {
+			add_to_variable = { ochki_gos_progressa = 10 }
+		}
+	}
+}
+		

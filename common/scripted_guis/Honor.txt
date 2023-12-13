@@ -1,0 +1,35 @@
+scripted_gui = { 
+    honor  = {
+        context_type = decision_category
+		window_name = "honor"
+		
+		visible = {
+		       
+		}
+		
+		effects = {
+		if = { 
+			    limit = {  NOT ={has_variable = HONOR} }
+				add_to_variable = { HONOR_GRISHA = 5 }
+			}
+		
+		
+		}
+        
+		triggers = {
+		HONOR_HIGH_visible = {
+				check_variable = { HONOR_GRISHA > 10}
+				}
+		HONOR_MIDDLE_visible= {
+				check_variable = { HONOR_GRISHA < 10}
+                check_variable = { HONOR_GRISHA > 4 }
+				
+            }
+		HONOR_LOW_visible = {
+                check_variable = { HONOR_GRISHA < 5 }
+				
+            }
+		
+    	}
+	}
+}

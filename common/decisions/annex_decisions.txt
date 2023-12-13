@@ -1,0 +1,313 @@
+Svobod_annex = {
+	Annex_1 = { 
+		priority = 320
+
+		icon = GFX_decision_generic_political_action
+
+		ai_will_do = {
+			base = 100
+		}
+
+		allowed = {	
+			has_equipment = {
+				infantry_equipment > 100
+			}
+			any_neighbor_country = { 
+					has_government = free
+				}
+			is_ai = no
+		}
+
+		available = {
+			any_neighbor_country = { 
+					has_government = free
+				}
+			is_ai = no
+		}
+
+		visible = {
+			is_ai = no
+			any_neighbor_country = { 
+					has_government = free
+				}
+		}
+		target_array = neighbors
+		targets_dynamic = yes
+		target_trigger = {
+				FROM = {
+					has_government = free
+				}		
+			}
+		cost = 100
+
+		days_re_enable = 28
+
+		days_remove = 35
+
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+			random_list = {
+    			50 = {
+       			ROOT = {
+					set_country_flag = FROM_1_dey_usp
+				}
+    			}
+    			50 = {
+        		ROOT = {
+					set_country_flag = FROM_1_dey_neusp
+				}
+    			}
+					}
+		
+			
+		}
+	}
+	Annex_dey_2_usp = { 
+		priority = 320
+
+		icon = GFX_decision_generic_scorched_earth
+
+		ai_will_do = {
+			base = 100
+			
+		}
+
+		allowed = {
+			has_equipment = {
+				infantry_equipment > 500
+			}
+		}
+
+		available = {
+		any_neighbor_country = { 
+					has_government = free
+				}
+		}
+
+		visible = {
+		any_neighbor_country = { 
+					has_government = free
+				}
+			ROOT = {
+			has_country_flag = FROM_1_dey_usp
+			}
+		}
+		cost = 100
+		target_array = neighbors
+		targets_dynamic = yes
+		target_trigger = {
+				FROM = {
+					has_government = free
+				}		
+			}
+
+		days_remove = 10
+		fire_only_once = yes
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+			ROOT = {
+				clr_country_flag = FROM_1_dey_usp
+			}
+			random_list = {
+    			50 = {
+       			ROOT = {
+					set_country_flag = FROM_2_dey_usp
+				}
+    			}
+    			50 = {
+        		ROOT = {
+					set_country_flag = FROM_2_dey_neusp
+				}
+    			}
+					}
+		}	
+	}
+	Annex_dey_2_neusp = { 
+		priority = 320
+
+		icon = GFX_decision_generic_scorched_earth
+
+		ai_will_do = {
+			base = 100
+			
+		}
+
+		allowed = {
+			has_equipment = {
+				infantry_equipment > 200
+			}
+			
+		}
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 200
+			}
+			any_neighbor_country = { 
+					has_government = free
+				}
+		}
+
+		visible = {
+			any_neighbor_country = { 
+					has_government = free
+				}
+			ROOT = {
+			has_country_flag =FROM_1_dey_neusp
+			}
+		}
+		cost = 100
+
+
+		days_remove = 10
+		target_array = neighbors
+		targets_dynamic = yes
+		target_trigger = {
+				FROM = {
+					has_government = free
+				}		
+			}
+		fire_only_once = yes
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+			add_manpower = -200
+			ROOT = {
+				clr_country_flag = FROM_1_dey_neusp
+			}
+			ROOT = {
+					set_country_flag = FROM_1_dey_usp
+				}
+			
+		}	
+	}
+	Annex_dey_3_usp = { 
+		priority = 320
+
+		icon = GFX_decision_generic_scorched_earth
+
+		ai_will_do = {
+			base = 100
+			
+		}
+
+		allowed = {
+			has_equipment = {
+				infantry_equipment > 500
+			}
+		}
+
+		available = {
+		any_neighbor_country = { 
+					has_government = free
+				}
+		}
+
+		visible = {
+		any_neighbor_country = { 
+					has_government = free
+				}
+			ROOT = {
+			has_country_flag = FROM_2_dey_usp
+			}
+		}
+		cost = 300
+		target_array = neighbors
+		targets_dynamic = yes
+		target_trigger = {
+				FROM = {
+					has_government = free
+				}		
+			}
+
+		days_remove = 1
+		fire_only_once = yes
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+			}
+			add_manpower = -3000
+			ROOT = {
+				clr_country_flag = FROM_2_dey_usp
+			}
+			annex_country = {
+			target =FROM
+			transfer_troops = yes
+			}
+
+		}	
+	}
+	Annex_dey_3_neusp = { 
+		priority = 320
+
+		icon = GFX_decision_generic_scorched_earth
+
+		ai_will_do = {
+			base = 100
+			
+		}
+
+		allowed = {
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			
+		}
+
+		available = {
+			any_neighbor_country = { 
+					has_government = free
+				}
+		}
+
+		visible = {
+			any_neighbor_country = { 
+					has_government = free
+				}
+			ROOT = {
+			has_country_flag = FROM_2_dey_neusp
+			}
+		}
+		cost = 100
+		target_array = neighbors
+		targets_dynamic = yes
+		target_trigger = {
+				FROM = {
+					has_government = free
+				}		
+			}
+
+		days_remove = 10
+		fire_only_once = yes
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			add_manpower = -1000
+			ROOT = {
+				clr_country_flag = FROM_2_dey_neusp
+			}
+			ROOT = {
+					set_country_flag = FROM_2_dey_usp
+				}
+			
+		}	
+	}
+
+}

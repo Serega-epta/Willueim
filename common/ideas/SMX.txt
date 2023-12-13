@@ -1,0 +1,24 @@
+ideas = {
+
+	country = {
+		SMX_mechanical_enemy = {	
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor +10%
+				army_speed_factor +10%
+				army_core_defence_factor +20%
+				stability_weekly -0.30%
+			}
+		}
+	}
+}

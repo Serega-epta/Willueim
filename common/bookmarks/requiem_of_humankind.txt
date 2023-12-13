@@ -1,0 +1,111 @@
+bookmarks = {
+	bookmark = {
+		name = "REQUIEM_NAME"
+		desc = "REQUIEM_DESC"
+		date = 2022.1.1.12
+		picture = "GFX_select_date_2022"
+		default_country = "GLS"
+		default = yes
+		
+		#Страны, имеющие полностью или частично (т.е осталось немного) реализованный контент
+
+		"GLS"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_GLS"
+			ideology = patriots
+			ideas = {				
+				GLS_fathers_and_not_fathers
+				GLS_memories_of_rodina
+				GLS_kotly			
+			}
+			focuses = {
+				GLS_old_friends
+				GLS_young_blood
+				GLS_fall_of_rodina
+			}
+		}
+
+		"ARM"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_ARM"
+			ideology = patriots
+			ideas = {
+				ARM_blood_on_snow
+			}
+			focuses = {
+				ARM_frozen_hopes
+				ARM_dog_death
+				ARM_first_among_equals
+			}
+		}
+
+		"LWV"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_LWV"
+			ideology = sacraments
+			ideas = {
+				godsdl 
+				holy_nadely 
+				uniat_nationalists
+			}
+			focuses = {
+				LWV_Absol_svyatost
+				LWV_Skrepit_veru_klinkom
+				LWV_Net_yaz
+			}
+		}
+
+		"ODS"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_ODS"
+			ideology = opportunists
+			ideas = {				
+				dicarstvo
+				doverie_1
+				black_beret		
+			}
+			focuses = {			
+				ODS_perv
+				ODS_clear_perimetr
+				ODS_garantii_bez
+			}
+		}
+
+		#Страны, не имеющие контент (или имеющие, но слишком маленький), но которые планируются в разработке
+
+		# "AGE"={																	<-      
+		# 	minor = yes																<-
+		# 	history = "GATHERING_STORM_INCOMPLETE_CONTENT_TEMPORARY_DESC"			<-
+		# 	ideology = patriots														<-
+		# 	ideas = {																<-
+		# 	}																		<-  ██╗░░██╗███████╗  ██████╗░░█████╗░░█████╗░████████╗░█████╗░███████╗████████╗
+		# 	focuses = {																<-  ███████║█████╗░░  ██████╔╝███████║██║░░██║░░░██║░░░███████║█████╗░░░░░██║░░░
+		# 		ROH_capital															<-	██╔══██║██╔══╝░░  ██╔═══╝░██╔══██║██║░░██║░░░██║░░░██╔══██║██╔══╝░░░░░██║░░░
+		# 		ROH_15																<-	██║░░██║███████╗  ██║░░░░░██║░░██║╚█████╔╝░░░██║░░░██║░░██║███████╗░░░██║░░░
+		# 		ROH_29																<-	╚═╝░░╚═╝╚══════╝  ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░
+		# 	}																		<-
+		# }																			<-																		
+
+		"IMP"={
+			minor = yes
+			history = "REQUIEM_OF_HUMANKIND_condition_of_IMP"
+			ideology = gumanists
+			ideas = {				
+				IMP_1
+				IMP_2
+				IMP_3
+			}
+			focuses = {			
+				IMP_Our_Great_Destiny
+				IMP_Order_inside
+				IMP_Department_K
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			GLS = {
+				set_variable = { freedom = 50 } 
+				set_variable = { order = 50 } 
+			}
+		}
+		
+	}
+}

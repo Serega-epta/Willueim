@@ -1,0 +1,118 @@
+characters = {
+	#=#=# Лидер/Фельдмаршал #=#=#
+	#Александр Лазаревич#
+	AGE_aleksandr_lazarevich = {
+		#Имя#
+		name = AGE_aleksandr_lazarevich
+		#Портрет#
+		portraits = {
+			civilian = {
+				large = GFX_AGE_aleksandr_lashenko
+			}
+			army = {
+				large = GFX_AGE_aleksandr_lashenko
+			}
+		}
+		
+		#Должность Лидер#
+		country_leader={
+			ideology= patriots_1
+			expire="2033.1.1.1"
+			id=-1
+			desc = AGE_aleksandr_lazarevich_desc
+		}
+		#Должность Фильдмаршал#
+		field_marshal = { 
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+			desc = AGE_aleksandr_lazarevich_desc
+			traits = {
+				medal_of_honor_great_motherland #”Медаль за отвагу” Великой Родины#
+				old_guard #Старая гвардия#
+				organisational_leader
+			
+			}
+		}
+	}
+	#=#=# Генералы #=#=#
+	#Родолюб Вулович/Роки#
+	AGE_rodolyub_vulovich = { 
+		#Имя#
+		name = AGE_rodolyub_vulovich
+		#Портрет#
+		portraits = {
+			civilian = {
+				large = GFX_AGE_rodolyub_vulovich
+			}
+		}
+		#Должность Генерала#
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+			desc = AGE_rodolyub_vulovich_desc
+			traits = {
+				old_guard #Старая гвардия#
+				politically_connected #Политические связи#
+				media_personality #Медийная персона
+			}
+			
+		}
+	}
+	#Деян Берич/Деки#
+	AGE_deyan_berich = { 
+		#Имя#
+		name = AGE_deyan_berich
+		#Портрет#
+		portraits = {
+			civilian = {
+				large = GFX_AGE_deyan_berich
+			}
+		}
+		#Должность Генерала#
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+			desc = AGE_deyan_berich_desc
+			traits = {
+				old_guard #Старая гвардия#
+				war_hero #Герой войны#
+			}
+		}
+	}
+	AGE_novak_jekovic = { #Новик Джекович#
+		#Имя#
+		name = AGE_novak_jekovic
+		#Портрет#
+		portraits = {
+			civilian = {
+				large = GFX_AGE_novak_jekovic
+			}
+		}
+		#Должность Генерала#
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+			desc = AGE_novak_jekovic_desc
+			traits = {
+				brilliant_strategist #Великолепный нападающий(стратег)#
+				trait_reckless #Смельчак#
+			}
+		}
+	}
+}

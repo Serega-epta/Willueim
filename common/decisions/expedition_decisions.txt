@@ -1,0 +1,411 @@
+expedition_category = {	
+	nabor_otriada = {
+		icon = GFX_decision_generic_document
+		priority = 7
+		allowed = { always = yes }
+		available = {
+			has_manpower > 1500
+			NOT = {
+			has_country_flag = otriad_nabran
+			}
+		}
+		ai_will_do = {
+		base = 60
+		}
+		fire_only_once = no
+		days_remove = 1 # время события 
+		# Сразу после события
+		complete_effect = {
+		add_manpower = -1500
+		set_country_flag = otriad_nabran
+		ROOT = {
+		set_variable = { profesionalzm_oriada = 10 }
+		}
+		set_variable = { profesionalzm_oriada = 10 }
+		} 
+		cost = 25
+	}
+	podgotovka_otriada = {
+		icon = GFX_decision_generic_document
+		priority = 7
+		allowed = { always = yes }
+		available = {
+			has_equipment = {
+			infantry_equipment > 1999
+			}
+			has_equipment = {
+			infantry_odejda > 1499
+			}
+			NOT = {
+			has_country_flag = oriad_ekipirovan
+			}
+		}
+		ai_will_do = {
+		base = 60
+		}
+		days_remove = 60 # время события 
+		# Сразу после события
+		complete_effect = {
+		add_equipment_to_stockpile = {type = infantry_equipment amount = -2000} add_equipment_to_stockpile = {type = infantry_odejda amount = -1500}
+		set_country_flag = oriad_ekipirovan
+		} 
+		cost = 25
+	}
+	obuchenie_otriada = {
+		icon = GFX_decision_generic_document
+		priority = 7
+		allowed = { always = yes }
+		available = {
+			command_power > 50
+			NOT = {
+			has_country_flag = otriad_obuchen
+			}
+		}
+		ai_will_do = {
+		base = 60
+		}
+		fire_only_once = no
+		days_remove = 60 # время события 
+		# Сразу после события
+		complete_effect = {
+		add_command_power = -50
+		set_country_flag = otriad_obuchen
+		
+		set_variable = { profesionalzm_oriada = 0.05 }
+		
+		} 
+		cost = 25
+	}
+	
+	otriad_zachistki = {
+		icon = GFX_decision_generic_document
+		priority = 7
+		allowed = { always = yes }
+		available = {
+			has_equipment = {
+			motorized_equipment > 500
+			}
+			NOT = {
+			has_country_flag = otriad_zachistki_gotov
+			}
+			has_country_flag = otriad_nabran
+			has_country_flag = oriad_ekipirovan
+			has_country_flag = otriad_obuchen
+		}
+		ai_will_do = {
+		base = 60
+		}
+		fire_only_once = no
+		days_remove = 60 # время события 
+		# Сразу после события
+		complete_effect = {
+		add_equipment_to_stockpile = {type = motorized_equipment amount = -500}
+		set_country_flag = otriad_zachistki_gotov
+		
+		add_to_variable = { profesionalzm_oriada = 0.15 }
+		
+		} 
+		cost = 25
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	otriad_iskoreniteley = {
+		icon = GFX_decision_generic_document
+		priority = 7
+		allowed = { always = yes }
+		available = {
+			has_equipment = {
+			mechanized_equipment > 500
+			}
+			has_equipment = {
+			support_equipment > 500
+			}
+			NOT = {
+			has_country_flag = otriad_iskoreniteley_gotov
+			}
+			has_country_flag = otriad_nabran
+			has_country_flag = oriad_ekipirovan
+			has_country_flag = otriad_obuchen
+		}
+		ai_will_do = {
+		base = 60
+		}
+		fire_only_once = no
+		days_remove = 60 # время события 
+		# Сразу после события
+		complete_effect = {
+		add_equipment_to_stockpile = {type = mechanized_equipment amount = -500} add_equipment_to_stockpile = {type = support_equipment amount = -500}
+		set_country_flag = otriad_iskoreniteley_gotov
+		add_to_variable = { profesionalzm_oriada = 0.15 }
+		} 
+		cost = 25
+	}
+	
+	
+	otriad_STEAL = {
+		icon = GFX_decision_generic_document
+		priority = 7
+		allowed = { always = yes }
+		available = {
+			has_manpower > 500
+			command_power > 50			
+			has_equipment = {
+			infantry_equipment > 1999
+			}
+			has_equipment = {
+			infantry_odejda > 1499
+			}
+			has_equipment = {
+			motorized_equipment > 500
+			}
+			has_equipment = {
+			mechanized_equipment > 500
+			}
+			has_equipment = {
+			support_equipment > 500
+			}
+			NOT = {
+			has_country_flag = otriad_STEAL_gotov
+			}
+			has_country_flag = otriad_nabran
+			has_country_flag = oriad_ekipirovan
+			has_country_flag = otriad_obuchen
+		}
+		ai_will_do = {
+		base = 60
+		}
+		fire_only_once = no
+		days_remove = 60 # время события 
+		# Сразу после события
+		complete_effect = {
+		add_equipment_to_stockpile = {type = infantry_equipment amount = -2000} add_equipment_to_stockpile = {type = infantry_odejda amount = -1500} add_equipment_to_stockpile = {type = motorized_equipment amount = -500} add_equipment_to_stockpile = {type = mechanized_equipment amount = -500} add_equipment_to_stockpile = {type = support_equipment amount = -500}
+		add_command_power = -50
+		add_manpower = -500
+		set_country_flag = otriad_STEAL_gotov
+		add_to_variable = { profesionalzm_oriada = 0.15 }
+		} 
+		cost = 25
+	}
+	
+	
+	
+	brosit_otriad_v_boy = {
+		icon = GFX_decision_generic_document
+		priority = 7
+		allowed = { always = yes }
+		available = {
+			has_country_flag = otriad_nabran
+			has_country_flag = oriad_ekipirovan
+			has_country_flag = otriad_obuchen
+			NOT = {
+			has_country_flag = otriad_na_pole_boya
+			
+			}
+			has_war = yes
+		}
+		ai_will_do = {
+		base = 60
+		}
+		fire_only_once = no
+		days_remove = 1 
+		
+		complete_effect = {
+		set_country_flag = otriad_na_pole_boya
+		
+
+		if = {
+			limit = { has_country_flag = otriad_STEAL_gotov }
+			ROOT = {
+				division_template = { 
+						name = "otriad steal"
+						division_names_group = OTR_CAM_02
+						is_locked = yes
+						regiments = {
+							mechanized  = { x = 0 y = 0 }
+							mechanized  = { x = 0 y = 1 }
+							mechanized  = { x = 1 y = 0 }
+							mechanized  = { x = 1 y = 1 }
+							mechanized  = { x = 2 y = 0 }
+							mechanized  = { x = 2 y = 1 }							
+							mechanized  = { x = 0 y = 2 }
+							mechanized  = { x = 1 y = 2 }
+							mechanized  = { x = 2 y = 2 }							
+							mechanized  = { x = 0 y = 3 }
+							mechanized  = { x = 1 y = 3 }
+							mechanized  = { x = 2 y = 3 }
+							mechanized  = { x = 0 y = 4 }
+							mechanized  = { x = 1 y = 4 }
+							mechanized  = { x = 2 y = 4 }
+							mechanized  = { x = 3 y = 0 }
+							mechanized  = { x = 3 y = 1 }
+							mechanized  = { x = 3 y = 2 }
+							mechanized  = { x = 3 y = 3 }
+							mechanized  = { x = 3 y = 4 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							politruk = { x = 0 y = 1 }
+							rhbz = { x = 0 y = 2 }
+							radiolocationborba = { x = 0 y = 3 }
+						}
+						priority = 0
+				}
+				
+				random_owned_controlled_state  = {
+						create_unit = {
+							division = "division_template = \"otriad steal\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+							owner = ROOT
+							count = 1
+						}				
+				}
+			}
+		}
+		else = {
+		if = {
+			limit = { has_country_flag = otriad_iskoreniteley_gotov }
+			ROOT = {
+				division_template = { 
+						name = "otriad iskorenitel"
+						division_names_group = OTR_CAM_03
+						is_locked = yes
+						regiments = {
+							motopechotanagruzovikah   = { x = 0 y = 0 }
+							motopechotanagruzovikah   = { x = 0 y = 1 }
+							motopechotanagruzovikah   = { x = 1 y = 0 }
+							motopechotanagruzovikah   = { x = 1 y = 1 }
+							motopechotanagruzovikah   = { x = 2 y = 0 }
+							motopechotanagruzovikah   = { x = 2 y = 1 }							
+							motopechotanagruzovikah   = { x = 0 y = 2 }
+							motopechotanagruzovikah   = { x = 1 y = 2 }
+							motopechotanagruzovikah   = { x = 2 y = 2 }							
+							motopechotanagruzovikah   = { x = 0 y = 3 }
+							motopechotanagruzovikah   = { x = 1 y = 3 }
+							motopechotanagruzovikah   = { x = 2 y = 3 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							politruk = { x = 0 y = 1 }
+						}
+						priority = 0
+				}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "division_template = \"otriad iskorenitel\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+							owner = ROOT
+							count = 1
+						}				
+				}
+			}
+		}
+		else = { 
+			if = {
+				limit = { has_country_flag = otriad_zachistki_gotov }
+				ROOT = {
+				division_template = { 
+						name = "otriad zachist"
+						division_names_group = OTR_CAM_04
+						is_locked = yes
+						regiments = {
+							egerskayapechota    = { x = 0 y = 0 }
+							egerskayapechota    = { x = 0 y = 1 }
+							egerskayapechota    = { x = 1 y = 0 }
+							egerskayapechota    = { x = 1 y = 1 }
+							egerskayapechota    = { x = 2 y = 0 }
+							egerskayapechota    = { x = 2 y = 1 }							
+							egerskayapechota    = { x = 0 y = 2 }
+							egerskayapechota    = { x = 1 y = 2 }
+							egerskayapechota    = { x = 2 y = 2 }							
+							egerskayapechota    = { x = 0 y = 3 }
+							egerskayapechota    = { x = 1 y = 3 }
+							egerskayapechota    = { x = 2 y = 3 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+						priority = 0
+				}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "division_template = \"otriad zachist\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+							owner = ROOT
+							count = 1
+						}				
+				}
+				}
+			}
+			else = {
+			ROOT = {
+				division_template = { 
+						name = "otriad zachist"
+						division_names_group = OTR_CAM_05
+						is_locked = yes
+						regiments = {
+							opolchenie     = { x = 0 y = 0 }
+							opolchenie     = { x = 0 y = 1 }
+							opolchenie     = { x = 1 y = 0 }
+							opolchenie     = { x = 1 y = 1 }
+							opolchenie     = { x = 2 y = 0 }
+							opolchenie     = { x = 2 y = 1 }							
+							opolchenie     = { x = 0 y = 2 }
+							opolchenie     = { x = 1 y = 2 }
+							opolchenie     = { x = 2 y = 2 }							
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+						priority = 0
+				}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "division_template = \"otriad zachist\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+							owner = ROOT
+							count = 1
+						}				
+				}
+				}
+			}
+		}
+		}
+		
+		
+		
+		
+		
+		
+		
+		} 
+		cost = 10
+	}
+	
+	
+
+	
+	Reid_v_ruini = {
+		icon = GFX_decision_generic_document
+		priority = 7
+		allowed = { always = yes }
+		available = {
+		has_country_flag = otriad_nabran
+		has_country_flag = oriad_ekipirovan
+		has_country_flag = otriad_obuchen
+		}
+		ai_will_do = {
+		base = 60
+		}
+		days_remove = 180 # время события 
+		days_re_enable = 10	
+		# Сразу после события
+		complete_effect = {
+		
+		country_event = {id = Reid.333}
+		
+		} 
+		cost = 100
+	}
+}

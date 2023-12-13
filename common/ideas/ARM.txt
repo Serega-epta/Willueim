@@ -1,0 +1,63 @@
+ideas = {
+
+	country = {
+		ARM_blood_on_snow = {		#Кровь на снегу	
+			picture = ARM_blood_on_snow_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				army_org_regain = -0.2
+				acclimatization_cold_climate_gain_factor = 0.05	
+			}
+		}
+
+		ARM_hearts = {			#Вырванные сердца
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				offence = 0.05
+				defence = 0.05
+				surrender_limit = 0.2
+			}
+		}
+		ARM_views_united = {		#Единство взглядов
+			picture = ARM_united_views_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				conscription = -0.002
+			}
+		}
+	}
+
+	hidden_ideas = {
+		ARM_Onufrenko_attack = {
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = IMP
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+		}
+	}
+}

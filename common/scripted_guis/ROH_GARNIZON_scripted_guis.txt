@@ -1,0 +1,40 @@
+#Скрипт гарнизона
+scripted_gui = {
+
+		OKNO_GARNIZON = {
+			context_type = selected_state_context
+			parent_window_token = selected_state_view
+			window_name = "OKNO_GARNIZON"
+			dirty = state_garnizon
+			
+			visible = { 
+				check_variable = { state_specialization > 0 }
+				has_dynamic_modifier = { modifier = garnizon_baff }		
+			}
+			
+			effects = { 
+				BUTTON_VIHOD2_click = {  
+					clear_variable = state_garnizon													
+				}
+#Скрипт убрать специализацию
+				BUTTON_RESPECIALIZIROVAT_click = {
+				available = {
+					if = {
+					ROOT = { has_political_power > 50 }
+					}
+					ROOT = limit = { OR = { has_political_power > 50 has_political_power = 50 } }
+					}
+					
+					limit = { OR = { has_political_power > 50 has_political_power = 50 } }
+					ROOT = { add_political_power = -50 }				
+
+				
+					clear_variable = state_garnizon
+					clear_variable = state_specialization		
+					remove_dynamic_modifier = { modifier = garnizon_baff }					 							
+				}				
+			}	
+		}		
+}
+
+

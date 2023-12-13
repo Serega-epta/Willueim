@@ -1,0 +1,70 @@
+scripted_gui = { 
+    briansk  = {
+        context_type = decision_category
+		window_name = "briansk"
+		
+		visible = {
+		       
+		}
+		
+		effects = {
+		
+		
+		
+		}
+        
+		triggers = {
+		kontrol_n_visible = {
+				has_variable = Nash_victor
+				check_variable = {Nash_victor > Vrag_victor }
+				
+            }
+		kontrol_n1_visible = {
+				has_variable = Nash_victor1
+				check_variable = {Nash_victor1 > Vrag_victor1 }
+            }
+		kontrol_n2_visible = {
+				has_variable = Nash_victor2
+				check_variable = {Nash_victor2 > Vrag_victor2 }
+            }
+		kontrol_n3_visible = {
+				has_variable = Nash_victor3
+				check_variable = {Nash_victor3 > Vrag_victor3 }
+            }
+		kontrol_ws_visible = {
+				has_variable = Vrag_victor
+				check_variable = {Nash_victor < Vrag_victor }
+            }
+		kontrol_w1_visible = {
+				has_variable = Vrag_victor1
+				check_variable = {Nash_victor1 < Vrag_victor1 }
+            }
+		kontrol_w2_visible = {
+				has_variable = Vrag_victor2
+				check_variable = {Nash_victor2 < Vrag_victor2 }
+            }
+		kontrol_w3_visible = {
+				has_variable = Vrag_victor3
+				check_variable = {Nash_victor3 < Vrag_victor3 }
+            }
+		kontrol_o_visible = {
+				check_variable = {Nash_victor = Vrag_victor }
+				
+            }
+		kontrol_o1_visible = {
+				check_variable = {Nash_victor1 = Vrag_victor1 }
+				
+            }
+		kontrol_o2_visible = {
+				check_variable = {Nash_victor2 = Vrag_victor2 }
+				
+            }
+		kontrol_o3_visible = {
+				check_variable = {Nash_victor3 = Vrag_victor3 }
+				
+            }
+		
+		
+   	 	}
+	}
+}

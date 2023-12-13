@@ -1,0 +1,454 @@
+focus_tree = {
+id = vo_ima_boge
+country = {
+factor = 0
+
+modifier = {
+add = 10
+tag = LWV
+}
+}
+continuous_focus_position = { x = 50 y = 1600 }
+default = no
+
+focus = {
+id = LWV_Nepreodolimei_zov
+icon = GFX_istinnaya_scherkov
+x = 6
+y = 0
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = { 
+	add_political_power = -20
+	country_event = {
+		id = LWV.47
+		days = 1
+	}
+}
+}
+
+focus = {
+id = LWV_ovci_bez_pastuha
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_Nepreodolimei_zov }
+x = 6
+y = 2
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	add_political_power = -20
+	add_stability = -0.05
+	add_war_support = -0.02
+	add_ideas = LWV_usil_cher
+}
+}
+
+focus = {
+id = LWV_neizvestnost
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_ovci_bez_pastuha }
+x = 6
+y = 4
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	add_political_power = -20
+	add_stability = -0.05
+	add_war_support = -0.02
+}
+}
+
+focus = {
+id = LWV_strah
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_neizvestnost }
+x = 6
+y = 6
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	add_political_power = -20
+	add_stability = -0.05
+	add_war_support = -0.03
+}
+}
+
+focus = {
+id = LWV_gnev
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_strah }
+x = 6
+y = 8
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	add_political_power = -40
+	add_stability = -0.05
+	add_war_support = 0.1
+}
+}
+
+focus = {
+id = LWV_pechal
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_gnev }
+x = 6
+y = 10
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	add_political_power = -50
+	add_stability = -0.05
+}
+}
+
+focus = {
+id = LWV_apatia
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_pechal }
+x = 6
+y = 12
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	add_political_power = -50
+	add_stability = -0.05
+}
+}
+
+focus = {
+id = LWV_osoznanie
+icon = GFX_istinnaya_scherkov
+prerequisite = { focus = LWV_apatia }
+x = 6
+y = 14
+cost = 70
+ai_will_do = {
+factor = 10
+}
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	add_political_power = 150
+	add_war_support = 0.03
+	country_event = {
+		id = LWV.48
+		days = 1
+	}
+}
+}
+
+
+
+focus = { 
+	id = LWV_pol1
+	icon = GFX_Restoration_of_the_CSF
+	x = 6
+	y = 20
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		has_completed_focus = LWV_osoznanie
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_named_threat = {
+			threat = 10
+			name = LWV_complete
+		}
+		country_event = {
+			id = LWV.49
+			days = 1
+		}
+	}
+}
+
+focus = { 
+	id = LWV_pol3
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol1 }
+	mutually_exclusive = { focus = LWV_pol4 }
+	x = 4
+	y = 22
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = LWV_scared_war_upgrate_ultra
+			add_idea = LWV_scared_war_upgrate_ultra1
+		}
+		custom_effect_tooltip = LWV_sacred_war_tt
+		country_event = {
+			id = LWV.50
+			days = 1
+		}
+	}
+	hidden_effect = {
+		every_other_country = {
+			declare_war_on = {
+				target = LWV
+				type = annex_everything
+			}
+		}
+	}
+}
+
+focus = { 
+	id = LWV_pol4
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol1 }
+	mutually_exclusive = { focus = LWV_pol3 }
+	x = 8
+	y = 22
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		has_dlc = "By Blood Alone" 
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		FROM = {
+			send_embargo = LWV
+		}
+		custom_effect_tooltip = LWV_embargo_tt	
+		country_event = {
+			id = LWV.51
+			days = 1
+		}	
+	}
+}
+
+focus = { 
+	id = LWV_pol6
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol4 focus = LWV_pol3 }
+	x = 6
+	y = 24
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
+		country_event = {
+			id = LWV.56
+			days = 1
+		}	
+	}
+}
+
+focus = { 
+	id = LWV_pol7
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol6 }
+	mutually_exclusive = { focus = LWV_pol12 }
+	x = 10
+	y = 25
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_political_power = 100
+		add_stability = 0.05
+		country_event = {
+			id = LWV.59
+			days = 1
+		}
+	}
+}
+
+focus = { 
+	id = LWV_pol8
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol7 }
+	x = 9
+	y = 27
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_stability = 0.1
+		remove_ideas = LWV_usil_cher
+		all_owned_state = {
+			add_manpower = -1000
+		}
+	}
+}
+focus = { 
+	id = LWV_pol9
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol8 }
+	x = 8
+	y = 29
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		891 = {
+			add_dynamic_modifier = { modifier = kanon_absol }
+		}
+		country_event = {
+			id = LWV.60
+			days = 1
+		}
+	}
+}
+focus = { 
+	id = LWV_pol10
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol6 }
+	x = 6
+	y = 26
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.03
+	}
+}
+
+focus = { 
+	id = LWV_pol12
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol6 }
+	mutually_exclusive = { focus = LWV_pol7 }
+	x = 2
+	y = 25
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_political_power = 20
+		country_event = {
+			id = LWV.57
+			days = 1
+		}	
+	}
+}
+
+focus = { 
+	id = LWV_pol13
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol12 }
+	x = 3
+	y = 27
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = holy_nadely_4
+			add_idea = holy_nadely_5
+		}
+	}
+}
+
+focus = { 
+	id = LWV_pol14
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol13 }
+	x = 4
+	y = 29
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		set_cosmetic_tag = LWV_rus_holy #ну, а хули нам, русам
+		remove_ideas = LWV_usil_cher
+		country_event = {
+			id = LWV.58
+			days = 1
+		}
+	}
+}
+
+focus = { 
+	id = LWV_pol15
+	icon = GFX_Restoration_of_the_CSF
+	prerequisite = { focus = LWV_pol14 focus = LWV_pol9 }
+	prerequisite = { focus = LWV_pol10 }
+	x = 6
+	y = 30
+	cost = 10
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		load_focus_tree = { 
+			tree = LWV_return_of_ohlostenko
+			keep_completed = no
+		}	
+		country_event = {
+			id = LWV.52
+			days = 1
+		}	
+	}
+}
+
+
+}

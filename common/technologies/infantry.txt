@@ -1,0 +1,1858 @@
+technologies = {
+	
+	@2010 = 0
+	@2015 = 2
+	@2020 = 4
+	@2025 = 6
+	@2030 = 8
+	@2035 = 10
+	@2040 = 12
+	@2045 = 14
+
+	infantry_weapons = {
+
+		enable_equipments = {
+			infantry_equipment_0
+		}
+
+		enable_subunits = {
+			opolchenie
+		}
+		enable_subunits = {
+			egerskayapechota
+		}
+		enable_subunits = {
+			rhbzbatalion
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons1
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = infantry_odejda
+			research_cost_coeff = 1
+		}	
+		research_cost = 1.5
+		start_year = 2010
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = -1 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_weapons1 = {
+
+		enable_equipments = {
+			infantry_equipment_1
+		}
+				
+		path = {
+			leads_to_tech = infantry_weapons2
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 2015
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+		
+	infantry_weapons2 = {
+
+		enable_equipments = {
+			infantry_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_bonus1
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 2
+		start_year = 2020
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 5 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_bonus1 = {
+
+		opolchenie = {
+			soft_attack = 0.05
+		}
+		
+		egerskayapechota = {
+			soft_attack = 0.05
+		}
+		
+		rhbzbatalion = {
+			soft_attack = 0.05
+		}
+		
+		research_cost = 1.5
+		start_year = 2020
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 5 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_weapons3 = {
+
+		enable_equipments = {
+			infantry_equipment_3
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_bonus2
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 2
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_bonus2 = {
+
+		opolchenie = {
+			soft_attack = 0.05
+		}
+		
+		egerskayapechota = {
+			soft_attack = 0.05
+		}
+		
+		rhbzbatalion = {
+			soft_attack = 0.05
+		}
+
+		
+		research_cost = 1.5
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 8 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+		
+	infantry_weapons4 = {
+
+		enable_equipments = {
+			infantry_equipment_4
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons5
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_bonus3
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 2
+		start_year = 2030
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 11 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_bonus3 = {
+
+		opolchenie = {
+			soft_attack = 0.1
+		}
+		egerskayapechota = {
+			soft_attack = 0.1
+		}		
+		rhbzbatalion = {
+			soft_attack = 0.1
+		}
+		
+		research_cost = 1.5
+		start_year = 2030
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 11 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	
+infantry_weapons5 = {
+
+		enable_equipments = {
+			infantry_equipment_5
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons6
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_bonus4
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = infantry_bonus5
+			research_cost_coeff = 1
+		}		
+		research_cost = 2
+		start_year = 2035
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 14 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_bonus4 = {
+
+		opolchenie = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		
+		egerskayapechota = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		rhbzbatalion = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		land_night_attack = 0.15
+		
+		research_cost = 1.5
+		start_year = 2035
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 13 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+	infantry_bonus5 = {
+
+		opolchenie = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		
+		egerskayapechota = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		rhbzbatalion = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		
+		land_night_attack = 0.15
+		
+		research_cost = 1.5
+		start_year = 2035
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 15 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}			
+	
+infantry_weapons6 = {
+
+		enable_equipments = {
+			infantry_equipment_6
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons7
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_bonus6
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = infantry_bonus7
+			research_cost_coeff = 1
+		}		
+		research_cost = 2
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_bonus6 = {
+
+		opolchenie = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		egerskayapechota = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		rhbzbatalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}				
+		research_cost = 1.5
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 17 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+	infantry_bonus7 = {
+
+		opolchenie = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		egerskayapechota = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		rhbzbatalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}		
+		
+		research_cost = 1.5
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 19 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}			
+	
+	
+infantry_weapons7 = {
+
+		enable_equipments = {
+			infantry_equipment_7
+		}
+		
+		path = {
+			leads_to_tech = infantry_bonus8
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = infantry_bonus9
+			research_cost_coeff = 1
+		}		
+		research_cost = 2
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_bonus8 = {
+
+		opolchenie = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		egerskayapechota = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		rhbzbatalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}		
+		
+		research_cost = 1.5
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 21 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+	infantry_bonus9 = {
+
+		opolchenie = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		egerskayapechota = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		rhbzbatalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}		
+		
+		research_cost = 1.5
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 23 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}			
+		
+		
+	infantry_odejda = {
+
+		enable_equipments = {
+			infantry_odejda_0
+		}
+		
+		path = {
+			leads_to_tech = infantry_odejda1
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 2010
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = -1 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_odejda1 = {
+
+		enable_equipments = {
+			infantry_odejda_1
+		}
+				
+		path = {
+			leads_to_tech = infantry_odejda2
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 2015
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+		
+	infantry_odejda2 = {
+
+		enable_equipments = {
+			infantry_odejda_2
+		}
+		
+		path = {
+			leads_to_tech = infantry_odejda3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_obonus1
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 2
+		start_year = 2020
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 5 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_obonus1 = {
+
+		opolchenie = {
+			soft_attack = 0.05
+		}
+		
+		egerskayapechota = {
+			soft_attack = 0.05
+		}
+		
+		rhbzbatalion = {
+			soft_attack = 0.05
+		}
+		
+		research_cost = 1.5
+		start_year = 2020
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 5 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_odejda3 = {
+
+		enable_equipments = {
+			infantry_odejda_3
+		}
+		
+		path = {
+			leads_to_tech = infantry_odejda4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_obonus2
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 2
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_obonus2 = {
+
+		opolchenie = {
+			soft_attack = 0.05
+		}
+		
+		egerskayapechota = {
+			soft_attack = 0.05
+		}
+		
+		rhbzbatalion = {
+			soft_attack = 0.05
+		}
+
+		
+		research_cost = 1.5
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 8 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+		
+	infantry_odejda4 = {
+
+		enable_equipments = {
+			infantry_odejda_4
+		}
+		
+		path = {
+			leads_to_tech = infantry_odejda5
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_obonus3
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 2
+		start_year = 2030
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 11 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_obonus3 = {
+
+		opolchenie = {
+			soft_attack = 0.1
+		}
+		egerskayapechota = {
+			soft_attack = 0.1
+		}		
+		rhbzbatalion = {
+			soft_attack = 0.1
+		}
+		
+		research_cost = 1.5
+		start_year = 2030
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 11 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	
+	infantry_odejda5 = {
+
+		enable_equipments = {
+			infantry_odejda_5
+		}
+		
+		path = {
+			leads_to_tech = infantry_odejda6
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_obonus4
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = infantry_obonus5
+			research_cost_coeff = 1
+		}		
+		research_cost = 2
+		start_year = 2035
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 14 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_obonus4 = {
+
+		opolchenie = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		
+		egerskayapechota = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		rhbzbatalion = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		land_night_attack = 0.15
+		
+		research_cost = 1.5
+		start_year = 2035
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 13 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+	infantry_obonus5 = {
+
+		opolchenie = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		
+		egerskayapechota = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		rhbzbatalion = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		
+		land_night_attack = 0.15
+		
+		research_cost = 1.5
+		start_year = 2035
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 15 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}			
+	
+	infantry_odejda6 = {
+
+		enable_equipments = {
+			infantry_odejda_6
+		}
+		
+		path = {
+			leads_to_tech = infantry_odejda7
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = infantry_obonus6
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = infantry_obonus7
+			research_cost_coeff = 1
+		}		
+		research_cost = 2
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_obonus6 = {
+
+		opolchenie = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		egerskayapechota = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		rhbzbatalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}				
+		research_cost = 1.5
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 17 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+	infantry_obonus7 = {
+
+		opolchenie = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		egerskayapechota = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		rhbzbatalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}		
+		
+		research_cost = 1.5
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 19 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}			
+	
+	
+	infantry_odejda7 = {
+
+		enable_equipments = {
+			infantry_odejda_7
+		}
+		
+		path = {
+			leads_to_tech = infantry_obonus8
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = infantry_obonus9
+			research_cost_coeff = 1
+		}		
+		research_cost = 2
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 22 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_obonus8 = {
+
+		opolchenie = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		egerskayapechota = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		rhbzbatalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}		
+		
+		research_cost = 1.5
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 21 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+	infantry_obonus9 = {
+
+		opolchenie = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		egerskayapechota = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		rhbzbatalion = {
+			defense = 0.05
+			breakthrough = 0.05
+		}		
+		
+		research_cost = 1.5
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 23 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	motorised_infantry = {
+
+		enable_subunits = {
+			motopechotanagruzovikah
+		}
+
+		enable_equipments = {
+			motorized_equipment_1
+		}
+				
+		path = {
+			leads_to_tech = motorised_infantry2
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 2
+		start_year = 2010
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = -1 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 7 y = 9 }
+		}
+		
+		sub_technologies = {
+			motorized_rocket_unit
+		}
+		
+		categories = {
+			motorized_equipment
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+		}
+	}
+	motorized_rocket_unit = {
+
+		enable_subunits = {
+			motorized_rocket_brigade
+		}
+		enable_equipments = {
+			motorized_rocket_equipment_1
+		}
+	
+		research_cost = 1.5
+		start_year = 1939
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				tag = SOV
+			}
+		}
+		
+		categories = {
+			mot_rockets
+		}
+	}
+	
+	
+	
+	
+	
+	motorised_infantry2 = {
+
+		enable_equipments = {
+			motorized_equipment_2
+		}
+
+	
+		
+		path = {
+			leads_to_tech = motorised_infantry3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2020
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 7 y = 9 }
+		}
+		
+
+		
+		categories = {
+			motorized_equipment
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1		
+			
+		}
+	}
+	
+	
+	motorised_infantry3 = {
+
+
+		enable_equipments = {
+			motorized_equipment_3
+		}
+		
+		path = {
+			leads_to_tech = motorised_infantry4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 5 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 7 y = 9 }
+		}
+		
+		categories = {
+			motorized_equipment
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+		}
+	}
+	
+	
+	motorised_infantry4 = {
+
+
+		enable_equipments = {
+			motorized_equipment_4
+		}
+
+		path = {
+			leads_to_tech = motorised_infantry5
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = mechanised_infantry
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = armored_car1
+			research_cost_coeff = 1
+		}		
+		
+		research_cost = 2
+		start_year = 2033
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 7 y = 9 }
+		}
+		
+
+		categories = {
+			motorized_equipment
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1					
+		}
+	}
+	
+	motorised_infantry5 = {
+
+
+		enable_equipments = {
+			motorized_equipment_5
+		}
+		path = {
+			leads_to_tech = motorised_infantry6
+			research_cost_coeff = 1
+		}
+		
+		
+		path = {
+			leads_to_tech = dopolnitwearpon
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 2035
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 13 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 7 y = 9 }
+		}
+		
+
+		categories = {
+			motorized_equipment
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1					
+		}
+	}
+	
+	
+	motorised_infantry6 = {
+
+
+		enable_equipments = {
+			motorized_equipment_6
+		}
+		path = {
+			leads_to_tech = motorised_infantry7
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = bronelist
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 18 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 7 y = 9 }
+		}
+		
+
+		categories = {
+			motorized_equipment
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1					
+		}
+	}
+	
+	
+	motorised_infantry7 = {
+
+
+		enable_equipments = {
+			motorized_equipment_7
+		}
+		
+		path = {
+			leads_to_tech = comuflage
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 22 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 7 y = 9 }
+		}
+		
+
+		categories = {
+			motorized_equipment
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1					
+		}
+	}
+	
+	
+	
+	
+	armored_car1 = {
+
+		enable_subunits = {
+			armored_car
+		}
+		
+		enable_subunits = {
+			motopechotabronecar
+		}
+		
+
+		enable_equipments = {
+			gw_armored_car_equipment
+		}
+		allow_branch = { has_dlc = "La Resistance" }
+		path = {
+			leads_to_tech = armored_car2
+			research_cost_coeff = 1
+		}
+					
+		path = {
+			leads_to_tech = dopolnitwearpon2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2033
+		folder = {
+			name = infantry_folder
+			position = { x = 8 y = 13 }
+		}
+		
+		categories = {
+			motorized_equipment
+			armor
+			cat_armored_cars
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+		}
+	}
+
+	armored_car2 = {
+
+		enable_equipments = {
+			armored_car_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = armored_car3
+			research_cost_coeff = 1
+		}
+					
+		path = {
+			leads_to_tech = bronelist2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 8 y = 18 }
+		}
+		
+		categories = {
+			motorized_equipment
+			armor
+			cat_armored_cars
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+		}
+	}
+
+	armored_car3 = {
+
+		enable_equipments = {
+			armored_car_equipment_2
+		}
+		path = {
+			leads_to_tech = comuflage2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 8 y = 22 }
+		}
+		
+		categories = {
+			motorized_equipment
+			armor
+			cat_armored_cars
+		}
+		
+		sub_technologies = {
+			armored_car_at_upgrade
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+		}
+	}
+	
+	
+
+	
+	
+	
+	
+	mechanised_infantry = {
+
+		enable_equipments = {
+			mechanized_equipment_1
+		}
+		
+		
+		enable_subunits = {
+			motopechotanabtr
+		}
+
+
+
+		path = {
+			leads_to_tech = mechanised_infantry2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = dopolnitwearpon3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2033
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = 13 }
+		}
+		
+		categories = {
+			motorized_equipment
+			infantry_tech
+			cat_mechanized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	mechanised_infantry2 = {
+
+		enable_equipments = {
+			mechanized_equipment_2
+		}
+
+		path = {
+			leads_to_tech = mechanised_infantry3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = bronelist3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = 18 }
+		}
+		
+		categories = {
+			motorized_equipment
+			infantry_tech
+			cat_mechanized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	mechanised_infantry3 = {
+
+		enable_equipments = {
+			mechanized_equipment_3
+		}
+		path = {
+			leads_to_tech = comuflage3
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 2
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = 22 }
+		}
+		
+		categories = {
+			motorized_equipment
+			infantry_tech
+			cat_mechanized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	
+	dopolnitwearpon = {
+
+		motopechotanagruzovikah = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+		research_cost = 1.5
+		start_year = 2033
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 13 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	dopolnitwearpon2 = {
+
+		motopechotabronecar = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+			
+		research_cost = 1.5
+		start_year = 2033
+		folder = {
+			name = infantry_folder
+			position = { x = 10 y = 13 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	dopolnitwearpon3 = {
+
+		motopechotanabtr = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+			
+		research_cost = 1.5
+		start_year = 2033
+		folder = {
+			name = infantry_folder
+			position = { x = 14 y = 13 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	bronelist = {
+
+		motopechotanagruzovikah = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+
+		research_cost = 1.5
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	bronelist2 = {
+
+		motopechotabronecar = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+		research_cost = 1.5
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 10 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	bronelist3 = {
+
+		motopechotanabtr = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+			
+		research_cost = 1.5
+		start_year = 2040
+		folder = {
+			name = infantry_folder
+			position = { x = 14 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	comuflage = {
+
+		motopechotanagruzovikah = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+			
+		research_cost = 1.5
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = 22 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	comuflage2 = {
+
+		motopechotabronecar = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+		research_cost = 1.5
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 10 y = 22 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	comuflage3 = {
+
+		motopechotanabtr = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+			
+		research_cost = 1.5
+		start_year = 2045
+		folder = {
+			name = infantry_folder
+			position = { x = 14 y = 22 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

@@ -1,0 +1,104 @@
+reunification_category = {
+
+	create_united_ukraine = {
+		
+		icon = form_nation
+
+		fire_only_once = yes
+
+		available = {
+			always = no # Временная хуйня
+			is_subject = no
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = all_states_of_ukraine_tt	
+				controls_state = 202
+			}		
+		}
+
+		visible = {
+			# OR = {
+			# 	original_tag = ODS
+			# 	original_tag = ARM
+			# 	original_tag = LWV
+			# }		
+			always = no	
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = ODS
+					}
+					ODS = {
+						set_cosmetic_tag = ODS_unified_ukr
+					}
+				}
+				if = {
+					limit = {
+						original_tag = ARM
+					}
+					ARM = {
+						set_cosmetic_tag = ARM_unified_ukr
+					}
+				}
+				if = {
+					limit = {
+						original_tag = LWV
+					}
+					LWV = {
+						set_cosmetic_tag = LWV_unified_ukr
+					}
+				}
+				set_capital = { state = 202 remember_old_capital = no }
+				add_political_power = 100
+				add_stability = 0.15
+				add_research_slot = 1
+			}
+			custom_effect_tooltip = reunification_of_ukraine_tt
+		}	
+	}
+
+	create_united_central_russia = {
+		
+		icon = form_nation
+
+		fire_only_once = yes
+
+		available = {
+			is_subject = no
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = all_states_of_cen_russia_tt	
+				controls_state = 895
+				controls_state = 242
+			}		
+		}
+
+		visible = {
+			# OR = {
+			# 	original_tag = IMP
+			# }	
+			always = no		
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = IMP
+					}
+					IMP = {
+						set_cosmetic_tag = IMP_unified_cen_rus
+					}
+				}
+				set_capital = { state = 895 remember_old_capital = no }
+				add_political_power = 100
+				add_stability = 0.15
+				add_research_slot = 1
+			}
+			custom_effect_tooltip = reunification_of_cen_russia_tt
+		}	
+	}
+}
