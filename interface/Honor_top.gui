@@ -1,0 +1,34 @@
+guiTypes = {
+   containerWindowType = { # Основной контейнер
+       name = "Honor_top" # У всех основных контейнеров должно быть своё уникальное название
+       position = { x = 1200 y = 4 } # Его позиция в координатах (1 = 1 пиксель)
+ 
+       buttonType ={ # Кнопка
+           name ="Honor_top_1" # Уникальное имя в пределах основного контейнера
+           spriteType = "GFX_generic_box_smallest" # GFX иконки кнопки
+           position = { x=0 y=0 }
+           shortcut = "ctrl+k" # Быстрая активация кнопки
+       }
+ 
+       iconType = { # Иконка (картинка)
+           name ="Honor_top_icon"
+           spriteType = "GFX_army_experience"
+           position = { x= 7 y = 6 }
+       }
+ 
+       instantTextBoxType = { # Текст
+           name ="Honor_top_text"
+           position = { x= 15 y = 4 }
+           font = "hoi_18mbs" # Шрифт текста
+           text = "[?HONOR_GRISHA]" # Сам текст, а если точнее, то ключ локализации
+           format = center # Формат расположения текста
+           maxWidth = 46 # Максимальная длина текста
+           maxHeight = 24 # Максимальная высота текста
+           fixedsize = yes 
+    
+           pdx_tooltip = "HONOR_TOOLTIP" # Текст подсказки (окошко с текстом, появляющееся при наведении на текст)
+           pdx_tooltip_delayed = "HONOR_TOOLTIP_DELAYED" # Текст всплывающей подсказки (текст в том же окошке, но который появляется чуть позже)
+
+       }
+   }
+}

@@ -1,0 +1,34 @@
+guiTypes = {
+   containerWindowType = { # Основной контейнер
+       name = "fuhrer_mana_container" # У всех основных контейнеров должно быть своё уникальное название
+       position = { x = 1000 y = 5 } # Его позиция в координатах (1 = 1 пиксель)
+ 
+       buttonType ={ # Кнопка
+           name ="fuhrer_mana_bg" # Уникальное имя в пределах основного контейнера
+           spriteType = "GFX_generic_box_smallest" # GFX иконки кнопки
+           position = { x=0 y=0 }
+           shortcut = "ctrl+k" # Быстрая активация кнопки
+       }
+ 
+       iconType = { # Иконка (картинка)
+           name ="fuhrer_mana_icon"
+           spriteType = "GFX_officer_corp_army_banner_icon"
+           position = { x= 7 y = 6 }
+       }
+ 
+       instantTextBoxType = { # Текст
+           name ="fuhrer_mana_text"
+           position = { x= 15 y = 4 }
+           font = "hoi_18mbs" # Шрифт текста
+           text = "[?state.id]" # Сам текст, а если точнее, то ключ локализации
+           format = center # Формат расположения текста
+           maxWidth = 46 # Максимальная длина текста
+           maxHeight = 24 # Максимальная высота текста
+           fixedsize = yes 
+    
+           pdx_tooltip = "FUHRER_MANA_TOOLTIP" # Текст подсказки (окошко с текстом, появляющееся при наведении на текст)
+           pdx_tooltip_delayed = "FUHRER_MANA_TOOLTIP_DELAYED" # Текст всплывающей подсказки (текст в том же окошке, но который появляется чуть позже)
+
+       }
+   }
+}
