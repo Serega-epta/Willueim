@@ -1,7 +1,11 @@
 focus_tree = {
-	id = KUH
+	id = KUH_focus_tree
 	country = {
-		factor = 1
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KUH
+		}
 	}
 	default = yes
 	focus = {
