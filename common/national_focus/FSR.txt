@@ -1,0 +1,116 @@
+focus_tree = {
+	id = FSR
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FSR
+		}
+	}
+	default = no
+	focus = {
+		id = fsr_volniy_gorod
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 6
+		y = 0
+
+	}
+	focus = {
+		id = fsr_kubanskiy_vopros
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 16
+		y = 0
+
+	}
+	focus = {
+		id = fsr_gran_svobodu
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = fsr_volniy_gorod
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = fsr_rostovskiy
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = fsr_gran_svobodu
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = fsr_ymeniem_a_ne_chislom
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = fsr_gran_svobodu
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = fsr_arsenal_nezavisimosti
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = fsr_gran_svobodu
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = fsr_protiv_leviafiana
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = fsr_kubanskiy_vopros
+		}
+		x = 13
+		y = 1
+
+	}
+	focus = {
+		id = fsr_napravit_diplomatov
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = fsr_kubanskiy_vopros
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = fsr_zahiti_svoy_dom
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = fsr_arsenal_nezavisimosti
+			focus = fsr_rostovskiy
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = fsr_vzaimnaya_integration
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = fsr_kubanskiy_vopros
+		}
+		x = 19
+		y = 1
+
+	}
+}

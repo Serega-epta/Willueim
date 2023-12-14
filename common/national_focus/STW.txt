@@ -1,0 +1,133 @@
+focus_tree = {
+	id = STW
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = STW
+		}
+	}
+	default = no
+	focus = {
+		id = stw_bolshoy_shodnak
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 6
+		y = 0
+		completion_reward = { 
+			add_political_power = 70
+		}
+	}
+	focus = {
+
+		id = stw_rostov_father
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = stw_reshaem_voprosu
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = stw_bolshoy_shodnak
+		}
+		x = 6
+		y = 1
+		completion_reward = { 
+			add_stability = 0.1
+            add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = stw_racket_delo_blagorodnoe
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = stw_reshaem_voprosu
+		}
+		x = 3
+		y = 2
+		completion_reward = { 
+		}
+	}
+	
+	focus = {
+		id = stw_podnyat_bratvy
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = stw_reshaem_voprosu
+		}
+		x = 6
+		y = 2
+		completion_reward = { 
+			add_manpower = 3000
+		}
+	}
+
+	focus = {
+		id = stw_shpalernaya_workshop
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = stw_reshaem_voprosu
+		}
+		x = 9
+		y = 2
+		completion_reward = { 
+        }
+	}
+
+	focus = {
+		id = stw_my
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = stw_rostov_father
+		}
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = stw_ystroit_nalyot
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = stw_rostov_father
+		}
+		x = 17
+		y = 1
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = stw_vubitsa_v_lydi
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = stw_podnyat_bratvy
+			focus = stw_shpalernaya_workshop
+			focus = stw_racket_delo_blagorodnoe
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = stw_obshak
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = stw_rostov_father
+		}
+		x = 20
+		y = 1
+
+	}
+}

@@ -1,0 +1,122 @@
+focus_tree = {
+	id = KUH
+	country = {
+		factor = 1
+	}
+	default = yes
+	focus = {
+		id = kuh_nash_pyt
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 7
+		y = 0
+
+	}
+	focus = {
+		id = kuh_new_prihozhane
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = kuh_obyasnit_pastave
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = kuh_nash_pyt
+		}
+		x = 7
+		y = 1
+
+	}
+	focus = {
+		id = kuh_yporniy_ne_dolzhen_lechitsa
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = kuh_obyasnit_pastave
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = kuh_verniy_ne_boitsa
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = kuh_obyasnit_pastave
+		}
+		prerequisite = {
+			focus = kuh_obyasnit_pastave
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = kuh_silniy_ne_dolzhen_sdavatsa
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = kuh_obyasnit_pastave
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = kuh_dead_bezbognikam
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = kuh_new_prihozhane
+		}
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = kuh_undead_kyltu
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = kuh_new_prihozhane
+			focus = kuh_new_prihozhane
+		}
+		prerequisite = {
+			focus = kuh_new_prihozhane
+		}
+		x = 17
+		y = 1
+
+	}
+	focus = {
+		id = kuh_rastoptat_erikov
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = kuh_yporniy_ne_dolzhen_lechitsa
+			focus = kuh_silniy_ne_dolzhen_sdavatsa
+		}
+		prerequisite = {
+			focus = kuh_verniy_ne_boitsa
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = kuh_kolco
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = kuh_new_prihozhane
+		}
+		x = 20
+		y = 1
+
+	}
+}
