@@ -1,7 +1,6 @@
 capital = 808
 
-oob = base
-
+oob = AGE
 add_ideas = { #Стартовые Нац-Духи
 	AGE_knife_at_throat #Нож у горла#
 	AGE_time_wasted #Время, потраченное впустую#
@@ -17,6 +16,28 @@ set_research_slots = 2
 set_convoys = 0
 set_stability = 0.8
 set_war_support = 1
+
+load_focus_tree = {
+    tree = AGE_phase_1
+    keep_completed = no
+}
+
+add_opinion_modifier = {
+    target = LPC
+    modifier = archenemy
+}
+add_opinion_modifier = {
+    target = TWD
+    modifier = traitors
+}
+add_opinion_modifier = {
+    target = BLZ
+    modifier = help
+}
+add_opinion_modifier = {
+    target = BTC
+    modifier = interference
+}
 
 set_politics = {
 	ruling_party = patriots 

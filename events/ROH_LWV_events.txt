@@ -379,12 +379,12 @@ country_event = {
 		add_ideas = LWV_bejinsy_from_holy_land	
 		add_opinion_modifier = {
 			target = LWV
-			modifier = prinialy_bejensev
+			modifier = accepted_refugees
 		}
 		LWV = {
 			add_opinion_modifier = {
 				target = ROOT
-				modifier = prinialy_bejensev
+				modifier = accepted_refugees
 			}
 		}
 	}
@@ -397,12 +397,12 @@ country_event = {
 		}
 		add_opinion_modifier = {
 			target = LWV
-			modifier = vidali_bejensev
+			modifier = returned_refugees 
 		}
 		LWV = {
 			add_opinion_modifier = {
 				target = ROOT
-				modifier = vidali_bejensev
+				modifier = returned_refugees 
 			}
 		}
 	}
@@ -425,12 +425,12 @@ country_event = {
 		add_political_power = -100		
 		remove_opinion_modifier = {
 			target = LWV
-			modifier = prinialy_bejensev
+			modifier = accepted_refugees
 		}
 		LWV = {
 			remove_opinion_modifier = {
 				target = ROOT
-				modifier = prinialy_bejensev
+				modifier = accepted_refugees
 			}
 		}
 	}
