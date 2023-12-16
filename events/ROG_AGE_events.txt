@@ -83,3 +83,51 @@ country_event = {
 	name = AGE.7.a	
 	}
 }
+#Празднование дня единства
+country_event = {
+	id = AGE.8
+	title = AGE.8.t
+	desc = AGE.8.d
+    fire_only_once = no
+	trigger = {
+		has_completed_focus = AGE_day_of_unity
+		OR = {
+			AND = {
+				date > 2023.10.01
+				date < 2023.10.20
+			}
+			AND = {
+				date > 2024.10.01
+				date < 2024.10.20
+			}
+			AND = {
+				date > 2025.10.01
+				date < 2025.10.20
+			}
+			AND = {
+				date > 2026.10.01
+				date < 2026.10.20
+			}
+			AND = {
+				date > 2027.10.01
+				date < 2027.10.20
+			}
+			AND = {
+				date > 2028.10.01
+				date < 2028.10.20
+			}
+			AND = {
+				date > 2029.10.01
+				date < 2029.10.20
+			}
+		}
+	}
+
+	option = {
+	name = AGE.8.a
+	add_timed_idea = {
+		idea = AGE_day_of_unity_celebration
+		days = 30
+		}
+	}
+}

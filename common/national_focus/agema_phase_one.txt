@@ -92,6 +92,7 @@ focus_tree = {
 					modifier = baltic_resistance
 				}
 			}
+			remove_ideas = AGE_knife_at_throat
 			country_event = AGE.6
 		}
 	}
@@ -180,6 +181,10 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_old_friendship }
 		completion_reward = {
+			add_timed_idea = {
+				idea = AGE_day_of_unity_celebration
+				days = 30
+			}
 		}
 	}
 	focus = {

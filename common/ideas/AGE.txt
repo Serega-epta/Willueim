@@ -83,5 +83,23 @@ ideas = {
 				stability_factor = 0.05 #Стабильность
 			}
 		}
+		#Празднование дня единства#
+		AGE_day_of_unity_celebration = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier ={
+				weekly_manpower = 500
+				experience_gain_army = 0.10
+				experience_gain_air = 0.10
+				consumer_goods_factor = 0.2
+				political_power_gain = 0.15
+			}
+		}
 	}
 }
