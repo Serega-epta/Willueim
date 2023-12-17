@@ -8,6 +8,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
 	Absolyut = {
 		random = no
 		war_support_factor = 0.05
@@ -72,15 +73,23 @@ leader_traits = {
 		}
 	}
 
+	LWV_fanaticism = {
+		random = no
+		recruitable_population = +0.05
+		max_commander_army_size = +2
+		army_defence_factor = +0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
-
-
-
-
-
-
-
-
-
-
+	LWV_pragmatism = {
+		random = no
+		resistance_growth = -0.1
+		resistance_damage_to_garrison = -0.05
+		non_core_manpower = +0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
