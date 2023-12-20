@@ -1,126 +1,234 @@
 focus_tree = {
-	id = KUH_focus_tree
+	id = KUH_focus
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			tag = KUH
-		}
 	}
 	default = yes
-	focus = {
-		id = kuh_nash_pyt
-		icon = GFX_goal_unknown
-		cost = 10,00
-		x = 7
-		y = 0
 
-	}
 	focus = {
-		id = kuh_new_prihozhane
-		icon = GFX_goal_unknown
-		cost = 10,00
-		x = 17
+		id = KUH_our_way
+		cost = 3.00
+		x = 2
 		y = 0
-
-	}
-	focus = {
-		id = kuh_obyasnit_pastave
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = kuh_nash_pyt
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 70
 		}
-		x = 7
+	}
+	focus = {
+		id = KUH_explan_to_flock
+		cost = 3.00
+		x = 2
 		y = 1
-
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = KUH_our_way }
+		completion_reward = {
+			add_war_support = 0.2
+		}
 	}
 	focus = {
-		id = kuh_yporniy_ne_dolzhen_lechitsa
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = kuh_obyasnit_pastave
+		id = KUH_persistent_one
+		cost = 3.00
+		x = 0
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = KUH_explan_to_flock }
+		completion_reward = {
+			853 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+   					 type = industrial_complex
+    					level = 1
+    					instant_build = yes
+				}
+			}
 		}
+	}
+	focus = {
+		id = KUH_loyal_one
+		cost = 3.00
+		x = 2
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = KUH_explan_to_flock }
+		completion_reward = {
+			853 = {
+				create_unit = {
+					division = "name = \Punishers\" division_template = \Punishers\" start_experience_factor = 0.1 start_equipment_factor = 0.2 start_manpower_factor = 0.2"
+					owner = ROOT
+				}
+				create_unit = {
+						division = "name = \Punishers\" division_template = \Punishers\" start_experience_factor = 0.1 start_equipment_factor = 0.2 start_manpower_factor = 0.2"
+						owner = ROOT
+				}
+				create_unit = {
+						division = "name = \Punishers\" division_template = \Punishers\" start_experience_factor = 0.1 start_equipment_factor = 0.2 start_manpower_factor = 0.2"
+						owner = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = KUH_strong_one
+		cost = 3.00
 		x = 4
 		y = 2
-
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = KUH_explan_to_flock }
+		completion_reward = {
+			854 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
-		id = kuh_verniy_ne_boitsa
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = kuh_obyasnit_pastave
-		}
-		prerequisite = {
-			focus = kuh_obyasnit_pastave
-		}
-		x = 7
-		y = 2
-
-	}
-	focus = {
-		id = kuh_silniy_ne_dolzhen_sdavatsa
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = kuh_obyasnit_pastave
-		}
-		x = 10
-		y = 2
-
-	}
-	focus = {
-		id = kuh_dead_bezbognikam
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = kuh_new_prihozhane
-		}
-		x = 14
-		y = 1
-
-	}
-	focus = {
-		id = kuh_undead_kyltu
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = kuh_new_prihozhane
-			focus = kuh_new_prihozhane
-		}
-		prerequisite = {
-			focus = kuh_new_prihozhane
-		}
-		x = 17
-		y = 1
-
-	}
-	focus = {
-		id = kuh_rastoptat_erikov
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = kuh_yporniy_ne_dolzhen_lechitsa
-			focus = kuh_silniy_ne_dolzhen_sdavatsa
-		}
-		prerequisite = {
-			focus = kuh_verniy_ne_boitsa
-		}
-		x = 7
+		id = KUH_trample_heretics
+		cost = 3.00
+		x = 2
 		y = 3
-
+		ai_will_do = { factor = 10 }
+		prerequisite = {
+			focus = KUH_persistent_one
+			focus = KUH_loyal_one
+			focus = KUH_strong_one
+		}
+		available = {
+			custom_trigger_tooltip = {
+  				tooltip = kuban_crisis_tt
+				NOT = {
+					has_global_flag = kuban_crisis
+				}
+			}
+		}
+		completion_reward = {
+			news_event = super.2
+			set_global_flag = kuban_crisis
+			declare_war_on = {
+				target = FSR
+				type = annex_everything	
+			}
+			declare_war_on = {
+				target = STW
+				type = annex_everything	
+			}
+			STW = {
+				declare_war_on = {
+					target = FSR
+					type = annex_everything	
+				}
+			}
+		}
 	}
 	focus = {
-		id = kuh_kolco
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = kuh_new_prihozhane
+		id = KUH_new_parish
+		cost = 3.00
+		x = 8
+		y = 0
+		ai_will_do = { factor = 10 }
+		available = {
+			has_war = no
+			NOT = {
+				country_exists = STW
+				country_exists = FSR
+			}
 		}
-		x = 20
+		completion_reward = {
+			add_manpower = 3000
+		}
+	}
+	focus = {
+		id = KUH_death_to_atheists 
+		cost = 3.00
+		x = 6
 		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = KUH_new_parish }
+		completion_reward = {
+			add_ideas = death_to_atheists
+		}
+	}
+	focus = {
+		id = KUH_revive_cults
+		cost = 3.00
+		x = 8
+		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = KUH_new_parish }
+		completion_reward = {
+			puppet = {
+				target = ECD
+				end_wars = no
+			}
+			ECD = {
+				set_politics = {
+					ruling_party = sacraments
+					elections_allowed = no
+				}
+				set_cosmetic_tag = ECD_Krasnodar_cult
+				hidden_effects = {
+					set_popularities = {
+						sacraments = 100
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = KUH_united_ring
+		cost = 3.00
+		x = 10
+		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = KUH_new_parish }
+		available = {
+			has_completed_focus = KUH_revive_cults
+		}
+		completion_reward = {
+			234 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 
+			234 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			234 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			850 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			218 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 }

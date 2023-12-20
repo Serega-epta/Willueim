@@ -1,133 +1,214 @@
 focus_tree = {
-	id = STW
+	id = STW_focus
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			tag = STW
-		}
 	}
-	default = no
+	default = yes
+
 	focus = {
-		id = stw_bolshoy_shodnak
-		icon = GFX_goal_unknown
-		cost = 10,00
-		x = 6
+		id = STW_big_meeting
+		cost = 3.00
+		x = 2
 		y = 0
-		completion_reward = { 
+		ai_will_do = { factor = 10 }
+		completion_reward = {
 			add_political_power = 70
 		}
 	}
 	focus = {
-
-		id = stw_rostov_father
-		icon = GFX_goal_unknown
-		cost = 10,00
-		x = 17
-		y = 0
-
-	}
-	focus = {
-		id = stw_reshaem_voprosu
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = stw_bolshoy_shodnak
-		}
-		x = 6
+		id = STW_solve_problems
+		cost = 3.00
+		x = 2
 		y = 1
-		completion_reward = { 
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = STW_big_meeting }
+		completion_reward = {
 			add_stability = 0.1
-            add_war_support = 0.1
+			add_war_support = 0.1
 		}
 	}
-
 	focus = {
-		id = stw_racket_delo_blagorodnoe
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = stw_reshaem_voprosu
-		}
-		x = 3
+		id = STW_racket
+		cost = 3.00
+		x = 0
 		y = 2
-		completion_reward = { 
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = STW_solve_problems }
+		completion_reward = {
+			846 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+   					 type = industrial_complex
+    					level = 1
+    					instant_build = yes
+				}
+			}
 		}
 	}
-	
 	focus = {
-		id = stw_podnyat_bratvy
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = stw_reshaem_voprosu
-		}
-		x = 6
+		id = STW_gather_brothers
+		cost = 3.00
+		x = 2
 		y = 2
-		completion_reward = { 
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = STW_solve_problems }
+		completion_reward = {
 			add_manpower = 3000
 		}
 	}
-
 	focus = {
-		id = stw_shpalernaya_workshop
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = stw_reshaem_voprosu
-		}
-		x = 9
+		id = STW_trellis_workshop
+		cost = 3.00
+		x = 4
 		y = 2
-		completion_reward = { 
-        }
-	}
-
-	focus = {
-		id = stw_my
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = stw_rostov_father
-		}
-		x = 14
-		y = 1
-
-	}
-	focus = {
-		id = stw_ystroit_nalyot
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = stw_rostov_father
-		}
-		x = 17
-		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = STW_solve_problems }
 		completion_reward = {
+			850 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
-
 	focus = {
-		id = stw_vubitsa_v_lydi
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = stw_podnyat_bratvy
-			focus = stw_shpalernaya_workshop
-			focus = stw_racket_delo_blagorodnoe
-		}
-		x = 6
+		id = STW_become_people
+		cost = 3.00
+		x = 2
 		y = 3
-
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+  				tooltip = kuban_crisis_tt
+				NOT = {
+					has_global_flag = kuban_crisis
+				}
+			}
+		}
+		prerequisite = {
+			focus = STW_racket
+			focus = STW_gather_brothers
+			focus = STW_trellis_workshop
+		}
+		completion_reward = {
+			news_event = super.2
+			set_global_flag = kuban_crisis
+			declare_war_on = {
+				target = FSR
+				type = annex_everything	
+			}
+			declare_war_on = {
+				target = KUH
+				type = annex_everything	
+			}
+			KUH = {
+				declare_war_on = {
+					target = FSR
+					type = annex_everything	
+				}
+			}
+		}
 	}
 	focus = {
-		id = stw_obshak
-		icon = GFX_goal_unknown
-		cost = 10,00
-		prerequisite = {
-			focus = stw_rostov_father
+		id = STW_rostov_father
+		cost = 3.00
+		x = 8
+		y = 0
+		ai_will_do = { factor = 10 }
+		available = {
+			has_war = no
+			NOT = {
+				country_exists = KUH
+				country_exists = FSR
+			}
 		}
-		x = 20
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 500
+			}
+		}
+	}
+	focus = {
+		id = STW_mine 
+		cost = 3.00
+		x = 6
 		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = STW_rostov_father }
+		completion_reward = {
+			add_ideas = mine_idea
+		}
+	}
+	focus = {
+		id = STW_organize_raid
+		cost = 3.00
+		x = 8
+		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = STW_rostov_father }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ECD
+			}
+		}
+	}
+	focus = {
+		id = STW_common_fund
+		cost = 3.00
+		x = 10
+		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = STW_rostov_father }
+		completion_reward = {
+			234 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 
+			234 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			234 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			850 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			218 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 }

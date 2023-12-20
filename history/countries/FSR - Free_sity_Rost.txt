@@ -2,14 +2,20 @@ capital = 218
 
 oob = FSR
 
+load_focus_tree = {
+    tree = FSR_focus
+    keep_completed = no
+}
 
 # Starting tech
 set_technology = {
     infantry_weapons = 1
+    infantry_odejda  = 1
 }
 
 set_research_slots = 2
 set_convoys = 20
+add_manpower = 6100
 
 set_politics = {
 	ruling_party = svobod
