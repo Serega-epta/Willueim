@@ -116,7 +116,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			news_event = 
+			news_event = super.2
 			set_global_flag = kuban_crisis
 			declare_war_on = {
 				target = STW
@@ -171,8 +171,11 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = FSR_kuban_problem }
 		completion_reward = {
-			annex_country = ECD
-			add_state_core =  398
+			annex_country = {
+				target = ECD
+				transfer_troops = yes
+			}
+			add_state_core = 234
 		}
 	}
 	focus = {
