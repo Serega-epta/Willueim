@@ -1,0 +1,8 @@
+AGE_mind_pulsation = { 
+	icon = saf_anti_colonialist_crusade
+	scripted_gui = age_mind_pulsation 
+	allowed = { original_tag = AGE } 
+	visible = { has_completed_focus = AGE_blood_on_hands }
+	visible_when_empty = yes   
+	priority = { base = 5 }
+}
