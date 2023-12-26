@@ -63,13 +63,13 @@ focus_tree = {
 		available = {
 			manpower > 2000
 			has_equipment = {
-				infantry_equipment > 6000
+				infantry_equipment > 500
 			}
 		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -6000
+				amount = -500
 			}
 			add_manpower = -1000
 			army_experience = -5
