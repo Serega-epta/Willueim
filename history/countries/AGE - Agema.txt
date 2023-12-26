@@ -72,5 +72,10 @@ recruit_character = AGE_novak_jekovic
 
 
 #Состояние Лазаревича - механика "Пульсация Разума"  
-#Lazarevic's condition is a "Mind Pulsation" mechanic
 set_variable = { level = 3 }
+
+#Стабильность в регионе - механика "Их свободы"
+set_variable = { stability = 50 }
+
+#Количество дней с окончания миссии "Кровавые багрянцы" - механика "Их свободы"
+set_variable = { count_of_days_since_end_AGE_blood_diamonds = 0 }

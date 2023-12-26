@@ -1,4 +1,5 @@
 add_namespace = AGE
+add_namespace = AGE_their_freedoms
 #Кладбища балтийских народов
 country_event = {
 	id = AGE.1
@@ -124,10 +125,46 @@ country_event = {
 	}
 
 	option = {
-	name = AGE.8.a
+		name = AGE.8.a
 		add_timed_idea = {
 			idea = AGE_day_of_unity_celebration
 			days = 30
 		}
+	}
+}
+
+#Новый дом на руинах старого
+country_event = {
+	id = AGE_their_freedoms.1
+	title = AGE_their_freedoms.1.t
+	desc = AGE_their_freedoms.1.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = AGE_their_freedoms.1.a	
+	}
+}
+
+#Парад единства
+country_event = {
+	id = AGE_their_freedoms.2
+	title = AGE_their_freedoms.2.t
+	desc = AGE_their_freedoms.2.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = AGE_their_freedoms.2.a	
+	}
+}
+
+#Наши усилия окупились!
+country_event = {
+	id = AGE_their_freedoms.3
+	title = AGE_their_freedoms.3.t
+	desc = AGE_their_freedoms.3.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = AGE_their_freedoms.3.a	
 	}
 }

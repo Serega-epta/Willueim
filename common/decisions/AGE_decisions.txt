@@ -1,4 +1,211 @@
-AGE_mind_pulsation = {
-	#Здесь нет решений - взаимодействие идет через специальное меню. - Sum Tea Jay
-	#There are no solutions here - the interaction is through a special menu. - Sum Tea Jay
+# ╔╗╔╗╔══╗╔══╗───╔══╗╔══╗─╔══╗╔═══╗╔══╗─╔══╗─╔╗──╔╗
+# ║║║║╚═╗║║╔═╝───║╔═╝║╔╗║─║╔╗║║╔══╝║╔╗║─║╔╗║─║║──║║
+# ║║║║──║╚╝║─────║║──║╚╝╚╗║║║║║╚══╗║║║║─║║║║─║╚══╣║
+# ║║╔║──║╔╗║─────║║──║╔═╗║║║║║║╔═╗║║║║║─║║║║─║╔═╗║║
+# ║╚╝║╔═╝║║╚═╗───║╚═╗║╚═╝║║╚╝║║╚═╝║║╚╝║╔╝╚╝╚╗║╚═╝║║
+# ╚══╝╚══╝╚══╝───╚══╝╚═══╝╚══╝╚═══╝╚══╝╚════╝╚═══╩╝
+#Сделал Sum Tea Jay
+AGE_their_freedoms = {
+	AGE_third_baltic_uprising = {
+		icon = GFX_decision_eng_trade_unions_support
+		activation = { original_tag = AGE }
+		available = { 
+			OR = {
+				has_completed_focus = AGE_not_their_land
+				AGE = {
+					any_owned_state = {
+						has_dynamic_modifier = { modifier = baltic_reservation }
+					}
+				}
+			}
+		}
+		days_mission_timeout = 70	
+		is_good = yes
+		complete_effect = {
+			clr_country_flag = timeout
+		}
+		timeout_effect = {
+			custom_effect_tooltip = stablity_decreases_to_five
+			subtract_from_variable = { stability = 5 }
+			random_owned_state = {
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+				add_manpower = -500
+			}
+		}		
+	}
+
+	AGE_blood_diamonds = {
+		icon = GFX_decision_eng_trade_unions_support
+		activation = { has_country_flag = activate_AGE_blood_diamonds }
+		available = { 
+			any_owned_state = {
+				NOT = { has_state_flag = gentile_resistance }
+			}
+		}
+		days_mission_timeout = 20	
+		is_good = yes
+		complete_effect = { clr_country_flag = activate_AGE_blood_diamonds }
+		timeout_effect = {
+			custom_effect_tooltip = stablity_decreases_to_five
+			subtract_from_variable = { stability = 5 }
+			random_owned_state = {
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+				add_manpower = -1000
+			}
+			add_to_variable = { count_of_days_since_end_AGE_blood_diamonds = 1 }
+			clr_country_flag = activate_AGE_blood_diamonds
+		}	
+	}
+
+	AGE_choose_a_region_for_the_baltic = {
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { has_completed_focus = AGE_still_their_land }
+		target_trigger = {
+			FROM = {
+				NOT = { state = 808 }
+			}
+		}
+		fire_only_once = yes
+		state_target = yes
+		target_array = AGE.owned_states
+		cost = 50
+		days_remove = 100
+		remove_effect = {
+			FROM = { set_state_flag = home_for_gentiles }
+			custom_effect_tooltip = stablity_increases_to_five
+			add_to_variable = { stability = 5 }
+			country_event = AGE_their_freedoms.1		
+		} 
+	}
+
+	AGE_finish_off_the_balts = {
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { has_completed_focus = AGE_not_their_land }
+		available = { NOT = { has_country_flag = click_on_AGE_finish_off_the_balts } }
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = baltic_resistance }
+			}
+		}
+		fire_only_once = yes
+		state_target = yes
+		target_array = AGE.owned_states
+		cost = 5
+		days_remove = 40
+		complete_effect = { set_country_flag = click_on_AGE_finish_off_the_balts }
+		remove_effect = {
+			clr_country_flag = click_on_AGE_finish_off_the_balts
+			FROM = { remove_dynamic_modifier = { modifier = baltic_resistance } }
+			custom_effect_tooltip = stablity_increases_to_five
+			add_to_variable = { stability = 5 }
+		}		
+	}
+
+	AGE_hold_a_unity_parade = {
+		icon = GFX_decision_eng_trade_unions_support
+		cost = 100
+		days_re_enable = 180
+		days_remove = 7
+		remove_effect = {
+			country_event = AGE_their_freedoms.2		
+		}
+	}
+	
+	AGE_inevitable_interference_from_the_Baltosphere = {
+		icon = GFX_decision_eng_trade_unions_support
+		activation = { 
+			AND = {
+				has_completed_focus = AGE_once_we_will_be_there
+				has_completed_focus = AGE_seek_for_peace
+			}
+		}
+		available = { 
+			any_owned_state = {
+				AND = {
+					NOT = {
+						has_state_flag = johans_advanced_control
+						state = 808
+					}
+				}
+			}
+		}
+		days_mission_timeout = 30	
+		is_good = yes
+
+		timeout_effect = {
+			BTC = {
+				declare_war_on = {
+					target = AGE
+					type = annex_everything
+				}
+			}
+			12 = {
+				if = {
+					limit = {
+						has_state_flag = johans_advanced_control
+					}
+					transfer_state_to = BTC
+				}
+			}
+			13 = {
+				if = {
+					limit = {
+						has_state_flag = johans_advanced_control
+					}
+					transfer_state_to = BTC
+				}
+			}
+			809 = {
+				if = {
+					limit = {
+						has_state_flag = johans_advanced_control
+					}
+					transfer_state_to = BTC
+				}
+			}
+			911 = {
+				if = {
+					limit = {
+						has_state_flag = johans_advanced_control
+					}
+					transfer_state_to = BTC
+				}
+			}
+			BTC = {
+				country_event = AGE_their_freedoms.3
+			}
+			hidden_effect = {
+				BTC = { load_oob = "BTC_uprising_in_AGE" }
+			}
+		}	
+	}
+
+	AGE_increase_control_over_the_region = {
+		icon = GFX_decision_eng_trade_unions_support
+		target_trigger = {
+			FROM = { has_state_flag = johans_advanced_control }
+		}
+		fire_only_once = yes
+		state_target = yes
+		target_array = AGE.owned_states
+		cost = 50
+		days_remove = 10
+		remove_effect = { clr_country_flag = johans_advanced_control }	
+	}
 }
+
+

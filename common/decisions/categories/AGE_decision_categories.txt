@@ -6,3 +6,12 @@ AGE_mind_pulsation = {
 	visible_when_empty = yes   
 	priority = { base = 5 }
 }
+
+AGE_their_freedoms = { 
+	icon = saf_anti_colonialist_crusade
+	#scripted_gui = age_mind_pulsation 
+	allowed = { original_tag = AGE } 
+	visible = { always = yes }
+	visible_when_empty = yes   
+	priority = { base = 5 }
+}
