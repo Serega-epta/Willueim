@@ -565,3 +565,43 @@ kanon_absol = {
 		enemy_declare_war_tension = generic_enemy_declare_war_tension
 		mobilization_speed = generic_mobilization_speed_2
 	}
+#ODS
+	NERC_idea = {
+		enable = { always = yes }
+		icon = black_berets
+		research_speed_factor =  research_NERC
+		political_power_factor = pp_NERC
+		production_factory_efficiency_gain_factor = production_factory_efficiency_NERC
+		resistance_decay_on_our_occupied_states = resistance_NERC
+	
+	}
+	black_beret_dynamic = {
+		enable = { always = yes }
+		icon = black_berets
+		resistance_damage_to_garrison_on_our_occupied_states = 0.4
+		resistance_growth_on_our_occupied_states = 0.5
+		max_planning = 0.2
+		planning_speed = 0.2
+		supply_combat_penalties_on_core_factor = -0.05
+		army_leader_start_level = 1
+		army_defence_factor = army_defence_black_beret 
+		army_defence_against_minor_factor = army_defence_against_minor_factor_black_beret
+		max_command_power = max_command_power_black_beret
+		org_loss_when_moving = org_loss_when_moving_black_beret
+		army_morale_factor = army_morale_factor_black_beret
+	}
+	dicarstvo_dynamic = {
+		enable = { always = yes }
+		icon = Veny_reshima
+		surrender_limit = -0.15
+		production_factory_efficiency_gain_factor = -0.05
+		production_factory_max_efficiency_factor = -0.05
+		resistance_damage_to_garrison = -0.2
+		stability_factor = 0.08
+		production_speed_buildings_factor = 0.1
+		research_speed_factor = 0.02
+		stability_weekly_factor = -0.05
+		political_power_factor = 0.1
+		production_speed_infrastructure_factor = production_speed_infrastructure_factor_dicarstvo
+		attrition = attrition_dicarstvo
+	}

@@ -15,7 +15,9 @@ focus_tree = {
 		y = 0
 		cost = 2
 		completion_reward = {
+			set_cosmetic_tag = ODS_third_phase
 			add_political_power = 100
+			country_event = ODS.34
 		}
 	}
 	focus = {
@@ -26,7 +28,8 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_climbing_committees }
 		completion_reward = {
-			add_political_power = 100
+			set_country_flag = intension_hide
+			country_event = ODS.38
 		}		
 	}
 	focus = {
@@ -37,7 +40,10 @@ focus_tree = {
 		cost = 2
 		prerequisite = { focus = ODS_system_reorganisation }
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = dicarstvo6
+				add_idea = dicarstvo7
+			}
 		}		
 	}
 	focus = {
@@ -48,8 +54,12 @@ focus_tree = {
 		cost = 2
 		prerequisite = { focus = ODS_unresolved_differences }
 		completion_reward = {
-			add_political_power = 100
-		}		
+			swap_ideas = {
+				remove_idea = dicarstvo7
+				add_idea = dicarstvo8
+			}
+			country_event = ODS.48
+		}
 	}
 	focus = {
 		id = ODS_keeper_of_peace
@@ -59,8 +69,12 @@ focus_tree = {
 		cost = 2
 		prerequisite = { focus = ODS_unresolved_differences }
 		completion_reward = {
-			add_political_power = 100
-		}		
+			swap_ideas = {
+				remove_idea = OKO4
+				add_idea = OKO5
+			}
+			country_event = ODS.47	
+		}
 	}
 	focus = {
 		id = ODS_hateful
@@ -70,7 +84,8 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_unresolved_differences }
 		completion_reward = {
-			add_political_power = 100
+			army_experience = 20
+			country_event = ODS.43
 		}		
 	}
 	focus = {
@@ -83,7 +98,17 @@ focus_tree = {
 		prerequisite = { focus = ODS_hateful }
 		prerequisite = { focus = ODS_keeper_of_peace }
 		completion_reward = {
-			add_political_power = 100
+			hidden_effect = {
+				remove_ideas = dicarstvo8
+				add_dynamic_modifier = {
+					modifier = dicarstvo_dynamic
+				}
+				remove_ideas = black_beret4
+				add_dynamic_modifier = {
+					modifier = black_beret_dynamic
+				}
+			}
+			country_event = ODS.42
 		}
 	}
 	focus = {
@@ -94,7 +119,48 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_dark_triad }
 		completion_reward = {
-			add_political_power = 100
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrustructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrustructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrustructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}		
 	}
 	focus = {
@@ -105,7 +171,13 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_dark_triad }
 		completion_reward = {
-			add_political_power = 100
+			add_dynamic_modifier = {
+				modifier = NERC_idea
+			}
+			custom_effect_tooltip = NERC1_tt
+			set_variable = { research_NERC = 0.02 }
+			set_variable =  {pp_NERC = -0.05}
+			country_event = ODS.35
 		}		
 	}
 	focus = {
@@ -117,37 +189,9 @@ focus_tree = {
 		prerequisite = { focus = ODS_NERC }
 		completion_reward = {
 			add_political_power = -50
-			any_owned_state = { 
-				add_building_construction = {
-   					type = industrial_complex
-    					level = 2
-    					instant_build = yes
-				}
-				add_building_construction = {
-   					type = industrial_complex
-    					level = 2
-    					instant_build = yes
-				}
-				add_building_construction = {
-   					type = industrial_complex
-    					level = 2
-    					instant_build = yes
-				}
-				add_building_construction = {
-   					type = infrustructure
-    					level = 2
-    					instant_build = yes
-				}
-				add_building_construction = {
-   					type = infrustructure
-    					level = 2
-    					instant_build = yes
-				}
-				add_building_construction = {
-   					type = infrustructure
-    					level = 2
-    					instant_build = yes
-				}
+			swap_ideas = {
+				remove_idea = OKO5
+				add_idea = OKO6
 			}
 		}		
 	}
@@ -164,6 +208,7 @@ focus_tree = {
     				uses = 2
     				category = archetype_equipment
 			}
+			country_event = ODS.40
 		}		
 	}
 	focus = {
@@ -174,7 +219,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_revelation_initiative }
 		completion_reward = {
-			add_political_power = 100
+			custom_effect_tooltip = change_NERC_tt
+			custom_effect_tooltip = NERC2_tt
+			set_variable = { production_factory_efficiency_NERC = 0.05 }
 		}		
 	}
 	focus = {
@@ -187,6 +234,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { Chernii_rubli = -2000 }
 			add_political_power = -50
+			country_event = ODS.45
 		}		
 	}
 	focus = {
@@ -202,6 +250,7 @@ focus_tree = {
     				uses = 2
     				category = infantry_equipment
 			}
+			country_event = ODS.46
 		}		
 	}
 	focus = {
@@ -212,7 +261,10 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_power_of_mind_in_hands_of_design }
 		completion_reward = {
-			add_political_power = 100
+			custom_effect_tooltip = change_NERC_tt
+			custom_effect_tooltip = NERC3_tt
+			set_variable = { resistance_NERC = 0.5 }
+			country_event = ODS.37
 		}		
 	}
 	focus = {
@@ -224,7 +276,10 @@ focus_tree = {
 		prerequisite = { focus = ODS_brain_burner }
 		prerequisite = { focus = ODS_printout_of_archives }
 		completion_reward = {
-			add_political_power = 100
+			custom_effect_tooltip = change_black_beret_tt
+			custom_effect_tooltip = black_beret1_tt
+			set_variable = { army_defence_black_beret = 0.2 }
+			set_variable = { army_defence_against_minor_factor_black_beret = 0.2 }
 		}
 	}
 	focus = {
@@ -235,7 +290,10 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_great_intentions_great_projects }
 		completion_reward = {
-			add_political_power = 100
+			custom_effect_tooltip = change_dicarstvo_tt
+			custom_effect_tooltip = dicarstvo1_tt
+			set_variable = { production_speed_infrastructure_factor_dicarstvo = 0.1 }
+			country_event = ODS.44
 		}		
 	}
 	focus = {
@@ -247,6 +305,7 @@ focus_tree = {
 		prerequisite = { focus = ODS_energy_arteries }
 		completion_reward = {
 			add_political_power = 50
+			country_event = ODS.36
 		}		
 	}
 	focus = {
@@ -257,7 +316,10 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_great_intentions_great_projects }
 		completion_reward = {
-			add_political_power = 100
+			custom_effect_tooltip = change_dicarstvo_tt
+			custom_effect_tooltip = dicarstvo2_tt
+			set_variable = { attrition_dicarstvo = -0.05 }
+			country_event = ODS.39
 		}
 	}
 	focus = {
@@ -271,6 +333,7 @@ focus_tree = {
 			839 = { add_manpower = 50000 }
 			842 = { add_manpower = 50000 }
 			192 = { add_manpower = 50000 }
+			country_event = ODS.41
 		}		
 	}
 	focus = {
@@ -283,7 +346,9 @@ focus_tree = {
 		prerequisite = { focus = ODS_pulled_out_of_mud }
 		mutually_exclusive = { focus = ODS_grassroots_initiative }
 		completion_reward = {
-			add_political_power = 100
+			custom_effect_tooltip = change_black_beret_tt
+			custom_effect_tooltip = black_beret2_tt
+			set_variable { max_command_power_black_beret = 30 }
 		}
 	}
 	focus = {
@@ -296,7 +361,9 @@ focus_tree = {
 		prerequisite = { focus = ODS_pulled_out_of_mud }
 		mutually_exclusive = { focus = ODS_coordination_of_headquarters }
 		completion_reward = {
-			add_political_power = 100
+			custom_effect_tooltip = change_black_beret_tt
+			custom_effect_tooltip = black_beret3_tt
+			set_variable { org_loss_when_moving_black_beret = -0.1 }
 		}
 	}
 	focus = {
@@ -308,6 +375,9 @@ focus_tree = {
 		prerequisite = { focus = ODS_grassroots_initiative focus = ODS_coordination_of_headquarters }
 		completion_reward = {
 			add_manpower = 30000
+			custom_effect_tooltip = change_black_beret_tt
+			custom_effect_tooltip = black_beret4_tt
+			set_variable = { army_morale_factor_black_beret = 0.05 }
 		}
 	}
 	focus = {
@@ -319,7 +389,10 @@ focus_tree = {
 		prerequisite = { focus = ODS_ultimate_heroism }
 		prerequisite = { focus = ODS_integration_of_new_weapons }
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = OKO6
+				add_idea = OKO7
+			}
 		}
 	}
 	focus = {
@@ -332,10 +405,10 @@ focus_tree = {
 		completion_reward = {
 			add_command_power = 30
 			create_wargoal = {
-            			target = LWV
-            			type = take_state_focus
-            			#generator = { 123 }
-        		}
+            	target = LWV
+            	type = take_state_focus
+            	generator = { 123 }
+        	}
 		}		
 	}
 	focus = {
@@ -347,16 +420,16 @@ focus_tree = {
 		prerequisite = { focus = ODS_even_if_motherland_is_destined_to_fall }
 		completion_reward = {
 			add_command_power = 30
-        		create_wargoal = {
-            			target = ARM
-            			type = take_state_focus
-            			#generator = { 123 }
-        		}
-        		create_wargoal = {
-            			target = GLS
-            			type = take_state_focus
-            			#generator = { 123 }
-        		}
+        	create_wargoal = {
+            	target = ARM
+            	type = take_state_focus
+            	generator = { 123 }
+        	}
+        	create_wargoal = {
+            	target = GLS
+            	type = take_state_focus
+            	generator = { 123 }
+        	}
 		}		
 	}
 	focus = {
@@ -367,6 +440,15 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_operation_blasphemy }
 		prerequisite = { focus = ODS_operation_unity }
+		available = {
+			NOT = {
+				AND = {
+					country_exists = LWV
+					country_exists = ARM
+					country_exists = GLS
+				}
+			}
+		}
 		completion_reward = {
 			add_political_power = 100
 			army_experience = 50

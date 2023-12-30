@@ -16,7 +16,12 @@ ODS_intention = {
 	picture = GFX_intention_picture
 	scripted_gui = ODS_intention
 	visible_when_empty = yes
-	visible  = { original_tag = ODS  }
+	visible  = {
+		 original_tag = ODS
+		 NOT = {
+			has_country_flag = intension_hide
+		 } 
+	}
 	allowed = { original_tag = ODS }
 	priority = { base = 5 }
 		

@@ -150,6 +150,76 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
+		dicarstvo7 = {
+			picture = Veny_reshima
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = -0.15
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				resistance_damage_to_garrison = -0.2
+				stability_factor = 0.08
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		dicarstvo8 = {
+			picture = Veny_reshima
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = -0.15
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				resistance_damage_to_garrison = -0.2
+				stability_factor = 0.08
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.02
+			}
+		}
+		dicarstvo9 = {
+			picture = Veny_reshima
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = -0.15
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				resistance_damage_to_garrison = -0.2
+				stability_factor = 0.08
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.02
+				stability_weekly_factor = -0.05
+				political_power_factor = 0.1
+			}
+		}
 		doverie_1 = {
 			picture = doverie
 			
@@ -513,6 +583,57 @@ ideas = {
 				resistance_decay = 0.4
 				monthly_population = -0.03
 				attrition = -0.1
+			}
+		}
+		OKO5 = {
+			picture = OKO
+
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly_factor = 0.2
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+				monthly_population = -0.03
+				attrition = -0.1
+				command_power_gain_mult = 0.1
+			}
+		}
+		OKO6 = {
+			picture = OKO
+
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly_factor = 0.2
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+				monthly_population = -0.03
+				attrition = -0.1
+				command_power_gain_mult = 0.1
+				research_speed_factor = 0.02
+			}
+		}
+		OKO7 = {
+			picture = OKO
+
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly_factor = 0.2
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.2
+				resistance_decay = 0.4
+				monthly_population = -0.03
+				attrition = -0.1
+				command_power_gain_mult = 0.1
+				research_speed_factor = 0.02
+				monthly_population = 0.02
 			}
 		}
 		plan2 = {
