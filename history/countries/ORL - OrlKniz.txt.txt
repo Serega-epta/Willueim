@@ -6,30 +6,20 @@ oob = base #"ODS_1936"
 # Starting tech
 set_technology = {
     infantry_weapons = 1
-    infantry_odejda = 1
-    tech_support = 1
-    basic_machine_tools = 1
-    electronic_mechanical_engineering = 1
-    gw_artillery = 1
-    stvolartillery = 1
-    boepripas = 1   
 }
 
 set_research_slots = 2
 set_convoys = 20
 
 set_politics = {
-	ruling_party = militarists
+	ruling_party = humanists
 	elections_allowed = no
 }
 
 set_popularities = {
-	militarists = 80
-	patriots = 5
-	sacraments = 15
+	humanists = 82
+	free_people = 8
+	technocracy = 10
 }
 
-puppet = ZAK
-puppet = SBT
-
-recruit_character = ORL_evgeniy_prihozhiy
+recruit_character = ORL_alexey_alexandrovich

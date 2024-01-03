@@ -14,14 +14,13 @@ set_research_slots = 2
 set_convoys = 20
 
 set_politics = {
-	ruling_party = gumanists
+	ruling_party = humanists
 	elections_allowed = no
 }
 
 set_popularities = {
-	juntas = 10
-	gumanists = 60
-	militarists = 30
+	militarists = 40
+	humanists = 60
 }
 
 add_opinion_modifier = {
@@ -34,7 +33,7 @@ create_country_leader = {
     name = "Dmitry_Ostaiko"
     desc = "Dmitry_Ostaiko_desc"
     picture = "gfx/leaders/SUM/Dmitry_Ostaiko.dds"
-    ideology = gumanists_1
+    ideology = humanists_subideology
     traits = {
         #
     }

@@ -15,13 +15,13 @@ set_research_slots = 5
 set_convoys = 20
 
 set_politics = {
-	ruling_party = opportunists
+	ruling_party = chthonism
 	elections_allowed = no
 }
 
 set_popularities = {
-	opportunists = 75
-	gelerteria = 10
+	chthonism = 75
+	technocracy = 10
 	sacraments = 15
 }
 
@@ -31,28 +31,9 @@ create_country_leader = {
     name = "SIM_ON"
     desc = "SIM_ON_desc"
     picture = "gfx/leaders/SIM/SIM_ON.dds"
-    ideology = opportunists_1
+    ideology = chthonism_subideology
     traits = {
         #
     }
 }
 
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_FASHISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Fashistov.dds"
-    ideology = gelerteria
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_NEYTRALOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Neytralov.dds"
-    ideology = sacraments
-    traits = {
-        #
-    }
-}

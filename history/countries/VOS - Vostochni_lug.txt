@@ -17,21 +17,20 @@ set_convoys = 20
 
 add_ideas = iskupaya_kroviu
 set_politics = {
-	ruling_party = forestry 
+	ruling_party = free_people 
 	elections_allowed = no
 }
 
 set_popularities = {
-	forestry = 56
-	svobod = 24
-	technocracies = 13
-	juntas = 7
+	free_people = 80
+	technocracy = 13
+	militarists = 7
 }
 
 create_country_leader = {
     name = "VOS_vostochni_lug"
     desc = "VOS_vostochni_lug_DESC"
     picture = "gfx/leaders/VOS/vostochni_lug.dds"
-    ideology = forestry_1  
+    ideology = free_people_subideology  
     traits = { iskupaya_kroviu }
 }

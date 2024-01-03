@@ -19,8 +19,7 @@ set_politics = {
 }
 
 set_popularities = {
-	juntas = 25
-	militarists = 75
+	militarists = 100
 }
 
  
@@ -28,37 +27,7 @@ create_country_leader = {
     name = "BAL_petya"
     desc = "BAL_petya_desc"
     picture = "gfx/leaders/BAL/BAL_petya.dds"
-    ideology = militarists_1
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_KOMUNISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Komunistov.dds"
-    ideology = opportunists
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_FASHISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Fashistov.dds"
-    ideology = gelerteria
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_NEYTRALOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Neytralov.dds"
-    ideology = sacraments
+    ideology = militarists_subideology
     traits = {
         #
     }

@@ -12,21 +12,20 @@ set_research_slots = 1
 set_convoys = 0
 
 set_politics = {
-	ruling_party = gumanists
+	ruling_party = humanists
 	elections_allowed = no
 }
 
 set_popularities = {
-	juntas = 20
-	gumanists = 40
-	militarists = 40
+	militarists = 60
+	humanists = 40
 }
 
 create_country_leader = {
     name = "GKO"
     desc = "GKO_desc"
     picture = "gfx/leaders/SUM/Komitet.dds"
-    ideology = gumanists_1
+    ideology = humanists_subideology
     traits = {
         #
     }

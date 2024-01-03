@@ -14,13 +14,12 @@ set_convoys = 20
 
 add_ideas = KSK_free_ot_freedom
 set_politics = {
-	ruling_party = forestry
+	ruling_party = free_people
 	elections_allowed = no
 }
 
 set_popularities = {
-	forestry = 85
-	svobod = 10
+	free_people = 95
 	sacraments = 5
 }
 
@@ -28,7 +27,7 @@ create_country_leader = {
     name = "KSK_izgnanie"
     desc = "KSK_izgnanie_DESC"
     picture = "gfx/leaders/KSK/izgnanie.dds"
-    ideology = forestry_1   
+    ideology = free_people_subideology   
     traits = {
         #
     }

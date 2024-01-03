@@ -12,13 +12,12 @@ set_research_slots = 2
 set_convoys = 20
 
 set_politics = {
-	ruling_party = free
+	ruling_party = free_people
 	elections_allowed = no
 }
 
 set_popularities = {
-	svobod = 25
-	free = 75
+	free_people = 100
 }
  
 
@@ -26,7 +25,7 @@ create_country_leader = {
     name = "ilya_stahanov"
     desc = "politics_ilya_stahanov_desc"
     picture = "gfx/leaders/DOM/ilya_stahanov.dds"
-    ideology = free_1
+    ideology = free_people_subideology
     traits = {
         #
     }

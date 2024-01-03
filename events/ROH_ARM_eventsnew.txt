@@ -249,16 +249,16 @@ country_event = {
             remove_ideas = ARM_views_united
             remove_ideas = ARM_hearts
             set_popularities = {
-                svobod = 20
+                free_people = 20
                 militarists = 75
-                patriots = 5
+                statesmen = 5
             }
             create_country_leader = {
                     name = "ARM_michael_onufrenko"
                     desc = ARM_michael_onufrenko_desc
                     picture = GFX_portrait_ARM_Onufrenko
                     expire = "3333.1.1"
-                    ideology = militarists_1
+                    ideology = militarists_subideology
             }
             load_focus_tree = {
                 tree = ARM_Onufrenko_tree

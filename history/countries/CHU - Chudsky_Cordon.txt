@@ -12,12 +12,12 @@ set_research_slots = 2
 set_convoys = 20
 add_ideas = CHU_the_seal_of_a_new_world
 set_politics = {
-	ruling_party = juntas
+	ruling_party = militarists
 	elections_allowed = no
 }
 
 set_popularities = {
-	juntas = 100
+	militarists = 100
 	
 }
 
@@ -28,7 +28,7 @@ create_country_leader = {
     name = "CHU_Semen_Shezer"
     desc = "CHU_Semen_Shezer_DESC"
     picture = "gfx/leaders/CHU/semen_shezer.dds"
-    ideology = juntas_1 
+    ideology = militarists_subideology 
     traits = {
         #
     }

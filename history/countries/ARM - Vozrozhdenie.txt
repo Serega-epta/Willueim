@@ -31,14 +31,14 @@ load_focus_tree = {
 }
 
 set_politics = {
-	ruling_party = patriots 
+	ruling_party = statesmen 
 	elections_allowed = no
 }
 
 set_popularities = {
-	patriots = 65
+	statesmen = 65
     militarists = 30
-	svobod = 5
+	free_people = 5
 }
 
 add_opinion_modifier = {
@@ -70,14 +70,14 @@ create_country_leader = {
     desc = ARM_michael_onufrenko_desc
     picture = GFX_portrait_ARM_Onufrenko
     expire = "3333.1.1"
-    ideology = militarists_1
+    ideology = militarists_subideology
 }
 create_country_leader = {
     name = ARM_Sergey_Rogov
     #desc = 
     #picture = 
     expire = "3333.1.1"
-    ideology = svobod_1
+    ideology = free_people_subideology
 }
 
 recruit_character = ARM_Yuriy_Podolika

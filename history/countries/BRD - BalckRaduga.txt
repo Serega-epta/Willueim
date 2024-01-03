@@ -34,20 +34,19 @@ set_research_slots = 2
 set_convoys = 20
 add_manpower = 100000
 set_politics = {
-	ruling_party = juntas 
+	ruling_party = militarists 
 	elections_allowed = no
 }
 
 set_popularities = {
-	juntas = 75
-	militarists = 25
+	militarists = 100
 }
 
 create_country_leader = {
     name = "Mikhail_Tolstoy"
     desc = "Mikhail_Tolstoy_desc"
     picture = "gfx/leaders/BRD/Mikhail_Tolstoy.dds"
-    ideology = juntas_1
+    ideology = militarists_subideology
     traits = {
         #
     }

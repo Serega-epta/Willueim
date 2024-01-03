@@ -30,20 +30,19 @@ add_equipment_to_stockpile = {
 	producer = CRW
 }
 set_politics = {
-	ruling_party = free 
+	ruling_party = free_people 
 	elections_allowed = no
 }
 
 set_popularities = {
-	free = 60
-	svobod = 40
+	free_people = 100
 }
  
 create_country_leader = {
     name = "vojd"
     desc = "vojd_desc"
     picture = "gfx/leaders/CRW/vojd.dds"
-    ideology = free_1
+    ideology = free_people_subideology
     traits = {
         #
     }

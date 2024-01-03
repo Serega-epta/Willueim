@@ -36,13 +36,14 @@ add_equipment_to_stockpile = {
 	type = artillery_equipment_1
 	amount = 30
 	producer = BOD
+}
 set_politics = {
-	ruling_party = juntas
+	ruling_party = militarists
 	elections_allowed = no
 }
 
 set_popularities = {
-	juntas = 100
+	militarists = 100
 }
 
  
@@ -51,7 +52,7 @@ create_country_leader = {
     name = "Rodion_Samoilov"
     desc = "POLITICS_ROD_SAM_DESC"
     picture = "gfx/leaders/BOD/Portrait_Rodion_Samoilov.dds"
-    ideology = juntas_1
+    ideology = militarists_subideology
     traits = {
         #
     }

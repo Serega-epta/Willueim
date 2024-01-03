@@ -14,12 +14,12 @@ set_research_slots = 5
 set_convoys = 20
 
 set_politics = {
-	ruling_party = free
+	ruling_party = free_people
 	elections_allowed = no
 }
 
 set_popularities = {
-	free = 100
+	free_people = 100
 
 }
 
@@ -28,7 +28,7 @@ create_country_leader = {
     name = "Ivan_Taganovich"
     desc = "Ivan_Taganovich_desc"
     picture = "gfx/leaders/TAG/Ivan_Taganovich.dds"
-    ideology = free_1
+    ideology = free_people_subideology
     traits = {
         #
     }

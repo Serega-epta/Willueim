@@ -32,13 +32,12 @@ add_equipment_to_stockpile = {
 	producer = FUD
 }
 set_politics = {
-	ruling_party = free
+	ruling_party = free_people
 	elections_allowed = no
 }
 
 set_popularities = {
-	svobod = 25
-	free = 75
+	free_people = 100
 }
 
  
@@ -47,7 +46,7 @@ create_country_leader = {
     name = "soviet_old_engeners"
     desc = "soviet_old_engeners_desc"
     picture = "gfx/leaders/FUD/soviet_old_engeners.dds"
-    ideology = free_1
+    ideology = free_people_subideology
     traits = {
         #
     }

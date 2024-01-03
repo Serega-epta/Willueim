@@ -13,14 +13,14 @@ set_convoys = 20
 
 add_ideas = BSL_fresh_game
 set_politics = {
-	ruling_party = svobod	
+	ruling_party = free_people	
 	elections_allowed = no
 }
 
 set_popularities = {
-	svobod = 75
-	gumanists = 20
-	juntas = 5
+	free_people = 75
+	humanists = 20
+	militarists = 5
 }
 
 
@@ -28,7 +28,7 @@ create_country_leader = {
     name = "BSL_prohor"
     desc = "BSL_prohor_DESC"
     picture = "gfx/leaders/BSL/prohor.dds"
-    ideology = svobod_1   
+    ideology = free_people_subideology   
     traits = { hunt_nas_begun }
 }
 

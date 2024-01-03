@@ -12,14 +12,13 @@ set_technology = {
 
 set_research_slots = 2
 set_politics = {
-	ruling_party = svobod	
+	ruling_party = free_people	
 	elections_allowed = no
 }
 
 set_popularities = {
-	sacraments = 15
-	svobod = 70
-	unificators = 15
+	sacraments = 30
+	free_people = 70
 	
 }
 add_opinion_modifier = {
@@ -31,7 +30,7 @@ create_country_leader = {
     name = "BTC_iohan_mil"
     desc = "BTC_iohan_mil_DESC"
     picture = "gfx/leaders/BTC/iohan_mil.dds"
-    ideology = svobod_1   
+    ideology = free_people_subideology   
     traits = { pribalt_nazi }
 }
 

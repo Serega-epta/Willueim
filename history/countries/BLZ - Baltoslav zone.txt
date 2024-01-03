@@ -15,16 +15,15 @@ set_research_slots = 5
 set_convoys = 20
 
 set_politics = {
-	ruling_party = svobod 
+	ruling_party = free_people 
 	elections_allowed = no
 }
 
 set_popularities = {
-	svobod = 60
-	gelerteria = 8
-	gumanists = 15
-	technocracies = 12
-	juntas = 5
+	free_people = 60
+	technocracy = 20
+	humanists = 15
+	militarists = 5
 }
 add_opinion_modifier = {
     target = AGE
@@ -35,7 +34,7 @@ create_country_leader = {
     name = "BLZ_akim_juk"
     desc = "BLZ_akim_juk_DESC"
     picture = "gfx/leaders/BLZ/akim_juk.dds"
-    ideology = svobod_1   
+    ideology = free_people_subideology   
     # traits = { bessmislenaya_war }
 }
 

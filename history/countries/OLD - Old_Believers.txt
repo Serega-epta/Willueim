@@ -14,13 +14,13 @@ set_convoys = 20
 
 
 set_politics = {
-	ruling_party = forestry
+	ruling_party = free_people
 	elections_allowed = no
 }
 
 set_popularities = {
-	forestry = 60
-	gumanists = 40
+	free_people = 60
+	humanists = 40
 }
 
  
@@ -29,7 +29,7 @@ create_country_leader = {
     name = "daniil_korneev"
     desc = "daniil_korneev_DESC"
     picture = "gfx/leaders/DNN/Portrait_Pepe_Komunistov.dds"
-    ideology = forestry_1
+    ideology = free_people_subideology
     traits = {
         #
     }

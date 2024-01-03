@@ -16,17 +16,17 @@ set_research_slots = 5
 set_convoys = 20
 
 set_politics = {
-	ruling_party = patriots
+	ruling_party = statesmen
 	elections_allowed = no
 }
 
 set_popularities = {
-	patriots = 100
+	statesmen = 100
 
 }
 
 set_party_name = {
-    ideology = patriots
+    ideology = statesmen
     long_name = Edinaya_rossia
     name = Edinaya_rossia
 }
@@ -37,7 +37,7 @@ create_country_leader = {
     name = "Putin"
     desc = "Putin_desc"
     picture = "gfx/leaders/SDC/Putin.dds"
-    ideology = patriots_1
+    ideology = statesmen_subideology
     traits = {
         #
     }

@@ -17,16 +17,15 @@ set_politics = {
 }
 
 set_popularities = {
-	patriots = 20	
-	juntas = 20
-	militarists = 60
+	statesmen = 20	
+	militarists = 80
 }
 
 create_country_leader = {
     name = "Pavlik_Morozov"
     desc = "Pavlik_Morozov_desc"
     picture = "gfx/leaders/ARM/soldat.dds"
-    ideology = militarists_1
+    ideology = militarists_subideology
     traits = {
         #
     }

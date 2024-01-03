@@ -12,12 +12,12 @@ set_research_slots = 2
 set_convoys = 20
 add_ideas = OZE_radioactive_swamp
 set_politics = {
-	ruling_party = forestry
+	ruling_party = free_people
 	elections_allowed = no
 }
 
 set_popularities = {
-	forestry = 100
+	free_people = 100
 }
 
  
@@ -26,7 +26,7 @@ create_country_leader = {
     name = "OZE_avraam_loskutov"
     desc = "OZE_avraam_loskutov_DESC"
     picture = "gfx/leaders/OZE/avraaam.dds"
-    ideology = forestry_1 
+    ideology = free_people_subideology 
     traits = {
         #
     }

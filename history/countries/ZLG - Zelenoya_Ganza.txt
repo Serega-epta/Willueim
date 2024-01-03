@@ -14,16 +14,15 @@ set_convoys = 20
 
 add_ideas = ZLG_exceptional_gains
 set_politics = {
-	ruling_party = svobod 
+	ruling_party = free_people 
 	elections_allowed = no
 }
 
 set_popularities = {
-	svobod = 60
-	gelerteria = 8
-	gumanists = 15
-	technocracies = 12
-	juntas = 5
+	free_people = 60
+	humanists = 15
+	technocracy = 20
+	militarists = 5
 }
 
 
@@ -31,7 +30,7 @@ create_country_leader = {
     name = "ZLG_Daniil_mihnov"
     desc = "ZLG_Daniil_mihnov_DESC"
     picture = "gfx/leaders/ZLG/daniil_mihnov.dds"
-    ideology = svobod_1   
+    ideology = free_people_subideology   
     traits = {
         #
     }

@@ -32,13 +32,12 @@ set_research_slots = 2
 set_convoys = 20
 add_manpower = 100000
 set_politics = {
-	ruling_party = juntas 
+	ruling_party = militarists 
 	elections_allowed = no
 }
 
 set_popularities = {
-	juntas = 85
-	militarists = 15
+	militarists = 100
 }
 
 puppet = HAN
@@ -49,7 +48,7 @@ create_country_leader = {
     name = "Denis_Pushkarenko"
     desc = "Denis_Pushkarenko_desc"
     picture = "gfx/leaders/WAC/Denis_Pushkarenko.dds"
-    ideology = juntas_1
+    ideology = militarists_subideology
     traits = {
         #
     }
