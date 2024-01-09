@@ -15,14 +15,12 @@ set_research_slots = 5
 set_convoys = 20
 
 set_politics = {
-	ruling_party = humanists
+	ruling_party = chthonism
 	elections_allowed = no
 }
 
 set_popularities = {
-	humanists = 84
-	free_people = 6
-	technocracy = 10
+	chthonism = 100
 }
 
  
@@ -31,7 +29,7 @@ create_country_leader = {
     name = "TIP_leader"
     desc = "TIP_leader_desc"
     picture = "gfx/leaders/TIP/TIP.dds"
-    ideology = unificators
+    ideology = chthonism_subideology
     traits = {
         #
     }
