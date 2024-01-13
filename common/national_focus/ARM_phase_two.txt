@@ -88,7 +88,7 @@ focus_tree = {
         cost = 5 
         ai_will_do = { factor = 10 }
         completion_reward = {
-            add_ideas = ARM_command_unity_idea
+            add_ideas = ARM_officer_schools_idea
         }
     }
     focus = {
@@ -125,7 +125,10 @@ focus_tree = {
                     owner = ROOT
                 }
             }
-            #Изменить идею Единство взглядов на conscription = 0.2
+            swap_ideas = {
+                remove_idea = ARM_views_united
+                add_idea = ARM_views_united_2
+            }
         }
     }
     focus = {
@@ -233,6 +236,16 @@ focus_tree = {
                 days = 1
             }
             army_experience = 25
+            hidden_effect = {
+                remove_ideas = ARM_hearts
+                add_dynamic_modifier = {
+                    modifier = ARM_hearts_dynamic
+                }
+                set_variable = { offence_hearts = 0.05 }
+                set_variable = { defence_hearts = 0.05 }
+                set_variable = { surrender_limit_hearts = 0.2 }
+                set_variable = { army_org_factor_hearts = 0 }
+            }
         }
     }
     focus = {
@@ -245,7 +258,11 @@ focus_tree = {
         cost = 5
         ai_will_do = { factor = 10 }
         completion_reward = {
-            #изменить нац.дух Вырванные сердца offence = 0.02 defence = 0.02 army_org_factor = 0.1
+            custom_effect_tooltip = change_hearts_tt
+            custom_effect_tooltip = change_hearts_1_tt
+            add_to_variable = { offence_hearts = 0.02 } 
+            add_to_variable = { defence_hearts = 0.02 }
+            add_to_variable = { army_org_factor_hearts = 0.1 }
         }
     }
     focus = {
@@ -262,7 +279,7 @@ focus_tree = {
         }
     }
     focus = {
-        id = ARM_DAT_BOYZ
+        id = ARM_Tough_guys
         #icon = 
         prerequisite = { focus = ARM_attract_people focus = ARM_cultivate_fanatism }
         mutually_exclusive = { focus = ARM_excellent_discipline }
@@ -322,7 +339,9 @@ focus_tree = {
         cost = 5
         ai_will_do = { factor = 10 }
         completion_reward = {
-            #Изменить нацдух Вырванные сердца army_org_factor = 0.15
+            add_to_variable = { army_org_factor_hearts = 0.15 }
+            custom_effect_tooltip = change_hearts_tt
+            custom_effect_tooltip = change_hearts_2_tt
         }
     }
     focus = {
