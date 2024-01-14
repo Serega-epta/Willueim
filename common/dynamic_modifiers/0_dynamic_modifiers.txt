@@ -606,12 +606,11 @@ kanon_absol = {
 		attrition = attrition_dicarstvo
 	}
 #ARM
- ARM_hearts_dynamic = {
-	enable = { always = yes }
-	icon = ARM_hearts_idea
-	offence = offence_hearts
-	defence = defence_hearts
-	surrender_limit = surrender_limit_hearts
-	army_org_factor = army_org_factor_hearts
-
+ 	ARM_hearts_dynamic = {
+		enable = { always = yes }
+		icon = GFX_idea_ARM_hearts_idea
+		offence = offence_hearts
+		defence = defence_hearts
+		surrender_limit = surrender_limit_hearts
+		army_org_factor = army_org_factor_hearts
  }
