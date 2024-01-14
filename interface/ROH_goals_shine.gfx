@@ -193,8 +193,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_hell_on_wheels"
-		texturefile = "gfx/interface/goals/hell_on_wheels_shine.dds"
+		name = "GFX_goal_hell_on_wheels_shine"
+		texturefile = "gfx/interface/goals/hell_on_wheels.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/hell_on_wheels.dds"
@@ -223,11 +223,10 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-
 	
 	SpriteType = {
-		name = "GFX_goal_our_breadbasket"
-		texturefile = "gfx/interface/goals/our_breadbasket_shine.dds"
+		name = "GFX_goal_our_breadbasket_shine"
+		texturefile = "gfx/interface/goals/our_breadbasket.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/our_breadbasket.dds"
@@ -258,8 +257,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_our_factories"
-		texturefile = "gfx/interface/goals/our_factories_shine.dds"
+		name = "GFX_goal_our_factories_shine"
+		texturefile = "gfx/interface/goals/our_factories.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/our_factories.dds"
@@ -275,7 +274,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/our_factories_shine.dds"
+			animationmaskfile = "gfx/interface/goals/our_factories.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -290,8 +289,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_our_homes"
-		texturefile = "gfx/interface/goals/our_homes_shine.dds"
+		name = "GFX_goal_our_homes_shine"
+		texturefile = "gfx/interface/goals/our_homes.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/our_homes.dds"
@@ -404,6 +403,70 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/rules_of_war.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_goal_take_a_stance_shine"
+		texturefile = "gfx/interface/goals/take_a_stance.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/take_a_stance.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/take_a_stance.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_goal_tough_politics_shine"
+		texturefile = "gfx/interface/goals/tough_politics.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/tough_politics.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/tough_politics.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
