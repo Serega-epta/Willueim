@@ -247,7 +247,7 @@ ODS_consciousness = {
 			}
 		}
 		activation = {
-			always = yes
+			always = no
 		}
 		fire_only_once = yes
 		timeout_effect = {
@@ -301,7 +301,7 @@ ODS_consciousness = {
 		custom_cost_trigger = {
 			has_any_points_consciousness = yes
 		}
-		custom_cost_text = consciousness_special_forces_cost_tt
+		custom_cost_text = has_any_points_consciousness_cost_tt
 		complete_effect = {
 			subtract_from_variable = {
 				var = points_consciousness
@@ -335,7 +335,7 @@ ODS_consciousness = {
 		custom_cost_trigger = {
 			has_any_points_consciousness = yes
 		}
-		custom_cost_text = consciousness_goods_for_everyone_cost_tt
+		custom_cost_text = has_any_points_consciousness_cost_tt
 		complete_effect = {
 			subtract_from_variable = {
 				var = points_consciousness
@@ -369,7 +369,7 @@ ODS_consciousness = {
 		custom_cost_trigger = {
 			has_any_points_consciousness = yes
 		}
-		custom_cost_text = consciousness_collective_hand_settings_cost_tt
+		custom_cost_text = has_any_points_consciousness_cost_tt
 		complete_effect = {
 			subtract_from_variable = {
 				var = points_consciousness
@@ -403,7 +403,7 @@ ODS_consciousness = {
 		custom_cost_trigger = {
 			has_any_points_consciousness = yes
 		}
-		custom_cost_text = consciousness_break_mental_limits_cost_tt
+		custom_cost_text = has_any_points_consciousness_cost_tt
 		complete_effect = {
 			subtract_from_variable = {
 				var = points_consciousness
@@ -437,7 +437,7 @@ ODS_consciousness = {
 		custom_cost_trigger = {
 			has_any_points_consciousness = yes
 		}
-		custom_cost_text = consciousness_cutting_heads_cost_tt
+		custom_cost_text = has_any_points_consciousness_cost_tt
 		complete_effect = {
 			subtract_from_variable = {
 				var = points_consciousness
@@ -471,7 +471,7 @@ ODS_consciousness = {
 		custom_cost_trigger = {
 			has_any_points_consciousness = yes
 		}
-		custom_cost_text = consciousness_mind_instead_of_blood_cost_tt
+		custom_cost_text = has_any_points_consciousness_cost_tt
 		complete_effect = {
 			subtract_from_variable = {
 				var = points_consciousness
@@ -505,7 +505,7 @@ ODS_consciousness = {
 		custom_cost_trigger = {
 			has_any_points_consciousness = yes
 		}
-		custom_cost_text = consciousness_self_interest_suffocation_cost_tt
+		custom_cost_text = has_any_points_consciousness_cost_tt
 		complete_effect = {
 			subtract_from_variable = {
 				var = points_consciousness
@@ -539,7 +539,7 @@ ODS_consciousness = {
 		custom_cost_trigger = {
 			has_any_points_consciousness = yes
 		}
-		custom_cost_text = consciousness_imperfection_in_us_cost_tt
+		custom_cost_text = has_any_points_consciousness_cost_tt
 		complete_effect = {
 			subtract_from_variable = {
 				var = points_consciousness
@@ -637,7 +637,7 @@ ODS_consciousness = {
 				tooltip = add_points_consciousness_1_tt
 			}
 			add_to_variable = {
-				var = central_consciousness
+				var = state_consciousness
 				value = 2
 				tooltip = add_state_consciousness_2_tt
 			}
