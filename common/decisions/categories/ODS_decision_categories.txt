@@ -35,3 +35,16 @@ ODS_subordination = {
 	allowed = { original_tag = ODS }
 	priority = { base = 5 }	
 }
+ODS_consciousness = {
+	icon = saf_anti_colonialist_crusade
+	#scripted_gui = ODS_consciousness_gui
+	visible_when_empty = yes
+	visible  = { always = yes }
+	allowed = { original_tag = ODS }
+	priority = { base = 5 }
+	#vars
+	#points_consciousness
+	#common_consciousness
+	#central_consciousness
+	#state_consciousness
+}
