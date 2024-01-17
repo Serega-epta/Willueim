@@ -1,18 +1,14 @@
 capital = 839
 
-oob = base #"ODS_1936"
+oob = PLD
 
+set_research_slots = 3
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.2
+army_experience = 5
+add_manpower = 12000
 
-# Starting tech
-set_technology = {
-    infantry_weapons = 1
-}
-
-set_research_slots = 5
-set_convoys = 20
-
-
-add_ideas = PLD_irony_as_it_is
 set_politics = {
 	ruling_party = humanists 
 	elections_allowed = no
@@ -20,18 +16,28 @@ set_politics = {
 
 set_popularities = {
 	humanists  = 56
-	free_people = 24
-	technocracy = 13
-	militarists = 7
+	free_people = 44
+}
+
+set_technology = {
+    infantry_weapons = 1
+    infantry_odejda = 1
+    motorised_infantry = 1
+    gw_artillery = 1
+    tech_support = 1
+    tech_recon = 1
+    early_fighter = 1
 }
 
 create_country_leader = {
     name = "PLD_anton_kitsenko"
     desc = "PLD_anton_kitsenko_DESC"
     picture = "gfx/leaders/PLD/anton_kitsenko.dds"
-    ideology = humanists_subideology   
+    ideology = free_people_subideology   
     traits = {
         #
     }
 }
+
+recruit_character = PLD_nikita_rakossovsky
 

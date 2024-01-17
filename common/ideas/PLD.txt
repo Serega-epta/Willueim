@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		PLD_irony_as_it_is = {			#Ирония, какая она есть	
+		PLD_frozen_commonwealth_1 = {			#Промерзшее_содружество
 			allowed = {
 				always = no
 			}
@@ -10,13 +10,51 @@ ideas = {
 			}
 			removal_cost = -1			
 			modifier = {
-				monthly_population = -0.2
-				surrender_limit = -0.05
-				local_resources_factor = -0.15
-				drift_defence_factor = -0.5
-				offence -0.05
-				defence -0.05
-				acclimatization_cold_climate_gain_factor = 0.1
+				production_factory_max_efficiency_factor = -0.3
+				production_speed_buildings_factor = -0.3
+				production_lack_of_resource_penalty_factor = +0.2
+
+			}
+		}
+		PLD_frozen_heart = {                           #Промерзшие_сердца
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				surrender_limit = -0.4
+				stability_weekly_factor = -0.005
+			}
+		}
+		PLD_hunger_normal = {						#Голод:_удовлетворителен
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture =
+			modifier = {
+				
+			}
+		}                                 
+		PLD_northern_oasis = {                  #Северный_Оазис
+			llowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly_factor = +0.005
+				acclimatization_cold_climate_gain_factor = +0.15
+				army_core_attack_factor = +0.15
+				army_core_defence_factor = +0.15
 			}
 		}
 	}
