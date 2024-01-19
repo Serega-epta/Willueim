@@ -111,20 +111,18 @@ focus_tree = {
                     opolchenie = { x = 1 y = 0 }
                 }
             }
-            capital_scope = {
-                create_unit = {
-                    division = "name = \"1. Disciplinaries\" division_template = \"Disciplinaries\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    owner = ROOT
+            create_unit = {
+                division = "name = \"1. Disciplinaries\" division_template = \"Disciplinaries\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                owner = ROOT
                 }
-                create_unit = {
-                    division = "name = \"1. Disciplinaries\" division_template = \"Disciplinaries\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    owner = ROOT
+            create_unit = {
+                division = "name = \"1. Disciplinaries\" division_template = \"Disciplinaries\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                owner = ROOT
                 }
-                create_unit = {
-                    division = "name = \"1. Disciplinaries\" division_template = \"Disciplinaries\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    owner = ROOT
+            create_unit = {
+                division = "name = \"1. Disciplinaries\" division_template = \"Disciplinaries\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                owner = ROOT
                 }
-            }
             swap_ideas = {
                 remove_idea = ARM_views_united
                 add_idea = ARM_views_united_2
@@ -141,16 +139,15 @@ focus_tree = {
         cost = 5
         ai_will_do = { factor = 10 }
         completion_reward = {
-            capital_scope = {
-                    create_unit = {
-                    division = "name = \"1. Crimson beams\" division_template = \"Crimson beams\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    owner = ROOT
+            create_unit = {
+                division = "name = \"1. Crimson beams\" division_template = \"Crimson beams\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                owner = ROOT
                 }
-                    create_unit = {
-                    division = "name = \"1. Crimson beams\" division_template = \"Crimson beams\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    owner = ROOT
+            create_unit = {
+                division = "name = \"1. Crimson beams\" division_template = \"Crimson beams\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                owner = ROOT
                 }
-            }
+            
         }
     }
     focus = {
@@ -207,7 +204,7 @@ focus_tree = {
             203 = {
                 add_extra_state_shared_building_slots = 3
                 add_building_construction = {
-                    type = industrial_complex
+                    type = arms_factory
                     level = 3
                     instant_build = yes
                 }
@@ -215,7 +212,7 @@ focus_tree = {
             225 = {
                 add_extra_state_shared_building_slots = 3
                 add_building_construction = {
-                    type = industrial_complex
+                    type = arms_factory
                     level = 3
                     instant_build = yes
                 }
@@ -305,7 +302,7 @@ focus_tree = {
         id = ARM_excellent_discipline
         icon = GFX_ARM_excellent_discipline
         prerequisite = { focus = ARM_attract_people focus = ARM_cultivate_fanatism }
-        mutually_exclusive = { focus = ARM_DAT_BOYZ }
+        mutually_exclusive = { focus = ARM_Tough_guys }
         x = 16
         y = 4
         cost = 5
@@ -333,7 +330,7 @@ focus_tree = {
     focus = {
         id = ARM_dark_clouds
         icon = GFX_ARM_dark_clouds
-        prerequisite = { focus = ARM_excellent_discipline focus = ARM_DAT_BOYZ }
+        prerequisite = { focus = ARM_excellent_discipline focus = ARM_Tough_guys }
         x = 14
         y = 5
         cost = 5
