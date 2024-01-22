@@ -11,6 +11,11 @@ set_technology = {
 set_research_slots = 5
 set_convoys = 20
 
+add_opinion_modifier = {
+	target = ORL
+	modifier = ORL_faithless
+}
+
 set_politics = {
 	ruling_party = bandits
 	elections_allowed = no

@@ -13,4 +13,51 @@ characters = {
 			desc = ORL_evgeniy_prihozhiy_desc
 		}
 	}
+	ORL_Anton_Elizarin = {
+		name = ORL_Anton_Elizarin
+		country_leader = {
+			ideology = statesmen_subideology
+			expire = "2090.1.1.1"
+			id = -1
+			desc = ORL_Anton_Elizarin_desc
+		}
+	}
+	ORL_Ioan = {
+		name = ORL_Ioan
+		country_leader = {
+			ideology = sacraments_subideology
+			expire = "2090.1.1.1"
+			id = -1
+			desc = ORL_Ioan_desc
+		}
+	}
+	ORL_Dmitriy_Gusev = { #Злой брат близнец, чтобы можно было рекрутировать
+		name = SBT_Dmitriy_Gusev
+		portraits = {
+			army = {
+				large = GFX_portrait_SBT_Dmitriy_Gusev
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	ORL_Sergey_Surovov = { #Злой брат близнец, чтобы можно было рекрутировать
+		portraits={
+			army={
+				large="gfx/leaders/ZAK/ZAK_Sergey_Surovov.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
 }
