@@ -1,6 +1,6 @@
 capital = 839
 
-oob = base #"ODS_1936"
+oob = SBT
 
 
 # Starting tech
@@ -10,10 +10,31 @@ set_technology = {
 
 set_research_slots = 2
 set_convoys = 20
+add_manpower = 18000
 
 add_opinion_modifier = {
 	target = ORL
 	modifier = ORL_battle_brothers
+}
+add_opinion_modifier = {
+	target = ZAK
+	modifier = ORL_battle_brothers
+}
+add_opinion_modifier = {
+	target = VLC
+	modifier = ORL_sectarians
+}
+add_opinion_modifier = {
+	target = SMX
+	modifier = ORL_traitors 
+}
+add_opinion_modifier = {
+	target = MAZ
+	modifier = ORL_idiots_and_idealists
+}
+add_opinion_modifier = {
+	target = TAB
+	modifier = ORL_idiots_and_idealists
 }
 
 set_politics = {
@@ -29,3 +50,4 @@ set_popularities = {
     }
 
 recruit_character = SBT_Dmitriy_Gusev
+recruit_character = SBT_generic_general

@@ -1,6 +1,6 @@
 capital = 839
 
-oob = base #"ODS_1936"
+oob = MAZ
 
 
 # Starting tech
@@ -10,6 +10,7 @@ set_technology = {
 
 set_research_slots = 2
 set_convoys = 20
+add_manpower = 19200
 
 set_politics = {
 	ruling_party = humanists
@@ -18,6 +19,14 @@ set_politics = {
 
 add_opinion_modifier = {
 	target = ORL
+	modifier = ORL_madmans
+}
+add_opinion_modifier = {
+	target = SBT
+	modifier = ORL_madmans
+}
+add_opinion_modifier = {
+	target = ZAK
 	modifier = ORL_madmans
 }
 

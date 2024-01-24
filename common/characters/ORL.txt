@@ -5,6 +5,9 @@ characters = {
 			civilian = {
 				large = GFX_portrait_ORL_evgeniy_prihozhiy
 			}
+			army = {
+				large = GFX_portrait_ORL_evgeniy_prihozhiy
+			}
 		}
 		country_leader = {
 			ideology = militarists_subideology
@@ -12,27 +15,49 @@ characters = {
 			id = -1
 			desc = ORL_evgeniy_prihozhiy_desc
 		}
+		field_marshal = { 
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 4
+			desc = ORL_evgeniy_prihozhiy_desc
+		}
 	}
 	ORL_Anton_Elizarin = {
 		name = ORL_Anton_Elizarin
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ORL_Anton_Elizarin
+			}
+			army = {
+				large = GFX_portrait_ORL_Anton_Elizarin
+			}
+		}
 		country_leader = {
 			ideology = statesmen_subideology
 			expire = "2090.1.1.1"
 			id = -1
 			desc = ORL_Anton_Elizarin_desc
 		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
 	}
-	ORL_Ioan = {
-		name = ORL_Ioan
+	ORL_Volodimir = {
+		name = ORL_Volodimir
 		country_leader = {
 			ideology = sacraments_subideology
 			expire = "2090.1.1.1"
 			id = -1
-			desc = ORL_Ioan_desc
 		}
 	}
 	ORL_Dmitriy_Gusev = { #Злой брат близнец, чтобы можно было рекрутировать
-		name = SBT_Dmitriy_Gusev
+		name = ORL_Dmitriy_Gusev
 		portraits = {
 			army = {
 				large = GFX_portrait_SBT_Dmitriy_Gusev
@@ -44,9 +69,11 @@ characters = {
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 4
+			desc = ORL_Dmitriy_Gusev_desc
 		}
 	}
 	ORL_Sergey_Surovov = { #Злой брат близнец, чтобы можно было рекрутировать
+		name = ORL_Sergey_Surovov
 		portraits={
 			army={
 				large="gfx/leaders/ZAK/ZAK_Sergey_Surovov.dds"
@@ -57,6 +84,37 @@ characters = {
 			attack_skill = 1
 			defense_skill = 4
 			planning_skill = 4
+			logistics_skill = 2
+			desc = ORL_Sergey_Surovov_desc
+		}
+	}
+	ORL_Michail_Mizinov = {
+		name = ORL_Michail_Mizinov
+		portraits = {
+			army = {
+				large = GFX_portrait_ORL_Michail_Mizinov
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	ORL_Davor_Sadrich = {
+		name = ORL_Davor_Sadrich
+		portraits = {
+			army = {
+				large = GFX_portrait_ORL_Davor_Sadrich
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
 			logistics_skill = 2
 		}
 	}
