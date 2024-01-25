@@ -4,9 +4,15 @@ state={
 	name="STATE_217"
 
 	history={
+		owner = WTR
+		add_core_of = WTR
 		victory_points = {
-			 3529 30 
+			 3529 1 
 		}
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+		}
+		set_state_flag = has_wild_tribes
 
 	}
 
