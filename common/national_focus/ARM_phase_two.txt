@@ -102,7 +102,6 @@ focus_tree = {
         cost = 5
         ai_will_do = { factor = 10 }
         completion_reward = {
-            random_owned_state = {
                 division_template = {
                     name = "Disciplinaries"
                     is_locked = no
@@ -113,6 +112,7 @@ focus_tree = {
                         opolchenie = { x = 1 y = 0 }
                     }
                 }
+            random_owned_state = {
                 create_unit = {
                     division = "name = \"1. Disciplinaries\" division_template = \"Disciplinaries\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
                     owner = ROOT
