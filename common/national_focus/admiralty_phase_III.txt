@@ -278,7 +278,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = change_black_beret_tt
 			custom_effect_tooltip = black_beret1_tt
-			set_variable = { army_defence_black_beret = 0.2 }
+			set_variable = { army_defence_black_beret = 0.1 }
 			set_variable = { army_defence_against_minor_factor_black_beret = 0.2 }
 		}
 	}
@@ -330,9 +330,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_communication_systems }
 		completion_reward = {
-			839 = { add_manpower = 50000 }
-			842 = { add_manpower = 50000 }
-			192 = { add_manpower = 50000 }
+			839 = { add_manpower = 5000 }
+			842 = { add_manpower = 5000 }
+			192 = { add_manpower = 5000 }
 			country_event = ODS.41
 		}		
 	}
