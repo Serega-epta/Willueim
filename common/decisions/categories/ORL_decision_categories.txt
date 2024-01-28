@@ -1,0 +1,19 @@
+volga_war = {
+	icon = saf_anti_colonialist_crusade
+	#scripted_gui = ODS_consciousness_gui
+	visible_when_empty = yes
+	visible  = {
+		NAR = {
+			exists = yes
+		}
+		SMK = {
+			exists = yes
+		}
+	}
+	allowed = {
+		original_tag = ORL
+	}
+	priority = {
+		base = 5
+	}
+}
