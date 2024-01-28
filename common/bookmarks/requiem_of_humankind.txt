@@ -7,7 +7,7 @@ bookmarks = {
 		default_country = "GLS"
 		default = yes
 		
-		#Страны, имеющие полностью или частично (т.е осталось немного) реализованный контент
+		#МАЖОРЫ
 
 		"GLS"={
 			history = "REQUIEM_OF_HUMANKIND_condition_of_GLS"
@@ -24,6 +24,21 @@ bookmarks = {
 			}
 		}
 
+		"ORL"={
+			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
+			ideology = militarists
+			ideas = {				
+				ORL_corporative_ethics
+				ORL_chance_for_everyone
+				ORL_victory_cult			
+			}
+			focuses = {
+				ORL_best_in_hell
+				ORL_first_among_equals
+				ORL_young_blood
+			}
+		}
+
 		"ARM"={
 			history = "REQUIEM_OF_HUMANKIND_condition_of_ARM"
 			ideology = statesmen
@@ -34,6 +49,35 @@ bookmarks = {
 				ARM_frozen_hopes
 				ARM_dog_death
 				ARM_first_among_equals
+			}
+		}
+
+		"AGE"={																	     																
+			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"			
+			ideology = statesmen														
+			ideas = {		
+				AGE_knife_at_throat
+				AGE_time_wasted
+			}																		
+			focuses = {																
+				AGE_blood_on_hands
+				AGE_seek_for_peace
+				AGE_red_sables
+			}																		
+		}			
+
+		"ODS"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_ODS"
+			ideology = chthonism
+			ideas = {				
+				dicarstvo
+				doverie_1
+				black_beret		
+			}
+			focuses = {			
+				ODS_perv
+				ODS_clear_perimetr
+				ODS_garantii_bez
 			}
 		}
 
@@ -52,35 +96,21 @@ bookmarks = {
 			}
 		}
 
-		"ODS"={
-			history = "REQUIEM_OF_HUMANKIND_condition_of_ODS"
-			ideology = chthonism_subideology
+
+		#Миноры + Консульство																																
+		"PLD"={
+			minor = yes
+			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
+			ideology = humanists
 			ideas = {				
-				dicarstvo
-				doverie_1
-				black_beret		
+
 			}
 			focuses = {			
-				ODS_perv
-				ODS_clear_perimetr
-				ODS_garantii_bez
+				PLD_frozen_commonwealth
+				PLD_his_will
+				PLD_cries_hungry
 			}
 		}
-
-		#Страны, не имеющие контент (или имеющие, но слишком маленький), но которые планируются в разработке
-
-		# "AGE"={																	<-      
-		# 	minor = yes																<-
-		# 	history = "GATHERING_STORM_INCOMPLETE_CONTENT_TEMPORARY_DESC"			<-
-		# 	ideology = patriots														<-
-		# 	ideas = {																<-
-		# 	}																		<-  ██╗░░██╗███████╗  ██████╗░░█████╗░░█████╗░████████╗░█████╗░███████╗████████╗
-		# 	focuses = {																<-  ███████║█████╗░░  ██████╔╝███████║██║░░██║░░░██║░░░███████║█████╗░░░░░██║░░░
-		# 		ROH_capital															<-	██╔══██║██╔══╝░░  ██╔═══╝░██╔══██║██║░░██║░░░██║░░░██╔══██║██╔══╝░░░░░██║░░░
-		# 		ROH_15																<-	██║░░██║███████╗  ██║░░░░░██║░░██║╚█████╔╝░░░██║░░░██║░░██║███████╗░░░██║░░░
-		# 		ROH_29																<-	╚═╝░░╚═╝╚══════╝  ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░
-		# 	}																		<-
-		# }																			<-																		
 
 		"IMP"={
 			minor = yes
@@ -95,6 +125,48 @@ bookmarks = {
 				IMP_Our_Great_Destiny
 				IMP_Order_inside
 				IMP_Department_K
+			}
+		}
+
+		"FSR"={
+			minor = yes
+			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
+			ideology = free_people
+			ideas = {				
+				rostik
+			}
+			focuses = {		
+				FSR_free_city	
+				FSR_kuban_problem
+				FSR_protect_your_home
+			}
+		}
+
+		"KUH"={
+			minor = yes
+			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
+			ideology = sacraments
+			ideas = {				
+				cult_iskazheniya
+			}
+			focuses = {		
+				KUH_our_way	
+				KUH_new_parish
+				KUH_trample_heretics
+			}
+		}
+
+		"STW"={
+			minor = yes
+			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
+			ideology = bandits
+			ideas = {				
+				krugom_vragi
+			}
+			focuses = {		
+				STW_big_meeting
+				STW_rostov_father
+				STW_become_people
 			}
 		}
 

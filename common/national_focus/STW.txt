@@ -2,11 +2,16 @@ focus_tree = {
 	id = STW_focus
 	country = {
 		factor = 0
+		modifier = {
+            add = 100
+            tag = STW
+        }
 	}
-	default = yes
+	default = no
 
 	focus = {
 		id = STW_big_meeting
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 0
@@ -17,6 +22,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_solve_problems
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 1
@@ -29,6 +35,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_racket
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 0
 		y = 2
@@ -47,6 +54,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_gather_brothers
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 2
@@ -58,6 +66,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_trellis_workshop
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 4
 		y = 2
@@ -76,6 +85,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_become_people
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 3
@@ -114,6 +124,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_rostov_father
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 8
 		y = 0
@@ -138,6 +149,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_mine 
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 6
 		y = 1
@@ -149,6 +161,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_organize_raid
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 8
 		y = 1
@@ -163,6 +176,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_common_fund
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 10
 		y = 1

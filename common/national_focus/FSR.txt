@@ -2,11 +2,16 @@ focus_tree = {
 	id = FSR_focus
 	country = {
 		factor = 0
+		modifier = {
+            add = 100
+            tag = FSR
+        }
 	}
-	default = yes
+	default = no
 
 	focus = {
 		id = FSR_free_city
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 0
@@ -17,6 +22,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_borders_of_freedom
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 1
@@ -44,6 +50,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_rostov_tractors
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 0
 		y = 2
@@ -62,6 +69,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_skills_not_number
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 2
@@ -80,6 +88,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_arsenal_of_independence
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 4
 		y = 2
@@ -98,6 +107,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_protect_your_home
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 3
@@ -136,6 +146,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_kuban_problem
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 8
 		y = 0
@@ -154,6 +165,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_against_Leviathan 
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 6
 		y = 1
@@ -165,6 +177,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_send_diplomates
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 8
 		y = 1
@@ -180,6 +193,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_mutual_integration
+		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 10
 		y = 1

@@ -2,8 +2,12 @@ focus_tree = {
 	id = KUH_focus
 	country = {
 		factor = 0
+		modifier = {
+            add = 100
+            tag = KUH
+        }
 	}
-	default = yes
+	default = no
 
 	focus = {
 		id = KUH_our_way
@@ -62,12 +66,12 @@ focus_tree = {
 					owner = ROOT
 				}
 				create_unit = {
-						division = "name = \Punishers\" division_template = \Punishers\" start_experience_factor = 0.1 start_equipment_factor = 0.2 start_manpower_factor = 0.2"
-						owner = ROOT
+					division = "name = \Punishers\" division_template = \Punishers\" start_experience_factor = 0.1 start_equipment_factor = 0.2 start_manpower_factor = 0.2"
+					owner = ROOT
 				}
 				create_unit = {
-						division = "name = \Punishers\" division_template = \Punishers\" start_experience_factor = 0.1 start_equipment_factor = 0.2 start_manpower_factor = 0.2"
-						owner = ROOT
+					division = "name = \Punishers\" division_template = \Punishers\" start_experience_factor = 0.1 start_equipment_factor = 0.2 start_manpower_factor = 0.2"
+					owner = ROOT
 				}
 			}
 		}
@@ -178,7 +182,7 @@ focus_tree = {
 					elections_allowed = no
 				}
 				set_cosmetic_tag = ECD_Krasnodar_cult
-				hidden_effects = {
+				hidden_effect = {
 					set_popularities = {
 						sacraments = 100
 					}
