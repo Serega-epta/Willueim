@@ -474,11 +474,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
 		}
 
 		categories = {
@@ -517,11 +512,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
 		}
 
 		categories = {
@@ -561,10 +551,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
+
 		}
 
 		categories = {
@@ -595,10 +582,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
+
 		}
 
 		categories = {
@@ -641,19 +625,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 0.5
 
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
 			modifier = {
 				factor = 2
 				date > "1937.1.1"
@@ -706,19 +678,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
+
 		}
 
 		categories = {
@@ -757,19 +717,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
+
 		}
 
 		categories = {
@@ -812,19 +760,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
+
 		}
 
 		categories = {
@@ -863,19 +799,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
 		}
 
 		categories = {
@@ -910,19 +833,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
 		}
 
 		categories = {
@@ -958,29 +868,6 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = {
-				factor = 0.2
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
 			modifier = {
 				factor = 2
 				date > "1937.1.1"
@@ -1081,16 +968,6 @@ technologies = {
 				}
 			}
 			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
 				factor = 2
 				date > "1939.1.6"
 			}
@@ -1141,25 +1018,6 @@ technologies = {
 			modifier = {
 				factor = 2
 				date > "1939.1.9"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
-			modifier = {
-				tag = USA
-				has_War = no
-				factor = 0.5 #this tank nonsense will never catch on
 			}
 			modifier = {
 				factor = 5
@@ -1241,16 +1099,6 @@ technologies = {
 			modifier = {
 				factor = 2
 				date > "1941.1.6"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
 			}
 			modifier = {
 				factor = 2
@@ -1339,16 +1187,6 @@ technologies = {
 				date > "1942.1.6"
 			}
 			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
 				factor = 5
 				date > "1943.1.1"
 			}
@@ -1396,16 +1234,6 @@ technologies = {
 			modifier = {
 				factor = 2
 				date > "1942.1.9"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
 			}
 			modifier = {
 				factor = 2

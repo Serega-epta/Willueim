@@ -1,5 +1,6 @@
 characters = {
 	BSL_prohor = {
+		name = BSL_prohor
 		portraits={
 			civilian={
 				large="gfx/leaders/BSL/prohor.dds"
@@ -10,6 +11,9 @@ characters = {
 			expire="1965.1.1.1"
 			id=-1
 			desc = BSL_prohor_DESC
+			traits = {
+				hunt_nas_begun
+			}
 		}
 	}	
 }

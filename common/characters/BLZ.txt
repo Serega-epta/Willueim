@@ -1,15 +1,18 @@
 characters = {
 	BLZ_akim_juk = {
-		portraits={
-			civilian={
-				large="gfx/leaders/BLZ/akim_juk.dds"
+		name = BLZ_akim_juk
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BLZ/akim_juk.dds"
 			}
 		}
 		country_leader={
-			ideology=free_people_subideology   
-			expire="1965.1.1.1"
-			id=-1
-			desc = BLZ_akim_juk_DESC
+			#desc = "POLITICS_STEPAN_TOLMUTOV_DESC"
+			desc = "BLZ_akim_juk_DESC" #use standart keys pls
+			ideology = free_people_subideology   
+			traits = {}
+			expire = "2050.1.1.1"
+			id = -1
 		}
 	}	
 }

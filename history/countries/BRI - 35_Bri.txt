@@ -1,9 +1,5 @@
 capital = 874
-
-
 oob = "BRI"
-
-
 # Starting tech
 set_technology = {
     #Категория пехоты
@@ -29,18 +25,16 @@ set_technology = {
     construction1 = 1
     fuel_silos = 1
 }
-
 set_research_slots = 2
-set_convoys = 20
-add_manpower = 75000
+set_convoys = 0
+set_stability = 0.75
+set_war_support = 1
 set_politics = {
 	ruling_party = militarists 
 	elections_allowed = no
 }
-
 set_popularities = {
 	militarists = 100
 }
-
 recruit_character = BRI_igor_streltsov
 add_ideas = black_guard

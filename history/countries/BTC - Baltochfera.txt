@@ -1,7 +1,5 @@
 capital = 189
-
-oob = "ODS_1936"
-
+oob = base
 add_ideas = {
     BTC_asinis_par_asinim
 }
@@ -9,29 +7,21 @@ add_ideas = {
 set_technology = {
     infantry_weapons = 1
 }
-
 set_research_slots = 2
+set_convoys = 0
+set_stability = 0.75
+set_war_support = 1
 set_politics = {
 	ruling_party = free_people	
 	elections_allowed = no
-}
-
-set_popularities = {
-	sacraments = 30
-	free_people = 70
-	
 }
 add_opinion_modifier = {
     target = AGE
     modifier = oppressors
 }
-
-create_country_leader = {
-    name = "BTC_iohan_mil"
-    desc = "BTC_iohan_mil_DESC"
-    picture = "gfx/leaders/BTC/iohan_mil.dds"
-    ideology = free_people_subideology   
-    traits = { pribalt_nazi }
+set_popularities = {
+	chthonism = 15
+	free_people = 70
+	humanists = 15
 }
-
-
+recruit_character = BTC_iohan_mil
