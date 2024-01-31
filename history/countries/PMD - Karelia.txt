@@ -1,0 +1,121 @@
+capital = 148
+
+set_stability = 1
+set_war_support = 0.94
+army_experience = 20
+add_to_variable = { Chernii_rubli = 500 }
+oob = base
+add_ideas = {
+    PMD_preparations_for_war
+    PMD_hunger
+	limited_recruting
+	ateizm
+	long_smeni
+	trud_povinn
+	sderjivanie_iskajenii
+}
+
+add_opinion_modifier = {
+	target = NMG
+	modifier = american_interventionists
+}
+add_opinion_modifier = {
+	target = LKV
+	modifier = brother_in_arms
+}
+add_opinion_modifier = {
+	target = MGL
+	modifier = warlords
+}
+add_opinion_modifier = {
+	target = PLD
+	modifier = warlords
+}
+add_opinion_modifier = {
+	target = DRG
+	modifier = warlords
+}
+add_opinion_modifier = {
+	target = ZLG
+	modifier = warlords
+}
+add_opinion_modifier = {
+	target = SFR
+	modifier = warlords
+}
+
+
+# Стартовые технологии
+set_technology = {
+    infantry_weapons = 1
+    infantry_weapons1 = 1
+    infantry_weapons2 = 1
+    infantry_odejda = 1
+    infantry_odejda1 = 1
+    gw_artillery = 1
+    tech_support = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+    }
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+#set_technology = { #ТЕХИ ПОСЛЕ СЛИВА ВЕТОК#
+    infantry_weapons
+	infantry_weapons1
+	infantry_weapons2
+	civilian_clothing
+	old_worlds_uniform
+	gw_artillery
+	tech_support
+	pre_war_OPV
+	bba_pre_war_fighter
+}
+
+set_research_slots = 2
+
+set_politics = {
+	ruling_party = militarists 
+	elections_allowed = no
+}
+set_popularities = {
+    militarists = 100
+}
+
+recruit_character = PMD_danila_popadeikin
+recruit_character = PMD_fiodr_kuznecov
+recruit_character = PMD_roza_shanina
+recruit_character = PMD_nikolai_gulaev
+
+
+
+
+
+
