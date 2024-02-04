@@ -11,7 +11,7 @@ focus_tree = {
 
 	focus = {
 		id = STW_big_meeting
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_big_meeting
 		cost = 3.00
 		x = 2
 		y = 0
@@ -22,7 +22,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_solve_problems
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_solve_problems
 		cost = 3.00
 		x = 2
 		y = 1
@@ -35,7 +35,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_racket
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_racket
 		cost = 3.00
 		x = 0
 		y = 2
@@ -54,7 +54,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_gather_brothers
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_gather_brothers
 		cost = 3.00
 		x = 2
 		y = 2
@@ -66,7 +66,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_trellis_workshop
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_trellis_workshop
 		cost = 3.00
 		x = 4
 		y = 2
@@ -85,7 +85,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_become_people
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_become_people
 		cost = 3.00
 		x = 2
 		y = 3
@@ -124,7 +124,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_rostov_father
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_rostov_father
 		cost = 3.00
 		x = 8
 		y = 0
@@ -149,19 +149,19 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_mine 
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_mine
 		cost = 3.00
 		x = 6
 		y = 1
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = STW_rostov_father }
 		completion_reward = {
-			add_ideas = mine_idea
+			add_ideas = STW_mine_idea
 		}
 	}
 	focus = {
 		id = STW_organize_raid
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_organize_raid
 		cost = 3.00
 		x = 8
 		y = 1
@@ -176,7 +176,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STW_common_fund
-		icon = GFX_KUH_Our_way
+		icon = GFX_STW_common_fund
 		cost = 3.00
 		x = 10
 		y = 1

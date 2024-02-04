@@ -155,12 +155,13 @@ focus_tree = {
 	focus = {
 		id = KUH_death_to_atheists 
 		cost = 3.00
+		icon = GFX_KUH_death_to_atheists
 		x = 6
 		y = 1
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = KUH_new_parish }
 		completion_reward = {
-			add_ideas = death_to_atheists
+			add_ideas = KUH_death_to_atheists_idea
 		}
 	}
 	focus = {

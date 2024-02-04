@@ -11,7 +11,7 @@ focus_tree = {
 
 	focus = {
 		id = FSR_free_city
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_free_city
 		cost = 3.00
 		x = 2
 		y = 0
@@ -22,7 +22,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_borders_of_freedom
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_borders_of_freedom
 		cost = 3.00
 		x = 2
 		y = 1
@@ -50,7 +50,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_rostov_tractors
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_rostov_tractors
 		cost = 3.00
 		x = 0
 		y = 2
@@ -69,7 +69,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_skills_not_number
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_skills_not_number
 		cost = 3.00
 		x = 2
 		y = 2
@@ -88,7 +88,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_arsenal_of_independence
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_arsenal_of_independence
 		cost = 3.00
 		x = 4
 		y = 2
@@ -146,7 +146,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_kuban_problem
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_kuban_problem
 		cost = 3.00
 		x = 8
 		y = 0
@@ -165,19 +165,19 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_against_Leviathan 
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_against_Leviathan
 		cost = 3.00
 		x = 6
 		y = 1
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = FSR_kuban_problem }
 		completion_reward = {
-			add_ideas = against_Leviathan
+			add_ideas = FSR_against_Leviathan_idea
 		}
 	}
 	focus = {
 		id = FSR_send_diplomates
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_send_diplomates
 		cost = 3.00
 		x = 8
 		y = 1
@@ -193,7 +193,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FSR_mutual_integration
-		icon = GFX_KUH_Our_way
+		icon = GFX_FSR_mutual_integration
 		cost = 3.00
 		x = 10
 		y = 1
