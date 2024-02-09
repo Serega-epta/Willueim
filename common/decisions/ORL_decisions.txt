@@ -1,5 +1,6 @@
 volga_war = {
 	conflict_escalation_mission = {
+		priority = 999
 		allowed = {
 			original_tag = ORL
 		}
@@ -54,6 +55,10 @@ volga_war = {
 				value = 0.05
 				tooltip = sub_volga_war_cgf_5_tt
 			}
+			clamp_variable = {
+				var = volga_war_cgf
+				min = 0
+			}
 		}
 	}
 	establish_new_trade_connections = {
@@ -67,6 +72,10 @@ volga_war = {
 				var = volga_war_cgf
 				value = 0.1
 				tooltip = sub_volga_war_cgf_10_tt
+			}
+			clamp_variable = {
+				var = volga_war_cgf
+				min = 0
 			}
 		}
 	}
@@ -91,6 +100,10 @@ volga_war = {
 				value = 0.1
 				tooltip = sub_volga_war_cgf_10_tt
 			}
+			clamp_variable = {
+				var = volga_war_cgf
+				min = 0
+			}
 		}
 	}
 	extra_shifts = {
@@ -108,6 +121,10 @@ volga_war = {
 				var = volga_war_cgf
 				value = 0.1
 				tooltip = sub_volga_war_cgf_10_tt
+			}
+			clamp_variable = {
+				var = volga_war_cgf
+				min = 0
 			}
 		}
 	}
