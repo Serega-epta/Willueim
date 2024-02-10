@@ -568,7 +568,7 @@ kanon_absol = {
 #ODS
 	NERC_idea = {
 		enable = { always = yes }
-		icon = black_berets
+		icon = GFX_idea_black_berets
 		research_speed_factor =  research_NERC
 		political_power_factor = pp_NERC
 		production_factory_efficiency_gain_factor = production_factory_efficiency_NERC
@@ -577,7 +577,7 @@ kanon_absol = {
 	}
 	black_beret_dynamic = {
 		enable = { always = yes }
-		icon = black_berets
+		icon = GFX_idea_black_berets
 		resistance_damage_to_garrison_on_our_occupied_states = 0.4
 		resistance_growth_on_our_occupied_states = 0.5
 		max_planning = 0.2
@@ -592,7 +592,7 @@ kanon_absol = {
 	}
 	dicarstvo_dynamic = {
 		enable = { always = yes }
-		icon = Veny_reshima
+		icon = GFX_idea_Veny_reshima
 		surrender_limit = -0.15
 		production_factory_efficiency_gain_factor = -0.05
 		production_factory_max_efficiency_factor = -0.05
@@ -606,12 +606,11 @@ kanon_absol = {
 		attrition = attrition_dicarstvo
 	}
 #ARM
- ARM_hearts_dynamic = {
-	enable = { always = yes }
-	icon = ARM_hearts_idea
-	offence = offence_hearts
-	defence = defence_hearts
-	surrender_limit = surrender_limit_hearts
-	army_org_factor = army_org_factor_hearts
-
+ 	ARM_hearts_dynamic = {
+		enable = { always = yes }
+		icon = GFX_idea_ARM_hearts_idea
+		offence = offence_hearts
+		defence = defence_hearts
+		surrender_limit = surrender_limit_hearts
+		army_org_factor = army_org_factor_hearts
  }

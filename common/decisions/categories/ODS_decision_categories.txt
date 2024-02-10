@@ -17,10 +17,8 @@ ODS_intention = {
 	scripted_gui = ODS_intention
 	visible_when_empty = yes
 	visible  = {
-		 original_tag = ODS
-		 NOT = {
-			has_country_flag = intension_hide
-		 } 
+		original_tag = ODS
+		has_country_flag = intension_show
 	}
 	allowed = { original_tag = ODS }
 	priority = { base = 5 }

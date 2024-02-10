@@ -87,10 +87,8 @@ ODS_subordination = {
 			}
 		}
 		visible = {
-			NOT = {
-				state = 837
-				state = 838
-				state = 839
+			FROM = {
+				has_dynamic_modifier = { modifier = ODS_new_land }
 			}
 		}
 		target_trigger = { т
