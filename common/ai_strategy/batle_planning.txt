@@ -57,7 +57,7 @@ accurate_frontline = {
 		type = front_control
 		priority = 2
 		country_trigger = {
-			has_war_with = ROOT	#we need carefull actions
+			has_war_with = ROOT				#we need carefull actions
 		}
 		ratio = 0.5
 		ordertype = front
@@ -69,14 +69,14 @@ accurate_frontline = {
 balanced_frontline = {
 	enable = {
 		has_war = yes
-		#to do limit this
+		enemies_strength_ratio < 0.5
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = front_control
 		priority = 3
 		country_trigger = {
-			has_war_with = ROOT	#we need carefull actions
+			has_war_with = ROOT				#we need carefull actions
 		}
 		ratio = 0.25
 		ordertype = front
@@ -88,7 +88,7 @@ balanced_frontline = {
 #we can rush (be a little more agressive if enemies are weaker)
 agrassivly_balanced_frontline = {
 	enable = {
-		enemies_strength_ratio < 0
+		has_potential_for_agression = yes
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -133,12 +133,12 @@ agressive_frontline = {
 		execute_order = yes
 	}
 }
-extreamly_agressive_frontlane = {
+extreamly_agressive_frontline = {
 	enable = {
 		any_neighbor_country = {
 			has_country_flag = agressive_frontline_from_@ROOT
 		}
-		#to do limit this
+		has_potential_for_agression = yes
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
