@@ -1,0 +1,196 @@
+focus_tree = {
+	id = SDC_phase_one
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 100
+            tag = SDC
+        }
+    }
+    default = no
+
+    focus = {
+        id = SDC_Visit                 #Визит
+        cost = 1
+        x = 6
+        y = 0
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_despite_everything    #Несмотря ни на что
+        prerequisite = { focus = SDC_Visit }
+        cost = 1
+        x = 6
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_problem_cordonik    #Проблема кордонников
+        prerequisite = { focus = SDC_despite_everything }
+        cost = 1
+        x = 5
+        y = 2
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_eradicate_Wiluiem    #Искоренить ввилуимов
+        prerequisite = { focus = SDC_despite_everything }
+        cost = 1
+        x = 7
+        y = 2
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_public_safety_concept   #Концепция общественной безопастности
+        prerequisite = { focus = SDC_problem_cordonik }
+        cost = 1
+        x = 3
+        y = 3
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_stabilization_situation   #Стабилизация положения
+        prerequisite = { focus = SDC_eradicate_Wiluiem }
+        cost = 1
+        x = 9
+        y = 3
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_expand_influence   #Расширить влияние
+        prerequisite = { focus = SDC_public_safety_concept }
+        cost = 1
+        x = 2
+        y = 4
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_secure_borders   #Обезопасить границы
+        prerequisite = { focus = SDC_public_safety_concept }
+        cost = 1
+        x = 4
+        y = 4
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_security_service   #Служба безопастности
+        prerequisite = { focus = SDC_stabilization_situation }
+        cost = 1
+        x = 8
+        y = 4
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_rationing   #Нормирование продуктов
+        prerequisite = { focus = SDC_stabilization_situation }
+        cost = 1
+        x = 10
+        y = 4
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_march_east   #Марш на восток
+        prerequisite = { focus = SDC_expand_influence }
+        cost = 1
+        x = 2
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_everyone_hold_weapon   #Все кто может держать оружие
+        prerequisite = { focus = SDC_secure_borders }
+        cost = 1
+        x = 4
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_kill_toilets   #Мочить в сортирах
+        prerequisite = { focus = SDC_security_service }
+        cost = 1
+        x = 8
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_oil_needle   #Нефтянная игла
+        prerequisite = { focus = SDC_rationing }
+        cost = 1
+        x = 10
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+    focus = {
+        id = SDC_front_stabilization   #Стабилизация фронта
+        prerequisite = { focus = SDC_oil_needle }
+        prerequisite = { focus = SDC_kill_toilets }
+        prerequisite = { focus = SDC_everyone_hold_weapon }
+        prerequisite = { focus = SDC_march_east  }
+        cost = 1
+        x = 6
+        y = 6
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+        }
+    }
+}
