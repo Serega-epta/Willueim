@@ -33,7 +33,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.1
+				stability_factor = -0.6
 				war_support_factor = -0.5
 				surrender_limit = -0.4
 				weekly_manpower = -10
@@ -52,7 +52,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.6
 				war_support_factor = -0.5
 				surrender_limit = -0.4
 				weekly_manpower = -10
@@ -71,10 +70,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.6
 				war_support_factor = -0.5
-				surrender_limit = 0.4
-				weekly_manpower = 10
 			}
 		}
 		SDC_Korodonniki1 = {                  #Короднникиv1      
@@ -94,7 +90,8 @@ ideas = {
 				army_org_factor = -0.2
 				acclimatization_cold_climate_gain_factor = 0.1
 				army_defence_factor = 0.1
-				army_offence_factor = -0.1		
+				army_offence_factor = -0.1
+		
 			}
 		}
 		SDC_Korodonniki2 = {					#Короднникиv2
@@ -113,8 +110,7 @@ ideas = {
 				conscription = -0.001
 				army_org_factor = -0.2
 				acclimatization_cold_climate_gain_factor = 0.1
-				army_defence_factor = 0.1
-				army_offence_factor = 0.1		
+				army_defence_factor = 0.1		
 			}
 		}
 		SDC_Korodonniki3 = {					#Короднникиv3
@@ -130,11 +126,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.001
+				conscription = 0.002
 				army_org_factor = -0.2
 				acclimatization_cold_climate_gain_factor = 0.1
-				army_defence_factor = 0.1
-				army_offence_factor = 0.1		
+				army_defence_factor = 0.1	
 			}
 		}
 		SDC_hunger1 = {           #Голодv1
