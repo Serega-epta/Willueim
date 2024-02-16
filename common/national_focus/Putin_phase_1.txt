@@ -20,162 +20,263 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
+            add_political_power = 100
         }
     }
     focus = {
         id = SDC_despite_everything    #Несмотря ни на что
         prerequisite = { focus = SDC_Visit }
-        cost = 1
+        cost = 5
         x = 6
         y = 1
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
-        }
+            add_manpower = 1000
+            division_template = {
+                name = "Opolchenie"
+                is_locked = no
+                priority = 1
+                regiments = {
+                    opolchenie = { x = 0 y = 0}
+                    opolchenie = { x = 0 y = 1}
+                    opolchenie = { x = 1 y = 0}
+                    opolchenie = { x = 1 y = 1}
+                }
+            }
+            capital_scope = {
+                    create_unit = {
+                    division = "name = \"1. Opolchenie\" division_template = \"Opolchenie\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                    owner = ROOT
+                }
+            }
+        }   
     }
     focus = {
         id = SDC_problem_cordonik    #Проблема кордонников
         prerequisite = { focus = SDC_despite_everything }
-        cost = 1
+        cost = 5
         x = 5
         y = 2
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            swap_ideas = {
+                remove_idea = SDC_Korodonniki1
+                add_idea = SDC_Korodonniki2
+            }
         }
     }
     focus = {
         id = SDC_eradicate_Wiluiem    #Искоренить ввилуимов
         prerequisite = { focus = SDC_despite_everything }
-        cost = 1
+        cost = 5
         x = 7
         y = 2
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            swap_ideas = {
+                remove_idea = SDC_Willuem_influese1
+                add_idea = SDC_Willuem_influese2
+            }
         }
     }
     focus = {
         id = SDC_public_safety_concept   #Концепция общественной безопастности
         prerequisite = { focus = SDC_problem_cordonik }
-        cost = 1
+        cost = 5
         x = 3
         y = 3
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            add_ideas = SDC_public_safety_concept1
         }
     }
     focus = {
         id = SDC_stabilization_situation   #Стабилизация положения
         prerequisite = { focus = SDC_eradicate_Wiluiem }
-        cost = 1
+        cost = 5
         x = 9
         y = 3
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            state 997 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            swap_ideas = {
+                remove_idea = SDC_Willuem_influese2
+                add_idea = SDC_Willuem_influese3
+            }
         }
     }
     focus = {
         id = SDC_expand_influence   #Расширить влияние
         prerequisite = { focus = SDC_public_safety_concept }
-        cost = 1
+        cost = 5
         x = 2
         y = 4
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+             declare_war_on = {
+                target = TAG
+                type = annex_everything
+            }
         }
     }
     focus = {
         id = SDC_secure_borders   #Обезопасить границы
         prerequisite = { focus = SDC_public_safety_concept }
-        cost = 1
+        cost = 5
         x = 4
         y = 4
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            division_template = {
+                name = "Kordonniki"
+                is_locked = no
+                priority = 1
+                regiments = {
+                    rhbzbatalion = { x = 0 y = 0}
+                    rhbzbatalion = { x = 0 y = 1}
+                    rhbzbatalion = { x = 1 y = 0}
+                    rhbzbatalion = { x = 1 y = 1}
+                    rhbzbatalion = { x = 0 y = 2}
+                    rhbzbatalion = { x = 1 y = 2}
+                }
+            }
+            capital_scope = {
+                    create_unit = {
+                    division = "name = \"1. Kordonniki\" division_template = \"Kordonniki\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                    owner = ROOT
+                }
+            }
         }
     }
     focus = {
         id = SDC_security_service   #Служба безопастности
         prerequisite = { focus = SDC_stabilization_situation }
-        cost = 1
+        cost = 5
         x = 8
         y = 4
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            swap_ideas = {
+                remove_idea = SDC_Willuem_influese3
+                add_idea = SDC_Willuem_influese4
+            }
         }
     }
     focus = {
         id = SDC_rationing   #Нормирование продуктов
         prerequisite = { focus = SDC_stabilization_situation }
-        cost = 1
+        cost = 5
         x = 10
         y = 4
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            871 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
         }
     }
     focus = {
         id = SDC_march_east   #Марш на восток
         prerequisite = { focus = SDC_expand_influence }
-        cost = 1
+        cost = 5
         x = 2
         y = 5
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            declare_war_on = {
+                target = ARK 
+                type = annex_everything
+            }
         }
     }
     focus = {
         id = SDC_everyone_hold_weapon   #Все кто может держать оружие
         prerequisite = { focus = SDC_secure_borders }
-        cost = 1
+        cost = 5
         x = 4
         y = 5
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            swap_ideas = {
+                remove_idea = SDC_Korodonniki2
+                add_idea = SDC_Korodonniki3
+            }
         }
     }
     focus = {
         id = SDC_kill_toilets   #Мочить в сортирах
         prerequisite = { focus = SDC_security_service }
-        cost = 1
+        cost = 5
         x = 8
         y = 5
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            remove_ideas = SDC_Willuem_influese4
         }
     }
     focus = {
         id = SDC_oil_needle   #Нефтянная игла
         prerequisite = { focus = SDC_rationing }
-        cost = 1
+        cost = 5
         x = 10
         y = 5
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            remove_ideas = SDC_hunger1
+            871 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            997 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
         }
     }
     focus = {
@@ -184,13 +285,17 @@ focus_tree = {
         prerequisite = { focus = SDC_kill_toilets }
         prerequisite = { focus = SDC_everyone_hold_weapon }
         prerequisite = { focus = SDC_march_east  }
-        cost = 1
+        cost = 5
         x = 6
         y = 6
         ai_will_do = {
             factor = 10
         }
         completion_reward ={
+            983 = { add_core_of = SDC }
+            89 = { add_core_of = SDC }
+            884 = { add_core_of = SDC }
+            214 = { add_core_of = SDC }
         }
     }
 }

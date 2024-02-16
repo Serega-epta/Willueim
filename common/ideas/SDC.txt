@@ -1,7 +1,7 @@
 ideas = {
 
-	country = {
-		Fanatic_survival = {
+	country = {  
+		SDC_Willuem_influese1 = {                           #Влияние Виллуимовv1
 			
 			allowed = {
 				always = no
@@ -14,57 +14,161 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				surrender_limit = 0.25
-				local_resources_factor = 0.1
+				stability_factor = -0.7
+				war_support_factor = -0.5
+				surrender_limit = -0.4
+				weekly_manpower = -10
+			}
+		} 
+		SDC_Willuem_influese2 = {                           #Влияние Виллуимовv2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.5
+				surrender_limit = -0.4
+				weekly_manpower = -10
+			}
+		} 
+		SDC_Willuem_influese3 = {                           #Влияние Виллуимовv3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.6
+				war_support_factor = -0.5
+				surrender_limit = -0.4
+				weekly_manpower = -10
+			}
+		}
+		SDC_Willuem_influese4 = {                           #Влияние Виллуимовv4
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.6
+				war_support_factor = -0.5
+				surrender_limit = 0.4
+				weekly_manpower = 10
+			}
+		}
+		SDC_Korodonniki1 = {                  #Короднникиv1      
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.001
+				army_org_factor = -0.2
+				acclimatization_cold_climate_gain_factor = 0.1
+				army_defence_factor = 0.1
+				army_offence_factor = -0.1		
+			}
+		}
+		SDC_Korodonniki2 = {					#Короднникиv2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.001
+				army_org_factor = -0.2
+				acclimatization_cold_climate_gain_factor = 0.1
+				army_defence_factor = 0.1
+				army_offence_factor = 0.1		
+			}
+		}
+		SDC_Korodonniki3 = {					#Короднникиv3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.001
+				army_org_factor = -0.2
+				acclimatization_cold_climate_gain_factor = 0.1
+				army_defence_factor = 0.1
+				army_offence_factor = 0.1		
+			}
+		}
+		SDC_hunger1 = {           #Голодv1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = -15
+				recruitable_population_factor = -0.15
+			}
+		}
+		SDC_public_safety_concept1 = {            #Концепция общественной безопасностиv1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
 				stability_factor = 0.15
-				war_support_factor = 0.15
-	
-			}
-		}
-	}
-	country = {
-		Endless_road = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				Attrition = 0.15
-				acclimatization_cold_climate_gain_factor = -0.15
-				army_speed_factor = -0.1
-				army_org = 0.15
-				army_org_regain = 0.2
-				initiative_factor = -0.25
-				
-			}
-		}
-	}
-	country = {
-		iron_society = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				monthly_population = 0.15
-				production_lack_of_resource_penalty_factor = -0.1
-				production_speed_buildings_factor = 0.05
-				consumer_goods_factor = -0.05
-				
+				political_power_gain = 0.02
 			}
 		}
 	}
