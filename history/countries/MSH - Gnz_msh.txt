@@ -1,22 +1,45 @@
 capital = 1
 
-oob = base #none
+oob = MSH
 
 set_technology = {
     infantry_weapons = 1
+    infantry_odejda  = 1
+    tech_support = 1
+    basic_machine_tools = 1
+    electronic_mechanical_engineering = 1
+    gw_artillery = 1
+    stvolartillery = 1
+    boepripas = 1
 }
 
 set_convoys = 20
+set_research_slots = 3
+set_stability = 0.42
+set_war_support = 0.7
+army_experience = 5
+add_manpower = 19200
+
+add_opinion_modifier = {
+    target = BGR
+    modifier = bandit_conflicts
+}
+add_opinion_modifier = {
+    target = MKS
+    modifier = hucksters
+}
 
 set_politics = {
-    ruling_party = free_people
+    ruling_party = bandits
     last_election = "2000.6.21"
     election_frequency = 48
     elections_allowed = no
 }
 set_popularities = {
-    bandits = 0
-    free_people = 100
+    bandits = 100
 }
-
+create_faction = Horn_faction
+add_to_faction = MSH
+add_to_faction = KMN
 recruit_character = MSH_mikhail_mishustov
+recruit_character = MSH_generic_general
