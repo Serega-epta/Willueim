@@ -1,0 +1,38 @@
+Blazing_Volga_has_not_begun = {
+	date > 2023.06.10
+    MSH = {
+        is_in_faction_with = KMN
+        NOT = {
+            has_war_with = BGR
+        }
+    }
+}
+
+Blazing_Volga_alternative_one = {
+    date > 2023.08.19
+    BGR = {
+        has_capitulated = no
+        surrender_progress > 0.25
+        surrender_progress < 0.85
+    }
+}
+
+Blazing_Volga_alternative_two = {
+    date > 2023.08.19
+    BGR = {
+        has_capitulated = no
+        surrender_progress > 0.85
+    }
+}
+
+Blazing_Volga_BGR_wins = {
+    MSH = {
+        surrender_progress > 0.95 #нужно, чтобы капнуть не успел
+    }
+}
+
+Blazing_Volga_MSH_win = {
+    BGR = {
+        has_capitulated = yes
+    }
+}
