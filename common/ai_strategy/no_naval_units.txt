@@ -2,6 +2,7 @@ no_naval_plans = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = naval_invasion_focus
 		value = -999
@@ -11,6 +12,7 @@ no_naval_buildings = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = dockyard
@@ -26,6 +28,7 @@ no_naval_units = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 	#army
 	ai_strategy = {
 		type = unit_ratio
