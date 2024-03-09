@@ -2,6 +2,7 @@ replace_path="common/ai_focuses"
 replace_path="common/ai_strategy"
 replace_path="common/ai_strategy_plans"
 replace_path="common/ai_templates"
+replace_path="common/ai_equipment"
 replace_path="common/decisions/categories"
 replace_path="common/decisions"
 replace_path="common/national_focus"
@@ -59,4 +60,4 @@ tags={
 	"Technologies"
 }
 name="The Requiem of Humankind: First Alpha"
-supported_version="1.13.*"
+supported_version="1.14.*"
