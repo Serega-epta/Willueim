@@ -1,0 +1,484 @@
+focus_tree = {
+    id = ARM_phase_three
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 100
+            tag = ARM
+        }
+    }
+    default = no
+
+    focus = {
+        id = ARM_new_frontiers                      #Новые Рубежи
+        available = { has_war = no }
+        x = 10
+        y = 0
+        cost = 2.8
+        ai_will_do = { factor = 10 }
+        completion_reward ={}
+    }
+    focus = {
+        id = ARM_take_breath                                #Перевести дух
+        prerequisite = { focus = ARM_new_frontiers }
+        x = 10
+        y = 1
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_take_order                                 #Навести порядок
+        prerequisite = { focus = ARM_take_breath }
+        x = 6
+        y = 2
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_restoration_Bryansk                #Восстановительные работы в Брянске
+        prerequisite = { focus = ARM_take_breath }
+        x = 10
+        y = 2
+        cost = 6.4
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_collesct_survaivor                #Собрать уцелевшее
+        prerequisite = { focus = ARM_take_breath }
+        x = 14
+        y = 2
+        cost = 6.4
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_consul_purge                #Чистка администрации консульства
+        prerequisite = { focus = ARM_take_order }
+        x = 6
+        y = 3
+        cost = 7.1
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_new_factories                #Построить новые заводы
+        prerequisite = { focus = ARM_restoration_Bryansk }
+        mutually_exclusive = { focus = ARM_new_church }
+        x = 9
+        y = 3
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_new_church                #Восстановить церкви
+        prerequisite = { focus = ARM_restoration_Bryansk }
+        mutually_exclusive = { focus = ARM_new_factories }
+        x = 11
+        y = 3
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_take_lessons                #Извлечь Уроки
+        prerequisite = { focus = ARM_collesct_survaivor }
+        mutually_exclusive = { focus = ARM_learn_mistakes }
+        x = 13
+        y = 3
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_learn_mistakes                #Учится на ошибках
+        prerequisite = { focus = ARM_collesct_survaivor }
+        mutually_exclusive = { focus = ARM_take_lessons }
+        x = 15
+        y = 3
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_recover_stolen                #Изъять краденное
+        prerequisite = { focus = ARM_consul_purge }
+        x = 6
+        y = 4
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_civil_buildings                #Ускорить гражданское строительство
+        prerequisite = { focus = ARM_recover_stolen }
+        mutually_exclusive = { focus = ARM_military_potentional }
+        x = 5
+        y = 5
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_military_potentional               #Нарастить военный потенциал
+        prerequisite = { focus = ARM_recover_stolen }
+        mutually_exclusive = { focus = ARM_civil_buildings }
+        x = 7
+        y = 5
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_regional_centres               #Региональые центры подготовки
+        prerequisite = { focus = ARM_new_church focus = ARM_new_factories }
+        x = 9
+        y = 5
+        cost = 5.7
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+     focus = {
+        id = ARM_sharpen_swords              #Наточить мечи
+        prerequisite = { focus = ARM_new_church focus = ARM_new_factories }
+        x = 11
+        y = 5
+        cost = 4.3
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_hiring_volonters              #Организовать найм добровольцев
+        prerequisite = { focus = ARM_take_lessons focus = ARM_learn_mistakes }
+        x = 13
+        y = 5
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+     focus = {
+        id = ARM_god_war              #Артилерия бог войны
+        prerequisite = { focus = ARM_take_lessons focus = ARM_learn_mistakes }
+        x = 15
+        y = 5
+        cost = 5.7
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_secure_west              #Обезопасить запад
+        prerequisite = { focus = ARM_regional_centres }
+        prerequisite = { focus = ARM_military_potentional focus = ARM_civil_buildings }
+        x = 8
+        y = 6
+        cost = 2.9
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_go_south              #Двинутся на юг
+        prerequisite = { focus = ARM_sharpen_swords }
+        prerequisite = { focus = ARM_hiring_volonters }
+        x = 12
+        y = 6
+        cost = 2.9
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_kill_fanatic              #Усмирить фанатиков
+        prerequisite = { focus = ARM_secure_west }
+        mutually_exclusive = { focus = ARM_notthis_world }
+        x = 7
+        y = 7
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_notthis_world             #Не от мира сего
+        prerequisite = { focus = ARM_secure_west }
+        mutually_exclusive = { focus = ARM_kill_fanatic }
+        x = 9
+        y = 7
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_breatbasket_bandits              #Житница бандитов
+        prerequisite = { focus = ARM_go_south }
+        x = 11
+        y = 7
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_sea_monsters              #Морское чудовище
+        prerequisite = { focus = ARM_go_south }
+        x = 13
+        y = 7
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_western_integration              #Интеграция западных окраин
+        prerequisite = { focus = ARM_kill_fanatic focus = ARM_notthis_world }
+        x = 8
+        y = 8
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_rebber_mining              #Добыча резины на новых островах
+        prerequisite = { focus = ARM_breatbasket_bandits }
+        prerequisite = { focus = ARM_sea_monsters }
+        x = 12
+        y = 8
+        cost = 5.7
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_admirality_technology              #Технологии адмиралтейства
+        prerequisite = { focus = ARM_sea_monsters }
+        x = 15
+        y = 8
+        cost = 4.3
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_quirks_world              #Причуды нового мира
+        prerequisite = { focus = ARM_western_integration }
+        x = 8
+        y = 9
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_provide_supplies              #Обеспечить снабжение
+        prerequisite = { focus = ARM_rebber_mining }
+        x = 11
+        y = 9
+        cost = 5.7
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_tighten_call              #Ужесточить призыв
+        prerequisite = { focus = ARM_rebber_mining }
+        x = 13
+        y = 9
+        cost = 2.1
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_eliminate_danger              #Устранить опасность
+        prerequisite = { focus = ARM_quirks_world }
+        mutually_exclusive = { focus = ARM_touch_unknown }
+        x = 7
+        y = 10
+        cost = 4.3
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+     focus = {
+        id = ARM_touch_unknown              #Прикоснуться к неизвестному
+        prerequisite = { focus = ARM_quirks_world }
+        mutually_exclusive = { focus = ARM_eliminate_danger }
+        x = 9
+        y = 10
+        cost = 4.3
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_impetus_mechanization             #Толчок в развитии механизации
+        prerequisite = { focus = ARM_provide_supplies  }
+        x = 11
+        y = 10
+        cost = 4.3
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_powers_crimson             #Расширить полномочия Багровых лучей
+        prerequisite = { focus = ARM_tighten_call  }
+        x = 13
+        y = 10
+        cost = 5.7
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_radar_patrol             #Радарный дозор
+        prerequisite = { focus = ARM_eliminate_danger focus = ARM_touch_unknown  }
+        x = 8
+        y = 11
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Marshal_Renaissance            #Маршал Возрождения
+        prerequisite = { focus = ARM_impetus_mechanization }
+        prerequisite = { focus = ARM_powers_crimson }
+        x = 12
+        y = 11
+        cost = 3.8
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_strengthening_Western            #Укрепление западной границы
+        prerequisite = { focus = ARM_radar_patrol }
+        x = 8
+        y = 12
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_express_yuorseld            #Заявить о себе
+        prerequisite = { focus = ARM_Marshal_Renaissance }
+        x = 12
+        y = 12
+        cost = 4.3
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Educational_programs            #Воспитательные программы
+        prerequisite = { focus = ARM_strengthening_Western }
+        x = 9
+        y = 13
+        cost = 7.1
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Everything_front            #Всё для фронта, всё для победы!
+        prerequisite = { focus = ARM_express_yuorseld }
+        x = 11
+        y = 13
+        cost = 7.1
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Select_flag            #Выбрать новый флаг
+        prerequisite = { focus = ARM_Educational_programs }
+        prerequisite = { focus = ARM_Everything_front }
+        x = 8
+        y = 14
+        cost = 2.9
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_cherished_goal            #Наша заветная цель
+        prerequisite = { focus = ARM_Educational_programs }
+        prerequisite = { focus = ARM_Everything_front }
+        x = 10
+        y = 14
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_go_east            #Отправиться на восток
+        prerequisite = { focus = ARM_Educational_programs }
+        prerequisite = { focus = ARM_Everything_front }
+        x = 13
+        y = 14
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_trip_Kuban            #Поход на Кубань
+        prerequisite = { focus = ARM_Select_flag }
+        x = 8
+        y = 15
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Prepare_retribution            #Готовиться к великому возмездию
+        prerequisite = { focus = ARM_cherished_goal }
+        x = 10
+        y = 15
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Rebuilding_industrial            #Восстановление промышленной базы
+        prerequisite = { focus = ARM_go_east }
+        x = 12
+        y = 15
+        cost = 5.7
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_extraction_Donbass            #Увеличить добычу ресурсов на Донбассе
+        prerequisite = { focus = ARM_go_east }
+        x = 14
+        y = 15
+        cost = 4.3
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Order_Kuban            #Порядок на Кубани
+        prerequisite = { focus = ARM_trip_Kuban }
+        x = 8
+        y = 16
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Unwavering_Anger            #Незыблемый гнев
+        prerequisite = { focus = ARM_Prepare_retribution }
+        x = 10
+        y = 16
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Offer_alternative            #Предложить достойную альтернативу
+        prerequisite = { focus = ARM_Rebuilding_industrial }
+        prerequisite = { focus = ARM_extraction_Donbass }
+        x = 13
+        y = 16
+        cost = 5
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+    focus = {
+        id = ARM_Alignment_Russia            #Равняйсь! Смирно! Равнение на Россию!
+        prerequisite = { focus = ARM_Offer_alternative }
+        prerequisite = { focus = ARM_Unwavering_Anger }
+        prerequisite = { focus = ARM_Order_Kuban }
+        x = 10
+        y = 17
+        cost = 3.6
+        ai_will_do = { factor = 10 }
+        completion_reward = {}
+    }
+}
