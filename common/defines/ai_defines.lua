@@ -47,6 +47,9 @@ NDefines.NAI.DESPERATE_AI_WEAK_UNIT_STR_LIMIT				= 0.15	--min org of nonweak (no
 NDefines.NAI.DESPERATE_AI_MIN_ORG_BEFORE_ATTACK				= 0.2	--min org of encircled unit for offence
 NDefines.NAI.DESPERATE_AI_MIN_ORG_BEFORE_MOVE				= 0.05	--min org of encircled unit for movement
 
+NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTOR = 10
+NDefines.NAI.WANTED_UNITS_THREAT_BASE = 2
+
 --NDefines.NAI.WANTED_CARRIER_PLANES_PER_CARRIER_CAPACITY_FACTOR					= 0	--no ships allowed
 --NDefines.NAI.WANTED_CARRIER_PLANES_PER_CARRIER_CAPACITY_IN_PRODUCTION_FACTOR	= 0	--no ships allowed
 
