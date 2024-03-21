@@ -50,7 +50,10 @@ focus_tree = {
                 id = ARMnew.23
                 days = 1
             }
-            add_political_power = 100  
+            set_country_flag = ARM_first_phase_flag
+            add_political_power =100
+            set_variable = { consulate_power = 0 }
+            set_variable = { coalition_power = 0 }
         }
     }
 
@@ -353,80 +356,12 @@ focus_tree = {
         prerequisite = { focus = ARM_no_mercy_for_traitors focus = ARM_chance_for_redemption }
         prerequisite = { focus = ARM_dark_clouds }
         prerequisite = { focus = ARM_supply_for_rear }
-        available = {
-            hidden_trigger = {
-                ARM = {
-                    has_completed_focus = ARM_first_phase
-                }
-                NOT = {
-                    country_exists = IMP
-                }
-            }
-        }
         x = 10
         y = 6
         cost = 5
         ai_will_do = { factor = 10 }
         completion_reward = {
-            880 = {
-                add_core_of = CAR
-            }
-            834 = {
-                add_core_of = CAR
-            }
-            899 = {
-                add_core_of = CAR
-            }
-            896 = {
-                add_core_of = CAR
-            }
-            241 = {
-                add_core_of = CAR
-            }
-            224 = {
-                add_core_of = CAR
-            }
-            893 = {
-                add_core_of = CAR
-            }
-            898 = {
-                add_core_of = CAR
-            }
-            895 = {
-                add_core_of = CAR
-            }
-            903 = {
-                add_core_of = CAR
-            }
-            943 = {
-                add_core_of = CAR
-            }
-            902 = {
-                add_core_of = CAR
-            }
-            243 = {
-                add_core_of = CAR
-            }
-            ARM = {
-                release_puppet = CAR
-            }
-            CAR = {
-                annex_country = {
-                    target = NOR
-                    transfer_troops = no
-                }
-                annex_country = {
-                    target = PLR
-                    transfer_troops = no
-                }
-                annex_country = {
-                    target = COR
-                    transfer_troops = no
-                }
-            }
-            hidden_effect = {
-                load_focus_tree = ARM_phase_three
-            }
+            #создаётся госураство Центральная группа армий.
         }
     }
     focus = {
@@ -438,10 +373,6 @@ focus_tree = {
         ai_will_do = { factor = 10 }
         completion_reward = {
             add_political_power = 100
-            set_country_flag = ARM_middle_russian_war_flag
-            set_country_flag = ARM_first_phase_flag
-            set_variable = { consulate_power = 0 }
-            set_variable = { coalition_power = 0 }
         }
     }
     focus = {
@@ -464,7 +395,6 @@ focus_tree = {
                 producer = ARM
             }
             add_to_variable = { coalition_power = 10}
-            custom_effect_tooltip = coalition_power_plus_10_tt
         }
     }
     focus = {
@@ -488,14 +418,6 @@ focus_tree = {
         id = ARM_second_phase
         icon = GFX_ARM_second_phase
         prerequisite = { focus = ARM_donot_check_looses focus = ARM_use_our_strength }
-        available = {
-			hidden_trigger = {
-                has_country_flag = ARM_middle_russian_war_flag
-				NOT = {
-					has_country_flag = ARM_first_phase_flag
-				}
-			} 
-		}
         x = 20
         y = 2
         ai_will_do = { factor = 10 }
@@ -505,8 +427,6 @@ focus_tree = {
                 days = 1
             }
             add_political_power = 150
-            set_country_flag = ARM_second_phase_flag
-            clr_country_flag = ARM_first_phase_flag
             set_variable = { consulate_power = 20 }
             set_variable = { coalition_power = 0 }
         }
@@ -515,10 +435,6 @@ focus_tree = {
         id = ARM_talk_to_mercenaries
         icon = GFX_ARM_talk_to_mercenaries
         prerequisite = { focus = ARM_second_phase }
-        mutually_exclusive = { focus = ARM_group_alpha }
-        available = {
-            has_country_flag = ARM_middle_russian_war_flag
-        }
         x = 19
         y = 3
         ai_will_do = { factor = 10 }
@@ -528,9 +444,10 @@ focus_tree = {
                 days = 1
             }
             add_to_variable = { coalition_power = 10 }
-            custom_effect_tooltip = coalition_power_plus_10_tt
             add_political_power = -20
             add_to_variable = { Chernii_rubli = -3000 }
+            add_country_flag = ARM_second_phase_flag
+            clr_country_flag = ARM_first_phase_flag
         }
     }
     focus = {
@@ -538,9 +455,6 @@ focus_tree = {
         icon = GFX_ARM_group_alpha
         prerequisite = { focus = ARM_second_phase }
         mutually_exclusive = { focus = ARM_talk_to_mercenaries }
-        available = {
-            has_country_flag = ARM_middle_russian_war_flag
-        }
         x = 21
         y = 3
         ai_will_do = { factor = 10 }
@@ -556,12 +470,6 @@ focus_tree = {
         id = ARM_third_phase
         icon = ARM_third_phase
         prerequisite = { focus = ARM_group_alpha focus = ARM_talk_to_mercenaries }
-        available = {
-            has_country_flag = ARM_middle_russian_war_flag
-			NOT = {
-				has_country_flag = ARM_second_phase_flag
-			} 
-		}
         x = 20
         y = 4
         ai_will_do = { factor = 10 }
@@ -571,17 +479,12 @@ focus_tree = {
                 days = 1
             }
             add_political_power = 200
-            clr_country_flag = ARM_second_phase_flag
-            set_country_flag = ARM_third_phase_flag
         }
     }
     focus = {
         id = ARM_no_innocents
         icon = GFX_ARM_no_innocents 
         prerequisite = { focus = ARM_third_phase }
-        available ={
-            has_country_flag = ARM_middle_russian_war_flag
-        }
         x = 19
         y = 5
         ai_will_do = { factor = 10 }
@@ -597,9 +500,6 @@ focus_tree = {
         id = ARM_connect_with_patriots
         icon = GFX_ARM_connect_with_patriots
         prerequisite = { focus = ARM_third_phase }
-        available ={
-            has_country_flag = ARM_middle_russian_war_flag
-        }
         x = 21
         y = 5
         ai_will_do = { factor = 10 }
@@ -615,9 +515,6 @@ focus_tree = {
         id = ARM_burn_everything
         icon = GFX_ARM_burn_everything
         prerequisite = { focus = ARM_connect_with_patriots focus = ARM_no_innocents }
-        available = {
-            has_country_flag = ARM_all_phases_flag
-        }
         x = 20
         y = 6
         ai_will_do = { factor = 10 }
@@ -626,10 +523,12 @@ focus_tree = {
                 type = annex_everything
                 target = IMP
             }
-            add_ideas = ARM_in_three_days
-            IMP = {
-                add_ideas = IMP_in_ring_of_enemies
+            hidden_effect = {
+                load_focus_tree = ARM_phase_three
             }
+            #нац.дух "За три дня"
+            #консульство - "в кольце врагов"
+            #анлок ARM_central_army_group
         }
     }
 }
