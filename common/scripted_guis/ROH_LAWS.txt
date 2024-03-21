@@ -11,187 +11,154 @@ scripted_gui = {
 		effects = {
 			box_law_1_click = {	
 				if = {
-					limit = { check_variable = { okno_zakonow_priziva_opend = 0}}
-						set_variable = { okno_zakonow_priziva_opend = 1 }
-						
-						set_variable = { okno_zakonow_truda_opend = 0 }
-						set_variable = { okno_zakonow_religii_opend = 0 }
-						set_variable = { okno_zakonow_smi_opend = 0 }
-						set_variable = { okno_zakonow_migration_opend = 0 }
-						set_variable = { okno_zakonow_iskajennia_opend = 0 }
-						set_variable = { okno_zakonow_explotatioon_opend = 0 }
-						set_variable = { okno_zakonow_social_opend = 0 }	
+					limit = {
+						NOT = { 
+							check_variable = {
+								main_country_gui = 1
+							}
+						}
+					}
+					set_variable = {
+						main_country_gui = 1
+					}
 				}
 				else = {
-					set_variable = { okno_zakonow_priziva_opend = 0 }
-					set_variable = { okno_zakonow_truda_opend = 0 }
-					set_variable = { okno_zakonow_religii_opend = 0 }
-					set_variable = { okno_zakonow_smi_opend = 0 }
-					set_variable = { okno_zakonow_migration_opend = 0 }
-					set_variable = { okno_zakonow_iskajennia_opend = 0 }
-					set_variable = { okno_zakonow_explotatioon_opend = 0 }
-					set_variable = { okno_zakonow_social_opend = 0 }	
+					set_variable = {
+						main_country_gui = 0
+					}	
 				}
 			}
 			box_law_2_click = {	
 				if = {
-					limit = { check_variable = { okno_zakonow_truda_opend = 0}}
-						set_variable = { okno_zakonow_truda_opend = 1 }
-						set_variable = { okno_zakonow_priziva_opend = 0 }
-						set_variable = { okno_zakonow_religii_opend = 0 }
-						set_variable = { okno_zakonow_smi_opend = 0 }
-						set_variable = { okno_zakonow_migration_opend = 0 }
-						set_variable = { okno_zakonow_iskajennia_opend = 0 }
-						set_variable = { okno_zakonow_explotatioon_opend = 0 }
-						set_variable = { okno_zakonow_social_opend = 0 }	
+					limit = {
+						NOT = { 
+							check_variable = {
+								main_country_gui = 2
+							}
+						}
+					}
+					set_variable = {
+						main_country_gui = 2
+					}
 				}
 				else = {
-					set_variable = { okno_zakonow_truda_opend = 0 }
-					set_variable = { okno_zakonow_priziva_opend = 0 }
-					set_variable = { okno_zakonow_religii_opend = 0 }
-					set_variable = { okno_zakonow_smi_opend = 0 }
-					set_variable = { okno_zakonow_migration_opend = 0 }
-					set_variable = { okno_zakonow_iskajennia_opend = 0 }
-					set_variable = { okno_zakonow_explotatioon_opend = 0 }
-					set_variable = { okno_zakonow_social_opend = 0 }	
+					set_variable = {
+						main_country_gui = 0
+					}	
 				}
 			}
 			box_law_3_click = {	
 				if = {
-					limit = { check_variable = { okno_zakonow_religii_opend = 0}}
-						set_variable = { okno_zakonow_religii_opend = 1 }
-						set_variable = { okno_zakonow_priziva_opend = 0 }
-						set_variable = { okno_zakonow_truda_opend = 0 }
-						set_variable = { okno_zakonow_smi_opend = 0 }
-						set_variable = { okno_zakonow_migration_opend = 0 }
-						set_variable = { okno_zakonow_iskajennia_opend = 0 }
-						set_variable = { okno_zakonow_explotatioon_opend = 0 }
-						set_variable = { okno_zakonow_social_opend = 0 }	
+					limit = {
+						NOT = { 
+							check_variable = {
+								main_country_gui = 3
+							}
+						}
+					}
+					set_variable = {
+						main_country_gui = 3
+					}
 				}
 				else = {
-					set_variable = { okno_zakonow_religii_opend = 0 }
-					set_variable = { okno_zakonow_priziva_opend = 0 }
-					set_variable = { okno_zakonow_truda_opend = 0 }
-					set_variable = { okno_zakonow_smi_opend = 0 }
-					set_variable = { okno_zakonow_migration_opend = 0 }
-					set_variable = { okno_zakonow_iskajennia_opend = 0 }
-					set_variable = { okno_zakonow_explotatioon_opend = 0 }
-					set_variable = { okno_zakonow_social_opend = 0 }	
+					set_variable = {
+						main_country_gui = 0
+					}	
 				}
 			}
 			box_law_4_click = {	
 				if = {
-					limit = { check_variable = { okno_zakonow_smi_opend = 0}}
-						set_variable = { okno_zakonow_smi_opend = 1 }
-						set_variable = { okno_zakonow_religii_opend = 0 }
-						set_variable = { okno_zakonow_priziva_opend = 0 }
-						set_variable = { okno_zakonow_truda_opend = 0 }
-						set_variable = { okno_zakonow_migration_opend = 0 }
-						set_variable = { okno_zakonow_iskajennia_opend = 0 }
-						set_variable = { okno_zakonow_explotatioon_opend = 0 }
-						set_variable = { okno_zakonow_social_opend = 0 }	
+					limit = {
+						NOT = { 
+							check_variable = {
+								main_country_gui = 4
+							}
+						}
+					}
+					set_variable = {
+						main_country_gui = 4
+					}
 				}
 				else = {
-					set_variable = { okno_zakonow_religii_opend = 0 }
-					set_variable = { okno_zakonow_priziva_opend = 0 }
-					set_variable = { okno_zakonow_truda_opend = 0 }
-					set_variable = { okno_zakonow_smi_opend = 0 }
-					set_variable = { okno_zakonow_migration_opend = 0 }
-					set_variable = { okno_zakonow_iskajennia_opend = 0 }
-					set_variable = { okno_zakonow_explotatioon_opend = 0 }
-					set_variable = { okno_zakonow_social_opend = 0 }	
+					set_variable = {
+						main_country_gui = 0
+					}	
 				}
 			}
 			box_law_5_click = {	
 				if = {
-					limit = { check_variable = { okno_zakonow_migration_opend = 0}}
-						set_variable = { okno_zakonow_migration_opend = 1 }
-						set_variable = { okno_zakonow_religii_opend = 0 }
-						set_variable = { okno_zakonow_priziva_opend = 0 }
-						set_variable = { okno_zakonow_truda_opend = 0 }
-						set_variable = { okno_zakonow_smi_opend = 0 }
-						set_variable = { okno_zakonow_iskajennia_opend = 0 }
-						set_variable = { okno_zakonow_explotatioon_opend = 0 }
-						set_variable = { okno_zakonow_social_opend = 0 }	
+					limit = {
+						NOT = { 
+							check_variable = {
+								main_country_gui = 5
+							}
+						}
+					}
+					set_variable = {
+						main_country_gui = 5
+					}
 				}
 				else = {
-					set_variable = { okno_zakonow_religii_opend = 0 }
-					set_variable = { okno_zakonow_priziva_opend = 0 }
-					set_variable = { okno_zakonow_truda_opend = 0 }
-					set_variable = { okno_zakonow_smi_opend = 0 }
-					set_variable = { okno_zakonow_migration_opend = 0 }
-					set_variable = { okno_zakonow_iskajennia_opend = 0 }
-					set_variable = { okno_zakonow_explotatioon_opend = 0 }
-					set_variable = { okno_zakonow_social_opend = 0 }	
+					set_variable = {
+						main_country_gui = 0
+					}	
 				}
 			}
 			box_law_6_click = {	
 				if = {
-					limit = { check_variable = { okno_zakonow_iskajennia_opend = 0}}
-						set_variable = { okno_zakonow_iskajennia_opend = 1 }
-						set_variable = { okno_zakonow_religii_opend = 0 }
-						set_variable = { okno_zakonow_priziva_opend = 0 }
-						set_variable = { okno_zakonow_truda_opend = 0 }
-						set_variable = { okno_zakonow_smi_opend = 0 }
-						set_variable = { okno_zakonow_migration_opend = 0 }
-						set_variable = { okno_zakonow_explotatioon_opend = 0 }
-						set_variable = { okno_zakonow_social_opend = 0 }	
+					limit = {
+						NOT = { 
+							check_variable = {
+								main_country_gui = 6
+							}
+						}
+					}
+					set_variable = {
+						main_country_gui = 6
+					}
 				}
 				else = {
-					set_variable = { okno_zakonow_religii_opend = 0 }
-					set_variable = { okno_zakonow_priziva_opend = 0 }
-					set_variable = { okno_zakonow_truda_opend = 0 }
-					set_variable = { okno_zakonow_smi_opend = 0 }
-					set_variable = { okno_zakonow_migration_opend = 0 }
-					set_variable = { okno_zakonow_iskajennia_opend = 0 }
-					set_variable = { okno_zakonow_explotatioon_opend = 0 }
-					set_variable = { okno_zakonow_social_opend = 0 }	
+					set_variable = {
+						main_country_gui = 0
+					}	
 				}
 			}
 			box_law_7_click = {	
 				if = {
-					limit = { check_variable = { okno_zakonow_explotatioon_opend = 0}}
-						set_variable = { okno_zakonow_explotatioon_opend = 1 }
-						set_variable = { okno_zakonow_religii_opend = 0 }
-						set_variable = { okno_zakonow_priziva_opend = 0 }
-						set_variable = { okno_zakonow_truda_opend = 0 }
-						set_variable = { okno_zakonow_smi_opend = 0 }
-						set_variable = { okno_zakonow_migration_opend = 0 }
-						set_variable = { okno_zakonow_iskajennia_opend = 0 }
-						set_variable = { okno_zakonow_social_opend = 0 }	
+					limit = {
+						NOT = { 
+							check_variable = {
+								main_country_gui = 7
+							}
+						}
+					}
+					set_variable = {
+						main_country_gui = 7
+					}
 				}
 				else = {
-					set_variable = { okno_zakonow_religii_opend = 0 }
-					set_variable = { okno_zakonow_priziva_opend = 0 }
-					set_variable = { okno_zakonow_truda_opend = 0 }
-					set_variable = { okno_zakonow_smi_opend = 0 }
-					set_variable = { okno_zakonow_migration_opend = 0 }
-					set_variable = { okno_zakonow_iskajennia_opend = 0 }
-					set_variable = { okno_zakonow_explotatioon_opend = 0 }
-					set_variable = { okno_zakonow_social_opend = 0 }	
+					set_variable = {
+						main_country_gui = 0
+					}	
 				}
 			}
 			box_law_8_click = {	
 				if = {
-					limit = { check_variable = { okno_zakonow_social_opend = 0}}
-						set_variable = { okno_zakonow_social_opend = 1 }
-						set_variable = { okno_zakonow_religii_opend = 0 }
-						set_variable = { okno_zakonow_priziva_opend = 0 }
-						set_variable = { okno_zakonow_truda_opend = 0 }
-						set_variable = { okno_zakonow_smi_opend = 0 }
-						set_variable = { okno_zakonow_migration_opend = 0 }
-						set_variable = { okno_zakonow_iskajennia_opend = 0 }
-						set_variable = { okno_zakonow_explotatioon_opend = 0 }	
+					limit = {
+						NOT = { 
+							check_variable = {
+								main_country_gui = 8
+							}
+						}
+					}
+					set_variable = {
+						main_country_gui = 8
+					}
 				}
 				else = {
-					set_variable = { okno_zakonow_religii_opend = 0 }
-					set_variable = { okno_zakonow_priziva_opend = 0 }
-					set_variable = { okno_zakonow_truda_opend = 0 }
-					set_variable = { okno_zakonow_smi_opend = 0 }
-					set_variable = { okno_zakonow_migration_opend = 0 }
-					set_variable = { okno_zakonow_iskajennia_opend = 0 }
-					set_variable = { okno_zakonow_explotatioon_opend = 0 }
-					set_variable = { okno_zakonow_social_opend = 0 }	
+					set_variable = {
+						main_country_gui = 0
+					}	
 				}
 			}				
 		}
@@ -206,12 +173,8 @@ RoH_law_priziv = {
 	window_name = "RoH_law_priziv"
 	
 	visible = {
-		if = {
-			limit = { check_variable = { okno_zakonow_priziva_opend = 1}}
-				always = yes
-			}
-		else = {
-			always = no
+		check_variable = {
+			main_country_gui = 1
 		}
 	}
 
@@ -344,12 +307,8 @@ RoH_law_trud = {
 	window_name = "RoH_law_trud"
 	
 	visible = {
-		if = {
-			limit = { check_variable = { okno_zakonow_truda_opend = 1}}
-				always = yes
-			}
-		else = {
-			always = no
+		check_variable = {
+			main_country_gui = 2
 		}
 	}
 	triggers = {
@@ -463,12 +422,8 @@ RoH_law_faith = {
 	window_name = "RoH_law_faith"
 	
 	visible = {
-		if = {
-			limit = { check_variable = { okno_zakonow_religii_opend = 1}}
-				always = yes
-			}
-		else = {
-			always = no
+		check_variable = {
+			main_country_gui = 3
 		}
 	}
 	triggers = {
@@ -616,12 +571,8 @@ RoH_law_smi = {
 	window_name = "RoH_law_smi"
 	
 	visible = {
-		if = {
-			limit = { check_variable = { okno_zakonow_smi_opend = 1}}
-				always = yes
-			}
-		else = {
-			always = no
+		check_variable = {
+			main_country_gui = 4
 		}
 	}
 	triggers = {
@@ -712,12 +663,8 @@ RoH_law_migrant = {
 	window_name = "RoH_law_migrant"
 	
 	visible = {
-		if = {
-			limit = { check_variable = { okno_zakonow_migration_opend = 1}}
-				always = yes
-			}
-		else = {
-			always = no
+		check_variable = {
+			main_country_gui = 5
 		}
 	}
 	triggers = {
@@ -851,12 +798,8 @@ RoH_law_iskajenia = {
 	window_name = "RoH_law_iskajenia"
 	
 	visible = {
-		if = {
-			limit = { check_variable = { okno_zakonow_iskajennia_opend = 1}}
-				always = yes
-			}
-		else = {
-			always = no
+		check_variable = {
+			main_country_gui = 6
 		}
 	}
 	triggers = {
@@ -946,12 +889,8 @@ RoH_law_explotaation = {
 	window_name = "RoH_law_explotaation"
 	
 	visible = {
-		if = {
-			limit = { check_variable = { okno_zakonow_explotatioon_opend = 1}}
-				always = yes
-			}
-		else = {
-			always = no
+		check_variable = {
+			main_country_gui = 7
 		}
 	}
 	triggers = {
@@ -1069,12 +1008,8 @@ RoH_law_social = {
 	window_name = "RoH_law_social"
 	
 	visible = {
-		if = {
-			limit = { check_variable = { okno_zakonow_social_opend = 1}}
-				always = yes
-			}
-		else = {
-			always = no
+		check_variable = {
+			main_country_gui = 8
 		}
 	}
 	triggers = {

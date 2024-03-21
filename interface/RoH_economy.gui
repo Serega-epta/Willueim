@@ -14,7 +14,7 @@ guiTypes = {
 	}
 	
 	containerWindowType = {
-		name = "economy_main"
+		name = "economy_container"
 		size = { width = 400 height = 800 }
 		position = { x = 543 y = 0  } 
 		fade_time = 300
@@ -25,17 +25,9 @@ guiTypes = {
 			name = "Background"		
 			quadTextureSprite = "GFX_tiled_window"
 		}
-		############################### КНОПКА МАКРО ЭКОНОМИКИ
-		buttonType = {
-			name = "macro_econoy_buttom" 
-			position = { x = 340 y = 480 }
-			quadTextureSprite = "GFX_macro_economy_botton"
-			clicksound = click_default
-			pdx_tooltip = "maceconomy_button_tt"
-		}
 		
-		
-		############################## график и его позиции ох это больно....
+		#график
+		#код графика признан второстепенной задачей, текущее использование - фоновое
 		iconType = { 
            name ="kartinochka1"
            spriteType = "GFX_gos_dolg_ssha"
@@ -46,209 +38,20 @@ guiTypes = {
            spriteType = "GFX_fon_graficka"
            position = { x= 13 y = 520 }
         }	
-		
-		iconType = { 
-           name ="rost1"
-           spriteType = "GFX_rost1_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost11"
-           spriteType = "GFX_rost11_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost111"
-           spriteType = "GFX_rost111_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost1111"
-           spriteType = "GFX_rost1111_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost11111"
-           spriteType = "GFX_rost11111_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost111111"
-           spriteType = "GFX_rost111111_graficka"
-           position = { x= 0 y = 540 }
-        }
+		####################################################################
+		containerWindowType = {
+			size = { width = 100%% height = 50 }
+			position = { x = 2 y = 2  }
+			name = "economy_name_window_title_bg"
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_plain_bg_small"
+			}			
+		}
+
 		
 		
-		iconType = { 
-           name ="rost2"
-           spriteType = "GFX_rost2_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost22"
-           spriteType = "GFX_rost22_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost222"
-           spriteType = "GFX_rost222_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost2222"
-           spriteType = "GFX_rost2222_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost22222"
-           spriteType = "GFX_rost22222_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost222222"
-           spriteType = "GFX_rost222222_graficka"
-           position = { x= 0 y = 540 }
-        }
-
-		iconType = { 
-           name ="rost3"
-           spriteType = "GFX_rost3_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost33"
-           spriteType = "GFX_rost33_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost333"
-           spriteType = "GFX_rost333_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost3333"
-           spriteType = "GFX_rost3333_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost33333"
-           spriteType = "GFX_rost33333_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="rost333333"
-           spriteType = "GFX_rost333333_graficka"
-           position = { x= 0 y = 540 }
-        }
 		
-		iconType = { 
-           name ="padenie1"
-           spriteType = "GFX_padenie1_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie11"
-           spriteType = "GFX_padenie11_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie111"
-           spriteType = "GFX_padenie111_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie1111"
-           spriteType = "GFX_padenie1111_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie11111"
-           spriteType = "GFX_padenie11111_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie111111"
-           spriteType = "GFX_padenie111111_graficka"
-           position = { x= 0 y = 540 }
-        }
-		
-		iconType = { 
-           name ="padenie2"
-           spriteType = "GFX_padenie2_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie22"
-           spriteType = "GFX_padenie22_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie222"
-           spriteType = "GFX_padenie222_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie2222"
-           spriteType = "GFX_padenie2222_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie22222"
-           spriteType = "GFX_padenie22222_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie222222"
-           spriteType = "GFX_padenie222222_graficka"
-           position = { x= 0 y = 540 }
-        }
-		
-		iconType = { 
-           name ="padenie3"
-           spriteType = "GFX_padenie3_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie33"
-           spriteType = "GFX_padenie33_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie333"
-           spriteType = "GFX_padenie333_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie3333"
-           spriteType = "GFX_padenie3333_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie33333"
-           spriteType = "GFX_padenie33333_graficka"
-           position = { x= 0 y = 540 }
-        }
-		iconType = { 
-           name ="padenie333333"
-           spriteType = "GFX_padenie333333_graficka"
-           position = { x= 0 y = 540 }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -258,795 +61,237 @@ guiTypes = {
 
 
 		containerWindowType = {
-			size = { width = 100%% height = 50 }
-			position = { x = 2 y = 2  }
-			name = "economy_name_window_title_bg"
-			
-			background = {
-				name = "Background"
-				quadTextureSprite = "GFX_tiled_plain_bg_small"
-			}			
+			name = "picker_controlers_container"
+			position = {
+				x = 16
+				y = 132
+			}
+			buttonType = { 
+				name = "decrease_production_financing"
+				spriteType = "GFX_scroll_left"
+				pdx_tooltip = "left_1_tt"
+			}
+			buttonType = { 
+				name = "increase_production_financing"
+				spriteType = "GFX_scroll_right"
+				position = { 
+					x = 352
+					y = 0
+				}
+				pdx_tooltip = "right_1_tt"
+			}
+			buttonType = { 
+				name = "decrease_civil_financing"
+				spriteType = "GFX_scroll_left"
+				position = {
+					x = 0 
+					y = 100 
+				}
+				pdx_tooltip = "left_2_tt"
+			} 
+			buttonType = { 
+				name = "increase_civil_financing"
+				spriteType = "GFX_scroll_right"
+				position = {
+					x = 352
+					y = 100
+				}
+				pdx_tooltip = "right_2_tt"
+			}
+			buttonType = { 
+				name = "decrease_army_financing"
+				spriteType = "GFX_scroll_left"
+				position = {
+					x = 0
+					y = 200 
+				}
+				pdx_tooltip = "lefdt_1_tt"
+			}
+			buttonType = { 
+				name = "increase_army_financing"
+				spriteType = "GFX_scroll_right"
+				position = { 
+					x = 352
+					y = 200 
+				}
+				pdx_tooltip = "rigdht_1_tt"
+			}
 		}
-		
-		instantTextBoxType = {
-			name ="main_title"
-			position = { x = 110 y = 11 }
-			font = "hoi_36header"
-			text = "Панель Экономики"
-			maxWidth = 200
+		containerWindowType = {
+			name = "scroll_bar_container"
+			position = {
+				x = 23
+				y = 112
+			}
+			iconType = { 
+				name = "scroll_bar_production"
+				spriteType = "GFX_polzunok"
+			}
+			iconType = { 
+				name = "scroll_bar_civil"
+				spriteType = "GFX_polzunok"
+				position = { 
+					x = 23
+					y = 100 
+				}
+			}
+			iconType = { 
+				name = "scroll_bar_army"
+				spriteType = "GFX_polzunok"
+				position = { 
+					x = 23
+					y = 200 
+				}
+			}
 		}
-
-		#### МЕХАНИКА ####
-		
-		###Военка###   ВПК
-		
-		instantTextBoxType = {
-			name ="army_title"
-			position = { x = 60 y = 55 }
-			font = "hoi_18mbs"
-			text = "ВОЕННО-ПРОМЫШЛЕННЫЙ КОМПЛЕКС"
-			maxWidth = 300
-			maxHeight = 20
+		containerWindowType = {
+			name = "picker_container"
+			position = { 
+				x = 32
+				y = 132 
+			}
+			iconType = { 
+				name = "picker_production"
+				spriteType = "GFX_scroll_drager"
+			}
+			iconType = { 
+				name = "picker_civil"
+				spriteType = "GFX_scroll_drager"
+				position = { 
+					x = 0 
+					y = 100 
+				}
+			}
+			iconType = { 
+				name = "picker_army"
+				spriteType = "GFX_scroll_drager"
+				position = { 
+					x = 0 
+					y = 200
+				}
+			}
 		}
-		
+		containerWindowType = {
+			name = "category_title_container"
+			position = { 
+				x = 50
+				y = 55
+			}
+			instantTextBoxType = {
+				name = "production_title"
+				font = "hoi_18mbs"
+				text = "ECO_PRODUCTION_TITLE"
+				maxWidth = 300
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+			instantTextBoxType = {
+				name = "civil_title"
+				position = { 
+					x = 0 
+					y = 100 
+				}
+				font = "hoi_18mbs"
+				text = "ECO_CIVIL_TITLE"
+				maxWidth = 300
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+			instantTextBoxType = {
+				name = "army_title"
+				position = { 
+					x = 0 
+					y = 200 
+				}
+				font = "hoi_18mbs"
+				text = "ECO_ARMY_TITLE"
+				maxWidth = 300
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+		}
+		containerWindowType = {
+			name = "category_stats_container"
+			position = { 
+				x = 0
+				y = 0
+			}
+			instantTextBoxType = {
+				name = "category_production_cost"
+				position = { x = 35 y = 107 }
+				font = "hoi_16mbs"
+				text = "Расходы на спонсирование ВПК: [?production_expenses]"
+				pdx_tooltip = army_tt
+				maxWidth = 300
+				maxHeight = 20
+			}
+			instantTextBoxType = {
+				name = "category_production_finances"
+				position = { x = 35 y = 80 }
+				font = "hoi_16mbs"
+				text = "Число спонсирований: [?production_finances]" 
+				maxWidth = 300
+				maxHeight = 20
+			}
+			instantTextBoxType = {
+				name = "category_civil_cost"
+				position = { x = 35 y = 207 }
+				font = "hoi_16mbs"
+				text = "Расходы на спонсирование Гражданского сектора: [?civil_expenses]"
+				pdx_tooltip = civilian_tt
+				maxWidth = 300
+				maxHeight = 20
+			}
+			instantTextBoxType = {
+				name = "category_civil_finances"
+				position = { x = 35 y = 180 }
+				font = "hoi_16mbs"
+				text = "Число спонсирований: [?civil_finances]"
+				maxWidth = 300
+				maxHeight = 20
+			}
+			instantTextBoxType = {
+				name = "category_army_cost"
+				position = { x = 35 y = 320 }
+				font = "hoi_16mbs"
+				text = "Расходы на спонсирование Армии: [?army_expenses]"
+				#pdx_tooltip = army_tt
+				maxWidth = 300
+				maxHeight = 20
+			}
+			instantTextBoxType = {
+				name = "category_army_finances"
+				position = { x = 35 y = 290 }
+				font = "hoi_16mbs"
+				text = "Число спонсирований: [?army_finances]" 
+				maxWidth = 300
+				maxHeight = 20
+			}
+		}
 		instantTextBoxType = {
-			name ="army"
-			position = { x = 35 y = 107 }
+			name = "total_economy_stats"
+			position = {
+				x = 25
+				y = 390 
+			}
 			font = "hoi_16mbs"
-			text = "Расходы на спонсирование ВПК: [?s_v]"
-			pdx_tooltip = army_tt
-			maxWidth = 300
-			maxHeight = 20
-		}
-		
-		instantTextBoxType = {
-			name ="army_spons"
-			position = { x = 35 y = 80 }
-			font = "hoi_16mbs"
-			text = "Число спонсирований: " 
-			maxWidth = 140
-		}
-		
-		instantTextBoxType = {
-			name ="army_spons_num"
-			position = { x = 185 y = 80 }
-			font = "hoi_16mbs"
-			text = [asponsor_text]
-			pdx_tooltip = vpk_effect_tt
-			maxWidth = 35
-			maxHeight = 20
-		}
-		
-		iconType = { 
-           name ="Pol_1"
-           spriteType = "GFX_polzunok"
-           position = { x= 23 y = 112 }
-        }
-		
-		buttonType = { 
-           name ="left_1"
-           spriteType = "GFX_scroll_left"
-           position = { x= 16 y = 132 }
-		   pdx_tooltip = "left_1_tt"
-        }
-		
-		buttonType = { 
-           name ="right_1"
-           spriteType = "GFX_scroll_right"
-           position = { x= 368 y = 132 }
-		   pdx_tooltip = "right_1_tt"
-        }
-		
-		iconType = { 
-           name ="picker_1"
-           spriteType = "GFX_scroll_drager"
-           position = { x= 185 y = 132 }
-        }
-		
-		
-		
-		###Военка###   САМА АРМИЯ 
-		
-		instantTextBoxType = {
-			name ="army_tit"
-			position = { x = 170 y = 260 }
-			font = "hoi_18mbs"
-			text = "АРМИЯ"
-			maxWidth = 240
-			maxHeight = 20
-		}
-		
-		instantTextBoxType = {
-			name ="armyu"
-			position = { x = 35 y = 320 }
-			font = "hoi_16mbs"
-			text = "Расходы на спонсирование Армии: [?s_a]"
-			#pdx_tooltip = army_tt
-			maxWidth = 300
-			maxHeight = 20
-		}
-		
-		instantTextBoxType = {
-			name ="army_sponsppp"
-			position = { x = 35 y = 290 }
-			font = "hoi_16mbs"
-			text = "Число спонсирований: " 
-			maxWidth = 140
-			maxHeight = 20
-		}
-		
-		instantTextBoxType = {
-			name ="army_spons_nuppm"
-			position = { x = 185 y = 290 }
-			font = "hoi_16mbs"
-			text = [msponsor_text]
-			pdx_tooltip = "army_effect_tt"
-			maxWidth = 35
-			maxHeight = 20
-			
-		}
-		
-		iconType = { 
-           name ="Pol_3"
-           spriteType = "GFX_polzunok"
-           position = { x= 23 y = 327 }
-		   maxHeight = 20
-        }
-		
-		buttonType = { 
-           name ="left_3"
-           spriteType = "GFX_scroll_left"
-           position = { x= 16 y = 347 }
-		   pdx_tooltip = "lefdt_1_tt"
-		   maxHeight = 20
-        }
-		
-		buttonType = { 
-           name ="right_3"
-           spriteType = "GFX_scroll_right"
-           position = { x= 368 y = 347 }
-		   pdx_tooltip = "rigdht_1_tt"
-		   maxHeight = 20
-        }
-		
-		iconType = { 
-           name ="picker_3"
-           spriteType = "GFX_scroll_drager"
-           position = { x= 185 y = 347 }
-		   maxHeight = 20
-        }
-
-		
-		#Гражданка
-		
-		instantTextBoxType = {
-			name ="civilian_title"
-			position = { x = 75 y = 155 }
-			font = "hoi_18mbs"
-			text = "ГРАЖДАНСКАЯ ПРОМЫШЛЕННОСТЬ"
-			maxWidth = 260
-			maxHeight = 20
-		}		
-		
-		instantTextBoxType = {
-			name ="civilian"
-			position = { x = 35 y = 207 }
-			font = "hoi_16mbs"
-			text = "Расходы на спонсирование Гражданского сектора: [?s_c]"
-			pdx_tooltip = civilian_tt
-			maxWidth = 400
-			maxHeight = 20
-		}
-		
-		instantTextBoxType = {
-			name ="civilian_spons"
-			position = { x = 35 y = 180 }
-			font = "hoi_16mbs"
-			text = "Число спонсирований: "
-			maxWidth = 140
-		}
-		
-		instantTextBoxType = {
-			name ="civilian_spons_num"
-			position = { x = 185 y = 180 }
-			font = "hoi_16mbs"
-			text = [csponsor_text] 
-			pdx_tooltip = civil_effect_tt		
-			maxWidth = 35
-			maxHeight = 20
-		}		
-		
-		iconType = { 
-           name ="Pol_2"
-           spriteType = "GFX_polzunok"
-           position = { x= 23 y = 212 }
-		   maxHeight = 20
-        }
-		
-		buttonType = { 
-           name ="left_2"
-           spriteType = "GFX_scroll_left"
-           position = { x= 16 y = 232 }
-		   pdx_tooltip = "left_2_tt"
-		   maxHeight = 20
-        }
-		
-		buttonType = { 
-           name ="right_2"
-           spriteType = "GFX_scroll_right"
-           position = { x= 368 y = 232 }
-		   pdx_tooltip = "right_2_tt"
-		   maxHeight = 20
-        }
-		iconType = { 
-           name ="picker_2"
-           spriteType = "GFX_scroll_drager"
-           position = { x= 185 y = 232 }
-		   maxHeight = 20
-        }
-		
-		###Имеется###
-		
-		instantTextBoxType = {
-			name ="kaznatekxt"
-			position = { x = 110 y = 400 }
-			font = "hoi_18mbs"
-			text = "Имеется: [?Chernii_rubli] Черных рублей"
+			text = "total_economy_stats_text"
+			pdx_tooltip = "total_economy_stats_tt"
 			maxWidth = 350
-			maxHeight = 20
-			pdx_tooltip = "kazna_tt"
-			pdx_tooltip_delayed = "kazna_tt_delayed"
-		}
-		###Расходуется###		
-		instantTextBoxType = {
-			name ="spenttext"
-			position = { x = 110 y = 450 }
-			font = "hoi_18mbs"
-			text = "Расходы: [?Rashod_rublei_dlya_opisaniyaa] Черных рублей"
-			maxWidth = 250
-			maxHeight = 20
-			pdx_tooltip = "spent_tt"
-			pdx_tooltip_delayed = "spent_tt_delayed"
-		}		
-		###Доход###
-		instantTextBoxType = {
-			name ="inkometext"
-			position = { x = 110 y = 425 }
-			font = "hoi_18mbs"
-			text = "Доходы: [?inkome_rublei_dlya_opisaniyaa] Черных рублей"
-			maxWidth = 250
-			maxHeight = 20
-			pdx_tooltip = "all_have_tt"
-			pdx_tooltip_delayed = "all_have_tt_delayed"
-		}
-		###Сальдо###	
-		instantTextBoxType = {
-			name ="saldotext"
-			position = { x = 110 y = 475 }
-			font = "hoi_18mbs"
-			text = "Баланс: [?saldo_rublei_dlya_opisaniyaa] Черных рублей"
-			maxWidth = 250
-			maxHeight = 20
-			pdx_tooltip = "saldo_rublei_tt"
-			pdx_tooltip_delayed = "saldo_rublei_tt_delayed"
-		}
-		
-		
-		
-		#### Вай бля точки ####
-		##+Военка##
-		iconType = { 
-           name ="picker_1_1"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 200 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_2"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 215 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_3"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 230 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_4"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 245 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_5"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 260  y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_6"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 275 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_7"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 290 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_8"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 305 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_9"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 320 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_10"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 335 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_11"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 350 y = 132 }
-        }
-		
-		##-Военка##
-
-		iconType = { 
-           name ="picker_1_12"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 170 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_13"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 155 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_14"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 140 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_15"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 125 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_16"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 110 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_17"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 95 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_18"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 80 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_19"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 65 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_20"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 50 y = 132 }
-        }
-		iconType = { 
-           name ="picker_1_21"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 35 y = 132 }
-        }
-
-		##+Гражданка##
-		
-		iconType = { 
-           name ="picker_2_1"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 200 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_2"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 215 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_3"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 230 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_4"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 245 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_5"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 260 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_6"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 275 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_7"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 290 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_8"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 305 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_9"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 320 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_10"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 335 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_11"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 350 y = 232 }
-        }
-
-		##-Гражданка##
-
-		iconType = { 
-           name ="picker_2_12"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 170 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_13"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 155 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_14"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 140 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_15"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 125 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_16"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 110 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_17"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 95 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_18"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 80 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_19"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 65 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_20"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 50 y = 232 }
-        }
-		iconType = { 
-           name ="picker_2_21"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 35 y = 232 }
-        }
-		
-		
-		
-		##+армия##
-		
-		iconType = { 
-           name ="picker_3_1"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 200 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_2"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 215 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_3"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 230 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_4"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 245 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_5"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 260 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_6"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 275 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_7"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 290 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_8"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 305 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_9"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 320 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_10"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 335 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_11"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 350 y = 347 }
-        }
-
-		##-армия##
-
-		iconType = { 
-           name ="picker_3_12"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 170 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_13"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 155 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_14"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 140 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_15"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 125 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_16"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 110 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_17"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 95 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_18"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 80 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_19"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 65 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_20"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 50 y = 347 }
-        }
-		iconType = { 
-           name ="picker_3_21"
-           spriteType = "GFX_scroll_drager"
-           position = { x = 35 y = 347 }
-        }			
-	}
-	
-	############################## MACRO ECONOMY
-		
-	containerWindowType = {
-		name = "MACRO_ECONOMY"
-		size = { width = 400 height = 700 }
-		position = { x = 935 y = 0  } 
-		fade_time = 300
-		fade_type = linear
-		show_sound = menu_open_window
-				
-		instantTextBoxType = {
-			name ="printerrr_text"
-			position = { x = 35 y = 360 }
-			font = "hoi_18mbs"
-			text = "УЖЕСТОЧИТЬ ЭКСПЛУАТАЦИЮ :"
-			maxWidth = 250
-		}
-		buttonType = {
-			name = "printer_on" 
-			position = { x = 280 y = 350 }
-			quadTextureSprite = "GFX_printer_on"
-			clicksound = click_default
-			pdx_tooltip = "printer_button_tt"
-		}
-		
-		buttonType = {
-			name = "printer_off" 
-			position = { x = 280 y = 350 }
-			quadTextureSprite = "GFX_printer_off"
-			clicksound = click_default
-			pdx_tooltip = "printof_button_tt"
-		}
-
-		instantTextBoxType = {
-			name ="anti_infla_text"
-			position = { x = 35 y = 410 }
-			font = "hoi_18mbs"
-			text = "ПОНИЗИТЬ ГРАДУС :"
-			maxWidth = 200
-		}
-		
-		
-		buttonType = {
-			name = "inflation_fight_on" 
-			position = { x = 280 y = 400 }
-			quadTextureSprite = "GFX_fight_inflation_on"
-			clicksound = click_default
-			pdx_tooltip = "fight_infl_button_tt"
-		}
-		buttonType = {
-			name = "inflation_fight_off" 
-			position = { x = 280 y = 400 }
-			quadTextureSprite = "GFX_fight_inflation_off"
-			clicksound = click_default
-			pdx_tooltip = "inf_fight_off_button_tt"
-		}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		instantTextBoxType = {
-			name ="warr_tax_text"
-			position = { x = 35 y = 460 }
-			font = "hoi_18mbs"
-			text = "ВВЕСТИ ВОЕННЫЙ СБОР :"
-			maxWidth = 200
-		}
-		buttonType = {
-			name = "war_taxes_on" 
-			position = { x = 280 y = 450 }
-			quadTextureSprite = "GFX_war_tax_on"
-			clicksound = click_default
-			pdx_tooltip = "war_tddd_button_tt"
-		}
-		buttonType = {
-			name = "war_taxes_off" 
-			position = { x = 280 y = 450 }
-			quadTextureSprite = "GFX_war_tax_off"
-			clicksound = click_default
-			pdx_tooltip = "war_pepepep_button_tt"
-		}
-		
-		
-		instantTextBoxType = {
-			name ="poshini_text"
-			position = { x = 150 y = 50 }
-			font = "hoi_18mbs"
-			text = "ПОШЛИНЫ : [?poshlinii|%] "
-			maxWidth = 200
-		}
-		buttonType = {
-			name = "poshlini_on" 
-			position = { x = 80 y = 100 }
-			quadTextureSprite = "GFX_poshlini_on"
-			clicksound = click_default
-			pdx_tooltip = "poshlini_tt"
-		}
-		buttonType = {
-			name = "poshlini_off" 
-			position = { x = 260 y = 100 }
-			quadTextureSprite = "GFX_poshlini_off"
-			clicksound = click_default
-			pdx_tooltip = "podhlini_niz_tt"
-		}
-		
-		instantTextBoxType = {
-			name ="nalogi_text"
-			position = { x = 35 y = 510 }
-			font = "hoi_18mbs"
-			text = "ПОВЫСИТЬ НАЛОГИ :"
-			maxWidth = 200
-			maxHeight = 20
-		}
-		buttonType = {
-			name = "nalogi_app" 
-			position = { x = 280 y = 500 }
-			quadTextureSprite = "GFX_podniat_nalogi"
-			clicksound = click_default
-			pdx_tooltip = "nalog_plus_button_tt"
+			maxHeight = 40	
 		}
 		instantTextBoxType = {
-			name ="nalog44i_text"
-			position = { x = 35 y = 560 }
-			font = "hoi_18mbs"
-			text = "ПОНИЗИТЬ НАЛОГИ :"
-			maxWidth = 200
-			maxHeight = 20
-		}
-		
-		
-		
-		buttonType = {
-			name = "nalogi_dovn" 
-			position = { x = 280 y = 550 }
-			quadTextureSprite = "GFX_ponizit_nalogi"
-			clicksound = click_default
-			pdx_tooltip = "nallog_minus_button_tt"
-		}		
-		instantTextBoxType = {
-			name ="procvetanie_text"
-			position = { x = 35 y = 630 }
-			font = "hoi_18mbs"
-			text = "ЭКОНОМИЧЕСКОЕ ПРОЦВЕТАНИЕ :"					
-			pdx_tooltip_delayed = "proddsvet_tt_delayed"			
-		}
-		iconType = { 
-           name ="procvetanie0"
-           spriteType = "GFX_procvetanie0"
-           position = { x = 180 y = 630 }
-		   pdx_tooltip = "proddsvet_t_sddd"	
-		   pdx_tooltip_delayed = "prosvet_tt"		 
-        }
-		iconType = { 
-           name ="procvetanie1"
-           spriteType = "GFX_procvetanie1"
-           position = { x = 180 y = 630 }
-		   pdx_tooltip = "proddsvet_t_sddd"	
-		   pdx_tooltip_delayed = "proddsvet_tt"
-        }
-	
-		instantTextBoxType = {
-			name ="macro_text"
-			position = { x = 110 y = 11 }
+			name = "main_title"
+			position = { 
+				x = 110 
+				y = 11 
+			}
 			font = "hoi_36header"
-			text = "Макро Экономика"
-			maxWidth = 250
-			maxHeight = 20
-		}
-
-		
-		background = {
-			name = "Bacskground"		
-			quadTextureSprite = "GFX_tiled_window"
+			text = "ECO_MAIN_TITLE"
+			maxWidth = 200
 		}
 	}
 }
