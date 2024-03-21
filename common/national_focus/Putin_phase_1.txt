@@ -13,6 +13,7 @@ focus_tree = {
 
     focus = {
         id = SDC_Visit                 #Визит
+        icon = GFX_Vizit
         cost = 1
         x = 6
         y = 0
@@ -25,6 +26,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_despite_everything    #Несмотря ни на что
+        icon = GFX_Nesmotrya_ni_na_chto
         prerequisite = { focus = SDC_Visit }
         cost = 5
         x = 6
@@ -56,6 +58,7 @@ focus_tree = {
     focus = {
         id = SDC_problem_cordonik    #Проблема кордонников
         prerequisite = { focus = SDC_despite_everything }
+        icon = GFX_Problema_kordonnikov
         cost = 5
         x = 5
         y = 2
@@ -71,6 +74,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_eradicate_Wiluiem    #Искоренить ввилуимов
+        icon = GFX_Iskorenit_villuimov
         prerequisite = { focus = SDC_despite_everything }
         cost = 5
         x = 7
@@ -87,6 +91,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_public_safety_concept   #Концепция общественной безопастности
+        icon = GFX_Kontseptsia_obschestvennoy_bezopasnosti
         prerequisite = { focus = SDC_problem_cordonik }
         cost = 5
         x = 3
@@ -100,6 +105,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_stabilization_situation   #Стабилизация положения
+        icon = GFX_Stabilizatsia_polozhenia
         prerequisite = { focus = SDC_eradicate_Wiluiem }
         cost = 5
         x = 9
@@ -124,6 +130,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_expand_influence   #Расширить влияние
+        icon = GFX_Rasshirit_vlianie
         prerequisite = { focus = SDC_public_safety_concept }
         cost = 5
         x = 2
@@ -140,6 +147,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_secure_borders   #Обезопасить границы
+        icon = GFX_Obezopasit_granitsy
         prerequisite = { focus = SDC_public_safety_concept }
         cost = 5
         x = 4
@@ -171,6 +179,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_security_service   #Служба безопастности
+        icon = GFX_Sluzhba_bezopasnosti
         prerequisite = { focus = SDC_stabilization_situation }
         cost = 5
         x = 8
@@ -187,6 +196,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_rationing   #Нормирование продуктов
+        icon = GFX_Normirovanie_produktov
         prerequisite = { focus = SDC_stabilization_situation }
         cost = 5
         x = 10
@@ -207,6 +217,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_march_east   #Марш на восток
+        icon = GFX_Marsh_na_vostok
         prerequisite = { focus = SDC_expand_influence }
         cost = 5
         x = 2
@@ -223,6 +234,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_everyone_hold_weapon   #Все кто может держать оружие
+        icon = GFX_Vse_kto_mozhet_derzhat_oruzhie
         prerequisite = { focus = SDC_secure_borders }
         cost = 5
         x = 4
@@ -239,6 +251,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_kill_toilets   #Мочить в сортирах
+        icon = GFX_Mochit_v_sortirakh
         prerequisite = { focus = SDC_security_service }
         cost = 5
         x = 8
@@ -252,6 +265,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_oil_needle   #Нефтянная игла
+        icon = GFX_Neftyanaya_igla
         prerequisite = { focus = SDC_rationing }
         cost = 5
         x = 10
@@ -281,6 +295,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_front_stabilization   #Стабилизация фронта
+        icon = GFX_Stabilizatsia_fronta
         prerequisite = { focus = SDC_oil_needle }
         prerequisite = { focus = SDC_kill_toilets }
         prerequisite = { focus = SDC_everyone_hold_weapon }
