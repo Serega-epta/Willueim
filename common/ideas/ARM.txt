@@ -91,6 +91,98 @@ ideas = {
 				experience_gain_army_factor = 0.1
 			}
 		}
+		ARM_insufficient_preparation = {
+			picture = Generic
+			allowed = {
+				has_war_with = IMP
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.3
+				initiative_factor = -0.2
+				army_speed_factor = -0.2
+				offence = -0.15
+				defence = -0.15
+				war_support_factor = -0.6
+			}
+			targeted_modifier = {
+				tag = IMP
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+		}
+		ARM_second_central_russian_war_idea = {
+			picture = Generic
+			allowed = {
+				has_war_with = IMP
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				initiative_factor = 0.05
+				army_speed_factor = -0.05
+				offence = 0.05
+				defence = 0.05
+				war_support_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = IMP
+				attack_bonus_against = 0.1
+				defense_bonus_against = -0.1
+			}
+		}
+		ARM_in_breach = {
+			picture = Generic
+			allowed = {
+				has_war_with = IMP
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.1
+				initiative_factor = 0.1
+				army_speed_factor = 0.1
+				offence = 0.1
+				defence = 0.1
+				war_support_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = IMP
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		ARM_in_three_days = {
+			picture = Generic
+			allowed = {
+				has_war_with = IMP
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.3
+				initiative_factor = 0.2
+				army_speed_factor = 0.2
+				offence = 0.15
+				defence = 0.15
+				war_support_factor = 0.6
+			}
+			targeted_modifier = {
+				tag = IMP
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
 	}
 
 	hidden_ideas = {
