@@ -24,6 +24,7 @@ ARM_middle_russian_war = {
 		selectable_mission = no
 		timeout_effect = {
 			add_to_variable = { consulate_power = 20 }
+			custom_effect_tooltip = consulate_power_plus_tt
 		}
 	}
 
@@ -38,6 +39,7 @@ ARM_middle_russian_war = {
 		cost = 50
 		remove_effect = {
 			add_to_variable = { coalition_power = 10 }
+			custom_effect_tooltip = coalition_power_plus_10_tt
 		}
 	}
 	ARM_construct_view_posts = {
@@ -52,6 +54,7 @@ ARM_middle_russian_war = {
 
 		remove_effect = {
 			add_to_variable = { coalition_power = 10 }
+			custom_effect_tooltip = coalition_power_plus_10_tt
 		}
 	}
 
@@ -67,6 +70,7 @@ ARM_middle_russian_war = {
 
 		remove_effect = {
 			add_to_variable = { coalition_power = 10 }
+			custom_effect_tooltip = coalition_power_plus_10_tt
 		}
 	}
 
@@ -97,6 +101,7 @@ ARM_middle_russian_war = {
 
 		timeout_effect = {
 			add_to_variable = { consulate_power = 20 }
+			custom_effect_tooltip = consulate_power_plus_tt
 		}
 	}
 	ARM_destroy_patrols = { #Уничтожить патрули
@@ -112,6 +117,7 @@ ARM_middle_russian_war = {
 
 		remove_effect = {
 			add_to_variable = { coalition_power = 10 }
+			custom_effect_tooltip = coalition_power_plus_10_tt
 		}
 	}
 	ARM_interfere_radio_conversations = { #Вмешаться в радиопереговоры
@@ -126,6 +132,7 @@ ARM_middle_russian_war = {
 
 		remove_effect = {
 			add_to_variable = { coalition_power = 10 }
+			custom_effect_tooltip = coalition_power_plus_10_tt
 		}
 	}
 	ARM_infiltrate_troops = { #Перевести воинский контингент через границу
@@ -140,6 +147,7 @@ ARM_middle_russian_war = {
 
 		remove_effect = {
 			add_to_variable = { coalition_power = 10 }
+			custom_effect_tooltip = coalition_power_plus_10_tt
 		}
 	}
 	ARM_send_the_Alpha = { #Направить группу Альфа
@@ -162,6 +170,7 @@ ARM_middle_russian_war = {
 		remove_effect = {
 			add_to_variable = { coalition_power = 15 }
 			subtract_from_variable = { consulate_power = 10 }
+			custom_effect_tooltip = send_alpha_tt
 		}
 	}
 	
@@ -226,8 +235,10 @@ ARM_middle_russian_war = {
 		allowed = { has_country_flag = ARM_third_phase_flag }
 		activation = { has_country_flag = ARM_third_phase_flag }
 		available = {
-			NOT = {
-				has_country_flag = ARM_third_phase_flag
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = ARM_third_phase_flag
+				}
 			}
 		}
 		visible = { has_country_flag = ARM_third_phase_flag }

@@ -354,12 +354,15 @@ focus_tree = {
         prerequisite = { focus = ARM_dark_clouds }
         prerequisite = { focus = ARM_supply_for_rear }
         available = {
-            hidden_trigger = {
-                ARM = {
-                    has_completed_focus = ARM_first_phase
-                }
-                NOT = {
-                    country_exists = IMP
+            custom_trigger_tooltip = {
+                tooltip = we_won_tt
+                hidden_trigger = {
+                    ARM = {
+                        has_completed_focus = ARM_first_phase
+                    }
+                    NOT = {
+                        country_exists = IMP
+                    }
                 }
             }
         }
@@ -482,6 +485,7 @@ focus_tree = {
             }
             add_manpower = 1000
             add_to_variable = { coalition_power = 10 }
+            custom_effect_tooltip = coalition_power_plus_10_tt
         }
     }
     focus = {
@@ -489,12 +493,15 @@ focus_tree = {
         icon = GFX_ARM_second_phase
         prerequisite = { focus = ARM_donot_check_looses focus = ARM_use_our_strength }
         available = {
-			hidden_trigger = {
-                has_country_flag = ARM_middle_russian_war_flag
-				NOT = {
-					has_country_flag = ARM_first_phase_flag
-				}
-			} 
+            custom_trigger_tooltip = {
+                tooltip = 1_phase_finished_tt
+                hidden_trigger = {
+                    has_country_flag = ARM_middle_russian_war_flag
+				    NOT = {
+					    has_country_flag = ARM_first_phase_flag
+				    }
+			    }
+            }
 		}
         x = 20
         y = 2
@@ -517,7 +524,9 @@ focus_tree = {
         prerequisite = { focus = ARM_second_phase }
         mutually_exclusive = { focus = ARM_group_alpha }
         available = {
-            has_country_flag = ARM_middle_russian_war_flag
+            hidden_trigger = {
+                has_country_flag = ARM_middle_russian_war_flag
+            }
         }
         x = 19
         y = 3
@@ -539,7 +548,9 @@ focus_tree = {
         prerequisite = { focus = ARM_second_phase }
         mutually_exclusive = { focus = ARM_talk_to_mercenaries }
         available = {
-            has_country_flag = ARM_middle_russian_war_flag
+            hidden_trigger = {
+                has_country_flag = ARM_middle_russian_war_flag
+            }
         }
         x = 21
         y = 3
@@ -557,10 +568,15 @@ focus_tree = {
         icon = ARM_third_phase
         prerequisite = { focus = ARM_group_alpha focus = ARM_talk_to_mercenaries }
         available = {
-            has_country_flag = ARM_middle_russian_war_flag
-			NOT = {
-				has_country_flag = ARM_second_phase_flag
-			} 
+            custom_trigger_tooltip = {
+                tooltip = 2_phase_finished_tt
+                hidden_trigger = {
+                    has_country_flag = ARM_middle_russian_war_flag
+			        NOT = {
+				        has_country_flag = ARM_second_phase_flag
+			        } 
+                }
+            }
 		}
         x = 20
         y = 4
@@ -580,7 +596,9 @@ focus_tree = {
         icon = GFX_ARM_no_innocents 
         prerequisite = { focus = ARM_third_phase }
         available ={
-            has_country_flag = ARM_middle_russian_war_flag
+            hidden_trigger = {
+                has_country_flag = ARM_middle_russian_war_flag
+            }
         }
         x = 19
         y = 5
@@ -598,7 +616,9 @@ focus_tree = {
         icon = GFX_ARM_connect_with_patriots
         prerequisite = { focus = ARM_third_phase }
         available ={
-            has_country_flag = ARM_middle_russian_war_flag
+            hidden_trigger = {
+                has_country_flag = ARM_middle_russian_war_flag
+            }
         }
         x = 21
         y = 5
@@ -616,7 +636,12 @@ focus_tree = {
         icon = GFX_ARM_burn_everything
         prerequisite = { focus = ARM_connect_with_patriots focus = ARM_no_innocents }
         available = {
-            has_country_flag = ARM_all_phases_flag
+            custom_trigger_tooltip = {
+                tooltip = 3_phase_finished_tt
+                hidden_trigger = {
+                    has_country_flag = ARM_all_phases_flag
+                }
+            }
         }
         x = 20
         y = 6
