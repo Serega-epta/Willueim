@@ -69,7 +69,7 @@ guiTypes = {
 			buttonType = { 
 				name = "decrease_production_financing"
 				spriteType = "GFX_scroll_left"
-				pdx_tooltip = "left_1_tt"
+				pdx_tooltip = "decrease_production_financing_tt"
 			}
 			buttonType = { 
 				name = "increase_production_financing"
@@ -78,7 +78,7 @@ guiTypes = {
 					x = 352
 					y = 0
 				}
-				pdx_tooltip = "right_1_tt"
+				pdx_tooltip = "increase_production_financing_tt"
 			}
 			buttonType = { 
 				name = "decrease_civil_financing"
@@ -87,7 +87,7 @@ guiTypes = {
 					x = 0 
 					y = 100 
 				}
-				pdx_tooltip = "left_2_tt"
+				pdx_tooltip = "decrease_civil_financing_tt"
 			} 
 			buttonType = { 
 				name = "increase_civil_financing"
@@ -96,7 +96,7 @@ guiTypes = {
 					x = 352
 					y = 100
 				}
-				pdx_tooltip = "right_2_tt"
+				pdx_tooltip = "increase_civil_financing_tt"
 			}
 			buttonType = { 
 				name = "decrease_army_financing"
@@ -105,7 +105,7 @@ guiTypes = {
 					x = 0
 					y = 200 
 				}
-				pdx_tooltip = "lefdt_1_tt"
+				pdx_tooltip = "decrease_army_financing_tt"
 			}
 			buttonType = { 
 				name = "increase_army_financing"
@@ -114,7 +114,7 @@ guiTypes = {
 					x = 352
 					y = 200 
 				}
-				pdx_tooltip = "rigdht_1_tt"
+				pdx_tooltip = "increase_army_financing_tt"
 			}
 		}
 		containerWindowType = {
@@ -216,57 +216,53 @@ guiTypes = {
 		containerWindowType = {
 			name = "category_stats_container"
 			position = { 
-				x = 0
-				y = 0
+				x = 35
+				y = 80
 			}
 			instantTextBoxType = {
 				name = "category_production_cost"
-				position = { x = 35 y = 107 }
+				position = { x = 0 y = 27 }
 				font = "hoi_16mbs"
-				text = "Расходы на спонсирование ВПК: [?production_expenses]"
-				pdx_tooltip = army_tt
+				text = "category_production_cost_text"
 				maxWidth = 300
 				maxHeight = 20
 			}
 			instantTextBoxType = {
 				name = "category_production_finances"
-				position = { x = 35 y = 80 }
 				font = "hoi_16mbs"
-				text = "Число спонсирований: [?production_finances]" 
+				text = "category_production_finances_text" 
 				maxWidth = 300
 				maxHeight = 20
 			}
 			instantTextBoxType = {
 				name = "category_civil_cost"
-				position = { x = 35 y = 207 }
+				position = { x = 0 y = 127 }
 				font = "hoi_16mbs"
-				text = "Расходы на спонсирование Гражданского сектора: [?civil_expenses]"
-				pdx_tooltip = civilian_tt
+				text = "category_civil_cost_text"
 				maxWidth = 300
 				maxHeight = 20
 			}
 			instantTextBoxType = {
 				name = "category_civil_finances"
-				position = { x = 35 y = 180 }
+				position = { x = 0 y = 100 }
 				font = "hoi_16mbs"
-				text = "Число спонсирований: [?civil_finances]"
+				text = "category_civil_finances_text"
 				maxWidth = 300
 				maxHeight = 20
 			}
 			instantTextBoxType = {
 				name = "category_army_cost"
-				position = { x = 35 y = 320 }
+				position = { x = 0 y = 227 }
 				font = "hoi_16mbs"
-				text = "Расходы на спонсирование Армии: [?army_expenses]"
-				#pdx_tooltip = army_tt
+				text = "category_army_cost_text"
 				maxWidth = 300
 				maxHeight = 20
 			}
 			instantTextBoxType = {
 				name = "category_army_finances"
-				position = { x = 35 y = 290 }
+				position = { x = 0 y = 200 }
 				font = "hoi_16mbs"
-				text = "Число спонсирований: [?army_finances]" 
+				text = "category_army_finances_text" 
 				maxWidth = 300
 				maxHeight = 20
 			}
@@ -279,7 +275,6 @@ guiTypes = {
 			}
 			font = "hoi_16mbs"
 			text = "total_economy_stats_text"
-			pdx_tooltip = "total_economy_stats_tt"
 			maxWidth = 350
 			maxHeight = 40	
 		}

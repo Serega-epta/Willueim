@@ -104,6 +104,101 @@ calc_economic_expenses = {
 		economic_expenses = army_expenses
 	}
 }
+calc_economy_modifier = {
+	#relative indexing
+	set_temp_variable = {
+		relative_production_finances = production_finances
+	}
+	subtract_from_temp_variable = {
+		relative_production_finances = 5
+	}
+	set_temp_variable = {
+		relative_civil_finances = civil_finances
+	}
+	subtract_from_temp_variable = {
+		relative_civil_finances = 5
+	}
+	set_temp_variable = {
+		relative_army_finances = army_finances
+	}
+	subtract_from_temp_variable = {
+		relative_army_finances = 5
+	}
+	#applying relativness to economic modifier "matrix"
+	set_variable = {
+		eco_mod_gpm = relative_production_finances
+	}
+	subtract_from_variable = {
+		eco_mod_gpm = relative_civil_finances
+	}
+	multiply_variable = {
+		eco_mod_gpm = 0.02
+	}
+	set_variable = {
+		eco_mod_pfsef_sf = relative_army_finances
+	}
+	multiply_variable = {
+		eco_mod_pfsef_sf = -0.1
+	}
+	set_variable = {
+		eco_mod_cgf = relative_production_finances
+	}
+	multiply_variable = {
+		eco_mod_cgf = 2
+	}
+	subtract_from_variable = {
+		eco_mod_cgf = relative_civil_finances
+	}
+	multiply_variable = {
+		eco_mod_cgf = 0.02
+	}
+	set_variable = {
+		eco_mod_psbf = relative_production_finances
+	}
+	add_to_variable = {
+		eco_mod_psbf = relative_civil_finances
+	}
+	multiply_variable = {
+		eco_mod_psbf = -0.02
+	}
+	set_variable = {
+		eco_mod_mp = relative_production_finances
+	}
+	add_to_variable = {
+		eco_mod_mp = relative_civil_finances
+	}
+	multiply_variable = {
+		eco_mod_psbf = -10
+	}
+	set_variable = {
+		eco_mod_od = relative_army_finances
+	}
+	multiply_variable = {
+		eco_mod_od = 0.02
+	}
+	set_variable = {
+		eco_mod_asif = relative_army_finances
+	}
+	multiply_variable = {
+		eco_mod_asif = 0.01
+	}
+	set_variable = {
+		eco_mod_aof = relative_army_finances
+	}
+	multiply_variable = {
+		eco_mod_aof = 0.04
+	}
+	set_variable = {
+		eco_mod_ppg = relative_army_finances
+	}
+	multiply_variable = {
+		eco_mod_ppg = -0.05
+	}
+	#HA! Didn`t expect this? cgf is now fixed by this polysemy magic!
+	subtract_from_variable = {
+		eco_mod_cgf = eco_mod_ppg
+	}
+}
 economy_tick_effects = {
 	#order of effects below is IMPORTANT!
 	calc_economic_income = yes
@@ -111,6 +206,7 @@ economy_tick_effects = {
 	calc_civil_finances = yes
 	calc_army_finances = yes
 	calc_economic_expenses = yes
+	calc_economy_modifier = yes
 	add_to_variable = {
 		black_rubles_budget = economic_income
 	}

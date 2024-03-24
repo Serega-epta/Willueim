@@ -41,6 +41,11 @@ on_actions = {
 				calc_civil_finances = yes
 				calc_army_finances = yes
 				calc_economic_expenses = yes
+				#init economy modifier
+				add_dynamic_modifier = {
+					modifier = main_economic_modifier
+				}
+				calc_economy_modifier = yes
 			}
 		}
 	}
