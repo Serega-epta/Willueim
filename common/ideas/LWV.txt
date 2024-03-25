@@ -119,7 +119,7 @@ ideas = {
 			targeted_modifier = {
 			tag = COA
 			attack_bonus_against = 0.15
-			defence_bonus_against = 0.15
+			defense_bonus_against = 0.15
 			}
 		}
 		zapoved = {
@@ -243,7 +243,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.2
 				production_speed_industrial_complex_factor = -0.3
 				political_power_gain = -0.1
-				research_speed = 0.05
+				research_speed_factor = 0.05
 			}
 		}
 		LWV_new_promishlenost_raspredelit_1 = {
@@ -321,7 +321,7 @@ ideas = {
 			production_factory_efficiency_gain_factor = 0.2
 			production_speed_industrial_complex_factor = -0.3
 			political_power_gain = -0.1
-			research_speed = 0.05
+			research_speed_factor = 0.05
 			industry_repair_factor = 0.5
 			}
 		}
@@ -408,7 +408,7 @@ ideas = {
 			production_speed_industrial_complex_factor = -0.3
 			production_speed_infrastructure_factor = 0.1
 			political_power_gain = -0.1
-			research_speed = 0.05
+			research_speed_factor = 0.05
 			industry_repair_factor = 0.5
 			}
 		}
@@ -550,7 +550,7 @@ ideas = {
 				offensive_war_stability_factor = 0.2
 				justify_war_goal_time = -0.25
 				equipment_bonus = {
-					infantry_equipment = {
+					infantry = {
 						build_cost_ic = -0.2
 						instant = yes
 					}
