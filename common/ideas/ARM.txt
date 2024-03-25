@@ -183,6 +183,243 @@ ideas = {
 				defense_bonus_against = 0.5
 			}
 		}
+		ARM_Financial_aid_idea = {			#Финансовая помощь населению
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		ARM_civil_buildings_idea = {			#Излишки для гражданской промышленности
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				Production_speed_infrastructure_factor = 0.15
+			}
+		}
+		ARM_military_potentional_idea = {			#Излишки для военной промышленности
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		ARM_regional_centres_idea = {			#Региональные центры подготовки
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				training_time_army_factor = -0.15
+				experience_loss_factor = -0.015
+				experience_gain_army = 0.05
+			}
+		}
+		ARM_delegate_authority2_idea = {			#Распределение полномочий2
+			picture = GFX_idea_ARM_delegate_authority_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				experience_gain_army = 0.20
+				resistance_damage_to_garrison = -0.15
+			}
+		}
+		ARM_hiring_volonters_idea = {			#Найм добровольцев
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				Ofence = 0.03
+				Defence = 0.03
+				weekly_manpower = 150 
+				consumer_goods_factor = 0.03
+			}
+		}
+		ARM_secure_west_idea = {			#Обезопасить запад
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			targeted_modifier = {
+				tag = LWV
+				attack_bonus_against = 0.07
+			}
+			targeted_modifier = {
+				tag = COA
+				attack_bonus_against = 0.07
+				}
+			}
+		ARM_go_south_idea = {			#Приоритет на юге
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {}
+			targeted_modifier = {
+				tag = ODS
+				attack_bonus_against = 0.07
+			}
+			targeted_modifier = {
+				tag = SOD
+				attack_bonus_against = 0.07
+			}
+			targeted_modifier = {
+				tag = BOD
+				attack_bonus_against = 0.07
+			}
+			targeted_modifier = {
+				tag = MOD
+				attack_bonus_against = 0.07
+			}
+			targeted_modifier = {
+				tag = WOD
+				attack_bonus_against = 0.07
+			}
+			targeted_modifier = {
+				tag = YWD
+				attack_bonus_against = 0.07
+			}
+		}
+		ARM_tighten_call_idea = {			#Ужесточение призыва
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				Conscription = 0.06
+				Production_speed_buildings_factor = -0.1
+			}
+		}
+		ARM_delegate_authority3_idea = {			#Распределение полномочий3
+			picture = GFX_idea_ARM_delegate_authority_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				experience_gain_army = 0.20
+				resistance_damage_to_garrison = -0.15
+				resistance_damage_to_garrison_on_our_occupied_states = -0.2
+			}
+		}
+		ARM_Educational_programs_idea = {			#Воспитательные программы
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				Political_power_gain = 0.2
+				stability_weekly_factor = 0.01
+				Compliance_growth_on_our_occupied_states = 0.01
+			}
+		}
+		ARM_Everything_front_idea = {			#Всё для фронта, всё для победы!
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				Production_factory_max_efficiency_factor = 0.2
+				Production_factory_efficiency_gain_factor = 0.2
+				Production_lack_of_resource_penalty_factor = -0.15
+				Production_speed_industrial_complex_factor = -0.25
+				Production_speed_infrastructure_factor = -0.25
+			}
+		}
+		ARM_hearts2 = {			#Вырванные сердца2
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				offence = 0.25
+				defence = 0.25
+				surrender_limit = 0.2
+				Army_morale_factor = 0.2
+				Army_org_factor = 0.1
+			}
+		}
+		ARM_wining_march_idea = {			#Победоносный марш
+			picture = ARM_hearts_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.7
+				Army_speed_factor = 0.2
+			}
+		}
 	}
 
 	hidden_ideas = {
