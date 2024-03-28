@@ -153,22 +153,13 @@ calc_economy_modifier = {
 		eco_mod_cgf = 0.02
 	}
 	set_variable = {
-		eco_mod_psbf = relative_production_finances
+		eco_mod_psbf_mp = relative_production_finances
 	}
 	add_to_variable = {
-		eco_mod_psbf = relative_civil_finances
+		eco_mod_psbf_mp = relative_civil_finances
 	}
 	multiply_variable = {
-		eco_mod_psbf = -0.02
-	}
-	set_variable = {
-		eco_mod_mp = relative_production_finances
-	}
-	add_to_variable = {
-		eco_mod_mp = relative_civil_finances
-	}
-	multiply_variable = {
-		eco_mod_psbf = -10
+		eco_mod_psbf_mp = -0.02
 	}
 	set_variable = {
 		eco_mod_od = relative_army_finances
