@@ -80,3 +80,10 @@ recruit_character = ORL_Anton_Elizarev
 recruit_character = ORL_Volodimir
 recruit_character = ORL_Michail_Mizinov
 recruit_character = ORL_Davor_Sadrich
+#volga war
+add_dynamic_modifier = {
+	modifier = volga_war_cgf_modifier
+}
+set_variable = {
+	volga_war_cgf = 0.1
+}

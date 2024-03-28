@@ -568,16 +568,18 @@ kanon_absol = {
 #ODS
 	NERC_idea = {
 		enable = { always = yes }
-		icon = black_berets
+		icon = GFX_idea_black_berets
 		research_speed_factor =  research_NERC
 		political_power_factor = pp_NERC
 		production_factory_efficiency_gain_factor = production_factory_efficiency_NERC
 		resistance_decay_on_our_occupied_states = resistance_NERC
+		Resistance_activity = Resistance_activity_NERC
+		Required_garrison_factor = Required_garrison_factor_NERC
 	
 	}
 	black_beret_dynamic = {
 		enable = { always = yes }
-		icon = black_berets
+		icon = GFX_idea_black_berets
 		resistance_damage_to_garrison_on_our_occupied_states = 0.4
 		resistance_growth_on_our_occupied_states = 0.5
 		max_planning = 0.2
@@ -592,7 +594,7 @@ kanon_absol = {
 	}
 	dicarstvo_dynamic = {
 		enable = { always = yes }
-		icon = Veny_reshima
+		icon = GFX_idea_Veny_reshima
 		surrender_limit = -0.15
 		production_factory_efficiency_gain_factor = -0.05
 		production_factory_max_efficiency_factor = -0.05

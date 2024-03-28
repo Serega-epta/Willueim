@@ -28,8 +28,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = ODS_climbing_committees }
 		completion_reward = {
-			set_country_flag = intension_hide
 			country_event = ODS.38
+			unlock_decision_category_tooltip = ODS_consciousness
+			activate_mission = cementing_consciousness_mission
 		}		
 	}
 	focus = {
@@ -263,7 +264,9 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = change_NERC_tt
 			custom_effect_tooltip = NERC3_tt
-			set_variable = { resistance_NERC = 0.5 }
+			set_variable = { resistance_NERC = -0.5 }
+			set_variable = { Resistance_activity_NERC = -0.5 }
+			set_variable = { Required_garrison_factor_NERC = -0.5 }
 			country_event = ODS.37
 		}		
 	}
