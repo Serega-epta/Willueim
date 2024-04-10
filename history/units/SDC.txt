@@ -1,0 +1,51 @@
+division_template = {
+	name = "Кордонники"
+	division_names_group = SDC_CORDONIK_REG
+	regiments = {
+		rhbzbatalion = { x = 0 y = 0 }
+		rhbzbatalion = { x = 1 y = 0 }
+		rhbzbatalion = { x = 0 y = 1 }
+		rhbzbatalion = { x = 1 y = 1 }
+        rhbzbatalion = { x = 2 y = 0 }
+		rhbzbatalion = { x = 2 y = 1 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Призывники"
+	division_names_group = SDC_CONSСRIPT_REG
+	regiments = {
+		opolchenie = { x = 0 y = 0 }
+		opolchenie = { x = 0 y = 1 }
+		opolchenie = { x = 0 y = 2 }
+		opolchenie = { x = 1 y = 0 }
+        opolchenie = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+units = {
+	division = {
+		name = "Кордонники"
+		location = 3092
+		division_template = "Кордонники"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.5
+        start_manpower_factor = 1.0
+	}
+    division = {
+		name = "Кордонники"
+		location = 3092
+		division_template = "Кордонники"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.5
+        start_manpower_factor = 1.0
+	}
+    division = {
+		name = "Призывники"
+		location = 312
+		division_template = "Призывники"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.5
+        start_manpower_factor = 1.0
+	}
+}

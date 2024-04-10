@@ -203,3 +203,32 @@ HOLY_INF_02 = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
 	#}
 }
+#SDC armies
+SDC_CORDONIK_REG = {
+	name = "Кордонники"
+	for_countries = { SDC }
+	can_use = { always = yes }
+	division_types = { "infantry" }
+	fallback_name = "Кордонники"
+}
+SDC_CONSСRIPT_REG = {
+	name = "Призывники"
+	for_countries = { SDC }
+	can_use = { always = yes }
+	division_types = { "infantry" }
+	fallback_name = "Призывники"
+}
+TAG_REG = {
+	name = "Сельское ополчение"
+	for_countries = { TAG }
+	can_use = { always = yes }
+	division_types = { "infantry" }
+	fallback_name = "Сельское ополчение"
+}
+ARK_REG = {
+	name = "Городское ополчение"
+	for_countries = { ARK }
+	can_use = { always = yes }
+	division_types = { "infantry" }
+	fallback_name = "Городское ополчение"
+}
