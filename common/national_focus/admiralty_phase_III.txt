@@ -8,423 +8,464 @@ focus_tree = {
 		}
 	}
 	default = no
-	#Стартовая ветвь#
 	focus = {
-		id = ODS_sunrise_great_motherland_committee
-		#icon = GFX_sunrise_great_motherland_committee
+		id = ODS_climbing_committees
+		icon = GFX_climbing_committees
 		x = 10
 		y = 0
-		cost = 1
+		cost = 2
+		completion_reward = {
+			set_cosmetic_tag = ODS_third_phase
+			add_political_power = 100
+			country_event = ODS.34
+		}
 	}
 	focus = {
-		id = ODS_secrets_hidden_everyone
-		#icon = GFX_secrets_hidden_everyone
-		x = 9.5
+		id = ODS_system_reorganisation
+		icon = GFX_system_reorganisation
+		x = 10
 		y = 1
-		cost = 1
-		prerequisite = {focus = ODS_sunrise_great_motherland_committee}
-		
+		cost = 5
+		prerequisite = { focus = ODS_climbing_committees }
+		completion_reward = {
+			country_event = ODS.38
+			unlock_decision_category_tooltip = ODS_consciousness
+			activate_mission = cementing_consciousness_mission
+		}		
 	}
 	focus = {
-		id = ODS_truth_presented_people
-		#icon = GFX_truth_presented_people
-		x = 11
-		y = 1
-		cost = 1
-		prerequisite = {focus = ODS_sunrise_great_motherland_committee}
-	}
-	focus = {
-		id = ODS_adapt_bureaucracy_new_conditions
-		#icon = GFX_adapt_bureaucracy_new_conditions
+		id = ODS_unresolved_differences
+		icon = GFX_unresolved_differences
 		x = 10
 		y = 2
-		cost = 1
-		prerequisite = {focus = ODS_secrets_hidden_everyone}
-		prerequisite = {focus = ODS_truth_presented_people}
+		cost = 2
+		prerequisite = { focus = ODS_system_reorganisation }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = dicarstvo6
+				add_idea = dicarstvo7
+			}
+		}		
 	}
 	focus = {
-		id = ODS_keep_our_weapons_ready
-		#icon = GFX_keep_our_weapons_ready
+		id = ODS_keeper_of_knowledge
+		icon = GFX_keeper_of_knowledge
+		x = 8
+		y = 3
+		cost = 2
+		prerequisite = { focus = ODS_unresolved_differences }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = dicarstvo7
+				add_idea = dicarstvo8
+			}
+			country_event = ODS.48
+		}
+	}
+	focus = {
+		id = ODS_keeper_of_peace
+		icon = GFX_keeper_of_peace
+		x = 12
+		y = 3
+		cost = 2
+		prerequisite = { focus = ODS_unresolved_differences }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = OKO4
+				add_idea = OKO5
+			}
+			country_event = ODS.47	
+		}
+	}
+	focus = {
+		id = ODS_hateful
+		icon = GFX_hateful
 		x = 10
 		y = 3
-		cost = 1
-		prerequisite = {focus = ODS_adapt_bureaucracy_new_conditions}
+		cost = 5
+		prerequisite = { focus = ODS_unresolved_differences }
+		completion_reward = {
+			army_experience = 20
+			country_event = ODS.43
+		}		
 	}
 	focus = {
-		id = ODS_plan_is_absolute
-		#icon = GFX_plan_is_absolute
+		id = ODS_dark_triad
+		icon = GFX_dark_triad
 		x = 10
 		y = 4
-		cost = 1
-		prerequisite = {focus = ODS_keep_our_weapons_ready}
+		cost = 2
+		prerequisite = { focus = ODS_keeper_of_knowledge }
+		prerequisite = { focus = ODS_hateful }
+		prerequisite = { focus = ODS_keeper_of_peace }
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = dicarstvo8
+				add_dynamic_modifier = {
+					modifier = dicarstvo_dynamic
+				}
+				remove_ideas = black_beret4
+				add_dynamic_modifier = {
+					modifier = black_beret_dynamic
+				}
+			}
+			country_event = ODS.42
+		}
 	}
-	#-#Разветвление#-#
-	#В-1#
 	focus = {
-		id = ODS_state_at_service_the_idea
-		#icon = GFX_state_at_service_the_idea
-		x = 1
+		id = ODS_great_intentions_great_projects
+		icon = GFX_great_intentions_great_projects
+		x = 13
 		y = 5
-		cost = 1
-		prerequisite = {focus = ODS_plan_is_absolute}
+		cost = 5
+		prerequisite = { focus = ODS_dark_triad }
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrustructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrustructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrustructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}		
 	}
 	focus = {
-		id = ODS_clear_guidelines_and_goals
-		#icon = GFX_nclear_guidelines_and_goals
-		x = 1
-		y = 6
-		cost = 1
-		prerequisite = {focus = ODS_state_at_service_the_idea}
-	}
-	focus = {
-		id = ODS_ensure_loyalty_amorphous_masses
-		#icon = GFX_ensure_loyalty_amorphous_masses
-		x = 1
-		y = 7
-		cost = 1
-		prerequisite = {focus = ODS_clear_guidelines_and_goals}
-	}
-	focus = {
-		id = ODS_mitigation_integration
-		#icon = GFX_mitigation_integration
-		x = 0.5
-		y = 9
-		cost = 1
-		prerequisite = {focus = ODS_ensure_loyalty_amorphous_masses}
-		mutually_exclusive = {focus = ODS_maintaining_previous_measures}
-	}
-	focus = {
-		id = ODS_maintaining_previous_measures
-		#icon = GFX_maintaining_previous_measures
-		x = 2
-		y = 9
-		cost = 1
-		prerequisite = {focus = ODS_ensure_loyalty_amorphous_masses}
-		mutually_exclusive = {focus = ODS_mitigation_integration}
-	}
-	focus = {
-		id = ODS_absolute_loyalty
-		#icon = GFX_absolute_loyalty
-		x = 1
-		y = 11
-		cost = 1
-		prerequisite = {focus = ODS_mitigation_integration focus = ODS_maintaining_previous_measures}
-	}
-	#В-2#
-	focus = {
-		id = ODS_bind_the_will_of_the_enemies_of_the_plan
-		#icon = GFX_bind_the_will_of_the_enemies_of_the_plan
-		x = 4
+		id = ODS_NERC
+		icon = GFX_NERC
+		x = 7
 		y = 5
-		cost = 1
-		prerequisite = {focus = ODS_plan_is_absolute}
+		cost = 5
+		prerequisite = { focus = ODS_dark_triad }
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = NERC_idea
+			}
+			custom_effect_tooltip = NERC1_tt
+			set_variable = { research_NERC = 0.02 }
+			set_variable =  {pp_NERC = -0.05}
+			country_event = ODS.35
+		}		
 	}
 	focus = {
-		id = ODS_experimental_developments_in_field_mind_influence
-		#icon = GFX_experimental_developments_in_field_mind_influence
-		x = 4
+		id = ODS_scientific_scope
+		icon = GFX_scientific_scope
+		x = 8
 		y = 6
-		cost = 1
-		prerequisite = {focus = ODS_bind_the_will_of_the_enemies_of_the_plan}
+		cost = 5
+		prerequisite = { focus = ODS_NERC }
+		completion_reward = {
+			add_political_power = -50
+			swap_ideas = {
+				remove_idea = OKO5
+				add_idea = OKO6
+			}
+		}		
 	}
 	focus = {
-		id = ODS_power_of_reason_hands_of_plan
-		#icon = GFX_power_of_reason_hands_of_plan
-		x = 4
+		id = ODS_revelation_initiative
+		icon = GFX_revelation_initiative
+		x = 8
 		y = 7
-		cost = 1
-		prerequisite = {focus = ODS_experimental_developments_in_field_mind_influence}
+		cost = 5
+		prerequisite = { focus = ODS_scientific_scope }
+		completion_reward = {
+			add_tech_bonus = {
+    				bonus = 0.5
+    				uses = 2
+    				category = archetype_equipment
+			}
+			country_event = ODS.40
+		}		
 	}
 	focus = {
-		id = ODS_accelerated_integration_new_types_weapons
-		#icon = GFX_accelerated_integration_new_types_weapons
-		x = 4
-		y = 9
-		cost = 1
-		prerequisite = {focus = ODS_power_of_reason_hands_of_plan}
+		id = ODS_printout_of_archives
+		icon = GFX_printout_of_archives
+		x = 8
+		y = 8
+		cost = 5
+		prerequisite = { focus = ODS_revelation_initiative }
+		completion_reward = {
+			custom_effect_tooltip = change_NERC_tt
+			custom_effect_tooltip = NERC2_tt
+			set_variable = { production_factory_efficiency_NERC = 0.05 }
+		}		
+	}
+	focus = {
+		id = ODS_shackles_grant
+		icon = GFX_shackles_grant
+		x = 6
+		y = 6
+		cost = 5
+		prerequisite = { focus = ODS_NERC }
+		completion_reward = {
+			add_to_variable = { Chernii_rubli = -2000 }
+			add_political_power = -50
+			country_event = ODS.45
+		}		
+	}
+	focus = {
+		id = ODS_power_of_mind_in_hands_of_design
+		icon = GFX_power_of_mind_in_hands_of_design
+		x = 6
+		y = 7
+		cost = 5
+		prerequisite = { focus = ODS_shackles_grant }
+		completion_reward = {
+			add_tech_bonus = {
+    				bonus = 0.5
+    				uses = 2
+    				category = infantry_equipment
+			}
+			country_event = ODS.46
+		}		
 	}
 	focus = {
 		id = ODS_brain_burner
-		#icon = GFX_brain_burner
-		x = 4
-		y = 10
-		cost = 1
-		prerequisite = {focus = ODS_accelerated_integration_new_types_weapons}
-	}
-	focus = {
-		id = ODS_absolute_stability
-		#icon = GFX_absolute_stability
-		x = 4
-		y = 11
-		cost = 1
-		prerequisite = {focus = ODS_brain_burner}
-	}
-	#В-3#
-	focus = {
-		id = ODS_mechanism_created_from_organisms
-		#icon = GFX_mechanism_created_from_organisms
-		x = 7
-		y = 5
-		cost = 1
-		prerequisite = {focus = ODS_plan_is_absolute}
-	}
-	focus = {
-		id = ODS_competent_distribution_our_forces
-		#icon = GFX_сompetent_distribution_our_forces
-		x = 7
-		y = 6
-		cost = 1
-		prerequisite = {focus = ODS_mechanism_created_from_organisms}
-	}
-	focus = {
-		id = ODS_solving_agricultural_problems
-		#icon = GFX_solving_agricultural_problems
-		x = 7
-		y = 7
-		cost = 1
-		prerequisite = {focus = ODS_competent_distribution_our_forces}
-	}
-	focus = {
-		id = ODS_establish_supply_chains
-		#icon = GFX_establish_supply_chains
-		x = 7
+		icon = GFX_brain_burner
+		x = 6
 		y = 8
-		cost = 1
-		prerequisite = {focus = ODS_solving_agricultural_problems}
+		cost = 5
+		prerequisite = { focus = ODS_power_of_mind_in_hands_of_design }
+		completion_reward = {
+			custom_effect_tooltip = change_NERC_tt
+			custom_effect_tooltip = NERC3_tt
+			set_variable = { resistance_NERC = -0.5 }
+			set_variable = { Resistance_activity_NERC = -0.5 }
+			set_variable = { Required_garrison_factor_NERC = -0.5 }
+			country_event = ODS.37
+		}		
 	}
 	focus = {
-		id = ODS_total_exploitation
-		#icon = GFX_total_exploitation
+		id = ODS_integration_of_new_weapons
+		icon = GFX_integration_of_new_weapons
 		x = 7
 		y = 9
-		cost = 1
-		prerequisite = {focus = ODS_establish_supply_chains}
+		cost = 5
+		prerequisite = { focus = ODS_brain_burner }
+		prerequisite = { focus = ODS_printout_of_archives }
+		completion_reward = {
+			custom_effect_tooltip = change_black_beret_tt
+			custom_effect_tooltip = black_beret1_tt
+			set_variable = { army_defence_black_beret = 0.1 }
+			set_variable = { army_defence_against_minor_factor_black_beret = 0.2 }
+		}
 	}
 	focus = {
-		id = ODS_there_is_no_place_idlers
-		#icon = GFX_there_is_no_place_idlers
-		x = 7
-		y = 10
-		cost = 1
-		prerequisite = {focus = ODS_total_exploitation}
-	}
-	focus = {
-		id = ODS_absolute_efficiency
-		#icon = GFX_absolute_efficiency
-		x = 7
-		y = 11
-		cost = 1
-		prerequisite = {focus = ODS_there_is_no_place_idlers}
-	}
-	#В-4#
-	focus = {
-		id = ODS_black_march
-		#icon = GFX_black_march
-		x = 10
-		y = 5
-		cost = 1
-		prerequisite = {focus = ODS_plan_is_absolute}
-	}
-	focus = {
-		id = ODS_soar_into_the_sky
-		#icon = GFX_soar_into_the_sky
-		x = 10
+		id = ODS_energy_arteries
+		icon = GFX_energy_arteries
+		x = 12
 		y = 6
-		cost = 1
-		prerequisite = {focus = ODS_black_march}
+		cost = 5
+		prerequisite = { focus = ODS_great_intentions_great_projects }
+		completion_reward = {
+			custom_effect_tooltip = change_dicarstvo_tt
+			custom_effect_tooltip = dicarstvo1_tt
+			set_variable = { production_speed_infrastructure_factor_dicarstvo = 0.1 }
+			country_event = ODS.44
+		}		
 	}
 	focus = {
-		id = ODS_expand_military_training_program
-		#icon = GFX_expand_military_training_program
-		x = 10
+		id = ODS_exhausting_everything_for_sake_of_plot
+		icon = GFX_exhausting_everything_for_sake_of_plot
+		x = 12
 		y = 7
-		cost = 1
-		prerequisite = {focus = ODS_soar_into_the_sky}
+		cost = 5
+		prerequisite = { focus = ODS_energy_arteries }
+		completion_reward = {
+			add_political_power = 50
+			country_event = ODS.36
+		}		
 	}
 	focus = {
-		id = ODS_discipline_and_obedience
-		#icon = GFX_discipline_and_obedience
-		x = 10
-		y = 9
-		cost = 1
-		prerequisite = {focus = ODS_expand_military_training_program}
-	}
-	focus = {
-		id = ODS_squeeze_most_out_of_the_military
-		#icon = GFX_squeeze_most_out_of_the_military
-		x = 10
-		y = 10
-		cost = 1
-		prerequisite = {focus = ODS_discipline_and_obedience}
-	}
-	focus = {
-		id = ODS_absolute_power
-		#icon = GFX_absolute_power
-		x = 10
-		y = 11
-		cost = 1
-		prerequisite = {focus = ODS_squeeze_most_out_of_the_military}
-	}
-	#В-5#
-	focus = {
-		id = ODS_those_who_know_more_than_others 
-		#icon = GFX_those_who_know_more_than_others
-		x = 13
-		y = 5
-		cost = 1
-		prerequisite = {focus = ODS_plan_is_absolute}
-	}
-	focus = {
-		id = ODS_the_one_who_keeps_peace_of_Russia
-		#icon = GFX_the_one_who_keeps_peace_of_Russia
-		x = 13
+		id = ODS_communication_systems
+		icon = GFX_communication_systems
+		x = 14
 		y = 6
-		cost = 1
-		prerequisite = {focus = ODS_those_who_know_more_than_others}
+		cost = 5
+		prerequisite = { focus = ODS_great_intentions_great_projects }
+		completion_reward = {
+			custom_effect_tooltip = change_dicarstvo_tt
+			custom_effect_tooltip = dicarstvo2_tt
+			set_variable = { attrition_dicarstvo = -0.05 }
+			country_event = ODS.39
+		}
 	}
 	focus = {
-		id = ODS_driven_by_knowledge
-		#icon = GFX_driven_by_knowledge
-		x = 13
+		id = ODS_pulled_out_of_mud
+		icon = GFX_pulled_out_of_mud
+		x = 14
 		y = 7
-		cost = 1
-		prerequisite = {focus = ODS_the_one_who_keeps_peace_of_Russia}
+		cost = 5
+		prerequisite = { focus = ODS_communication_systems }
+		completion_reward = {
+			839 = { add_manpower = 5000 }
+			842 = { add_manpower = 5000 }
+			192 = { add_manpower = 5000 }
+			country_event = ODS.41
+		}		
 	}
 	focus = {
-		id = ODS_driven_by_hatred
-		#icon = GFX_driven_by_hatred
+		id = ODS_coordination_of_headquarters
+		icon = GFX_coordination_of_headquarters
+		x = 12
+		y = 8
+		cost = 5
+		prerequisite = { focus = ODS_exhausting_everything_for_sake_of_plot }
+		prerequisite = { focus = ODS_pulled_out_of_mud }
+		mutually_exclusive = { focus = ODS_grassroots_initiative }
+		completion_reward = {
+			custom_effect_tooltip = change_black_beret_tt
+			custom_effect_tooltip = black_beret2_tt
+			set_variable { max_command_power_black_beret = 30 }
+		}
+	}
+	focus = {
+		id = ODS_grassroots_initiative
+		icon = GFX_grassroots_initiative
+		x = 14
+		y = 8
+		cost = 5
+		prerequisite = { focus = ODS_exhausting_everything_for_sake_of_plot }
+		prerequisite = { focus = ODS_pulled_out_of_mud }
+		mutually_exclusive = { focus = ODS_coordination_of_headquarters }
+		completion_reward = {
+			custom_effect_tooltip = change_black_beret_tt
+			custom_effect_tooltip = black_beret3_tt
+			set_variable { org_loss_when_moving_black_beret = -0.1 }
+		}
+	}
+	focus = {
+		id = ODS_ultimate_heroism
+		icon = GFX_ultimate_heroism
 		x = 13
 		y = 9
-		cost = 1
-		prerequisite = {focus = ODS_driven_by_knowledge}
+		cost = 5
+		prerequisite = { focus = ODS_grassroots_initiative focus = ODS_coordination_of_headquarters }
+		completion_reward = {
+			add_manpower = 30000
+			custom_effect_tooltip = change_black_beret_tt
+			custom_effect_tooltip = black_beret4_tt
+			set_variable = { army_morale_factor_black_beret = 0.05 }
+		}
 	}
 	focus = {
-		id = ODS_those_who_see_beyond_darkness
-		#icon = GFX_those_who_see_beyond_darkness
-		x = 13
+		id = ODS_even_if_motherland_is_destined_to_fall
+		icon = GFX_even_if_motherland_is_destined_to_fall
+		x = 10
 		y = 10
-		cost = 1
-		prerequisite = {focus = ODS_driven_by_hatred}
+		cost = 5
+		prerequisite = { focus = ODS_ultimate_heroism }
+		prerequisite = { focus = ODS_integration_of_new_weapons }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = OKO6
+				add_idea = OKO7
+			}
+		}
 	}
 	focus = {
-		id = ODS_absolute_coherence
-		#icon = GFX_absolute_coherence
-		x = 13
+		id = ODS_operation_blasphemy
+		icon = GFX_operation_blasphemy
+		x = 9
 		y = 11
-		cost = 1
-		prerequisite = {focus = ODS_those_who_see_beyond_darkness}
-	}
-	#В-6#
-	focus = {
-		id = ODS_what_is_dead_cannot_be_killed
-		#icon = GFX_what_is_dead_cannot_be_killed
-		x = 16
-		y = 5
-		cost = 1
-		prerequisite = {focus = ODS_plan_is_absolute}
-	}
-	focus = {
-		id = ODS_reveal_the_secrets_of_revelation
-		#icon = GFX_reveal_the_secrets_of_revelation
-		x = 16
-		y = 6
-		cost = 1
-		prerequisite = {focus = ODS_what_is_dead_cannot_be_killed}
+		cost = 5
+		prerequisite = { focus = ODS_even_if_motherland_is_destined_to_fall }
+		completion_reward = {
+			add_command_power = 30
+			create_wargoal = {
+            	target = LWV
+            	type = take_state_focus
+            	generator = { 123 }
+        	}
+		}		
 	}
 	focus = {
-		id = ODS_restore_what_is_possible
-		#icon = GFX_restore_what_is_possible
-		x = 16
-		y = 7
-		cost = 1
-		prerequisite = {focus = ODS_reveal_the_secrets_of_revelation}
-	}
-	focus = {
-		id = ODS_establish_connection
-		#icon = GFX_establish_connection
-		x = 16
-		y = 9
-		cost = 1
-		prerequisite = {focus = ODS_restore_what_is_possible}
-	}
-	focus = {
-		id = ODS_great_projects
-		#icon = GFX_great_projects
-		x = 16
-		y = 10
-		cost = 1
-		prerequisite = {focus = ODS_establish_connection}
-	}
-	focus = {
-		id = ODS_absolute_peace
-		#icon = GFX_absolute_peace
-		x = 16
+		id = ODS_operation_unity
+		icon = GFX_operation_unity
+		x = 11
 		y = 11
-		cost = 1
-		prerequisite = {focus = ODS_great_projects}
-	}
-	#В-7#
-	focus = {
-		id = ODS_defy_the_apocalypse
-		#icon = GFX_defy_the_apocalypse
-		x = 19
-		y = 5
-		cost = 1
-		prerequisite = {focus = ODS_plan_is_absolute}
-	}
-	focus = {
-		id = ODS_use_the_accumulated_experience
-		#icon = GFX_use_the_accumulated_experience
-		x = 19
-		y = 6
-		cost = 1
-		prerequisite = {focus = ODS_defy_the_apocalypse}
+		cost = 5
+		prerequisite = { focus = ODS_even_if_motherland_is_destined_to_fall }
+		completion_reward = {
+			add_command_power = 30
+        	create_wargoal = {
+            	target = ARM
+            	type = take_state_focus
+            	generator = { 123 }
+        	}
+        	create_wargoal = {
+            	target = GLS
+            	type = take_state_focus
+            	generator = { 123 }
+        	}
+		}		
 	}
 	focus = {
-		id = ODS_total_humanization
-		#icon = GFX_total_humanization
-		x = 19
-		y = 7
-		cost = 1
-		prerequisite = {focus = ODS_use_the_accumulated_experience}
-	}
-	focus = {
-		id = ODS_benefit_from
-		#icon = GFX_benefit_from
-		x = 19
-		y = 9
-		cost = 1
-		prerequisite = {focus = ODS_total_humanization}
-	}
-	focus = {
-		id = ODS_isolate_our_cities
-		#icon = GFX_isolate_our_cities
-		x = 19
-		y = 10
-		cost = 1
-		prerequisite = {focus = ODS_benefit_from}
-	}
-	focus = {
-		id = ODS_absolute_silence
-		#icon = GFX_absolute_silence
-		x = 19
-		y = 11
-		cost = 1
-		prerequisite = {focus = ODS_isolate_our_cities}
-	}
-	#-#Конечный_фокус#-#
-	focus = {
-		id = ODS_our_goal_so_close
-		#icon = GFX_our_goal_so_close
+		id = ODS_eternal_order
+		icon = GFX_eternal_order
 		x = 10
 		y = 12
-		cost = 1
-		prerequisite = {focus = ODS_absolute_loyalty}
-		prerequisite = {focus = ODS_absolute_stability}
-		prerequisite = {focus = ODS_absolute_efficiency}
-		prerequisite = {focus = ODS_absolute_power}
-		prerequisite = {focus = ODS_absolute_coherence}
-		prerequisite = {focus = ODS_absolute_peace}
-		prerequisite = {focus = ODS_absolute_silence}
+		cost = 5
+		prerequisite = { focus = ODS_operation_blasphemy }
+		prerequisite = { focus = ODS_operation_unity }
+		available = {
+			NOT = {
+				AND = {
+					country_exists = LWV
+					country_exists = ARM
+					country_exists = GLS
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = ODS_seventh_heaven_project
+		icon = GFX_seventh_heaven_project
+		x = 10
+		y = 13
+		cost = 5
+		prerequisite = { focus = ODS_eternal_order }
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 }

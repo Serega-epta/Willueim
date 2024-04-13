@@ -14,14 +14,14 @@ set_convoys = 20
 
 add_ideas = TTS_mutual_cooperation
 set_politics = {
-	ruling_party = juntas 
+	ruling_party = militarists 
 	elections_allowed = no
 }
 
 set_popularities = {
-	juntas = 95
+	militarists = 95
 	sacraments = 3
-	patriots = 2
+	statesmen = 2
 }
 
 
@@ -29,7 +29,7 @@ create_country_leader = {
     name = "TTS_cord_corp"
     desc = "TTS_cord_corp_DESC"
     picture = "gfx/leaders/TTS/cord_corp.dds"
-    ideology = juntas_1   
+    ideology = militarists_subideology   
     traits = { mercenary_army }
 }
 

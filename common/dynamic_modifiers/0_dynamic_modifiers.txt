@@ -10,14 +10,9 @@ centralization_dynamic_modifier = {
 sviataya_postup = {
 	enable = { always = yes }
 	icon = GFX_impassable_icon
-	
-	attrition = 0.25
-	army_speed_factor = -0.5
-	army_defence_factor = -0.25
-	
 	targeted_modifier = {
 		tag = LWV
-		defense_bonus_against = -0.05
+		defense_bonus_against = -0.15
 	}
 }
 	
@@ -25,19 +20,34 @@ sviataya_postup = {
 sudni_den = {
 	enable = { always = yes }
 	icon = GFX_impassable_icon
-	
-	attrition = 0.5
-	initiative_factor = -0.3
-	coordination_bonus = -0.3
-	army_speed_factor = -0.75
-	army_defence_factor = -0.25
-	supply_factor = -0.1
-	disable_strategic_redeployment = 1
-	max_dig_in_factor = -0.05
 	targeted_modifier = {
 		tag = LWV
-		defense_bonus_against = -0.1
+		defense_bonus_against = -0.5
+		offence_bonus_against = -0.5
+		army_defence_factor = 1.0
+		army_ofence_factor = 1.0
+		army_speed_factor = 1.0
+		army_org_factor = 1.0
+		breakthrough_factor = 1.0
 	}
+}
+#ПОДГОТОВЛЕННАЯ ПОЧВА
+podgotovlennaya_pochva = {
+	enable = { always = yes }
+	icon = GFX_impassable_icon
+	
+	production_speed_buildings_factor = 0.5
+	local_manpower = 0.5
+}
+
+#ЗАСЕЯННЫЕ СЕМЕНА
+zaseyannyje_semena = {
+	enable = { always = yes }
+	icon = GFX_impassable_icon
+	
+	production_speed_buildings_factor = 1.0
+	local_manpower = 1.0
+	local_resources = 1.0
 }
 	
 #СВЯТОСТЬ
@@ -506,3 +516,108 @@ kanon_absol = {
 		
 		monthly_population = -1
 	}
+
+
+
+
+#Generic
+
+	apocaliptic_march = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		production_factory_max_efficiency_factor = generic_production_factory_max_efficiency_factor
+		offence = generic_offence
+		recruitable_population_factor = generic_recruitable_population_factor
+		mobilization_speed = generic_mobilization_speed
+		army_speed_factor = generic_army_speed_factor
+		army_org_regain = generic_army_org_regain
+		initiative_factor = generic_initiative_factor
+		army_core_attack_factor = generic_army_core_attack_factor
+		command_power_gain = generic_command_power_gain
+		supply_factor = generic_supply_factor
+		army_org  = generic_army_org 
+		experience_loss_factor = generic_experience_loss_factor
+
+	}
+
+	apocaliptic_realism = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		production_speed_buildings_factor = generic_production_speed_buildings_factor
+		monthly_population = generic_monthly_population
+		production_factory_efficiency_gain_factor = generic_production_factory_efficiency_gain_factor
+		local_resourses_factor = generic_local_resourses_factor
+		stability_weekly_factor = generic_stability_weekly_factor
+		consumer_goods_factor = generic_consumer_goods_factor
+		production_factory_max_efficiency_factor = generic_production_factory_max_efficiency_factor_2
+		base_fuel_gain = generic_base_fuel_gain
+	}
+
+	juridical_anomaly = {
+		enable = { always = yes }
+		icon = GFX_impassable_icon
+		research_speed_factor = generic_research_speed_factor
+		political_power_factor = generic_political_power_factor
+		generate_wargoal_tension = generic_generate_wargoal_tension
+		war_support_weekly = generic_war_support_weekly
+		defensive_war_stability_factor = generic_defensive_war_stability_factor
+		enemy_justify_war_goal_time = generic_enemy_justify_war_goal_time
+		enemy_declare_war_tension = generic_enemy_declare_war_tension
+		mobilization_speed = generic_mobilization_speed_2
+	}
+#ODS
+	NERC_idea = {
+		enable = { always = yes }
+		icon = GFX_idea_black_berets
+		research_speed_factor =  research_NERC
+		political_power_factor = pp_NERC
+		production_factory_efficiency_gain_factor = production_factory_efficiency_NERC
+		resistance_decay_on_our_occupied_states = resistance_NERC
+		Resistance_activity = Resistance_activity_NERC
+		Required_garrison_factor = Required_garrison_factor_NERC
+	
+	}
+	black_beret_dynamic = {
+		enable = { always = yes }
+		icon = GFX_idea_black_berets
+		resistance_damage_to_garrison_on_our_occupied_states = 0.4
+		resistance_growth_on_our_occupied_states = 0.5
+		max_planning = 0.2
+		planning_speed = 0.2
+		supply_combat_penalties_on_core_factor = -0.05
+		army_leader_start_level = 1
+		army_defence_factor = army_defence_black_beret 
+		army_defence_against_minor_factor = army_defence_against_minor_factor_black_beret
+		max_command_power = max_command_power_black_beret
+		org_loss_when_moving = org_loss_when_moving_black_beret
+		army_morale_factor = army_morale_factor_black_beret
+	}
+	dicarstvo_dynamic = {
+		enable = { always = yes }
+		icon = GFX_idea_Veny_reshima
+		surrender_limit = -0.15
+		production_factory_efficiency_gain_factor = -0.05
+		production_factory_max_efficiency_factor = -0.05
+		resistance_damage_to_garrison = -0.2
+		stability_factor = 0.08
+		production_speed_buildings_factor = 0.1
+		research_speed_factor = 0.02
+		stability_weekly_factor = -0.05
+		political_power_factor = 0.1
+		production_speed_infrastructure_factor = production_speed_infrastructure_factor_dicarstvo
+		attrition = attrition_dicarstvo
+	}
+#ARM
+ 	ARM_hearts_dynamic = {
+		enable = { always = yes }
+		icon = GFX_idea_ARM_hearts_idea
+		offence = offence_hearts
+		defence = defence_hearts
+		surrender_limit = surrender_limit_hearts
+		army_org_factor = army_org_factor_hearts
+ }
+
+ MSH_no_surrender = {
+	enable = { always = yes }
+	surrender_limit = 1
+ }

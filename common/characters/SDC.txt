@@ -1,0 +1,80 @@
+characters = {
+	SDC_Putin = {
+		name = SDC_Putin
+		portraits={
+			civilian={
+				large="gfx/leaders/SDC/Putin.dds"
+			}
+		}
+		country_leader={
+			ideology=statesmen_subideology
+			desc = SDC_Putin_desc
+			expire="2965.1.1.1"
+			id=-1
+		}
+		field_marshal = { 
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 4
+			desc = SDC_Putin_desc
+		}
+	}
+	SDC_Sergey_Shoigov = {
+		name = SDC_Sergey_Shoigov
+		portraits = {
+			army = {
+				large = generic
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			desc = SDC_Sergey_Shoigov_desc
+		}
+	}
+	SDC_Valeriy_Gerasov = {
+		name = SDC_Valeriy_Gerasov
+		portraits = {
+			army = {
+				large = generic
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			desc = SDC_Valeriy_Gerasov_desc
+		}
+	}
+	SDC_Alexander_Lapinov = {
+		name = SDC_Alexander_Lapinov
+		portraits = {
+			army = {
+				large = generic
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 4
+			desc = SDC_Alexander_Lapinov_desc
+		}
+	}
+	SDC_Cult_of_Spire = {
+		name = SDC_Cult_of_Spire
+		country_leader = {
+			ideology = sacraments_subideology
+			expire = "2090.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -1,23 +1,30 @@
 capital = 203
+add_manpower = 16000
 
-oob = base #"ODS_1936"
+oob = VDS
 
 
 # Starting tech
 set_technology = {
     infantry_weapons = 1
+    infantry_odejda = 1
 }
 
 set_research_slots = 2
 set_convoys = 20
 
 set_politics = {
-	ruling_party = patriots
+	ruling_party = statesmen
 	elections_allowed = no
 }
 
 set_popularities = {
-	patriots = 100
+	statesmen = 100
+}
+
+add_opinion_modifier = {
+    target = ARM
+    modifier = crazy_millitarists
 }
 
 recruit_character = VDS_pustovoytenko_valeriy

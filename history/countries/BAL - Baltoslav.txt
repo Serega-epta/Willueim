@@ -1,7 +1,5 @@
-capital = 839
-
+capital = 5
 oob = base #"ODS_1936"
-
 add_ideas = {
 	BAL_the_bitterness_of_loss
 }
@@ -9,57 +7,15 @@ add_ideas = {
 set_technology = {
     infantry_weapons = 1
 }
-
-set_research_slots = 5
-set_convoys = 20
-
+set_research_slots = 2
+set_convoys = 0
+set_stability = 0.75
+set_war_support = 1
 set_politics = {
 	ruling_party = militarists
 	elections_allowed = no
 }
-
 set_popularities = {
-	juntas = 25
-	militarists = 75
+	militarists = 100
 }
-
- 
-create_country_leader = {
-    name = "BAL_petya"
-    desc = "BAL_petya_desc"
-    picture = "gfx/leaders/BAL/BAL_petya.dds"
-    ideology = militarists_1
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_KOMUNISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Komunistov.dds"
-    ideology = opportunists
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_FASHISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Fashistov.dds"
-    ideology = gelerteria
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Yehor Nikitin"
-    desc = "POLITICS_PEPE_NEYTRALOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Neytralov.dds"
-    ideology = sacraments
-    traits = {
-        #
-    }
-}
+recruit_character = BAL_petya

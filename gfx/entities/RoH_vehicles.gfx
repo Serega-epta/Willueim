@@ -8,6 +8,24 @@ objectTypes = {
 		animation = { id = "move"			type = "motorized_frame_move_animation" }
 		animation = { id = "attack"			type = "geo_motorized_frame_attack_animation" }
 	}
+
+	pdxmesh = {
+		name = "ural_motorized_frame_mesh"
+		file = "gfx/models/units/vehicles/URAL.mesh"
+		
+		animation = { id = "idle"			type = "motorized_frame_idle_animation" }
+		animation = { id = "move"			type = "motorized_frame_move_animation" }
+		animation = { id = "attack"			type = "geo_motorized_frame_attack_animation" }
+	}
+
+	pdxmesh = {
+		name = "kamaz_motorized_frame_mesh"
+		file = "gfx/models/units/vehicles/KAMAZ.mesh"
+		
+		animation = { id = "idle"			type = "motorized_frame_idle_animation" }
+		animation = { id = "move"			type = "motorized_frame_move_animation" }
+		animation = { id = "attack"			type = "geo_motorized_frame_attack_animation" }
+	}
 	
 	pdxmesh = {
 		name = "bmp1_mesh"
@@ -26,4 +44,12 @@ objectTypes = {
 		animation = { id = "idle"			type = "geo_btr80_idle_animation" }
 		animation = { id = "move"			type = "geo_btr80_move_animation" }
 	}
+	
+	pdxmesh = {
+		name = "roh_generic_motorized_vehicle_entity"
+		file = "gfx/models/units/vehicles/generic_motorized_01.mesh"
+
+		animation = { id = "idle"			type = "geo_btr80_idle_animation" }
+		animation = { id = "move"			type = "geo_btr80_move_animation" }
+	}	
 }

@@ -1,7 +1,10 @@
 capital = 854
 
 oob = KUH
-
+load_focus_tree = {
+    tree = KUH_focus
+    keep_completed = no
+}
 
 # Starting tech
 set_technology = {
@@ -14,7 +17,8 @@ set_technology = {
 set_research_slots = 2
 set_convoys = 20
 army_experience = 50
-add_manpower = 4000
+add_manpower = 42600
+
 add_equipment_to_stockpile = {
 	type = infantry_odejda_0
 	amount = 1200
@@ -34,6 +38,7 @@ add_equipment_to_stockpile = {
 	type = artillery_equipment_1
 	amount = 30
 	producer = KUH
+}
 set_politics = {
 	ruling_party = sacraments
 	elections_allowed = no
@@ -44,4 +49,5 @@ set_popularities = {
 }
 
 recruit_character = KUH_father_porfiriy
+
 add_ideas = cult_iskazheniya

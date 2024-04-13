@@ -1,12 +1,7 @@
 armor_generic = {
 
 	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
+		
 	}
 
 	roles = {
@@ -501,12 +496,7 @@ armor_generic = {
 garrison_generic = {
 
 	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
+
 	}
 	
 	roles = {
@@ -599,8 +589,7 @@ garrison_generic = {
 	}
 }
 
-suppression_generic = {
-	
+suppression_generic = {	
 	roles = {
 		suppression
 	}
@@ -708,21 +697,7 @@ suppression_generic = {
 infantry_generic = {
 
 	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-		CHI
-		PRC 
-		GXC
-		YUN
-		SHX
-		XSM
-		SIK
-		MEN
-		MAN
+
 	}
 
 	roles = {
@@ -826,21 +801,7 @@ infantry_generic = {
 infantry_big_generic = {
 
 	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-		CHI
-		PRC 
-		GXC
-		YUN
-		SHX
-		XSM
-		SIK
-		MEN
-		MAN
+
 	}
 
 	roles = {
@@ -960,14 +921,7 @@ infantry_big_generic = {
 
 mountaineers_generic = {
 
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-	}
+	blocked_for = {}
 
 	roles = {
 		mountaineers
@@ -1068,20 +1022,10 @@ mountaineers_generic = {
 }
 
 marines_generic = {
-
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-	}
-
+	blocked_for = {}
 	roles = {
 		marines
 	}
-	
 	upgrade_prio = {
 		factor = 2
 
@@ -1092,11 +1036,8 @@ marines_generic = {
 			}
 		}
 	}
-	
 	match_to_count = 0.45
-
 	marine_default = {
-	
 		upgrade_prio = {
 			factor = 2
 
@@ -1104,7 +1045,6 @@ marines_generic = {
 				factor = 1
 			}
 		}
-	
 		target_width = 18.0
 		width_weight = 1.0
 		column_swap_factor = 0.1
@@ -1256,20 +1196,10 @@ marines_generic = {
 			engineer
 			logistics_company
 		}
-	}
-}
-
-
+	}}
 paratrooper_generic = {
 
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-	}
+	blocked_for = {}
 
 	roles = {
 		paratrooper

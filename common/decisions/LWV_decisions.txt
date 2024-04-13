@@ -1,4 +1,4 @@
-LWV_boji_perst = {
+ LWV_boji_perst = {
 	upgrade = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
@@ -17,8 +17,8 @@ LWV_boji_perst = {
 		cost = 100
 		days_remove = 100
 		complete_effect = {	
-
 		}
+
 		remove_effect = {
 			swap_ideas ={
 				remove_idea = LWV_boji_perst_cut
@@ -56,137 +56,428 @@ LWV_boji_perst = {
 	}
 }
 
-####################СВЯТОСТЬ###########################
+#####  ####    ####  #####  #####  #####  #####  #
+#      #   #  #   #    #    #   #  #        #    #
+#      ####    ####    #    #   #  #        #    ####
+#      #   #   #  #    #    #   #  #        #    #   #
+#####  ####   #   #    #    #####  #####    #    ####
 
 LWV_holiness = {
 	stage_1 = {
-		icon = generic_scorched_earth
-		visible = { 
+		icon = GFX_decision_holiness_integration_one
+		target_trigger = {
 			FROM = {
-				is_owned_by = ROOT
-				is_core_of = ROOT
 				any_neighbor_state = {
-					is_owned_by = ROOT
-					is_core_of = ROOT
+					is_core_of = LWV
 				}
 				NOT = {
-					has_state_flag = whisper_of_holiness
-					has_state_flag = gods_voice
-					has_state_flag = song_of_grace
+					is_core_of = LWV
+					state = 88
+					state = 46
+					state = 79
+					state = 76
+					state = 154
+					state = 664
+					state = 71
+					state = 90
+					state = 10
+					state = 921
+					state = 807
+					state = 85
+					state = 811
+					state = 146
+					state = 111
+					state = 149
+					state = 148
+					state = 722
+					state = 824
+					state = 516
+					state = 576
+					state = 568
+					state = 329
+					state = 818
+					state = 618
+					state = 617
+					state = 619
+					state = 267
+					state = 415
+					state = 416
+					state = 266
+					state = 826
+					state = 233
+					state = 235
+					state = 237
+					state = 827
+					state = 987
 				}
 			}
-		}
-		available = {	
-			hidden_trigger = {	
-			FROM = {
-					NOT = {
-						has_state_flag = whisper_of_holiness
-						has_state_flag = gods_voice
-						has_state_flag = song_of_grace
-					}
-				}
-			}
-		}
-		days_remove = 35
-		cost = 50
-		complete_effect = {
-		}
-		remove_effect = {
-			FROM ={
-				add_dynamic_modifier = { modifier = whisper_of_holiness }
-				set_state_flag = whisper_of_holiness
-			}
-			add_to_variable = { unity_in_holiness = 1 }
 		}
 		state_target = yes
+		target_array = global.states
 		on_map_mode = map_only
-	}	
+		fire_only_once = yes
+		days_remove = 10
+		cost = 15
+		complete_effect = {}
+		remove_effect = {
+			FROM ={
+				set_state_flag = widespread_holiness
+			}
+			add_to_variable = { unity_in_holiness = 1 }
+		}
+	}
+	
 	stage_2 = {
-		icon = generic_scorched_earth
-		visible = { 
+		icon = GFX_decision_holiness_integration_two
+		target_trigger = {
 			FROM = {
-				is_owned_by = ROOT
-				is_core_of = ROOT
-				any_neighbor_state = {
-					is_owned_by = ROOT
-					is_core_of = ROOT
-				}
-				has_state_flag = whisper_of_holiness
+				has_state_flag = widespread_holiness
 				NOT = {
-					has_state_flag = gods_voice
-					has_state_flag = song_of_grace
+					is_core_of = LWV
 				}
 			}
 		}
-		available = {
-			hidden_trigger = {	
-				FROM = {
-					NOT = {
-						has_state_flag = gods_voice
-						has_state_flag = song_of_grace
-					}
-				}
-			}
-		}
-		days_remove = 75
-		cost = 100
+		fire_only_once = yes
+		days_remove = 20
+		cost = 25
 		complete_effect = {
 		}
 		remove_effect = {
-			FROM ={
-				remove_dynamic_modifier = { modifier = whisper_of_holiness }
-				add_dynamic_modifier = { modifier = gods_voice }	
-				clr_state_flag = whisper_of_holiness
-				set_state_flag = gods_voice
+			FROM = {
+				clr_state_flag = widespread_holiness
+				set_state_flag = sent_missionaries
 			}
 			add_to_variable = { unity_in_holiness = 1 }
 		}
 		state_target = yes
+		target_array = global.states
 		on_map_mode = map_only
 	}
+	
 	stage_3 = {
-		icon = generic_scorched_earth
-		visible = { 
+		icon = GFX_decision_holiness_integration_three
+		target_trigger = {
 			FROM = {
-				is_owned_by = ROOT
-				is_core_of = ROOT
-				any_neighbor_state = {
-					is_owned_by = ROOT
-					is_core_of = ROOT
-				}
-				has_state_flag = gods_voice
+				has_state_flag = sent_missionaries
 				NOT = {
-					has_state_flag = song_of_grace
+					is_core_of = LWV
 				}
 			}
 		}
-		available = {
-			hidden_trigger = {		
-				FROM = {
-					NOT = {
-						has_state_flag = song_of_grace
-					}
-				}
-			}
-		}
-		days_remove = 90
-		cost = 150
-		complete_effect = {
-		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 60
+		complete_effect = {}
 		remove_effect = {
-			FROM ={
-				remove_dynamic_modifier = { modifier = gods_voice }
-				add_dynamic_modifier = { modifier = song_of_grace }
-				add_dynamic_modifier = { modifier = integrated_state_others }
-				clr_state_flag = gods_voice
-				set_state_flag = song_of_grace
+			FROM = {
+				add_core_of = LWV
+				clr_state_flag = sent_missionaries
 			}
 			add_to_variable = { unity_in_holiness = 1 }
 		}
 		state_target = yes
+		target_array = global.states
 		on_map_mode = map_only
-	}	
+	}
+
+	stage_4 = {
+		icon = GFX_decision_holiness_integration_three
+		allowed = {
+			original_tag = LWV
+		}
+		visible = {
+			LWV = {
+				has_completed_focus = LWV_rasprostraniat_religiu
+				NOT = {
+					has_country_flag = holy_step_flag
+					has_country_flag = sudni_den_flag
+				}
+			}
+			FROM = {
+				OR = {
+					has_state_flag = sent_missionaries
+					is_core_of = LWV
+				}
+				NOT = {
+					is_owned_by = LWV
+				}
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = holy_step
+					}
+				}
+			}
+		}
+		available = {
+			LWV = {
+				has_completed_focus = LWV_rasprostraniat_religiu
+				NOT = {
+					has_country_flag = holy_step_flag
+					has_country_flag = judgment_day_flag
+				}
+			}
+			FROM = {
+				OR = {
+					has_state_flag = sent_missionaries
+					is_core_of = LWV
+				}
+				NOT = {
+					is_owned_by = LWV
+				}
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = holy_step
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 10
+		cost = 5
+		complete_effect = {
+			LWV = {
+				set_country_flag = holy_step_flag
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = holy_step
+ 					days = 30
+				}
+				owner = {
+					country_event = LWV.3333
+				}
+			}
+			LWV = {
+				clr_country_flag = holy_step_flag
+			}
+		}
+		state_target = yes
+		target_array = global.states
+		on_map_mode = map_only
+	}
+	stage_5 = {
+		icon = GFX_decision_holiness_integration_three
+		allowed = {
+			original_tag = LWV
+		}
+		visible = {
+			LWV = {
+				NOT = {
+					has_country_flag = judgment_day_flag
+				}
+			}
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = holy_step
+				}
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = judgment_day
+					}
+				}
+			}
+		}
+		available = {
+			LWV = {
+				NOT = {
+					has_country_flag = judgment_day_flag
+				}
+			}
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = holy_step
+				}
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = judgment_day
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 5
+		cost = 100
+		complete_effect = {
+			LWV = {
+				clr_country_flag = holy_step_flag
+				set_country_flag = judgment_day_flag
+			}
+		}
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = holy_step
+				}
+				add_dynamic_modifier = {
+					modifier = judgment_day
+ 					days = 20
+				}
+			}
+			LWV = {
+				clr_country_flag = judgment_day_flag
+			}
+		}
+		state_target = yes
+		target_array = global.states
+		on_map_mode = map_only
+	}
+	stage_6 = {
+		icon = GFX_decision_holiness_integration_three
+		allowed = {
+			original_tag = LWV
+		}
+		visible = {
+			LWV = {
+				has_completed_focus = LWV_podgotovit_pochvu
+				NOT = {
+					has_country_flag = prepare_the_ground_flag
+				}
+			}
+			FROM = {
+				is_core_of = LWV
+				is_owned_by = LWV
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = prepare_the_ground
+					}
+				}
+			}
+		}
+		available = {
+			LWV = {
+				has_completed_focus = LWV_podgotovit_pochvu
+				NOT = {
+					has_country_flag = prepare_the_ground_flag
+				}
+			}
+			FROM = {
+				is_core_of = LWV
+				is_owned_by = LWV
+			}
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = prepare_the_ground
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 10
+		cost = 10
+		complete_effect = {
+			LWV = {
+				set_country_flag = prepare_the_ground_flag
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = prepare_the_ground
+ 					days = 50
+				}
+			}
+			LWV = {
+				clr_country_flag = prepare_the_ground_flag
+			}
+		}
+		state_target = yes
+		target_array = global.states
+		on_map_mode = map_only
+	}
+	stage_7 = {
+		icon = GFX_decision_holiness_integration_three
+		allowed = {
+			original_tag = LWV
+		}
+		visible = {
+			LWV = {
+				has_completed_focus = LWV_zaseet_semena_pravednosti
+				NOT = {
+					has_country_flag = sow_the_seeds_flag
+				}
+			}
+			FROM = {
+				is_core_of = LWV
+				is_owned_by = LWV
+			}
+		}
+		available = {
+			LWV = {
+				has_completed_focus = LWV_zaseet_semena_pravednosti
+				NOT = {
+					has_country_flag = sow_the_seeds_flag
+				}
+			}
+			FROM = {
+				is_core_of = LWV
+				is_owned_by = LWV
+				has_dynamic_modifier = {
+					modifier = prepare_the_ground
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 50
+		complete_effect = {
+			LWV = {
+				clr_country_flag = prepare_the_ground_flag
+				set_country_flag = sown_seeds_flag
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = sow_the_seeds
+ 					days = 30
+				}
+				remove_dynamic_modifier = {
+					modifier = prepare_the_ground
+ 					days = 30
+				}
+			}
+			LWV = {
+				clr_country_flag = sow_the_seeds_flag
+			}
+		}
+		state_target = yes
+		target_array = global.states
+		on_map_mode = map_only
+	}
 }
+
+                        
+#####   #####   #   #  #   #  #####  #####  ####   #####
+#       #   #   #  ##  #   #  #        #    #   #  #   #
+#####   #   #   # # #  #####  #        #    ####   #   #
+#      #######  ##  #  #   #  #        #    #   #  #   #
+#####  #     #  #   #  #   #  #####    #    ####   #####
+
+####
+#   #
+####
+#   #
+####
+
+#####  ####    ####  #####  #####  #####  #####  #   #
+#      #   #  #   #    #    #   #  #        #    #  ##
+#      ####    ####    #    #   #  #        #    # # #
+#      #   #   #  #    #    #   #  #        #    ##  #
+#####  ####   #   #    #    #####  #####    #    #   #
+
 
 LWV_unity_in_holiness = {
 	collect_the_swords = {
@@ -333,412 +624,260 @@ LWV_unity_in_holiness = {
 		}
 	}
 	debug_hollines = {
-		is_debug = yes
+		visible = {
+			is_debug = yes
+		}
 		complete_effect = {
 			add_to_variable = { unity_in_holiness = 100 }
 		}
 	}
 }
-
-
-
-LWV_rasprostranenie_veri = {
-	send_misiioners = {
-		icon = generic_scorched_earth
-
-		visible = {
-			FROM = {
-				OR = {
-				AND = {
-				NOT = { is_controlled_by = LWV }
-					is_controlled_by = FROM
-					}
-				}
-				is_owned_by = FROM
-				any_neighbor_state = { is_controlled_by = LWV }
-			}
-		}
-		available = {
-		LWV = { 
-		any_neighbor_country = { 
-			any_state = {
-			NOT = { is_owned_by = LWV }
-			is_fully_controlled_by = FROM
-			} 
-		}
-		}		
-		}	
-		modifier = {
-		}
-		days_remove = 30
-		days_re_enable = 100
-		cost = 30
-		complete_effect = {
-		}
-		remove_effect = {
-		FROM ={
-			add_dynamic_modifier = { modifier = sviataya_postup days = 100 }			
-			set_state_flag = has_missioineri
-			country_event = { id = LWV.3333 }
-			}			
-		}
-		state_target = yes
-		on_map_mode = map_only
-	}
-}
-LWV_podgotovit_pochvu = {
-	prepare_the_groundd = {
-		icon = generic_scorched_earth
-		visible = {
-			FROM = {
-				OR = {
-				AND = {
-				NOT = { is_controlled_by = LWV }
-					is_controlled_by = FROM
-					}
-				}
-				is_owned_by = FROM
-				any_neighbor_state = { is_controlled_by = LWV }
-			}
-		}
-		available = {
-		LWV = { 
-		any_neighbor_country = { 
-			any_state = {
-			NOT = { is_owned_by = LWV }
-			is_fully_controlled_by = FROM
-			} 
-		}
-		}		
-		}	
-		modifier = {
-		}
-		days_remove = 1
-		days_re_enable = 110
-		cost = 60
-		complete_effect = {
-		}
-		remove_effect = {
-		FROM ={
-			remove_dynamic_modifier = { modifier = sviataya_postup }
-			add_dynamic_modifier = { modifier = sudni_den days = 100 }			
-			}			
-		}
-		state_target = yes
-		on_map_mode = map_only
-	}
-}
-
-
-########################ВОЙНА В ТЕНИ#####################
-
+#Война в тени
 LWV_war_in_the_shadows = {
-	LWV_hunt_for_traitors = {
-		cost = 10
+	#missions
+	whisper_in_the_shadows = {
+		allowed = {
+			original_tag = LWV
+		}
 		available = {
-			has_manpower > 500
-			has_equipment = {
-				infantry_equipment > 1500
+			hidden_trigger = {
+				always = no
 			}
 		}
-		days_re_enable = 0
-		days_remove = 20
-		complete_effect = {
-			hidden_effect = { 
-				add_to_variable = { points_of_loyalty = 5 }
-				set_country_flag = LWV_hunt_for_traitors_flag
+		activation = {
+			has_completed_focus = LWV_otkrovenie
+		}
+		cancel_trigger = {
+			has_completed_focus = LWV_shadow_warrior
+		}
+		fire_only_once = yes
+		days_mission_timeout = 45
+		timeout_effect = {
+			country_event = {
+				id = LWV.80
 			}
-			custom_effect_tooltip = LWV_localistion_points_of_loyalty_5
-			add_manpower = -500
+		}
+	}
+	revenge_of_the_sectarians = {
+		allowed = {
+			original_tag = LWV
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			has_completed_focus = LWV_shadow_warrior
+		}
+		fire_only_once = yes
+		days_mission_timeout = 60
+		timeout_effect = {
+			add_to_array = { transfer_states_from_LWV_to_WOW = 73.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 78.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 80.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 91.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 93.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 198.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 199.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 201.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 882.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 883.id }
+			add_to_array = { transfer_states_from_LWV_to_WOW = 889.id }
+			country_event = {
+				id = LWV.81
+			}
+		}
+	}
+	markovtsi_seize_weapons_warehouses = {
+		allowed = {
+			original_tag = LWV
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					has_active_mission = revenge_of_the_sectarians
+				}
+				has_war_with = WOW
+			}
+		}
+		activation = {
+			hidden_trigger = {
+				has_active_mission = revenge_of_the_sectarians
+			}
+		}
+		days_mission_timeout = 7
+		days_re_enable = 7
+		timeout_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -1500
+				amount = -1000
+			}
+			add_to_variable = {
+				WOW.infantry_for_civil_war_var = 1000
+				tooltip = WOW_gets_1000_inf_eq_for_civil_war_var
 			}
 		}
 	}
-	LWV_achive_loyalty = {
-		cost = 100
-		days_re_enable = 0
-		days_remove = 20
-		complete_effect = {
-			hidden_effect = { 
-				add_to_variable = { points_of_loyalty = 10 }
-				set_country_flag = LWV_achive_loyalty_flag
-			}
-			custom_effect_tooltip = LWV_localistion_points_of_loyalty_10
+	truth_in_the_shadows = {
+		allowed = {
+			original_tag = LWV
 		}
-	}
-	LWV_purge_the_army = {
-		cost = 50
 		available = {
-			has_manpower > 750
-			has_army_experience > 10
-		}
-		days_re_enable = 0
-		days_remove = 30
-		complete_effect = {
-			hidden_effect = { 
-				add_to_variable = { points_of_loyalty = 20 }
-				set_country_flag = LWV_purge_the_army_flag
+			hidden_trigger = {
+				always = no
 			}
-			custom_effect_tooltip = LWV_localistion_points_of_loyalty_20
-			add_manpower = -750
-			army_experience = -10
+		}
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = revenge_of_the_sectarians
+			}
+		}
+		activation = {
+			always = no
+		}
+		fire_only_once = yes
+		days_mission_timeout = 100
+		is_good = yes
+		timeout_effect = {
+			remove_mission = revenge_of_the_sectarians
 		}
 	}
-	LWV_start_the_investigation = {
+	#decisions
+	hide_weapons_warehouses = {
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_army_experience > 0
+		}
+		custom_cost_text = decision_cost_army_xp_1_pp_10
+		visible = {
+			has_completed_focus = LWV_shadow_warrior
+		}
 		available = {
-			has_country_flag = LWV_hunt_for_traitors_flag
-			has_country_flag = LWV_achive_loyalty_flag
-			has_country_flag = LWV_purge_the_army_flag
-			set_temp_variable = { temp1 = points_of_loyalty }
-			set_temp_variable = { temp2 = points_of_markov }
-			subtract_from_temp_variable = { temp1 = temp 2 }
-			check_variable = { 
-				var = temp1
-				value = 10
-				compare = greater_than
-			}
+			has_active_mission = markovtsi_seize_weapons_warehouses
 		}
-		custom_cost_text = LWV_localistion_points_of_loyalty_more_than_markov_10
-		days_remove = 30
-		complete_effect = {
-			hidden_effect = { 
-				add_to_variable = { points_of_loyalty = 10 }
-				set_country_flag = LWV_complete_investigation
-			}
-			custom_effect_tooltip = LWV_localistion_points_of_loyalty_10
-		}
-	}
-	LWV_execution = {
-		available = {
-			set_temp_variable = { temp1 = points_of_loyalty }
-			set_temp_variable = { temp2 = points_of_markov }
-			subtract_from_temp_variable = { temp1 = temp 2}
-			check_variable = { 
-				var = temp1
-				value = 20
-				compare = greater_than
-			}
-			has_country_flag = LWV_complete_investigation
-		}
-		custom_cost_text = LWV_localistion_points_of_loyalty_more_than_markov_20
-		days_remove = 30
-		complete_effect = {
-			hidden_effect = { 
-				add_to_variable = { points_of_loyalty = 20 }
-				set_country_flag = LWV_execution_flag
-			}
-			custom_effect_tooltip = LWV_localistion_points_of_loyalty_10
-		}
-	}
-	LWV_kill_markov = {
-		available = {
-			set_temp_variable = { temp1 = points_of_loyalty }
-			set_temp_variable = { temp2 = points_of_markov }
-			subtract_from_temp_variable = { temp1 = temp 2}
-			check_variable = { 
-				var = temp1
-				value = 40
-				compare = greater_than
-			}
-			has_country_flag = LWV_execution_flag
-			has_country_flag = LWV_complete_investigation
-		}
-		custom_cost_text = LWV_localistion_points_of_loyalty_more_than_markov_30
-		days_remove = 40
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = LWV_execution_flag
-				clr_country_flag = LWV_complete_investigation
-				clr_country_flag = LWV_war_in_the_shadows_flag
-				set_country_flag = LWV_kill_Markov_flag
+				add_political_power = -10
+				army_experience = -1
 			}
-			custom_effect_tooltip = LWV_kill_Markov
+			add_days_mission_timeout = {
+				mission = markovtsi_seize_weapons_warehouses
+				days = 7
+			}
 		}
 	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LWV_balance_of_power_category = {
-	LWV_bop_mission_1 = {
-	
-		visible = { tag = LWV has_power_balance = { id = LWV_power_balance } }
-		activation = {
-			has_power_balance = { id = LWV_power_balance }
-		}
-		available = {
-			hidden_trigger = { always = no }
-		}
-		
-		icon = mission_icon
-		
-		is_good = yes
-		days_mission_timeout = 30
-		selectable_mission = no
-		timeout_effect = {
-			add_power_balance_value = {
-				id = LWV_power_balance
-				value = 0.1
-				tooltip_side = LWV_kanat_markov
-			}
-			add_stability = -0.05
-		}
-	}
-	LWV_bop_1 = {
-		icon = GFX_decision_generic_assassination
-		fire_only_once = no
-		available = { NOT = { OR = { has_decision = LWV_bop_2 has_decision = LWV_bop_3 } }
-			has_manpower > 300 
-			has_equipment = {
-				infantry_equipment > 299
-			}
-		}
-		visible = { tag = LWV has_power_balance = { id = LWV_power_balance } }
-		days_re_enable = 0
-		remove_effect = {
-			add_power_balance_value = {
-				id = LWV_power_balance
-				value = -0.1
-				tooltip_side = LWV_kanat_okhlostenko
-			}
-			random_list = {
-				15 = {
-					custom_effect_tooltip = LWV_proeb_300
-				}
-				35 = {
-					hidden_effect = {
-						add_equipment_to_stockpile = {
-							type = infantry_equipment
-							amount = -50
-						}
-						add_manpower = -50
-					}
-					custom_effect_tooltip = LWV_proeb_50
-				}
-				50 = {
-					custom_effect_tooltip = LWV_proeb_150
-				}
-			}
-		}
-		days_remove = 20
-		cost = 10
-	}
-	LWV_bop_2 = {
-		icon = GFX_decision_generic_assassination
-		fire_only_once = no
-		available = { NOT = { OR = { has_decision = LWV_bop_1 has_decision = LWV_bop_3 } } }
-		visible = { tag = LWV has_power_balance = { id = LWV_power_balance } }
-		remove_effect = {
-			add_power_balance_value = {
-				id = LWV_power_balance
-				value = -0.15
-				tooltip_side = LWV_kanat_okhlostenko
-			}
-		}
-		days_remove = 20
+	illuminate_the_shadow = {
 		cost = 100
-	}
-	LWV_bop_3 = {
-		icon = GFX_decision_generic_assassination
-		fire_only_once = no
-		available = { NOT = { OR = { has_decision = LWV_bop_1 has_decision = LWV_bop_2 } } has_army_experience > 30 has_manpower > 5000 }
-		visible = { tag = LWV has_power_balance = { id = LWV_power_balance } }
-		days_re_enable = 0
-		remove_effect = {
-			add_power_balance_value = {
-				id = LWV_power_balance
-				value = -0.2
-				tooltip_side = LWV_kanat_okhlostenko
-			}
-			add_manpower = -5000
-			army_experience = -30
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = LWV_shadow_warrior
 		}
-		days_remove = 30
+		available = {
+			has_completed_focus = LWV_shadow_warrior
+		}
+		complete_effect = {
+			activate_mission = truth_in_the_shadows
+		}
+	}
+	find_30_silversmiths = {
+		cost = 10
+		visible = {
+			has_completed_focus = LWV_shadow_warrior
+		}
+		available = {
+			has_completed_focus = LWV_shadow_warrior
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = silversmiths_are_found
+			add_days_mission_timeout = {
+				mission = truth_in_the_shadows
+				days = -10
+			}
+			add_days_mission_timeout = {
+				mission = revenge_of_the_sectarians
+				days = 10
+			}
+			country_event = {
+				id = LWV.82
+			}
+		}
+	}
+	punish_the_traitors = {
+		cost = 20
+		visible = {
+			has_completed_focus = LWV_shadow_warrior
+		}
+		available = {
+			has_country_flag = silversmiths_are_found
+		}
+		fire_only_once = yes
+		complete_effect = {
+			clr_country_flag = silversmiths_are_found
+			set_country_flag = traitors_are_punished
+			add_days_mission_timeout = {
+				mission = truth_in_the_shadows
+				days = -10
+			}
+			add_days_mission_timeout = {
+				mission = revenge_of_the_sectarians
+				days = 10
+			}
+			country_event = {
+				id = LWV.83
+			}
+		}
+	}
+	guide_the_faithful = {
+		cost = 30
+		visible = {
+			has_completed_focus = LWV_shadow_warrior
+		}
+		available = {
+			has_country_flag = traitors_are_punished
+		}
+		fire_only_once = yes
+		complete_effect = {
+			clr_country_flag = traitors_are_punished
+			set_country_flag = faithful_are_guided
+			add_days_mission_timeout = {
+				mission = truth_in_the_shadows
+				days = -10
+			}
+			add_days_mission_timeout = {
+				mission = revenge_of_the_sectarians
+				days = 10
+			}
+		}
+	}
+	crush_markov = {
 		cost = 50
-	}
-	LWV_bop_4 = {
-		icon = GFX_decision_eng_trade_unions_support
-		fire_only_once = yes
+		visible = {
+			has_completed_focus = LWV_shadow_warrior
+		}
 		available = {
-			power_balance_value = {
-				id = LWV_power_balance
-				value < -0.2
-			}
+			has_country_flag = faithful_are_guided
 		}
-		visible = { tag = LWV has_power_balance = { id = LWV_power_balance } }
-		remove_effect = {
-			add_power_balance_value = {
-				id = LWV_power_balance
-				value = -0.1
-				tooltip_side = LWV_kanat_okhlostenko
-			}
-		}
-		days_remove = 30
-		cost = 0
-	}
-	LWV_bop_5 = {
-		icon = GFX_decision_eng_trade_unions_support
 		fire_only_once = yes
-		available = {
-			power_balance_value = {
-				id = LWV_power_balance
-				value < -0.1
+		complete_effect = {
+			clr_country_flag = faithful_are_guided
+			add_days_mission_timeout = {
+				mission = truth_in_the_shadows
+				days = -10
+			}
+			add_days_mission_timeout = {
+				mission = revenge_of_the_sectarians
+				days = 10
+			}
+			country_event = {
+				id = LWV.84
 			}
 		}
-		visible = { tag = LWV has_power_balance = { id = LWV_power_balance } }
-		remove_effect = {
-			add_power_balance_value = {
-				id = LWV_power_balance
-				value = -0.2
-				tooltip_side = LWV_kanat_okhlostenko
-			}
-		}
-		days_remove = 30
-		cost = 0
-	}
-	LWV_bop_6 = {
-		icon = GFX_decision_eng_trade_unions_support
-		fire_only_once = yes
-		available = {
-			power_balance_value = {
-				id = LWV_power_balance
-				value < -0.9
-			}
-			NOT = { country_exists = COA }
-		}
-		visible = { tag = LWV has_power_balance = { id = LWV_power_balance } }
-		remove_effect = {
-			remove_power_balance = {
-				id = LWV_power_balance
-			}
-		}
-		days_remove = 40
-		cost = 0
 	}
 }

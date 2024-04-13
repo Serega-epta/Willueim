@@ -1,45 +1,54 @@
 capital = 977
 
-oob = base #"ODS_1936"
+oob = SDC
+add_manpower = 5000
+army_experience = 5
 add_ideas = {
-Fanatic_survival
-Endless_road
-iron_society
+    SDC_Willuem_influese1
+    SDC_Korodonniki1
+    SDC_hunger1
 }
 
 # Starting tech
 set_technology = {
     infantry_weapons = 1
+    infantry_odejda  = 1
+    tech_support = 1
+    basic_machine_tools = 1
+    electronic_mechanical_engineering = 1
+    gw_artillery = 1
+    stvolartillery = 1
+    boepripas = 1
 }
 
-set_research_slots = 5
+set_research_slots = 3
 set_convoys = 20
 
 set_politics = {
-	ruling_party = patriots
+	ruling_party = statesmen
 	elections_allowed = no
 }
 
 set_popularities = {
-	patriots = 100
-
+	statesmen = 85
+    sacraments = 15
 }
 
-set_party_name = {
-    ideology = patriots
-    long_name = Edinaya_rossia
-    name = Edinaya_rossia
+add_opinion_modifier = {
+    target = TAG
+    modifier = separatists
+}
+add_opinion_modifier = {
+    target = ARK
+    modifier = separatists
+}
+add_opinion_modifier = {
+    target = VOZ
+    modifier = villiums
 }
 
-
-
-create_country_leader = {
-    name = "Putin"
-    desc = "Putin_desc"
-    picture = "gfx/leaders/SDC/Putin.dds"
-    ideology = patriots_1
-    traits = {
-        #
-    }
-}
-
+recruit_character = SDC_Putin
+recruit_character = SDC_Sergey_Shoigov
+recruit_character = SDC_Valeriy_Gerasov
+recruit_character = SDC_Alexander_Lapinov
+recruit_character = SDC_Cult_of_Spire

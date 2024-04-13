@@ -25,12 +25,50 @@ set_popularities = {
 
 }
 
+add_opinion_modifier = {
+    target = ARK
+    modifier = faithless
+}
+add_opinion_modifier = {
+    target = TAG
+    modifier = faithless
+}
+add_opinion_modifier = {
+    target = UFV
+    modifier = faithless
+}
+add_opinion_modifier = {
+    target =SDI
+    modifier = faithless
+}
+add_opinion_modifier = {
+    target = ODJ 
+    modifier = faithless
+}
+add_opinion_modifier = {
+    target = REN
+    modifier = faithless
+}
+add_opinion_modifier = {
+    target = MIN
+    modifier = faithless
+}
+add_opinion_modifier = {
+    target = TRO
+    modifier = faithless
+}
+add_opinion_modifier = {
+    target = SDC
+    modifier = faithless
+}
+
+
 
 create_country_leader = {
     name = "Blazhenny_Zeruil"
     desc = "Blazhenny_Zeruil_desc"
     picture = "gfx/leaders/VOZ/Blazhenny_Zeruil.dds"
-    ideology = sacraments_1
+    ideology = sacraments_subideology
     traits = {
         #
     }

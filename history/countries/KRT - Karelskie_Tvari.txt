@@ -13,21 +13,19 @@ set_convoys = 20
 
 add_ideas = KRT_amber_dream
 set_politics = {
-	ruling_party = free 
+	ruling_party = chthonism 
 	elections_allowed = no
 }
 
 set_popularities = {
-	free = 84
-	opportunists = 9
-	bandits = 7
+	chthonism = 100
 }
 
 create_country_leader = {
     name = "KRT_iskajenni_omut"
     desc = "KRT_iskajenni_omut_DESC"
     picture = "gfx/leaders/KRT/iskajenni_omut.dds"
-    ideology = free_1   
+    ideology = chthonism_subideology
     traits = {
         #
     }

@@ -95,3 +95,27 @@ news_event = { #Воскресший колосс
 		}
    	}
 }
+
+news_event = {
+	id = super.5
+	title = super.5.t
+	desc = super.5.d
+	#picture = GFX_news_event_resurrected_colossus
+
+	is_triggered_only = yes
+
+    	option = {
+		name = super.5.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_global_flag = GLS_Unite_the_Motherland
+			set_global_flag = super_Event_Visible	
+			hidden_effect = {	
+				play_song = "iron_hevest_russvet_hymn"
+			}
+		}
+   	}
+}

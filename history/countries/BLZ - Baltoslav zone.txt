@@ -1,7 +1,5 @@
 capital = 11
-
-oob = "ODS_1936"
-
+oob = base
 add_ideas = {
     BLZ_underground_doctor
     BLZ_meaningless_war
@@ -10,30 +8,22 @@ add_ideas = {
 set_technology = {
     infantry_weapons = 1
 }
-
-set_research_slots = 5
-set_convoys = 20
-
+set_research_slots = 2
+set_convoys = 0
+set_stability = 0.75
+set_war_support = 1
 set_politics = {
-	ruling_party = svobod 
+	ruling_party = free_people 
 	elections_allowed = no
 }
-
 set_popularities = {
-	svobod = 60
-	gelerteria = 8
-	gumanists = 15
-	technocracies = 12
-	juntas = 5
+	free_people = 60
+	technocracy = 20
+	humanists = 15
+	militarists = 5
 }
-
-create_country_leader = {
-    name = "BLZ_akim_juk"
-    desc = "BLZ_akim_juk_DESC"
-    picture = "gfx/leaders/BLZ/akim_juk.dds"
-    ideology = svobod_1   
-    # traits = { bessmislenaya_war }
+add_opinion_modifier = {
+    target = AGE
+    modifier = mutual_respect
 }
-
-
-
+recruit_character = BLZ_akim_juk

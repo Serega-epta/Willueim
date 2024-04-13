@@ -35,3 +35,103 @@ news_event = { # Новость об объединении после Соба�
 		name = worldnews.1.a
 	}
 }
+
+#Council_newsevent
+news_event = {
+	id = worldnews.3
+	title = worldnews.3.t
+	desc = worldnews.3.d
+	picture = GFX_news_event_council_war_on_mad
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = worldnews.3.a
+	}
+}
+
+news_event = {
+	id = worldnews.4
+	title = worldnews.4.t
+	desc = worldnews.4.d
+	picture = GFX_news_event_dog_clanging
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = worldnews.4.a
+		every_country = { news_event = { id = super.5 days = 1 } }
+	}
+}
+
+#Blazing_Volga_newsevent
+news_event = { #Пылающая Волга
+	id = worldnews.5
+	title = worldnews.5.t
+	desc = worldnews.5.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = worldnews.5.a
+	}
+}
+
+news_event = { #Коммерческий союз вступает в войну
+	id = worldnews.6
+	title = worldnews.6.t
+	desc = worldnews.6.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = worldnews.6.a
+	}
+}
+
+news_event = { #Последние дни Борисенко
+	id = worldnews.7
+	title = worldnews.7.t
+	desc = worldnews.7.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = worldnews.7.a
+	}
+}
+
+news_event = { #Решение ганзейского вопроса
+	id = worldnews.8
+	title = worldnews.8.t
+	desc = worldnews.8.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = worldnews.8.a
+	}
+}
+
+news_event = { #Объединение Волго-Донского Рога
+	id = worldnews.9
+	title = worldnews.9.t
+	desc = worldnews.9.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = worldnews.9.a
+	}
+}

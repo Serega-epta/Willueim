@@ -1,324 +1,38 @@
 integration_category = {
-
-#	ДА, я сделал интеграцию регионов в одном решении для всех идеологий и условий, и что ты мне сделаешь?
-#	я даже немного закомментил, вдруг кому пригодится Я КОНЧЕНЫЙ БЛЯТЬ БЕГИТЕ НАХУЙ
-#	⠀⠀⠈⠉⠛⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛
-#⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⢰⡍⠉⠉⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⡟⠛⠛⠻⣿⣿⣿⣿⣿⣿⠛⠛⠛⠛⠛⠋⠉⠁⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠀⢠⠊⠀⠀⠀⢸⠷⡀⠀⠈⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢊⠀⠀⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⡰⠁⠀⠀⠀⠀⢸⠀⠙⠦⡀⠀⠻⠢⠀⠀⠈⠀⠀⠀⢄⠀⠈⠂⠀⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠸⡀⠀⠀⠈⠐⠠⠀⢀⠀⠀⠠⣤⣤⣈⣆⠀⢦⠀⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⡀⣸⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⣀⣠⣤⠀⠀⠀⠀⠀⠹⣿⣏⢹⣆⣸⣴⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠁⣿⠀⠀⠀⠀⠀⠀⠀⢁⣰⠞⠛⣿⣿⠀⠀⠀⠰⠀⠀⠀⠀⠀⠈⣻⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⢸⡀⠀⠀⢀⠀⠀⠀⠈⣟⠂⠀⠉⠀⠀⠀⠀⠀⠀⠀⣀⠀⣠⠾⢻⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠈⢧⡀⠀⠀⣦⢳⠄⣀⣘⠆⠀⠀⠀⠀⢀⣤⣤⣴⣾⠿⠁⠀⠀⠸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠈⠳⣰⢰⡽⣷⡇⠀⠉⠁⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⢠⠦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠈⢇⠙⠿⠇⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠂⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⢾⡿⠛⠿⣿⣿⡿⠷⠶⢶⣶⣶⣶⠶⠒⠈⠉⠀⠀⠘⠄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⣤⡊⠀⠀⡀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠀⠀⠀⠀⣸⣶⣤⡶⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠦⢄⡲⢾⡟⠛⠋⠀⠀⠙⣆⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⣿⠿⣿⡄⠀⠀⠀⠀⠀⠀⢀⠄⠢⠔⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣭⣿⣿⣿⣆⠀⠀⠀⠀⠀⠬⢆⠀⠀⠀⠀⠐⠋⠀⠀⠤⠤⠖⠓⠤⠤⠤⠉⠙⠒⠒⠂⠔⠁⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠣⠀⢨⣿⣿⣿⣿⣿⣿⣤⣤⠀⠀⠀⠀⠀⠑⢄⡀⠐⠁⠀⠀⠀⠀⠀⡹⠀⠀⠀⠀⠀⠀⠀⠀⡈⠀⣰⠇⠀⠀⡀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣴⣦⡀⠀⣠⣿⠁⠀⠀⠄⠀⢀⡎⠀⢤⠀⠀⠀⠀⠀⠀⠘⠀⢀⣿⡄⠀⠘⠧⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⡞⡇⠀⠀⠀⠀⠀⠉⢀⠔⠁⠀⠀⠀⠀⠀⠀⠄⠀⢸⣿⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠁⠀⠀⠀⠀⠀⣴⣅⡀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠇⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⡌⢸⣿⣿⣶⣄⣀⠀⠀⠀⠀⢸⡄⢀⠀⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠶⢋⡇⠘⣿⣿⣿⣿⣿⣿⣶⣦⣴⣿⣇⠘⡄⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠆⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠈⣇⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠤⢤⣀⡠⢄⠀
-#⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀⡀⣀⣠⣾⣀⣿⣶⣿⣿⣿⣿⠙⠻⢿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀
-#⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠉⠉⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀
-	
-	integration_decision_ROH = {
-		icon = generic_police_action
-		visible = { 
+	intergrate_core_territory = {
+		target_array = occupied_countries
+		target_non_existing = yes
+		target_trigger = {
 			FROM = {
-				is_fully_controlled_by = ROOT
-				is_owned_by = ROOT
-				NOT = {
-					is_core_of = ROOT
+				exists = no
+				check_variable = {
+					num_core_states > 0
+				}
+				all_core_state = {
+					is_controlled_by = ROOT
 				}
 			}
 		}
-
-		available = {
-			if = {
-				limit = {
-					NOT = { has_government = patriots }
-				}
-				has_political_power > 50
-				
-			}
-			if = {
-				limit = {
-					has_government = patriots
-					FROM = { NOT = { has_state_flag = has_patriotic_partisan_communes } }
-				}
-				has_political_power > 25
-				has_manpower > 200
-				has_equipment = {
-					infantry_equipment > 199
-				}
-			}
-			FROM = {
-				any_neighbor_state = {
-					is_core_of = ROOT
-				}
-			}
-			if = {
-				limit = {
-					FROM = {
-						has_state_flag = has_patriotic_partisan_communes
-					}
-				}
-				has_manpower > 1000
-				has_equipment = {
-					infantry_equipment > 999
-				}
+		custom_cost_trigger = {
+			has_manpower > 399
+			has_equipment = {
+				infantry_equipment > 399
 			}
 		}
-		
-		modifier = {
-			#if = { я решил сделать по-другому, потому что условие с модификатором не работает
-			#	limit = {
-			#		has_government = patriots
-			#	}
-			#	consumer_goods_factor = 0.02
-			#}
-		}
-		
+		custom_cost_text = decision_cost_400_mp_400_ie_tt
 		days_remove = 70
-
-		complete_effect = {
-			if = {
-				limit = {
-					FROM = {
-						has_state_flag = has_patriotic_partisan_communes
-					}
-					NOT = {
-						has_government = patriots
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = -1000
-				}
-				add_manpower = -1000
-			}
-			if = {
-				limit = {
-					has_government = patriots
-				}
-				custom_effect_tooltip = integration_mod_eff_patriots
-			}
-			if = {
-				limit = {
-					has_government = patriots
-					FROM = { NOT = { has_state_flag = has_patriotic_partisan_communes } }
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = -200
-				}
-				add_manpower = -200
-			}
-			if = {
-				limit = {
-					has_government = patriots
-					FROM = { has_state_flag = has_patriotic_partisan_communes  }
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = -1000
-				}
-				add_manpower = -1000
-			}
-			hidden_effect = { #Дальше пойдёт ебейший костыль, мамы держите дочек
-				if = { limit = { has_idea = patriots_19p } swap_ideas = { remove_idea = patriots_19p add_idea = patriots_20p } }
-				if = { limit = { has_idea = patriots_18p } swap_ideas = { remove_idea = patriots_18p add_idea = patriots_19p } }
-				if = { limit = { has_idea = patriots_17p } swap_ideas = { remove_idea = patriots_17p add_idea = patriots_18p } }
-				if = { limit = { has_idea = patriots_16p } swap_ideas = { remove_idea = patriots_16p add_idea = patriots_17p } }
-				if = { limit = { has_idea = patriots_15p } swap_ideas = { remove_idea = patriots_15p add_idea = patriots_16p } }
-				if = { limit = { has_idea = patriots_14p } swap_ideas = { remove_idea = patriots_14p add_idea = patriots_15p } }
-				if = { limit = { has_idea = patriots_13p } swap_ideas = { remove_idea = patriots_13p add_idea = patriots_14p } }
-				if = { limit = { has_idea = patriots_12p } swap_ideas = { remove_idea = patriots_12p add_idea = patriots_13p } }
-				if = { limit = { has_idea = patriots_11p } swap_ideas = { remove_idea = patriots_11p add_idea = patriots_12p } }
-				if = { limit = { has_idea = patriots_10p } swap_ideas = { remove_idea = patriots_10p add_idea = patriots_11p } }
-				if = { limit = { has_idea = patriots_9p } swap_ideas = { remove_idea = patriots_9p add_idea = patriots_10p } }
-				if = { limit = { has_idea = patriots_8p } swap_ideas = { remove_idea = patriots_8p add_idea = patriots_9p } }
-				if = { limit = { has_idea = patriots_7p } swap_ideas = { remove_idea = patriots_7p add_idea = patriots_8p } }
-				if = { limit = { has_idea = patriots_6p } swap_ideas = { remove_idea = patriots_6p add_idea = patriots_7p } }
-				if = { limit = { has_idea = patriots_5p } swap_ideas = { remove_idea = patriots_5p add_idea = patriots_6p } }
-				if = { limit = { has_idea = patriots_4p } swap_ideas = { remove_idea = patriots_4p add_idea = patriots_5p } }
-				if = { limit = { has_idea = patriots_3p } swap_ideas = { remove_idea = patriots_3p add_idea = patriots_4p } }
-				if = { limit = { has_idea = patriots_2p } swap_ideas = { remove_idea = patriots_2p add_idea = patriots_3p } }
-				if = { limit = { has_idea = patriots_1p } swap_ideas = { remove_idea = patriots_1p add_idea = patriots_2p } }
-				if = {
-					limit = {
-						has_government = patriots
-						NOT = {
-							OR = {
-								has_idea = patriots_1p
-								has_idea = patriots_2p
-								has_idea = patriots_3p
-								has_idea = patriots_4p
-								has_idea = patriots_5p
-								has_idea = patriots_6p
-								has_idea = patriots_7p
-								has_idea = patriots_8p
-								has_idea = patriots_9p
-								has_idea = patriots_10p
-								has_idea = patriots_11p
-								has_idea = patriots_12p
-								has_idea = patriots_13p
-								has_idea = patriots_14p
-								has_idea = patriots_15p
-								has_idea = patriots_16p
-								has_idea = patriots_17p
-								has_idea = patriots_18p
-								has_idea = patriots_19p
-								has_idea = patriots_20p
-							}
-						}
-					}
-					add_timed_idea = {
-						idea = patriots_1p
-						days = 70
-					}
-				}
-			}
-		}
-
-		remove_effect = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_government = patriots
-					}
-					if = { limit = { has_idea = patriots_1p } remove_ideas = { patriots_1p } }
-					if = { limit = { has_idea = patriots_2p } swap_ideas = { remove_idea = patriots_2p add_idea = patriots_1p } }
-					if = { limit = { has_idea = patriots_3p } swap_ideas = { remove_idea = patriots_3p add_idea = patriots_2p } }
-					if = { limit = { has_idea = patriots_4p } swap_ideas = { remove_idea = patriots_4p add_idea = patriots_3p } }
-					if = { limit = { has_idea = patriots_5p } swap_ideas = { remove_idea = patriots_5p add_idea = patriots_4p } }
-					if = { limit = { has_idea = patriots_6p } swap_ideas = { remove_idea = patriots_6p add_idea = patriots_5p } }
-					if = { limit = { has_idea = patriots_7p } swap_ideas = { remove_idea = patriots_7p add_idea = patriots_6p } }
-					if = { limit = { has_idea = patriots_8p } swap_ideas = { remove_idea = patriots_8p add_idea = patriots_7p } }
-					if = { limit = { has_idea = patriots_9p } swap_ideas = { remove_idea = patriots_9p add_idea = patriots_8p } }
-					if = { limit = { has_idea = patriots_10p } swap_ideas = { remove_idea = patriots_10p add_idea = patriots_9p } }
-					if = { limit = { has_idea = patriots_11p } swap_ideas = { remove_idea = patriots_11p add_idea = patriots_10p } }
-					if = { limit = { has_idea = patriots_12p } swap_ideas = { remove_idea = patriots_12p add_idea = patriots_11p } }
-					if = { limit = { has_idea = patriots_13p } swap_ideas = { remove_idea = patriots_13p add_idea = patriots_12p } }
-					if = { limit = { has_idea = patriots_14p } swap_ideas = { remove_idea = patriots_14p add_idea = patriots_13p } }
-					if = { limit = { has_idea = patriots_15p } swap_ideas = { remove_idea = patriots_15p add_idea = patriots_14p } }
-					if = { limit = { has_idea = patriots_16p } swap_ideas = { remove_idea = patriots_16p add_idea = patriots_15p } }
-					if = { limit = { has_idea = patriots_17p } swap_ideas = { remove_idea = patriots_17p add_idea = patriots_16p } }
-					if = { limit = { has_idea = patriots_18p } swap_ideas = { remove_idea = patriots_18p add_idea = patriots_17p } }
-					if = { limit = { has_idea = patriots_19p } swap_ideas = { remove_idea = patriots_19p add_idea = patriots_18p } }
-					if = { limit = { has_idea = patriots_20p } swap_ideas = { remove_idea = patriots_20p add_idea = patriots_19p } }
-				}
-				every_possible_country = {
-					remove_state_core = FROM
-				}
-			}
-			FROM = {
-				hidden_effect = {
-					remove_dynamic_modifier = { modifier = integrated_state_humanist }
-					remove_dynamic_modifier = { modifier = integrated_state_patriots }
-					remove_dynamic_modifier = { modifier = integrated_state_others }
-				}
-				any_country_with_core = { remove_core_of = PREV }
-				if = {
-					limit = {
-						#owner = { NOT = { has_government = patriots } }
-						has_state_flag = has_patriotic_partisan_communes
-					}
-					remove_dynamic_modifier = { modifier = patriots_partisan_communes }
-				}
-				add_core_of = ROOT
-				if = {
-					limit = {
-						owner = { has_government = gumanists }
-					}
-					add_dynamic_modifier = { modifier = integrated_state_humanist }
-				}
-				if = {
-					limit = {
-						owner = { has_government = patriots }
-					}
-					add_dynamic_modifier = { modifier = integrated_state_patriots }
-				}
-				if = {
-					limit = {
-						NOT = {
-							owner = { has_government = gumanists }
-							owner = { has_government = patriots }
-						}
-					}
-					add_dynamic_modifier = { modifier = integrated_state_others }
-				}
-			}
-		}
-
-		state_target = yes
-
-		on_map_mode = decision_view_only
-		
-		ai_will_do = {
-			base = 100
-		}
-	}
-	
-	destroy_wild_tribals = {
-		icon = generic_reorganize_irregulars
-		
-		visible = { 
-			FROM = {
-				# is_owned_by = ROOT
-				# is_fully_controlled_by = ROOT
-				# has_state_flag = has_wild_tribes #Не существует триггера чтобы чекнуть модификатор в регионе, поэтому я опять использовал костыли и прикрепил к каждому стейту м дикой деревней флаг
-				always = no
-			}
-		}
-
-		available = {
-			has_manpower > 1500
-			has_equipment = {
-				infantry_equipment > 1499
-			}
-			has_equipment = {
-				motorized_equipment > 29
-			}
-			#check_variable = {
-			#	economyVariable = 1
-			#}
-		}
-		
-		modifier = {
-		}
-		
-		days_remove = 30
-
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -1500
+				amount = -400
 			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = -30
-			}
-			add_manpower = -1500
-		}
-
-		remove_effect = {
+			add_manpower = -400
 			FROM = {
-				remove_dynamic_modifier = { modifier = wild_tribes } #Я просто убрал этот дебафф, потому что он и так слабее некуда
-				clr_state_flag = has_patriotic_partisan_communes
+				every_core_state = {
+					add_core_of = ROOT
+					remove_core_of = PREV
+				}
 			}
 		}
-
-		state_target = yes
-
-		on_map_mode = decision_view_only
 	}
-
 }

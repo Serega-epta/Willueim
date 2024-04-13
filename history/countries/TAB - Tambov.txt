@@ -1,24 +1,47 @@
 capital = 839
 
-oob = base #"ODS_1936"
+oob = TAB
 
 
 # Starting tech
 set_technology = {
-    infantry_weapons = 1
+	infantry_weapons = 1
+	infantry_odejda  = 1
+	tech_support = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+	gw_artillery = 1
+	stvolartillery = 1
+	boepripas = 1
 }
 
 set_research_slots = 2
 set_convoys = 20
+add_manpower = 19200
+
+add_opinion_modifier = {
+	target = ORL
+	modifier = ORL_madmans
+}
+add_opinion_modifier = {
+	target = SBT
+	modifier = ORL_madmans
+}
+add_opinion_modifier = {
+	target = ZAK
+	modifier = ORL_madmans
+}
 
 set_politics = {
-	ruling_party = militarists
+	ruling_party = humanists
 	elections_allowed = no
 }
 
 set_popularities = {
-	juntas = 25
-	militarists = 75
+	humanists = 60
+	bandits = 10
+	free_people = 10
+	militarists = 15
 }
 
 recruit_character = TAB_alexandr_labeykin

@@ -12,13 +12,12 @@ set_research_slots = 5
 set_convoys = 20
 
 set_politics = {
-	ruling_party = free 
+	ruling_party = chthonism 
 	elections_allowed = no
 }
 
 set_popularities = {
-	free = 100
-
+	chthonism = 100
 }
 
 
@@ -26,7 +25,7 @@ create_country_leader = {
     name = "Pustoty_sac"
     desc = "Pustoty_sac_desс"
     picture = "gfx/leaders/SAC/Pustoty_sac.dds"
-    ideology = free_1
+    ideology = chthonism_subideology
     traits = {
         #
     }

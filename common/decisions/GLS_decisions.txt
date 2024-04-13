@@ -59,62 +59,40 @@ GLS_freedom_and_order = {
 			}
 		}			
 	}
-	gls_debug = {
-		icon = GFX_decision_eng_trade_unions_support	
-		allowed = { original_tag = GLS }	
-		visible = { is_debug = yes }
-		
+	call_to_discipline = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 110
+		allowed = { original_tag = GLS }
+		available = { has_completed_focus = GLS_Brains }
+		visible = { has_completed_focus = GLS_Brains }
+		cost = 100
+		days_re_enable = 30
+
 		complete_effect = {
-			hidden_effect = {
-				set_variable = { order = 50 }
-				set_variable = { freedom = 50 }
+			custom_effect_tooltip = GLS_call_to_discipline_tt
+			hidden_effect = { 
+				subtract_from_variable = { freedom = 15 }
+				add_to_variable = { order = 15 }
 			}
 		}
 	}
-	gls_debug_order_win = {
-		icon = GFX_decision_eng_trade_unions_support	
-		allowed = { original_tag = GLS }	
-		visible = { is_debug = yes }
-		
+	remember_the_great_idea = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 110
+		allowed = { original_tag = GLS }
+		available = { has_completed_focus = GLS_Number_one }
+		visible = { has_completed_focus = GLS_Number_one }
+		cost = 100
+		days_re_enable = 30
+
 		complete_effect = {
-			hidden_effect = {
-				set_variable = { order = 100 }
+			custom_effect_tooltip = GLS_remember_the_great_idea_tt
+			hidden_effect = { 
+				subtract_from_variable = { order = 15 }
+				add_to_variable = { freedom = 15 }
 			}
 		}
 	}
-	gls_debug_order_lost = {
-		icon = GFX_decision_eng_trade_unions_support	
-		allowed = { original_tag = GLS }	
-		visible = { is_debug = yes }
-		
-		complete_effect = {
-			hidden_effect = {
-				set_variable = { order = 0 }
-			}
-		}
-	}
-	gls_debug_freedom_win = {
-		icon = GFX_decision_eng_trade_unions_support	
-		allowed = { original_tag = GLS }	
-		visible = { is_debug = yes }
-		
-		complete_effect = {
-			hidden_effect = {
-				set_variable = { freedom = 100 }
-			}
-		}
-	}
-	gls_debug_freedom_lost = {
-		icon = GFX_decision_eng_trade_unions_support	
-		allowed = { original_tag = GLS }	
-		visible = { is_debug = yes }
-		
-		complete_effect = {
-			hidden_effect = {
-				set_variable = { freedom = 0 }
-			}
-		}
-	}	
 }
 
 GLS_negotiation_process = {

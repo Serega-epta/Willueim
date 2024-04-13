@@ -1,51 +1,9 @@
-ARM_partisans = {
+ARM_middle_russian_war = {
 	icon = saf_anti_colonialist_crusade
-	picture = GFX_nixilus_picture
-	scripted_gui = arm_partisans
+	#picture =
+	scripted_gui = arm_middle_russian_war_gui
 	allowed = { original_tag = ARM }
-	visible = { has_country_flag = ARM_partisanship_start }
+	visible = { has_country_flag = ARM_middle_russian_war_flag }
 	visible_when_empty = yes
-	priority = { base = 5 }
-}
-ARM_creating_a_submarines = {
-	icon = saf_anti_colonialist_crusade
-	scripted_gui = creating_a_submarines
-	allowed = { original_tag = ARM }
-	visible = { has_country_flag = ARM_nachat_stroitelstvo_podlodok }
-	priority = { base = 5 }
-}
-
-
-ARM_creating_a_submarines_vtoraya_fazza = {
-	icon = saf_anti_colonialist_crusade
-	scripted_gui = creating_a_submarines2_faza
-	allowed = { original_tag = ARM }
-	visible = { has_country_flag = ARM_nachat_stroitelstvo_podlodok_vtoratya_fazza }
-	priority = { base = 5 }
-}
-
-ARM_creating_a_submarines_tretia_fazza = {
-	icon = saf_anti_colonialist_crusade
-	scripted_gui = creating_a_submarines3_faza
-	allowed = { original_tag = ARM }
-	visible = { has_country_flag = ARM_nachat_stroitelstvo_podlodok_trretia_fazza }
-	priority = { base = 5 }
-}
-
-ARM_civil_war = {
-	icon = saf_anti_colonialist_crusade
-	scripted_gui = ARM_civil_war_gui
-	visible_when_empty = yes
-	visible  = { OR = { has_country_flag = the_mechanics_of_the_civil_war_on_Podolyakin_side has_country_flag = the_mechanics_of_the_civil_war_on_Onufurenko_side } }
-	allowed = { original_tag = ARM }
-	priority = { base = 5 }
-}
-
-ARM_combat_reconnaissance = {
-	icon = saf_anti_colonialist_crusade
-	scripted_gui = ARM_combat_reconnaissance_gui
-	visible_when_empty = yes
-	visible  = { has_country_flag = the_mechanics_of_the_combat_reconnaissance  }
-	allowed = { original_tag = ARM }
 	priority = { base = 5 }
 }

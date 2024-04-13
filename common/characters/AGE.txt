@@ -1,27 +1,20 @@
 characters = {
-	#=#=# Лидер/Фельдмаршал #=#=#
-	#Александр Лазаревич#
 	AGE_aleksandr_lazarevich = {
-		#Имя#
 		name = AGE_aleksandr_lazarevich
-		#Портрет#
 		portraits = {
 			civilian = {
-				large = GFX_AGE_aleksandr_lashenko
+				large = "GFX_AGE_Alexander_Lazarevich"
 			}
 			army = {
-				large = GFX_AGE_aleksandr_lashenko
+				large = "GFX_AGE_Alexander_Lazarevich"
 			}
 		}
-		
-		#Должность Лидер#
 		country_leader={
-			ideology= patriots_1
+			ideology= statesmen_subideology
 			expire="2033.1.1.1"
 			id=-1
 			desc = AGE_aleksandr_lazarevich_desc
 		}
-		#Должность Фильдмаршал#
 		field_marshal = { 
 			skill = 3
 			attack_skill = 3
@@ -31,25 +24,19 @@ characters = {
 			legacy_id = -1
 			desc = AGE_aleksandr_lazarevich_desc
 			traits = {
-				medal_of_honor_great_motherland #”Медаль за отвагу” Великой Родины#
-				old_guard #Старая гвардия#
+				medal_of_honor_great_motherland 
+				old_guard 
 				organisational_leader
-			
 			}
 		}
 	}
-	#=#=# Генералы #=#=#
-	#Родолюб Вулович/Роки#
 	AGE_rodolyub_vulovich = { 
-		#Имя#
 		name = AGE_rodolyub_vulovich
-		#Портрет#
 		portraits = {
 			civilian = {
-				large = GFX_AGE_rodolyub_vulovich
+				large = "GFX_AGE_Roki"
 			}
 		}
-		#Должность Генерала#
 		corps_commander = {
 			skill = 2
 			attack_skill = 1
@@ -59,24 +46,21 @@ characters = {
 			legacy_id = -1
 			desc = AGE_rodolyub_vulovich_desc
 			traits = {
-				old_guard #Старая гвардия#
-				politically_connected #Политические связи#
-				media_personality #Медийная персона
+				old_guard 
+				politically_connected 
+				media_personality 
 			}
 			
 		}
 	}
-	#Деян Берич/Деки#
+
 	AGE_deyan_berich = { 
-		#Имя#
 		name = AGE_deyan_berich
-		#Портрет#
 		portraits = {
 			civilian = {
-				large = GFX_AGE_deyan_berich
+				large = "GFX_AGE_Deki"
 			}
 		}
-		#Должность Генерала#
 		corps_commander = {
 			skill = 3
 			attack_skill = 2
@@ -86,21 +70,18 @@ characters = {
 			legacy_id = -1
 			desc = AGE_deyan_berich_desc
 			traits = {
-				old_guard #Старая гвардия#
-				war_hero #Герой войны#
+				old_guard 
+				war_hero 
 			}
 		}
 	}
-	AGE_novak_jekovic = { #Новик Джекович#
-		#Имя#
+	AGE_novak_jekovic = { 
 		name = AGE_novak_jekovic
-		#Портрет#
 		portraits = {
 			civilian = {
-				large = GFX_AGE_novak_jekovic
+				large = "GFX_AGE_Novik_Dzhekovich"
 			}
 		}
-		#Должность Генерала#
 		corps_commander = {
 			skill = 3
 			attack_skill = 3
@@ -110,8 +91,8 @@ characters = {
 			legacy_id = -1
 			desc = AGE_novak_jekovic_desc
 			traits = {
-				brilliant_strategist #Великолепный нападающий(стратег)#
-				trait_reckless #Смельчак#
+				brilliant_strategist 
+				trait_reckless 
 			}
 		}
 	}

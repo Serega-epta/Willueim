@@ -1,27 +1,29 @@
 
-state = {
-	id = 916
-	name = "STATE_916"
-	manpower = 7500
-	
-	state_category = rural
+state={
+	id=916
+	name="STATE_916"
 
-	history = {
-		owner = BAL
+	history={
 		victory_points = {
-			    6347 1
+			13482 1 
+		}
+		owner = VOZ
+		add_core_of = VOZ
+		add_dynamic_modifier = {
+			modifier = wild_tribes
+
 		}
 		buildings = {
-		
 			infrastructure = 2
-			
 		}
-		
+
 	}
 
-	provinces = {
-		3295 6347
+	provinces={
+		11182 13454 13478 13482 
 	}
-
-	local_supplies = 6.0 
+	manpower=11300
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=6.000
 }

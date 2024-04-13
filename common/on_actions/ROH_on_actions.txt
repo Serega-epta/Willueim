@@ -79,4 +79,21 @@ on_actions = {
 			}
 		}
 	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { original_tag = ODS }
+				add_dynamic_modifier = { modifier = ODS_new_land }
+			}
+		}
+	}
+	on_nuke_drop = {
+		effect = {
+			FROM = {
+				goto_state = {
+					add_manpower = -100000
+				}
+			}
+		}
+	}
 }

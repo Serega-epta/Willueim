@@ -1,16 +1,21 @@
 capital = 808
 
-oob = base
-
-add_ideas = { #Стартовые Нац-Духи
-	AGE_knife_at_throat #Нож у горла#
-	AGE_time_wasted #Время, потраченное впустую#
-	
+oob = AGE
+add_manpower = 5000
+add_ideas = { 
+	AGE_knife_at_throat 
+	AGE_time_wasted 
 }
 
-# Starting tech
+
 set_technology = {
     infantry_weapons = 1
+    infantry_odejda = 1
+    motorised_infantry = 1
+    gw_artillery = 1
+    tech_support = 1
+    tech_recon = 1
+    early_fighter = 1
 }
 
 set_research_slots = 2
@@ -18,27 +23,54 @@ set_convoys = 0
 set_stability = 0.8
 set_war_support = 1
 
+load_focus_tree = {
+    tree = AGE_phase_1
+    keep_completed = no
+}
+
+add_opinion_modifier = {
+    target = LPC
+    modifier = archenemy
+}
+add_opinion_modifier = {
+    target = TWD
+    modifier = traitors
+}
+add_opinion_modifier = {
+    target = BLZ
+    modifier = help
+}
+add_opinion_modifier = {
+    target = BTC
+    modifier = interference
+}
+
 set_politics = {
-	ruling_party = patriots 
+	ruling_party = statesmen 
 	elections_allowed = no
 }
 
 set_popularities = {
-	free = 0
+	free_people = 0
 	sacraments = 0
-	gelerteria = 0
+	humanists = 0
+	chthonism = 0
 	militarists = 0
-	gumanists = 0
-	svobod = 0
-	technocracies = 0
-	opportunists = 0
-	forestry = 0
-	juntas = 0
-	professariat = 0
-	patriots = 100
+	technocracy = 0
+	statesmen = 100
 	bandits = 0
 }
-recruit_character = AGE_aleksandr_lazarevich #Александр Лазаревич#
-recruit_character = AGE_rodolyub_vulovich #Родолюб Вулович/Роки#
-recruit_character = AGE_deyan_berich #Деян Берич/Деки#
-recruit_character = AGE_novak_jekovic #Новик Джекович#
+recruit_character = AGE_aleksandr_lazarevich 
+recruit_character = AGE_rodolyub_vulovich 
+recruit_character = AGE_deyan_berich 
+recruit_character = AGE_novak_jekovic 
+
+
+#Состояние Лазаревича - механика "Пульсация Разума"  
+set_variable = { level = 3 }
+
+#Стабильность в регионе - механика "Их свободы"
+set_variable = { stability = 50 }
+
+#Количество дней с окончания миссии "Кровавые багрянцы" - механика "Их свободы"
+set_variable = { count_of_days_since_end_AGE_blood_diamonds = 0 }

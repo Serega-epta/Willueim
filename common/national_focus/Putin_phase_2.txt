@@ -1,0 +1,355 @@
+focus_tree = {
+	id = SDC_phase_two
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 100
+            tag = SDC
+        }
+    }
+    default = no
+
+    focus = {
+        id = SDC_facility
+        cost = 5
+        x = 6
+        y = 0
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_increase_volumes
+        prerequisite = { focus = SDC_facility }
+        cost = 5
+        x = 4
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_mobilisation
+        prerequisite = { focus = SDC_facility }
+        cost = 5
+        x = 6
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_shifting_deadlines
+        prerequisite = { focus = SDC_facility }
+        cost = 5
+        x = 8
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_preemptive_strike
+        prerequisite = { focus = SDC_mobilisation }
+        prerequisite = {
+            focus = SDC_increase_volumes
+            focus = SDC_shifting_deadlines
+        }
+        cost = 5
+        x = 6
+        y = 2
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_great_chess_game
+        prerequisite = { focus = SDC_preemptive_strike }
+        cost = 5
+        x = 6
+        y = 3
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_hybrid_war
+        prerequisite = { focus = SDC_great_chess_game }
+        cost = 5
+        x = 4
+        y = 4
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_stalkers_squads
+        prerequisite = { focus = SDC_hybrid_war }
+        cost = 5
+        x = 2
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_execution_service
+        prerequisite = { focus = SDC_hybrid_war }
+        cost = 5
+        x = 4
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_science_academy
+        prerequisite = { focus = SDC_great_chess_game }
+        cost = 5
+        x = 6
+        y = 4
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_Martins_comunications
+        prerequisite = { focus = SDC_science_academy }
+        cost = 5
+        x = 6
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_national_traitors
+        prerequisite = { focus = SDC_great_chess_game }
+        cost = 5
+        x = 8
+        y = 4
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_archangelsk_sever
+        prerequisite = { focus = SDC_national_traitors }
+        cost = 5
+        x = 8
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_force_methods
+        prerequisite = { focus = SDC_national_traitors }
+        cost = 5
+        x = 10
+        y = 5
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_special_military_operation
+        prerequisite = {
+            focus = SDC_stalkers_squads
+            focus = SDC_execution_service
+            focus = SDC_Martins_comunications
+            focus = SDC_archangelsk_sever
+            focus = SDC_force_methods
+        }
+        cost = 5
+        x = 6
+        y = 7
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_appoint_Martin
+        prerequisite = { focus = SDC_special_military_operation }
+        mutually_exclusive = { focus = SDC_direct_control }
+        cost = 5
+        x = 4
+        y = 8
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_dont_fear_chalanges
+        prerequisite = { focus = SDC_appoint_Martin }
+        cost = 5
+        x = 3
+        y = 9
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_science_methods
+        prerequisite = { focus = SDC_appoint_Martin }
+        cost = 5
+        x = 5
+        y = 9
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_integration
+        prerequisite = { focus = SDC_dont_fear_chalanges }
+        prerequisite = { focus = SDC_science_methods }
+        cost = 5
+        x = 4
+        y = 10
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_direct_control 
+        prerequisite = { focus = SDC_special_military_operation }
+        mutually_exclusive = { focus = SDC_appoint_Martin }
+        cost = 5
+        x = 8
+        y = 8
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_finish_survivers
+        prerequisite = { focus = SDC_direct_control }
+        cost = 5
+        x = 7
+        y = 9
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_Ural_brigades
+        prerequisite = { focus = SDC_direct_control }
+        cost = 5
+        x = 9
+        y = 9
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_peacification
+        prerequisite = { focus = SDC_finish_survivers }
+        prerequisite = { focus = SDC_Ural_brigades }
+        cost = 5
+        x = 8
+        y = 10
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_doomhour
+        prerequisite = {
+            focus = SDC_integration
+            focus = SDC_peacification
+        }
+        cost = 5
+        x = 6
+        y = 11
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+    focus = {
+        id = SDC_KS3
+        prerequisite = { focus = SDC_doomhour }
+        cost = 5
+        x = 6
+        y = 12
+        ai_will_do = {
+            factor = 10
+        }
+        completion_reward ={
+            
+        }
+    }
+}

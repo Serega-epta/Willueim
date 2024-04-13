@@ -2,23 +2,28 @@ capital = 218
 
 oob = FSR
 
+load_focus_tree = {
+    tree = FSR_focus
+    keep_completed = no
+}
 
 # Starting tech
 set_technology = {
     infantry_weapons = 1
+    infantry_odejda  = 1
 }
 
 set_research_slots = 2
 set_convoys = 20
+add_manpower = 6100
 
 set_politics = {
-	ruling_party = svobod
+	ruling_party = free_people
 	elections_allowed = no
 }
 
 set_popularities = {
-	free = 18
-	svobod = 82
+	free_people = 100
 }
 
  
@@ -27,7 +32,7 @@ set_popularities = {
 #    name = "Aleksander_Raufman"
 #    desc = "Aleksander_Raufman_desc"
 #    picture = "gfx/leaders/FSR/Aleksander_Raufman.dds"
-#    ideology = svobod_1
+#    ideology = free_people_subideology
 #    traits = {
 #        #
 #    }

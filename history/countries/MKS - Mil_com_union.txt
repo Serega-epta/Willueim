@@ -1,23 +1,47 @@
 capital = 265
 
-oob = base #none
+oob = MKS
 
 set_technology = {
     infantry_weapons = 1
+    infantry_odejda  = 1
+    tech_support = 1
+    basic_machine_tools = 1
+    electronic_mechanical_engineering = 1
+    gw_artillery = 1
+    stvolartillery = 1
+    boepripas = 1
+}
+set_convoys = 0
+set_research_slots = 3
+set_stability = 0.65
+set_war_support = 0.21
+army_experience = 5
+add_manpower = 14400
+
+add_opinion_modifier = {
+    target = MSH
+    modifier = criminal
+}
+add_opinion_modifier = {
+    target = KMN
+    modifier = criminal
+}
+add_opinion_modifier = {
+    target = BGR
+    modifier = forced_union
 }
 
-set_convoys = 0
-
 set_politics = {
-    ruling_party = svobod
+    ruling_party = free_people
     last_election = "2000.6.21"
     election_frequency = 48
     elections_allowed = no
 }
 set_popularities = {
-    bandits = 0
-    forestry = 0
-    svobod = 100
+    free_people = 70
+    bandits = 30
 }
 
 recruit_character = MKS_Varvara_Ivanova
+recruit_character = MKS_generic_general

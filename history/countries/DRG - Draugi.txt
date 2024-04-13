@@ -14,15 +14,14 @@ set_convoys = 20
 
 add_ideas = DRG_under_the_banner_of_perun
 set_politics = {
-	ruling_party = forestry 
+	ruling_party = free_people 
 	elections_allowed = no
 }
 
 set_popularities = {
-	forestry = 75
-	technocracies = 10
-	svobod = 10
-	gumanists = 5
+	free_people = 85
+	technocracy = 10
+	humanists = 5
 }
 
 
@@ -30,7 +29,7 @@ create_country_leader = {
     name = "DRG_pavel_glin"
     desc = "DRG_pavel_glin_desc"
     picture = "gfx/leaders/DRG/pavel_glin.dds"
-    ideology = forestry_1
+    ideology = free_people_subideology
     traits = {
         #
     }

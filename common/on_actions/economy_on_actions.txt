@@ -1,0 +1,57 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#for init script
+			every_possible_country = {
+				#set slider position if not set in history
+				if = {
+					limit = {
+						NOT = {
+							has_variable = production_finances
+						}
+					}
+					set_variable = {
+						production_finances = 5
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = civil_finances
+						}
+					}
+					set_variable = {
+						civil_finances = 5
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = army_finances
+						}
+					}
+					set_variable = {
+						army_finances = 5
+					}
+				}
+				#init first week income
+				calc_economic_income = yes
+				#init first week expenses
+				calc_production_finances = yes
+				calc_civil_finances = yes
+				calc_army_finances = yes
+				calc_economic_expenses = yes
+				#init economy modifier
+				add_dynamic_modifier = {
+					modifier = main_economic_modifier
+				}
+				calc_economy_modifier = yes
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			economy_tick_effects = yes
+		}
+	}
+}

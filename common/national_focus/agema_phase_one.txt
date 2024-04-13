@@ -1,0 +1,285 @@
+focus_tree = {
+	id = AGE_phase_1
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = AGE
+        }		
+	}
+	default = no
+
+	focus = {
+		id = AGE_blood_on_hands
+		icon = GFX_AGE_Blood_on_hands
+		cost = 5.00
+		x = 7
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			country_event = AGE.1
+			add_trait = {
+				character = AGE_aleksandr_lazarevich
+				ideology = patriots_1
+				trait = AGE_agony_of_choice
+		    }
+			custom_effect_tooltip = AGE_blood_on_hands_tt
+		}
+	}
+	focus = {
+		id = AGE_seek_for_peace
+		icon = GFX_AGE_Seek_for_peace
+		cost = 5.00
+		x = 6
+		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_blood_on_hands }
+		mutually_exclusive = {
+			focus = AGE_red_sables
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -50
+			add_manpower = 1000
+			country_event = AGE.2
+			custom_effect_tooltip = AGE_seek_for_peace_tt
+			custom_effect_tooltip = stablity_increases_to_two
+			add_to_variable = { stability = 2 }
+		}
+	}
+	focus = {
+		id = AGE_still_their_land
+		icon = GFX_AGE_Still_their_land
+		cost = 5.00
+		x = 6
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_seek_for_peace }
+		completion_reward = {
+			add_stability = 0.05
+			remove_ideas = AGE_knife_at_throat
+			add_ideas = AGE_land_for_baltics
+			country_event = AGE.3
+			custom_effect_tooltip = AGE_still_their_land_tt
+			custom_effect_tooltip = stablity_increases_to_three
+			add_to_variable = { stability = 3 }
+		}
+	}
+	focus = {
+		id = AGE_red_sables
+		icon = GFX_AGE_Red_sables
+		cost = 5.00
+		x = 8
+		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_blood_on_hands }
+		mutually_exclusive = {
+			focus = AGE_seek_for_peace
+		}
+		available = {
+			manpower > 2000
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -1000
+			army_experience = -5
+			add_ideas = AGE_red_sabres
+			country_event = AGE.4
+			custom_effect_tooltip = AGE_red_sables_tt
+			custom_effect_tooltip = stablity_decreases_to_five
+			substract_from_variable = { stability = 5 }
+		}
+	}
+	focus = {
+		id = AGE_not_their_land
+		icon = GFX_AGE_Not_their_land
+		cost = 5.00
+		x = 8
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_red_sables }
+		completion_reward = {
+			add_stability = -0.05
+			every_owned_state = {
+				add_dynamic_modifier = {
+					modifier = baltic_resistance
+				}
+			}
+			remove_ideas = AGE_knife_at_throat
+			country_event = AGE.6
+		}
+	}
+	focus = {
+		id = AGE_our_motherland
+		icon = GFX_AGE_Our_motherland
+		cost = 5.00
+		x = 7
+		y = 3
+		ai_will_do = { factor = 10 }
+		prerequisite = {
+			focus = AGE_still_their_land
+			focus = AGE_not_their_land
+		}
+		completion_reward = {
+			army_experience = 5
+			air_experience = 5
+			add_stability = 0.02
+			country_event = AGE.5
+
+		}
+	}
+	focus = {
+		id = AGE_give_mercy
+		icon = GFX_AGE_Give_mercy
+		cost = 5.00
+		x = 5
+		y = 3
+		ai_will_do = { factor = 10 }
+		available = {
+			has_completed_focus = AGE_seek_for_peace
+		}
+		completion_reward = {
+			add_political_power = -100
+			set_country_flag = ba_their_freedoms_loyalty_country_flag
+		}
+	}
+	focus = {
+		id = AGE_night_when_wolfs_keep_silent
+		icon = GFX_AGE_Night_when_wolfs
+		cost = 5.00
+		x = 9
+		y = 3
+		ai_will_do = { factor = 10 }
+		available = {
+			has_completed_focus = AGE_red_sables
+		}
+		completion_reward = {
+			add_political_power = 50
+			every_owned_state = {
+				add_manpower = -500
+			}
+			custom_effect_tooltip = stablity_decreases_to_five
+			substract_from_variable = { stability = 5 }
+		}
+	}
+	focus = {
+		id = AGE_we_are_not_alone
+		icon = GFX_AGE_We_are_not_alone
+		cost = 5.00
+		x = 6
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_give_mercy }
+		prerequisite = { focus = AGE_our_motherland}
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = stablity_increases_to_five
+			add_to_variable = { stability = 5 }
+		}
+	}
+	focus = {
+		id = AGE_old_friendship
+		icon = GFX_AGE_Old_friendship
+		cost = 5.00
+		x = 6
+		y = 5
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_we_are_not_alone }
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = stablity_increases_to_five
+			add_to_variable = { stability = 5 }
+		}
+	}
+	focus = {
+		id = AGE_day_of_unity
+		icon = GFX_AGE_Day_of_unity
+		cost = 5.00
+		x = 6
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_old_friendship }
+		completion_reward = {
+			add_timed_idea = {
+				idea = AGE_day_of_unity_celebration
+				days = 30
+			}
+			custom_effect_tooltip = stablity_increases_to_five
+			add_to_variable = { stability = 5 }
+		}
+	}
+	focus = {
+		id = AGE_we_are_here_for_long
+		icon = GFX_AGE_We_are_here_for_long
+		cost = 5.00
+		x = 8
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_night_when_wolfs_keep_silent }
+		prerequisite = { focus = AGE_our_motherland }
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.02
+			set_country_flag =  ba_their_freedoms_loyalty_country_flag
+			custom_effect_tooltip = stablity_decreases_to_five
+			substract_from_variable = { stability = 5 }
+		}
+	}
+	focus = {
+		id = AGE_southern_ortodoxians
+		icon = GFX_AGE_Southern_ortodoxians
+		cost = 5.00
+		x = 8
+		y = 5
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_we_are_here_for_long }
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 250
+			}
+			custom_effect_tooltip = stablity_decreases_to_five
+			substract_from_variable = { stability = 5 }
+		}
+	}
+	focus = {
+		id = AGE_day_of_freedom
+		icon = GFX_AGE_Day_of_freedom
+		cost = 5.00
+		x = 8
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = AGE_southern_ortodoxians }
+		completion_reward = {
+			custom_effect_tooltip = stablity_decreases_to_ten
+			substract_from_variable = { stability = 10 }
+		}
+	}
+	focus = {
+		id = AGE_once_we_will_be_there
+		icon = GFX_AGE_Once_we_will_be_there
+		cost = 5.00
+		x = 7
+		y = 7
+		ai_will_do = { factor = 10 }
+		prerequisite = { 
+			focus = AGE_day_of_unity
+			focus = AGE_day_of_freedom
+		}
+		completion_reward = {
+			country_event = AGE.7
+			custom_effect_tooltip = stablity_increases_to_ten
+			add_to_variable = { stability = 10 }
+			if = {
+				limit = {
+					has_completed_focus = AGE_seek_for_peace
+				}
+				every_owned_state = {
+					set_state_flag = johans_advanced_control
+				}
+			}
+		}
+	}
+}

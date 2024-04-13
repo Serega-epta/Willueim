@@ -1,0 +1,17 @@
+IMP_war_with_MAD = {
+	IMP = {
+		exists = yes
+		has_war = no
+	}
+	date > 2022.09.26
+}
+
+IMP_war_ended = {
+    IMP = {
+        has_war = no
+        owns_state = 880
+    }
+    MAD = {
+        exists = no
+    }
+}

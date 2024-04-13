@@ -14,11 +14,12 @@ ideas = {
 		}
 		uniat_nationalists = {
 			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = 0.1
-				industrial_capacity_factory = 0.05
-				conversion_cost_civ_to_mil_factor = 0.2
+				political_power_factor = -0.7
+				consumer_goods_factor = 0.15
+				stability_factor = -0.50
 				conscription_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
 			}
 		}
 
@@ -37,7 +38,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.05
 				political_power_factor = -0.1
-				offence = 0.05
+				offence = -0.10
 				army_attack_factor = -0.1
 				conscription_factor = -0.13
 				army_org_factor = -0.1
@@ -48,30 +49,27 @@ ideas = {
 		}
 		holy_nadely_3 = {
 			modifier = {
-				conscription_factor = -0.2
+				conscription_factor = -0.10
 				political_power_factor = -0.1
 				stability_factor = -0.15
-				army_attack_factor = -0.1
+				offence = -0.05
 				army_org_factor = -0.1
 				command_power_gain_mult = 0.05
 				war_support_factor = 0.1
 				resistance_growth = -0.1
-				local_non_core_manpower = -0.1
+				local_non_core_manpower = -0.01
 			}
 		}
 		holy_nadely_4 = {
 			modifier = {
-				political_power_cost = 0.05
-				political_power_factor = -0.1
+				political_power_factor = -0.15
 				offence = 0.05
-				army_attack_factor = -0.1
-				conscription_factor = -0.13
-				army_org_factor = -0.1
-				army_org = 5
-				command_power_gain_mult = 0.05
+				conscription_factor = -0.05
+				army_org_factor = 0.1
+				command_power_gain_mult = 0.15
 				war_support_factor = 0.1
 				resistance_growth = -0.1
-				local_non_core_manpower = -0.1
+				local_non_core_manpower = -0.05
 			}
 		}
 		Istinnoe_obcshestvo = {
@@ -84,16 +82,16 @@ ideas = {
 		Rabochii_moleben = {
 			picture = Molyaschiesya
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				conscription = -0.002
+				production_factory_efficiency_gain_factor = 0.20
+				production_factory_start_efficiency_factor = -0.15
 			}
 		}	
-		Brother = {
+		art_of_persuasion = {
 			picture = brother
 			modifier = {
-				send_volunteers_tension = -1
-				send_volunteer_divisions_required = -1
-				send_volunteer_factor = 0.25
+				resistance_damage_to_garrison= -0.5
+				non_core_manpower = 0.15
+				required_garrison_factor = -0.2
 			}
 		}
 		Blagoslavleny = {
@@ -121,13 +119,13 @@ ideas = {
 			targeted_modifier = {
 			tag = COA
 			attack_bonus_against = 0.15
-			defence_bonus_against = 0.15
+			defense_bonus_against = 0.15
 			}
 		}
 		zapoved = {
 			picture = GFX_idea_zapoved
 			modifier = {
-			monthly_population = -0.15
+			monthly_population = -0.05
 			consumer_goods_factor = -0.03
 			production_lack_of_resource_penalty_factor = -0.15
 			production_factory_efficiency_gain_factor = 0.05
@@ -163,7 +161,7 @@ ideas = {
 ########################################## 3 FAZA ################################################
 			
 		LWV_bejinsy_from_holy_land = {
-			picture = cute_knightboy
+			picture = bejinsy_from_holy_land
 			modifier = {
 				monthly_population = 0.03
 				production_speed_buildings_factor = 0.03
@@ -245,7 +243,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.2
 				production_speed_industrial_complex_factor = -0.3
 				political_power_gain = -0.1
-				research_speed = 0.05
+				research_speed_factor = 0.05
 			}
 		}
 		LWV_new_promishlenost_raspredelit_1 = {
@@ -323,7 +321,7 @@ ideas = {
 			production_factory_efficiency_gain_factor = 0.2
 			production_speed_industrial_complex_factor = -0.3
 			political_power_gain = -0.1
-			research_speed = 0.05
+			research_speed_factor = 0.05
 			industry_repair_factor = 0.5
 			}
 		}
@@ -410,7 +408,7 @@ ideas = {
 			production_speed_industrial_complex_factor = -0.3
 			production_speed_infrastructure_factor = 0.1
 			political_power_gain = -0.1
-			research_speed = 0.05
+			research_speed_factor = 0.05
 			industry_repair_factor = 0.5
 			}
 		}
@@ -552,7 +550,7 @@ ideas = {
 				offensive_war_stability_factor = 0.2
 				justify_war_goal_time = -0.25
 				equipment_bonus = {
-					infantry_equipment = {
+					infantry = {
 						build_cost_ic = -0.2
 						instant = yes
 					}

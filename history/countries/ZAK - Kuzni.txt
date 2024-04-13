@@ -1,25 +1,59 @@
 capital = 839
 
-oob = base #"ODS_1936"
+oob = ZAK
 
 
 # Starting tech
 set_technology = {
-    infantry_weapons = 1
+	infantry_weapons = 1
+	infantry_odejda  = 1
+	tech_support = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+	gw_artillery = 1
+	stvolartillery = 1
+	boepripas = 1
 }
 
 set_research_slots = 2
 set_convoys = 20
+add_manpower = 7200
+
+add_opinion_modifier = {
+	target = ORL
+	modifier = ORL_battle_brothers
+}
+add_opinion_modifier = {
+	target = SBT
+	modifier = ORL_battle_brothers
+}
+add_opinion_modifier = {
+	target = VLC
+	modifier = ORL_sectarians
+}
+add_opinion_modifier = {
+	target = SMX
+	modifier = ORL_traitors 
+}
+add_opinion_modifier = {
+	target = MAZ
+	modifier = ORL_idiots_and_idealists
+}
+add_opinion_modifier = {
+	target = TAB
+	modifier = ORL_idiots_and_idealists
+}
 
 set_politics = {
-	ruling_party = gumanists
+	ruling_party = militarists
 	elections_allowed = no
 }
 
 set_popularities = {
-	gumanists = 84
-	svobod = 6
-	technocracies = 10
+	militarists = 84
+	sacraments = 6
+	free_people = 10
 }
 
-recruit_character = ZAK_Gosudarstvennaya_oruzheynaya_komissia
+recruit_character = ZAK_Sergey_Surovov
+recruit_character = ZAK_generic_general

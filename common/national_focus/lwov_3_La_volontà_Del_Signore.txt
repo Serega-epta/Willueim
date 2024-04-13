@@ -8,14 +8,12 @@ focus_tree = {
 			tag = LWV
 		}
 	}
-	continuous_focus_position = { x = 100 y = 2500 }
 	
 	default = no
 	
 	focus = {
 		id = LWV_osviatit_land
 		icon = GFX_osviatit_land
-		available = { has_war = no }
 		x = 10
 		y = 0
 		cost = 5
@@ -24,17 +22,18 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LWV = { country_event = LWV.30 days = 1 }
 			add_ideas = LWV_begushie_otstupniki		
 			add_stability = 0.05
-			add_political_power = 50
-						
-			all_neighbor_country = { country_event = LWV.31 days = 1 }		
+			add_political_power = 50		
 			country_event = {
 				id = LWV.38
 				days = 1
 			}
-			set_cosmetic_tag = LWV_Holy_Land			
+			set_cosmetic_tag = LWV_Holy_Land
+			every_neighbor_country = {
+				country_event = LWV.31
+				days = 5
+			}	
 		}
 	}	
 	focus = {
@@ -632,7 +631,7 @@ focus_tree = {
 			891 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 5
+					level = 1
 					instant_build = yes
 				}
 			}			
@@ -671,8 +670,6 @@ focus_tree = {
 		prerequisite = { focus = LWV_presledovat_otstupnikov }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			custom_effect_tooltip = rrrreshenia_region_sviat
-			set_country_flag = decision_for_holiness
 		}
 	}
 	focus = {
@@ -688,6 +685,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = -100
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
 		}
 	}
 	focus = {
@@ -766,7 +771,7 @@ focus_tree = {
 			random_owned_state = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 5
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -785,6 +790,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 10
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}	
 	focus = {
@@ -835,7 +847,14 @@ focus_tree = {
 		prerequisite = { focus = LWV_zvon_kolocolov }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_political_power = 10		
+			add_political_power = 10
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -916,7 +935,14 @@ focus_tree = {
 		prerequisite = { focus = LWV_tserkovni_hor }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_political_power = 10		
+			add_political_power = 10	
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}			
 		}
 	}
 	focus = {
@@ -935,6 +961,13 @@ focus_tree = {
 			country_event = {
 				id = LWV.33
 				days = 1
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1093,6 +1126,13 @@ focus_tree = {
 				id = LWV.35 
 				days = 1
 			}	
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}	
 	focus = {
@@ -1160,6 +1200,13 @@ focus_tree = {
 		prerequisite = { focus = LWV_vosstanovlenie }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			owned_states = { from = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		if = {
 			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_1 }
 			swap_ideas = {
@@ -1216,12 +1263,15 @@ focus_tree = {
 			add_idea = LWV_raspredelit_raschirit_4
 			}
 		}
-			every_owned_state = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}				
+		every_owned_state = {
+				if = {
+					limit = { infrastructure < 3 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}	
+				}			
 			}	
 		}
 	}
@@ -1280,6 +1330,13 @@ focus_tree = {
 				id = LWV.42
 				days = 1
 			}	
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -1366,7 +1423,7 @@ focus_tree = {
 						limit = {
 							has_state_category = pastoral
 						}
-						set_state_category = rural
+						set_state_category = town
 					}
 				}
 			}
@@ -1423,6 +1480,13 @@ focus_tree = {
 				id = LWV.43
 				days = 1
 			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}	
 	
@@ -1435,7 +1499,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_zochem focus = LWV_but_why }
+		prerequisite = { focus = LWV_zochem }
+		prerequisite = { focus = LWV_but_why }
 		prerequisite = { focus = LWV_new_metod  focus = LWV_adaptirovat_tradition }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {

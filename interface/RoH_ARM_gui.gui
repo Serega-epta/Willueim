@@ -1,146 +1,24 @@
 guiTypes = {
 	containerWindowType = {
-		name = "ARM_partisans"
-		size = { width = 482 height = 600 }
+		name = "ARM_second_middle_russian"
+		size = { width = 482 height = 120 }
 		position = { x = 0 y = 0 }
 		containerWindowType = {
 			name = "top_bar"
 			size = { width = 482 height = 50 }
-			position = { x = 11 y = -3 }
-			instantTextBoxType = {
-				name = "top_bar_strength_title"
-				position = { x = -7 y = 3 }
-				maxWidth = 482
-				maxHeight = 20
-				format = center
-				font = "console_36"
-				text = top_bar_strength_title
+			position = { x = 15 y = -3 }
+			iconType = {
+				name = "top_bar_coalition_power"
+				position = { x = 0 y = 10 }
+				spriteType = "GFX_gls_order_top_bar"
+				pdx_tooltip = arm_coalition_power_tt
 			}
 			iconType = {
-				name = "top_bar_strength"
-				position = { x = 0 y = 35 }
-				spriteType = "GFX_insurgency_nixilus_top_bar_strength"
-				pdx_tooltip = insurgency_nixilus_top_bar_strength
+				name = "top_bar_consulate_power"
+				position = { x = 0 y = 70 }
+				spriteType = "GFX_gls_freedom_top_bar"
+				pdx_tooltip = arm_consulate_power_tt
 			}
 		}
-		containerWindowType = {
-			name = "map"
-			size = { width = 506 height = 457 }
-			position = { x = -8 y = 110 }
-			iconType = {
-				name = "203_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_203_army"
-				pdx_tooltip = state_203_army_tt
-			}
-			iconType = {
-				name = "876_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_876_army"
-				pdx_tooltip = state_876_army_tt
-			}
-			iconType = {
-				name = "259_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_259_army"
-				pdx_tooltip = state_259_army_tt
-			}
-			iconType = {
-				name = "202_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_202_army"
-				pdx_tooltip = state_202_army_tt
-			}
-			iconType = {
-				name = "193_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_193_army"
-				pdx_tooltip = state_193_army_tt
-			}
-			iconType = {
-				name = "879_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_879_army"
-				pdx_tooltip = state_879_army_tt
-			}
-			iconType = {
-				name = "225_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_225_army"
-				pdx_tooltip = state_225_army_tt
-			}
-			iconType = {
-				name = "881_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_881_army"
-				pdx_tooltip = state_881_army_tt
-			}
-			iconType = {
-				name = "880_army"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_880_army"
-				pdx_tooltip = state_880_army_tt
-			}
-			iconType = {
-				name = "203_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_203_partisans"
-				pdx_tooltip = state_203_partisans_tt
-			}
-			iconType = {
-				name = "876_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_876_partisans"
-				pdx_tooltip = state_876_partisans_tt
-			}
-			iconType = {
-				name = "259_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_259_partisans"
-				pdx_tooltip = state_259_partisans_tt
-			}
-			iconType = {
-				name = "202_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_202_partisans"
-				pdx_tooltip = state_202_partisans_tt
-			}
-			iconType = {
-				name = "193_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_193_partisans"
-				pdx_tooltip = state_193_partisans_tt
-			}
-			iconType = {
-				name = "879_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_879_partisans"
-				pdx_tooltip = state_879_partisans_tt
-			}
-			iconType = {
-				name = "225_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_225_partisans"
-				pdx_tooltip = state_225_partisans_tt
-			}
-			iconType = {
-				name = "881_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_881_partisans"
-				pdx_tooltip = state_881_partisans_tt
-			}
-			iconType = {
-				name = "880_partisans"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_state_880_partisans"
-				pdx_tooltip = state_880_partisans_tt
-			}			
-			iconType = {
-				name = "map_bg"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_insurgency_nixilus_map_bg"
-				alwaystransparent = yes
-			}			
-		}
-    }
+	}
 }

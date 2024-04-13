@@ -16,7 +16,10 @@ ODS_intention = {
 	picture = GFX_intention_picture
 	scripted_gui = ODS_intention
 	visible_when_empty = yes
-	visible  = { original_tag = ODS  }
+	visible  = {
+		original_tag = ODS
+		has_country_flag = intension_show
+	}
 	allowed = { original_tag = ODS }
 	priority = { base = 5 }
 		
@@ -29,4 +32,19 @@ ODS_subordination = {
 	visible  = { original_tag = ODS  }
 	allowed = { original_tag = ODS }
 	priority = { base = 5 }	
+}
+ODS_consciousness = {
+	icon = saf_anti_colonialist_crusade
+	#scripted_gui = ODS_consciousness_gui
+	visible_when_empty = yes
+	visible  = {
+		has_completed_focus = ODS_system_reorganisation
+	}
+	allowed = { original_tag = ODS }
+	priority = { base = 5 }
+	#vars
+	#points_consciousness
+	#common_consciousness
+	#central_consciousness
+	#state_consciousness
 }

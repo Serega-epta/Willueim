@@ -15,14 +15,12 @@ set_research_slots = 5
 set_convoys = 20
 
 set_politics = {
-	ruling_party = gumanists
+	ruling_party = chthonism
 	elections_allowed = no
 }
 
 set_popularities = {
-	gumanists = 84
-	svobod = 6
-	technocracies = 10
+	chthonism = 100
 }
 
  
@@ -31,28 +29,9 @@ create_country_leader = {
     name = "TIP_leader"
     desc = "TIP_leader_desc"
     picture = "gfx/leaders/TIP/TIP.dds"
-    ideology = unificators
+    ideology = chthonism_subideology
     traits = {
         #
     }
 }
 
-create_country_leader = {
-    name = "Dmitry Schemelin"
-    desc = "POLITICS_PEPE_FASHISTOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Fashistov.dds"
-    ideology = gelerteria
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Dmitry Schemelin"
-    desc = "POLITICS_PEPE_NEYTRALOV_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Neytralov.dds"
-    ideology = sacraments
-    traits = {
-        #
-    }
-}
