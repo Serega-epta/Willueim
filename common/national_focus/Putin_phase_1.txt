@@ -316,6 +316,10 @@ focus_tree = {
         prerequisite = { focus = SDC_kill_toilets }
         prerequisite = { focus = SDC_everyone_hold_weapon }
         prerequisite = { focus = SDC_march_east  }
+        available = {
+			NOT = { country_exists = ARK }
+            NOT = { country_exists = TAG }
+		}
         cost = 5
         x = 6
         y = 6
@@ -328,6 +332,10 @@ focus_tree = {
             884 = { add_core_of = SDC }
             214 = { add_core_of = SDC }
             add_manpower = 5000
+            set_capital = {
+                state = 214
+                remember_old_capital = no
+            }
             country_event = {
                 id = pautov.7
                 days = 1
