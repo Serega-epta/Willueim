@@ -79,7 +79,7 @@ ODS_subordination = {
 			has_manpower > 299
 			custom_trigger_tooltip = {
 				tooltip = has_more_than_three_hundred_black_rubles_tt
-				check_variable = { Chernii_rubli > 299 } 
+				check_variable = { black_rubles_budget > 299 } 
 			}
 			has_political_power > 9
 			from = { 
@@ -119,7 +119,7 @@ ODS_subordination = {
 			add_manpower = -300
 			add_political_power = -10
 			subtract_from_variable = {
-				var = Chernii_rubli
+				var = black_rubles_budget
 				value = 300
 			}
 		}
@@ -138,7 +138,7 @@ ODS_subordination = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = has_more_than_two_hundred_black_rubles_tt
-				check_variable = { Chernii_rubli > 199 } 
+				check_variable = { black_rubles_budget > 199 } 
 			}
 			has_political_power > 9
 		}
@@ -171,14 +171,14 @@ ODS_subordination = {
 				value = 1
 			}		
 			subtract_from_variable = {
-				var = Chernii_rubli
+				var = black_rubles_budget
 				value = 200
 			}
 			839 = { add_manpower = -50 }
 			add_manpower = 500	
 			add_political_power = -2 
 			subtract_from_variable = {
-				var = Chernii_rubli
+				var = black_rubles_budget
 				value = 200
 			}
 		}
@@ -193,7 +193,7 @@ ODS_subordination = {
 		available = {
 			custom_trigger_tooltip = { 
 				tooltip = has_more_than_three_hundred_black_rubles_tt
-				check_variable = { Chernii_rubli > 299 } 
+				check_variable = { black_rubles_budget > 299 } 
 			}
 			has_political_power > 9
 		}
@@ -226,7 +226,7 @@ ODS_subordination = {
 			add_state_core = FROM
 			add_political_power = -10
 			subtract_from_variable = {
-				var = Chernii_rubli
+				var = black_rubles_budget
 				value = 300
 			}
 		}
@@ -571,9 +571,9 @@ ODS_consciousness = {
 		}
 		custom_cost_trigger = {
 			custom_trigger_tooltip = {
-				tooltip = has_3000_Chernii_rubli_tt
+				tooltip = has_3000_black_rubles_budget_tt
 				check_variable = {
-					Chernii_rubli > 2999
+					black_rubles_budget > 2999
 				}
 			}
 			has_political_power > 39
@@ -582,9 +582,9 @@ ODS_consciousness = {
 		complete_effect = {
 			add_political_power = -40
 			subtract_from_variable = {
-				var = Chernii_rubli
+				var = black_rubles_budget
 				value = 3000
-				tooltip = sub_Chernii_rubli_3000_tt
+				tooltip = sub_black_rubles_budget_3000_tt
 			}
 		}
 		remove_effect = {
@@ -612,9 +612,9 @@ ODS_consciousness = {
 		}
 		custom_cost_trigger = {
 			custom_trigger_tooltip = {
-				tooltip = has_2000_Chernii_rubli_tt
+				tooltip = has_2000_black_rubles_budget_tt
 				check_variable = {
-					Chernii_rubli > 1999
+					black_rubles_budget > 1999
 				}
 			}
 			has_political_power > 59
@@ -623,9 +623,9 @@ ODS_consciousness = {
 		complete_effect = {
 			add_political_power = -60
 			subtract_from_variable = {
-				var = Chernii_rubli
+				var = black_rubles_budget
 				value = 2000
-				tooltip = sub_Chernii_rubli_2000_tt
+				tooltip = sub_black_rubles_budget_2000_tt
 			}
 		}
 		remove_effect = {
