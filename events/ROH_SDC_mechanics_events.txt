@@ -1,0 +1,27 @@
+add_namespace = SDC_mechanics
+#Технические ивенты
+
+
+#Ивент для раздела деревеньщины
+country_event = {
+    id = SDC_mechanics.1
+	title = SDC_mechanics.1.t
+	desc = SDC_mechanics.1.d
+    fire_only_once = yes
+	is_triggered_only = no
+	hidden = yes
+	trigger = {
+		NOT = {
+			country_exists = UFV
+		}
+	}
+    option = {
+        name = SDC_mechanics.1.a
+		SDC = {
+			set_state_owner = 262
+		}
+		VOZ = {
+			set_state_owner = 947
+		}
+    }
+}

@@ -280,12 +280,12 @@ country_event = {
 				is_locked = no
 				priority = 1
 				regiments = {
-					mountaineers = { x = 0 y = 0 }
-					mountaineers = { x = 0 y = 1 }
-					mountaineers = { x = 1 y = 0 }
-					mountaineers = { x = 1 y = 1 }
-					mountaineers = { x = 2 y = 0 }
-					mountaineers = { x = 2 y = 1 }
+					egerskayapechota = { x = 0 y = 0 }
+					egerskayapechota = { x = 0 y = 1 }
+					egerskayapechota = { x = 1 y = 0 }
+					egerskayapechota = { x = 1 y = 1 }
+					egerskayapechota = { x = 2 y = 0 }
+					egerskayapechota = { x = 2 y = 1 }
 				}
 				support = {
 					art_stvol = { x = 0 y = 0 }
@@ -451,3 +451,115 @@ country_event = {
         name = pautov.7.a
     }
 }
+
+#Эндшпиль
+country_event = {
+    id = pautov.8
+	title = pautov.8.t
+	desc = pautov.8.d
+    fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = SDC
+		NOT = {
+			country_exists = VOZ
+		}
+	}
+    option = { 
+        name = pautov.8.a
+    }
+}
+
+#День зарплаты
+country_event = {
+    id = pautov.9
+	title = pautov.9.t
+	desc = pautov.9.d
+    fire_only_once = yes
+	is_triggered_only = yes
+    option = { 
+        name = pautov.9.a
+		if = {
+			limit = {
+				has_country_flag = big_debt_flag
+			}
+			country_event = pautov.10
+		}
+		else = {
+			country_event = pautov.11
+		}
+    }
+	option = { 
+        name = pautov.9.b
+		country_event = pautov.12
+    }
+}
+
+#Напряжение сил
+country_event = { 
+    id = pautov.10
+	title = pautov.10.t
+	desc = pautov.10.d
+    fire_only_once = yes
+	is_triggered_only = yes
+    option = { 
+        name = pautov.10.a
+		clr_country_flag = payment_flag
+		add_timed_idea = {
+			idea = SDC_pay_big_debt
+			days = 60
+		}
+    }
+}
+
+#Своевременная уплата
+country_event = { 
+    id = pautov.11
+	title = pautov.11.t
+	desc = pautov.11.d
+    fire_only_once = yes
+	is_triggered_only = yes
+    option = { 
+        name = pautov.11.a
+		clr_country_flag = payment_flag
+		add_timed_idea = {
+			idea = SDC_pay_debt
+			days = 45
+		}
+    }
+}
+
+#Обман!
+country_event = { 
+    id = pautov.12
+	title = pautov.12.t
+	desc = pautov.12.d
+    fire_only_once = yes
+	is_triggered_only = yes
+    option = { 
+        name = pautov.12.a
+		clr_country_flag = payment_flag
+		set_country_flag = we_payed_flag
+		add_timed_idea = {
+			idea = SDC_deception
+			days = 80
+		}
+    }
+}
+
+#Добровольцы согашаются
+country_event = { 
+    id = pautov.13
+	title = pautov.13.t
+	desc = pautov.13.d
+    fire_only_once = yes
+	is_triggered_only = yes
+    option = { 
+        name = pautov.13.a
+		add_days_mission_timeout = {
+			mission = SDC_pay_mission
+			days = 50
+		}
+    }
+}
+

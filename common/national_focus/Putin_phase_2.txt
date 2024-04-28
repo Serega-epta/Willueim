@@ -20,7 +20,10 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            add_popularity = {
+                ideology = sacraments
+                popularity = -0.14
+            }
         }
     }
     focus = {
@@ -33,7 +36,22 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            214 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+        }
+            884 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
         }
     }
     focus = {
@@ -46,7 +64,7 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            add_ideas = SDC_mobilisation
         }
     }
     focus = {
@@ -59,7 +77,31 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            set_country_flag = payment_flag
+            add_manpower = 2500
+            division_template = {
+                name = "Добровольцы"
+                is_locked = yes
+                priority = 2
+                 regiments = {
+		            mountaineers = { x = 0 y = 0 }
+		            mountaineers = { x = 1 y = 0 }
+		            mountaineers = { x = 2 y = 0 }
+		            mountaineers = { x = 0 y = 1 }
+	 	            mountaineers = { x = 1 y = 1 }
+	            }
+            }
+            random_owned_state = {
+                create_unit = { 
+                    division = "name = \"Добровольцы\" division_template = \"Добровольцы\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1" 
+                    owner = ROOT
+                }
+                create_unit = {
+                    division = "name = \"Добровольцы\" division_template = \"Добровольцы\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1" 
+                    owner = ROOT
+                }
+            }
+            custom_effect_tooltip = SDC_shifting_deadlines_tt
         }
     }
     focus = {
@@ -76,12 +118,24 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            declare_war_on = {
+                target = UFV
+                type = annex_everything
+            }
+            VOZ = {
+                declare_war_on = {
+                    target = UFV
+                    type = annex_everything
+                }
+            }
         }
     }
     focus = {
         id = SDC_great_chess_game
         prerequisite = { focus = SDC_preemptive_strike }
+        available = {
+            has_war = no
+        }
         cost = 5
         x = 6
         y = 3
@@ -89,12 +143,36 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            set_country_flag = chess_game_flag
+            add_ideas = SDC_accumulation_of_forces
+            give_guarantee = SDI
+            SDI = {
+                give_guarantee = SDC
+            }
+            VOZ = {
+                give_guarantee = REN
+            }
+            REN = {
+                give_guarantee = VOZ
+            }
+            hidden_effect = {
+                SDC_Putin = {
+                    add_country_leader_trait = multipass_master
+                }
+                VOZ_Blazhenny_Zeruil = {
+                    add_country_leader_trait = multipass_master
+                }
+            }
+            custom_effect_tooltip = SDC_great_chess_game_tt
         }
     }
     focus = {
         id = SDC_hybrid_war
         prerequisite = { focus = SDC_great_chess_game }
+        available = {
+            has_war = no
+            country_exists = SDI
+        }
         cost = 5
         x = 4
         y = 4
@@ -102,12 +180,20 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            custom_effect_tooltip = SDC_hybrid_war_tt
         }
     }
     focus = {
         id = SDC_stalkers_squads
         prerequisite = { focus = SDC_hybrid_war }
+        available = {
+            hidden_trigger = {
+                has_country_flag = take_posisions_SDI_flag
+            }
+            custom_trigger_tooltip = {
+                tooltip = decision_take_posisions_SDI_tt
+            }
+        }
         cost = 5
         x = 2
         y = 5
@@ -115,12 +201,23 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            swap_ideas = {
+                remove_idea = SDC_Korodonniki3
+                add_idea = SDC_Korodonniki4
+            }
         }
     }
     focus = {
         id = SDC_execution_service
         prerequisite = { focus = SDC_hybrid_war }
+        available = {
+            hidden_trigger = {
+                has_country_flag = take_posisions_SDI_flag
+            }
+            custom_trigger_tooltip = {
+                tooltip = decision_take_posisions_SDI_tt
+            }
+        }
         cost = 5
         x = 4
         y = 5
@@ -128,7 +225,33 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            division_template = {
+                name = "ФСИН"
+                is_locked = yes
+                priority = 2
+                regiments = {
+		            opolchenie = { x = 0 y = 0 }
+		            opolchenie = { x = 0 y = 1 }
+		            opolchenie = { x = 1 y = 0 }
+		            opolchenie = { x = 1 y = 1 }
+	 	            opolchenie = { x = 2 y = 0 }
+                    opolchenie = { x = 2 y = 1 }
+	            }
+            }
+            random_owned_state = {
+                create_unit = { 
+                    division = "name = \"ФСИН\" division_template = \"ФСИН\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1" 
+                    owner = ROOT
+                }
+            }
+            979 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
         }
     }
     focus = {
@@ -141,7 +264,7 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            custom_effect_tooltip = SDC_science_academy_tt
         }
     }
     focus = {
@@ -154,12 +277,16 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            custom_effect_tooltip = SDC_Martins_comunications_tt
         }
     }
     focus = {
         id = SDC_national_traitors
         prerequisite = { focus = SDC_great_chess_game }
+        available = {
+            has_war = no
+            country_exists = REN
+        }
         cost = 5
         x = 8
         y = 4
@@ -167,12 +294,16 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            custom_effect_tooltip = SDC_national_traitors_tt
         }
     }
     focus = {
         id = SDC_archangelsk_sever
         prerequisite = { focus = SDC_national_traitors }
+        available = {
+            has_war = no
+            country_exists = REN
+        }
         cost = 5
         x = 8
         y = 5
@@ -180,12 +311,19 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            REN = {
+                add_ideas = REN_activists
+            }
+            custom_effect_tooltip = SDC_archangelsk_sever_tt
         }
     }
     focus = {
         id = SDC_force_methods
         prerequisite = { focus = SDC_national_traitors }
+        available = {
+            has_war = no
+            country_exists = REN
+        }
         cost = 5
         x = 10
         y = 5
@@ -193,7 +331,7 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            custom_effect_tooltip = SDC_force_methods_tt
         }
     }
     focus = {
@@ -205,6 +343,18 @@ focus_tree = {
             focus = SDC_archangelsk_sever
             focus = SDC_force_methods
         }
+        available = {
+            has_war = no
+            country_exists = VOZ
+            NOT = {
+                country_exists = REN
+            }
+            custom_trigger_tooltip = {
+                tooltip = SDC_special_military_operation_tt
+                has_country_flag = take_posisions_SDI_flag
+                has_country_flag = take_posisions_ODJ_flag
+            }
+        }
         cost = 5
         x = 6
         y = 7
@@ -212,13 +362,22 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            declare_war_on = {
+                target = VOZ
+                type = annex_everything
+            }
         }
     }
     focus = {
         id = SDC_appoint_Martin
         prerequisite = { focus = SDC_special_military_operation }
         mutually_exclusive = { focus = SDC_direct_control }
+        available = {
+            has_war = no
+            NOT = {
+                country_exists = VOZ
+            }
+        }
         cost = 5
         x = 4
         y = 8
@@ -273,6 +432,12 @@ focus_tree = {
         id = SDC_direct_control 
         prerequisite = { focus = SDC_special_military_operation }
         mutually_exclusive = { focus = SDC_appoint_Martin }
+        available = {
+            has_war = no
+            NOT = {
+                country_exists = VOZ
+            }
+        }
         cost = 5
         x = 8
         y = 8

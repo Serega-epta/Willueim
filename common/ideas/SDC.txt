@@ -131,6 +131,24 @@ ideas = {
 				army_defence_factor = 0.1	
 			}
 		}
+		SDC_Korodonniki4 = {					#Короднникиv4
+			picture = Kordonniki
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+				acclimatization_cold_climate_gain_factor = 0.1
+				army_defence_factor = 0.1	
+			}
+		}
 		SDC_hunger1 = {           #Голодv1
 			picture = Golod
 			allowed = {
@@ -163,6 +181,111 @@ ideas = {
 			modifier = {
 				stability_factor = 0.15
 				political_power_gain = 0.02
+			}
+		}
+		SDC_mobilisation = {            #Мобилизация
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				NOT = {
+					country_exists = VOZ
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.005
+				weekly_manpower = 50
+				mobilization_speed = 0.1
+			}
+		}
+		SDC_accumulation_of_forces = {            #Накопление сил
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_war = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				offence = -0.25
+				weekly_manpower = 150
+				conscription = 0.1
+			}
+		}
+		SDC_pay_debt = {            #Уплата долга
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_war = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.5
+				production_factory_efficiency_gain_factor = -0.5
+				production_factory_max_efficiency_factor = -0.5
+				army_speed_factor = -0.05
+			}
+		}
+		SDC_pay_big_debt = {            #Уплата большого долга
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_war = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.75
+				production_factory_efficiency_gain_factor = -0.75
+				production_factory_max_efficiency_factor = -0.75
+				army_speed_factor = -0.1
+			}
+		}
+		SDC_deception = {            #Обман
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_war = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = -150
+				army_speed_factor = -0.25
+				army_org = -0.8
+				acclimatization_cold_climate_gain_factor = -0.5
 			}
 		}
 	}
