@@ -77,4 +77,26 @@ characters = {
 			id = -1
 		}
 	}
+	SDC_Martin_Dugin = {
+		name = SDC_Martin_Dugin
+		country_leader={
+			ideology=technocracy_subideology
+			expire="2965.1.1.1"
+			id=-1
+		}
+	}
+	SDC_Putin_evil = {
+		name = SDC_Putin_evil
+		portraits={
+			civilian={
+				large="gfx/leaders/SDC/Putin.dds"
+			}
+		}
+		country_leader={
+			ideology= chthonism_subideology
+			desc = SDC_Putin_desc
+			expire="2965.1.1.1"
+			id=-1
+		}
+	}
 }

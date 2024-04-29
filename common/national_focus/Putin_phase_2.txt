@@ -24,6 +24,8 @@ focus_tree = {
                 ideology = sacraments
                 popularity = -0.14
             }
+            add_stability = 0.05
+            country_event = pautov.14
         }
     }
     focus = {
@@ -128,6 +130,7 @@ focus_tree = {
                     type = annex_everything
                 }
             }
+            country_event = pautov.15
         }
     }
     focus = {
@@ -164,6 +167,7 @@ focus_tree = {
                 }
             }
             custom_effect_tooltip = SDC_great_chess_game_tt
+            country_event = pautov.16
         }
     }
     focus = {
@@ -265,6 +269,7 @@ focus_tree = {
         }
         completion_reward ={
             custom_effect_tooltip = SDC_science_academy_tt
+            country_event = pautov.17
         }
     }
     focus = {
@@ -278,6 +283,7 @@ focus_tree = {
         }
         completion_reward ={
             custom_effect_tooltip = SDC_Martins_comunications_tt
+            country_event = pautov.18
         }
     }
     focus = {
@@ -366,6 +372,23 @@ focus_tree = {
                 target = VOZ
                 type = annex_everything
             }
+            country_event = pautov.19
+            country_event = {
+                id = pautov.20
+                days = 10
+            }
+            country_event = {
+                id = pautov.21
+                days = 20
+            }
+            country_event = {
+                id = pautov.22
+                days = 30
+            }
+            country_event = {
+                id = pautov.23
+                days = 40
+            }
         }
     }
     focus = {
@@ -385,7 +408,7 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            add_ideas = SDC_Weak_eastern_idea
         }
     }
     focus = {
@@ -398,7 +421,14 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            swap_ideas = {
+                remove_idea = SDC_Weak_eastern_idea
+                add_idea = SDC_midle_eastern_idea
+            }
+            980 = { add_core_of = SDC }
+            947 = { add_core_of = SDC }
+            581 = { add_core_of = SDC }
+            add_manpower = 1500
         }
     }
     focus = {
@@ -411,7 +441,22 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            swap_ideas = {
+                remove_idea = SDC_midle_eastern_idea
+                add_idea = SDC_hight_eastern_idea
+            }
+            982 = {
+                add_core_of = SDC
+            }
+            825 = {
+                add_core_of = SDC
+            }
+            916 = {
+                add_core_of = SDC
+            }
+            897 = {
+                add_core_of = SDC
+            }
         }
     }
     focus = {
@@ -425,7 +470,52 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            swap_ideas = {
+                remove_idea = SDC_hight_eastern_idea
+                add_idea = SDC_integration_eastern_idea
+            }
+            981 = {
+                add_core_of = SDC
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            825 = {
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            581 = {
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_popularity = {
+                ideology = technocracy
+                popularity = 0.15
+            }
+            set_party_name = {
+                ideology = technocracy
+                long_name = SDC_science_Council_long
+                name = SDC_science_Council
+            }
+            promote_character = {
+                character = SDC_Martin_Dugin
+                ideology = technocracy_subideology
+            }
         }
     }
     focus = {
@@ -445,7 +535,7 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            add_ideas = SDC_Weak_eastern_idea
         }
     }
     focus = {
@@ -458,7 +548,55 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            swap_ideas = {
+                remove_idea = SDC_Weak_eastern_idea
+                add_idea = SDC_midle_eastern_idea
+            }
+            980 = {
+                add_core_of = SDC
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+                add_manpower = -2000
+            }
+            947 = {
+                add_core_of = SDC
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+                add_manpower = -2000
+            }
+            581 = {
+                add_core_of = SDC
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+                add_manpower = -2000
+            }
         }
     }
     focus = {
@@ -471,7 +609,50 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            swap_ideas = {
+                remove_idea = SDC_midle_eastern_idea
+                add_idea = SDC_hight_eastern_idea
+            }
+            982 = {
+                add_core_of = SDC
+                add_manpower = -2000
+            }
+            825 = {
+                add_core_of = SDC
+                add_manpower = -2000
+            }
+            916 = {
+                add_core_of = SDC
+                add_manpower = -2000
+            }
+            897 = {
+                add_core_of = SDC
+                add_manpower = -2000
+            }
+            division_template = {
+                name = "Uralskaya brigada"
+                is_locked = no
+                force_allow_recruiting = yes
+                priority = 1
+                regiments = {
+                    egerskayapechota = { x = 0 y = 0 }
+                    egerskayapechota = { x = 1 y = 0 }
+                    egerskayapechota = { x = 2 y = 0 }
+                    egerskayapechota = { x = 0 y = 1 }
+                    egerskayapechota = { x = 1 y = 1 }
+                    egerskayapechota = { x = 2 y = 1 }
+                }
+            }
+            capital_scope = {
+                    create_unit = {
+                    division = "name = \"1. Uralskaya brigada\" division_template = \"Uralskaya brigada\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1" 
+                    owner = ROOT
+                }
+                    create_unit = {
+                    division = "name = \"1. Uralskaya brigada\" division_template = \"Uralskaya brigada\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1" 
+                    owner = ROOT
+                }
+            }
         }
     }
     focus = {
@@ -485,7 +666,124 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            swap_ideas = {
+                remove_idea = SDC_hight_eastern_idea
+                add_idea = SDC_integration_eastern_idea
+            }
+            981 = {
+                add_core_of = SDC
+                add_manpower = -2000
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13475
+                }
+            }
+            825 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13376
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13465
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13464
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 12502
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13456
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13448
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13438
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13428
+                }
+            }
+            982 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 11098
+                }
+            }
+            581 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13417
+                }
+            }
+            581 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13405
+                }
+            }
+            581 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 13395
+                }
+            }
+            581 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 10551
+                }
+            }
         }
     }
     focus = {
@@ -501,7 +799,7 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            country_event = pautov.24
         }
     }
     focus = {
@@ -514,7 +812,37 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            
+            annex_country = {
+                target = WEC
+                transfer_troops = no
+            }
+            annex_country = {
+                target = SAC
+                transfer_troops = no
+            }
+            annex_country = {
+                target = SOC
+                transfer_troops = no
+            }
+            215 = {
+                add_core_of = SDC
+            }
+            984 = {
+                add_core_of = SDC
+            }
+            985 = {
+                add_core_of = SDC
+            }
+            986 = {
+                add_core_of = SDC
+            }
+            country_event = pautov.25
+            hidden_effect = {
+                load_focus_tree = {
+                    tree = SDC_phase_two_five
+                    keep_completed = no
+                }
+            }
         }
     }
 }
