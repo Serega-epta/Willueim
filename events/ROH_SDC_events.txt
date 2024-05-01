@@ -298,19 +298,50 @@ country_event = {
 	is_triggered_only = yes
     option = {
         name = pautov.24.a
-		add_manpower = -1
-		add_popularity = {
-    		ideology = chthonism
-    		popularity = 0.2
-		}
-		promote_character = {
-			character = SDC_Putin_evil
-			ideology = chthonism_subideology
-        }
-		set_party_name = {
+        if = {
+            has_completed_focus = SDC_integration
+            add_manpower = -1
+            add_popularity = {
+                ideology = statesmen
+                popularity = -0.19
+            }
+            add_popularity = {
+                ideology = sacraments
+                popularity = -0.01
+            }
+            add_popularity = {
+                ideology = chthonism
+                popularity = 0.2
+            }
+            promote_character = {
+			    character = SDC_Putin_evil
+			    ideology = chthonism_subideology
+            }
+		    set_party_name = {
                 ideology = chthonism
                 long_name = SDC_Despair_long
                 name = SDC_Despair
+            }
+        }
+        else_if = {
+            has_completed_focus = SDC_peacification
+            add_popularity = {
+                ideology = sacraments
+                popularity = -0.01
+            }
+            add_popularity = {
+                ideology = chthonism
+                popularity = 0.2
+            }
+            promote_character = {
+			    character = SDC_Putin_evil
+			    ideology = chthonism_subideology
+            }
+		    set_party_name = {
+                ideology = chthonism
+                long_name = SDC_Despair_long
+                name = SDC_Despair
+            }
         }
     }
 }

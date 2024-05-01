@@ -13,6 +13,7 @@ focus_tree = {
 
     focus = {
         id = SDC_facility
+        icon = GFX_Ustanovka
         cost = 5
         x = 6
         y = 0
@@ -31,6 +32,7 @@ focus_tree = {
     focus = {
         id = SDC_increase_volumes
         prerequisite = { focus = SDC_facility }
+        icon = GFX_Narastit_obyomy
         cost = 5
         x = 4
         y = 1
@@ -58,6 +60,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_mobilisation
+        icon = GFX_Mobilizatsia
         prerequisite = { focus = SDC_facility }
         cost = 5
         x = 6
@@ -71,6 +74,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_shifting_deadlines
+        icon = GFX_Sdvizhenie_srokov
         prerequisite = { focus = SDC_facility }
         cost = 5
         x = 8
@@ -108,6 +112,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_preemptive_strike
+        icon = GFX_Preventivny_udar
         prerequisite = { focus = SDC_mobilisation }
         prerequisite = {
             focus = SDC_increase_volumes
@@ -135,6 +140,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_great_chess_game
+        icon = GFX_Velikaya_shakhmatnaya_igra
         prerequisite = { focus = SDC_preemptive_strike }
         available = {
             has_war = no
@@ -172,6 +178,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_hybrid_war
+        icon = GFX_Gibridnaya_voyna
         prerequisite = { focus = SDC_great_chess_game }
         available = {
             has_war = no
@@ -189,6 +196,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_stalkers_squads
+        icon = GFX_Otryady_stalkerov
         prerequisite = { focus = SDC_hybrid_war }
         available = {
             hidden_trigger = {
@@ -213,6 +221,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_execution_service
+        icon = GFX_Sluzhba_ispolnenia_nakazaniy
         prerequisite = { focus = SDC_hybrid_war }
         available = {
             hidden_trigger = {
@@ -260,6 +269,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_science_academy
+        icon = GFX_Akademia_nauk
         prerequisite = { focus = SDC_great_chess_game }
         cost = 5
         x = 6
@@ -274,6 +284,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_Martins_comunications
+        icon = GFX_Svyazi_Martina
         prerequisite = { focus = SDC_science_academy }
         cost = 5
         x = 6
@@ -288,6 +299,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_national_traitors
+        icon = GFX_Natsional-predateli
         prerequisite = { focus = SDC_great_chess_game }
         available = {
             has_war = no
@@ -305,6 +317,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_archangelsk_sever
+        icon = GFX_Arkhangelsk-Sever
         prerequisite = { focus = SDC_national_traitors }
         available = {
             has_war = no
@@ -325,6 +338,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_force_methods
+        icon = GFX_Silovye_metody
         prerequisite = { focus = SDC_national_traitors }
         available = {
             has_war = no
@@ -342,6 +356,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_special_military_operation
+        icon = GFX_Spetsialnaya_voennaya_operatsia
         prerequisite = {
             focus = SDC_stalkers_squads
             focus = SDC_execution_service
@@ -393,6 +408,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_appoint_Martin
+        icon = GFX_Naznachit_Martina
         prerequisite = { focus = SDC_special_military_operation }
         mutually_exclusive = { focus = SDC_direct_control }
         available = {
@@ -413,6 +429,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_dont_fear_chalanges
+        icon = GFX_Ne_boyatsya_vyzovov
         prerequisite = { focus = SDC_appoint_Martin }
         cost = 5
         x = 3
@@ -421,9 +438,19 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            swap_ideas = {
-                remove_idea = SDC_Weak_eastern_idea
-                add_idea = SDC_midle_eastern_idea
+            if = {
+            limit = { has_idea = SDC_midle_eastern_idea } 
+                swap_ideas = {
+                    remove_idea = SDC_midle_eastern_idea
+                    add_idea = SDC_hight_eastern_idea
+                }
+            }
+            else_if = {
+            limit = { has_idea = SDC_Weak_eastern_idea }
+                swap_ideas = {
+                    remove_idea = SDC_Weak_eastern_idea
+                    add_idea = SDC_midle_eastern_idea
+                }
             }
             980 = { add_core_of = SDC }
             947 = { add_core_of = SDC }
@@ -433,6 +460,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_science_methods
+        icon = GFX_Nauchnye_metody
         prerequisite = { focus = SDC_appoint_Martin }
         cost = 5
         x = 5
@@ -441,9 +469,19 @@ focus_tree = {
             factor = 10
         }
         completion_reward ={
-            swap_ideas = {
-                remove_idea = SDC_midle_eastern_idea
-                add_idea = SDC_hight_eastern_idea
+            if = {
+            limit = { has_idea = SDC_midle_eastern_idea } 
+                swap_ideas = {
+                    remove_idea = SDC_midle_eastern_idea
+                    add_idea = SDC_hight_eastern_idea
+                }
+            }
+            else_if = {
+            limit = { has_idea = SDC_Weak_eastern_idea }
+                swap_ideas = {
+                    remove_idea = SDC_Weak_eastern_idea
+                    add_idea = SDC_midle_eastern_idea
+                }
             }
             982 = {
                 add_core_of = SDC
@@ -461,6 +499,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_integration
+        icon = GFX_Integratsia
         prerequisite = { focus = SDC_dont_fear_chalanges }
         prerequisite = { focus = SDC_science_methods }
         cost = 5
@@ -519,7 +558,8 @@ focus_tree = {
         }
     }
     focus = {
-        id = SDC_direct_control 
+        id = SDC_direct_control
+        icon = GFX_Pryamoe_upravlenie 
         prerequisite = { focus = SDC_special_military_operation }
         mutually_exclusive = { focus = SDC_appoint_Martin }
         available = {
@@ -540,6 +580,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_finish_survivers
+        icon = GFX_Dobit_vyzhivshikh
         prerequisite = { focus = SDC_direct_control }
         cost = 5
         x = 7
@@ -601,6 +642,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_Ural_brigades
+        icon = GFX_Uralskie_brigady
         prerequisite = { focus = SDC_direct_control }
         cost = 5
         x = 9
@@ -657,6 +699,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_peacification
+        icon = GFX_Umirotvorenie
         prerequisite = { focus = SDC_finish_survivers }
         prerequisite = { focus = SDC_Ural_brigades }
         cost = 5
@@ -788,6 +831,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_doomhour
+        icon = GFX_Strashny_chas
         prerequisite = {
             focus = SDC_integration
             focus = SDC_peacification
@@ -804,6 +848,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_KS3
+        icon = GFX_KS-3
         prerequisite = { focus = SDC_doomhour }
         cost = 5
         x = 6
