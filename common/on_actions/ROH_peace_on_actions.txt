@@ -206,6 +206,39 @@ on_actions = {
 
 			else_if = {
 				limit = {
+					ROOT = {
+						original_tag = UFV
+					}
+					OR = {
+						FROM = {
+							original_tag = SDC
+						}
+						FROM = {
+							original_tag = VOZ
+						}
+					}
+				}
+
+				every_country = {
+					limit = { has_war_with = UFV }
+					white_peace = UFV
+				}
+				
+				FROM = {
+					SDC = {
+						transfer_state = 262
+					}
+					VOZ = {
+						transfer_state = 947
+					}
+					every_state = {
+						remove_core_of = UFV
+					}
+				}
+			}
+
+			else_if = {
+				limit = {
 					OR = {
 						ROOT = { is_in_faction = no }
 						ROOT = {
