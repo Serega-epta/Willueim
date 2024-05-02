@@ -33,6 +33,7 @@ sub_units = {
 		max_organisation = 60
 		default_morale = 0.3
 		manpower = 1000
+		build_cost_ic = 43
 
 		#Misc Abilities
 		training_time = 90
@@ -47,15 +48,18 @@ sub_units = {
         }
 		need = {
 			infantry_equipment = 100
-			support_equipment = 5
+			support_equipment = 2
 		}
-
+		#Offensive
 		soft_attack = 3
 		hard_attack = 0.5
-		defense = 20
 		breakthrough = 2
 		ap_attack = 1
-		build_cost_ic = 43
+
+		#Deffensive
+		defense = 20
+		armor_value = 0
+		hardness = 0
 	}
 
 	#need icons and categories rework
@@ -81,18 +85,19 @@ sub_units = {
 			category_army
 		}
 		
-		combat_width = 1
+		combat_width = 2
 		
 		#Size Definitions
 		max_strength = 12
 		max_organisation = 30
 		default_morale = 0.2
 		manpower = 500
+		build_cost_ic = 22
 
 		#Misc Abilities
 		training_time = 45
 		suppression = 1
-		weight = 0.25
+		weight = 0.3
 		
 		supply_consumption = 0.05
 	
@@ -100,12 +105,16 @@ sub_units = {
 			infantry_equipment = 50
 		}
 
+		#Offensive
 		soft_attack = 3
 		hard_attack = 0.25
-		defense = 10
 		breakthrough = 1
 		ap_attack = 1
-		build_cost_ic = 22
+
+		#Deffensive
+		defense = 10
+		armor_value = 0
+		hardness = 0
 	}
 
 	#need icons and categories rework
@@ -131,31 +140,37 @@ sub_units = {
 			category_army
 		}
 		
-		combat_width = 3
+		combat_width = 2
 		
 		#Size Definitions
 		max_strength = 30
-		max_organisation = 65
+		max_organisation = 67
 		default_morale = 0.4
-		manpower = 1100
+		manpower = 1200
+		build_cost_ic = 60
 
 		#Misc Abilities
 		training_time = 110
 		suppression = 1.75
-		weight = 0.25
+		weight = 0.6
 		
-		supply_consumption = 0.07
+		supply_consumption = 0.08
 	
 		need = {
-			infantry_equipment = 50
+			infantry_equipment = 160
+			support_equipment = 15
 		}
 
+		#Offensive
 		soft_attack = 4
 		hard_attack = 0.7
+		breakthrough = 4
+		ap_attack = 2
+
+		#Deffensive
 		defense = 25
-		breakthrough = 3
-		ap_attack = 1
-		build_cost_ic = 60
+		armor_value = 0
+		hardness = 0
 	}
 
 	opolchenie = {
