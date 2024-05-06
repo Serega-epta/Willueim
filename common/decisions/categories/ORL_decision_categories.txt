@@ -1,96 +1,33 @@
 volga_war = {
 	icon = saf_anti_colonialist_crusade
-	#scripted_gui = ODS_consciousness_gui
 	visible_when_empty = yes
 	visible  = {
-		NAR = {
-			exists = yes
-		}
-		SMK = {
-			exists = yes
-		}
-		VOF = {
-			exists = yes
-		}
-		VOU = {
-			exists = yes
-		}
-		MUC = {
-			exists = yes
-		}
-		NOR = {
-			exists = yes
-		}
-		COR = {
-			exists = yes
-		}
-		SOL = {
-			exists = yes
-		}
-		PLR = {
-			exists = yes
-		}
-		IMP = {
-			exists = yes
-		}
-		SMX = {
-			exists = yes
-		}
-		SBT = {
-			exists = yes
-		}
-		VLC = {
-			exists = yes
-		}
-		ORL = {
-			exists = yes
-		}
-		MAZ = {
-			exists = yes
-		}
-		TAB = {
-			exists = yes
-		}
-		RIK = {
-			exists = yes
-		}
-		MSH = {
-			exists = yes
-		}
-		BGR = {
-			exists = yes
-		}
-		KMN = {
-			exists = yes
-		}
-		MKS = {
-			exists = yes
-		}
-		MAD = {
-			exists = yes
-		}
+		NAR = { exists = yes }
+		SMK = { exists = yes }
 	}
 	allowed = {
-		original_tag = ORL
-		original_tag = VOF
-		original_tag = VOU
-		original_tag = MUC
-		original_tag = NOR
-		original_tag = COR
-		original_tag = SOL
-		original_tag = PIR
-		original_tag = IMP
-		original_tag = SMX
-		original_tag = SBT
-		original_tag = VLC
-		original_tag = MAZ
-		original_tag = TAB
-		original_tag = RIK
-		original_tag = MSH
-		original_tag = BGR
-		original_tag = KMN
-		original_tag = MKS
-		original_tag = MAD
+		OR = {
+			original_tag = ORL
+			original_tag = VOF
+			original_tag = VOU
+			original_tag = MUC
+			original_tag = NOR
+			original_tag = COR
+			original_tag = SOL
+			original_tag = PIR
+			original_tag = IMP
+			original_tag = SMX
+			original_tag = SBT
+			original_tag = VLC
+			original_tag = MAZ
+			original_tag = TAB
+			original_tag = RIK
+			original_tag = MSH
+			original_tag = BGR
+			original_tag = KMN
+			original_tag = MKS
+			original_tag = MAD
+		}
 	}
 	priority = {
 		base = 5

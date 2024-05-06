@@ -1,9 +1,6 @@
 volga_war = {
 	conflict_escalation_mission = {
 		priority = 999
-		allowed = {
-			original_tag = ORL
-		}
 		days_mission_timeout = 70
 		selectable_mission = no
 		is_good = no
@@ -44,9 +41,6 @@ volga_war = {
 		}
 	}
 	send_trade_caravan = {
-		allowed = {
-			original_tag = ORL
-		}
 		days_re_enable = 20
 		cost = 50
 		complete_effect = {
@@ -62,9 +56,6 @@ volga_war = {
 		}
 	}
 	establish_new_trade_connections = {
-		allowed = {
-			original_tag = ORL
-		}
 		days_re_enable = 40
 		cost = 100
 		complete_effect = {
@@ -80,9 +71,6 @@ volga_war = {
 		}
 	}
 	send_bandit_raid = {
-		allowed = {
-			original_tag = ORL
-		}
 		days_re_enable = 30
 		available = {
 			has_equipment = {
@@ -107,9 +95,6 @@ volga_war = {
 		}
 	}
 	extra_shifts = {
-		allowed = {
-			original_tag = ORL
-		}
 		days_re_enable = 30
 		available = {
 			has_manpower > 999

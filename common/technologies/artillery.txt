@@ -5,6 +5,12 @@ technologies = {
 		enable_equipments = {
 			pre_war_artillery_equipment
 		}
+		enable_subunits = {
+			stvol_art
+		}
+		enable_subunits = {
+			stvol_art_sup
+		}
 		path = {
 			leads_to_tech = basic_towed_artillery
 			research_cost_coeff = 1
@@ -41,6 +47,12 @@ technologies = {
 		start_year = 2020
 		enable_equipments = {
 			basic_towed_artillery_equipment
+		}
+		enable_subunits = {
+			towed_art
+		}
+		enable_subunits = {
+			towed_art_sup
 		}
 		path = {
 			leads_to_tech = gerantium_complex
@@ -197,6 +209,12 @@ technologies = {
 	basic_air_defense = {
 		enable_equipments = {
 			basic_air_defense_equipment
+		}
+		enable_subunits = {
+			antiair_art
+		}
+		enable_subunits = {
+			anti_air_art_sup
 		}
 		start_year = 2020
 		path = {
@@ -355,6 +373,12 @@ technologies = {
 		start_year = 2020
 		enable_equipments = {
 			basic_MLRS_equipment
+		}
+		enable_subunits = {
+			mlrs_art
+		}
+		enable_subunits = {
+			mlrs_art_sup
 		}
 		path = {
 			leads_to_tech = ARBF_shells
