@@ -13,7 +13,7 @@ focus_tree = {
 
     focus = {
         id = SDC_facility
-        icon = GFX_Ustanovka
+        icon = GFX_facility
         cost = 5
         x = 6
         y = 0
@@ -32,7 +32,7 @@ focus_tree = {
     focus = {
         id = SDC_increase_volumes
         prerequisite = { focus = SDC_facility }
-        icon = GFX_Narastit_obyomy
+        icon = GFX_increase_volumes
         cost = 5
         x = 4
         y = 1
@@ -60,7 +60,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_mobilisation
-        icon = GFX_Mobilizatsia
+        icon = GFX_mobilisation
         prerequisite = { focus = SDC_facility }
         cost = 5
         x = 6
@@ -74,7 +74,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_shifting_deadlines
-        icon = GFX_Sdvizhenie_srokov
+        icon = GFX_shifting_deadlines
         prerequisite = { focus = SDC_facility }
         cost = 5
         x = 8
@@ -112,7 +112,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_preemptive_strike
-        icon = GFX_Preventivny_udar
+        icon = GFX_preemptive_strike
         prerequisite = { focus = SDC_mobilisation }
         prerequisite = {
             focus = SDC_increase_volumes
@@ -140,7 +140,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_great_chess_game
-        icon = GFX_Velikaya_shakhmatnaya_igra
+        icon = GFX_great_chess_game
         prerequisite = { focus = SDC_preemptive_strike }
         available = {
             has_war = no
@@ -178,7 +178,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_hybrid_war
-        icon = GFX_Gibridnaya_voyna
+        icon = GFX_hybrid_war
         prerequisite = { focus = SDC_great_chess_game }
         available = {
             has_war = no
@@ -196,7 +196,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_stalkers_squads
-        icon = GFX_Otryady_stalkerov
+        icon = GFX_stalkers_squads
         prerequisite = { focus = SDC_hybrid_war }
         available = {
             hidden_trigger = {
@@ -221,7 +221,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_execution_service
-        icon = GFX_Sluzhba_ispolnenia_nakazaniy
+        icon = GFX_execution_service
         prerequisite = { focus = SDC_hybrid_war }
         available = {
             hidden_trigger = {
@@ -269,7 +269,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_science_academy
-        icon = GFX_Akademia_nauk
+        icon = GFX_science_academy
         prerequisite = { focus = SDC_great_chess_game }
         cost = 5
         x = 6
@@ -284,7 +284,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_Martins_comunications
-        icon = GFX_Svyazi_Martina
+        icon = GFX_Martins_comunications
         prerequisite = { focus = SDC_science_academy }
         cost = 5
         x = 6
@@ -299,7 +299,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_national_traitors
-        icon = GFX_Natsional-predateli
+        icon = GFX_national_traitors
         prerequisite = { focus = SDC_great_chess_game }
         available = {
             has_war = no
@@ -338,7 +338,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_force_methods
-        icon = GFX_Silovye_metody
+        icon = GFX_force_methods
         prerequisite = { focus = SDC_national_traitors }
         available = {
             has_war = no
@@ -356,7 +356,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_special_military_operation
-        icon = GFX_Spetsialnaya_voennaya_operatsia
+        icon = GFX_special_military_operation
         prerequisite = {
             focus = SDC_stalkers_squads
             focus = SDC_execution_service
@@ -408,7 +408,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_appoint_Martin
-        icon = GFX_Naznachit_Martina
+        icon = GFX_appoint_Martin
         prerequisite = { focus = SDC_special_military_operation }
         mutually_exclusive = { focus = SDC_direct_control }
         available = {
@@ -429,7 +429,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_dont_fear_chalanges
-        icon = GFX_Ne_boyatsya_vyzovov
+        icon = GFX_dont_fear_chalanges
         prerequisite = { focus = SDC_appoint_Martin }
         cost = 5
         x = 3
@@ -460,7 +460,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_science_methods
-        icon = GFX_Nauchnye_metody
+        icon = GFX_science_methods
         prerequisite = { focus = SDC_appoint_Martin }
         cost = 5
         x = 5
@@ -499,7 +499,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_integration
-        icon = GFX_Integratsia
+        icon = GFX_integration
         prerequisite = { focus = SDC_dont_fear_chalanges }
         prerequisite = { focus = SDC_science_methods }
         cost = 5
@@ -559,7 +559,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_direct_control
-        icon = GFX_Pryamoe_upravlenie 
+        icon = GFX_direct_control 
         prerequisite = { focus = SDC_special_military_operation }
         mutually_exclusive = { focus = SDC_appoint_Martin }
         available = {
@@ -580,7 +580,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_finish_survivers
-        icon = GFX_Dobit_vyzhivshikh
+        icon = GFX_finish_survivers
         prerequisite = { focus = SDC_direct_control }
         cost = 5
         x = 7
@@ -642,7 +642,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_Ural_brigades
-        icon = GFX_Uralskie_brigady
+        icon = GFX_Ural_brigades
         prerequisite = { focus = SDC_direct_control }
         cost = 5
         x = 9
@@ -699,7 +699,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_peacification
-        icon = GFX_Umirotvorenie
+        icon = GFX_peacification
         prerequisite = { focus = SDC_finish_survivers }
         prerequisite = { focus = SDC_Ural_brigades }
         cost = 5
@@ -831,7 +831,7 @@ focus_tree = {
     }
     focus = {
         id = SDC_doomhour
-        icon = GFX_Strashny_chas
+        icon = GFX_doomhour
         prerequisite = {
             focus = SDC_integration
             focus = SDC_peacification
