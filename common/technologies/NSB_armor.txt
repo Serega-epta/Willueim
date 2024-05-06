@@ -1,6 +1,9 @@
 technologies = {
 	nsb_pre_war_OPV = {	
 		enable_equipments = { early_mbt_equipment }
+		enable_subunits = {
+			OPF
+		}
 		path = {
 			leads_to_tech = nsb_basic_nsb_specialized_OPF
 			research_cost_coeff = 1
@@ -36,6 +39,9 @@ technologies = {
 	
 	nsb_basic_nsb_specialized_OPF = {	
 		enable_equipments = { specialized_tank_chassis_0 }
+		enable_subunits = {
+			specialized_OPF
+		}
 		path = {
 			leads_to_tech = nsb_improved_nsb_specialized_OPF
 			research_cost_coeff = 1
@@ -216,6 +222,9 @@ technologies = {
 	#Подветка ИИ - танков
 	nsb_basic_ai_OPF = {	
 		enable_equipments = { ai_tank_chassis_0 }
+		enable_subunits = {
+			ai_OPF
+		}
 		path = {
 			leads_to_tech = nsb_improved_ai_OPF
 			research_cost_coeff = 1

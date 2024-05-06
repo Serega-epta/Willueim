@@ -1,6 +1,10 @@
 technologies = {
 	pre_war_OPV = {	
 		enable_equipments = { pre_war_OPV_equipment }
+		
+		enable_subunits = {
+			OPF
+		}
 		path = {
 			leads_to_tech = basic_specialized_OPF
 			research_cost_coeff = 1
@@ -36,6 +40,9 @@ technologies = {
 	
 	basic_specialized_OPF = {	
 		enable_equipments = { basic_specialized_OPF_equipment }
+		enable_subunits = {
+			specialized_OPF
+		}
 		path = {
 			leads_to_tech = improved_specialized_OPF
 			research_cost_coeff = 1
@@ -215,6 +222,9 @@ technologies = {
 	#Подветка ИИ - танков
 	basic_ai_OPF = {	
 		enable_equipments = { basic_ai_OPF_equipment }
+		enable_subunits = {
+			ai_OPF
+		}
 		path = {
 			leads_to_tech = improved_ai_OPF
 			research_cost_coeff = 1
