@@ -2,18 +2,18 @@ expedition_category = {
 	icon = GFX_decision_category_expedition
 	priority = 10
 	picture = GFX_expedition_picture
-	ai_will_do = {
-    	base = 12
+	visible = {
+		NOT = {
+			tag = WEC
+			tag = SAC
+			tag = SOC
+			tag = BLS
+			tag = SFL
+			tag = NFL
+			tag = SIL
+			tag = WTR
+			tag = MOS
+			tag = KRT
+		}
 	}
-	allowed = {
-		always = no
-	}
-	scripted_gui = roh_expedition
-	# visible = {
-	# 	NOT = {
-	# 		tag = MOS
-	# 		tag = SIL
-	# 		tag = BLS
-	# 	}
-	# }
 }

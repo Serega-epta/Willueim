@@ -304,9 +304,9 @@ GLS_nuclear_strike = {
 					}
 					country_event = { id = GLS.666 days = 1 }
 					country_event = { id = GLS.888 days = 70 } #Ивент, чтобы снять флаг
-					launch_nuke = {
-						province = { is_capital = yes } 
-					}
+					#launch_nuke = { #Когда нибудь я это реализую - Ural Letov
+					#	province = { is_capital = yes } 
+					#}
 				}
 				GLS = {
 					add_stability = -0.03

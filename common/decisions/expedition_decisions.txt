@@ -1,411 +1,410 @@
-expedition_category = {	
-	nabor_otriada = {
-		icon = GFX_decision_generic_document
-		priority = 7
-		allowed = { always = yes }
-		available = {
-			has_manpower > 1500
-			NOT = {
-			has_country_flag = otriad_nabran
-			}
-		}
-		ai_will_do = {
-		base = 60
-		}
-		fire_only_once = no
-		days_remove = 1 # время события 
-		# Сразу после события
-		complete_effect = {
-		add_manpower = -1500
-		set_country_flag = otriad_nabran
-		ROOT = {
-		set_variable = { profesionalzm_oriada = 10 }
-		}
-		set_variable = { profesionalzm_oriada = 10 }
-		} 
-		cost = 25
-	}
-	podgotovka_otriada = {
-		icon = GFX_decision_generic_document
-		priority = 7
-		allowed = { always = yes }
-		available = {
-			has_equipment = {
-			infantry_equipment > 1999
-			}
-			has_equipment = {
-			infantry_odejda > 1499
-			}
-			NOT = {
-			has_country_flag = oriad_ekipirovan
-			}
-		}
-		ai_will_do = {
-		base = 60
-		}
-		days_remove = 60 # время события 
-		# Сразу после события
-		complete_effect = {
-		add_equipment_to_stockpile = {type = infantry_equipment amount = -2000} add_equipment_to_stockpile = {type = infantry_odejda amount = -1500}
-		set_country_flag = oriad_ekipirovan
-		} 
-		cost = 25
-	}
-	obuchenie_otriada = {
-		icon = GFX_decision_generic_document
-		priority = 7
-		allowed = { always = yes }
-		available = {
-			command_power > 50
-			NOT = {
-			has_country_flag = otriad_obuchen
-			}
-		}
-		ai_will_do = {
-		base = 60
-		}
-		fire_only_once = no
-		days_remove = 60 # время события 
-		# Сразу после события
-		complete_effect = {
-		add_command_power = -50
-		set_country_flag = otriad_obuchen
-		
-		set_variable = { profesionalzm_oriada = 0.05 }
-		
-		} 
-		cost = 25
-	}
-	
-	otriad_zachistki = {
-		icon = GFX_decision_generic_document
-		priority = 7
-		allowed = { always = yes }
-		available = {
-			has_equipment = {
-			motorized_equipment > 500
-			}
-			NOT = {
-			has_country_flag = otriad_zachistki_gotov
-			}
-			has_country_flag = otriad_nabran
-			has_country_flag = oriad_ekipirovan
-			has_country_flag = otriad_obuchen
-		}
-		ai_will_do = {
-		base = 60
-		}
-		fire_only_once = no
-		days_remove = 60 # время события 
-		# Сразу после события
-		complete_effect = {
-		add_equipment_to_stockpile = {type = motorized_equipment amount = -500}
-		set_country_flag = otriad_zachistki_gotov
-		
-		add_to_variable = { profesionalzm_oriada = 0.15 }
-		
-		} 
-		cost = 25
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	otriad_iskoreniteley = {
-		icon = GFX_decision_generic_document
-		priority = 7
-		allowed = { always = yes }
-		available = {
-			has_equipment = {
-			mechanized_equipment > 500
-			}
-			has_equipment = {
-			support_equipment > 500
-			}
-			NOT = {
-			has_country_flag = otriad_iskoreniteley_gotov
-			}
-			has_country_flag = otriad_nabran
-			has_country_flag = oriad_ekipirovan
-			has_country_flag = otriad_obuchen
-		}
-		ai_will_do = {
-		base = 60
-		}
-		fire_only_once = no
-		days_remove = 60 # время события 
-		# Сразу после события
-		complete_effect = {
-		add_equipment_to_stockpile = {type = mechanized_equipment amount = -500} add_equipment_to_stockpile = {type = support_equipment amount = -500}
-		set_country_flag = otriad_iskoreniteley_gotov
-		add_to_variable = { profesionalzm_oriada = 0.15 }
-		} 
-		cost = 25
-	}
-	
-	
-	otriad_STEAL = {
-		icon = GFX_decision_generic_document
-		priority = 7
-		allowed = { always = yes }
+expedition_category = {
+	####################################
+	### DECISIONS OF CREATION SQUADS ###
+	####################################
+	form_search_squad = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 100	
 		available = {
 			has_manpower > 500
-			command_power > 50			
-			has_equipment = {
-			infantry_equipment > 1999
-			}
-			has_equipment = {
-			infantry_odejda > 1499
-			}
-			has_equipment = {
-			motorized_equipment > 500
-			}
-			has_equipment = {
-			mechanized_equipment > 500
-			}
-			has_equipment = {
-			support_equipment > 500
-			}
-			NOT = {
-			has_country_flag = otriad_STEAL_gotov
-			}
-			has_country_flag = otriad_nabran
-			has_country_flag = oriad_ekipirovan
-			has_country_flag = otriad_obuchen
 		}
-		ai_will_do = {
-		base = 60
-		}
-		fire_only_once = no
-		days_remove = 60 # время события 
-		# Сразу после события
-		complete_effect = {
-		add_equipment_to_stockpile = {type = infantry_equipment amount = -2000} add_equipment_to_stockpile = {type = infantry_odejda amount = -1500} add_equipment_to_stockpile = {type = motorized_equipment amount = -500} add_equipment_to_stockpile = {type = mechanized_equipment amount = -500} add_equipment_to_stockpile = {type = support_equipment amount = -500}
-		add_command_power = -50
-		add_manpower = -500
-		set_country_flag = otriad_STEAL_gotov
-		add_to_variable = { profesionalzm_oriada = 0.15 }
-		} 
-		cost = 25
-	}
-	
-	
-	
-	brosit_otriad_v_boy = {
-		icon = GFX_decision_generic_document
-		priority = 7
-		allowed = { always = yes }
-		available = {
-			has_country_flag = otriad_nabran
-			has_country_flag = oriad_ekipirovan
-			has_country_flag = otriad_obuchen
-			NOT = {
-			has_country_flag = otriad_na_pole_boya
-			
-			}
-			has_war = yes
-		}
-		ai_will_do = {
-		base = 60
-		}
-		fire_only_once = no
-		days_remove = 1 
-		
-		complete_effect = {
-		set_country_flag = otriad_na_pole_boya
-		
+		cost = 50
+		days_remove = 30
 
-		if = {
-			limit = { has_country_flag = otriad_STEAL_gotov }
-			ROOT = {
-				division_template = { 
-						name = "otriad steal"
-						division_names_group = OTR_CAM_02
-						is_locked = yes
-						regiments = {
-							mechanized  = { x = 0 y = 0 }
-							mechanized  = { x = 0 y = 1 }
-							mechanized  = { x = 1 y = 0 }
-							mechanized  = { x = 1 y = 1 }
-							mechanized  = { x = 2 y = 0 }
-							mechanized  = { x = 2 y = 1 }							
-							mechanized  = { x = 0 y = 2 }
-							mechanized  = { x = 1 y = 2 }
-							mechanized  = { x = 2 y = 2 }							
-							mechanized  = { x = 0 y = 3 }
-							mechanized  = { x = 1 y = 3 }
-							mechanized  = { x = 2 y = 3 }
-							mechanized  = { x = 0 y = 4 }
-							mechanized  = { x = 1 y = 4 }
-							mechanized  = { x = 2 y = 4 }
-							mechanized  = { x = 3 y = 0 }
-							mechanized  = { x = 3 y = 1 }
-							mechanized  = { x = 3 y = 2 }
-							mechanized  = { x = 3 y = 3 }
-							mechanized  = { x = 3 y = 4 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							standard_bearer = { x = 0 y = 1 }
-							rhbz = { x = 0 y = 2 }
-							gamekeepers = { x = 0 y = 3 }
-						}
-						priority = 0
-				}
-				
-				random_owned_controlled_state  = {
-						create_unit = {
-							division = "division_template = \"otriad steal\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}				
-				}
-			}
-		}
-		else = {
-		if = {
-			limit = { has_country_flag = otriad_iskoreniteley_gotov }
-			ROOT = {
-				division_template = { 
-						name = "otriad iskorenitel"
-						division_names_group = OTR_CAM_03
-						is_locked = yes
-						regiments = {
-							motopechotanagruzovikah   = { x = 0 y = 0 }
-							motopechotanagruzovikah   = { x = 0 y = 1 }
-							motopechotanagruzovikah   = { x = 1 y = 0 }
-							motopechotanagruzovikah   = { x = 1 y = 1 }
-							motopechotanagruzovikah   = { x = 2 y = 0 }
-							motopechotanagruzovikah   = { x = 2 y = 1 }							
-							motopechotanagruzovikah   = { x = 0 y = 2 }
-							motopechotanagruzovikah   = { x = 1 y = 2 }
-							motopechotanagruzovikah   = { x = 2 y = 2 }							
-							motopechotanagruzovikah   = { x = 0 y = 3 }
-							motopechotanagruzovikah   = { x = 1 y = 3 }
-							motopechotanagruzovikah   = { x = 2 y = 3 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							standard_bearer = { x = 0 y = 1 }
-						}
-						priority = 0
-				}
-				random_owned_controlled_state = {
-						create_unit = {
-							division = "division_template = \"otriad iskorenitel\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}				
-				}
-			}
-		}
-		else = { 
-			if = {
-				limit = { has_country_flag = otriad_zachistki_gotov }
-				ROOT = {
-				division_template = { 
-						name = "otriad zachist"
-						division_names_group = OTR_CAM_04
-						is_locked = yes
-						regiments = {
-							mountaineers = { x = 0 y = 0 }
-							mountaineers = { x = 0 y = 1 }
-							mountaineers = { x = 1 y = 0 }
-							mountaineers = { x = 1 y = 1 }
-							mountaineers = { x = 2 y = 0 }
-							mountaineers = { x = 2 y = 1 }							
-							mountaineers = { x = 0 y = 2 }
-							mountaineers = { x = 1 y = 2 }
-							mountaineers = { x = 2 y = 2 }							
-							mountaineers = { x = 0 y = 3 }
-							mountaineers = { x = 1 y = 3 }
-							mountaineers = { x = 2 y = 3 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-						}
-						priority = 0
-				}
-				random_owned_controlled_state = {
-						create_unit = {
-							division = "division_template = \"otriad zachist\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}				
-				}
-				}
-			}
-			else = {
-			ROOT = {
-				division_template = { 
-						name = "otriad zachist"
-						division_names_group = OTR_CAM_05
-						is_locked = yes
-						regiments = {
-							opolchenie     = { x = 0 y = 0 }
-							opolchenie     = { x = 0 y = 1 }
-							opolchenie     = { x = 1 y = 0 }
-							opolchenie     = { x = 1 y = 1 }
-							opolchenie     = { x = 2 y = 0 }
-							opolchenie     = { x = 2 y = 1 }							
-							opolchenie     = { x = 0 y = 2 }
-							opolchenie     = { x = 1 y = 2 }
-							opolchenie     = { x = 2 y = 2 }							
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-						}
-						priority = 0
-				}
-				random_owned_controlled_state = {
-						create_unit = {
-							division = "division_template = \"otriad zachist\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}				
-				}
-				}
-			}
-		}
-		}
-		
-		
-		
-		
-		
-		
-		
-		} 
-		cost = 10
-	}
-	
-	
-
-	
-	Reid_v_ruini = {
-		icon = GFX_decision_generic_document
-		priority = 7
-		allowed = { always = yes }
-		available = {
-		has_country_flag = otriad_nabran
-		has_country_flag = oriad_ekipirovan
-		has_country_flag = otriad_obuchen
-		}
-		ai_will_do = {
-		base = 60
-		}
-		days_remove = 180 # время события 
-		days_re_enable = 10	
-		# Сразу после события
 		complete_effect = {
-		
-		country_event = {id = Reid.333}
-		
-		} 
+			ROOT = { add_manpower = -500 }
+		}		
+		remove_effect = {
+			custom_effect_tooltip = form_search_squad_tt
+			hidden_effect = {
+				ROOT = { add_to_variable = { search_squad_var = 1 } }
+			}
+		}
+	}
+	form_combat_squad = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 100	
+		available = {
+			has_manpower > 500
+			has_army_manpower = { size > 999 }
+		}
+		cost = 50
+		days_remove = 30
+
+		complete_effect = {
+			ROOT = { add_manpower = -500 }		
+		}
+		remove_effect = {
+			custom_effect_tooltip = form_combat_squad_tt
+			hidden_effect = {
+				ROOT = { add_to_variable = { combat_squad_var = 1 } }
+			}	
+		}
+	}
+	#################################
+	### DECISIONS OF SEARCH SQUAD ###
+	#################################
+	check_warehouses = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 100
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = at_least_one_search_squad_tt
+				ROOT = { check_variable = { search_squad_var > 0} }
+			}
+		}
+		visible = {
+			ROOT = { check_variable = { search_squad_var > 0} }
+		}
 		cost = 100
+		days_remove = 20
+
+		complete_effect = {
+			custom_effect_tooltip = subtract_from_number_of_search_squads_tt
+			hidden_effect = { 
+				ROOT = { subtract_from_variable = { search_squad_var = 1 } }
+			}
+		}
+		remove_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = expedition.1 } #Untouchable reserve
+				}
+				50 = {
+					country_event = { id = expedition.2 } #Empty shelves
+				}
+			}
+		}
+	}
+	explore_science_complexes = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 100
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = at_least_one_search_squad_tt
+				ROOT = { check_variable = { search_squad_var > 0 } }
+			}
+		}
+		visible = {
+			ROOT = { check_variable = { search_squad_var > 0} }
+		}
+		cost = 75
+		days_remove = 20
+
+		complete_effect = {
+			custom_effect_tooltip = subtract_from_number_of_search_squads_tt
+			hidden_effect = { 
+				ROOT = { subtract_from_variable = { search_squad_var = 1 } }
+			}
+		}
+		remove_effect = {
+			random_list = {
+				34 = {
+					country_event = { id = expedition.3 } #Papers, papers, papers...
+				}
+				33 = {
+					country_event = { id = expedition.4 } #This could be interesting
+				}
+				33 = {
+					country_event = { id = expedition.5 } #It's best not to talk about it...
+				}				
+			}
+		}
+	}
+	check_refinery = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 100
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = at_least_one_search_squad_tt
+				ROOT = { check_variable = { search_squad_var > 0 } }
+			}
+		}
+		visible = {
+			ROOT = { check_variable = { search_squad_var > 0} }
+		}
+		cost = 100
+		days_remove = 20
+
+		complete_effect = {
+			custom_effect_tooltip = subtract_from_number_of_search_squads_tt
+			hidden_effect = { 
+				ROOT = { subtract_from_variable = { search_squad_var = 1 } }
+			}
+		}
+		remove_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = expedition.6 } #Black gold
+				}
+				50 = {
+					country_event = { id = expedition.7 } #Absolute zero
+				}				
+			}
+		}
+	}
+	explore_industrial_zone = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 100
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = at_least_one_search_squad_tt
+				ROOT = { check_variable = { search_squad_var > 0 } }
+			}
+		}
+		visible = {
+			ROOT = { check_variable = { search_squad_var > 0 } }
+		}
+		cost = 150
+		days_remove = 20
+
+		complete_effect = {
+			custom_effect_tooltip = subtract_from_number_of_search_squads_tt
+			hidden_effect = { 
+				ROOT = { subtract_from_variable = { search_squad_var = 1 } }
+			}
+		}
+		remove_effect = {
+			random_list = {
+				34 = {
+					country_event = { id = expedition.8 } #Technical illiteracy
+				}
+				33 = {
+					country_event = { id = expedition.9 } #Production facilities
+				}
+				33 = {
+					country_event = { id = expedition.10 } #Mechanism of war
+				}
+			}
+		}
+	}
+	#################################
+	### DECISIONS OF COMBAT SQUAD ###
+	#################################
+	raid_neighbor_prepare = {
+		icon = GFX_decision_eng_trade_unions_support
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = at_least_one_combat_squad_tt
+				ROOT = { check_variable = { combat_squad_var > 0 } }
+			}
+			any_owned_state = {
+				is_fully_controlled_by = ROOT
+				has_ROOT_at_least_1_div_in_current_state_scope = yes
+				any_neighbor_state = {
+					is_fully_controlled_by = FROM
+				}
+			}
+			has_war = no
+			FROM = { has_war = no }
+			NOT = { FROM = { is_ally_with = ROOT } }			
+		}
+		visible = {
+			ROOT = { check_variable = { combat_squad_var > 0 } }
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				is_neighbor_of = ROOT
+			}
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				OR = {
+					state = FROM.defender_state_vs_@ROOT
+					AND = {
+						is_owned_and_controlled_by = FROM
+						any_neighbor_state = {
+							has_ROOT_at_least_1_div_in_current_state_scope = yes
+							is_fully_controlled_by = ROOT
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+				factor = 0.66
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.6
+				}
+				factor = 0.33
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.4
+				}
+				factor = 0
+			}
+		}
+		
+		cost = 150
+		days_remove = 10
+
+		complete_effect = { # Effect WHEN CLICKED
+			custom_effect_tooltip = subtract_from_number_of_combat_squads_tt
+			hidden_effect = {
+				ROOT = { subtract_from_variable = { combat_squad_var = 1 } }
+				FROM = {
+					random_owned_controlled_state = {
+						limit = {
+							any_neighbor_state = {
+								is_fully_controlled_by = ROOT
+								has_ROOT_at_least_1_div_in_current_state_scope = yes
+							}
+						}
+						set_variable = { PREV.defender_state_vs_@ROOT = id }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						has_ROOT_at_least_1_div_in_current_state_scope = yes
+						any_neighbor_state = {
+							is_fully_controlled_by = FROM
+						}
+					}
+					set_variable = { FROM.attacker_state_vs_@ROOT = id }
+				}
+				set_country_flag = preparing_raid
+			}
+		}
+		remove_effect = { # Effect ON timeout
+			activate_targeted_decision = { target = FROM decision = raid_neighbor_initiate }			
+		}
+	}
+	raid_neighbor_initiate = {
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { always = no } #Activated from effect
+		fixed_random_seed = no
+		available = {
+			ROOT = {
+				var:FROM.attacker_state_vs_@ROOT = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			divisions_in_border_state = {
+				state = var:FROM.attacker_state_vs_@ROOT
+				border_state = var:FROM.defender_state_vs_@ROOT
+				size > 0
+			}
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = var:FROM.attacker_state_vs_@ROOT
+			}
+		}
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio = 2
+				}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				has_war = yes
+				FROM = { has_war = yes }
+				has_non_aggression_pact_with = FROM
+			}
+		}
+		cancel_effect = {
+			clr_country_flag = preparing_raid
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+		selectable_mission = yes
+		days_mission_timeout = 65
+		
+		timeout_effect = {
+			hidden_effect = {
+				FROM = {
+					clear_variable = attacker_state_vs_@ROOT
+					clear_variable = defender_state_vs_@ROOT
+				}
+				clr_country_flag = preparing_raid
+				remove_targeted_decision = { target = FROM decision = raid_neighbor_initiate }
+				activate_targeted_decision = { target = FROM decision = raid_neighbor_prepare }
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:FROM.attacker_state_vs_@ROOT
+					num_provinces = 4
+					on_win = expedition_raid.1 #Successful raid
+					on_lose = expedition_raid.2 #Unfortunate raid
+					#on_cancel = expedition_raid.3 #?
+				}
+				defender = {
+					state = var:FROM.defender_state_vs_@ROOT
+					num_provinces = 4
+					on_win = expedition_raid.1 #Successful raid
+					on_lose = expedition_raid.2 #Unfortunate raid
+					#on_cancel = expedition_raid.3 #?
+				}
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = FROM decision = raid_neighbor_initiate }
+				activate_targeted_decision = { target = FROM decision = raid_neighbor_in_progress }
+			}
+		}
+	}
+	raid_neighbor_in_progress = {
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { always = no } #Activated from effect
+		available = {
+			NOT = { has_border_war = yes }
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = var:FROM.attacker_state_vs_@ROOT
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				is_in_faction_with = FROM
+				has_war_with = FROM
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+		days_mission_timeout = 180
+
+		timeout_effect = { #inconclusive battle
+			cancel_border_war = {
+				dont_fire_events = no
+				attacker = var:FROM.attacker_state_vs_@ROOT
+				defender = var:FROM.defender_state_vs_@ROOT
+			}
+			hidden_effect = {
+				FROM = {
+					clear_variable = attacker_state_vs_@ROOT
+					clear_variable = defender_state_vs_@ROOT
+				}
+				clr_country_flag = preparing_raid
+				remove_targeted_decision = { target = FROM decision = raid_neighbor_in_progress }
+				activate_targeted_decision = { target = FROM decision = raid_neighbor_prepare }
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				clr_country_flag = preparing_raid
+				remove_targeted_decision = { target = FROM decision = raid_neighbor_in_progress }
+				activate_targeted_decision = { target = FROM decision = raid_neighbor_prepare }
+			}
+		}
 	}
 }
