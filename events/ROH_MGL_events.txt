@@ -1,0 +1,28 @@
+add_namespace = MGL
+
+country_event = {
+    id = MGL.1
+    title = MGL.1
+    desc = MGL.1
+    #picture = 
+
+    is_triggered_only = no
+    fire_only_once = yes
+    hidden = yes
+    trigger = {
+        date > 2032.02.01
+    }
+
+    option = {
+        name = MGL.1
+        add_country_leader_role = {
+            character = MGL_Exclusion_zone  #Пока такой фейлстейт
+            promote_leader = yes
+            country_leader = {
+                ideology = technocracy_subideology
+                expire = "1965.1.1.1"
+                traits = { exclusion_zone_trait }
+            }
+        }
+    }
+}

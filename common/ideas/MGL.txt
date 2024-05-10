@@ -1,69 +1,135 @@
 ideas = {
-
 	country = {
-		razum_sinkretizmov = {
-			
+		MGL_Critical_arrhythmia = {
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-			
 			modifier = {
-				political_power_gain = -0.2
-				production_factory_max_efficiency_factor = -0.1
-				production_lack_of_resource_penalty_factor = 0.15
-				consumer_goods_factor = 0.1		
+				stability_factor = -0.5
+				war_support_factor = -0.5
+				nuclear_production_factor = -0.2
 			}
 		}
-	}
-	country = {
-		prah_human = {
-			
+		MGL_Rusted_mechanism_1 = {
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-			
 			modifier = {
-				army_speed_factor = 0.1
-				research_speed_factor = 0.25
-				stability_factor = -0.25
-				war_support_factor = -0.25			
+				production_speed_buildings_factor = -0.5
+				consumer_goods_factor = 0.5
+				global_building_slots_factor = -0.4
+				base_fuel_gain_factor = -0.5
 			}
 		}
-	}
-	country = {
-		vishaya_milost = {
-			
+		MGL_Rusted_mechanism_2 = {
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-			
 			modifier = {
-				motorized_attack_factor = 0.1
-				motorized_defence _factor = 0.1 
-				tanks_ attack_factor = 0.1
-				tanks_defence _factor = 0.1
-				mechanized_attack_factor = 0.1
-				mechanized_ defence _factor = 0.1
-				max_commander_army_size = 6
-				max_army_group_size = 2				
+				production_speed_buildings_factor = -0.35
+				consumer_goods_factor = 0.4
+				global_building_slots_factor = -0.4
+				base_fuel_gain_factor = -0.5
+			}
+		}
+		MGL_Rusted_mechanism_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.15
+				global_building_slots_factor = -0.4
+				base_fuel_gain_factor = -0.5
+			}
+		}
+		MGL_Rusted_mechanism_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.15
+				global_building_slots_factor = -0.4
+			}
+		}
+		MGL_Cybernetic_soul = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.3
+				political_power_factor=0.15
+			}
+		}
+		
+		MGL_Toothless_monolith = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -1.0
+				army_defence_factor = 0.5
+				army_speed_factor = -0.5
+				recruitable_population_factor = -1.0
+				experience_gain_factor = -0.5
+			}
+		}
+		MGL_Guard_of_progress = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.15
+				army_speed_factor = -0.05
+				experience_gain_factor = -0.25
+			}
+		}
+		MGL_Grasping_for_life = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
 			}
 		}
 	}
