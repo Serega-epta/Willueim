@@ -126,7 +126,7 @@ focus_tree = {
 		id = MGL_call
 		x = 8
 		y = 2
-		cost = 5
+		cost = 1
 		ai_will_do = {
 			base = 10
 		}
@@ -143,12 +143,13 @@ focus_tree = {
 		id = MGL_launch_gears
 		x = 7
 		y = 3
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
         prerequisite = { focus = MGL_call }
 		completion_reward = {
+			add_stability = 0.05
 			add_ideas = MGL_Grasping_for_life
 		}
 	}
