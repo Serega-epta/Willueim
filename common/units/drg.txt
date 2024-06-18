@@ -31,7 +31,8 @@ sub_units = {
 		
 		weight = 0.3
 		supply_consumption = 0.1
-		recon = 1.5
+		recon = 2
+		equipment_capture_factor = 0.05
 		
 		#Offensive
 		soft_attack = 13
@@ -43,10 +44,9 @@ sub_units = {
 		defense = 8
 		armor_value = 0
 		hardness = 0
-		maximum_speed = 0.8 
 
 		essential = {
-			infantry_equipment
+			motorized_equipment
 			support_equipment
 		}
 
