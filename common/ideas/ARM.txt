@@ -235,7 +235,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				training_time_army_factor = -0.15
+				training_time_army_factor = -0.015
 				experience_loss_factor = -0.015
 				experience_gain_army = 0.05
 			}
@@ -265,7 +265,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				Ofence = 0.03
+				army_attack_factor = 0.03
 				Defence = 0.03
 				weekly_manpower = 150 
 				consumer_goods_factor = 0.03
@@ -354,7 +354,7 @@ ideas = {
 				political_power_gain = 0.25
 				experience_gain_army = 0.20
 				resistance_damage_to_garrison = -0.15
-				resistance_damage_to_garrison_on_our_occupied_states = -0.2
+				resistance_damage_to_garrison_on_our_occupied_states = 0.2
 			}
 		}
 		ARM_Educational_programs_idea = {			#Воспитательные программы
@@ -368,7 +368,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				Political_power_gain = 0.2
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				Compliance_growth_on_our_occupied_states = 0.01
 			}
 		}
