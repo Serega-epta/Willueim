@@ -114,6 +114,14 @@ defined_text = {
 		}
 		localization_key = PEACE_POPUP_FLAVOR_SMK
 	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = AGE
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_AGE
+	}
 	##
 	text = {
 		localization_key = PEACE_POPUP_FLAVOR_DEFAULT

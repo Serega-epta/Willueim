@@ -43,8 +43,6 @@ focus_tree = {
 			add_manpower = 1000
 			country_event = AGE.2
 			custom_effect_tooltip = AGE_seek_for_peace_tt
-			custom_effect_tooltip = stablity_increases_to_two
-			add_to_variable = { stability = 2 }
 		}
 	}
 	focus = {
@@ -58,11 +56,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			remove_ideas = AGE_knife_at_throat
+			remove_ideas = AGE_time_wasted
 			add_ideas = AGE_land_for_baltics
 			country_event = AGE.3
 			custom_effect_tooltip = AGE_still_their_land_tt
-			custom_effect_tooltip = stablity_increases_to_three
-			add_to_variable = { stability = 3 }
 		}
 	}
 	focus = {
@@ -89,8 +86,6 @@ focus_tree = {
 			add_ideas = AGE_red_sabres
 			country_event = AGE.4
 			custom_effect_tooltip = AGE_red_sables_tt
-			custom_effect_tooltip = stablity_decreases_to_five
-			substract_from_variable = { stability = 5 }
 		}
 	}
 	focus = {
@@ -161,8 +156,7 @@ focus_tree = {
 			every_owned_state = {
 				add_manpower = -500
 			}
-			custom_effect_tooltip = stablity_decreases_to_five
-			substract_from_variable = { stability = 5 }
+			add_stability = -0,05
 		}
 	}
 	focus = {
@@ -176,8 +170,7 @@ focus_tree = {
 		prerequisite = { focus = AGE_our_motherland}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = stablity_increases_to_five
-			add_to_variable = { stability = 5 }
+			add_stability = 0,05
 		}
 	}
 	focus = {
@@ -190,8 +183,7 @@ focus_tree = {
 		prerequisite = { focus = AGE_we_are_not_alone }
 		completion_reward = {
 			add_stability = 0.05
-			custom_effect_tooltip = stablity_increases_to_five
-			add_to_variable = { stability = 5 }
+			add_political_power = 20
 		}
 	}
 	focus = {
@@ -207,8 +199,7 @@ focus_tree = {
 				idea = AGE_day_of_unity_celebration
 				days = 30
 			}
-			custom_effect_tooltip = stablity_increases_to_five
-			add_to_variable = { stability = 5 }
+			add_stability = 0,03
 		}
 	}
 	focus = {
@@ -224,8 +215,7 @@ focus_tree = {
 			add_political_power = 50
 			add_war_support = 0.02
 			set_country_flag =  ba_their_freedoms_loyalty_country_flag
-			custom_effect_tooltip = stablity_decreases_to_five
-			substract_from_variable = { stability = 5 }
+			add_stability = -0,02
 		}
 	}
 	focus = {
@@ -240,8 +230,7 @@ focus_tree = {
 			every_owned_state = {
 				add_manpower = 250
 			}
-			custom_effect_tooltip = stablity_decreases_to_five
-			substract_from_variable = { stability = 5 }
+			add_political_power = -20
 		}
 	}
 	focus = {
@@ -253,8 +242,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_southern_ortodoxians }
 		completion_reward = {
-			custom_effect_tooltip = stablity_decreases_to_ten
-			substract_from_variable = { stability = 10 }
+			add_stability =-0,1
 		}
 	}
 	focus = {
@@ -270,8 +258,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = AGE.7
-			custom_effect_tooltip = stablity_increases_to_ten
-			add_to_variable = { stability = 10 }
+			add_stability = 0,1
 			if = {
 				limit = {
 					has_completed_focus = AGE_seek_for_peace
