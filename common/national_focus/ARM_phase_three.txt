@@ -476,7 +476,7 @@ focus_tree = {
         ai_will_do = { factor = 10 }
         completion_reward = {
             add_equipment_to_stockpile = {
-                type = artillery_equipment_1
+                type = pre_war_artillery_equipment
                 amount = 250
                 producer = ARM
             }
@@ -722,10 +722,14 @@ focus_tree = {
             build_railway = {
                 level = 2
                 path = {13350, 3543, 9568, 525, 504, 11490, 11514, 11557, 582, 11489, 3494, 11454, 488}
+                start_state = 13350
+                target_state = 488
             }
             build_railway = {
                 level = 1
                 path = {3452, 3468, 6478, 6495, 559, 6605, 9413, 11462, 3520, 476, 6455, 414, 3577, 6584, 11703, 9698, 11670, 741, 11686, 3707, 723, 6743, 3724, 6706}
+                start_state = 3452
+                target_state = 6706
             }
         }
     }
@@ -1309,12 +1313,12 @@ focus_tree = {
                 producer = ARM
             }
             add_equipment_to_stockpile = {
-                type = motorized_equipment
+                type = motorized_equipment_1
                 amount = 450
                 producer = ARM
             }
             add_equipment_to_stockpile = {
-                type = artillery_equipment_1
+                type = pre_war_artillery_equipment
                 amount = 675
                 producer = ARM
             }
