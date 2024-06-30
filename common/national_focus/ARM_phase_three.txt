@@ -14,6 +14,7 @@ focus_tree = {
     focus = {
         id = ARM_new_frontiers                      #Новые Рубежи
         available = { has_war = no }
+        icon = GFX_New_frontiers
         x = 10
         y = 0
         cost = 2.8
@@ -25,6 +26,7 @@ focus_tree = {
     focus = {
         id = ARM_take_breath                                #Перевести дух
         prerequisite = { focus = ARM_new_frontiers }
+        icon = GFX_Take_a_break
         x = 10
         y = 1
         cost = 5
@@ -41,6 +43,7 @@ focus_tree = {
     focus = {
         id = ARM_take_order                                 #Навести порядок
         prerequisite = { focus = ARM_take_breath }
+        icon = GFX_Restore_order
         x = 6
         y = 2
         cost = 5
@@ -82,6 +85,7 @@ focus_tree = {
     focus = {
         id = ARM_restoration_Bryansk                #Восстановительные работы в Брянске
         prerequisite = { focus = ARM_take_breath }
+        icon = GFX_Restoration_work_in_Bryansk
         x = 10
         y = 2
         cost = 6.4
@@ -204,6 +208,7 @@ focus_tree = {
     focus = {
         id = ARM_collesct_survaivor                #Собрать уцелевшее
         prerequisite = { focus = ARM_take_breath }
+        icon = GFX_Collect_survivors
         x = 14
         y = 2
         cost = 6.4
@@ -234,6 +239,7 @@ focus_tree = {
     focus = {
         id = ARM_consul_purge                #Чистка администрации консульства
         prerequisite = { focus = ARM_take_order }
+        icon = GFX_Cleansing_of_the_Consulate_administration
         x = 6
         y = 3
         cost = 7.1
@@ -285,6 +291,7 @@ focus_tree = {
     focus = {
         id = ARM_new_factories                #Построить новые заводы
         prerequisite = { focus = ARM_restoration_Bryansk }
+        icon = GFX_Build_new_factories
         mutually_exclusive = { focus = ARM_new_church }
         x = 9
         y = 3
@@ -336,6 +343,7 @@ focus_tree = {
     focus = {
         id = ARM_new_church                #Восстановить церкви
         prerequisite = { focus = ARM_restoration_Bryansk }
+        icon = GFX_Rebuild_churches
         mutually_exclusive = { focus = ARM_new_factories }
         x = 11
         y = 3
@@ -350,6 +358,7 @@ focus_tree = {
     focus = {
         id = ARM_take_lessons                #Извлечь Уроки
         prerequisite = { focus = ARM_collesct_survaivor }
+        icon = GFX_Learn_lessons
         mutually_exclusive = { focus = ARM_learn_mistakes }
         x = 13
         y = 3
@@ -362,6 +371,7 @@ focus_tree = {
     focus = {
         id = ARM_learn_mistakes                #Учится на ошибках
         prerequisite = { focus = ARM_collesct_survaivor }
+        icon = GFX_Learn_from_mistakes
         mutually_exclusive = { focus = ARM_take_lessons }
         x = 15
         y = 3
@@ -378,6 +388,7 @@ focus_tree = {
     focus = {
         id = ARM_recover_stolen                #Изъять краденное
         prerequisite = { focus = ARM_consul_purge }
+        icon = GFX_Seize_stolen
         x = 6
         y = 4
         cost = 3.6
@@ -390,6 +401,7 @@ focus_tree = {
     focus = {
         id = ARM_civil_buildings                #Ускорить гражданское строительство
         prerequisite = { focus = ARM_recover_stolen }
+        icon = GFX_Accelerate_civil_construction
         mutually_exclusive = { focus = ARM_military_potentional }
         x = 5
         y = 5
@@ -407,6 +419,7 @@ focus_tree = {
     focus = {
         id = ARM_military_potentional               #Нарастить военный потенциал
         prerequisite = { focus = ARM_recover_stolen }
+        icon = GFX_Increase_military_potential
         mutually_exclusive = { focus = ARM_civil_buildings }
         x = 7
         y = 5
@@ -424,6 +437,7 @@ focus_tree = {
     focus = {
         id = ARM_regional_centres               #Региональые центры подготовки
         prerequisite = { focus = ARM_new_church focus = ARM_new_factories }
+        icon = GFX_Regional_training_centers
         x = 9
         y = 5
         cost = 5.7
@@ -435,6 +449,7 @@ focus_tree = {
      focus = {
         id = ARM_sharpen_swords              #Наточить мечи
         prerequisite = { focus = ARM_new_church focus = ARM_new_factories }
+        icon = GFX_Sharpen_swords
         x = 11
         y = 5
         cost = 4.3
@@ -458,6 +473,7 @@ focus_tree = {
     focus = {
         id = ARM_hiring_volonters              #Организовать найм добровольцев
         prerequisite = { focus = ARM_take_lessons focus = ARM_learn_mistakes }
+        icon = GFX_Recruit_volunteers
         x = 13
         y = 5
         cost = 5
@@ -470,6 +486,7 @@ focus_tree = {
      focus = {
         id = ARM_god_war              #Артилерия бог войны
         prerequisite = { focus = ARM_take_lessons focus = ARM_learn_mistakes }
+        icon = GFX_Artillery_god_of_war
         x = 15
         y = 5
         cost = 5.7
@@ -490,6 +507,7 @@ focus_tree = {
     focus = {
         id = ARM_secure_west              #Обезопасить запад
         prerequisite = { focus = ARM_regional_centres }
+        icon = GFX_Secure_the_west
         prerequisite = { focus = ARM_military_potentional focus = ARM_civil_buildings }
         x = 8
         y = 6
@@ -505,6 +523,7 @@ focus_tree = {
     focus = {
         id = ARM_go_south              #Двинутся на юг
         prerequisite = { focus = ARM_sharpen_swords }
+        icon = GFX_Move_south
         prerequisite = { focus = ARM_hiring_volonters }
         x = 12
         y = 6
@@ -520,6 +539,7 @@ focus_tree = {
     focus = {
         id = ARM_kill_fanatic              #Усмирить фанатиков
         prerequisite = { focus = ARM_secure_west }
+        icon = GFX_Pacify_fanatics
         mutually_exclusive = { focus = ARM_notthis_world }
         x = 7
         y = 7
@@ -543,6 +563,7 @@ focus_tree = {
     focus = {
         id = ARM_notthis_world             #Не от мира сего
         prerequisite = { focus = ARM_secure_west }
+        icon = GFX_Not_of_this_world
         mutually_exclusive = { focus = ARM_kill_fanatic }
         x = 9
         y = 7
@@ -566,6 +587,7 @@ focus_tree = {
     focus = {
         id = ARM_breatbasket_bandits              #Житница бандитов
         prerequisite = { focus = ARM_go_south }
+        icon = GFX_Bandits_granary
         x = 11
         y = 7
         cost = 3.6
@@ -596,6 +618,7 @@ focus_tree = {
     focus = {
         id = ARM_sea_monsters              #Морское чудовище
         prerequisite = { focus = ARM_go_south }
+        icon = GFX_Sea_monster
         x = 13
         y = 7
         cost = 3.6
@@ -610,6 +633,7 @@ focus_tree = {
     focus = {
         id = ARM_western_integration              #Интеграция западных окраин
         prerequisite = { focus = ARM_kill_fanatic focus = ARM_notthis_world }
+        icon = GFX_Integration_of_western_outskirts
         x = 8
         y = 8
         cost = 5
@@ -662,6 +686,7 @@ focus_tree = {
     focus = {
         id = ARM_rebber_mining              #Добыча резины на новых островах
         prerequisite = { focus = ARM_breatbasket_bandits }
+        icon = GFX_Rubber_extraction_on_new_islands
         prerequisite = { focus = ARM_sea_monsters }
         x = 12
         y = 8
@@ -678,6 +703,7 @@ focus_tree = {
     focus = {
         id = ARM_admirality_technology              #Технологии адмиралтейства
         prerequisite = { focus = ARM_sea_monsters }
+        icon = GFX_Admiralty_technologies
         x = 15
         y = 8
         cost = 4.3
@@ -703,6 +729,7 @@ focus_tree = {
     focus = {
         id = ARM_quirks_world              #Причуды нового мира
         prerequisite = { focus = ARM_western_integration }
+        icon = GFX_Whims_of_the_new_world
         x = 8
         y = 9
         cost = 3.6
@@ -714,6 +741,7 @@ focus_tree = {
     focus = {
         id = ARM_provide_supplies              #Обеспечить снабжение
         prerequisite = { focus = ARM_rebber_mining }
+        icon = GFX_Ensure_supply
         x = 11
         y = 9
         cost = 5.7
@@ -736,6 +764,7 @@ focus_tree = {
     focus = {
         id = ARM_tighten_call              #Ужесточить призыв
         prerequisite = { focus = ARM_rebber_mining }
+        icon = GFX_Tighten_the_draft
         x = 13
         y = 9
         cost = 2.1
@@ -749,6 +778,7 @@ focus_tree = {
     focus = {
         id = ARM_eliminate_danger              #Устранить опасность
         prerequisite = { focus = ARM_quirks_world }
+        icon = GFX_Eliminate_danger
         mutually_exclusive = { focus = ARM_touch_unknown }
         x = 7
         y = 10
@@ -764,6 +794,7 @@ focus_tree = {
      focus = {
         id = ARM_touch_unknown              #Прикоснуться к неизвестному
         prerequisite = { focus = ARM_quirks_world }
+        icon = GFX_Touch_the_unknown
         mutually_exclusive = { focus = ARM_eliminate_danger }
         x = 9
         y = 10
@@ -779,6 +810,7 @@ focus_tree = {
     focus = {
         id = ARM_impetus_mechanization             #Толчок в развитии механизации
         prerequisite = { focus = ARM_provide_supplies  }
+        icon = GFX_Push_mechanization_development
         x = 11
         y = 10
         cost = 4.3
@@ -794,6 +826,7 @@ focus_tree = {
     focus = {
         id = ARM_powers_crimson             #Расширить полномочия Багровых лучей
         prerequisite = { focus = ARM_tighten_call  }
+        icon = GFX_Expand_powers_of_crimson_rays
         x = 13
         y = 10
         cost = 5.7
@@ -829,6 +862,7 @@ focus_tree = {
     focus = {
         id = ARM_radar_patrol             #Радарный дозор
         prerequisite = { focus = ARM_eliminate_danger focus = ARM_touch_unknown  }
+        icon = GFX_Radar_watch
         x = 8
         y = 11
         cost = 5
@@ -902,6 +936,7 @@ focus_tree = {
     focus = {
         id = ARM_Marshal_Renaissance            #Маршал Возрождения
         prerequisite = { focus = ARM_impetus_mechanization }
+        icon = GFX_Marshal_of_Renewal
         prerequisite = { focus = ARM_powers_crimson }
         x = 12
         y = 11
@@ -923,6 +958,7 @@ focus_tree = {
     focus = {
         id = ARM_strengthening_Western            #Укрепление западной границы
         prerequisite = { focus = ARM_radar_patrol }
+        icon = GFX_Marshal_of_Renewal
         x = 8
         y = 12
         cost = 5
@@ -1085,6 +1121,7 @@ focus_tree = {
     focus = {
         id = ARM_express_yuorseld            #Заявить о себе
         prerequisite = { focus = ARM_Marshal_Renaissance }
+        icon = GFX_Make_a_statement
         x = 12
         y = 12
         cost = 4.3
@@ -1149,6 +1186,7 @@ focus_tree = {
     focus = {
         id = ARM_Educational_programs            #Воспитательные программы
         prerequisite = { focus = ARM_strengthening_Western }
+        icon = GFX_Educational_programs
         x = 9
         y = 13
         cost = 7.1
@@ -1160,6 +1198,7 @@ focus_tree = {
     focus = {
         id = ARM_Everything_front            #Всё для фронта, всё для победы!
         prerequisite = { focus = ARM_express_yuorseld }
+        icon = GFX_Everything_for_the_front_everything_for_victory
         x = 11
         y = 13
         cost = 7.1
@@ -1171,6 +1210,7 @@ focus_tree = {
     focus = {
         id = ARM_Select_flag            #Выбрать новый флаг
         prerequisite = { focus = ARM_Educational_programs }
+        icon = GFX_Choose_a_new_flag
         prerequisite = { focus = ARM_Everything_front }
         x = 8
         y = 14
@@ -1183,6 +1223,7 @@ focus_tree = {
     focus = {
         id = ARM_cherished_goal            #Наша заветная цель
         prerequisite = { focus = ARM_Educational_programs }
+        icon = GFX_Our_covenant_goal
         prerequisite = { focus = ARM_Everything_front }
         x = 10
         y = 14
@@ -1195,6 +1236,7 @@ focus_tree = {
     focus = {
         id = ARM_go_east            #Отправиться на восток
         prerequisite = { focus = ARM_Educational_programs }
+        icon = GFX_Go_east
         prerequisite = { focus = ARM_Everything_front }
         x = 13
         y = 14
@@ -1242,6 +1284,7 @@ focus_tree = {
     focus = {
         id = ARM_trip_Kuban            #Поход на Кубань
         prerequisite = { focus = ARM_Select_flag }
+        icon = GFX_Campaign_to_Kuban
         x = 8
         y = 15
         cost = 3.6
@@ -1268,6 +1311,7 @@ focus_tree = {
     focus = {
         id = ARM_Prepare_retribution            #Готовиться к великому возмездию
         prerequisite = { focus = ARM_cherished_goal }
+        icon = GFX_Prepare_for_great_retribution
         x = 10
         y = 15
         cost = 5
@@ -1327,6 +1371,7 @@ focus_tree = {
     focus = {
         id = ARM_Rebuilding_industrial            #Восстановление промышленной базы
         prerequisite = { focus = ARM_go_east }
+        icon = GFX_Restoration_of_industrial_base
         x = 12
         y = 15
         cost = 5.7
@@ -1369,6 +1414,7 @@ focus_tree = {
     focus = {
         id = ARM_extraction_Donbass            #Увеличить добычу ресурсов на Донбассе
         prerequisite = { focus = ARM_go_east }
+        icon = GFX_Expand_resource_extraction_in_Donbass
         x = 14
         y = 15
         cost = 4.3
@@ -1384,6 +1430,7 @@ focus_tree = {
     focus = {
         id = ARM_Order_Kuban            #Порядок на Кубани
         prerequisite = { focus = ARM_trip_Kuban }
+        icon = GFX_Order_in_Kuban
         x = 8
         y = 16
         cost = 5
@@ -1426,6 +1473,7 @@ focus_tree = {
     focus = {
         id = ARM_Unwavering_Anger            #Незыблемый гнев
         prerequisite = { focus = ARM_Prepare_retribution }
+        icon = GFX_Unshakable_anger
         x = 10
         y = 16
         cost = 5
@@ -1440,6 +1488,7 @@ focus_tree = {
     focus = {
         id = ARM_Offer_alternative            #Предложить достойную альтернативу
         prerequisite = { focus = ARM_Rebuilding_industrial }
+        icon = GFX_Offer_a_decent_alternative
         prerequisite = { focus = ARM_extraction_Donbass }
         x = 13
         y = 16
@@ -1478,6 +1527,7 @@ focus_tree = {
     focus = {
         id = ARM_Alignment_Russia            #Равняйсь! Смирно! Равнение на Россию!
         prerequisite = { focus = ARM_Offer_alternative }
+        icon = GFX_Line_up_33_Attention_33_Line_up_for_Russia_33
         prerequisite = { focus = ARM_Unwavering_Anger }
         prerequisite = { focus = ARM_Order_Kuban }
         x = 10
