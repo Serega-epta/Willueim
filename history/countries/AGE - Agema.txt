@@ -2,11 +2,12 @@ capital = 808
 
 oob = AGE
 add_manpower = 5000
-add_ideas = { 
-	AGE_knife_at_throat 
-	AGE_time_wasted 
-}
 
+add_ideas = {
+	AGE_red_sabres_1
+	AGE_knife_at_throat
+	AGE_time_wasted
+}
 
 set_technology = {
     infantry_weapons = 1
@@ -31,7 +32,7 @@ add_opinion_modifier = {
     modifier = archenemy
 }
 add_opinion_modifier = {
-    target = TWD
+    target = TWD # Total White Death? I condemn. TND better.
     modifier = traitors
 }
 add_opinion_modifier = {
@@ -63,12 +64,18 @@ recruit_character = AGE_rodolyub_vulovich
 recruit_character = AGE_deyan_berich 
 recruit_character = AGE_novak_jekovic 
 
-
-#Состояние Лазаревича - механика "Пульсация Разума"  
-set_variable = { level = 3 }
-
-#Стабильность в регионе - механика "Их свободы"
-set_variable = { stability = 50 }
-
-#Количество дней с окончания миссии "Кровавые багрянцы" - механика "Их свободы"
-set_variable = { count_of_days_since_end_AGE_blood_diamonds = 0 }
+911 = { add_dynamic_modifier = { modifier = open_opposition } }
+809 = { add_dynamic_modifier = { modifier = open_opposition } }
+808 = { add_dynamic_modifier = { modifier = open_opposition } }
+12 = { add_dynamic_modifier = { modifier = open_opposition } }
+13 = { add_dynamic_modifier = { modifier = open_opposition } }
+191 = { add_dynamic_modifier = { modifier = open_opposition } }
+927 = { add_dynamic_modifier = { modifier = open_opposition } }
+812 = { add_dynamic_modifier = { modifier = open_opposition } }
+910 = { add_dynamic_modifier = { modifier = open_opposition } }
+909 = { add_dynamic_modifier = { modifier = open_opposition } }
+190 = { add_dynamic_modifier = { modifier = open_opposition } }
+189 = { add_dynamic_modifier = { modifier = open_opposition } }
+815 = { add_dynamic_modifier = { modifier = open_opposition } }
+11 = { add_dynamic_modifier = { modifier = open_opposition } }
+814 = { add_dynamic_modifier = { modifier = open_opposition } }

@@ -1,5 +1,7 @@
 add_namespace = AGE
-add_namespace = AGE_their_freedoms
+add_namespace = AGE_baltic_terror
+add_namespace = AGE_clandestine_cells
+add_namespace = AGE_baltics_are_probing
 #Кладбища балтийских народов
 country_event = {
 	id = AGE.1
@@ -132,39 +134,166 @@ country_event = {
 		}
 	}
 }
-
-#Новый дом на руинах старого
+#Обратный результат
 country_event = {
-	id = AGE_their_freedoms.1
-	title = AGE_their_freedoms.1.t
-	desc = AGE_their_freedoms.1.d
+	id = AGE.9
+	title = AGE.9.t
+	desc = AGE.9.d
     fire_only_once = yes
 	is_triggered_only = yes
+
 	option = {
-		name = AGE_their_freedoms.1.a	
+	name = AGE.9.a
 	}
 }
 
-#Парад единства
+#Произошло нападение прибалтов! #фабрика
 country_event = {
-	id = AGE_their_freedoms.2
-	title = AGE_their_freedoms.2.t
-	desc = AGE_their_freedoms.2.d
+	id = AGE_baltic_terror.1
+	title = AGE_baltic_terror.1.t
+	desc = AGE_baltic_terror.1.d
     fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE_their_freedoms.2.a	
+		limit = { has_completed_focus = AGE_not_their_land }
+		name = AGE_baltic_terror.1.a
+		add_political_power = -15
+	}
+	option = {
+		limit = { has_completed_focus = AGE_still_their_land }
+		name = AGE_baltic_terror.1.b
+		add_political_power = -15
 	}
 }
 
-#Наши усилия окупились!
+#Произошло нападение прибалтов! #военный завод
 country_event = {
-	id = AGE_their_freedoms.3
-	title = AGE_their_freedoms.3.t
-	desc = AGE_their_freedoms.3.d
+	id = AGE_baltic_terror.2
+	title = AGE_baltic_terror.2.t
+	desc = AGE_baltic_terror.2.d
     fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE_their_freedoms.3.a	
+		limit = { has_completed_focus = AGE_not_their_land }
+		name = AGE_baltic_terror.1.a
+		add_political_power = -15
+	}
+	option = {
+		limit = { has_completed_focus = AGE_still_their_land }
+		name = AGE_baltic_terror.1.b
+		add_political_power = -15
+	}
+}
+
+#Произошло нападение прибалтов! #инфраструктура
+country_event = {
+	id = AGE_baltic_terror.3
+	title = AGE_baltic_terror.3.t
+	desc = AGE_baltic_terror.3.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		limit = { has_completed_focus = AGE_not_their_land }
+		name = AGE_baltic_terror.1.a
+		add_political_power = -15
+	}
+	option = {
+		limit = { has_completed_focus = AGE_still_their_land }
+		name = AGE_baltic_terror.1.b
+		add_political_power = -15
+	}
+}
+
+#Произошло нападение прибалтов! #пункт снабжения
+country_event = {
+	id = AGE_baltic_terror.4
+	title = AGE_baltic_terror.4.t
+	desc = AGE_baltic_terror.4.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		limit = { has_completed_focus = AGE_not_their_land }
+		name = AGE_baltic_terror.1.a
+		add_political_power = -15
+	}
+	option = {
+		limit = { has_completed_focus = AGE_still_their_land }
+		name = AGE_baltic_terror.1.b
+		add_political_power = -15
+	}
+}
+
+#Произошло нападение прибалтов! #авиабаза
+country_event = {
+	id = AGE_baltic_terror.5
+	title = AGE_baltic_terror.5.t
+	desc = AGE_baltic_terror.5.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		limit = { has_completed_focus = AGE_not_their_land }
+		name = AGE_baltic_terror.1.a
+		add_political_power = -15
+	}
+	option = {
+		limit = { has_completed_focus = AGE_still_their_land }
+		name = AGE_baltic_terror.1.b
+		add_political_power = -15
+	}
+}
+
+#Произошло нападение прибалтов! #предотвращено
+country_event = {
+	id = AGE_baltic_terror.6
+	title = AGE_baltic_terror.6.t
+	desc = AGE_baltic_terror.6.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = AGE_baltic_terror.6.a
+		add_political_power = 15
+	}
+}
+
+#Результаты операции по окончательной зачистке
+country_event = {
+	id = AGE_clandestine_cells.1
+	title = AGE_clandestine_cells.1.t
+	desc = AGE_clandestine_cells.1.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = AGE_clandestine_cells.1.a
+		custom_effect_tooltip = AGE_modify_baltic_separatism_ns_intro
+		add_to_variable = { AGE_baltic_separatism_political_power_factor = 0.04 tooltip = political_power_factor_tt }
+		add_to_variable = { AGE_baltic_separatism_monthly_population = 0.05 tooltip = monthly_population_tt }
+		add_to_variable = { AGE_baltic_separatism_conscription_factor = 0.04 tooltip = conscription_factor_tt }
+		add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
+		add_to_variable = { AGE_baltic_separatism_stability_factor = 0.12 tooltip = stability_factor_tt }
+		add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = 0.15 tooltip = industry_free_repair_factor_tt }		
+	}
+}
+
+#Православные беженцы
+country_event = {
+	id = AGE_baltics_are_probing.1
+	title = AGE_baltics_are_probing.1.t
+	desc = AGE_baltics_are_probing.1.d
+    fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = AGE_baltics_are_probing.1.a
+		add_political_power = -200
+		add_manpower = -674
+		add_stability = -0.1
+		808 = { add_manpower = -21463 }
+		809 = { add_manpower = -4788 }
+		12 = { add_manpower = -43479 }
+		13 = { add_manpower = -5344 }
+		911 = { add_manpower = -3918 }
+		hidden_effect = {
+			set_variable = { var_terrorist_attack = 0 }
+			set_variable = { var_preventing_terrorist_attack = 100 }			
+		}
 	}
 }
