@@ -12,8 +12,6 @@ on_actions = {
 				value = 1
 				days = 1850
 			}
-			
-			
 			set_global_flag = { 
 				flag = BMB_not_appears_yet
 				value = 1
@@ -69,14 +67,6 @@ on_actions = {
 			add_to_array = { BMB.elimination_targets = WPK }
 			add_to_array = { BMB.elimination_targets = URC }
 			add_to_array = { BMB.elimination_targets = ZAN }
-		}
-	}
-	on_state_control_changed = {
-		effect = {
-			if = {
-				limit = { original_tag = ODS }
-				add_dynamic_modifier = { ODS_new_land }
-			}
 		}
 	}
 	on_state_control_changed = {

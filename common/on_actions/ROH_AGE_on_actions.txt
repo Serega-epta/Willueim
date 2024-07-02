@@ -1,0 +1,68 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = { 
+				limit = { 
+					188 = {
+						is_owned_by = AGE
+						NOT = { has_dynamic_modifier = { modifier = open_opposition } } 
+					} 
+				}
+				188 = { add_dynamic_modifier = { modifier = open_opposition } }
+			}
+			if = { 
+				limit = { 
+					814 = { 
+						is_owned_by = LPC
+						has_dynamic_modifier = { modifier = open_opposition }
+					} 
+				}
+				814 = { remove_dynamic_modifier = { modifier = open_opposition } }
+			}
+		}
+	}
+	on_annex = {
+		effect = {
+			if = { 
+				limit = { 
+					188 = {
+						is_owned_by = AGE
+						NOT = { has_dynamic_modifier = { modifier = open_opposition } } 
+					} 
+				}
+				188 = { add_dynamic_modifier = { modifier = open_opposition } }
+			}
+			if = { 
+				limit = { 
+					814 = { 
+						is_owned_by = LPC
+						has_dynamic_modifier = { modifier = open_opposition }
+					} 
+				}
+				814 = { remove_dynamic_modifier = { modifier = open_opposition } }
+			}			
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = { 
+				limit = { 
+					188 = {
+						is_owned_by = AGE
+						NOT = { has_dynamic_modifier = { modifier = open_opposition } } 
+					} 
+				}
+				188 = { add_dynamic_modifier = { modifier = open_opposition } }
+			}		
+			if = { 
+				limit = { 
+					814 = { 
+						is_owned_by = LPC
+						has_dynamic_modifier = { modifier = open_opposition }
+					} 
+				}
+				814 = { remove_dynamic_modifier = { modifier = open_opposition } }
+			}
+		}
+	}	
+}
