@@ -36,22 +36,6 @@ country_event = {
                 set_country_flag = karel_crisis_flag
 				set_cosmetic_tag = KRT_crisis
 				add_ideas = KRT_karelian_horde
-				set_politics = {
-    				ruling_party = statesmen
-    				elections_allowed = no
-				}
-				set_popularities = {
-					statesmen = 100
-				}
-				add_country_leader_role = {
-					character = KRT_iskajenni_omut
-    				promote_leader = yes
-    				country_leader = {
-        				ideology = statesmen_subideology
-        				expire = "2040.1.1.1"
-        				traits = {}
-    				}
-				}
 				add_equipment_to_stockpile = {
     				type = infantry_equipment
     				amount = 80000
@@ -107,75 +91,13 @@ country_event = {
                     create_unit = {
                     	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
                     	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Малая орда\" division_template = \"Малая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
+                		count = 12
+					}
 					create_unit = {
                     	division = "name = \"Большая орда\" division_template = \"Большая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
                     	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Большая орда\" division_template = \"Большая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Большая орда\" division_template = \"Большая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Большая орда\" division_template = \"Большая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Большая орда\" division_template = \"Большая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
-					create_unit = {
-                    	division = "name = \"Большая орда\" division_template = \"Большая орда\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = KRT
-                	}
+                		count = 6
+					}
             	}
 			}
 		}
