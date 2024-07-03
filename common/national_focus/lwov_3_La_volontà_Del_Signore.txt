@@ -487,22 +487,11 @@ focus_tree = {
 		prerequisite = { focus = LWV_new_ikonopis }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		add_political_power = 50
-		
-		random_owned_state = {
-			add_extra_state_shared_building_slots = 1
-		}
-		random_owned_state = {
-			add_extra_state_shared_building_slots = 1
-		}
-		random_owned_state = {
-			add_extra_state_shared_building_slots = 1
-		}
-		random_owned_state = {
-			add_extra_state_shared_building_slots = 1
-		}
-		
-		
+			add_political_power = 50
+			every_owned_state = {
+				random_select_amount = 4
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	focus = {
@@ -743,17 +732,10 @@ focus_tree = {
 		prerequisite = { focus = LWV_rasprostraniat_religiu }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
-		random_owned_state = {
-		add_offsite_building = { type = arms_factory level = 1 }
-		}
-		random_owned_state = {
-		add_offsite_building = { type = arms_factory level = 1 }
-		}
-		random_owned_state = {
-		add_offsite_building = { type = arms_factory level = 1 }
-		}
-		
+			add_offsite_building = {
+				type = arms_factory
+				level = 3
+			}
 		}
 	}
 	focus = {
@@ -1509,10 +1491,6 @@ focus_tree = {
 				id = LWV.44
 				days = 1
 			}
-			# load_focus_tree = {
-			# 	tree = vo_ima_boge
-			# 	keep_completed = no
-			# }
 		}
 	}
 }
