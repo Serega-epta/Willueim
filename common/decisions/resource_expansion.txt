@@ -26,8 +26,8 @@ resource_expansion_category = {
             else_if = {
                 limit = {
                     AND = {
-                        num_of_controlled_states > 5
-                        num_of_controlled_states < 10
+                        num_of_controlled_states > 4
+                        num_of_controlled_states < 11
                     }
                 }
                 random_owned_state = {
@@ -39,7 +39,7 @@ resource_expansion_category = {
             }
             else_if = {
                 limit = {
-                    num_of_controlled_states > 11
+                    num_of_controlled_states > 9
                 }
                 random_owned_state = {
                     add_resource = {
@@ -92,8 +92,8 @@ resource_expansion_category = {
             else_if = {
                 limit = {
                     AND = {
-                        num_of_controlled_states > 5
-                        num_of_controlled_states < 10
+                        num_of_controlled_states > 4
+                        num_of_controlled_states < 11
                     }
                 }
                 random_owned_state = {
@@ -117,7 +117,7 @@ resource_expansion_category = {
             }
             else_if = {
                 limit = {
-                    num_of_controlled_states > 11
+                    num_of_controlled_states > 9
                 }
                 random_owned_state = {
                     add_resource = {
