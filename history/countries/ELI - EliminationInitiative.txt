@@ -6,10 +6,51 @@ capital = 219
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-   civilian_clothing = 1
-   tech_support = 1
-   gw_artillery = 1
-   instruments_of_any_era = 1
+	civilian_clothing = 1
+	tech_support = 1
+	gw_artillery = 1
+	basic_air_defense = 1
+	instruments_of_any_era = 1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		pre_war_OPV = 1
+		basic_mass_OPF = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		nsb_pre_war_OPV = 1
+		nsb_basic_mass_OPF = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		bba_pre_war_fighter = 1
+		bba_basic_specialized_fighter = 1
+		bba_basic_specialized_helicopter = 1
+	}
+}
+IF = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		pre_war_fighter = 1
+		basic_specialized_aircraft = 1
+		basic_specialized_fighter = 1
+		basic_specialized_helicopter = 1
+	}
 }
 
 set_research_slots = 2
