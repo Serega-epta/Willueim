@@ -5,23 +5,23 @@ division_template = {
 	division_names_group = SOV_INF_01
 
 	regiments = {
-		rhbzbatalion = { x = 0 y = 0 }
-		rhbzbatalion = { x = 0 y = 1 }
-		rhbzbatalion = { x = 0 y = 2 }
-		rhbzbatalion = { x = 0 y = 3 }
-		rhbzbatalion = { x = 0 y = 4 }
-		rhbzbatalion = { x = 1 y = 0 }
-		rhbzbatalion = { x = 1 y = 1 }
-		rhbzbatalion = { x = 1 y = 2 }
-		rhbzbatalion = { x = 1 y = 3 }
-		stvolland = { x = 1 y = 4 }
+		rcbd_troop = { x = 0 y = 0 }
+		rcbd_troop = { x = 0 y = 1 }
+		rcbd_troop = { x = 0 y = 2 }
+		rcbd_troop = { x = 0 y = 3 }
+		rcbd_troop = { x = 0 y = 4 }
+		rcbd_troop = { x = 1 y = 0 }
+		rcbd_troop = { x = 1 y = 1 }
+		rcbd_troop = { x = 1 y = 2 }
+		rcbd_troop = { x = 1 y = 3 }
+		stvol_art = { x = 1 y = 4 }
 	}
 	
 	support = {
 		field_hospital = { x = 0 y = 0 }
 		rhbz = { x = 0 y = 1 }
 		engineer = { x = 0 y = 2 }
-		art_stvol = { x = 0 y = 3 }
+		stvol_art_sup = { x = 0 y = 3 }
 		drg = { x = 0 y = 4 }
 	}
 }
@@ -48,8 +48,8 @@ division_template = {
 	support = {
 		field_hospital = { x = 0 y = 0 }
 		engineer = { x = 0 y = 1 }
-		art_stvol = { x = 0 y = 2 }
-		pvo_auto = { x = 0 y = 3 }
+		stvol_art_sup = { x = 0 y = 2 }
+		anti_air_art_sup = { x = 0 y = 3 }
 		drg = { x = 0 y = 4 }
 	}
 }
@@ -281,3 +281,4 @@ units = {
         start_equipment_factor = 1
         start_manpower_factor = 1
 	}
+}
