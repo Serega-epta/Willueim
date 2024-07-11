@@ -1,3 +1,11 @@
+#x pos constants for upgrade-buttons
+#there is 5 pos types:
+# left | left_center | center | right_center | right
+@left = 150
+@left_center = 250
+@center = 350
+@right_center = 450
+@right = 550
 guiTypes = {
 	containerWindowType = {
 		name = "government_manager_handler" 
@@ -165,10 +173,12 @@ guiTypes = {
 			}
 			instantTextboxType = {
 				name = "menshikov_system_tree_header"
-				position = { x = 130 y = 20 }
+				position = { 
+					x = 130 
+					y = 20 
+				}
 				font = "hoi_18mbs"
 				format = center
-				borderSize = {x = 0 y = 0}
 				text = "МОДЕЛЬ МЕНШИКОВА :"
 				maxWidth = 550
 				maxHeight = 50
@@ -176,12 +186,28 @@ guiTypes = {
 			}
 			buttonType = { 
 				name = "select_model_button"
-				position = { x = 50 y = 10 }
+				position = { 
+					x = 50 
+					y = 10 
+				}
 				quadTextureSprite = "GFX_main_lobby_button"
 				buttonFont = "hoi_36mbs"
 				text = "ВЫБРАТЬ :"
 				format = center   
 				clicksound = click_close
+			}
+			buttonType = {
+				name = "close_button"
+				position = { 
+					x = -51 
+					y = 18
+				}
+				quadTextureSprite = "GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
 			}
 		}
 		containerWindowType = {
@@ -217,12 +243,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "materials_science_container"
 					position = { 
-						x = 250 
+						x = @left_center
 						y = 50
 					}
 					buttonType = {
 						name = "materials_science_button"
 						quadTextureSprite = "Materialovedenie"
+						pdx_tooltip = "materials_science_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -243,12 +270,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "dense_layout_container"
 					position = { 
-						x = 450 
+						x = @right_center
 						y = 50 
 					}
 					buttonType = { 
 						name = "dense_layout_button"
 						quadTextureSprite = "Plotnaya_komponovka"
+						pdx_tooltip = "dense_layout_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -269,12 +297,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "lower_streams_container"
 					position = { 
-						x = 250 
+						x = @left_center
 						y = 160 
 					}
 					buttonType = { 
 						name = "lower_streams_button"
 						quadTextureSprite = "Niskhodyaschie_potoki"
+						pdx_tooltip = "lower_streams_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -295,12 +324,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "upper_streams_container"
 					position = { 
-						x = 450 
+						x = @right_center
 						y = 160 
 					}
 					buttonType = { 
 						name = "upper_streams_button"
 						quadTextureSprite = "Voskhodyaschie_potoki"
+						pdx_tooltip = "upper_streams_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -321,12 +351,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "our_future_container"
 					position = { 
-						x = 355 
+						x = @center
 						y = 350 
 					}
 					buttonType = { 
 						name = "our_future_button"
 						quadTextureSprite = "Nashe_buduschee"
+						pdx_tooltip = "our_future_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -347,12 +378,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "vocational_technical_schools_container"
 					position = { 
-						x = 250 
+						x = @left_center
 						y = 480 
 					}
 					buttonType = { 
 						name = "vocational_technical_schools_button"
 						quadTextureSprite = "ProfTekhUchilischa"
+						pdx_tooltip = "vocational_technical_schools_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -373,12 +405,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "working_faculties_container"
 					position = {
-						x = 450 
+						x = @right_center
 						y = 480 
 					}
 					buttonType = { 
 						name = "working_faculties_button"
 						quadTextureSprite = "RabFakultety"
+						pdx_tooltip = "working_faculties_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -398,10 +431,14 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "labor_veterans_container"
-					position = { x = 250 y = 620 }
+					position = { 
+						x = @left_center
+						y = 620 
+					}
 					buttonType = { 
 						name = "labor_veterans_button"
 						quadTextureSprite = "Veterany_Truda"
+						pdx_tooltip = "labor_veterans_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -422,12 +459,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "labor_heros_container"
 					position = { 
-						x = 450 
+						x = @right_center
 						y = 620 
 					}
 					buttonType = { 
 						name = "labor_heros_button"
 						quadTextureSprite = "Geroi_Truda"
+						pdx_tooltip = "labor_heros_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -448,12 +486,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "industrial_cooperation_container"
 					position = { 
-						x = 355 
+						x = @center 
 						y = 730 
 					}
 					buttonType = { 
 						name = "industrial_cooperation_button"
 						quadTextureSprite = "Kooperatsia_industrii"
+						pdx_tooltip = "industrial_cooperation_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -474,12 +513,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "constructed_for_life_container"
 					position = { 
-						x = 150 
+						x = @left
 						y = 850 
 					}
 					buttonType = { 
 						name = "constructed_for_life_button"
 						quadTextureSprite = "Razrabotano_dlya_zhizni"
+						pdx_tooltip = "constructed_for_life_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -500,12 +540,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "love_thy_neighbour_container"
 					position = { 
-						x = 355 
+						x = @center 
 						y = 850 
 					}
 					buttonType = { 
 						name = "love_thy_neighbour_button"
 						quadTextureSprite = "Vozlyubi_blizhnego_svoego"
+						pdx_tooltip = "love_thy_neighbour_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -526,12 +567,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "local_wing_container"
 					position = { 
-						x = 555 
+						x = @right
 						y = 850 
 					}
 					buttonType = { 
 						name = "local_wing_button"
 						quadTextureSprite = "Mestnoe_krylo"
+						pdx_tooltip = "local_wing_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -552,12 +594,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "strict_regulations_container"
 					position = { 
-						x = 250 
+						x = @left_center 
 						y = 960 
 					}
 					buttonType = { 
 						name = "strict_regulations_button"
 						quadTextureSprite = "Strogiy_reglament"
+						pdx_tooltip = "strict_regulations_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -578,12 +621,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "flexible_regulations_container"
 					position = { 
-						x = 450 
+						x = @right_center
 						y = 960 
 					}
 					buttonType = { 
 						name = "flexible_regulations_button"
 						quadTextureSprite = "Gibkiy_reglament"
+						pdx_tooltip = "flexible_regulations_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -604,12 +648,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "gardening_partnerships_container"
 					position = { 
-						x = 250 
+						x = @left_center
 						y = 1070 
 					}
 					buttonType = { 
 						name = "gardening_partnerships_button"
 						quadTextureSprite = "Sadovodcheskie_Tovarischestva"
+						pdx_tooltip = "gardening_partnerships_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -630,12 +675,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "rural_units_container"
 					position = { 
-						x = 450 
+						x = @right_center
 						y = 1070 
 					}
 					buttonType = { 
 						name = "rural_units_button"
 						quadTextureSprite = "SelOtryady"
+						pdx_tooltip = "rural_units_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -656,12 +702,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "adversarial_law_container"
 					position = { 
-						x = 250 
+						x = @left_center
 						y = 1180 
 					}
 					buttonType = { 
 						name = "adversarial_law_button"
 						quadTextureSprite = "Sostyazatelnoe_pravo"
+						pdx_tooltip = "adversarial_law_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -682,12 +729,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "fair_competition_codex_container"
 					position = { 
-						x = 450 
+						x = @right_center
 						y = 1180 
 					}
 					buttonType = { 
 						name = "fair_competition_codex_button"
 						quadTextureSprite = "Kodex_chestnoy_konkurentsii"
+						pdx_tooltip = "fair_competition_codex_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -708,12 +756,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "outsourcing_container"
 					position = { 
-						x = 355 
+						x = @center
 						y = 1290 
 					}
 					buttonType = { 
 						name = "outsourcing_button"
 						quadTextureSprite = "Autsorsing"
+						pdx_tooltip = "outsourcing_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -735,12 +784,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "trade_initiative_container"
 					position = { 
-						x = 155 
+						x = @left
 						y = 1400 
 					}
 					buttonType = { 
 						name = "trade_initiative_button"
 						quadTextureSprite = "Torgovaya_initsiativa"
+						pdx_tooltip = "trade_initiative_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -761,12 +811,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "GOST_container"
 					position = { 
-						x = 355 
+						x = @center 
 						y = 1400 
 					}
 					buttonType = { 
 						name = "GOST_button"
 						quadTextureSprite = "GOST"
+						pdx_tooltip = "GOST_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -788,12 +839,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "fullstack_consumtion_container"
 					position = { 
-						x = 555 
+						x = @right
 						y = 1400 
 					}
 					buttonType = { 
 						name = "fullstack_consumtion_button"	
 						quadTextureSprite = "Vsyo_v_oborot"
+						pdx_tooltip = "fullstack_consumtion_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -804,9 +856,10 @@ guiTypes = {
 						}
 						font = "hoi_18mbs"
 						format = center
+						vertical_alignment = center
 						text = "Все в оборот"
 						maxWidth = 94
-						maxHeight = 50
+						maxHeight = 36
 						fixedsize = yes
 						alwaystransparent = yes
 					}			
@@ -814,12 +867,13 @@ guiTypes = {
 				containerWindowType = {
 					name = "humanism_stronghold_container"
 					position = { 
-						x = 355 
+						x = @center
 						y = 1510 
 					}
 					buttonType = { 
 						name = "humanism_stronghold_button"
 						quadTextureSprite = "Oplot_gumanizma"
+						pdx_tooltip = "humanism_stronghold_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
@@ -844,500 +898,853 @@ guiTypes = {
 
 
 
-	
-    containerWindowType = {
-        name = "smoilov_system_tree" 
-        position = { x = -20 y = 405 }	  
-		size = { width = 800 height = 1810 }
-		orientation = center
-		origo = center
-		moveable = no
-		click_to_front = no
-		clipping = yes	
+	containerWindowType = {
+		name = "smoilov_system_outer_handler"
+		position = { 
+			x = 543 
+			y = 0
+		}
+		containerWindowType = {
+			name = "smoilov_system_header"
+			background = {
+				name = "background"	
+				spriteType = "GFX_tiled_window"
+			}
+			size = { 
+				width = 800
+				height = 80
+			}
+			instantTextboxType = {
+				name = "smoilov_system_tree_header"
+				position = { 
+					x = 130 
+					y = 20 
+				}
+				font = "hoi_18mbs"
+				format = center
+				text = "МОДЕЛЬ СМОЙЛОВА :"
+				maxWidth = 550
+				maxHeight = 50
+				fixedsize = yes
+			}
+			buttonType = { 
+				name = "select_model_button"
+				position = { 
+					x = 50 
+					y = 10 
+				}
+				quadTextureSprite = "GFX_main_lobby_button"
+				buttonFont = "hoi_36mbs"
+				text = "ВЫБРАТЬ :"
+				format = center   
+				clicksound = click_close
+			}
+			buttonType = {
+				name = "close_button"
+				position = { 
+					x = -51 
+					y = 18
+				}
+				quadTextureSprite = "GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+			}
+		}
+		containerWindowType = {
+			name = "smoilov_system_inner_handler"
+			position = { 
+				x = 0
+				y = 50
+			}
+			size = { 
+				width = 800
+				height = 955
+			}
+			margin = {
+				top = 15
+				bottom = 15
+			}
+			background = {
+				name = "background"	
+				spriteType = "GFX_tiled_window"
+			}
+			verticalScrollbar = "right_vertical_slider"
+			containerWindowType = {
+				name = "smoilov_system_tree"
+				size = { 
+					width = 800 
+					height = 1810 
+				}
+				#GFX_fonovayaiconkasamoilov
+				#GFX_fonovayaiconkasamoilovdvav
+				containerWindowType = {
+					name = "foundation_of_the_past_container"
+					position = { 
+						x = @center 
+						y = 50 
+					}
+					buttonType = { 
+						name = "foundation_of_the_past_button"
+						quadTextureSprite = "Fundament_proshlogo"
+						pdx_tooltip = "foundation_of_the_past_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "foundation_of_the_past_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Фундамент прошлого"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "behind_the_scenes_container"
+					position = { 
+						x = @left 
+						y = 180 
+					}
+					buttonType = { 
+						name = "behind_the_scenes_button"
+						quadTextureSprite = "Za_semyu_pechatyami"  
+						pdx_tooltip = "behind_the_scenes_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "behind_the_scenes_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "За семью печатями"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}			
+				}
+				containerWindowType = {
+					name = "without_any_hassle_container"
+					position = { 
+						x = @center 
+						y = 180 
+					}
+					buttonType = { 
+						name = "without_any_hassle_button"
+						quadTextureSprite = "Bez_lishnikh_khlopot" 
+						pdx_tooltip = "without_any_hassle_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "without_any_hassle_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Без лишних хлопот"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}		
+				}
+				containerWindowType = {
+					name = "our_home_is_our_fortress_container"
+					position = { 
+						x = @right
+						y = 180 
+					}
+					buttonType = { 
+						name = "our_home_is_our_fortress_button"
+						quadTextureSprite = "Nash_dom_-_nasha_krepost"  
+						pdx_tooltip = "our_home_is_our_fortress_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "our_home_is_our_fortress_text"
+						position = { 
+							x = -5 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Наш дом - наша крепость"
+						maxWidth = 110
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "rural_militia_container"
+					position = { 
+						x = @left_center 
+						y = 330 
+					}
+					buttonType = { 
+						name = "rural_militia_button"
+						quadTextureSprite = "Selskoe_opolchenie"  
+						pdx_tooltip = "rural_militia_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "rural_militia_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Сельское ополчение"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "industrial_militia_container"
+					position = { 
+						x = @right_center 
+						y = 330 
+					}
+					buttonType = { 
+						name = "industrial_militia_button"
+						quadTextureSprite = "Zavodskoe_opolchenie"
+						pdx_tooltip = "industrial_militia_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "industrial_militia_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Заводское ополчение"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "land_river_container"
+					position = { 
+						x = @right_center 
+						y = 480 
+					}
+					buttonType = { 
+						name = "land_river_button"
+						quadTextureSprite = "Rezka_zemli"  
+						pdx_tooltip = "land_river_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "land_river_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Резка земли"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}		
+				}
+				containerWindowType = {
+					name = "scraping_down_the_bottom_container"
+					position = { 
+						x = @left_center 
+						y = 480 
+					}
+					buttonType = { 
+						name = "craping_down_the_bottom_button"
+						quadTextureSprite = "Skrebya_po_susekam" 
+						pdx_tooltip = "craping_down_the_bottom_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "craping_down_the_bottom_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Соскребая по сусекам"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "in_a_blink_container"
+					position = { 
+						x = @center
+						y = 630 
+					}
+					buttonType = { 
+						name = "in_a_blink_button"
+						quadTextureSprite = "V_odin_mig"
+						pdx_tooltip = "in_a_blink_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "in_a_blink_text"
+						position = { 
+							x = 3
+							y = 55
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "В один миг"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "oprichnina_hand_container"
+					position = { 
+						x = @left_center 
+						y = 780 
+					}
+					buttonType = { 
+						name = "oprichnina_hand_button"
+						quadTextureSprite = "Oprichnaya_dlan" 
+						pdx_tooltip = "oprichnina_hand_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "oprichnina_hand_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Опричная длань"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "peripheral_cleansing_container"
+					position = { 
+						x = @right_center 
+						y = 780 
+					}
+					buttonType = { 
+						name = "peripheral_cleansing_button"
+						quadTextureSprite = "Ochischenie_periferii" 
+						pdx_tooltip = "peripheral_cleansing_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "peripheral_cleansing_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Очищение переферии"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "destroy_anomalies_container"
+					position = { 
+						x = @center 
+						y = 930 
+					}
+					buttonType = { 
+						name = "destroy_anomalies_button"
+						quadTextureSprite = "Anomalii_-_k_chyortu" 
+						pdx_tooltip = "destroy_anomalies_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "destroy_anomalies_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Аномалии - к черту!"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "fighting_for_families_container"
+					position = { 
+						x = @left
+						y = 1080 
+					}
+					buttonType = { 
+						name = "fighting_for_families_button"
+						quadTextureSprite = "Bitva_za_semyu"
+						pdx_tooltip = "fighting_for_families_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "fighting_for_families_text"
+						position = { 
+							x = 3 
+							y = 55
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Битва за семью"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}			
+				}
+				containerWindowType = {
+					name = "military_loans_container"
+					position = { 
+						x = @center
+						y = 1080 
+					}
+					buttonType = { 
+						name = "military_loans_button"		
+						quadTextureSprite = "Voennye_zaymy"  
+						pdx_tooltip = "military_loans_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "military_loans_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Военные займы"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}		
+				}
+				containerWindowType = {
+					name = "from_stones_and_sticks_container"
+					position = { 
+						x = @right 
+						y = 1080
+					}
+					buttonType = { 
+						name = "from_stones_and_sticks_button"
+						quadTextureSprite = "Iz_kamney_i_palok"
+						pdx_tooltip = "from_stones_and_sticks_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "from_stones_and_sticks_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Из камней и палок"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "autonomius_bataries_container"
+					position = { 
+						x = @left_center 
+						y = 1230 
+					}
+					buttonType = { 
+						name = "autonomius_bataries_button"
+						quadTextureSprite = "Avtonomnye_batarei"
+						pdx_tooltip = "autonomius_bataries_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "autonomius_bataries_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Автономные батареи"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "controlled_bataries_container"
+					position = { 
+						x = @right_center 
+						y = 1230
+					}
+					buttonType = { 
+						name = "controlled_bataries_button"
+						quadTextureSprite = "Podkontrolnye_batarei"
+						pdx_tooltip = "controlled_bataries_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "controlled_bataries_text"
+						position = { 
+							x = 0
+							y = 55
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Подконтрольные батареи"
+						maxWidth = 100
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "firstborn_of_sparta_container"
+					position = { 
+						x = @center 
+						y = 1380 
+					}
+					buttonType = { 
+						name = "firstborn_of_sparta_button"
+						quadTextureSprite = "Perventsy_Sparty"
+						pdx_tooltip = "firstborn_of_sparta_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "firstborn_of_sparta_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Первенцы Спарты"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}		
+				}
+				containerWindowType = {
+					name = "nerves_to_the_limit_container"
+					position = { 
+						x = @left_center 
+						y = 1530 
+					}
+					buttonType = { 
+						name = "nerves_to_the_limit_button"
+						quadTextureSprite = "Nervy_na_predele"
+						pdx_tooltip = "nerves_to_the_limit_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "nerves_to_the_limit_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Нервы на пределе"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "steel_grip_container"
+					position = { 
+						x = @right_center 
+						y = 1530 
+					}
+					buttonType = { 
+						name = "steel_grip_button"
+						quadTextureSprite = "Stalnaya_khvatka"
+						pdx_tooltip = "steel_grip_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "steel_grip_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Стальная хватка"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "sweat_and_blood_container"
+					position = { 
+						x = @center 
+						y = 1680 
+					}
+					buttonType = { 
+						name = "sweat_and_blood_button"
+						quadTextureSprite = "Potom_i_krovyu"  
+						pdx_tooltip = "sweat_and_blood_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "samoilov21_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Потом и кровью"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "naumov_system_outer_handler"
+		position = { 
+			x = 543 
+			y = 0
+		}
+		containerWindowType = {
+			name = "naumov_system_header"
+			background = {
+				name = "background"	
+				spriteType = "GFX_tiled_window"
+			}
+			size = { 
+				width = 800
+				height = 80
+			}
+			instantTextboxType = {
+				name = "naumov_system_tree_header"
+				position = { 
+					x = 130 
+					y = 20 
+				}
+				font = "hoi_18mbs"
+				format = center
+				text = "МОДЕЛЬ НАУМОВА :"
+				maxWidth = 550
+				maxHeight = 50
+				fixedsize = yes
+			}
+			buttonType = { 
+				name = "select_model_button"
+				position = { 
+					x = 50 
+					y = 10 
+				}
+				quadTextureSprite = "GFX_main_lobby_button"
+				buttonFont = "hoi_36mbs"
+				text = "ВЫБРАТЬ :"
+				format = center   
+				clicksound = click_close
+			}
+			buttonType = {
+				name = "close_button"
+				position = { 
+					x = -51 
+					y = 18
+				}
+				quadTextureSprite = "GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+			}
+		}
+		containerWindowType = {
+			name = "naumov_system_inner_handler"
+			position = { 
+				x = 0
+				y = 50
+			}
+			size = { 
+				width = 800
+				height = 955
+			}
+			margin = {
+				top = 15
+				bottom = 15
+			}
+			background = {
+				name = "background"	
+				spriteType = "GFX_tiled_window"
+			}
+			verticalScrollbar = "right_vertical_slider"
+			containerWindowType = {
+				name = "naumov_system_tree"
+				size = { 
+					width = 800 
+					height = 1810 
+				}
+				#GFX_fonovayaiconkanaumov
+				containerWindowType = {
+					name = "common_duty_common_law_container"
+					position = { 
+						x = @center 
+						y = 50 
+					}
+					buttonType = { 
+						name = "common_duty_common_law_button"
+						quadTextureSprite = "Obschiy_dolg_-_obschee_pravo"
+						pdx_tooltip = "common_duty_common_law_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "common_duty_common_law_text"
+						position = { 
+							x = 0 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Общий долг - общее право"
+						maxWidth = 100
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "existence_essence_container"
+					position = { 
+						x = @left_center 
+						y = 180 
+					}
+					buttonType = { 
+						name = "existence_essence_button"
+						quadTextureSprite = "Sut_bytia"  
+						pdx_tooltip = "existence_essence_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "existence_essence_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						vertical_alignment = center
+						text = "Суть бытия"
+						maxWidth = 94
+						maxHeight = 36
+						fixedsize = yes
+						alwaystransparent = yes
+					}		
+				}
+				containerWindowType = {
+					name = "existence_horror_container"
+					position = { 
+						x = @right_center 
+						y = 180 
+					}
+					buttonType = {
+						name = "existence_horror_button"
+						quadTextureSprite = "Uzhas_bytia"  
+						pdx_tooltip = "existence_horror_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "existence_horror_text"
+						position = { 
+							x = 3 
+							y = 55
+						}
+						font = "hoi_18mbs"
+						format = center
+						vertical_alignment = center
+						text = "Ужас бытия"
+						maxWidth = 94
+						maxHeight = 36
+						fixedsize = yes
+						alwaystransparent = yes
+					}			
+				}
+				containerWindowType = {
+					name = "caring_eye_container"
+					position = { 
+						x = 50 
+						y = 330 
+					}
+					buttonType = { 
+						name = "caring_eye_button"
+						quadTextureSprite = "Zabotlivoe_Oko" 
+						pdx_tooltip = "caring_eye_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "caring_eye_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Заботливое Око"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+			}
+		}
+	}
 
-		iconType = {
-			name = "2li45ddddddd2"
-			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_fonovayaiconkasamoilov"
-		}
-
-		buttonType = { 
-           name = "BUTTON_choise_samoil_model"
-		   position = { x = 50 y = 10 }
-		   quadTextureSprite = "GFX_main_lobby_button"
-		   buttonFont = "hoi_36mbs"
-		   text = "ВЫБРАТЬ :"
-		   format = center   
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoil_system_tree_text"
-			position = { x = 130 y = 20 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "МОДЕЛЬ САМОЙЛОВА :"
-			maxWidth = 550
-			maxHeight = 50
-			fixedsize = yes
-		}
-
-		buttonType = { 
-           name = "BUTTON_samoliv1"
-		   position = { x = 350 y = 50 }
-		   quadTextureSprite = "Fundament_proshlogo"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "1samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov1_text"
-			position = { x = 360 y = 110 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Фундамент прошлого"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv2"
-		   position = { x = 150 y = 180 }
-		   quadTextureSprite = "Za_semyu_pechatyami"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "2samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov2_text"
-			position = { x = 160 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "За семью печатями"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}			
-		buttonType = { 
-           name = "BUTTON_samoliv3"
-		   position = { x = 350 y = 180 }
-		   quadTextureSprite = "Bez_lishnikh_khlopot"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "3samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov3_text"
-			position = { x = 360 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Без лишних хлопот"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}		
-		buttonType = { 
-           name = "BUTTON_samoliv4"
-		   position = { x = 550 y = 180 }
-		   quadTextureSprite = "Nash_dom_-_nasha_krepost"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "4samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov4_text"
-			position = { x = 550 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Наш дом - наша крепость"
-			maxWidth = 110
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv5"
-		   position = { x = 250 y = 330 }
-		   quadTextureSprite = "Selskoe_opolchenie"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "5samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov5_text"
-			position = { x = 255 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Сельское ополчение"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv6"
-		   position = { x = 450 y = 330 }
-		   quadTextureSprite = "Zavodskoe_opolchenie"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "6samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov6_text"
-			position = { x = 455 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Заводское ополчение"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_samoliv7"
-		   position = { x = 450 y = 480 }
-		   quadTextureSprite = "Rezka_zemli"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "7samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov7_text"
-			position = { x = 455 y = 540 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Резка земли"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}		
-		buttonType = { 
-           name = "BUTTON_samoliv8"
-		   position = { x = 250 y = 480 }
-		   quadTextureSprite = "Skrebya_po_susekam"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "8samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov8_text"
-			position = { x = 255 y = 540 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Соскребая по сусекам"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv9"
-		   position = { x = 350 y = 630 }
-		   quadTextureSprite = "V_odin_mig"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "9samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov9_text"
-			position = { x = 360 y = 690 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "В один миг"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv10"
-		   position = { x = 250 y = 780 }
-		   quadTextureSprite = "Oprichnaya_dlan"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "10samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov10_text"
-			position = { x = 255 y = 840 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Опричная длань"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv11"
-		   position = { x = 450 y = 780 }
-		   quadTextureSprite = "Ochischenie_periferii"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "11samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov11_text"
-			position = { x = 455 y = 840 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Очищение переферии"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-			name = "BUTTON_choise_mensh_model"
-			position = { x = 50 y = 10 }
-			quadTextureSprite = "GFX_main_lobby_button"
-			buttonFont = "hoi_36mbs"
-			text = "ВЫБРАТЬ :"
-			format = center   
-			clicksound = click_close
-		}  
-    }	
-	
-	
-########################################################################################################################################## SAMOILOV MODEL	2222222
-    containerWindowType = {
-        name = "smoilov_system_tree2222" 
-        position = { x = -20 y = 405 }	  
-		size = { width = 800 height = 1810 }
-		orientation = center
-		origo = center
-		moveable = no
-		click_to_front = no
-		clipping = yes	
-
-		iconType = {
-			name = "2li45dddddwwwdddd2"
-			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_fonovayaiconkasamoilovdvav"
-		}
-
-		buttonType = { 
-           name = "BUTTON_samoliv12"
-		   position = { x = 350 y = 50 }
-		   quadTextureSprite = "Anomalii_-_k_chyortu"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "12samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov12_text"
-			position = { x = 355 y = 110 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Аномалии - к черту!"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv13"
-		   position = { x = 150 y = 180 }
-		   quadTextureSprite = "Bitva_za_semyu"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "13samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov13_text"
-			position = { x = 155 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Битва за семью"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}			
-		buttonType = { 
-           name = "BUTTON_samoliv14"
-		   position = { x = 350 y = 180 }
-		   quadTextureSprite = "Voennye_zaymy"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "14samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov14_text"
-			position = { x = 355 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Военные займы"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}		
-		buttonType = { 
-           name = "BUTTON_samoliv15"
-		   position = { x = 550 y = 180 }
-		   quadTextureSprite = "Iz_kamney_i_palok"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "15samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov15_text"
-			position = { x = 555 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Из камней и палок"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv16"
-		   position = { x = 250 y = 330 }
-		   quadTextureSprite = "Avtonomnye_batarei"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "16samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov16_text"
-			position = { x = 255 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Автономные батареи"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv17"
-		   position = { x = 450 y = 330 }
-		   quadTextureSprite = "Podkontrolnye_batarei"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "17samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov17_text"
-			position = { x = 455 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Подконтрольные батареи"
-			maxWidth = 100
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_samoliv18"
-		   position = { x = 350 y = 480 }
-		   quadTextureSprite = "Perventsy_Sparty"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "18samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov18_text"
-			position = { x = 355 y = 540 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Первенцы Спарты"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}		
-		buttonType = { 
-           name = "BUTTON_samoliv19"
-		   position = { x = 250 y = 630 }
-		   quadTextureSprite = "Nervy_na_predele"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "19samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov19_text"
-			position = { x = 255 y = 690 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Нервы на пределе"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv20"
-		   position = { x = 450 y = 630 }
-		   quadTextureSprite = "Stalnaya_khvatka"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "20samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov20_text"
-			position = { x = 455 y = 690 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Стальная хватка"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_samoliv21"
-		   position = { x = 350 y = 780 }
-		   quadTextureSprite = "Potom_i_krovyu"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "21samoilvv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "samoilov21_text"
-			position = { x = 355 y = 840 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Потом и кровью"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-	    background = {
-			name = "Background4"	
-			spriteType = "GFX_tiled_window"
-		}	  
-    }	
-	
-	
 ########################################################################################################################################## NAUMOV MODEL	1111
     containerWindowType = {
         name = "naumov_system_tree" 
@@ -1349,114 +1756,15 @@ guiTypes = {
 		click_to_front = no
 		clipping = yes	
 
-		iconType = {
-			name = "2li45dddddrrrsddd2"
-			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_fonovayaiconkanaumov"
-		}
 
 
-		buttonType = { 
-           name = "BUTTON_choise_naumov_model"
-		   position = { x = 50 y = 10 }
-		   quadTextureSprite = "GFX_main_lobby_button"
-		   buttonFont = "hoi_36mbs"
-		   text = "ВЫБРАТЬ :"
-		   format = center   
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov_system_tree_text"
-			position = { x = 130 y = 20 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "МОДЕЛЬ НАУМОВА :"
-			maxWidth = 550
-			maxHeight = 50
-			fixedsize = yes
-		}
 
-		buttonType = { 
-           name = "BUTTON_naumov1"
-		   position = { x = 350 y = 50 }
-		   quadTextureSprite = "Obschiy_dolg_-_obschee_pravo"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "1naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov1_text"
-			position = { x = 350 y = 110 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Общий долг - общее право"
-			maxWidth = 100
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_naumov2"
-		   position = { x = 250 y = 180 }
-		   quadTextureSprite = "Sut_bytia"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "2naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov2_text"
-			position = { x = 260 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Суть бытия"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}		
-		buttonType = { 
-           name = "BUTTON_naumov3"
-		   position = { x = 450 y = 180 }
-		   quadTextureSprite = "Uzhas_bytia"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "3naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov3_text"
-			position = { x = 460 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Ужас бытия"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}			
-		buttonType = { 
-           name = "BUTTON_naumov4"
-		   position = { x = 50 y = 330 }
-		   quadTextureSprite = "Zabotlivoe_Oko"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "4naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov4_text"
-			position = { x = 55 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			borderSize = {x = 0 y = 0}
-			text = "Заботливое Око"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
+		
+
+		
+		
+		
+		
 		buttonType = { 
            name = "BUTTON_naumov5"
 		   position = { x = 250 y = 330 }
@@ -1471,7 +1779,6 @@ guiTypes = {
 			position = { x = 245 y = 390 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Занимательное наблюдение"
 			maxWidth = 120
 			maxHeight = 50
@@ -1491,7 +1798,6 @@ guiTypes = {
 			position = { x = 460 y = 390 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Техническая революция"
 			maxWidth = 90
 			maxHeight = 50
@@ -1511,7 +1817,6 @@ guiTypes = {
 			position = { x = 660 y = 390 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Культурная революция"
 			maxWidth = 90
 			maxHeight = 50
@@ -1531,7 +1836,6 @@ guiTypes = {
 			position = { x = 155 y = 540 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Выживание обеспечено"
 			maxWidth = 90
 			maxHeight = 50
@@ -1551,7 +1855,6 @@ guiTypes = {
 			position = { x = 555 y = 540 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Соразмерная плата"
 			maxWidth = 95
 			maxHeight = 50
@@ -1571,7 +1874,6 @@ guiTypes = {
 			position = { x = 355 y = 690 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Солдат без упрека"
 			maxWidth = 90
 			maxHeight = 50
@@ -1591,7 +1893,6 @@ guiTypes = {
 			position = { x = 255 y = 840 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Формулы для всего"
 			maxWidth = 90
 			maxHeight = 50
@@ -1611,16 +1912,12 @@ guiTypes = {
 			position = { x = 455 y = 840 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Первичный бульон"
 			maxWidth = 90
 			maxHeight = 50
 			fixedsize = yes
 		}	
-	    background = {
-			name = "Backgroeeewund4"	
-			spriteType = "GFX_tiled_window"
-		}	  
+	  
     }	
 	
 	
@@ -1657,7 +1954,6 @@ guiTypes = {
 			position = { x = 350 y = 110 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Цветы жизни"
 			maxWidth = 100
 			maxHeight = 50
@@ -1677,7 +1973,6 @@ guiTypes = {
 			position = { x = 355 y = 240 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Планы их жизни"
 			maxWidth = 90
 			maxHeight = 50
@@ -1697,7 +1992,6 @@ guiTypes = {
 			position = { x = 460 y = 390 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Отриньте сомнения"
 			maxWidth = 90
 			maxHeight = 50
@@ -1717,7 +2011,6 @@ guiTypes = {
 			position = { x = 260 y = 390 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Реализаця потенциала"
 			maxWidth = 90
 			maxHeight = 50
@@ -1737,7 +2030,6 @@ guiTypes = {
 			position = { x = 660 y = 540 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Порядок в мыслях"
 			maxWidth = 90
 			maxHeight = 50
@@ -1757,7 +2049,6 @@ guiTypes = {
 			position = { x = 60 y = 540 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Единство кровью"
 			maxWidth = 90
 			maxHeight = 50
@@ -1777,7 +2068,6 @@ guiTypes = {
 			position = { x = 255 y = 690 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Человек - сознание"
 			maxWidth = 90
 			maxHeight = 50
@@ -1797,7 +2087,6 @@ guiTypes = {
 			position = { x = 455 y = 690 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Когнитивная война"
 			maxWidth = 90
 			maxHeight = 50
@@ -1818,7 +2107,6 @@ guiTypes = {
 			position = { x = 355 y = 840 }
 			font = "hoi_18mbs"
 			format = center
-			borderSize = {x = 0 y = 0}
 			text = "Границы тела"
 			maxWidth = 90
 			maxHeight = 50
