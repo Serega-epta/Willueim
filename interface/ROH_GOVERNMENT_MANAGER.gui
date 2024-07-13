@@ -894,10 +894,6 @@ guiTypes = {
 			}
 		}
 	}
-	
-
-
-
 	containerWindowType = {
 		name = "smoilov_system_outer_handler"
 		position = { 
@@ -1631,6 +1627,7 @@ guiTypes = {
 					height = 1810 
 				}
 				#GFX_fonovayaiconkanaumov
+				#GFX_fonovayaiconkanaumovdva
 				containerWindowType = {
 					name = "common_duty_common_law_container"
 					position = { 
@@ -1741,380 +1738,466 @@ guiTypes = {
 						alwaystransparent = yes
 					}
 				}
+				containerWindowType = {
+					name = "interesting_observation_container"
+					position = { 
+						x = @left_center 
+						y = 330 
+					}
+					buttonType = { 
+						name = "interesting_observation_button"
+						quadTextureSprite = "Zanimatelnoe_nablyudeni"
+						pdx_tooltip = "interesting_observation_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "interesting_observation_text"
+						position = { 
+							x = -10 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Занимательное наблюдение"
+						maxWidth = 120
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "technological_revolution_container"
+					position = { 
+						x = @right_center 
+						y = 330 
+					}
+					buttonType = { 
+						name = "technological_revolution_button"
+						quadTextureSprite = "Tekhnicheskaya_revolyutsia"
+						pdx_tooltip = "technological_revolution_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "technological_revolution_text"
+						position = { 
+							x = 3 
+							y = 55
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Техническая революция"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "cultural_revolution_container"
+					position = { 
+						x = 650 
+						y = 330 
+					}
+					buttonType = { 
+						name = "cultural_revolution_button"
+						quadTextureSprite = "Kulturnaya_revolyutsia"  
+						pdx_tooltip = "cultural_revolution_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "cultural_revolution_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Культурная революция"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "assured_survival_container"
+					position = { 
+						x = @left 
+						y = 480 
+					}
+					buttonType = { 
+						name = "assured_survival_button"
+						quadTextureSprite = "Vyzhivanie_obespecheno"
+						pdx_tooltip = "assured_survival_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "assured_survival_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Выживание обеспечено"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}		
+				}
+				containerWindowType = {
+					name = "proportionate_fee_container"
+					position = { 
+						x = @right 
+						y = 480 
+					}
+					buttonType = { 
+						name = "proportionate_fee_button"
+						quadTextureSprite = "Sorazmernaya_plata"
+						pdx_tooltip = "proportionate_fee_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "proportionate_fee_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Соразмерная плата"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "flawless_soldier_container"
+					position = { 
+						x = @center 
+						y = 630 
+					}
+					buttonType = { 
+						name = "flawless_soldier_button"
+						quadTextureSprite = "Soldat_bez_upreka" 
+						pdx_tooltip = "flawless_soldier_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "flawless_soldier_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Солдат без упрека"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "all_describing_formula_container"
+					position = { 
+						x = @left_center 
+						y = 780 
+					}
+					buttonType = { 
+						name = "all_describing_formula_button"
+						quadTextureSprite = "Formuly_dlya_vsego"
+						pdx_tooltip = "all_describing_formula_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "all_describing_formula_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Формулы для всего"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "primary_broth_container"
+					position = { 
+						x = @right_center 
+						y = 780 
+					}
+					buttonType = { 
+						name = "primary_broth_button"
+						quadTextureSprite = "Pervichny_bulion"
+						pdx_tooltip = "primary_broth_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "primary_broth_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Первичный бульон"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "flowers_of_life_container"
+					position = { 
+						x = @center 
+						y = 930 
+					}
+					buttonType = { 
+						name = "flowers_of_life_button"
+						quadTextureSprite = "Tsvety_zhizni" 
+						pdx_tooltip = "flowers_of_life_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "flowers_of_life_text"
+						position = { 
+							x = 0 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Цветы жизни"
+						maxWidth = 100
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "their_life_plans_container"
+					position = { 
+						x = @center
+						y = 1080 
+					}
+					buttonType = { 
+						name = "their_life_plans_button"
+						quadTextureSprite = "Plany_Ikh_Zhizni" 
+						pdx_tooltip = "their_life_plans_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "their_life_plans_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Планы их жизни"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}		
+				}
+				containerWindowType = {
+					name = "cast_aside_doubts_container"
+					position = { 
+						x = @right_center 
+						y = 1230 
+					}
+					buttonType = { 
+						name = "cast_aside_doubts_button"
+						quadTextureSprite = "Otrinte_somnenia" 
+						pdx_tooltip = "cast_aside_doubts_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "cast_aside_doubts_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Отриньте сомнения"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "potential_realization_container"
+					position = { 
+						x = @left_center 
+						y = 1230 
+					}
+					buttonType = { 
+						name = "potential_realization_button"
+						quadTextureSprite = "Realizatsia_potentsiala" 
+						pdx_tooltip = "potential_realization_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "potential_realization_text"
+						position = { 
+							x = 3
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Реализаця потенциала"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "order_in_mind_container"
+					position = { 
+						x = @right_center 
+						y = 1380 
+					}
+					buttonType = { 
+						name = "order_in_mind_button"
+						quadTextureSprite = "Poryadok_v_myslyakh" 
+						pdx_tooltip = "order_in_mind_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "order_in_mind_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Порядок в мыслях"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "unity_by_blood_container"
+					position = { 
+						x = @left_center
+						y = 1380 
+					}
+					buttonType = { 
+						name = "unity_by_blood_button"
+						quadTextureSprite = "Edinstvo_krovyu" 
+						pdx_tooltip = "unity_by_blood_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "unity_by_blood_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Единство кровью"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "man_and_consciousness_container"
+					position = { 
+						x = @left_center 
+						y = 1530 
+					}
+					buttonType = { 
+						name = "man_and_consciousness_button"
+						quadTextureSprite = "Chelovek-Soznanie" 
+						pdx_tooltip = "man_and_consciousness_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "man_and_consciousness_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Человек - сознание"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
+				containerWindowType = {
+					name = "cognitive_warfare_container"
+					position = { 
+						x = @right_center 
+						y = 1530 
+					}
+					buttonType = { 
+						name = "cognitive_warfare_button"
+						quadTextureSprite = "Kognitivnaya_voyna" 
+						pdx_tooltip = "cognitive_warfare_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "cognitive_warfare_text"
+						position = { 
+							x = 3 
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Когнитивная война"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}		
+				}
+				containerWindowType = {
+					name = "body_limits_container"
+					position = { 
+						x = @center 
+						y = 1680 
+					}
+					buttonType = { 
+						name = "body_limits_button"
+						quadTextureSprite = "Granitsy_tela" 
+						pdx_tooltip = "body_limits_tt"
+						clicksound = click_close
+					}
+					instantTextboxType = {
+						name = "body_limits_text"
+						position = { 
+							x = 3
+							y = 55 
+						}
+						font = "hoi_18mbs"
+						format = center
+						text = "Границы тела"
+						maxWidth = 94
+						maxHeight = 50
+						fixedsize = yes
+						alwaystransparent = yes
+					}	
+				}
 			}
 		}
 	}
-
-########################################################################################################################################## NAUMOV MODEL	1111
-    containerWindowType = {
-        name = "naumov_system_tree" 
-        position = { x = -20 y = 405 }	  
-		size = { width = 800 height = 1810 }
-		orientation = center
-		origo = center
-		moveable = no
-		click_to_front = no
-		clipping = yes	
-
-
-
-
-		
-
-		
-		
-		
-		
-		buttonType = { 
-           name = "BUTTON_naumov5"
-		   position = { x = 250 y = 330 }
-		   quadTextureSprite = "Zanimatelnoe_nablyudeni"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "5naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov5_text"
-			position = { x = 245 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Занимательное наблюдение"
-			maxWidth = 120
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov6"
-		   position = { x = 450 y = 330 }
-		   quadTextureSprite = "Tekhnicheskaya_revolyutsia"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "6naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov6_text"
-			position = { x = 460 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Техническая революция"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov7"
-		   position = { x = 650 y = 330 }
-		   quadTextureSprite = "Kulturnaya_revolyutsia"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "7naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov7_text"
-			position = { x = 660 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Культурная революция"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov8"
-		   position = { x = 150 y = 480 }
-		   quadTextureSprite = "Vyzhivanie_obespecheno"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "8naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov8_text"
-			position = { x = 155 y = 540 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Выживание обеспечено"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}		
-		buttonType = { 
-           name = "BUTTON_naumov9"
-		   position = { x = 550 y = 480 }
-		   quadTextureSprite = "Sorazmernaya_plata"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "9naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov9_text"
-			position = { x = 555 y = 540 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Соразмерная плата"
-			maxWidth = 95
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov10"
-		   position = { x = 350 y = 630 }
-		   quadTextureSprite = "Soldat_bez_upreka"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "10naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov10_text"
-			position = { x = 355 y = 690 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Солдат без упрека"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov11"
-		   position = { x = 250 y = 780 }
-		   quadTextureSprite = "Formuly_dlya_vsego"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "11naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov11_text"
-			position = { x = 255 y = 840 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Формулы для всего"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov12"
-		   position = { x = 450 y = 780 }
-		   quadTextureSprite = "Pervichny_bulion"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "12naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov12_text"
-			position = { x = 455 y = 840 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Первичный бульон"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-	  
-    }	
-	
-	
-########################################################################################################################################## NAUMOV MODEL	2222222
-    containerWindowType = {
-        name = "naumov_system_tree222ss2" 
-        position = { x = -20 y = 405 }	  
-		size = { width = 800 height = 1810 }
-		orientation = center
-		origo = center
-		moveable = no
-		click_to_front = no
-		clipping = yes	
-		
-		iconType = {
-			name = "2lezxcq22dddddrrrsddd2"
-			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_fonovayaiconkanaumovdva"
-		}
-
-
-		
-		buttonType = { 
-           name = "BUTTON_naumov13"
-		   position = { x = 350 y = 50 }
-		   quadTextureSprite = "Tsvety_zhizni"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "13naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov13_text"
-			position = { x = 350 y = 110 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Цветы жизни"
-			maxWidth = 100
-			maxHeight = 50
-			fixedsize = yes
-		}
-		buttonType = { 
-           name = "BUTTON_naumov14"
-		   position = { x = 350 y = 180 }
-		   quadTextureSprite = "Plany_Ikh_Zhizni"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "14naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov14_text"
-			position = { x = 355 y = 240 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Планы их жизни"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}		
-		buttonType = { 
-           name = "BUTTON_naumov15"
-		   position = { x = 450 y = 330 }
-		   quadTextureSprite = "Otrinte_somnenia"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "15naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov15_text"
-			position = { x = 460 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Отриньте сомнения"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov16"
-		   position = { x = 250 y = 330 }
-		   quadTextureSprite = "Realizatsia_potentsiala"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "16naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov16_text"
-			position = { x = 260 y = 390 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Реализаця потенциала"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov17"
-		   position = { x = 650 y = 480 }
-		   quadTextureSprite = "Poryadok_v_myslyakh"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "17naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov17_text"
-			position = { x = 660 y = 540 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Порядок в мыслях"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov18"
-		   position = { x = 50 y = 480 }
-		   quadTextureSprite = "Edinstvo_krovyu"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "18naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov18_text"
-			position = { x = 60 y = 540 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Единство кровью"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov19"
-		   position = { x = 250 y = 630 }
-		   quadTextureSprite = "Chelovek-Soznanie"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "19naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov19_text"
-			position = { x = 255 y = 690 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Человек - сознание"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-		buttonType = { 
-           name = "BUTTON_naumov20"
-		   position = { x = 450 y = 630 }
-		   quadTextureSprite = "Kognitivnaya_voyna"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "20naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov20_text"
-			position = { x = 455 y = 690 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Когнитивная война"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}		
-		
-		buttonType = { 
-           name = "BUTTON_naumov21"
-		   position = { x = 350 y = 780 }
-		   quadTextureSprite = "Granitsy_tela"
-		   buttonFont = "hoi_18mbs"
-		   format = center   
-		   pdx_tooltip = "21naumovv_tt"
-		   clicksound = click_close
-        }
-		instantTextboxType = {
-			name = "naumov21_text"
-			position = { x = 355 y = 840 }
-			font = "hoi_18mbs"
-			format = center
-			text = "Границы тела"
-			maxWidth = 90
-			maxHeight = 50
-			fixedsize = yes
-		}	
-	    background = {
-			name = "Backgrou78724nd4"	
-			spriteType = "GFX_tiled_window"
-		}	  
-    }
 }
