@@ -100,6 +100,7 @@ scripted_gui = {
 			}				
 		}
 	}
+	#vars: ochki_gos_progressa
 	menshikov_system_tree = {
 		context_type = player_context
 		parent_window_token = politics_tab
@@ -109,188 +110,349 @@ scripted_gui = {
 				gos_usroistvo = 1 
 			}
 		}		
-		#vars: ochki_gos_progressa
 		triggers = {
 			select_model_button_visible = {
-				OR = {
-					check_variable = {
-						selected_government_system = 0	#if not selected
-					}
-					#can be changed (to do)
-				}
 				NOT = {
 					check_variable = {
-						selected_government_system = 1	#if already selected
+						selected_government_system = 1
 					}
 				}
 			}
 			materials_science_button_click_enabled = {
-				OR = {
-					has_idea = materials_science_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = materials_science_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			dense_layout_button_click_enabled = {
-				OR = {
-					has_idea = dense_layout_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = dense_layout_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			lower_streams_button_click_enabled = {
-				OR = {
-					has_idea = lower_streams_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = lower_streams_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			upper_streams_button_click_enabled = {
-				OR = {
-					has_idea = upper_streams_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = upper_streams_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			our_future_button_click_enabled = {
-				OR = {
-					has_idea = our_future_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = our_future_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			vocational_technical_schools_button_click_enabled = {
-				OR = {
-					has_idea = vocational_technical_schools_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = vocational_technical_schools_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			working_faculties_button_click_enabled = {
-				OR = {
-					has_idea = working_faculties_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = working_faculties_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			labor_veterans_button_click_enabled = {
-				OR = {
-					has_idea = labor_veterans_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = labor_veterans_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			labor_heros_button_click_enabled = {
-				OR = {
-					has_idea = labor_heros_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = labor_heros_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			industrial_cooperation_button_click_enabled = {
-				OR = {
-					has_idea = industrial_cooperation_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = industrial_cooperation_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			constructed_for_life_button_click_enabled = {
-				OR = {
-					has_idea = constructed_for_life_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = constructed_for_life_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			love_thy_neighbour_button_click_enabled = {
-				OR = {
-					has_idea = love_thy_neighbour_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = love_thy_neighbour_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			local_wing_button_click_enabled = {
-				OR = {
-					has_idea = local_wing_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = local_wing_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			strict_regulations_button_click_enabled = {
-				OR = {
-					has_idea = strict_regulations_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = strict_regulations_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			flexible_regulations_button_click_enabled = {
-				OR = {
-					has_idea = flexible_regulations_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = flexible_regulations_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			gardening_partnerships_button_click_enabled = {
-				OR = {
-					has_idea = gardening_partnerships_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = gardening_partnerships_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			rural_units_button_click_enabled = {
-				OR = {
-					has_idea = rural_units_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = rural_units_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			adversarial_law_button_click_enabled = {
-				OR = {
-					has_idea = adversarial_law_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = adversarial_law_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			fair_competition_codex_button_click_enabled = {
-				OR = {
-					has_idea = fair_competition_codex_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = fair_competition_codex_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			outsourcing_button_click_enabled = {
-				OR = {
-					has_idea = outsourcing_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = outsourcing_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			trade_initiative_button_click_enabled = {
-				OR = {
-					has_idea = trade_initiative_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = trade_initiative_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			GOST_button_click_enabled = {
-				OR = {
-					has_idea = GOST_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = GOST_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			fullstack_consumtion_button_click_enabled = {
-				OR = {
-					has_idea = fullstack_consumtion_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = fullstack_consumtion_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 			humanism_stronghold_button_click_enabled = {
-				OR = {
-					has_idea = humanism_stronghold_idea
+				if = {
+					limit = {
+						NOT = {
+							has_idea = humanism_stronghold_idea
+						}
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					goverment_system_can_be_upgraded = yes
+					#to do dependencies for upgrade
 				}
-				#to do dependencies for upgrade
 			}
 		}
 		effects = {		
@@ -312,8 +474,10 @@ scripted_gui = {
 					limit = {
 						OR = {
 							has_idea = materials_science_idea
-							check_variable = {
-								selected_government_system = 0
+							NOT = {
+								check_variable = {
+									selected_government_system = 1
+								}
 							}
 						}
 					}
@@ -324,7 +488,7 @@ scripted_gui = {
 						add_ideas = materials_science_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = materials_science_tt
+					custom_effect_tooltip = materials_science_available_tt
 				}
 			}
 			dense_layout_button_click = {
@@ -332,19 +496,22 @@ scripted_gui = {
 					limit = {
 						OR = {
 							has_idea = dense_layout_idea
-							check_variable = {
-								selected_government_system = 0
+							NOT = {
+								check_variable = {
+									selected_government_system = 1
+								}
 							}
 						}
 					}
 					custom_effect_tooltip = dense_layout_used_tt
+					add_political_power = 1
 				}
 				else = {
 					hidden_effect = {
 						add_ideas = dense_layout_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = dense_layout_tt
+					custom_effect_tooltip = dense_layout_available_tt
 				}
 			}
 			lower_streams_button_click = {
@@ -364,7 +531,7 @@ scripted_gui = {
 						add_ideas = lower_streams_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = lower_streams_tt
+					custom_effect_tooltip = lower_streams_available_tt
 				}
 			}
 			upper_streams_button_click = {
@@ -384,7 +551,7 @@ scripted_gui = {
 						add_ideas = upper_streams_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = upper_streams_tt
+					custom_effect_tooltip = upper_streams_available_tt
 				}
 			}
 			our_future_button_click = {
@@ -404,7 +571,7 @@ scripted_gui = {
 						add_ideas = our_future_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = our_future_tt
+					custom_effect_tooltip = our_future_available_tt
 				}
 			}
 			vocational_technical_schools_button_click = {
@@ -424,7 +591,7 @@ scripted_gui = {
 						add_ideas = vocational_technical_schools_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = vocational_technical_schools_tt
+					custom_effect_tooltip = vocational_technical_schools_available_tt
 				}
 			}
 			working_faculties_button_click = {
@@ -444,7 +611,7 @@ scripted_gui = {
 						add_ideas = working_faculties_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = working_faculties_tt
+					custom_effect_tooltip = working_faculties_available_tt
 				}
 			}
 			labor_veterans_button_click = {
@@ -464,7 +631,7 @@ scripted_gui = {
 						add_ideas = labor_veterans_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = labor_veterans_tt
+					custom_effect_tooltip = labor_veterans_available_tt
 				}
 			}
 			labor_heros_button_click = {
@@ -484,7 +651,7 @@ scripted_gui = {
 						add_ideas = labor_heros_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = labor_heros_tt
+					custom_effect_tooltip = labor_heros_available_tt
 				}
 			}
 			industrial_cooperation_button_click = {
@@ -504,7 +671,7 @@ scripted_gui = {
 						add_ideas = industrial_cooperation_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = industrial_cooperation_tt
+					custom_effect_tooltip = industrial_cooperation_available_tt
 				}
 			}
 			constructed_for_life_button_click = {
@@ -524,7 +691,7 @@ scripted_gui = {
 						add_ideas = constructed_for_life_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = constructed_for_life_tt
+					custom_effect_tooltip = constructed_for_life_available_tt
 				}
 			}
 			love_thy_neighbour_button_click = {
@@ -544,7 +711,7 @@ scripted_gui = {
 						add_ideas = love_thy_neighbour_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = love_thy_neighbour_tt
+					custom_effect_tooltip = love_thy_neighbour_available_tt
 				}
 			}
 			local_wing_button_click = {
@@ -564,7 +731,7 @@ scripted_gui = {
 						add_ideas = local_wing_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = local_wing_tt
+					custom_effect_tooltip = local_wing_available_tt
 				}
 			}
 			strict_regulations_button_click = {
@@ -584,7 +751,7 @@ scripted_gui = {
 						add_ideas = strict_regulations_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = strict_regulations_tt
+					custom_effect_tooltip = strict_regulations_available_tt
 				}
 			}
 			flexible_regulations_button_click = {
@@ -604,7 +771,7 @@ scripted_gui = {
 						add_ideas = flexible_regulations_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = flexible_regulations_tt
+					custom_effect_tooltip = flexible_regulations_available_tt
 				}
 			}
 			gardening_partnerships_button_click = {
@@ -624,7 +791,7 @@ scripted_gui = {
 						add_ideas = gardening_partnerships_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = gardening_partnerships_tt
+					custom_effect_tooltip = gardening_partnerships_available_tt
 				}
 			}
 			rural_units_button_click = {
@@ -644,7 +811,7 @@ scripted_gui = {
 						add_ideas = rural_units_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = rural_units_tt
+					custom_effect_tooltip = rural_units_available_tt
 				}
 			}
 			adversarial_law_button_click = {
@@ -664,7 +831,7 @@ scripted_gui = {
 						add_ideas = adversarial_law_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = adversarial_law_tt
+					custom_effect_tooltip = adversarial_law_available_tt
 				}
 			}
 			fair_competition_codex_button_click = {
@@ -684,7 +851,7 @@ scripted_gui = {
 						add_ideas = fair_competition_codex_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = fair_competition_codex_tt
+					custom_effect_tooltip = fair_competition_codex_available_tt
 				}
 			}
 			outsourcing_button_click = {
@@ -704,7 +871,7 @@ scripted_gui = {
 						add_ideas = outsourcing_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = outsourcing_tt
+					custom_effect_tooltip = outsourcing_available_tt
 				}
 			}
 			trade_initiative_button_click = {
@@ -724,7 +891,7 @@ scripted_gui = {
 						add_ideas = trade_initiative_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = trade_initiative_tt
+					custom_effect_tooltip = trade_initiative_available_tt
 				}
 			}
 			GOST_button_click = {
@@ -744,7 +911,7 @@ scripted_gui = {
 						add_ideas = GOST_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = GOST_tt
+					custom_effect_tooltip = GOST_available_tt
 				}
 			}
 			fullstack_consumtion_button_click = {
@@ -764,7 +931,7 @@ scripted_gui = {
 						add_ideas = fullstack_consumtion_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = fullstack_consumtion_tt
+					custom_effect_tooltip = fullstack_consumtion_available_tt
 				}
 			}
 			humanism_stronghold_button_click = {
@@ -784,7 +951,7 @@ scripted_gui = {
 						add_ideas = humanism_stronghold_idea
 					}
 					use_goverment_upgrade = yes
-					custom_effect_tooltip = humanism_stronghold_tt
+					custom_effect_tooltip = humanism_stronghold_available_tt
 				}
 			}
 		}
@@ -798,19 +965,11 @@ scripted_gui = {
 				gos_usroistvo = 2 
 			}
 		}		
-		properties = { 			
-        }
 		triggers = {
 			select_model_button_visible = {
-				OR = {
-					check_variable = {
-						selected_government_system = 0	#if not selected
-					}
-					#can be changed (to do)
-				}
 				NOT = {
 					check_variable = {
-						selected_government_system = 2	#if already selected
+						selected_government_system = 2
 					}
 				}
 			}
@@ -842,15 +1001,9 @@ scripted_gui = {
 		}		
 		triggers = {			
 			select_model_button_visible = {
-				OR = {
-					check_variable = {
-						selected_government_system = 0	#if not selected
-					}
-					#can be changed (to do)
-				}
 				NOT = {
 					check_variable = {
-						selected_government_system = 3	#if already selected
+						selected_government_system = 3
 					}
 				}
 			}
@@ -859,7 +1012,7 @@ scripted_gui = {
 			select_model_button_click = {
 				#tooltips to do
 				set_variable = {
-					selected_government_system = 2
+					selected_government_system = 3
 				}
 				remove_ideas_with_trait = menshikov_system_trait
 				remove_ideas_with_trait = naumov_system_trait
