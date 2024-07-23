@@ -33,10 +33,7 @@ focus_tree = {
 		x = 6
 		y = 2
 		ai_will_do = { factor = 10 }
-		prerequisite = { focus = AGE_seek_for_peace}
-		mutually_exclusive = {
-			focus = AGE_red_sables
-		}
+		prerequisite = { focus = AGE_still_their_land }
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = -50
@@ -71,9 +68,6 @@ focus_tree = {
 		y = 2		
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_not_their_land}
-		mutually_exclusive = {
-			focus = AGE_seek_for_peace
-		}
 		available = {
 			manpower > 2000
 		}
@@ -89,7 +83,7 @@ focus_tree = {
 			custom_effect_tooltip = AGE_red_sables_tt
 			set_country_flag = red_sabres_flag
 			if = {
-				limit = { has_idea = AGE_red_sabres_1 }
+				limit = { has_idea = AGE_red_sabres }
 				add_to_variable = { var_terrorist_attack = -2 tooltip = var_terrorist_attack_minus_2_tt }
 				add_to_variable = { var_preventing_terrorist_attack = 10 tooltip = var_preventing_terrorist_attack_plus_10_tt }		
 			}
@@ -119,8 +113,8 @@ focus_tree = {
 		y = 3
 		ai_will_do = { factor = 10 }
 		prerequisite = {
-			focus = AGE_still_their_land
-			focus = AGE_not_their_land
+			focus = AGE_seek_for_peace
+			focus = AGE_red_sables
 		}
 		completion_reward = {
 			army_experience = 5
