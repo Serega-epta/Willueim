@@ -183,8 +183,8 @@ AGE_their_freedoms = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
 			OR = {
-				has_idea = AGE_red_sabres_1
-				has_idea = AGE_red_sabres_2
+				has_idea = AGE_red_sabres
+				has_idea = AGE_red_sabres_second
 			}		
 			has_focus_tree = AGE_phase_1
 		}
@@ -206,25 +206,25 @@ AGE_their_freedoms = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
 			OR = {
-				has_idea = AGE_red_sabres_1
-				has_idea = AGE_red_sabres_2
+				has_idea = AGE_red_sabres
+				has_idea = AGE_red_sabres_second
 			}		
 			has_focus_tree = AGE_phase_1
 		}
 		cost = 50
 		complete_effect = {
 			if = {
-				limit = { has_idea = AGE_red_sabres_1 }
+				limit = { has_idea = AGE_red_sabres }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_1
-					add_idea = AGE_red_sabres_2
+					remove_idea = AGE_red_sabres
+					add_idea = AGE_red_sabres_second
 				}
 			}
 			else = {
-				#limit = { has_idea = AGE_red_sabres_2 }
+				#limit = { has_idea = AGE_red_sabres_second }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_2
-					add_idea = AGE_red_sabres_1
+					remove_idea = AGE_red_sabres_second
+					add_idea = AGE_red_sabres
 				}			
 			}
 		}
@@ -233,25 +233,25 @@ AGE_their_freedoms = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
 			OR = {
-				has_idea = AGE_red_sabres_1
-				has_idea = AGE_red_sabres_2
+				has_idea = AGE_red_sabres
+				has_idea = AGE_red_sabres_second
 			}
 			has_focus_tree = AGE_phase_2
 		}
 		cost = 100
 		complete_effect = {
 			if = {
-				limit = { has_idea = AGE_red_sabres_1 }
+				limit = { has_idea = AGE_red_sabres }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_1
-					add_idea = AGE_red_sabres_2
+					remove_idea = AGE_red_sabres
+					add_idea = AGE_red_sabres_second
 				}
 			}
 			else = {
-				#limit = { has_idea = AGE_red_sabres_2 }
+				#limit = { has_idea = AGE_red_sabres_second }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_2
-					add_idea = AGE_red_sabres_1
+					remove_idea = AGE_red_sabres_second
+					add_idea = AGE_red_sabres
 				}			
 			}
 		}
