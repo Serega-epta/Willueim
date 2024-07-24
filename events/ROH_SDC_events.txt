@@ -299,7 +299,7 @@ country_event = {
     option = {
         name = pautov.24.a
         if = {
-            has_completed_focus = SDC_integration
+            limit = { has_completed_focus = SDC_integration }
             add_manpower = -1
             add_popularity = {
                 ideology = statesmen
@@ -323,8 +323,8 @@ country_event = {
                 name = SDC_Despair
             }
         }
-        else_if = {
-            has_completed_focus = SDC_peacification
+        else = {
+            limit = { has_completed_focus = SDC_peacification }
             add_popularity = {
                 ideology = sacraments
                 popularity = -0.01
