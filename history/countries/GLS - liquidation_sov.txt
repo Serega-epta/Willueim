@@ -1,12 +1,3 @@
-# Чтобы ориентироваться по содержанию, необходимо выделить нужную часть (без знака комментария и кружка) и нажать ctrl+f
-# Содержание:
-# ○ Столица и базовые значения
-# ○ Стартовые технологии
-# ○ Армия и "флот"
-# ○ Идеи/нац.духи
-# ○ Внутренняя политика
-# ○ Лидеры, советники, генералы и прочие людишки
-# ○ Дипломатия
 load_focus_tree = {
     tree = state_liquidation_board_phase_one
     keep_completed = no
@@ -19,90 +10,25 @@ set_stability = 0.7
 set_war_support = 0.5
 army_experience = 10
 add_manpower = 38000
-add_equipment_to_stockpile = {
-	type = infantry_equipment_1
-	amount = 4150
-	producer = GLS
-}
-add_equipment_to_stockpile = {
-	type = infantry_odejda_1
-	amount = 5490
-	producer = GLS
-}
-add_equipment_to_stockpile = {
-	type = support_equipment_1
-	amount = 250
-	producer = GLS
-}
-add_equipment_to_stockpile = {
-	type = artillery_equipment_1
-	amount = 12
-	producer = GLS
-}
-add_equipment_to_stockpile = {
-	type = obt_tank_chassis_1
-	amount = 160
-	producer = GLS
-}
-add_ideas = {
-GLS_kotly
-GLS_memories_of_rodina
-GLS_fathers_and_not_fathers
-}
 # Стартовые технологии
 set_technology = {
-    #Категория пехоты
    infantry_weapons = 1
    civilian_clothing = 1
    tech_support = 1
    gw_artillery = 1
+   pre_war_OPV = 1
    instruments_of_any_era = 1
-}
-if = {
-	limit = { not = { has_dlc = "By Blood Alone" } }
-    set_technology = {
-        #Категория самолетов
-        early_fighter = 1
-    }
-}
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-    set_technology = {
-        #Категория самолетов
-        iw_small_airframe = 1
-        iw_medium_airframe = 1
-        iw_large_airframe = 1
-    }
-}
-if = {
-	limit = { not = { has_dlc = "No Step Back" } }
-    set_technology = {
-        #Категория танков
-        gwtank = 1
-    }
-}
-if = {
-	limit = { has_dlc = "No Step Back" }
-    set_technology = {
-        #Категория танков
-        gwtank_chassis = 1
-        obtvtorogourovnya = 1
-    }
 }
 
 # Армия и "флот"
-oob = GLS        #"GLS_1936" <- скопируйте, когда файл с дивизиями будете делать
+oob = GLS        
 set_convoys = 0
 
-# Идеи/нац.духи
-add_ideas = {
-    #идей нет
-}
 
 # Внутренняя политика ۩۞۩
 set_politics = {
     ruling_party = statesmen
-    elections_allowed = no              #Выборы, выборы, кандидаты.... а где?
+    elections_allowed = no             
 }
 set_popularities = {
     statesmen = 100                   

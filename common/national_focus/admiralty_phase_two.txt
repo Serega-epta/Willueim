@@ -825,34 +825,34 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					NOT = { has_tech = military_police_tech }
+					NOT = { has_tech = tech_ghounds }
 				}
 				set_technology = {
-					military_police_tech = 1
+					tech_ghounds = 1
 				}
 			}
 			else_if = {
 				limit = {
-					has_tech = military_police_tech
+					has_tech = tech_ghounds
 				}
 				set_technology = {
-					military_police_tech = 1
+					tech_ghounds = 1
 				}
 			}
 			else_if = {
 				limit = {
-					has_tech = military_police_tech
+					has_tech = tech_ghounds
 				}
 				set_technology = {
-					military_police_tech = 1
+					tech_ghounds = 1
 				}
 			}
 			else_if = {
 				limit = {
-					has_tech = military_police_tech
+					has_tech = tech_ghounds
 				}
 				set_technology = {
-					military_police_tech = 1
+					tech_ghounds = 1
 				}
 			}
 			add_equipment_to_stockpile = {

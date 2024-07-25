@@ -27,7 +27,7 @@ division_template = {
 	}
 	support = {
 		rhbz = { x = 0 y = 0 }
-		art_stvol = { x = 0 y = 1 }
+		stvol_art_sup = { x = 0 y = 1 }
 	}
 	priority = 1
 }
@@ -35,10 +35,10 @@ division_template = {
 	name = "Tankoviy_batalion"
 	division_names_group = TANK_ARM_01
 	regiments = {
-		obt_tank = { x = 0 y = 0 }
-		obt_tank = { x = 1 y = 0 }
-		obt_tank = { x = 0 y = 1 }
-		obt_tank = { x = 1 y = 1 }
+		OPF = { x = 0 y = 0 }
+		OPF = { x = 1 y = 0 }
+		OPF = { x = 0 y = 1 }
+		OPF = { x = 1 y = 1 }
 	}
 	support = {
 		rhbz = { x = 0 y = 0 }
@@ -109,5 +109,33 @@ units = {
 		start_experience_factor = 1.0
 		start_equipment_factor = 0.5
 		start_manpower_factor = 1.0
+	}
+}
+###Стартовое производство ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+		amount = 4150
+		producer = GLS
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_odejda_0
+		amount = 5490
+		producer = GLS
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 250
+		producer = GLS
+	}
+	add_equipment_to_stockpile = {
+		type = pre_war_artillery_equipment
+		amount = 12
+		producer = GLS
+	}
+	add_equipment_to_stockpile = {
+		type = pre_war_OPV_equipment
+		amount = 160
+		producer = GLS
 	}
 }

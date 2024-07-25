@@ -500,28 +500,6 @@ guiTypes = {
 			}
 		}
 
-	buttonType = {
-		name = "commander_roster_army"
-		quadTextureSprite = "GFX_diplo_filter_entry"
-		position = { x=371 y=76 }
-		buttonText = "Placeholder"
-		font = "hoi_16mbs"
-		frame = 2
-		pdx_tooltip = "COMMANDER_ROSTER_ARMY_TOOLTIP"
-		pdx_tooltip_delayed = "COMMANDER_ROSTER_ARMY_TOOLTIP_DELAYED"
-     }
-
-	buttonType = {
-		name = "commander_roster_navy"
-		quadTextureSprite = "GFX_diplo_filter_entry"
-		position = { x=371 y=109 }
-		buttonText = "Placeholder"
-		font = "hoi_16mbs"
-		frame = 2
-		pdx_tooltip = "COMMANDER_ROSTER_NAVY_TOOLTIP"
-		pdx_tooltip_delayed = "COMMANDER_ROSTER_NAVY_TOOLTIP_DELAYED"
-     }
-
 	containerWindowType = {
 		name = "high_command"
 		position = { x=-8 y=0 }
@@ -623,17 +601,17 @@ guiTypes = {
 				format = left
 			}			
 
-			buttonType ={
-                name ="button_prefered_tactic_selection"
-                spriteType = "GFX_preferred_tactic_button"
-	            position = { x=385 y=40 }
-            }
+			# buttonType ={
+            #     name ="button_prefered_tactic_selection"
+            #     spriteType = "GFX_preferred_tactic_button"
+	        #     position = { x=385 y=40 }
+            # }
 
-            iconType ={
-                name ="icon_prefered_tactic_type"
-                spriteType = "GFX_attacker_damage_icon"
-	            position = { x=390 y=80 }
-            }
+            # iconType ={
+            #     name ="icon_prefered_tactic_type"
+            #     spriteType = "GFX_attacker_damage_icon"
+	        #     position = { x=390 y=80 }
+            # }
 
 			containerWindowType = {
 				name = "army_chief"
@@ -1030,17 +1008,17 @@ guiTypes = {
 				format = left
 			}			
 
-			buttonType ={
-                name ="button_prefered_tactic_selection"
-                spriteType = "GFX_preferred_tactic_button"
-	            position = { x=385 y=40 }
-            }
+			# buttonType ={
+            #     name ="button_prefered_tactic_selection"
+            #     spriteType = "GFX_preferred_tactic_button"
+	        #     position = { x=385 y=40 }
+            # }
 
-            iconType ={
-                name ="icon_prefered_tactic_type"
-                spriteType = "GFX_attacker_damage_icon"
-	            position = { x=390 y=80 }
-            }
+            # iconType ={
+            #     name ="icon_prefered_tactic_type"
+            #     spriteType = "GFX_attacker_damage_icon"
+	        #     position = { x=390 y=80 }
+            # }
 
 			containerWindowType = {
 				name = "army_chief"
@@ -1102,119 +1080,11 @@ guiTypes = {
 				}
 			}
 		}
-		
-		containerWindowType = {
-			name = "navy_header"
-			position = { x = 0 y = 215 }
-			size = { width = 98% height = 167 }
-			margin = { top = 0 left = 0 bottom = 0 right = 0}
-
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_navy_tiled_marble_bg"
-			}
-
-			iconType ={
-                name ="icon_banner"
-                spriteType = "GFX_officer_corp_bg_banner_navy"
-                position = { x=0 y=-12 }
-                Orientation = "UPPER_LEFT"
-				alwaystransparent = yes
-            }
-
-            iconType ={
-                name ="icon_navy"
-                spriteType = "GFX_officer_corp_chief_naval_icon"
-                position = { x=-4 y=-7 }
-                Orientation = "UPPER_LEFT"
-            }
-
-			instantTextboxType = {
-				name = "text"
-				position = { x=110 y=6 }
-				Orientation = "UPPER_LEFT"
-				font = "hoi_20bs"
-				borderSize = {x = 0 y = 0}
-				text = "OFFICER_CORP_NAVY_DOCTRINE"
-				maxWidth = 240
-				maxHeight = 20
-				format = left
-			}			
-
-			containerWindowType = {
-				name = "navy_chief"
-				position = { x=92 y=28 }
-				size = { width=100%% height=100%% }
-				clipping = no
-
-				gridBoxType = {
-					name = "navy_chief_advisors"
-					position = { x = 0 y = 0 }
-					size = { width = 100% height = 100% }
-					slotsize = { width = 70 height = 150 }
-					max_slots_horizontal = 5
-					max_slots_vertical = 1
-					format = "UPPER_LEFT"
-				}
-			}
-
-			gridBoxType = {
-				name = "modifiers_grid"
-				position = { x = 7 y = 124 }
-				size = { width = 500 height = 35 }
-				slotsize = { width = 71 height = 33 }
-				max_slots_horizontal = 7
-				max_slots_vertical = 2
-				format = "UPPER_LEFT"
-			}
-
-			containerWindowType = {
-				name = "navy_doctrine_button"
-				position = { x=240 y=-8 }
-				size = {width=20 height=20}
-				clipping = no
-
-				buttonType = {
-					name = "button"
-					quadTextureSprite = "GFX_technology_land_doctrine_folder_available_item_bg"
-					position = { x=68 y=47 }
-					#buttonText = "Doctrines"
-					font = "hoi_24header"
-				}
-
-				iconType = {
-					name = "icon"
-					position = { x=92 y=70 }
-					spriteType = "GFX_placeholder_bordered"
-					Orientation = CENTER
-					alwaystransparent = yes
-					centerposition = yes
-				}
-
-				iconType = {
-					name = "nb_doctrine_unlocked_bg"
-					spriteType = "GFX_topbar_alert_bg"
-					position = { x=71 y=97 }
-					alwaystransparent = yes
-					frame = 1
-				}
-
-				instantTextBoxType = {
-					name ="nb_doctrine_unlocked"
-					position = { x=69 y=97 }
-					font = "hoi_16mbs"
-					text = "0"
-					format = center
-					maxWidth = 20
-					maxHeight = 24
-					fixedsize = yes
-				}
-			}
-		}
+	
 		
 		containerWindowType = {
 			name = "air_header"
-			position = { x = 0 y = 393 }
+			position = { x = 0 y = 200 }
 			size = { width = 98% height = 207 }
 			margin = { top = 0 left = 0 bottom = 0 right = 0}
 
