@@ -2,10 +2,8 @@
 TANK_ARM_01 = {
 	name = "Tankoviy batalion"
 	for_countries = {}
-	can_use = {
-		always = yes
-	}
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	can_use = { always = yes }
+	division_types = { "pre_war_OPV" }
 	fallback_name = "%d Tankoviy batalion"
 	#TODO: add ordered names if want something special
 	#ordered = {
