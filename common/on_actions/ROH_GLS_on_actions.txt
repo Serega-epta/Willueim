@@ -17,13 +17,9 @@ on_actions = {
 			###################
 			if = {
 				limit = {
-					AND = {
-						check_variable = { order = freedom }
-						check_variable = { freedom = order }
-					}
+					check_variable = { order = freedom }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -68,7 +64,6 @@ on_actions = {
 					check_variable = { temp_order < 11 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -96,7 +91,6 @@ on_actions = {
 					check_variable = { temp_order < 21 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -124,7 +118,6 @@ on_actions = {
 					check_variable = { temp_order < 31 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -152,7 +145,6 @@ on_actions = {
 					check_variable = { temp_order < 41 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -180,7 +172,6 @@ on_actions = {
 					check_variable = { temp_order < 51 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -208,7 +199,6 @@ on_actions = {
 					check_variable = { temp_order < 61 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -236,7 +226,6 @@ on_actions = {
 					check_variable = { temp_order < 71 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -264,7 +253,6 @@ on_actions = {
 					check_variable = { temp_order < 81 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
@@ -292,7 +280,6 @@ on_actions = {
 					check_variable = { temp_order < 91 }
 				}
 				remove_ideas = GLS_freedom
-				remove_ideas = GLS_freedom_1
 				remove_ideas = GLS_freedom_2
 				remove_ideas = GLS_freedom_3
 				remove_ideas = GLS_freedom_4
