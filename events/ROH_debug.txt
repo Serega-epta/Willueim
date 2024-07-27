@@ -12,8 +12,8 @@ country_event = {
 		name = ROH_debug.1.a
 		set_power_balance = {
 			id = LWV_power_balance
-			left_side = LWV_kanat_okhlostenko
-			right_side = LWV_kanat_markov
+			left_side = LWV_kanat_okhlostenko_influence
+			right_side = LWV_kanat_markov_influence
 		}
 	}
 	option = {
@@ -21,7 +21,7 @@ country_event = {
 		add_power_balance_value = {
 			id = LWV_power_balance
 			value = -0.2
-			tooltip_side = LWV_kanat_okhlostenko
+			tooltip_side = LWV_kanat_okhlostenko_influence
 		}
 	}
 	option = {
@@ -29,7 +29,7 @@ country_event = {
 		add_power_balance_value = {
 			id = LWV_power_balance
 			value = 0.2
-			tooltip_side = LWV_kanat_markov
+			tooltip_side = LWV_kanat_markov_influence
 		}
 	}
 }
