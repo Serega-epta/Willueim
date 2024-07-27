@@ -58,6 +58,7 @@ replace_path="gfx/flags/medium"
 replace_path="gfx/flags/small"
 replace_path="gfx/train_gfx_database"
 replace_path="gfx/interface/equipmentdesigner/graphic_db"
+replace_path="gfx/loadingscreens"
 tags={
 	"Military"
 	"Map"
