@@ -13,7 +13,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = open_opposition }
 			}
 			divisions_in_state = {
-				count > 1
+				size > 1
 				state = FROM
 			}			
 		}
@@ -46,7 +46,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = clandestine_cells }
 			}
 			divisions_in_state = {
-				count > 1
+				size > 1
 				state = FROM
 			}			
 		}
@@ -91,7 +91,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = open_opposition }
 			}
 			divisions_in_state = {
-				count > 1
+				size > 1
 				state = FROM
 			}			
 		}
@@ -107,7 +107,7 @@ AGE_their_freedoms = {
 			AGE = { has_focus_tree = AGE_phase_2 }
 			has_country_flag = not_their_land_anymore_flag
 		}
-		OR = {
+		on_map_area = {
 			target_array = CHU.owned_states
 			target_array = HAR.owned_states
 			target_array = BLZ.owned_states
@@ -137,7 +137,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = clandestine_cells }
 			}
 			divisions_in_state = {
-				count > 1
+				size > 1
 				state = FROM
 			}
 		}
@@ -153,7 +153,7 @@ AGE_their_freedoms = {
 			AGE = { has_focus_tree = AGE_phase_2 }
 			has_country_flag = not_their_land_anymore_flag
 		}
-		OR = {
+		on_map_area = {
 			target_array = CHU.owned_states
 			target_array = HAR.owned_states
 			target_array = BLZ.owned_states
@@ -329,7 +329,7 @@ AGE_their_freedoms = {
 					AGE = { country_event = { id = AGE_baltic_terror.6 } }
 				}				
 			}
-			add_to_variable = { count_days_baltic_terror = 1 }
+			add_to_variable = { size_days_baltic_terror = 1 }
 		}	
 	}
 	AGE_baltics_are_probing = {
@@ -369,7 +369,7 @@ AGE_their_freedoms = {
 				}
 				if = {
 					limit = { 
-						var_808 = 3
+						check_variable = { var_808 = 3 }
 						808 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_808 = 0 }
@@ -381,7 +381,7 @@ AGE_their_freedoms = {
 				}
 				else_if = {
 					limit = { 
-						var_809 = 3
+						check_variable = { var_808 = 3 }
 						809 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_809 = 0 }
@@ -393,7 +393,7 @@ AGE_their_freedoms = {
 				}
 				else_if = {
 					limit = { 
-						var_12 = 3
+						check_variable = { var_12 = 3 }
 						12 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_12 = 0 }
@@ -405,7 +405,7 @@ AGE_their_freedoms = {
 				}
 				else_if = {
 					limit = { 
-						var_13 = 3
+						check_variable = { var_13 = 3 }
 						13 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_13 = 0 }
@@ -417,7 +417,7 @@ AGE_their_freedoms = {
 				}
 				else = {
 					limit = { 
-						var_911 = 3
+						check_variable = { var_911 = 3 }
 						911 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_911 = 0 }

@@ -1,8 +1,7 @@
-
 LWV_power_balance = {
 	initial_value = 0
-	left_side = LWV_kanat_okhlostenko
-	right_side = LWV_kanat_markov
+	left_side = LWV_kanat_okhlostenko_influence
+	right_side = LWV_kanat_markov_influence
 	decision_category = LWV_balance_of_power_category
 	range = {
 		id = okhlostenko_super_power
@@ -93,11 +92,11 @@ LWV_power_balance = {
 		}
 	}
 	side = {
-		id = LWV_kanat_okhlostenko
+		id = LWV_kanat_okhlostenko_influence
 		icon = GFX_idea_okhl
 	}
 	side = {
-		id = LWV_kanat_markov
+		id = LWV_kanat_markov_influence
 		icon = GFX_idea_mark
 	}
 }
