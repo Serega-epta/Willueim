@@ -36,21 +36,21 @@ sub_units = {
 		build_cost_ic = 1400
 
 		#Offensive
-		soft_attack = 15
-		hard_attack = 12
+		soft_attack = 0.15
+		hard_attack = 0.12
 		breakthrough = 96.6
 		ap_attack = 131
 
 		#Deffensive
-		defense = 10
+		defense = 0.1
 		armor_value = 130
 		hardness = 0.98
 
 		essential = {
-			pre_war_mass_tank_chassis
+			pre_war_OPV_equipment
 		}
 		need = {
-			pre_war_mass_tank_chassis = 50
+			pre_war_OPV_equipment = 50
 		}
 		
 		forest = {
@@ -121,13 +121,13 @@ sub_units = {
 		build_cost_ic = 2000
 
 		#Offensive
-		soft_attack = 18
-		hard_attack = 14
+		soft_attack = 0.18
+		hard_attack = 0.14
 		breakthrough = 105
 		ap_attack = 140
 
 		#Deffensive
-		defense = 15
+		defense = 0.15
 		armor_value = 150
 		hardness = 0.99
 
@@ -206,13 +206,13 @@ sub_units = {
 		build_cost_ic = 2500
 
 		#Offensive
-		soft_attack = 18
+		soft_attack = 0.18
 		hard_attack = 14
 		breakthrough = 105
 		ap_attack = 140
 
 		#Deffensive
-		defense = 15
+		defense = 0.15
 		armor_value = 160
 		hardness = 0.99
 

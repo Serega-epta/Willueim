@@ -579,7 +579,7 @@ focus_tree = {
                     amount = 1000
                 }
                 add_equipment_to_stockpile = {
-                    type = support_equipment
+                    type = support_equipment_1
                     amount = 300
                     producer = GLS
                 }
@@ -686,38 +686,38 @@ focus_tree = {
         cost = 5
         completion_reward = {
             if = {
-                limit = { has_idea = klassic_faith }
+                limit = { has_idea = classic_faith }
                 swap_ideas = {
-                    remove_idea = klassic_faith
-                    add_idea = ateizm
+                    remove_idea = classic_faith
+                    add_idea = atheism
                 }
             }
             else_if = {
                 limit = { has_idea = kultizm }
                 swap_ideas = {
                     remove_idea = kultizm
-                    add_idea = ateizm
+                    add_idea = atheism
                 }
             }
             else_if = {
                 limit = { has_idea = free_faith }
                 swap_ideas = {
                     remove_idea = free_faith
-                    add_idea = ateizm
+                    add_idea = atheism
                 } 
             }
             else_if = {
-                limit = { has_idea = istinoborchestvo }
+                limit = { has_idea = truthfighters }
                 swap_ideas = {
-                    remove_idea = istinoborchestvo
-                    add_idea = ateizm
+                    remove_idea = truthfighters
+                    add_idea = atheism
                 } 
             }
             else_if = {
-                limit = { has_idea = villiumi }
+                limit = { has_idea = villiums }
                 swap_ideas = {
-                    remove_idea = villiumi
-                    add_idea = ateizm
+                    remove_idea = villiums
+                    add_idea = atheism
                 }
             }
             add_ideas = GLS_faith1
@@ -733,38 +733,38 @@ focus_tree = {
         cost = 5
         completion_reward = {
             if = {
-                limit = { has_idea = ateizm }
+                limit = { has_idea = atheism }
                 swap_ideas = {
-                    remove_idea = ateizm
-                    add_idea = klassic_faith
+                    remove_idea = atheism
+                    add_idea = classic_faith
                 }
             }
             else_if = {
                 limit = { has_idea = kultizm }
                 swap_ideas = {
                     remove_idea = kultizm
-                    add_idea = klassic_faith
+                    add_idea = classic_faith
                 }
             }
             else_if = {
                 limit = { has_idea = free_faith }
                 swap_ideas = {
                     remove_idea = free_faith
-                    add_idea = klassic_faith
+                    add_idea = classic_faith
                 } 
             }
             else_if = {
-                limit = { has_idea = istinoborchestvo }
+                limit = { has_idea = truthfighters }
                 swap_ideas = {
-                    remove_idea = istinoborchestvo
-                    add_idea = klassic_faith
+                    remove_idea = truthfighters
+                    add_idea = classic_faith
                 } 
             }
             else_if = {
-                limit = { has_idea = villiumi }
+                limit = { has_idea = villiums }
                 swap_ideas = {
-                    remove_idea = villiumi
-                    add_idea = klassic_faith
+                    remove_idea = villiums
+                    add_idea = classic_faith
                 }
             }
             add_ideas = GLS_faith2
@@ -792,31 +792,31 @@ focus_tree = {
         cost = 5
         completion_reward = {
             if = {
-                limit = { has_idea = trud_povinn }
+                limit = { has_idea = labor_service }
                 swap_ideas = {
-                    remove_idea = trud_povinn
-                    add_idea = naem_trud
+                    remove_idea = labor_service
+                    add_idea = hired_labor
                 }
             }
             else_if = {
-                limit = { has_idea = slaves_trud }
+                limit = { has_idea = slaves_labour }
                 swap_ideas = {
-                    remove_idea = slaves_trud
-                    add_idea = naem_trud
+                    remove_idea = slaves_labour
+                    add_idea = hired_labor
                 }
             }
             else_if = {
                 limit = { has_idea = mixed_trud }
                 swap_ideas = {
                     remove_idea = mixed_trud
-                    add_idea = naem_trud
+                    add_idea = hired_labor
                 } 
             }
             else_if = {
-                limit = { has_idea = avtomatizated_trud }
+                limit = { has_idea = automated_labor }
                 swap_ideas = {
-                    remove_idea = avtomatizated_trud
-                    add_idea = naem_trud
+                    remove_idea = automated_labor
+                    add_idea = hired_labor
                 } 
             }
             add_ideas = GLS_labour_and_capital_idea1
@@ -841,31 +841,31 @@ focus_tree = {
         cost = 5
         completion_reward = {
             if = {
-                limit = { has_idea = naem_trud }
+                limit = { has_idea = hired_labor }
                 swap_ideas = {
-                    remove_idea = naem_trud
-                    add_idea = trud_povinn
+                    remove_idea = hired_labor
+                    add_idea = labor_service
                 }
             }
             else_if = {
-                limit = { has_idea = slaves_trud }
+                limit = { has_idea = slaves_labour }
                 swap_ideas = {
-                    remove_idea = slaves_trud
-                    add_idea = trud_povinn
+                    remove_idea = slaves_labour
+                    add_idea = labor_service
                 }
             }
             else_if = {
                 limit = { has_idea = mixed_trud }
                 swap_ideas = {
                     remove_idea = mixed_trud
-                    add_idea = trud_povinn
+                    add_idea = labor_service
                 } 
             }
             else_if = {
-                limit = { has_idea = avtomatizated_trud }
+                limit = { has_idea = automated_labor }
                 swap_ideas = {
-                    remove_idea = avtomatizated_trud
-                    add_idea = trud_povinn
+                    remove_idea = automated_labor
+                    add_idea = labor_service
                 } 
             }
             add_ideas = GLS_labour_and_capital_idea2
@@ -1056,7 +1056,7 @@ focus_tree = {
         y = 8
         cost = 5
         completion_reward = {
-            state 1002 = {
+            1002 = {
                 add_extra_state_shared_building_slots = 3
                 add_building_construction = {
                     type = arms_factory

@@ -116,93 +116,6 @@ ai_land_doctrine_tier_2_trigger = {
 	}
 }
 
-enemy_has_equal_or_better_radar_tech_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = enemy_has_equal_or_better_radar_tech_trigger_tt
-		if = {
-			limit = {
-				ROOT = {
-					has_tech = radio_detection
-					NOT = {
-						has_tech = decimetric_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = radio_detection
-					has_tech = decimetric_radar
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = decimetric_radar
-					NOT = {
-						has_tech = improved_decimetric_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = decimetric_radar
-					has_tech = improved_decimetric_radar
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = improved_decimetric_radar
-					NOT = {
-						has_tech = centimetric_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = improved_decimetric_radar
-					has_tech = centimetric_radar
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = centimetric_radar
-					NOT = {
-						has_tech = improved_centimetric_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = centimetric_radar
-					has_tech = improved_centimetric_radar
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = improved_centimetric_radar
-					NOT = {
-						has_tech = advanced_centimetric_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = improved_centimetric_radar
-					has_tech = advanced_centimetric_radar
-				}
-			}
-		}
-		#no more steps needed because end of research tree is reached
-	}
-}
-
 has_large_ally_not_pick_closed_economy = {
 	any_of_scopes = {
 		array = faction_members
@@ -367,12 +280,6 @@ has_mtg = {
 	has_dlc = "Man the Guns"
 }
 
-has_hide_rule = {
-	has_game_rule = {
-		rule = obsolete_focus_branches_visibility
-		option = HIDE
-	}
-}
 
 
 ###########################################################################################
@@ -395,51 +302,7 @@ has_aat = {
 	has_dlc = "Arms Against Tyranny"
 }
 
-has_any_tank_tech = {
-	if = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-		OR = {
-			has_tech = basic_light_tank_chassis
-			has_tech = basic_medium_tank_chassis
-			has_tech = basic_heavy_tank_chassis
-		}
-	}
-	else = {
-		has_tech = gwtank
-	}
-}
 
-has_any_tanks = {
-	if = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-		OR = {
-			has_equipment = { light_tank_chassis_0 > 0}
-			has_equipment = { medium_tank_chassis > 0 }
-			has_equipment = { light_tank_chassis > 0 }
-			has_equipment = { heavy_tank_chassis > 0 }
-		}
-	}
-	else = {
-		OR = {
-			has_equipment = { gw_tank_equipment > 0	}
-			has_equipment = { light_tank_equipment_1 > 0	}
-			has_equipment = { light_tank_equipment_2 > 0	}
-			has_equipment = { light_tank_equipment_3 > 0	}
-			has_equipment = { medium_tank_equipment_1 > 0	}
-			has_equipment = { medium_tank_equipment_2 > 0	}
-			has_equipment = { medium_tank_equipment_3 > 0	}
-			has_equipment = { modern_tank_equipment_1 > 0	}
-			has_equipment = { heavy_tank_equipment_1 > 0	}
-			has_equipment = { heavy_tank_equipment_2 > 0	}
-			has_equipment = { heavy_tank_equipment_3 > 0	}
-			has_equipment = { super_heavy_tank_equipment_1 > 0	}
-		}
-	}
-}
 
 mio_original_country_exists_and_not_at_war_with_ROOT = { #Used for MIO decisions visibility - THIS is original country
 	exists = yes
@@ -461,28 +324,6 @@ mio_original_country_available_with_opinion_subject_and_war_requirements_fulfill
 }
 
 
-can_unlock_new_special_forces_tree = {
-	if = {
-		limit = { NOT = { has_variable = sf_trees } }
-		custom_trigger_tooltip = {
-			tooltip = can_unlock_new_special_forces_tree_none
-			NOT = { has_variable = sf_trees }
-		}
-	}
-	else_if = {
-		limit = { check_variable = { sf_trees > 0 } }
-		custom_trigger_tooltip = {
-			tooltip = can_unlock_new_special_forces_tree_more_yes
-			check_variable = { sf_trees > 0 }
-		}
-	}
-	else = {
-		custom_trigger_tooltip = {
-			tooltip = can_unlock_new_special_forces_tree_more_no
-			always = no
-		}
-	}
-}
 # These are to make strength comparisons easier 
 
 FROM_is_stronger = {
@@ -534,19 +375,6 @@ ai_has_completed_air_doctrine = {
 		has_tech = mass_destruction
 		has_tech = forward_interception
 		has_tech = high_level_bombing
-	}
-}
-
-ai_has_completed_naval_doctrine = {
-	is_ai = yes
-	OR = {
-		has_tech = grand_battlefleet
-		has_tech = submarine_offensive
-		has_tech = floating_airfield
-		has_tech = combined_operations_raiding
-		has_tech = integrated_convoy_defence
-		has_tech = submarine_offensive_bs
-		has_tech = carrier_battlegroups
 	}
 }
 

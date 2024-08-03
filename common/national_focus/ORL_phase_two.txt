@@ -377,7 +377,7 @@ focus_tree = {
                 }
                 support = {
                     engineer = { x = 0 y = 0 }
-                    rocket_artillery = { x = 1 y = 1}
+                    rocket_artillery = { x = 0 y = 1}
                 }
             }
             258 = {
@@ -487,11 +487,11 @@ focus_tree = {
 				target = BRD
 				type = annex_everything
 			}
+            declare_war_on = {
+                target = WAC
+                type = annex_everything
+            }
         }
-        declare_war_on = {
-				target = WAC
-				type = annex_everything
-		}
     }
     focus = {
         id = ORL_Crush_Vlasovites

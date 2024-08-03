@@ -109,19 +109,7 @@ buildings = {
 		value = 1
 		infrastructure_construction_effect = yes
 	}
-	tower = {
-		show_on_map = 1
-		has_destroyed_mesh = no
-		base_cost = 250
-		per_level_extra_cost = 250
-		provincial = yes
-		disabled_in_dmz = yes
-		icon_frame = 7
-		land_fort = 1
-		max_level = 10
-		value = 1
-		infrastructure_construction_effect = yes
-	}
+
 	coastal_bunker = {
 		show_on_map = 1
 		has_destroyed_mesh = yes
@@ -219,15 +207,6 @@ buildings = {
 		shares_slots = yes
 		value = 1
 		infrastructure_construction_effect = yes
-	}
-	silence = {
-		show_on_map = 1
-		base_cost = 10000000000
-		provincial = yes
-		icon_frame = 22
-		max_level = 1
-		value = 0
-		damage_factor = 0
 	}
 
 	nuclear_reactor = {

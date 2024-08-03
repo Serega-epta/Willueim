@@ -14,7 +14,7 @@ ODS_kuban = {
 				infantry_equipment > 4999
 			}
 			has_equipment = {
-				support_equipment > 4999
+				support_equipment_1 > 4999
 			}
 			has_equipment = {
 				motorized_equipment_1 > 99
@@ -28,7 +28,7 @@ ODS_kuban = {
 				amount = -5000
 			}
 			add_equipment_to_stockpile = {
-				type = support_equipment 
+				type = support_equipment_1 
 				amount = -5000
 			}
 			add_equipment_to_stockpile = {
@@ -126,7 +126,7 @@ ODS_subordination = {
 				remove_dynamic_modifier = { modifier = ODS_new_land }
 			}
 			add_to_variable = {
-				var = intention_point
+				var = Conception_var
 				value = 1
 			}		
 			add_manpower = -300
@@ -180,7 +180,7 @@ ODS_subordination = {
 				remove_dynamic_modifier = { modifier = ODS_reinforced_veil }
 			}
 			add_to_variable = {
-				var = intention_point
+				var = Conception_var
 				value = 1
 			}		
 			subtract_from_variable = {
@@ -233,7 +233,7 @@ ODS_subordination = {
 				remove_dynamic_modifier = { modifier = ODS_focused_eye }				
 			}
 			add_to_variable = {
-				var = intention_point
+				var = Conception_var
 				value = 1
 			}	
 			add_state_core = FROM
