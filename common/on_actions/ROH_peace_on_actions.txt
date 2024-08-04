@@ -69,7 +69,7 @@ on_actions = {
 					}
 					FROM = {
 						original_tag = GLS
-						has_country_flag = GLS_negotiation_process_fail
+						#has_country_flag = GLS_negotiation_process_fail
 					}
 				}
 
@@ -114,7 +114,7 @@ on_actions = {
 					every_state = {
 						remove_core_of = ROOT
 					}
-					clr_country_flag = GLS_negotiation_process_fail
+					#clr_country_flag = GLS_negotiation_process_fail
 				}
 				set_global_flag = skip_default_capitulation
 			}
@@ -123,7 +123,7 @@ on_actions = {
 				limit = {
 					ROOT = {
 						original_tag = GLS
-						has_country_flag = GLS_negotiation_process_fail
+						#has_country_flag = GLS_negotiation_process_fail
 					}
 					OR = {
 						FROM = {
@@ -197,7 +197,7 @@ on_actions = {
 				
 				ROOT = {
 					GLS = {
-						clr_country_flag = GLS_negotiation_process_fail
+						#clr_country_flag = GLS_negotiation_process_fail
 						set_cosmetic_tag = GLS_URAL_MANDATE
 						load_focus_tree = state_liquidation_board_collapsed
 						kill_country_leader = yes

@@ -313,21 +313,19 @@ PixelShader =
 			float CityLightsMask = TerrainColor.a;
 		#endif
 	
+			float vSnowAlpha = 1-vSpec;
 			diffuse.rgb = GetOverlay( diffuse.rgb, TerrainColor.rgb, COLORMAP_OVERLAY_STRENGTH );
+
+		#ifndef LOW_END_GFX
+			float4 vMudSnow = GetMudSnowColor( Input.prepos, SnowMudData );	
+			diffuse.rgb = ApplySnow( diffuse.rgb, Input.prepos, normal, vMudSnow, SnowTexture, CityLightsAndSnowNoise, vGlossiness, vSnowAlpha );
+			diffuse.rgb = GetMudColor( diffuse.rgb, vMudSnow, Input.prepos, normal, vGlossiness, vSpec, MudDiffuseGloss, MudNormalSpec );
+		#endif
 							
 			// Gradient Borders
 			float vBloomAlpha = 0.0f;
 			gradient_border_apply( diffuse.rgb, normal, Input.uv2, GradientBorderChannel1, GradientBorderChannel2, 1.0f, vGBCamDistOverride_GBOutlineCutoff.zw, vGBCamDistOverride_GBOutlineCutoff.xy, vBloomAlpha );
-			
-			// Draw snow/mud after borders, to hide if filled.
-			// Mostly for Strategic Air map mode.
-			float vSnowAlpha = (1-vSpec);
-			#ifndef LOW_END_GFX
-				float4 vMudSnow = GetMudSnowColor( Input.prepos, SnowMudData ) * vBloomAlpha;
-				diffuse.rgb = ApplySnow( diffuse.rgb, Input.prepos, normal, vMudSnow, SnowTexture, CityLightsAndSnowNoise, vGlossiness, vSnowAlpha );
-				diffuse.rgb = GetMudColor( diffuse.rgb, vMudSnow, Input.prepos, normal, vGlossiness, vSpec, MudDiffuseGloss, MudNormalSpec );
-			#endif
-			
+					
 			// Secondary color mask
 			secondary_color_mask( diffuse.rgb, normal, Input.uv2, ProvinceSecondaryColorMap, vBloomAlpha );
 
@@ -377,11 +375,9 @@ PixelShader =
 			specularLight += reflectiveColor * FresnelGlossy(lightingProperties._SpecularColor, -vEyeDir, lightingProperties._Normal, lightingProperties._Glossiness);
 		#endif
 			
-			// Supply mode -1 override. Increases light-removal for a cleaner supply view. Assumes BORDER_LIGHT_REMOVAL is lower.....
-			float lightFactor = lerp(BORDER_LIGHT_REMOVAL_FACTOR, 0.5, !any(vGBCamDistOverride_GBOutlineCutoff.y + 1));
-
 			float3 vOut = ComposeLightSnow(lightingProperties, diffuseLight, specularLight, vSnowAlpha);
-			vOut = lerp( vOut, diffuse.rgb, lightFactor * ( 1 - vBloomAlpha ));
+		
+			vOut = lerp( vOut, diffuse.rgb, BORDER_LIGHT_REMOVAL_FACTOR * ( 1 - vBloomAlpha ) );
 				
 			float3 vGlobeNormal = CalcGlobeNormal( Input.prepos.xz );
 			float vNightFactor = DayNightFactor( vGlobeNormal );
@@ -394,9 +390,9 @@ PixelShader =
 			float3 vFOW = ApplyFOW( vOut, ShadowMap, Input.vScreenCoord );
 			vOut = lerp( vFOW, vOut, BORDER_FOW_REMOVAL_FACTOR * ( 1 - vBloomAlpha ) );
 		
-		//#ifndef LOW_END_GFX
-		//	vOut = ApplyDistanceFog( vOut, Input.prepos );
-		//#endif
+		#ifndef LOW_END_GFX
+			vOut = ApplyDistanceFog( vOut, Input.prepos );
+		#endif
 			
 			vOut = DayNightWithBlend( vOut, vGlobeNormal, lerp(BORDER_NIGHT_DESATURATION_MAX, 1.0f, vBloomAlpha) );
 			

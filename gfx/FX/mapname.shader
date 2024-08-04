@@ -72,16 +72,11 @@ PixelShader =
 {
 	MainCode PixelShader
 	[[
-		// Country text, battleplan/frontline text
 		float4 main( VS_OUTPUT v ) : PDX_COLOR
 		{
 			float4 vSample = tex2D( DiffuseTexture, v.vTexCoord );
 			vSample.a *= Transp_OffsetX.x;// * vFade;	
 			vSample.rgb *= 1.0f - ( DayNightFactor( CalcGlobeNormal( v.vPrepos.xz ) ) * 0.35f );
-			
-			// Fade out text based on camera distance
-			vSample.a *= max(cam_distance( 350.0, 400.0 ), 0.57);
-
 			return vSample;
 		}
 	]]

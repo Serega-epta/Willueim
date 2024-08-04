@@ -51,6 +51,7 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_blood_on_hands }
+		mutually_exclusive = { focus = AGE_not_their_land }
 		completion_reward = {
 			add_stability = 0.05
 			remove_ideas = AGE_knife_at_throat
@@ -96,6 +97,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = AGE_still_their_land }
 		prerequisite = { focus = AGE_blood_on_hands }
 		completion_reward = {
 			add_stability = -0.05

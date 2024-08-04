@@ -25,12 +25,17 @@ NDefines.NMilitary.NUKE_MAX_DAMAGE_PERCENT = 1.2
 NDefines.NMilitary.NUKE_DELAY_HOURS = 12
 NDefines.NCountry.NUCLEAR_BOMB_DROP_WAR_SUPPORT_EFFECT_MAX_INFRA = 0.35
 NDefines.NCountry.NUCLEAR_BOMB_DROP_WAR_SUPPORT_EFFECT_MAX_VP = 1
-
-NDefines.NCountry.MIN_STABILITY = -1.0 -- Vanilla is 0.0
 			
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 12
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 12
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 3
+
+NDefines.NCountry.MIN_STABILITY = -1.0
+NDefines.NCountry.MIN_WAR_SUPPORT = -1.0
+NDefines.NCountry.DAYS_OF_WAR_BEFORE_SURRENDER = 10000
+NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.25
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 48
+NDefines.NCountry.BASE_SURRENDER_LIMIT = 0.75
 
 --------------
 --AI DEFINES--
@@ -131,18 +136,3 @@ NDefines.NAI.AGGRESSIVENESS_CHECK_FULLY_FORTIFIED_POCKET						= 3		--how agressi
 
 NDefines.NAI.AREA_DEFENSE_SETTING_PORTS						= false	--no naval invasion will be (no ships), no need to guard it
 NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES				= false	--no naval invasion will be (no ships), no need to guard it
-
------------------
---OTHER DEFINES--
------------------
-Nlua = {
-	NTopbar = {
-		GAME_SPEED_LIMIT = 0,
-		GAME_SPEED_STEPS = 5,
-		GAME_SPEED_ONE = 1,
-		GAME_SPEED_TWO = 2,
-		GAME_SPEED_THREE = 3,
-		GAME_SPEED_FOUR = 4,
-		GAME_SPEED_FIVE = 5,
-	}
-}

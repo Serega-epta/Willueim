@@ -521,6 +521,11 @@ focus_tree = {
 				days = 1
 			}
 			add_research_slot = 1
+			clamp_variable = {
+    			var = ready_charge
+    			min = 0
+   				max = 100
+			}
 			set_country_flag = GLS_kurchatov_project_start
 			custom_effect_tooltip = unlock_kurchatov_project
 		}

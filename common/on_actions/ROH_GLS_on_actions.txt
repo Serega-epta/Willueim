@@ -1,11 +1,6 @@
 on_actions = {
 	on_startup = {
-		effect = {
-			clamp_variable = {
-    			var = ready_charge
-    			min = 0
-   				max = 100
-			}			
+		effect = {		
 			set_variable = { ready_charge = 0 }
 			set_variable = { nuclear_charges = 0 }
 		}
@@ -602,10 +597,8 @@ on_actions = {
 						days = 1
 					}					
 					kill_country_leader = yes
-					recruit_character = GLS_anarchy
 					GLS_anarchy = {
-						promote_character = yes
-						promote_character = patriots_1
+						promote_character = statesmen_subideology
 					}
 					set_rule = {
 						can_not_declare_war = yes
@@ -644,10 +637,8 @@ on_actions = {
 						days = 1
 					}					
 					kill_country_leader = yes
-					recruit_character = GLS_anarchy
 					GLS_anarchy = {
-						promote_character = yes
-						promote_character = patriots_1
+						promote_character = statesmen_subideology
 					}
 					set_rule = {
 						can_not_declare_war = yes
@@ -686,10 +677,8 @@ on_actions = {
 						days = 2
 					}
 					kill_country_leader = yes
-					recruit_character = GLS_anarchy
 					GLS_anarchy = {
-						promote_character = yes
-						promote_character = patriots_1
+						promote_character = statesmen_subideology
 					}
 					set_rule = {
 						can_not_declare_war = yes
@@ -728,10 +717,8 @@ on_actions = {
 						days = 2
 					}
 					kill_country_leader = yes
-					recruit_character = GLS_anarchy
 					GLS_anarchy = {
-						promote_character = yes
-						promote_character = patriots_1
+						promote_character = statesmen_subideology
 					}
 					set_rule = {
 						can_not_declare_war = yes
@@ -743,7 +730,7 @@ on_actions = {
 	}
 	on_weekly_GLS = {
 		effect = {
-			####Еженедельная прибавка в 2/4 процента####
+			####Еженедельная прибавка в 2/3/4/5 процента####
 			if = {
 				limit = {
 					NOT = {

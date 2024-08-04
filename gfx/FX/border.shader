@@ -130,7 +130,7 @@ PixelShader =
 			//float vIsSnow = saturate( GetSnow( vMudSnow ) * 5.0 );
 			//vColor.rgb = lerp(vColor.rgb, vec3(0.5) - vColor.rgb, (1.0 - vIsSnow));
 			
-			float vPulseFactor = saturate( smoothstep( 0.0f, 1.0f, ( 0.8f - abs( Input.uv.x - 0.5f ) ) + sin( vTime_Transparency.x * 3.5f ) * 0.1f ) ) * vSelectionColor.a; 
+			float vPulseFactor = saturate( smoothstep( 0.0f, 1.0f, ( 0.8f - abs( Input.uv.x - 0.5f ) ) + sin( vTime_Transparency.x * 2.5f ) * 0.15f ) ) * vSelectionColor.a; 
 			vColor.rgb = saturate( vColor.rgb + vSelectionColor.rgb * saturate( vPulseFactor - vColor.a * 0.35f ) );
 			
 			// Grab the shadow term
