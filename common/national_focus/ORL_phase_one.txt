@@ -367,6 +367,8 @@ focus_tree = {
         mutually_exclusive = {
 			focus = ORL_help_front
 		}
+		will_lead_to_war_with = VLC
+		will_lead_to_war_with = SMX
 		completion_reward = {
 			end_puppet = ZAK
 			MAZ = {
@@ -410,6 +412,8 @@ focus_tree = {
         mutually_exclusive = {
 			focus = ORL_help_squad
 		}
+		will_lead_to_war_with = MAZ
+		will_lead_to_war_with = TAB
 		completion_reward = {
 			end_puppet = SBT
 			MAZ = {
@@ -468,6 +472,10 @@ focus_tree = {
             focus = ORL_help_squad
             focus = ORL_help_front
         }
+		will_lead_to_war_with = MAZ
+		will_lead_to_war_with = TAB
+		will_lead_to_war_with = VLC
+		will_lead_to_war_with = SMX
 		completion_reward = {
 			if = {
 				limit = {
@@ -476,13 +484,16 @@ focus_tree = {
 				SBT = {
 					every_owned_state = {
 						add_core_of = ORL
+						remove_core_of = SBT
 					}
 				}
 				223 = {
 					add_core_of = ORL
+					remove_core_of = VLC
 				}
 				205= {
 					add_core_of = ORL
+					remove_core_of = SMX
 				}
 				ORL = {
 					annex_country = {
@@ -509,17 +520,17 @@ focus_tree = {
 						add_core_of = ORL
 					}
 				}
-				260 = {
-					add_core_of = ORL
+				MAZ = {
+					every_core_state = {
+						add_core_of = ORL
+						remove_core_of = MAZ						
+					}
 				}
-				258= {
-					add_core_of = ORL
-				}
-				257 = {
-					add_core_of = ORL
-				}
-				937 = {
-					add_core_of = ORL
+				TAB = {
+					every_core_state = {
+						add_core_of = ORL
+						remove_core_of = TAB						
+					}
 				}
 				ORL = {
 					annex_country = {
@@ -539,7 +550,7 @@ focus_tree = {
 			}
 			hidden_effect = {
                 load_focus_tree = {
-                     tree = ORL_phase_2
+                    tree = ORL_phase_2
                     keep_completed = no
                 }
 			}

@@ -509,6 +509,9 @@ focus_tree = {
         y = 7
         cost = 3.6
         ai_will_do = { factor = 10 }
+		will_lead_to_war_with = LWV
+		will_lead_to_war_with = SWR
+		will_lead_to_war_with = BGD
         completion_reward = {
             declare_war_on = {
                 type = annex_everything
@@ -533,6 +536,9 @@ focus_tree = {
         y = 7
         cost = 3.6
         ai_will_do = { factor = 10 }
+		will_lead_to_war_with = COA
+        will_lead_to_war_with = SWR
+        will_lead_to_war_with = BGD
         completion_reward = {
             declare_war_on = {
                 type = annex_everything
@@ -556,6 +562,11 @@ focus_tree = {
         y = 7
         cost = 3.6
         ai_will_do = { factor = 10 }
+        will_lead_to_war_with = SOD
+        will_lead_to_war_with = BOD
+        will_lead_to_war_with = MOD
+        will_lead_to_war_with = WOD
+        will_lead_to_war_with = YWD
         completion_reward = {
             declare_war_on = {
                 type = annex_everything
@@ -587,6 +598,7 @@ focus_tree = {
         y = 7
         cost = 3.6
         ai_will_do = { factor = 10 }
+        will_lead_to_war_with = ODS
         completion_reward = {
             declare_war_on = {
                 type = annex_everything
@@ -608,42 +620,52 @@ focus_tree = {
             891 = {
                 add_manpower = -374
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             875 = {
                 add_manpower = -302
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             91 = {
                 add_manpower = -141
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             73 = {
                 add_manpower = -70
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             889 = {
                 add_manpower = -83
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             890 = {
                 add_manpower = -32
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             93 = {
                 add_manpower = -23
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             199 = {
                 add_manpower = -40
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             198 = {
                 add_manpower = -40
                 add_core_of = ARM
+                remove_core_of = LWV
             }
             201 = {
                 add_manpower = -66
                 add_core_of = ARM
+                remove_core_of = LWV
             }
         }
     }
@@ -1248,6 +1270,10 @@ focus_tree = {
         y = 15
         cost = 3.6
         ai_will_do = { factor = 10 }
+        will_lead_to_war_with = STW
+        will_lead_to_war_with = FSR
+        will_lead_to_war_with = ECD
+        will_lead_to_war_with = KUH
         completion_reward = {
             declare_war_on = {
                 type = annex_everything
@@ -1383,34 +1409,42 @@ focus_tree = {
             234 = {
                 add_manpower = -314
                 add_core_of = ARM
+                remove_core_of = ECD
             }
             852 = {
                 add_manpower = -48
                 add_core_of = ARM
+                remove_core_of = ECD
             }
             850 = {
                 add_manpower = -35
                 add_core_of = ARM
+                remove_core_of = STW
             }
             849 = {
                 add_manpower = -62
                 add_core_of = ARM
+                remove_core_of = STW
             }
             846 = {
                 add_manpower = -22
                 add_core_of = ARM
+                remove_core_of = STW
             }
             848 = {
                 add_manpower = -17
                 add_core_of = ARM
+                remove_core_of = STW
             }
             854 = {
                 add_manpower = -18
                 add_core_of = ARM
+                remove_core_of = KUH
             }
             853 = {
                 add_manpower = -6
                 add_core_of = ARM
+                remove_core_of = KUH
             }
         }
     }
@@ -1441,47 +1475,56 @@ focus_tree = {
         completion_reward = {
             BRD = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM  
+                    remove_core_of = BRD                  
                 }
             }
             WAC = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM  
+                    remove_core_of = WAC                  
                 }
             }
             HAN = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM 
+                    remove_core_of = HAN                   
                 }
             }
             BRI = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM
+                    remove_core_of = BRI                    
                 }
             }
             FUD = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM   
+                    remove_core_of = FUD                 
                 }
             }
             AZB = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM    
+                    remove_core_of = AZB                
                 }
             }
             CRW = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM       
+                    remove_core_of = CRW             
                 }
             }
             DOM = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM
+                    remove_core_of = DOM                    
                 }
             }
             LUG = {
                 every_core_state = {
-                    add_core_of = ARM                    
+                    add_core_of = ARM  
+                    remove_core_of = LUG                 
                 }
             }
         }

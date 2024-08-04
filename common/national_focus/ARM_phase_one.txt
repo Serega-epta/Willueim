@@ -240,6 +240,7 @@ focus_tree = {
         ai_will_do = {
             factor = 10
         }
+		will_lead_to_war_with = SUM
         completion_reward = {
             country_event = {
                 id = ARMnew.10
@@ -276,7 +277,10 @@ focus_tree = {
                 days = 1
             }
             remove_ideas = ARM_blood_on_snow
-            225 = { add_core_of = ARM }
+            225 = { 
+                add_core_of = ARM 
+                remove_core_of = SUM
+            }
             225 = {
                     create_unit = {
                     division = "name = \"1. Prizivnyk\" division_template = \"Prizivnyk\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
@@ -361,9 +365,12 @@ focus_tree = {
                 id = ARMnew.13
                 days = 1
             }
-            259 = { add_core_of = ARM }
-            197 = { add_core_of = ARM }
-            203 = { add_core_of = ARM }
+            VDS = {
+                every_core_state = {
+                    add_core_of = ARM
+                    remove_core_of = VDS
+                }
+            }
             add_manpower = -250
         }
     }
@@ -450,6 +457,9 @@ focus_tree = {
         ai_will_do = {
             factor = 10
         }
+		will_lead_to_war_with = BIH
+		will_lead_to_war_with = DIB
+		will_lead_to_war_with = BAG
         completion_reward = {
             country_event = {
                 id = ARMnew.15

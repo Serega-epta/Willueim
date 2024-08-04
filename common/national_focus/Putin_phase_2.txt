@@ -466,9 +466,19 @@ focus_tree = {
                     add_idea = SDC_midle_eastern_idea
                 }
             }
-            980 = { add_core_of = SDC }
-            947 = { add_core_of = SDC }
-            581 = { add_core_of = SDC }
+            980 = { 
+                add_core_of = SDC 
+                remove_core_of = REN
+            }
+            947 = { 
+                add_core_of = SDC 
+                remove_core_of = UFV
+
+            }
+            581 = { 
+                add_core_of = SDC 
+                remove_core_of = MIN
+            }
             add_manpower = 1500
         }
     }
@@ -498,15 +508,20 @@ focus_tree = {
                 }
             }
             982 = {
+                remove_core_of = VOZ
+                remove_core_of = TRO
                 add_core_of = SDC
             }
             825 = {
+                remove_core_of = VOZ
                 add_core_of = SDC
             }
             916 = {
+                remove_core_of = VOZ
                 add_core_of = SDC
             }
             897 = {
+                remove_core_of = VOZ
                 add_core_of = SDC
             }
         }
@@ -529,6 +544,7 @@ focus_tree = {
             }
             981 = {
                 add_core_of = SDC
+                remove_core_of = VOZ
                 add_building_construction = {
                     type = radar_station
                     level = 1
@@ -609,6 +625,7 @@ focus_tree = {
             }
             980 = {
                 add_core_of = SDC
+                remove_core_of = REN
                 add_extra_state_shared_building_slots = 2
                 add_building_construction = {
                     type = industrial_complex
@@ -624,6 +641,7 @@ focus_tree = {
             }
             947 = {
                 add_core_of = SDC
+                remove_core_of = UFV
                 add_extra_state_shared_building_slots = 2
                 add_building_construction = {
                     type = industrial_complex
@@ -639,6 +657,7 @@ focus_tree = {
             }
             581 = {
                 add_core_of = SDC
+                remove_core_of = MIN
                 add_extra_state_shared_building_slots = 2
                 add_building_construction = {
                     type = industrial_complex
@@ -671,19 +690,24 @@ focus_tree = {
             }
             982 = {
                 add_core_of = SDC
+                remove_core_of = TRO
+                remove_core_of = VOZ
                 add_manpower = -2000
             }
             825 = {
                 add_core_of = SDC
+                remove_core_of = VOZ
                 add_manpower = -2000
             }
             916 = {
                 add_core_of = SDC
                 add_manpower = -2000
+                remove_core_of = VOZ
             }
             897 = {
                 add_core_of = SDC
                 add_manpower = -2000
+                remove_core_of = VOZ
             }
             division_template = {
                 name = "Uralskaya brigada"
@@ -729,6 +753,7 @@ focus_tree = {
             }
             981 = {
                 add_core_of = SDC
+                remove_core_of = VOZ
                 add_manpower = -2000
                 add_building_construction = {
                     type = bunker
@@ -752,56 +777,42 @@ focus_tree = {
                     instant_build = yes
                     province = 13465
                 }
-            }
-            982 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
                     instant_build = yes
                     province = 13464
                 }
-            }
-            982 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
                     instant_build = yes
                     province = 12502
                 }
-            }
-            982 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
                     instant_build = yes
                     province = 13456
                 }
-            }
-            982 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
                     instant_build = yes
                     province = 13448
                 }
-            }
-            982 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
                     instant_build = yes
                     province = 13438
                 }
-            }
-            982 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
                     instant_build = yes
                     province = 13428
                 }
-            }
-            982 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
@@ -816,24 +827,18 @@ focus_tree = {
                     instant_build = yes
                     province = 13417
                 }
-            }
-            581 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
                     instant_build = yes
                     province = 13405
                 }
-            }
-            581 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
                     instant_build = yes
                     province = 13395
                 }
-            }
-            581 = {
                 add_building_construction = {
                     type = bunker
                     level = 2
@@ -883,17 +888,19 @@ focus_tree = {
                 target = SOC
                 transfer_troops = no
             }
-            215 = {
-                add_core_of = SDC
-            }
-            984 = {
-                add_core_of = SDC
+            WEC = {
+                every_core_state = {
+                    add_core_of = SDC
+                    remove_core_of = WEC
+                }
             }
             985 = {
                 add_core_of = SDC
+                remove_core_of = SAC
             }
             986 = {
                 add_core_of = SDC
+                remove_core_of = SOC
             }
             country_event = pautov.25
             hidden_effect = {

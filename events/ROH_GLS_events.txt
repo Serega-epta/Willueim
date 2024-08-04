@@ -675,7 +675,10 @@ country_event = {
 				397 = { transfer_state_to = REV }
 			}
 			REV = {
-				397 = { add_core_of = REV }
+				397 = { 
+					add_core_of = REV 
+                	remove_core_of = GLS
+				}
 				country_event = {
 					id = GLS.2100
 				}
