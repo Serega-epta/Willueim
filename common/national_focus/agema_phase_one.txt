@@ -18,11 +18,11 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			country_event = AGE.1
-			add_trait = {
-				character = AGE_aleksandr_lazarevich
-				ideology = patriots_1
-				trait = AGE_agony_of_choice
-		    }
+			# add_trait = {
+			# 	character = AGE_aleksandr_lazarevich
+			# 	ideology = 
+			# 	trait = AGE_agony_of_choice
+		    # }
 			custom_effect_tooltip = AGE_blood_on_hands_tt
 		}
 	}
@@ -69,7 +69,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_not_their_land}
 		available = {
-			manpower > 2000
+			has_manpower > 2000
 		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -154,7 +154,7 @@ focus_tree = {
 			every_owned_state = {
 				add_manpower = -500
 			}
-			add_stability = -0,05
+			add_stability = -0.05
 		}
 	}
 	focus = {
@@ -168,7 +168,7 @@ focus_tree = {
 		prerequisite = { focus = AGE_our_motherland}
 		completion_reward = {
 			add_political_power = 25
-			add_stability = 0,05
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -197,7 +197,7 @@ focus_tree = {
 				idea = AGE_day_of_unity_celebration
 				days = 30
 			}
-			add_stability = 0,03
+			add_stability = 0.03
 		}
 	}
 	focus = {
@@ -213,7 +213,7 @@ focus_tree = {
 			add_political_power = 50
 			add_war_support = 0.02
 			set_country_flag =  ba_their_freedoms_loyalty_country_flag
-			add_stability = -0,02
+			add_stability = -0.02
 		}
 	}
 	focus = {
@@ -240,7 +240,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_southern_ortodoxians }
 		completion_reward = {
-			add_stability =-0,1
+			add_stability =-0.1
 		}
 	}
 	focus = {

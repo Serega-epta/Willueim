@@ -575,7 +575,7 @@ focus_tree = {
                     amount = 2000
                 }
                 add_equipment_to_stockpile = {
-                    type = infantry_clothing
+                    type = infantry_odejda_0
                     amount = 1000
                 }
                 add_equipment_to_stockpile = {
@@ -584,14 +584,14 @@ focus_tree = {
                     producer = GLS
                 }
                 add_equipment_to_stockpile = {
-                    type = artillery
+                    type = pre_war_artillery_equipment
                     amount = 500
                     producer = GLS
                 }
-                #add_equipment_to_stockpile = {
-                #    type = танки
-                #    amount = 600
-                #}
+                add_equipment_to_stockpile = {
+                   type = pre_war_OPV_equipment
+                   amount = 600
+                }
             }
         }
     }
@@ -693,9 +693,9 @@ focus_tree = {
                 }
             }
             else_if = {
-                limit = { has_idea = kultizm }
+                limit = { has_idea = cultism }
                 swap_ideas = {
-                    remove_idea = kultizm
+                    remove_idea = cultism
                     add_idea = atheism
                 }
             }
@@ -740,9 +740,9 @@ focus_tree = {
                 }
             }
             else_if = {
-                limit = { has_idea = kultizm }
+                limit = { has_idea = cultism }
                 swap_ideas = {
-                    remove_idea = kultizm
+                    remove_idea = cultism
                     add_idea = classic_faith
                 }
             }
@@ -806,9 +806,9 @@ focus_tree = {
                 }
             }
             else_if = {
-                limit = { has_idea = mixed_trud }
+                limit = { has_idea = mixed_mode }
                 swap_ideas = {
-                    remove_idea = mixed_trud
+                    remove_idea = mixed_mode
                     add_idea = hired_labor
                 } 
             }
@@ -855,9 +855,9 @@ focus_tree = {
                 }
             }
             else_if = {
-                limit = { has_idea = mixed_trud }
+                limit = { has_idea = mixed_mode }
                 swap_ideas = {
-                    remove_idea = mixed_trud
+                    remove_idea = mixed_mode
                     add_idea = labor_service
                 } 
             }
@@ -909,9 +909,9 @@ focus_tree = {
                 }
             }
             else_if = {
-                limit = { has_idea = pogran_control }
+                limit = { has_idea = border_control }
                 swap_ideas = {
-                    remove_idea = pogran_control
+                    remove_idea = border_control
                     add_idea = opend_borders
                 } 
             }
@@ -923,9 +923,9 @@ focus_tree = {
                 } 
             }
             else_if = {
-                limit = { has_idea = migration_otbor }
+                limit = { has_idea = migration_selection }
                 swap_ideas = {
-                    remove_idea = migration_otbor
+                    remove_idea = migration_selection
                     add_idea = opend_borders
                 } 
             }
@@ -949,9 +949,9 @@ focus_tree = {
                 }
             }
             else_if = {
-                limit = { has_idea = pogran_control }
+                limit = { has_idea = border_control }
                 swap_ideas = {
-                    remove_idea = pogran_control
+                    remove_idea = border_control
                     add_idea = closed_borders
                 } 
             }
@@ -963,9 +963,9 @@ focus_tree = {
                 } 
             }
             else_if = {
-                limit = { has_idea = migration_otbor }
+                limit = { has_idea = migration_selection }
                 swap_ideas = {
-                    remove_idea = migration_otbor
+                    remove_idea = migration_selection
                     add_idea = closed_borders
                 } 
             }
@@ -984,24 +984,24 @@ focus_tree = {
                 days = 1
             }
             if = {
-                limit = { has_idea = ignore_iskajenia }
+                limit = { has_idea = ignore_distortions }
                 swap_ideas = {
-                    remove_idea = ignore_iskajenia
-                    add_idea = likvidation_iskajenii
+                    remove_idea = ignore_distortions
+                    add_idea = liquidation_of_distortions
                 }
             }
             else_if = {
-                limit = { has_idea = sderjivanie_iskajenii }
+                limit = { has_idea = restrain_distortions }
                 swap_ideas = {
-                    remove_idea = sderjivanie_iskajenii
-                    add_idea = likvidation_iskajenii
+                    remove_idea = restrain_distortions
+                    add_idea = liquidation_of_distortions
                 } 
             }
             else_if = {
-                limit = { has_idea = limited_recearchig_iskajenii }
+                limit = { has_idea = limited_research_of_distortions }
                 swap_ideas = {
-                    remove_idea = limited_recearchig_iskajenii
-                    add_idea = likvidation_iskajenii
+                    remove_idea = limited_research_of_distortions
+                    add_idea = liquidation_of_distortions
                 } 
             }
             add_political_power = 100
@@ -1205,21 +1205,21 @@ focus_tree = {
                 limit = { has_idea = papers }
                 swap_ideas = {
                     remove_idea = papers
-                    add_idea = radiio
+                    add_idea = radio
                 }
             }
             else_if = {
                 limit = { has_idea = internet }
                 swap_ideas = {
                     remove_idea = internet
-                    add_idea = radiio
+                    add_idea = radio
                 } 
             }
             else_if = {
-                limit = { has_idea = televizor }
+                limit = { has_idea = television }
                 swap_ideas = {
-                    remove_idea = televizor
-                    add_idea = radiio
+                    remove_idea = television
+                    add_idea = radio
                 } 
             }
             add_to_variable = { order = 5 }
@@ -1247,21 +1247,21 @@ focus_tree = {
                 limit = { has_idea = papers }
                 swap_ideas = {
                     remove_idea = papers
-                    add_idea = televizor
+                    add_idea = television
                 }
             }
             else_if = {
                 limit = { has_idea = internet }
                 swap_ideas = {
                     remove_idea = internet
-                    add_idea = televizor
+                    add_idea = television
                 } 
             }
             else_if = {
-                limit = { has_idea = radiio }
+                limit = { has_idea = radio }
                 swap_ideas = {
                     remove_idea = radiio
-                    add_idea = televizor
+                    add_idea = television
                 } 
             }
             add_to_variable = { order = -5 }

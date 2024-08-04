@@ -207,7 +207,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "land"
-			position = { x= 796 y = 2}
+			position = { x= 708 y = 2}
 			clipping = no
 			size = { width=56 height=30 }
 			Orientation = UPPER_LEFT
@@ -240,7 +240,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "navy"
-			position = { x= 854 y = 2}
+			position = { x= -10000 y = 2}
 			clipping = no
 			size = { width=56 height=30 }
 			Orientation = UPPER_LEFT
@@ -273,7 +273,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "air"
-			position = { x= 912 y = 2}
+			position = { x= 768 y = 2}
 			clipping = no
 			size = { width=56 height=30 }
 			Orientation = UPPER_LEFT
@@ -306,7 +306,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "cp"
-			position = { x= 732 y = 2}
+			position = { x= 642 y = 2}
 			clipping = no
 			size = { width=62 height=30 }
 			Orientation = UPPER_LEFT
@@ -367,20 +367,20 @@ guiTypes = {
 		iconType ={
 			name ="convoy_text_bg"
 			spriteType = "GFX_generic_box_smallest"
-			position = { x=642 y=5 }
+			position = { x=-10000 y=5 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		iconType ={
 			name ="convoys_icon"
 			spriteType = "GFX_topbar_convoys"
-			position = { x= 641 y = 9 }
+			position = { x=-10000 y = 9 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		instantTextBoxType = {
 			name ="convoys_count"
-			position = { x= 667 y = 4 }
+			position = { x=-10000 y = 4 }
 			font = "hoi_18mbs"
 			text = "0"
 			format = center
@@ -392,7 +392,7 @@ guiTypes = {
 		iconType = {
 			name ="convoys_ratio_bar"
 			spriteType = "GFX_topbar_fuel_bar"
-			position = { x= 665 y = 20 }
+			position = { x=-10000 y = 20 }
 			frame = 50
 			alwaystransparent = yes
 		}
@@ -751,7 +751,7 @@ guiTypes = {
 			buttonType = {
 				name = "intel_agency_button"
 				quadTextureSprite ="GFX_topbar_intelligence" 
-				position = { x= -49 y = 0 }
+				position = { x= -1000 y = 0 }
 				Orientation = "UPPER_LEFT"
 				clicksound = click_close
 				oversound = ui_menu_over
@@ -768,7 +768,7 @@ guiTypes = {
 	
 			instantTextBoxType = {
 				name ="intelview_ops_prepared_or_completed_items"
-				position = { x= -51 y = 4 }
+				position = { x= -1000 y = 4 }
 				font = "hoi_16mbs"
 				text = "9"
 				format = center
@@ -780,14 +780,14 @@ guiTypes = {
 			iconType = {
 				name = "intelview_ops_available_bg"
 				spriteType = "GFX_topbar_alert_bg"
-				position = { x = -49 y = 20}
+				position = { x = -1000 y = 20}
 				alwaystransparent = yes
 				frame = 1
 			}
 
 			instantTextBoxType = {
 				name ="intelview_ops_available_items"
-				position = { x= -51 y = 20 }
+				position = { x= -1000 y = 20 }
 				font = "hoi_16mbs"
 				text = "9"
 				format = center
@@ -799,7 +799,7 @@ guiTypes = {
 			# Here, several buttons are put in the container "after_intel_agency_button", to be easily moved if the player don't have the DLC requiered by "intel_agency_button".
 			containerWindowType = {
 				name = "after_intel_agency_button"
-				position = { x=56 y=0 }
+				position = { x=0 y=0 }
 				
 				buttonType = {
 					name = "technology_button"
@@ -902,7 +902,7 @@ guiTypes = {
 			
 			buttonType = {
 				name = "navy_button"
-				position = { x = -253 y = 5 }
+				position = { x = -10000 y = 5 }
 				quadTextureSprite ="GFX_navyoverview_button"
 				Orientation = "UPPER_right"
 				shortcut = "p"

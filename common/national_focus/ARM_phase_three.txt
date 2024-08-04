@@ -220,7 +220,7 @@ focus_tree = {
                 producer = ARM
             }
             add_equipment_to_stockpile = {
-                type = infantry_clothing
+                type = infantry_odejda_0
                 amount = 643
                 producer = ARM
             }
@@ -750,8 +750,8 @@ focus_tree = {
         ai_will_do = { factor = 10 }
         completion_reward = {
             swap_ideas = {
-                remove_idea = ignore_iskajenia
-                add_idea = likvidation_iskajenii
+                remove_idea = ignore_distortions
+                add_idea = liquidation_of_distortions
             }
         }
     }
@@ -766,8 +766,8 @@ focus_tree = {
         ai_will_do = { factor = 10 }
         completion_reward = {
             swap_ideas = {
-                remove_idea = ignore_iskajenia
-                add_idea = limited_recearchig_iskajenii
+                remove_idea = ignore_distortions
+                add_idea = limited_research_of_distortions
             }
         }
     }
@@ -1440,31 +1440,49 @@ focus_tree = {
         ai_will_do = { factor = 10 }
         completion_reward = {
             BRD = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
             WAC = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
             HAN = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
             BRI = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
             FUD = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
             AZB = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
             CRW = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
             DOM = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
             LUG = {
-                add_core_of = ARM
+                every_core_state = {
+                    add_core_of = ARM                    
+                }
             }
         }
     }

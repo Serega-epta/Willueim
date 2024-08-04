@@ -1,10 +1,7 @@
 resource_expansion_category = {
     expand_steel_production = {
         priority = 100
-        available = {
-            political_power > 50
-            num_of_civilian_factories > 1 
-        }
+        available = { num_of_civilian_factories > 1 }
         cost = 50
         days_remove = 180
         days_re_enable = 60
@@ -55,10 +52,7 @@ resource_expansion_category = {
     }
     expand_strategic_material_production = {
         priority = 90
-        available = {
-            political_power > 50
-            num_of_civilian_factories > 3 
-        }
+        available = { num_of_civilian_factories > 3 }
         cost = 50
         days_remove = 180
         days_re_enable = 60
@@ -145,10 +139,7 @@ resource_expansion_category = {
     }
     start_synthetic_oil_experiments = {
         priority = 80
-        available = {
-            political_power > 75
-            num_of_civilian_factories > 6 
-        }
+        available = { num_of_civilian_factories > 6 }
         cost = 75
         days_remove = 180
         modifier = {
@@ -173,10 +164,7 @@ resource_expansion_category = {
         visible = {
             has_country_flag = oil_experiments
         }
-        available = {
-            political_power > 100
-            num_of_civilian_factories > 8 
-        }
+        available = { num_of_civilian_factories > 8  }
         cost = 100
         days_remove = 180
         days_re_enable = 90

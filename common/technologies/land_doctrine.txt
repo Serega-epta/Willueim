@@ -107,9 +107,6 @@ technologies = {
 		category_tanks = {
 			max_organisation = 1
 		}
-		armored_car = {
-			max_organisation = 2
-		}
 
 		category_all_armor = {
 			maximum_speed = 0.1
@@ -164,35 +161,10 @@ technologies = {
 		xor={
 			armored_spearhead
 		}
-		motorized = {
+		motopechotabronecar = {
 			maximum_speed = 0.1
 			default_morale = 0.2
-		}
-		armored_car = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mot_artillery_brigade = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mot_anti_tank_brigade = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mot_anti_air_brigade = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mechanized = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		amphibious_mechanized = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		
+		}	
 		
 		path = {
 			leads_to_tech = mass_motorization 
@@ -228,11 +200,6 @@ technologies = {
 			modifier = {
 				not = { ai_air_doctrine_tier_2_trigger = yes }
 				factor = 0.75
-			}
-
-			modifier = {
-				tag = GER
-				factor = 2
 			}
 		}
 		
@@ -298,21 +265,10 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 
-		motorized = {
-			max_organisation = 15
-			
-		}
-		mechanized = {
-			max_organisation = 15
-		}
-		amphibious_mechanized = {
-			max_organisation = 15
-		}
-		
-		armored_car = {
-			max_organisation = 3	
-		}
 
+		motopechotabronecar = {
+			max_organisation = 15
+		}
 		category_tanks = {
 			max_organisation = 3
 		}
@@ -499,22 +455,12 @@ technologies = {
 		category_all_armor = {
 			default_morale = 0.1
 		}
-		armored_car = {
+		motopechotabronecar = {
 			default_morale = 0.1
-			max_organisation = 7
+			max_organisation = 7			
 		}
 
-		enable_tactic = tactic_breakthrough
-		
-		motorized = {
-			max_organisation = 5
-		}
-		mechanized = {
-			max_organisation = 5
-		}
-		amphibious_mechanized = {
-			max_organisation = 5
-		}		
+		enable_tactic = tactic_breakthrough	
 
 		
 		path = {
@@ -634,8 +580,8 @@ technologies = {
 		category_tanks = {
 			max_organisation = 2
 		}
-		armored_car = {
-			max_organisation = 2
+		motopechotabronecar = {
+			max_organisation = 2			
 		}
 
 		
@@ -736,7 +682,7 @@ technologies = {
 		category_all_armor = {
 			default_morale = 0.2
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 3
 			default_morale = 0.2
 			breakthrough = 0.20
@@ -824,10 +770,6 @@ technologies = {
 			modifier = {
 				not = { ai_air_doctrine_tier_2_trigger = yes }
 				factor = 0.5
-			}
-			modifier = {
-				tag = GER
-				factor = 3
 			}
 		}
 		
@@ -1174,13 +1116,6 @@ technologies = {
 		
 		category_line_artillery = {
 			default_morale = 0.2
-		}
-		
-		signal_company = {
-			battalion_mult = {
-				category = category_artillery
-				defense = 0.10
-			}
 		}
 		
 		path = {
@@ -1681,7 +1616,7 @@ technologies = {
 		category_all_armor = {
 			default_morale = 0.05
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 2
 			default_morale = 0.05
 		}
@@ -1996,7 +1931,7 @@ technologies = {
 		motorized = {
 			max_organisation = 5
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 5
 		}
 		mechanized = {
@@ -2116,7 +2051,7 @@ technologies = {
 		category_tanks = {
 			max_organisation = 1
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 1
 		}
 		coordination_bonus = 0.1
@@ -2284,7 +2219,7 @@ technologies = {
 		category_tanks = {
 			max_organisation = 1
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 2
 		}
 
@@ -2393,7 +2328,7 @@ technologies = {
 		category_all_armor = {
 			default_morale = 0.1
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 2
 			default_morale = 0.1
 		}
@@ -2563,7 +2498,7 @@ technologies = {
 		category_tanks = {
 			max_organisation = 1
 		}	
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 1
 		}		
 
@@ -2832,24 +2767,7 @@ technologies = {
 				}
 				factor = 0.8
 			}
-			modifier = {
-				tag = SOV
-				factor = 2
-			}
 
-			modifier = {
-				factor = 0.4
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
 			modifier = {
 				not = { ai_air_doctrine_tier_1_trigger = yes }
 				factor = 0.5
@@ -2869,9 +2787,9 @@ technologies = {
 		category_tanks = {
 			max_organisation = 2
 		}
-		armored_car = {
-			max_organisation = 2
-		}
+		motopechotabronecar = {
+			max_organisation = 2			
+		} 
 
 		xp_research_type = army
 		xp_unlock_cost = 100
@@ -3035,10 +2953,11 @@ technologies = {
 			max_organisation = 5
 			breakthrough = 0.10
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 1
 			breakthrough = 0.10
 		}
+
 		
 		enable_tactic = tactic_breakthrough
 		
@@ -3093,21 +3012,8 @@ technologies = {
 		category_all_armor = {
 			default_morale = 0.1
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 3
-			default_morale = 0.1
-		}	
-
-		mechanized = {
-			max_organisation = 10
-			default_morale = 0.1
-		}
-		motorized = {
-			max_organisation = 10
-			default_morale = 0.1
-		}	
-		amphibious_mechanized = {
-			max_organisation = 10
 			default_morale = 0.1
 		}	
 		
@@ -3238,14 +3144,6 @@ technologies = {
 			land_doctrine
 			cat_mass_assault
 		}
-
-		military_police = {
-			battalion_mult = {
-				category = category_cavalry
-				suppression = 0.50
-				add = yes
-			}
-		}
 		
 		folder = {
 			name = land_doctrine_folder
@@ -3268,20 +3166,6 @@ technologies = {
 				not = { ai_air_doctrine_tier_2_trigger = yes }
 				factor = 0.75
 			}
-			modifier = {
-				factor = 0.6
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
-
 		}
 		
 		ai_research_weights = {
@@ -3340,7 +3224,7 @@ technologies = {
 		category_tanks = {
 			max_organisation = 2
 		}
-		armored_car = {
+		motopechotabronecar = {
 			max_organisation = 2
 		}
 		

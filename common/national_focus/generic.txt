@@ -23,9 +23,9 @@ focus_tree = {
 		prerequisite = { focus = source_of_order }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
-				add_dynamic_modifier = {
-					modifier = apocaliptic_realism
-				}
+			add_dynamic_modifier = {
+				modifier = apocaliptic_realism
+			}
 			set_variable = {
 				var = generic_production_speed_buildings_factor
 				value = 0.15
@@ -117,7 +117,6 @@ focus_tree = {
 			set_variable = {
 				var = generic_offence
 				value = 0.00
-				tooltip = 
 			}
 		}
 	}
@@ -655,7 +654,6 @@ focus_tree = {
 			set_variable = {
 				var = generic_war_support_weekly
 				value = 0.00
-				tooltip = 
 			}
 		}
 	}

@@ -388,21 +388,35 @@ focus_tree = {
                 type = annex_everything
             }
             country_event = pautov.19
-            country_event = {
-                id = pautov.20
-                days = 10
-            }
-            country_event = {
-                id = pautov.21
-                days = 20
-            }
-            country_event = {
-                id = pautov.22
-                days = 30
-            }
-            country_event = {
-                id = pautov.23
-                days = 40
+            hidden_effect = {
+                if = {
+                    limit = { country_exists = GLS }
+                    country_event = {
+                        id = pautov.20
+                        days = 10
+                    }
+                }
+                if = {
+                    limit = { country_exists = PMD }
+                    country_event = {
+                        id = pautov.21
+                        days = 20
+                    }
+                }
+                if = {
+                    limit = { country_exists = ARM }
+                    country_event = {
+                        id = pautov.22
+                        days = 30
+                    }
+                }
+                if = {
+                    limit = { country_exists = AGE }
+                    country_event = {
+                        id = pautov.23
+                        days = 40
+                    }
+                }                
             }
         }
     }
