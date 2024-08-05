@@ -504,7 +504,6 @@ focus_tree = {
         id = ARM_kill_fanatic              #Усмирить фанатиков
         prerequisite = { focus = ARM_secure_west }
         icon = GFX_Pacify_fanatics
-        mutually_exclusive = { focus = ARM_notthis_world }
         x = 7
         y = 7
         cost = 3.6
@@ -531,7 +530,6 @@ focus_tree = {
         id = ARM_notthis_world             #Не от мира сего
         prerequisite = { focus = ARM_secure_west }
         icon = GFX_Not_of_this_world
-        mutually_exclusive = { focus = ARM_kill_fanatic }
         x = 9
         y = 7
         cost = 3.6
