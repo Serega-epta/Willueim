@@ -268,7 +268,7 @@ GLS_nuclear_strike = {
 				hidden_trigger = {
 					NOT = { has_country_flag = nuclear_strike_has_been_launched_against_you_lol }	
 				}
-			}		
+			}
 		}
 		available = { 
 			custom_trigger_tooltip = {
@@ -283,6 +283,7 @@ GLS_nuclear_strike = {
 				}
 			}				
 		}
+		
 		target_array = enemies
 		targets_dynamic = yes
 		target_trigger = {
@@ -293,10 +294,17 @@ GLS_nuclear_strike = {
 			}
 		}
 		
+		ai_will_do = {
+			base = 200
+		}		
+		
 		complete_effect = {
 			custom_effect_tooltip = gls_launch_a_nuclear_strike_tt
 			hidden_effect = {
 				FROM = {
+					capital_scope = {
+						set_temp_variable = { GLOBAL.capital_target_state = THIS }
+					}				
 					set_country_flag = nuclear_strike_has_been_launched_against_you_lol 
 					add_timed_idea = {
 						idea = GLS_death_of_gods
@@ -304,18 +312,20 @@ GLS_nuclear_strike = {
 					}
 					country_event = { id = GLS.666 days = 1 }
 					country_event = { id = GLS.888 days = 70 } #Ивент, чтобы снять флаг
-					#launch_nuke = { #Когда нибудь я это реализую - Ural Letov
-					#	province = { is_capital = yes } 
-					#}
-				}
+				}				
 				GLS = {
 					add_stability = -0.03
 					add_to_variable = { freedom = 20 }
 					subtract_from_variable = { order = 10 }
 					subtract_from_variable = { nuclear_charges = 1 }
 					country_event = { id = GLS.777 days = 1 }
+					launch_nuke = {
+						state = capital_target_state
+						controller = FROM
+						use_nuke = no
+					}
 				}
 			}
-		}		
+		}
 	}
 }

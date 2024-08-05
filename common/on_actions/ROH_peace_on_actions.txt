@@ -41,80 +41,36 @@ on_actions = {
 
 			if = {
 				limit = {
-					OR = {
-						ROOT = {
+					ROOT = {
+						OR = {
 							original_tag = MOT
-						}
-						ROOT = {
 							original_tag = URA
-						}
-						ROOT = {
 							original_tag = EDM
-						}
-						ROOT = {
 							original_tag = URC
-						}
-						ROOT = {
 							original_tag = WPK
-						}
-						ROOT = {
 							original_tag = ZAN
-						}
-						ROOT = {
 							original_tag = OCH
-						}
-						ROOT = {
 							original_tag = TAR
 						}
 					}
 					FROM = {
-						original_tag = GLS
-						#has_country_flag = GLS_negotiation_process_fail
+						OR = {
+							original_tag = GLS
+							has_country_flag = GLS_negotiation_process_fail
+						}
 					}
-				}
-
-				every_country = {
-					limit = { has_war_with = GLS }
-					white_peace = GLS
 				}
 				
-				FROM = {
+				GLS = {
+					white_peace = ROOT
 					annex_country = {
-						target = MOT
-						transfer_troops = no
-					}
-					annex_country = {
-						target = URA
-						transfer_troops = no
-					}
-					annex_country = {
-						target = EDM
-						transfer_troops = no
-					}
-					annex_country = {
-						target = URC
-						transfer_troops = no
-					}
-					annex_country = {
-						target = WPK
-						transfer_troops = no
-					}
-					annex_country = {
-						target = ZAN
-						transfer_troops = no
-					}
-					annex_country = {
-						target = OCH
-						transfer_troops = no
-					}
-					annex_country = {
-						target = TAR
+						target = ROOT
 						transfer_troops = no
 					}
 					every_state = {
 						remove_core_of = ROOT
 					}
-					#clr_country_flag = GLS_negotiation_process_fail
+					clr_country_flag = GLS_negotiation_process_fail
 				}
 				set_global_flag = skip_default_capitulation
 			}
@@ -122,49 +78,37 @@ on_actions = {
 			else_if = {
 				limit = {
 					ROOT = {
-						original_tag = GLS
-						#has_country_flag = GLS_negotiation_process_fail
+						OR = {
+							original_tag = GLS
+							has_country_flag = GLS_negotiation_process_fail
+						}
 					}
-					OR = {
-						FROM = {
+					FROM = {
+						OR = {
 							original_tag = MOT
-						}
-						FROM = {
 							original_tag = URA
-						}
-						FROM = {
 							original_tag = EDM
-						}
-						FROM = {
 							original_tag = URC
-						}
-						FROM = {
 							original_tag = WPK
-						}
-						FROM = {
 							original_tag = ZAN
-						}
-						FROM = {
 							original_tag = OCH
-						}
-						FROM = {
 							original_tag = TAR
 						}
 					}
 				}
-
-				every_country = {
-					limit = { has_war_with = GLS }
-					white_peace = GLS
-				}
 				
 				FROM = {
+					white_peace = ROOT
 					WPK = {
 						transfer_state = 398
 						transfer_state = 1003
 						transfer_state = 1000
 						transfer_state = 573
 						transfer_state = 729
+						set_capital = {
+							state = 398
+							remember_old_capital = no
+						}
 					}
 					MOT = {
 						transfer_state = 251
@@ -191,13 +135,13 @@ on_actions = {
 						}
 					}
 					every_state = {
-						remove_core_of = GLS
+						remove_core_of = ROOT
 					}
 				}
 				
 				ROOT = {
 					GLS = {
-						#clr_country_flag = GLS_negotiation_process_fail
+						clr_country_flag = GLS_negotiation_process_fail
 						set_cosmetic_tag = GLS_URAL_MANDATE
 						load_focus_tree = state_liquidation_board_collapsed
 						kill_country_leader = yes
@@ -230,24 +174,20 @@ on_actions = {
 			else_if = {
 				limit = {
 					ROOT = {
-						original_tag = UFV
-					}
-					OR = {
-						FROM = {
-							original_tag = SDC
+						OR = {
+							original_tag = UFV
 						}
-						FROM = {
+					}
+					FROM = {
+						OR = {
+							original_tag = SDC
 							original_tag = VOZ
 						}
 					}
 				}
-
-				every_country = {
-					limit = { has_war_with = UFV }
-					white_peace = UFV
-				}
 				
 				FROM = {
+					white_peace = ROOT
 					SDC = {
 						transfer_state = 262
 					}
@@ -255,7 +195,7 @@ on_actions = {
 						transfer_state = 947
 					}
 					every_state = {
-						remove_core_of = UFV
+						remove_core_of = ROOT
 					}
 				}
 			}
