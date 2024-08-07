@@ -207,6 +207,7 @@ focus_tree = {
 		}
 		prerequisite = {focus = GLS_chess}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		will_lead_to_war_with = MOT
 		completion_reward = { 
 			declare_war_on = {
 				target = MOT
@@ -226,6 +227,7 @@ focus_tree = {
 		}
 		prerequisite = {focus = GLS_madness}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		will_lead_to_war_with = URA
 		completion_reward = { 
 			declare_war_on = {
 				target = URA
@@ -245,6 +247,7 @@ focus_tree = {
 		}
 		prerequisite = {focus = GLS_the_weakest_sex}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		will_lead_to_war_with = ISK
 		completion_reward = { 
 			declare_war_on = {
 				target = ISK
@@ -264,6 +267,7 @@ focus_tree = {
 		}
 		prerequisite = {focus = GLS_sufferers}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		will_lead_to_war_with = BL1
 		completion_reward = { 
 			country_event = {
 				id = GLS.26
@@ -521,6 +525,11 @@ focus_tree = {
 				days = 1
 			}
 			add_research_slot = 1
+			clamp_variable = {
+    			var = ready_charge
+    			min = 0
+   				max = 100
+			}
 			set_country_flag = GLS_kurchatov_project_start
 			custom_effect_tooltip = unlock_kurchatov_project
 		}
@@ -708,6 +717,7 @@ focus_tree = {
 			}
 			993 = {
 				add_core_of = GLS
+				remove_core_of = SI1
 			}
 		}
 	}
@@ -724,6 +734,13 @@ focus_tree = {
 		prerequisite = {focus = GLS_zhukov}
 		prerequisite = {focus = GLS_clear}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		will_lead_to_war_with = EDM
+		will_lead_to_war_with = WPK
+		will_lead_to_war_with = URC
+		will_lead_to_war_with = ZAN
+		will_lead_to_war_with = TAR
+		will_lead_to_war_with = OCH
+		will_lead_to_war_with = DIS
 		completion_reward = { 
 			declare_war_on = {
 				target = EDM

@@ -579,6 +579,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		will_lead_to_war_with = AZB
 			
 		completion_reward = {
 				declare_war_on = {
@@ -645,12 +646,12 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.75
 				uses = 1
-				category = prewar_drone
+				category = light_air
 			}
 			add_tech_bonus = {
 				bonus = 0.75
 				uses = 1
-				category = basic_mass_airplane
+				category = medium_air
 			}
 			army_experience = 100
 			air_experience = 100
@@ -825,34 +826,34 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					NOT = { has_tech = military_police_tech }
+					NOT = { has_tech = tech_ghounds }
 				}
 				set_technology = {
-					military_police_tech = 1
+					tech_ghounds = 1
 				}
 			}
 			else_if = {
 				limit = {
-					has_tech = military_police_tech
+					has_tech = tech_ghounds
 				}
 				set_technology = {
-					military_police_tech = 1
+					tech_ghounds = 1
 				}
 			}
 			else_if = {
 				limit = {
-					has_tech = military_police_tech
+					has_tech = tech_ghounds
 				}
 				set_technology = {
-					military_police_tech = 1
+					tech_ghounds = 1
 				}
 			}
 			else_if = {
 				limit = {
-					has_tech = military_police_tech
+					has_tech = tech_ghounds
 				}
 				set_technology = {
-					military_police_tech = 1
+					tech_ghounds = 1
 				}
 			}
 			add_equipment_to_stockpile = {

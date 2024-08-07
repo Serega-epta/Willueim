@@ -23,18 +23,20 @@ focus_tree = {
 		prerequisite = { focus = source_of_order }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
-				add_dynamic_modifier = {
-					modifier = apocaliptic_realism
-				}
+			add_dynamic_modifier = {
+				modifier = apocaliptic_realism
+			}
 			set_variable = {
 				var = generic_production_speed_buildings_factor
 				value = 0.15
 				tooltip = lot_of_life_tt 
 			}
 			random_controlled_state = {
-				add_offsite_building = {
-					type =  industrial_complex 
-					level = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 2
+    				instant_build = yes
 				}
 			}
 		}
@@ -115,7 +117,6 @@ focus_tree = {
 			set_variable = {
 				var = generic_offence
 				value = 0.00
-				tooltip = 
 			}
 		}
 	}
@@ -182,7 +183,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
-				category = land_doctrine
+				category = artillery
 			}
 		}
 	}
@@ -201,7 +202,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
-				category = artillery
+				category = armor
 			}
 		}
 	}
@@ -220,7 +221,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
-				category = armor
+				category = infantry_weapons
 			}
 		}
 	}
@@ -390,8 +391,12 @@ focus_tree = {
 				tooltip = our_factories_tt
 			}
 			random_controlled_state = {
-				add_extra_state_shared_building_slots = 2.
-				add_offsite_building = { type =  industrial_complex level = 2 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 2
+    				instant_build = yes
+				}
 			}
 		}
 	}
@@ -439,8 +444,12 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			random_controlled_state = {
-				add_extra_state_shared_building_slots = 2.
-				add_offsite_building = { type =  industrial_complex level = 2 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 2
+    				instant_build = yes
+				}
 			}
 		}
 	}
@@ -500,8 +509,12 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			random_controlled_state = {
-				add_extra_state_shared_building_slots = 2.
-				add_offsite_building = { type =  arms_factory level = 2 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = arms_factory
+    				level = 2
+    				instant_build = yes
+				}
 			}
 		}
 	}
@@ -517,8 +530,12 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			random_controlled_state = {
-				add_extra_state_shared_building_slots = 2.
-				add_offsite_building = { type =  arms_factory level = 2 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = arms_factory
+    				level = 2
+    				instant_build = yes
+				}
 			}
 		}
 	}
@@ -637,7 +654,6 @@ focus_tree = {
 			set_variable = {
 				var = generic_war_support_weekly
 				value = 0.00
-				tooltip = 
 			}
 		}
 	}
@@ -693,3 +709,4 @@ focus_tree = {
 			add_ideas = blood_bath
 		}
 	}
+}

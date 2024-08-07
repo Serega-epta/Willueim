@@ -141,9 +141,18 @@ country_event = {
             }
         }
         UKR = {
-            225 = { add_core_of = UKR }
-            193 = { add_core_of = UKR }
-            259 = { add_core_of = UKR }
+            225 = { 
+                add_core_of = UKR 
+                remove_core_of = ARM
+            }
+            193 = { 
+                add_core_of = UKR 
+                remove_core_of = ARM
+            }
+            259 = { 
+                add_core_of = UKR 
+                remove_core_of = ARM
+            }
         }
         country_event = {
             id = IMP.5

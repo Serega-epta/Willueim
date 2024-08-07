@@ -43,7 +43,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.0
-		start_year = 1918
+		start_year = 2010
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @2010 }
@@ -71,7 +71,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2015
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @2015 }
@@ -96,17 +96,6 @@ technologies = {
 				defence = 0.10
 				attack = 0.10
 			}
-		}
-
-		enable_equipment_modules = {
-			dozer_blade
-			flamethrower
-		}
-
-		enable_subunits = {
-			light_flame_tank
-			medium_flame_tank
-			heavy_flame_tank
 		}
 		
 		path = {
@@ -141,30 +130,6 @@ technologies = {
 			}
 		}
 
-		light_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		medium_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		heavy_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
 		path = {
 			leads_to_tech = tech_engineers4
 			research_cost_coeff = 1
@@ -196,30 +161,6 @@ technologies = {
 				defence = 0.1
 			}
 		}
-		light_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		medium_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		heavy_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
 		research_cost = 1.5
 		start_year = 2045
 		folder = {
@@ -249,7 +190,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2015
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @2015 }
@@ -366,7 +307,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2015
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @2015 }
@@ -472,7 +413,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2015
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @2015 }
@@ -490,7 +431,6 @@ technologies = {
 
 		standard_bearer = {
 			max_organisation = 0.5
-			attack = 0.01
 			defense = 0.03
 			maximum_speed = 0.02
 		}
@@ -499,7 +439,7 @@ technologies = {
 			leads_to_tech = tech_standard_bearer3
 			research_cost_coeff = 1
 		}
-		start_year = 2020
+		start_year = 2025
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @2025 }
@@ -517,7 +457,6 @@ technologies = {
 
 		standard_bearer = {
 			max_organisation = 0.5
-			attack = 0.01
 			defense = 0.03
 			maximum_speed = 0.02
 		}
@@ -527,7 +466,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2030
+		start_year = 2035
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @2035 }
@@ -545,12 +484,11 @@ technologies = {
 
 		standard_bearer = {
 			max_organisation = 0.5
-			attack = 0.01
 			defense = 0.03
 			maximum_speed = 0.02
 		}
 		research_cost = 2
-		start_year = 2040
+		start_year = 2045
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @2045 }
@@ -575,7 +513,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2015
 		folder = {
 			name = support_folder
 			position = { x = 10 y = @2015 }
@@ -593,7 +531,6 @@ technologies = {
 	tech_rhbz2 = {
 		rhbz = {
 			recon = 0.5	
-			movement = 0.05
 			defense = 0.01
 		}
 		path = {
@@ -602,7 +539,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2025
 		folder = {
 			name = support_folder
 			position = { x = 10 y = @2025 }
@@ -619,7 +556,6 @@ technologies = {
 	tech_rhbz3 = {
 		rhbz = {
 			recon = 0.5	
-			movement = 0.05
 			defense = 0.01
 		}
 		path = {
@@ -628,7 +564,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2035
 		folder = {
 			name = support_folder
 			position = { x = 10 y = @2035 }
@@ -645,11 +581,10 @@ technologies = {
 	tech_rhbz4 = {
 		rhbz = {
 			recon = 0.5	
-			movement = 0.05
 			defense = 0.01
 		}
 		research_cost = 2
-		start_year = 2010
+		start_year = 2045
 		folder = {
 			name = support_folder
 			position = { x = 10 y = @2045 }
@@ -678,7 +613,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2015
 		folder = {
 			name = support_folder
 			position = { x = 12 y = @2015 }
@@ -752,7 +687,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2035
 		folder = {
 			name = support_folder
 			position = { x = 12 y = @2035 }
@@ -784,7 +719,7 @@ technologies = {
 		}		
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2045
 		folder = {
 			name = support_folder
 			position = { x = 12 y = @2045 }
@@ -909,7 +844,7 @@ technologies = {
 
 
 		research_cost = 2
-		start_year = 2010
+		start_year = 2015
 		folder = {
 			name = support_folder
 			position = { x = 8 y = @2015 }
@@ -1016,10 +951,10 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1910
+		start_year = 2010
 		folder = {
 			name = support_folder
-			position = { x = 2 y = @1918 }
+			position = { x = 2 y = @2010 }
 		}
 
 		path = {

@@ -12,8 +12,8 @@ country_event = {
 		name = ROH_debug.1.a
 		set_power_balance = {
 			id = LWV_power_balance
-			left_side = LWV_kanat_okhlostenko
-			right_side = LWV_kanat_markov
+			left_side = LWV_kanat_okhlostenko_influence
+			right_side = LWV_kanat_markov_influence
 		}
 	}
 	option = {
@@ -21,7 +21,7 @@ country_event = {
 		add_power_balance_value = {
 			id = LWV_power_balance
 			value = -0.2
-			tooltip_side = LWV_kanat_okhlostenko
+			tooltip_side = LWV_kanat_okhlostenko_influence
 		}
 	}
 	option = {
@@ -29,7 +29,7 @@ country_event = {
 		add_power_balance_value = {
 			id = LWV_power_balance
 			value = 0.2
-			tooltip_side = LWV_kanat_markov
+			tooltip_side = LWV_kanat_markov_influence
 		}
 	}
 }
@@ -44,95 +44,11 @@ country_event = {
 	option = {
 		name = ROH_debug.2.a
 		every_country = {
-			activate_mission = ROH_rez_nya
+			set_country_flag = ROH_rez_nya
 		}
 	}
 }
 
-country_event = {
-	id = ROH_debug.3
-	title = ROH_debug.3.t
-	desc = ROH_debug.3.d
-    fire_only_once = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = ROH_debug.3.a=
-		remove_ideas = patriots_1p
-		remove_ideas = patriots_2p
-		remove_ideas = patriots_3p
-		remove_ideas = patriots_4p
-		remove_ideas = patriots_5p
-		remove_ideas = patriots_6p
-		remove_ideas = patriots_7p
-		remove_ideas = patriots_8p
-		remove_ideas = patriots_9p
-		remove_ideas = patriots_10p
-		remove_ideas = patriots_11p
-		remove_ideas = patriots_12p
-		remove_ideas = patriots_13p
-		remove_ideas = patriots_14p
-		remove_ideas = patriots_15p
-		remove_ideas = patriots_16p
-		remove_ideas = patriots_17p
-		remove_ideas = patriots_18p
-		remove_ideas = patriots_19p
-		remove_ideas = patriots_20p
-	}
-}
-
-#Ивент на проверку работоспособности механики Нихилитов
-country_event = {
-	id = ROH_debug.4
-	title = ROH_debug.4.t
-	desc = ROH_debug.4.d
-    fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = ROH_debug.4.a
-		load_focus_tree = army_junta_unite_focus
-		ARM = {
-			annex_country = {
-    				target = BIH
-    				transfer_troops = no
-			}
-			annex_country = {
-    				target = SUM
-    				transfer_troops = no
-			}
-			annex_country = {
-    				target = MAD
-    				transfer_troops = no
-			}
-			annex_country = {
-    				target = VDS
-    				transfer_troops = no
-			}
-			annex_country = {
-    				target = BAG
-    				transfer_troops = no
-			}			
-		}
-	}
-	option = {
-		name = ROH_debug.4.b
-		set_variable = { state_202 = 90 }
-		set_variable = { state_876 = 90 }
-		set_variable = { state_879 = 90 }
-		set_variable = { state_880 = 90 }
-		set_variable = { state_203 = 90 }
-		set_variable = { state_259 = 90 }
-		set_variable = { state_193 = 90 }
-		set_variable = { state_225 = 90 }
-		set_variable = { state_881 = 90 }	
-	}
-	option = {
-		name = ROH_debug.4.c
-		country_event = { id = ARM.998  days = 1 }			
-	}
-}
 
 #Ивент на проверку работоспособности механики Святости БНГВ
 country_event = {

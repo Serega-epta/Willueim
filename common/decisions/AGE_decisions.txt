@@ -13,7 +13,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = open_opposition }
 			}
 			divisions_in_state = {
-				count > 1
+				size > 1
 				state = FROM
 			}			
 		}
@@ -46,7 +46,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = clandestine_cells }
 			}
 			divisions_in_state = {
-				count > 1
+				size > 1
 				state = FROM
 			}			
 		}
@@ -91,7 +91,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = open_opposition }
 			}
 			divisions_in_state = {
-				count > 1
+				size > 1
 				state = FROM
 			}			
 		}
@@ -107,7 +107,7 @@ AGE_their_freedoms = {
 			AGE = { has_focus_tree = AGE_phase_2 }
 			has_country_flag = not_their_land_anymore_flag
 		}
-		OR = {
+		on_map_area = {
 			target_array = CHU.owned_states
 			target_array = HAR.owned_states
 			target_array = BLZ.owned_states
@@ -137,7 +137,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = clandestine_cells }
 			}
 			divisions_in_state = {
-				count > 1
+				size > 1
 				state = FROM
 			}
 		}
@@ -153,7 +153,7 @@ AGE_their_freedoms = {
 			AGE = { has_focus_tree = AGE_phase_2 }
 			has_country_flag = not_their_land_anymore_flag
 		}
-		OR = {
+		on_map_area = {
 			target_array = CHU.owned_states
 			target_array = HAR.owned_states
 			target_array = BLZ.owned_states
@@ -183,8 +183,8 @@ AGE_their_freedoms = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
 			OR = {
-				has_idea = AGE_red_sabres_1
-				has_idea = AGE_red_sabres_2
+				has_idea = AGE_red_sabres
+				has_idea = AGE_red_sabres_second
 			}		
 			has_focus_tree = AGE_phase_1
 		}
@@ -206,25 +206,25 @@ AGE_their_freedoms = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
 			OR = {
-				has_idea = AGE_red_sabres_1
-				has_idea = AGE_red_sabres_2
+				has_idea = AGE_red_sabres
+				has_idea = AGE_red_sabres_second
 			}		
 			has_focus_tree = AGE_phase_1
 		}
 		cost = 50
 		complete_effect = {
 			if = {
-				limit = { has_idea = AGE_red_sabres_1 }
+				limit = { has_idea = AGE_red_sabres }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_1
-					add_idea = AGE_red_sabres_2
+					remove_idea = AGE_red_sabres
+					add_idea = AGE_red_sabres_second
 				}
 			}
 			else = {
-				#limit = { has_idea = AGE_red_sabres_2 }
+				#limit = { has_idea = AGE_red_sabres_second }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_2
-					add_idea = AGE_red_sabres_1
+					remove_idea = AGE_red_sabres_second
+					add_idea = AGE_red_sabres
 				}			
 			}
 		}
@@ -233,25 +233,25 @@ AGE_their_freedoms = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
 			OR = {
-				has_idea = AGE_red_sabres_1
-				has_idea = AGE_red_sabres_2
+				has_idea = AGE_red_sabres
+				has_idea = AGE_red_sabres_second
 			}
 			has_focus_tree = AGE_phase_2
 		}
 		cost = 100
 		complete_effect = {
 			if = {
-				limit = { has_idea = AGE_red_sabres_1 }
+				limit = { has_idea = AGE_red_sabres }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_1
-					add_idea = AGE_red_sabres_2
+					remove_idea = AGE_red_sabres
+					add_idea = AGE_red_sabres_second
 				}
 			}
 			else = {
-				#limit = { has_idea = AGE_red_sabres_2 }
+				#limit = { has_idea = AGE_red_sabres_second }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_2
-					add_idea = AGE_red_sabres_1
+					remove_idea = AGE_red_sabres_second
+					add_idea = AGE_red_sabres
 				}			
 			}
 		}
@@ -329,7 +329,7 @@ AGE_their_freedoms = {
 					AGE = { country_event = { id = AGE_baltic_terror.6 } }
 				}				
 			}
-			add_to_variable = { count_days_baltic_terror = 1 }
+			add_to_variable = { size_days_baltic_terror = 1 }
 		}	
 	}
 	AGE_baltics_are_probing = {
@@ -369,7 +369,7 @@ AGE_their_freedoms = {
 				}
 				if = {
 					limit = { 
-						var_808 = 3
+						check_variable = { var_808 = 3 }
 						808 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_808 = 0 }
@@ -381,7 +381,7 @@ AGE_their_freedoms = {
 				}
 				else_if = {
 					limit = { 
-						var_809 = 3
+						check_variable = { var_808 = 3 }
 						809 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_809 = 0 }
@@ -393,7 +393,7 @@ AGE_their_freedoms = {
 				}
 				else_if = {
 					limit = { 
-						var_12 = 3
+						check_variable = { var_12 = 3 }
 						12 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_12 = 0 }
@@ -405,7 +405,7 @@ AGE_their_freedoms = {
 				}
 				else_if = {
 					limit = { 
-						var_13 = 3
+						check_variable = { var_13 = 3 }
 						13 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_13 = 0 }
@@ -417,7 +417,7 @@ AGE_their_freedoms = {
 				}
 				else = {
 					limit = { 
-						var_911 = 3
+						check_variable = { var_911 = 3 }
 						911 = { has_dynamic_modifier = { modifier = open_opposition } }
 					}
 					set_variable = { var_911 = 0 }
@@ -439,7 +439,7 @@ AGE_their_freedoms = {
 		timeout_effect = {
 			clr_country_flag = war_with_baltosphere_flag
 			AGE = { country_event = { id = AGE.9 } }
-			BLT = {
+			BTC = {
 				declare_war_on = {
 					target = AGE
 					type = annex_everything

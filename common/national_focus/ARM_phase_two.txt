@@ -24,10 +24,22 @@ focus_tree = {
                 id = ARMnew.22
                 days = 1
             }
-            876 = { add_core_of = ARM }
-            202 = { add_core_of = ARM }
-            878 = { add_core_of = ARM }
-            879 = { add_core_of = ARM }
+            876 = { 
+                add_core_of = ARM 
+                remove_core_of = BIH
+            }
+            202 = { 
+                add_core_of = ARM 
+                remove_core_of = BIH
+            }
+            878 = { 
+                add_core_of = ARM 
+                remove_core_of = DIB
+            }
+            879 = { 
+                add_core_of = ARM 
+                remove_core_of = BAG
+            }
             set_cosmetic_tag = ARM_KGS_cosmetic
             add_stability = 0.05
             set_capital = {
@@ -108,9 +120,9 @@ focus_tree = {
                     is_locked = no
                     priority = 1
                     regiments = {
-                        opolchenie = { x = 0 y = 0 }
-                        opolchenie = { x = 0 y = 1 }
-                        opolchenie = { x = 1 y = 0 }
+                        light_infantry = { x = 0 y = 0 }
+                        light_infantry = { x = 0 y = 1 }
+                        light_infantry = { x = 1 y = 0 }
                     }
                 }
             random_owned_state = {
@@ -298,7 +310,7 @@ focus_tree = {
                 producer = ARM
             }
             add_equipment_to_stockpile = {
-                type = infantry_clothing
+                type = infantry_odejda_0
                 amount = -3000
                 producer = ARM
             }
@@ -321,7 +333,7 @@ focus_tree = {
                 producer = ARM
             }
             add_equipment_to_stockpile = {
-                type = infantry_clothing
+                type = infantry_odejda_0
                 amount = 2000
                 producer = ARM
             }
@@ -371,44 +383,29 @@ focus_tree = {
         cost = 5
         ai_will_do = { factor = 10 }
         completion_reward = {
-            880 = {
-                add_core_of = CAR
+            IMP = {
+                every_core_state = {
+                    add_core_of = CAR
+                    remove_core_of = IMP
+                }
             }
-            834 = {
-                add_core_of = CAR
+            NOR = {
+                every_core_state = {
+                    add_core_of = CAR
+                    remove_core_of = IMP
+                }
             }
-            899 = {
-                add_core_of = CAR
+            PLR = {
+                every_core_state = {
+                    add_core_of = CAR
+                    remove_core_of = IMP
+                }
             }
-            896 = {
-                add_core_of = CAR
-            }
-            241 = {
-                add_core_of = CAR
-            }
-            224 = {
-                add_core_of = CAR
-            }
-            893 = {
-                add_core_of = CAR
-            }
-            898 = {
-                add_core_of = CAR
-            }
-            895 = {
-                add_core_of = CAR
-            }
-            903 = {
-                add_core_of = CAR
-            }
-            943 = {
-                add_core_of = CAR
-            }
-            902 = {
-                add_core_of = CAR
-            }
-            243 = {
-                add_core_of = CAR
+            COR = {
+                every_core_state = {
+                    add_core_of = CAR
+                    remove_core_of = IMP
+                }
             }
             ARM = {
                 release_puppet = CAR
@@ -646,6 +643,7 @@ focus_tree = {
         x = 20
         y = 6
         ai_will_do = { factor = 10 }
+        will_lead_to_war_with = IMP
         completion_reward = {
             declare_war_on = {
                 type = annex_everything

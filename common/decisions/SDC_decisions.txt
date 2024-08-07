@@ -23,6 +23,7 @@ SDC_Chess_game = {
 			}
 			979 = {
 				add_core_of = SDC
+				remove_core_of = SDI
 			}
 			set_country_flag = take_posisions_SDI_flag		
 		}		
@@ -127,11 +128,11 @@ SDC_Chess_game = {
 				target = ODJ
 				transfer_troops = no
 			}
-			978 = {
-				add_core_of = SDC
-			}
-			919 = {
-				add_core_of = SDC
+			ODJ = {
+				every_core_state = {
+					add_core_of = SDC
+					remove_core_of = ODJ					
+				}
 			}
 			set_country_flag = take_posisions_ODJ_flag
 		}		

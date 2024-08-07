@@ -1,7 +1,7 @@
 state= {
 	id=537
 	name="STATE_537"
-	manpower = 0
+	manpower = 1 # Парни, 0 человек не может быть в хойке. Делайте отдельную гуишку ну или хз.
 	resources={
 		oil=3 # was: 4
 	}
@@ -12,10 +12,6 @@ state= {
 		add_dynamic_modifier = { modifier = dead_region}
 		buildings = {
 			infrastructure = 2
-			12446 = {
-				naval_base = 1
-
-			}
 		}
 		victory_points = {
 			12446 1

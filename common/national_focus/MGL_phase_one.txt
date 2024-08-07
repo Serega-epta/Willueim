@@ -11,6 +11,7 @@ focus_tree = {
 
     focus = {
 		id = MGL_cybernetic_mind
+		icon = GFX_MGL_cybernetic_mind
 		x = 5
 		y = 0
 		cost = 1
@@ -20,11 +21,16 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.02
 			custom_effect_tooltip = attention_tt
+			country_event = {
+				id = MGL.2
+				days = 1
+			}
 		}
 	}
 
     focus = {
 		id = MGL_intensive_therapy
+		icon = GFX_MGL_intensive_therapy
 		x = 2
 		y = 2
 		cost = 1
@@ -36,12 +42,17 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = MGL_Rusted_mechanism_1
 				add_idea = MGL_Rusted_mechanism_2
+				country_event = {
+					id = MGL.3
+					days = 1
+				}
 			}
 		}
 	}
 
     focus = {
 		id = MGL_fatal_allowance
+		icon = GFX_MGL_fatal_allowance
 		x = 1
 		y = 3
 		cost = 5
@@ -53,12 +64,16 @@ focus_tree = {
 			always = no
 		}
 		completion_reward = {
-			
+			country_event = {
+				id = MGL.9
+				days = 1
+			}
 		}
 	}
 
     focus = {
 		id = MGL_plutonium_cardiology
+		icon = GFX_MGL_plutonium_cardiology
 		x = 3
 		y = 3
 		cost = 5
@@ -71,11 +86,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = MGL_Critical_arrhythmia
+			country_event = {
+				id = MGL.8
+				days = 1
+			}
 		}
 	}
 
     focus = {
 		id = MGL_central_hydraulic_system
+		icon = GFX_MGL_central_hydraulic_system
 		x = 3
 		y = 4
 		cost = 5
@@ -93,6 +113,7 @@ focus_tree = {
 
     focus = {
 		id = MGL_gasoline_diesel_tract
+		icon = GFX_MGL_gasoline_diesel_tract
 		x = 3
 		y = 5
 		cost = 5
@@ -110,6 +131,7 @@ focus_tree = {
 
     focus = {
 		id = MGL_positive_dynamics
+		icon = GFX_MGL_positive_dynamics
 		x = 3
 		y = 6
 		cost = 5
@@ -119,11 +141,16 @@ focus_tree = {
         prerequisite = { focus = MGL_gasoline_diesel_tract }
 		completion_reward = {
 			remove_ideas = MGL_Rusted_mechanism_4
+			country_event = {
+				id = MGL.10
+				days = 1
+			}
 		}
 	}
 
     focus = {
 		id = MGL_call
+		icon = GFX_MGL_call
 		x = 8
 		y = 2
 		cost = 1
@@ -136,11 +163,16 @@ focus_tree = {
 			975 = {
 				add_manpower = 3000
 			}
+			country_event = {
+				id = MGL.11
+				days = 1
+			}
 		}
 	}
 
     focus = {
 		id = MGL_launch_gears
+		icon = GFX_MGL_launch_gears
 		x = 7
 		y = 3
 		cost = 5
@@ -156,6 +188,7 @@ focus_tree = {
 
     focus = {
 		id = MGL_fill_living_blocks
+		icon = GFX_MGL_fill_living_blocks
 		x = 9
 		y = 3
 		cost = 5
@@ -173,6 +206,7 @@ focus_tree = {
 
     focus = {
 		id = MGL_open_arsenal
+		icon = GFX_MGL_open_arsenal
 		x = 7
 		y = 4
 		cost = 5
@@ -194,6 +228,7 @@ focus_tree = {
 
     focus = {
 		id = MGL_rebuild_defense_units
+		icon = GFX_MGL_rebuild_defense_units
 		x = 9
 		y = 4
 		cost = 5
@@ -207,9 +242,9 @@ focus_tree = {
                 is_locked = no
                 priority = 1
                 regiments = {
-                    opolchenie = { x = 0 y = 0}
-                    opolchenie = { x = 0 y = 1}
-                    opolchenie = { x = 0 y = 2}
+                    light_infantry = { x = 0 y = 0}
+                    light_infantry = { x = 0 y = 1}
+                    light_infantry = { x = 0 y = 2}
                 }
             }
 			capital_scope = {
@@ -234,6 +269,7 @@ focus_tree = {
 	}
     focus = {
 		id = MGL_delegate
+		icon = GFX_MGL_delegate
 		x = 8
 		y = 5
 		cost = 5
@@ -246,11 +282,16 @@ focus_tree = {
         }
 		completion_reward = {
 			add_political_power = 100
+			country_event = {
+				id = MGL.12
+				days = 1
+			}
 		}
 	}
 
     focus = {
 		id = MGL_create_safezone
+		icon = GFX_MGL_create_safezone
 		x = 6
 		y = 7
 		cost = 5

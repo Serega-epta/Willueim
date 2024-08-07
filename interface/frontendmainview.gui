@@ -7,6 +7,8 @@ guiTypes = {
 			width = 1920 
 			height = 1440 
 			min = { width = 100% height = 100% }
+			max = { width = 100% height = 10000 }
+			preserve_aspect_ratio = yes			
 		}
 		Orientation = center
 		Origo = center
@@ -17,6 +19,98 @@ guiTypes = {
 			quadTextureSprite ="GFX_frontend_bg"
 			alwaystransparent = yes
 		}
+	}
+
+	containerWindowType = {
+		name = "owned_dlc_item"
+		size = { width = 50 height = 50 }
+		position = { x=-5000 y=-5000 }	
+		
+		buttonType =
+		{
+			position = { x = -230 y = 0 }
+			name ="dlc_button"
+			spriteType = "GFX_frontend_banner_dlc018"
+		}
+		
+		iconType = {
+			name = "glowup"
+			position = { x = -50 y = -21 }
+			spriteType = "GFX_spirit_glow"
+			scale = 0.8
+			#hide = yes
+		}
+		
+		buttonType = {
+			name = "owned_tick"
+			spriteType = "GFX_BPT_area_defense_setting_tick"
+			position = { x = -6 y = 1 }
+			Orientation = center_left
+			scale = 0.56
+			alwaysTransparent = yes
+			#hide = yes
+		}
+		
+		buttonType = {
+			name = "enabled_tick"
+			spriteType = "GFX_general_check"
+			position = { x = 28 y = 24 }
+			Orientation = center_left
+			alwaysTransparent = yes
+		}
+		
+	}
+	
+	containerWindowType = {
+		name = "unowned_dlc_item"
+		size = { width = 50 height = 50 }
+		position = { x=-5000 y=-5000 }
+		
+		buttonType =
+		{
+			position = { x = -230 y = 0 }
+			name ="dlc_button"
+			spriteType = "GFX_frontend_banner_dlc018"
+		}
+		
+		buttonType = {
+			name = "owned_tick"
+			spriteType = "GFX_BPT_area_defense_setting_tick"
+			position = { x = -6 y = 1 }
+			Orientation = center_left
+			scale = 0.56
+			alwaysTransparent = yes
+			#enabled = no
+		}
+		
+		buttonType = {
+			name = "enabled_tick"
+			spriteType = "GFX_general_check"
+			position = { x = 28 y = 24 }
+			Orientation = center_left
+			alwaysTransparent = yes
+		}
+		
+	}
+	
+	### MAIN MENU PANEL (DLC Ownership) 
+	containerWindowType = {
+		name  ="mainmenu_dlc_ownership"
+		position = { x=-5000 y=-5000 }
+		size = { width = 370 height = 528}
+		Orientation = lower_left
+		origo = lower_left
+		
+		gridBoxType = {
+			name = "potential_dlc_list"
+			position = { x = 0 y = 0}
+			size = { width = 50 height = 400 }
+			#Orientation = upper_left
+			slotsize = {width=50 height=51 }
+			max_slots_vertical = 1
+			format = "RIGHT"
+		}
+		
 	}
 
 	### MAIN MENU PANEL (upperleft)
@@ -173,11 +267,16 @@ guiTypes = {
 		Orientation = CENTER
 		Origo = center
 		
+		positionType = {
+			name = "subscription_size"
+			position = { x = 320 y = 563 }
+		}		
+		
 		background = {
 			name = "Background"	
 			spriteType ="GFX_main_menu"
 			position = { x=-13 y=-368 }
-			allwaystransparent = yes
+			#allwaystransparent = yes
 		}	
 		
 		ButtonType = {
@@ -189,6 +288,38 @@ guiTypes = {
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
+		
+		iconType = {
+			name = "sp_continue_flag_left"
+			quadTextureSprite ="GFX_flag_small2_not_masked"
+			position = { x = -5000 y = -5000 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "sp_continue_flag_left_overlay"
+			quadTextureSprite ="GFX_flag_small2_not_masked"
+			position = { x = -5000 y = -5000 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "sp_continue_flag_right"
+			quadTextureSprite ="GFX_flag_small2_not_masked"
+			position = { x = -5000 y = -5000 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "sp_continue_flag_right_overlay"
+			quadTextureSprite ="GFX_flag_small2_not_masked"
+			position = { x = -5000 y = -5000 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}		
 		
 		ButtonType = {
 			name = "sp_new_button"
@@ -210,15 +341,15 @@ guiTypes = {
 			oversound = ui_menu_over
 		}
 		
-		#ButtonType = {
-		#	name = "sp_tutorial_button"
-		#	position = { x = 209 y = 300 }
-		#	quadTextureSprite ="GFX_tutorial_button"	
-		#	buttonText = ""
-		#	buttonFont = "hoi_24header"
-		#	clicksound = click_default
-		#	oversound = ui_menu_over
-		#}
+		ButtonType = {
+			name = "sp_tutorial_button"
+			position = { x = -5000 y = -5000 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "FE_TUTORIAL"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
 		
 		ButtonType = {
 			name = "sp_back_button"
@@ -243,6 +374,16 @@ guiTypes = {
 			name = "position_without_social_gui"
 			position = { x = 0 y = 155 }
 		}
+		
+		positionType = {
+			name = "subscription_position"
+			position = { x = -50 y = 109 }
+		}
+
+		positionType = {
+			name = "subscription_position_without_social_gui"
+			position = { x = 0 y = 239 }
+		}		
 		
 		containerWindowType = {
 			name = "social_view_interface_window"

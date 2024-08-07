@@ -4,11 +4,11 @@ division_template = {
 	division_names_group = BANDIT_INF_01
 
 	regiments = {
-		opolchenie = { x = 0 y = 0 }
-		opolchenie = { x = 1 y = 0 }
-		opolchenie = { x = 0 y = 1 }
-		opolchenie = { x = 1 y = 1 }
-	 	opolchenie = { x = 0 y = 2 }
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 1 }
+	 	light_infantry = { x = 0 y = 2 }
 	}
 	priority = 1
 }
@@ -26,7 +26,7 @@ division_template = {
 	}
 	support = {
 		mot_recon = { x = 0 y = 0 }
-		artillery = { x = 0 y = 1 }
+		stvol_art_sup = { x = 0 y = 1 }
 	}
 	priority = 1
 }

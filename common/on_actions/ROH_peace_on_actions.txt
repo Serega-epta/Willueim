@@ -1,90 +1,74 @@
 on_actions = {
 	on_capitulation = {
 		effect = {
-			log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
+			#log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
 			
 			set_global_flag = show_peace_popup_alert
+
 			FROM = {
 				save_global_event_target_as = winning_country
 			}
 			ROOT = {
 				save_global_event_target_as = losing_country
 			}
-
-			log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
-			
-			add_to_variable = { global.peace_popup_dirty = 1 }
+			if = {
+				limit = {
+					event_target:losing_country = {
+						any_allied_country = {
+							has_war_together_with = event_target:losing_country
+						}
+					}
+				}
+				set_global_flag = losing_country_multiple
+			}
 
 			if = {
 				limit = {
-					OR = {
-						ROOT = {
+					event_target:winning_country = {
+						any_allied_country = {
+							has_war_together_with = event_target:winning_country
+						}
+					}
+				}
+				set_global_flag = winning_country_multiple
+			}
+
+			#log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
+			
+			#add_to_variable = { global.peace_popup_dirty = 1 }
+
+			################################
+
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
 							original_tag = MOT
-						}
-						ROOT = {
 							original_tag = URA
-						}
-						ROOT = {
 							original_tag = EDM
-						}
-						ROOT = {
 							original_tag = URC
-						}
-						ROOT = {
 							original_tag = WPK
-						}
-						ROOT = {
 							original_tag = ZAN
-						}
-						ROOT = {
 							original_tag = OCH
-						}
-						ROOT = {
 							original_tag = TAR
+						}
+						AND = {
+							is_in_faction = yes
+							is_in_faction_with = URC
 						}
 					}
 					FROM = {
-						original_tag = GLS
-						has_country_flag = GLS_negotiation_process_fail
+						OR = {
+							original_tag = GLS
+							has_country_flag = GLS_negotiation_process_fail
+						}
 					}
-				}
-
-				every_country = {
-					limit = { has_war_with = GLS }
-					white_peace = GLS
 				}
 				
-				FROM = {
+				GLS = {
+					white_peace = ROOT
 					annex_country = {
-						target = MOT
-						transfer_troops = no
-					}
-					annex_country = {
-						target = URA
-						transfer_troops = no
-					}
-					annex_country = {
-						target = EDM
-						transfer_troops = no
-					}
-					annex_country = {
-						target = URC
-						transfer_troops = no
-					}
-					annex_country = {
-						target = WPK
-						transfer_troops = no
-					}
-					annex_country = {
-						target = ZAN
-						transfer_troops = no
-					}
-					annex_country = {
-						target = OCH
-						transfer_troops = no
-					}
-					annex_country = {
-						target = TAR
+						target = ROOT
 						transfer_troops = no
 					}
 					every_state = {
@@ -98,49 +82,41 @@ on_actions = {
 			else_if = {
 				limit = {
 					ROOT = {
-						original_tag = GLS
-						has_country_flag = GLS_negotiation_process_fail
+						OR = {
+							original_tag = GLS
+							has_country_flag = GLS_negotiation_process_fail
+						}
 					}
-					OR = {
-						FROM = {
+					FROM = {
+						OR = {
 							original_tag = MOT
-						}
-						FROM = {
 							original_tag = URA
-						}
-						FROM = {
 							original_tag = EDM
-						}
-						FROM = {
 							original_tag = URC
-						}
-						FROM = {
 							original_tag = WPK
-						}
-						FROM = {
 							original_tag = ZAN
-						}
-						FROM = {
 							original_tag = OCH
-						}
-						FROM = {
 							original_tag = TAR
 						}
+						AND = {
+							is_in_faction = yes
+							is_in_faction_with = URC
+						}						
 					}
-				}
-
-				every_country = {
-					limit = { has_war_with = GLS }
-					white_peace = GLS
 				}
 				
 				FROM = {
+					white_peace = ROOT
 					WPK = {
 						transfer_state = 398
 						transfer_state = 1003
 						transfer_state = 1000
 						transfer_state = 573
 						transfer_state = 729
+						set_capital = {
+							state = 398
+							remember_old_capital = no
+						}
 					}
 					MOT = {
 						transfer_state = 251
@@ -167,7 +143,7 @@ on_actions = {
 						}
 					}
 					every_state = {
-						remove_core_of = GLS
+						remove_core_of = ROOT
 					}
 				}
 				
@@ -178,22 +154,21 @@ on_actions = {
 						load_focus_tree = state_liquidation_board_collapsed
 						kill_country_leader = yes
 						set_political_party = {
-    							ideology = gumanists
+    							ideology = humanists
     							popularity = 100
 						}
 						set_party_name = {
-    							ideology = patriots
+    							ideology = statesmen
     							#long_name = GLS_patriots_party_MANDATE_long
     							name = GLS_patriots_party_MANDATE
 						}
 						set_party_name = {
-    							ideology = gumanists
+    							ideology = humanists
     							long_name = GLS_gumanists_party_MANDATE_long
     							name = GLS_gumanists_party_MANDATE
 						}
 						GLS_Mandate_Parliament = {
-							promote_character = yes
-							promote_character = gumanists_1
+							promote_character = colloborators
 						}
 						set_rule = {
 							can_not_declare_war = yes
@@ -207,24 +182,20 @@ on_actions = {
 			else_if = {
 				limit = {
 					ROOT = {
-						original_tag = UFV
-					}
-					OR = {
-						FROM = {
-							original_tag = SDC
+						OR = {
+							original_tag = UFV
 						}
-						FROM = {
+					}
+					FROM = {
+						OR = {
+							original_tag = SDC
 							original_tag = VOZ
 						}
 					}
 				}
-
-				every_country = {
-					limit = { has_war_with = UFV }
-					white_peace = UFV
-				}
 				
 				FROM = {
+					white_peace = ROOT
 					SDC = {
 						transfer_state = 262
 					}
@@ -232,10 +203,14 @@ on_actions = {
 						transfer_state = 947
 					}
 					every_state = {
-						remove_core_of = UFV
+						remove_core_of = ROOT
 					}
 				}
 			}
+
+			##########################
+			###Default Capitulation###
+			##########################
 
 			else_if = {
 				limit = {
@@ -243,17 +218,23 @@ on_actions = {
 						ROOT = { is_in_faction = no }
 						ROOT = {
 							all_allied_country = {
-								has_capitulated = yes
+								if = {
+									limit = {
+										has_war_with = FROM
+										is_major = yes
+									}
+									has_capitulated = yes
+								}
 							}
 						}
 					}
 				}
-				log = "war_won"
+				#log = "war_won"
 				set_global_flag = war_won
 				
 				if = {
 					limit = { NOT = { has_global_flag = skip_default_capitulation } }
-					log = "Default Capitulation"
+					#log = "Default Capitulation"
 					FROM = {
 						every_enemy_country = {
 							limit = {
@@ -272,6 +253,7 @@ on_actions = {
 							}
 						}
 					}
+					set_global_flag = skip_default_capitulation
 				}				
 			}
 			clr_global_flag = skip_default_capitulation

@@ -61,9 +61,9 @@ focus_tree = {
 				producer = ARM
 			}
 			add_equipment_to_stockpile = {
-			type = infantry_clothing
-			amount = 500
-			producer = ARM
+				type = civilian_clothing
+				amount = 500
+				producer = ARM
 			}
 		}
 	}
@@ -79,6 +79,11 @@ focus_tree = {
 		prerequisite = {
 			focus = ARM_no_more_again
 		}
+		will_lead_to_war_with = IMP
+		will_lead_to_war_with = COR
+		will_lead_to_war_with = SOL
+		will_lead_to_war_with = PLR
+		will_lead_to_war_with = NOR
 		completion_reward = { 
 			declare_war_on = {
 				type = annex_everything
@@ -102,8 +107,8 @@ focus_tree = {
 			}
 			hidden_effect = {
                 load_focus_tree = {
-                tree = ARM_without_tree
-                keep_completed = no
+                	tree = ARM_without_tree
+                	keep_completed = no
 				}
 			}
 			IMP = {
@@ -112,7 +117,7 @@ focus_tree = {
 			hidden_effect = {
 				IMP = {
 					country_event = {
-					id = ARMnew.20
+						id = ARMnew.20
 					}
 				}
 				ARM = {

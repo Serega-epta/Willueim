@@ -221,16 +221,19 @@ focus_tree = {
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = { has_war = no }
+		will_lead_to_war_with = WOD
+		will_lead_to_war_with = YWD
+		will_lead_to_war_with = MOD
 		completion_reward = {
-				declare_war_on = {
+			declare_war_on = {
 				target = WOD
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = YWD
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = MOD
 				type = annex_everything
 			}
@@ -248,16 +251,19 @@ focus_tree = {
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = { has_war = no }
+		will_lead_to_war_with = MAP
+		will_lead_to_war_with = POP
+		will_lead_to_war_with = CST
 		completion_reward = {
-				declare_war_on = {
+			declare_war_on = {
 				type = annex_everything
 				target = MAP
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = POP
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = CST
 				type = annex_everything
 			}
@@ -275,32 +281,39 @@ focus_tree = {
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = { has_war = no }
+		will_lead_to_war_with = ODS
+		will_lead_to_war_with = HER
+		will_lead_to_war_with = CRI
+		will_lead_to_war_with = BOD
+		will_lead_to_war_with = SOD
+		will_lead_to_war_with = CRW
+		will_lead_to_war_with = KUB
 		completion_reward = {
-				declare_war_on = {
+			declare_war_on = {
 				target = ODS
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = HER
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = CRI
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = BOD
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = SOD
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = CRW
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = KUB
 				type = annex_everything
 			}
@@ -318,52 +331,64 @@ focus_tree = {
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = { has_war = no }
+		will_lead_to_war_with = FUD
+		will_lead_to_war_with = AZB
+		will_lead_to_war_with = ECD
+		will_lead_to_war_with = KUH
+		will_lead_to_war_with = HAN
+		will_lead_to_war_with = BRI
+		will_lead_to_war_with = FSR
+		will_lead_to_war_with = BRD
+		will_lead_to_war_with = WAC
+		will_lead_to_war_with = STW
+		will_lead_to_war_with = DOM
+		will_lead_to_war_with = LUG
 		completion_reward = {
-				declare_war_on = {
+			declare_war_on = {
 				target = FUD
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = AZB
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = ECD
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = KUH
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = HAN
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = BRI
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = FSR
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = BRD
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = WAC
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = STW
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = DOM
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = LUG
 				type = annex_everything
 			}	
@@ -381,32 +406,39 @@ focus_tree = {
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = { has_war = no }
+		will_lead_to_war_with = VDS
+		will_lead_to_war_with = DIB
+		will_lead_to_war_with = BIH
+		will_lead_to_war_with = BAG
+		will_lead_to_war_with = ARM
+		will_lead_to_war_with = MAD
+		will_lead_to_war_with = SUM
 		completion_reward = {
-				declare_war_on = {
+			declare_war_on = {
 				target = VDS
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = DIB
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = BIH
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = BAG
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = ARM
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = MAD
 				type = annex_everything
 			}
-				declare_war_on = {
+			declare_war_on = {
 				target = SUM
 				type = annex_everything
 			}
@@ -638,13 +670,13 @@ focus_tree = {
 		prerequisite = { focus = LWV_uchredit_boji_perst }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {		
-		remove_ideas = LWV_begushie_otstupniki			
-		all_neighbor_country = { 
-			if = {
-				limit = { has_idea = LWV_bejinsy_from_holy_land } 			
-				country_event = LWV.32 days = 1
+			remove_ideas = LWV_begushie_otstupniki			
+			every_neighbor_country = { 
+				if = {
+					limit = { has_idea = LWV_bejinsy_from_holy_land } 			
+					country_event = { id = LWV.32 days = 1 }
+				}
 			}
-		}
 		}
 	}
 	focus = {
@@ -793,9 +825,6 @@ focus_tree = {
 		prerequisite = { focus = LWV_razoslat_misionerov }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			unlock_decision_category_tooltip = LWV_prepare_the_ground
-			
-			set_country_flag = podgotovit_pochvu	
 		}
 	}
 	focus = {

@@ -43,22 +43,22 @@ focus_tree = {
 		prerequisite = { focus = LWV_cleaning }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		89 = { add_manpower = -1000 }
-		884 = { add_manpower = -1000 }
-		73 = { add_manpower = -1000 }
-		889 = { add_manpower = -1000 }
-		80 = { add_manpower = -1000 }
-		882 = { add_manpower = -1000 }
-		883 = { add_manpower = -1000 }
-		78 = { add_manpower = -1000 }
-		add_state_core = 89
-		add_state_core = 884
-		add_state_core = 73
-		add_state_core = 889
-		add_state_core = 80
-		add_state_core = 882
-		add_state_core = 883
-		add_state_core = 78
+			89 = { add_manpower = -1000 }
+			884 = { add_manpower = -1000 }
+			73 = { add_manpower = -1000 }
+			889 = { add_manpower = -1000 }
+			80 = { add_manpower = -1000 }
+			882 = { add_manpower = -1000 }
+			883 = { add_manpower = -1000 }
+			78 = { add_manpower = -1000 }
+			add_state_core = 89
+			add_state_core = 884
+			add_state_core = 73
+			add_state_core = 889
+			add_state_core = 80
+			add_state_core = 882
+			add_state_core = 883
+			add_state_core = 78
 		}
 		
 	}
@@ -193,7 +193,7 @@ focus_tree = {
 				add_ideas = art_of_persuasion	
 				custom_effect_tooltip = holy_mjatej_tt
 				hidden_effect = {
-					play_song = "zov_goida"
+					#play_song = "zov_goida" # Больше не гойда :(
 					create_dynamic_country = {
 						original_tag = SVA	
 						copy_tag = COA
@@ -220,18 +220,18 @@ focus_tree = {
 							division_names_group = SVA_CAM_02
 							is_locked = yes
 							regiments = {
-								opolchenie  = { x = 0 y = 0 }
-								opolchenie  = { x = 0 y = 1 }
-								opolchenie  = { x = 1 y = 0 }
-								opolchenie  = { x = 1 y = 1 }
-								opolchenie  = { x = 2 y = 0 }
-								opolchenie  = { x = 2 y = 1 }							
-								opolchenie  = { x = 0 y = 2 }
-								opolchenie  = { x = 1 y = 2 }
-								opolchenie  = { x = 2 y = 2 }							
-								opolchenie  = { x = 0 y = 3 }
-								opolchenie  = { x = 1 y = 3 }
-								opolchenie  = { x = 2 y = 3 }
+								light_infantry  = { x = 0 y = 0 }
+								light_infantry  = { x = 0 y = 1 }
+								light_infantry  = { x = 1 y = 0 }
+								light_infantry  = { x = 1 y = 1 }
+								light_infantry  = { x = 2 y = 0 }
+								light_infantry  = { x = 2 y = 1 }							
+								light_infantry  = { x = 0 y = 2 }
+								light_infantry  = { x = 1 y = 2 }
+								light_infantry  = { x = 2 y = 2 }							
+								light_infantry  = { x = 0 y = 3 }
+								light_infantry  = { x = 1 y = 3 }
+								light_infantry  = { x = 2 y = 3 }
 							}
 							support = {
 								engineer = { x = 0 y = 0 }
@@ -251,7 +251,6 @@ focus_tree = {
 						}
 						set_cosmetic_tag = SVA_myatejniki 
 					}
-					play_song = "zov_goida"
 				}
 		}
 	}
@@ -265,6 +264,7 @@ focus_tree = {
 		prerequisite = { focus = LWV_plamya }
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		will_lead_to_war_with = COA
 		completion_reward = {
 			country_event = {
 				id = LWV.18
@@ -332,10 +332,11 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		will_lead_to_war_with = COA
 		completion_reward = {
 			declare_war_on = {
-			target = COA
-			type = annex_everything
+				target = COA
+				type = annex_everything
 			}
 		}
 	}

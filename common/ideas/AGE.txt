@@ -49,7 +49,7 @@ ideas = {
 			}
 		}
 		#Красные сабли# 1
-		AGE_red_sabres_1 = {
+		AGE_red_sabres = {
 			allowed = {
 				always = no
 			}
@@ -59,13 +59,13 @@ ideas = {
 			removal_cost = -1
 			picture = GFX_idea_AGE_red_sabres
 			modifier ={
-				political_power_gain = 0.1 #пп: +0,1
-				resistance_growth_on_our_occupied_states = -0.05 #скорость роста сопротивления: -5%
-				resistance_damage_to_garrison_on_our_occupied_states = -0.05 #урон гарнизонам: -5%
+				political_power_gain = 0.1
+				resistance_growth_on_our_occupied_states = -0.05
+				resistance_damage_to_garrison_on_our_occupied_states = -0.05
 			}
 		}
 		#Красные сабли# 2
-		AGE_red_sabres_2 = {
+		AGE_red_sabres_second = {
 			allowed = {
 				always = no
 			}
@@ -73,11 +73,11 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = GFX_idea_AGE_red_sabres
+			picture = GFX_idea_AGE_red_sabres_second
 			modifier ={
-				Offence = 0.05 #атака +5%
-				Defence = 0.05 #защита +5%
-				Army_org_factor = 0.05 #организация +5%
+				offence = 0.05
+				defence = 0.05
+				army_org_factor = 0.05
 			}
 		}
 		#Другой путь#

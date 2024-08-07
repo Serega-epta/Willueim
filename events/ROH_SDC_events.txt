@@ -244,7 +244,6 @@ country_event = {
 	desc = pautov.20.d
     fire_only_once = yes
 	is_triggered_only = yes
-	available = { country_exists = GLS }
     option = {
         name = pautov.20.a
 		add_manpower = 10
@@ -257,7 +256,6 @@ country_event = {
 	desc = pautov.21.d
     fire_only_once = yes
 	is_triggered_only = yes
-	available = { country_exists = PMD }
     option = {
         name = pautov.21.a
 		add_manpower = 100
@@ -270,7 +268,6 @@ country_event = {
 	desc = pautov.22.d
     fire_only_once = yes
 	is_triggered_only = yes
-	available = { country_exists = ARM }
     option = {
         name = pautov.22.a
 		add_manpower = 500
@@ -283,7 +280,6 @@ country_event = {
 	desc = pautov.23.d
     fire_only_once = yes
 	is_triggered_only = yes
-	available = { country_exists = AGE }
     option = {
         name = pautov.23.a
 		add_manpower = 1000
@@ -299,7 +295,7 @@ country_event = {
     option = {
         name = pautov.24.a
         if = {
-            has_completed_focus = SDC_integration
+            limit = { has_completed_focus = SDC_integration }
             add_manpower = -1
             add_popularity = {
                 ideology = statesmen
@@ -324,7 +320,7 @@ country_event = {
             }
         }
         else_if = {
-            has_completed_focus = SDC_peacification
+            limit = { has_completed_focus = SDC_peacification }
             add_popularity = {
                 ideology = sacraments
                 popularity = -0.01

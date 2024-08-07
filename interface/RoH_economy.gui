@@ -15,7 +15,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "economy_container"
-		size = { width = 400 height = 800 }
+		size = { width = 400 height = 460 }
 		position = { x = 543 y = 0  } 
 		fade_time = 300
 		fade_type = linear
@@ -26,18 +26,6 @@ guiTypes = {
 			quadTextureSprite = "GFX_tiled_window"
 		}
 		
-		#график
-		#код графика признан второстепенной задачей, текущее использование - фоновое
-		iconType = { 
-           name ="kartinochka1"
-           spriteType = "GFX_gos_dolg_ssha"
-           position = { x= 0 y = 800 }
-        }
-		iconType = { 
-           name ="kartinochka2"
-           spriteType = "GFX_fon_graficka"
-           position = { x= 13 y = 520 }
-        }	
 		####################################################################
 		containerWindowType = {
 			size = { width = 100%% height = 50 }
@@ -48,17 +36,6 @@ guiTypes = {
 				quadTextureSprite = "GFX_tiled_plain_bg_small"
 			}			
 		}
-
-		
-		
-		
-
-
-
-
-
-
-
 
 		containerWindowType = {
 			name = "picker_controlers_container"
@@ -120,26 +97,26 @@ guiTypes = {
 		containerWindowType = {
 			name = "scroll_bar_container"
 			position = {
-				x = 23
-				y = 112
+				x = 28
+				y = 130
 			}
 			iconType = { 
 				name = "scroll_bar_production"
-				spriteType = "GFX_polzunok"
+				spriteType = "GFX_economy_scrollbar"
 			}
 			iconType = { 
 				name = "scroll_bar_civil"
-				spriteType = "GFX_polzunok"
+				spriteType = "GFX_economy_scrollbar"
 				position = { 
-					x = 23
+					x = 0
 					y = 100 
 				}
 			}
 			iconType = { 
 				name = "scroll_bar_army"
-				spriteType = "GFX_polzunok"
+				spriteType = "GFX_economy_scrollbar"
 				position = { 
-					x = 23
+					x = 0
 					y = 200 
 				}
 			}
@@ -179,7 +156,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "production_title"
-				font = "hoi_18mbs"
+				font = "3270_18_outline"
 				text = "ECO_PRODUCTION_TITLE"
 				maxWidth = 300
 				maxHeight = 20
@@ -192,7 +169,7 @@ guiTypes = {
 					x = 0 
 					y = 100 
 				}
-				font = "hoi_18mbs"
+				font = "3270_18_outline"
 				text = "ECO_CIVIL_TITLE"
 				maxWidth = 300
 				maxHeight = 20
@@ -205,7 +182,7 @@ guiTypes = {
 					x = 0 
 					y = 200 
 				}
-				font = "hoi_18mbs"
+				font = "3270_18_outline"
 				text = "ECO_ARMY_TITLE"
 				maxWidth = 300
 				maxHeight = 20
@@ -222,14 +199,14 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "category_production_cost"
 				position = { x = 0 y = 27 }
-				font = "hoi_16mbs"
+				font = "3270_16_outline"
 				text = "category_production_cost_text"
 				maxWidth = 300
 				maxHeight = 20
 			}
 			instantTextBoxType = {
 				name = "category_production_finances"
-				font = "hoi_16mbs"
+				font = "3270_16_outline"
 				text = "category_production_finances_text" 
 				maxWidth = 300
 				maxHeight = 20
@@ -237,7 +214,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "category_civil_cost"
 				position = { x = 0 y = 127 }
-				font = "hoi_16mbs"
+				font = "3270_16_outline"
 				text = "category_civil_cost_text"
 				maxWidth = 300
 				maxHeight = 20
@@ -245,7 +222,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "category_civil_finances"
 				position = { x = 0 y = 100 }
-				font = "hoi_16mbs"
+				font = "3270_16_outline"
 				text = "category_civil_finances_text"
 				maxWidth = 300
 				maxHeight = 20
@@ -253,7 +230,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "category_army_cost"
 				position = { x = 0 y = 227 }
-				font = "hoi_16mbs"
+				font = "3270_16_outline"
 				text = "category_army_cost_text"
 				maxWidth = 300
 				maxHeight = 20
@@ -261,7 +238,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "category_army_finances"
 				position = { x = 0 y = 200 }
-				font = "hoi_16mbs"
+				font = "3270_16_outline"
 				text = "category_army_finances_text" 
 				maxWidth = 300
 				maxHeight = 20
@@ -273,7 +250,7 @@ guiTypes = {
 				x = 25
 				y = 390 
 			}
-			font = "hoi_16mbs"
+			font = "3270_16_outline"
 			text = "total_economy_stats_text"
 			maxWidth = 350
 			maxHeight = 40	
@@ -281,12 +258,14 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "main_title"
 			position = { 
-				x = 110 
-				y = 11 
+				x = 78
+				y = 11
 			}
-			font = "hoi_36header"
+			font = "3270_36_outline"
 			text = "ECO_MAIN_TITLE"
-			maxWidth = 200
+			maxWidth = 260
+			maxHeight = 40
+			pdx_tooltip = "ECO_MAIN_TITLE_tt"
 		}
 	}
 }

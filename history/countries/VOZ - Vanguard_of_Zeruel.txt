@@ -21,7 +21,7 @@ set_technology = {
 set_stability = 0.56
 set_war_support = 1
 set_research_slots = 3
-set_convoys = 20
+set_convoys = 0
 add_manpower = 10000
 
 set_politics = {
@@ -70,18 +70,7 @@ add_opinion_modifier = {
     target = SDC
     modifier = faithless
 }
-
-
-
-create_country_leader = {
-    name = "Blazhenny_Zeruil"
-    desc = "Blazhenny_Zeruil_desc"
-    picture = "gfx/leaders/VOZ/Blazhenny_Zeruil.dds"
-    ideology = sacraments_subideology
-    traits = {
-        #
-    }
-}
+recruit_character = VOZ_Blazhenny_Zeruil
 recruit_character = VOZ_Akexsander_Novodichev
 recruit_character = VOZ_generic_general
 recruit_character = VOZ_generic_field_marshal
