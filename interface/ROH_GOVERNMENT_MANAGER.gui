@@ -55,6 +55,8 @@ guiTypes = {
 			format = center
 			maxWidth = 350
 			maxHeight = 20
+			pdx_tooltip = "reform_points_growth_tt"
+			pdx_tooltip_delayed = "reform_points_desc_tt"
 		}
 		instantTextBoxType = {
 			name = "choice_advise"
@@ -177,9 +179,9 @@ guiTypes = {
 					x = 130 
 					y = 20 
 				}
-				font = "hoi_18mbs"
+				font = "hoi_36header"
 				format = center
-				text = "МОДЕЛЬ МЕНШИКОВА :"
+				text = "menshikov_system"
 				maxWidth = 550
 				maxHeight = 50
 				fixedsize = yes
@@ -187,14 +189,15 @@ guiTypes = {
 			buttonType = { 
 				name = "select_model_button"
 				position = { 
-					x = 50 
-					y = 10 
+					x = 15 
+					y = 16 
 				}
 				quadTextureSprite = "GFX_main_lobby_button"
 				buttonFont = "hoi_36mbs"
 				text = "ВЫБРАТЬ :"
 				format = center   
 				clicksound = click_close
+				pdx_tooltip_delayed = "select_model_tt"
 			}
 			buttonType = {
 				name = "close_button"
@@ -246,6 +249,15 @@ guiTypes = {
 						x = @left_center
 						y = 50
 					}
+					iconType = {
+						name = "materials_science_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = {
 						name = "materials_science_button"
 						quadTextureSprite = "Materialovedenie"
@@ -272,6 +284,15 @@ guiTypes = {
 					position = { 
 						x = @right_center
 						y = 50 
+					}
+					iconType = {
+						name = "dense_layout_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "dense_layout_button"
@@ -300,6 +321,15 @@ guiTypes = {
 						x = @left_center
 						y = 160 
 					}
+					iconType = {
+						name = "lower_streams_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "lower_streams_button"
 						quadTextureSprite = "Niskhodyaschie_potoki"
@@ -326,6 +356,15 @@ guiTypes = {
 					position = { 
 						x = @right_center
 						y = 160 
+					}
+					iconType = {
+						name = "upper_streams_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "upper_streams_button"
@@ -354,6 +393,15 @@ guiTypes = {
 						x = @center
 						y = 350 
 					}
+					iconType = {
+						name = "our_future_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "our_future_button"
 						quadTextureSprite = "Nashe_buduschee"
@@ -380,6 +428,15 @@ guiTypes = {
 					position = { 
 						x = @left_center
 						y = 480 
+					}
+					iconType = {
+						name = "vocational_technical_schools_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "vocational_technical_schools_button"
@@ -408,6 +465,15 @@ guiTypes = {
 						x = @right_center
 						y = 480 
 					}
+					iconType = {
+						name = "working_faculties_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "working_faculties_button"
 						quadTextureSprite = "RabFakultety"
@@ -434,6 +500,15 @@ guiTypes = {
 					position = { 
 						x = @left_center
 						y = 620 
+					}
+					iconType = {
+						name = "labor_veterans_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "labor_veterans_button"
@@ -462,6 +537,15 @@ guiTypes = {
 						x = @right_center
 						y = 620 
 					}
+					iconType = {
+						name = "labor_heros_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "labor_heros_button"
 						quadTextureSprite = "Geroi_Truda"
@@ -488,6 +572,15 @@ guiTypes = {
 					position = { 
 						x = @center 
 						y = 730 
+					}
+					iconType = {
+						name = "industrial_cooperation_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "industrial_cooperation_button"
@@ -516,6 +609,15 @@ guiTypes = {
 						x = @left
 						y = 850 
 					}
+					iconType = {
+						name = "constructed_for_life_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "constructed_for_life_button"
 						quadTextureSprite = "Razrabotano_dlya_zhizni"
@@ -542,6 +644,15 @@ guiTypes = {
 					position = { 
 						x = @center 
 						y = 850 
+					}
+					iconType = {
+						name = "love_thy_neighbour_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "love_thy_neighbour_button"
@@ -570,6 +681,15 @@ guiTypes = {
 						x = @right
 						y = 850 
 					}
+					iconType = {
+						name = "local_wing_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "local_wing_button"
 						quadTextureSprite = "Mestnoe_krylo"
@@ -596,6 +716,15 @@ guiTypes = {
 					position = { 
 						x = @left_center 
 						y = 960 
+					}
+					iconType = {
+						name = "strict_regulations_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "strict_regulations_button"
@@ -624,6 +753,15 @@ guiTypes = {
 						x = @right_center
 						y = 960 
 					}
+					iconType = {
+						name = "flexible_regulations_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "flexible_regulations_button"
 						quadTextureSprite = "Gibkiy_reglament"
@@ -650,6 +788,15 @@ guiTypes = {
 					position = { 
 						x = @left_center
 						y = 1070 
+					}
+					iconType = {
+						name = "gardening_partnerships_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "gardening_partnerships_button"
@@ -678,6 +825,15 @@ guiTypes = {
 						x = @right_center
 						y = 1070 
 					}
+					iconType = {
+						name = "rural_units_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "rural_units_button"
 						quadTextureSprite = "SelOtryady"
@@ -704,6 +860,15 @@ guiTypes = {
 					position = { 
 						x = @left_center
 						y = 1180 
+					}
+					iconType = {
+						name = "adversarial_law_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "adversarial_law_button"
@@ -732,6 +897,15 @@ guiTypes = {
 						x = @right_center
 						y = 1180 
 					}
+					iconType = {
+						name = "fair_competition_codex_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "fair_competition_codex_button"
 						quadTextureSprite = "Kodex_chestnoy_konkurentsii"
@@ -758,6 +932,15 @@ guiTypes = {
 					position = { 
 						x = @center
 						y = 1290 
+					}
+					iconType = {
+						name = "outsourcing_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "outsourcing_button"
@@ -787,6 +970,15 @@ guiTypes = {
 						x = @left
 						y = 1400 
 					}
+					iconType = {
+						name = "trade_initiative_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "trade_initiative_button"
 						quadTextureSprite = "Torgovaya_initsiativa"
@@ -813,6 +1005,15 @@ guiTypes = {
 					position = { 
 						x = @center 
 						y = 1400 
+					}
+					iconType = {
+						name = "GOST_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "GOST_button"
@@ -842,6 +1043,15 @@ guiTypes = {
 						x = @right
 						y = 1400 
 					}
+					iconType = {
+						name = "fullstack_consumtion_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "fullstack_consumtion_button"	
 						quadTextureSprite = "Vsyo_v_oborot"
@@ -869,6 +1079,15 @@ guiTypes = {
 					position = { 
 						x = @center
 						y = 1510 
+					}
+					iconType = {
+						name = "humanism_stronghold_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "humanism_stronghold_button"
@@ -916,9 +1135,9 @@ guiTypes = {
 					x = 130 
 					y = 20 
 				}
-				font = "hoi_18mbs"
+				font = "hoi_36header"
 				format = center
-				text = "МОДЕЛЬ СМОЙЛОВА :"
+				text = "smoilov_system"
 				maxWidth = 550
 				maxHeight = 50
 				fixedsize = yes
@@ -926,14 +1145,15 @@ guiTypes = {
 			buttonType = { 
 				name = "select_model_button"
 				position = { 
-					x = 50 
-					y = 10 
+					x = 15 
+					y = 16 
 				}
 				quadTextureSprite = "GFX_main_lobby_button"
 				buttonFont = "hoi_36mbs"
 				text = "ВЫБРАТЬ :"
 				format = center   
 				clicksound = click_close
+				pdx_tooltip_delayed = "select_model_tt"
 			}
 			buttonType = {
 				name = "close_button"
@@ -982,6 +1202,15 @@ guiTypes = {
 						x = @center 
 						y = 50 
 					}
+					iconType = {
+						name = "foundation_of_the_past_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "foundation_of_the_past_button"
 						quadTextureSprite = "Fundament_proshlogo"
@@ -1008,6 +1237,15 @@ guiTypes = {
 					position = { 
 						x = @left 
 						y = 180 
+					}
+					iconType = {
+						name = "behind_the_scenes_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "behind_the_scenes_button"
@@ -1036,6 +1274,15 @@ guiTypes = {
 						x = @center 
 						y = 180 
 					}
+					iconType = {
+						name = "without_any_hassle_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "without_any_hassle_button"
 						quadTextureSprite = "Bez_lishnikh_khlopot" 
@@ -1062,6 +1309,15 @@ guiTypes = {
 					position = { 
 						x = @right
 						y = 180 
+					}
+					iconType = {
+						name = "our_home_is_our_fortress_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "our_home_is_our_fortress_button"
@@ -1090,6 +1346,15 @@ guiTypes = {
 						x = @left_center 
 						y = 330 
 					}
+					iconType = {
+						name = "rural_militia_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "rural_militia_button"
 						quadTextureSprite = "Selskoe_opolchenie"  
@@ -1116,6 +1381,15 @@ guiTypes = {
 					position = { 
 						x = @right_center 
 						y = 330 
+					}
+					iconType = {
+						name = "industrial_militia_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "industrial_militia_button"
@@ -1144,6 +1418,15 @@ guiTypes = {
 						x = @right_center 
 						y = 480 
 					}
+					iconType = {
+						name = "land_river_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "land_river_button"
 						quadTextureSprite = "Rezka_zemli"  
@@ -1171,14 +1454,23 @@ guiTypes = {
 						x = @left_center 
 						y = 480 
 					}
+					iconType = {
+						name = "scraping_down_the_bottom_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
-						name = "craping_down_the_bottom_button"
+						name = "scraping_down_the_bottom_button"
 						quadTextureSprite = "Skrebya_po_susekam" 
-						pdx_tooltip = "craping_down_the_bottom_tt"
+						pdx_tooltip = "scraping_down_the_bottom_tt"
 						clicksound = click_close
 					}
 					instantTextboxType = {
-						name = "craping_down_the_bottom_text"
+						name = "scraping_down_the_bottom_text"
 						position = { 
 							x = 3 
 							y = 55 
@@ -1197,6 +1489,15 @@ guiTypes = {
 					position = { 
 						x = @center
 						y = 630 
+					}
+					iconType = {
+						name = "in_a_blink_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "in_a_blink_button"
@@ -1225,6 +1526,15 @@ guiTypes = {
 						x = @left_center 
 						y = 780 
 					}
+					iconType = {
+						name = "oprichnina_hand_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "oprichnina_hand_button"
 						quadTextureSprite = "Oprichnaya_dlan" 
@@ -1251,6 +1561,15 @@ guiTypes = {
 					position = { 
 						x = @right_center 
 						y = 780 
+					}
+					iconType = {
+						name = "peripheral_cleansing_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "peripheral_cleansing_button"
@@ -1279,6 +1598,15 @@ guiTypes = {
 						x = @center 
 						y = 930 
 					}
+					iconType = {
+						name = "destroy_anomalies_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "destroy_anomalies_button"
 						quadTextureSprite = "Anomalii_-_k_chyortu" 
@@ -1305,6 +1633,15 @@ guiTypes = {
 					position = { 
 						x = @left
 						y = 1080 
+					}
+					iconType = {
+						name = "fighting_for_families_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "fighting_for_families_button"
@@ -1333,6 +1670,15 @@ guiTypes = {
 						x = @center
 						y = 1080 
 					}
+					iconType = {
+						name = "military_loans_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "military_loans_button"		
 						quadTextureSprite = "Voennye_zaymy"  
@@ -1359,6 +1705,15 @@ guiTypes = {
 					position = { 
 						x = @right 
 						y = 1080
+					}
+					iconType = {
+						name = "from_stones_and_sticks_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "from_stones_and_sticks_button"
@@ -1387,6 +1742,15 @@ guiTypes = {
 						x = @left_center 
 						y = 1230 
 					}
+					iconType = {
+						name = "autonomius_bataries_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "autonomius_bataries_button"
 						quadTextureSprite = "Avtonomnye_batarei"
@@ -1413,6 +1777,15 @@ guiTypes = {
 					position = { 
 						x = @right_center 
 						y = 1230
+					}
+					iconType = {
+						name = "controlled_bataries_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "controlled_bataries_button"
@@ -1441,6 +1814,15 @@ guiTypes = {
 						x = @center 
 						y = 1380 
 					}
+					iconType = {
+						name = "firstborn_of_sparta_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "firstborn_of_sparta_button"
 						quadTextureSprite = "Perventsy_Sparty"
@@ -1467,6 +1849,15 @@ guiTypes = {
 					position = { 
 						x = @left_center 
 						y = 1530 
+					}
+					iconType = {
+						name = "nerves_to_the_limit_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "nerves_to_the_limit_button"
@@ -1495,6 +1886,15 @@ guiTypes = {
 						x = @right_center 
 						y = 1530 
 					}
+					iconType = {
+						name = "steel_grip_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "steel_grip_button"
 						quadTextureSprite = "Stalnaya_khvatka"
@@ -1521,6 +1921,15 @@ guiTypes = {
 					position = { 
 						x = @center 
 						y = 1680 
+					}
+					iconType = {
+						name = "sweat_and_blood_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "sweat_and_blood_button"
@@ -1568,9 +1977,9 @@ guiTypes = {
 					x = 130 
 					y = 20 
 				}
-				font = "hoi_18mbs"
+				font = "hoi_36header"
 				format = center
-				text = "МОДЕЛЬ НАУМОВА :"
+				text = "naumov_system"
 				maxWidth = 550
 				maxHeight = 50
 				fixedsize = yes
@@ -1578,14 +1987,15 @@ guiTypes = {
 			buttonType = { 
 				name = "select_model_button"
 				position = { 
-					x = 50 
-					y = 10 
+					x = 15 
+					y = 16
 				}
 				quadTextureSprite = "GFX_main_lobby_button"
 				buttonFont = "hoi_36mbs"
 				text = "ВЫБРАТЬ :"
 				format = center   
 				clicksound = click_close
+				pdx_tooltip_delayed = "select_model_tt"
 			}
 			buttonType = {
 				name = "close_button"
@@ -1634,6 +2044,15 @@ guiTypes = {
 						x = @center 
 						y = 50 
 					}
+					iconType = {
+						name = "common_duty_common_law_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "common_duty_common_law_button"
 						quadTextureSprite = "Obschiy_dolg_-_obschee_pravo"
@@ -1660,6 +2079,15 @@ guiTypes = {
 					position = { 
 						x = @left_center 
 						y = 180 
+					}
+					iconType = {
+						name = "existence_essence_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "existence_essence_button"
@@ -1689,6 +2117,15 @@ guiTypes = {
 						x = @right_center 
 						y = 180 
 					}
+					iconType = {
+						name = "existence_horror_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = {
 						name = "existence_horror_button"
 						quadTextureSprite = "Uzhas_bytia"  
@@ -1717,6 +2154,15 @@ guiTypes = {
 						x = 50 
 						y = 330 
 					}
+					iconType = {
+						name = "caring_eye_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "caring_eye_button"
 						quadTextureSprite = "Zabotlivoe_Oko" 
@@ -1743,6 +2189,15 @@ guiTypes = {
 					position = { 
 						x = @left_center 
 						y = 330 
+					}
+					iconType = {
+						name = "interesting_observation_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "interesting_observation_button"
@@ -1771,6 +2226,15 @@ guiTypes = {
 						x = @right_center 
 						y = 330 
 					}
+					iconType = {
+						name = "technological_revolution_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "technological_revolution_button"
 						quadTextureSprite = "Tekhnicheskaya_revolyutsia"
@@ -1797,6 +2261,15 @@ guiTypes = {
 					position = { 
 						x = 650 
 						y = 330 
+					}
+					iconType = {
+						name = "cultural_revolution_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "cultural_revolution_button"
@@ -1825,6 +2298,15 @@ guiTypes = {
 						x = @left 
 						y = 480 
 					}
+					iconType = {
+						name = "assured_survival_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "assured_survival_button"
 						quadTextureSprite = "Vyzhivanie_obespecheno"
@@ -1851,6 +2333,15 @@ guiTypes = {
 					position = { 
 						x = @right 
 						y = 480 
+					}
+					iconType = {
+						name = "proportionate_fee_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "proportionate_fee_button"
@@ -1879,6 +2370,15 @@ guiTypes = {
 						x = @center 
 						y = 630 
 					}
+					iconType = {
+						name = "flawless_soldier_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "flawless_soldier_button"
 						quadTextureSprite = "Soldat_bez_upreka" 
@@ -1905,6 +2405,15 @@ guiTypes = {
 					position = { 
 						x = @left_center 
 						y = 780 
+					}
+					iconType = {
+						name = "all_describing_formula_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "all_describing_formula_button"
@@ -1933,6 +2442,15 @@ guiTypes = {
 						x = @right_center 
 						y = 780 
 					}
+					iconType = {
+						name = "primary_broth_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "primary_broth_button"
 						quadTextureSprite = "Pervichny_bulion"
@@ -1959,6 +2477,15 @@ guiTypes = {
 					position = { 
 						x = @center 
 						y = 930 
+					}
+					iconType = {
+						name = "flowers_of_life_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "flowers_of_life_button"
@@ -1987,6 +2514,15 @@ guiTypes = {
 						x = @center
 						y = 1080 
 					}
+					iconType = {
+						name = "their_life_plans_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "their_life_plans_button"
 						quadTextureSprite = "Plany_Ikh_Zhizni" 
@@ -2013,6 +2549,15 @@ guiTypes = {
 					position = { 
 						x = @right_center 
 						y = 1230 
+					}
+					iconType = {
+						name = "cast_aside_doubts_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "cast_aside_doubts_button"
@@ -2041,6 +2586,15 @@ guiTypes = {
 						x = @left_center 
 						y = 1230 
 					}
+					iconType = {
+						name = "potential_realization_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "potential_realization_button"
 						quadTextureSprite = "Realizatsia_potentsiala" 
@@ -2067,6 +2621,15 @@ guiTypes = {
 					position = { 
 						x = @right_center 
 						y = 1380 
+					}
+					iconType = {
+						name = "order_in_mind_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "order_in_mind_button"
@@ -2095,6 +2658,15 @@ guiTypes = {
 						x = @left_center
 						y = 1380 
 					}
+					iconType = {
+						name = "unity_by_blood_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "unity_by_blood_button"
 						quadTextureSprite = "Edinstvo_krovyu" 
@@ -2121,6 +2693,15 @@ guiTypes = {
 					position = { 
 						x = @left_center 
 						y = 1530 
+					}
+					iconType = {
+						name = "man_and_consciousness_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "man_and_consciousness_button"
@@ -2149,6 +2730,15 @@ guiTypes = {
 						x = @right_center 
 						y = 1530 
 					}
+					iconType = {
+						name = "cognitive_warfare_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
+					}
 					buttonType = { 
 						name = "cognitive_warfare_button"
 						quadTextureSprite = "Kognitivnaya_voyna" 
@@ -2175,6 +2765,15 @@ guiTypes = {
 					position = { 
 						x = @center 
 						y = 1680 
+					}
+					iconType = {
+						name = "body_limits_overlay"
+						position = { 
+							x = -50
+							y = -50
+						}
+						spriteType = "GFX_govenrment_upgrade_overlay"
+						scale = 2
 					}
 					buttonType = { 
 						name = "body_limits_button"
