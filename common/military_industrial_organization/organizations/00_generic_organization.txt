@@ -2239,13 +2239,16 @@ generic_escort_ship_organization = {
 	}
 }
 
-
 #RAIDING FLEET MANUFACTURER - Based on John Brown (ENG)
 generic_raider_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_3
 
 	allowed = {
-		always = no # Archetype only - countries using it have their own versions
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = ICE
+		}
+		#always = no # Archetype only - countries using it have their own versions
 	}
 
 	equipment_type = {
@@ -2537,7 +2540,6 @@ generic_raider_ship_organization = {
 		}
 	}
 }
-
 
 #SUBMARINE MANUFACTURER - Based on Canteri Navali Tosi (ITA)
 generic_submarine_organization = {

@@ -374,10 +374,6 @@ sabotage_oil = {
 			add_to_variable = { sabotaged_oil = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
 		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
-		}
 	}
 
 	alert_text = resource_is_sabotaged
@@ -421,10 +417,6 @@ sabotage_aluminium = {
 
 			add_to_variable = { sabotaged_aluminium = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
-		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
 		}
 	}
 
@@ -470,10 +462,6 @@ sabotage_rubber = {
 			add_to_variable = { sabotaged_rubber = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
 		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
-		}
 	}
 
 	alert_text = resource_is_sabotaged
@@ -517,10 +505,6 @@ sabotage_tungsten = {
 
 			add_to_variable = { sabotaged_tungsten = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
-		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
 		}
 	}
 
@@ -567,10 +551,6 @@ sabotage_steel = {
 			add_to_variable = { sabotaged_steel = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
 		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
-		}
 	}
 
 	alert_text = resource_is_sabotaged
@@ -614,10 +594,6 @@ sabotage_chromium = {
 
 			add_to_variable = { sabotaged_chromium = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
-		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
 		}
 	}
 
