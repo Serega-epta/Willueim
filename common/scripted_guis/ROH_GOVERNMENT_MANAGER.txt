@@ -131,7 +131,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					NOT = {
 						has_idea = dense_layout_idea
 					}
@@ -147,7 +147,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_20 = yes
 					NOT = {
 						has_idea = materials_science_idea
 					}
@@ -163,7 +163,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_20 = yes
 					has_idea = materials_science_idea
 				}
 			}
@@ -177,7 +177,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_20 = yes
 					has_idea = dense_layout_idea
 				}
 			}
@@ -191,7 +191,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_20 = yes
 					OR = {
 						has_idea = lower_streams_idea
 						has_idea = upper_streams_idea
@@ -208,7 +208,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_20 = yes
 					has_idea = our_future_idea
 					NOT = {
 						has_idea = working_faculties_idea
@@ -225,7 +225,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_20 = yes
 					has_idea = our_future_idea
 					NOT = {
 						has_idea = vocational_technical_schools_idea
@@ -242,7 +242,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_20 = yes
 					has_idea = vocational_technical_schools_idea
 				}
 			}
@@ -256,7 +256,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_20 = yes
 					has_idea = working_faculties_idea
 				}
 			}
@@ -270,7 +270,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					OR = {
 						has_idea = vocational_technical_schools_idea
 						has_idea = working_faculties_idea
@@ -287,7 +287,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = industrial_cooperation_idea
 				}
 			}
@@ -301,7 +301,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = industrial_cooperation_idea
 				}
 			}
@@ -315,8 +315,11 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = industrial_cooperation_idea
+					any_controlled_state = {
+						is_owned_by = ROOT
+					}
 				}
 			}
 			strict_regulations_button_click_enabled = {
@@ -329,7 +332,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = constructed_for_life_idea
 					has_idea = industrial_cooperation_idea
 					has_idea = local_wing_idea
@@ -348,7 +351,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = constructed_for_life_idea
 					has_idea = industrial_cooperation_idea
 					has_idea = local_wing_idea
@@ -367,7 +370,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					OR = {
 						has_idea = flexible_regulations_idea
 						has_idea = strict_regulations_idea
@@ -387,13 +390,16 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_45 = yes
 					OR = {
 						has_idea = flexible_regulations_idea
 						has_idea = strict_regulations_idea
 					}
 					NOT = {
 						has_idea = gardening_partnerships_idea
+					}
+					any_controlled_state = {
+						is_owned_by = ROOT
 					}
 				}
 			}
@@ -407,7 +413,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					OR = {
 						has_idea = gardening_partnerships_idea
 						has_idea = rural_units_idea
@@ -427,7 +433,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					OR = {
 						has_idea = gardening_partnerships_idea
 						has_idea = rural_units_idea
@@ -447,7 +453,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					OR = {
 						has_idea = adversarial_law_idea
 						has_idea = fair_competition_codex_idea
@@ -464,7 +470,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_45 = yes
 					has_idea = outsourcing_idea
 				}
 			}
@@ -478,7 +484,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_60 = yes
 					has_idea = outsourcing_idea
 				}
 			}
@@ -492,7 +498,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_60 = yes
 					has_idea = outsourcing_idea
 				}
 			}
@@ -506,7 +512,7 @@ scripted_gui = {
 							selected_government_system = 1
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_90 = yes
 					has_idea = trade_initiative_idea
 					has_idea = GOST_idea
 					has_idea = fullstack_consumtion_idea
@@ -801,346 +807,507 @@ scripted_gui = {
 			materials_science_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = materials_science_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 1
-								}
-							}
+						has_idea = materials_science_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = materials_science_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = materials_science_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = materials_science_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 15
+						tooltip = goverment_system_upgrade_15_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+				}
+				custom_effect_tooltip = materials_science_reform_tt
 			}
 			dense_layout_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = dense_layout_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 1
-								}
-							}
+						has_idea = dense_layout_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = dense_layout_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = dense_layout_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = dense_layout_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 20
+						tooltip = goverment_system_upgrade_20_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_20_tt
+				}
+				custom_effect_tooltip = dense_layout_reform_tt
 			}
 			lower_streams_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = lower_streams_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = lower_streams_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = lower_streams_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = lower_streams_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = lower_streams_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 20
+						tooltip = goverment_system_upgrade_20_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_20_tt
+				}
+				custom_effect_tooltip = lower_streams_reform_tt
 			}
 			upper_streams_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = upper_streams_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = upper_streams_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = upper_streams_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = upper_streams_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = upper_streams_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 20
+						tooltip = goverment_system_upgrade_20_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_20_tt
+				}
+				custom_effect_tooltip = upper_streams_reform_tt
 			}
 			our_future_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = our_future_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = our_future_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = our_future_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = our_future_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = our_future_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 20
+						tooltip = goverment_system_upgrade_20_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_20_tt
+				}
+				custom_effect_tooltip = our_future_reform_tt
 			}
 			vocational_technical_schools_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = vocational_technical_schools_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = vocational_technical_schools_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = vocational_technical_schools_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = vocational_technical_schools_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = vocational_technical_schools_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 20
+						tooltip = goverment_system_upgrade_20_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_20_tt
+				}
+				custom_effect_tooltip = vocational_technical_schools_reform_tt
 			}
 			working_faculties_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = working_faculties_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = working_faculties_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = working_faculties_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = working_faculties_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = working_faculties_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 20
+						tooltip = goverment_system_upgrade_20_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_20_tt
+				}
+				custom_effect_tooltip = working_faculties_reform_tt
 			}
 			labor_veterans_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = labor_veterans_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = labor_veterans_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = labor_veterans_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = labor_veterans_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = labor_veterans_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 20
+						tooltip = goverment_system_upgrade_20_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_20_tt
+				}
+				custom_effect_tooltip = labor_veterans_reform_tt
 			}
 			labor_heros_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = labor_heros_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = labor_heros_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = labor_heros_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = labor_heros_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = labor_heros_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 20
+						tooltip = goverment_system_upgrade_20_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_20_tt
+				}
+				custom_effect_tooltip = labor_heros_reform_tt
 			}
 			industrial_cooperation_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = industrial_cooperation_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = industrial_cooperation_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = industrial_cooperation_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = industrial_cooperation_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = industrial_cooperation_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = industrial_cooperation_reform_tt
 			}
 			constructed_for_life_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = constructed_for_life_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = constructed_for_life_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = constructed_for_life_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = constructed_for_life_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = constructed_for_life_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = constructed_for_life_reform_tt
 			}
 			love_thy_neighbour_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = love_thy_neighbour_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = love_thy_neighbour_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = love_thy_neighbour_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = love_thy_neighbour_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = love_thy_neighbour_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = love_thy_neighbour_reform_tt
 			}
 			local_wing_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = local_wing_idea
-							check_variable = {
-								selected_government_system = 0
+						has_idea = local_wing_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
+					hidden_effect = {
+						add_ideas = local_wing_idea
+						random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = infrastructure
+								level = 1
+							}
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
 							}
 						}
 					}
-					custom_effect_tooltip = local_wing_used_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
 				else = {
-					hidden_effect = {
-						add_ideas = local_wing_idea
-					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = local_wing_available_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
 				}
+				custom_effect_tooltip = local_wing_reform_tt
 			}
 			strict_regulations_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = strict_regulations_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = strict_regulations_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = strict_regulations_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = strict_regulations_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = strict_regulations_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = strict_regulations_reform_tt
 			}
 			flexible_regulations_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = flexible_regulations_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = flexible_regulations_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = flexible_regulations_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = flexible_regulations_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = flexible_regulations_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = flexible_regulations_reform_tt
 			}
 			gardening_partnerships_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = gardening_partnerships_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = gardening_partnerships_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = gardening_partnerships_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = gardening_partnerships_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = gardening_partnerships_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = gardening_partnerships_reform_tt
 			}
 			rural_units_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = rural_units_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = rural_units_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = rural_units_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = rural_units_idea
+						random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = infrastructure
+								level = 1
+							}
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+							}
+						}
+						every_owned_state = {
+							limit = {
+								is_controlled_by = ROOT
+							}
+							random_select_amount = 4
+							add_extra_state_shared_building_slots = 1
+						}
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = rural_units_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 45
+						tooltip = goverment_system_upgrade_45_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_45_tt
+				}
+				custom_effect_tooltip = rural_units_reform_tt
 			}
 			adversarial_law_button_click = {
 				if = {
@@ -1152,135 +1319,196 @@ scripted_gui = {
 							}
 						}
 					}
-					custom_effect_tooltip = adversarial_law_used_tt
+					custom_effect_tooltip = reform_researched_tt
 				}
-				else = {
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
+						}
+					}
 					hidden_effect = {
 						add_ideas = adversarial_law_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = adversarial_law_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = adversarial_law_reform_tt
 			}
 			fair_competition_codex_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = fair_competition_codex_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = fair_competition_codex_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = fair_competition_codex_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = fair_competition_codex_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = fair_competition_codex_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = fair_competition_codex_reform_tt
 			}
 			outsourcing_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = outsourcing_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = outsourcing_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = outsourcing_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = outsourcing_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = outsourcing_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 30
+						tooltip = goverment_system_upgrade_30_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+				}
+				custom_effect_tooltip = outsourcing_reform_tt
 			}
 			trade_initiative_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = trade_initiative_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = trade_initiative_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = trade_initiative_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = trade_initiative_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = trade_initiative_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 45
+						tooltip = goverment_system_upgrade_45_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_45_tt
+				}
+				custom_effect_tooltip = trade_initiative_reform_tt
 			}
 			GOST_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = GOST_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = GOST_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = GOST_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = GOST_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = GOST_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 60
+						tooltip = goverment_system_upgrade_60_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_60_tt
+				}
+				custom_effect_tooltip = GOST_reform_tt
 			}
 			fullstack_consumtion_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = fullstack_consumtion_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = fullstack_consumtion_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = fullstack_consumtion_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = fullstack_consumtion_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = fullstack_consumtion_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 60
+						tooltip = goverment_system_upgrade_60_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_60_tt
+				}
+				custom_effect_tooltip = fullstack_consumtion_reform_tt
 			}
 			humanism_stronghold_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = humanism_stronghold_idea
-							check_variable = {
-								selected_government_system = 0
-							}
+						has_idea = humanism_stronghold_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 1
 						}
 					}
-					custom_effect_tooltip = humanism_stronghold_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = humanism_stronghold_idea
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = humanism_stronghold_available_tt
+					subtract_from_variable = {
+						var = ochki_gos_progressa
+						value = 90
+						tooltip = goverment_system_upgrade_90_tt
+					}
 				}
+				else = {
+					custom_effect_tooltip = model_is_not_selected_tt
+					custom_effect_tooltip = goverment_system_upgrade_90_tt
+				}
+				custom_effect_tooltip = humanism_stronghold_reform_tt
 			}
 		}
 	}

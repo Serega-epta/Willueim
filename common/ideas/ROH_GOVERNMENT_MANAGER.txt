@@ -8,6 +8,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.05
+			}
 		}
 		dense_layout_idea = {
 			traits = {
@@ -15,6 +18,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				local_factories = 0.1
 			}
 		}
 		lower_streams_idea = {
@@ -24,6 +30,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+			}
 		}
 		upper_streams_idea = {
 			traits = {
@@ -31,6 +41,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.075
 			}
 		}
 		our_future_idea = {
@@ -40,6 +53,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				monthly_population = 0.1
+			}
 		}
 		vocational_technical_schools_idea = {
 			traits = {
@@ -47,6 +63,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.075
 			}
 		}
 		working_faculties_idea = {
@@ -56,6 +75,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.05
+			}
 		}
 		labor_veterans_idea = {
 			traits = {
@@ -63,6 +85,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		labor_heros_idea = {
@@ -72,6 +97,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				production_factory_start_efficiency_factor = 0.075
+			}
 		}
 		industrial_cooperation_idea = {
 			traits = {
@@ -79,6 +107,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.075
 			}
 		}
 		constructed_for_life_idea = {
@@ -88,6 +119,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				monthly_population = 0.12
+			}
 		}
 		love_thy_neighbour_idea = {
 			traits = {
@@ -95,6 +129,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				stability_factor = 0.15
 			}
 		}
 		local_wing_idea = {
@@ -112,6 +149,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				stability_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
 		}
 		flexible_regulations_idea = {
 			traits = {
@@ -120,6 +161,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
 		}
 		gardening_partnerships_idea = {
 			traits = {
@@ -127,6 +172,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 		}
 		rural_units_idea = {
@@ -144,6 +192,11 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				trade_opinion_factor = 0.05
+				faction_trade_opinion_factor = 0.05
+				extra_trade_to_overlord_factor = 0.05
+			}
 		}
 		fair_competition_codex_idea = {
 			traits = {
@@ -151,6 +204,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.03
 			}
 		}
 		outsourcing_idea = {
@@ -160,6 +216,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				production_factory_start_efficiency_factor = 0.075
+			}
 		}
 		trade_initiative_idea = {
 			traits = {
@@ -167,6 +226,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				trade_influence_factor = 0.15
 			}
 		}
 		GOST_idea = {
@@ -176,6 +238,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				local_resources_factor = 0.1
+			}
 		}
 		fullstack_consumtion_idea = {
 			traits = {
@@ -184,6 +249,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				trade_influence_factor = 0.25
+			}
 		}
 		humanism_stronghold_idea = {
 			traits = {
@@ -191,6 +259,10 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				army_core_defence_factor = 0.15
+            	surrender_limit = 0.03
 			}
 		}
 		#smoilov system
