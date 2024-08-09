@@ -6,7 +6,7 @@ characters = {
 			}
 		}
 		country_leader={
-			ideology=sacraments_subideology
+			ideology=truefighters
 			expire="1965.1.1.1"
 			id=-1
 			desc = LWV_i_van_desc
@@ -87,40 +87,4 @@ characters = {
 			logistics_skill = 1
 		}
 	}	
-
-	LWV_gennadiy_malahov = {
-		name = LWV_gennadiy_malahov
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_patriarch_meletius"
-			}
-		}
-		advisor = {
-            slot = political_advisor
-            idea_token = gennadiy_malahov
-			ledger = civilian
-			allowed = {
-				original_tag = LWV
-			}
-            traits = { LWV_enterprising_business_priest }
-		}
-	}
-
-	LWV_miroslav_popov = {
-		name = LWV_miroslav_popov
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_patriarch_meletius"
-			}
-		}
-		advisor = {
-            slot = political_advisor
-            idea_token = miroslav_popov
-			ledger = civilian
-			allowed = {
-				original_tag = LWV
-			}
-            traits = { LWV_archiepiskop }
-		}
-	}
 }

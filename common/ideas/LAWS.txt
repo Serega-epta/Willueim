@@ -72,10 +72,10 @@ ideas = {
 		}
 		admiral_recruting = {
 			allowed = {
-				always = yes 
+				tag = ODS
 			}
 			available = {
-				always = yes 
+				has_war = yes
 			}
 			cost = 100
 			removal_cost = -1
@@ -254,10 +254,10 @@ ideas = {
 		}
 		truthfighters = {
 			allowed = {
-				always = yes 
+				original_tag = LWV 
 			}
 			available = {
-				original_tag = LWV 
+				always = yes
 			}
 			cost = 100
 			removal_cost = -1
@@ -271,7 +271,10 @@ ideas = {
 		}
 		villiums = {
 			allowed = {
-				always = yes 
+				OR = {
+					tag = VOZ
+					has_country_flag = not_human
+				}
 			}
 			available = {
 				always = yes 
@@ -313,7 +316,7 @@ ideas = {
 				always = yes 
 			}
 			available = {
-				always = yes 
+				has_tech = radio_enhancement
 			}
 			cost = 100
 			removal_cost = -1
@@ -327,10 +330,10 @@ ideas = {
 		}
 		television = {
 			allowed = {
-				always = yes 
+				always = yes
 			}
 			available = {
-				always = yes 
+				has_tech = improved_radio_communication
 			}
 			cost = 100
 			removal_cost = -1
@@ -342,12 +345,12 @@ ideas = {
 			}
 			cancel_if_invalid = yes 	
 		}
-		internet = {
+		internet_law = {
 			allowed = {
-				always = yes 
+				always = yes
 			}
 			available = {
-				always = yes 
+				has_tech = internet
 			}
 			cost = 100
 			removal_cost = -1
@@ -512,7 +515,7 @@ ideas = {
 			removal_cost = -1
 			level = 4
 			modifier = {
-				research_speed_factor = 0.05 ############## тут типо технологии псионики но они еще не готовы 
+				research_speed_factor = 0.05 
 				research_speed_factor = 0.02
 				monthly_population = -0.05
 			}		

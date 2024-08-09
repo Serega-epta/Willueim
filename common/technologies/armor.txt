@@ -1,5 +1,6 @@
 technologies = {
 	pre_war_OPV = {	
+		start_year = 2010
 		enable_equipments = { pre_war_OPV_equipment }
 		
 		enable_subunits = {
@@ -39,6 +40,7 @@ technologies = {
 	#Подветка специализированных танков
 	
 	basic_specialized_OPF = {	
+		start_year = 2020
 		enable_equipments = { basic_specialized_OPF_equipment }
 		enable_subunits = {
 			specialized_OPF
@@ -67,6 +69,7 @@ technologies = {
 	}
 
 	improved_specialized_OPF = {	
+		start_year = 2025
 		enable_equipments = { improved_specialized_OPF_equipment }
 		path = {
 		 	leads_to_tech = advanced_specialized_OPF
@@ -90,6 +93,7 @@ technologies = {
 	}
 
 	advanced_specialized_OPF = {	
+		start_year = 2030
 		enable_equipments = { advanced_specialized_OPF_equipment }
 		path = {
 			leads_to_tech = specialized_OPF_of_the_future
@@ -113,6 +117,7 @@ technologies = {
 	}
 
 	specialized_OPF_of_the_future = {	
+		start_year = 2040
 		enable_equipments = { specialized_OPF_of_the_future_equipment }
 		research_cost = 2.5
 
@@ -132,6 +137,7 @@ technologies = {
 
 	#Подветка массовых танков
 	basic_mass_OPF = {	
+		start_year = 2020
 		enable_equipments = { basic_mass_OPF_equipment }
 		path = {
 			leads_to_tech = improved_mass_OPF
@@ -155,6 +161,7 @@ technologies = {
 	}
 
 	improved_mass_OPF = {	
+		start_year = 2025
 		enable_equipments = { improved_mass_OPF_equipment }
 		path = {
 		 	leads_to_tech = advanced_mass_OPF
@@ -178,6 +185,7 @@ technologies = {
 	}
 
 	advanced_mass_OPF = {	
+		start_year = 2030
 		enable_equipments = { advanced_mass_OPF_equipment }
 		path = {
 			leads_to_tech = mass_OPF_of_the_future
@@ -201,6 +209,7 @@ technologies = {
 	}
 
 	mass_OPF_of_the_future = {	
+		start_year = 2040
 		enable_equipments = { mass_OPF_of_the_future_equipment }
  
 		research_cost = 2.5
@@ -221,6 +230,7 @@ technologies = {
 
 	#Подветка ИИ - танков
 	basic_ai_OPF = {	
+		start_year = 2020
 		enable_equipments = { basic_ai_OPF_equipment }
 		enable_subunits = {
 			ai_OPF
@@ -248,6 +258,7 @@ technologies = {
 	}
 
 	improved_ai_OPF = {	
+		start_year = 2025
 		enable_equipments = { improved_ai_OPF_equipment }
 		path = {
 		 	leads_to_tech = advanced_ai_OPF
@@ -271,6 +282,7 @@ technologies = {
 	}
 
 	advanced_ai_OPF = {	
+		start_year = 2030
 		enable_equipments = { advanced_ai_OPF_equipment }
 		path = {
 			leads_to_tech = ai_OPF_of_the_future
@@ -294,6 +306,7 @@ technologies = {
 	}
 
 	ai_OPF_of_the_future = {	
+		start_year = 2040
 		enable_equipments = { ai_OPF_of_the_future_equipment }
  
 		research_cost = 2.5
@@ -314,6 +327,7 @@ technologies = {
 
 	#Подветка брони
 	armor_1 = {	
+		start_year = 2010
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -339,6 +353,7 @@ technologies = {
 	}
 
 	armor_2 = {	
+		start_year = 2020
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -365,6 +380,7 @@ technologies = {
 	}
 
 	armor_3 = {	
+		start_year = 2025
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -391,6 +407,7 @@ technologies = {
 	}
 
 	armor_4 = {	
+		start_year = 2030
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -418,6 +435,7 @@ technologies = {
 
 
 	armor_5 = {	
+		start_year = 2040
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -441,6 +459,7 @@ technologies = {
 
 	#Подветка двигателей
 	engine_1 = {
+		start_year = 2010
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
@@ -466,6 +485,7 @@ technologies = {
 	}
 
 	engine_2 = {	
+		start_year = 2020
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
@@ -492,6 +512,7 @@ technologies = {
 	}
 
 	engine_3 = {	
+		start_year = 2025
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
@@ -518,6 +539,7 @@ technologies = {
 	}
 
 	engine_4 = {
+		start_year = 2030
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
@@ -545,6 +567,7 @@ technologies = {
 
 
 	engine_5 = {	
+		start_year = 2040
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02

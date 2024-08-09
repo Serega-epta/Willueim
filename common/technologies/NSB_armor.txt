@@ -1,5 +1,6 @@
 technologies = {
 	nsb_pre_war_OPV = {	
+		start_year = 2010
 		enable_equipments = { early_mbt_equipment }
 		enable_subunits = {
 			OPF
@@ -38,6 +39,7 @@ technologies = {
 	#Подветка специализированных танков
 	
 	nsb_basic_nsb_specialized_OPF = {	
+		start_year = 2020
 		enable_equipments = { specialized_tank_chassis_0 }
 		enable_subunits = {
 			specialized_OPF
@@ -66,6 +68,7 @@ technologies = {
 	}
 
 	nsb_improved_nsb_specialized_OPF = {	
+		start_year = 2025
 		enable_equipments = { specialized_tank_chassis_1 }
 		path = {
 		 	leads_to_tech = nsb_advanced_nsb_specialized_OPF
@@ -89,6 +92,7 @@ technologies = {
 	}
 
 	nsb_advanced_nsb_specialized_OPF = {	
+		start_year = 2030
 		enable_equipments = { specialized_tank_chassis_2 }
 		path = {
 			leads_to_tech = nsb_specialized_OPF_of_the_future
@@ -112,6 +116,7 @@ technologies = {
 	}
 
 	nsb_specialized_OPF_of_the_future = {	
+		start_year = 2040
 		enable_equipments = { specialized_tank_chassis_3 }
  
 		research_cost = 2.5
@@ -132,6 +137,7 @@ technologies = {
 
 	#Подветка массовых танков
 	nsb_basic_mass_OPF = {	
+		start_year = 2020
 		enable_equipments = { mass_tank_chassis_0 }
 		path = {
 			leads_to_tech = nsb_improved_mass_OPF
@@ -155,6 +161,7 @@ technologies = {
 	}
 
 	nsb_improved_mass_OPF = {	
+		start_year = 2025
 		enable_equipments = { mass_tank_chassis_1 }
 		path = {
 		 	leads_to_tech = nsb_advanced_mass_OPF
@@ -178,6 +185,7 @@ technologies = {
 	}
 
 	nsb_advanced_mass_OPF = {	
+		start_year = 2030
 		enable_equipments = { mass_tank_chassis_2 }
 		path = {
 			leads_to_tech = nsb_mass_OPF_of_the_future
@@ -201,6 +209,7 @@ technologies = {
 	}
 
 	nsb_mass_OPF_of_the_future = {	
+		start_year = 2040
 		enable_equipments = { mass_tank_chassis_3 }
  
 		research_cost = 2.5
@@ -221,6 +230,7 @@ technologies = {
 
 	#Подветка ИИ - танков
 	nsb_basic_ai_OPF = {	
+		start_year = 2020
 		enable_equipments = { ai_tank_chassis_0 }
 		enable_subunits = {
 			ai_OPF
@@ -248,6 +258,7 @@ technologies = {
 	}
 
 	nsb_improved_ai_OPF = {	
+		start_year = 2025
 		enable_equipments = { ai_tank_chassis_1 }
 		path = {
 		 	leads_to_tech = nsb_advanced_ai_OPF
@@ -271,6 +282,7 @@ technologies = {
 	}
 
 	nsb_advanced_ai_OPF = {	
+		start_year = 2030
 		enable_equipments = { ai_tank_chassis_2 }
 		path = {
 			leads_to_tech = nsb_ai_OPF_of_the_future
@@ -294,6 +306,7 @@ technologies = {
 	}
 
 	nsb_ai_OPF_of_the_future = {	
+		start_year = 2040
 		enable_equipments = { ai_tank_chassis_3 }
  
 		research_cost = 2.5
@@ -315,6 +328,7 @@ technologies = {
 
 	#Подветка брони
 	nsb_armor_1 = {	
+		start_year = 2010
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -340,6 +354,7 @@ technologies = {
 	}
 
 	nsb_armor_2 = {	
+		start_year = 2020
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -366,6 +381,7 @@ technologies = {
 	}
 
 	nsb_armor_3 = {	
+		start_year = 2025
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -392,6 +408,7 @@ technologies = {
 	}
 
 	nsb_armor_4 = {	
+		start_year = 2030
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -419,6 +436,7 @@ technologies = {
 
 
 	nsb_armor_5 = {	
+		start_year = 2040
 		category_tanks = {
 			defense = 0.02
 			breakthrough = 0.03
@@ -442,6 +460,7 @@ technologies = {
 
 	#Подветка двигателей
 	nsb_engine_1 = {
+		start_year = 2010
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
@@ -466,7 +485,8 @@ technologies = {
 		}
 	}
 
-	nsb_engine_2 = {	
+	nsb_engine_2 = {
+		start_year = 2020	
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
@@ -493,6 +513,7 @@ technologies = {
 	}
 
 	nsb_engine_3 = {	
+		start_year = 2025
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
@@ -519,6 +540,7 @@ technologies = {
 	}
 
 	nsb_engine_4 = {	
+		start_year = 2030
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
@@ -546,6 +568,7 @@ technologies = {
 
 
 	nsb_engine_5 = {	
+		start_year = 2040
 		category_tanks = {
 			maximum_speed = 0.05
 			breakthrough = 0.02
