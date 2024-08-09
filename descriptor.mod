@@ -1,4 +1,4 @@
-version="0.0.1.1"
+version="1.0.0"
 replace_path="common/abilities"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
@@ -73,5 +73,5 @@ tags={
 	"Sound"
 	"Technologies"
 }
-name="The Requiem of Humankind: First Alpha"
+name="The Requiem of Humankind: Open Alpha"
 supported_version="1.14.*"
