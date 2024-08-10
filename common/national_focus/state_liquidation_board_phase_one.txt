@@ -235,6 +235,7 @@ focus_tree = {
 	focus = {
 		id = GLS_end_of_silence
 		icon = GFX_end_of_silence
+		available = { NOT = { country_exists = TTL } }
 		x = 6 
 		y = 6
 		cost = 5
@@ -338,7 +339,7 @@ focus_tree = {
 		prerequisite = { focus = GLS_south_mraz }
 		prerequisite = { focus = GLS_north_mraz }
 		completion_reward = {
-		swap_ideas = {
+			swap_ideas = {
 				remove_idea = GLS_memories_of_rodina_1
 				add_idea =  GLS_memories_of_rodina_2
 			}
