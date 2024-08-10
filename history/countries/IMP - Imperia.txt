@@ -3,8 +3,6 @@ add_manpower = 24000
 
 oob = IMP
 
-
-# Starting tech
 set_technology = {
    infantry_weapons = 1
    civilian_clothing = 1
@@ -13,23 +11,26 @@ set_technology = {
    instruments_of_any_era = 1
 }
 
-set_research_slots = 5
+set_research_slots = 3
 set_convoys = 0
-
+add_ideas = {
+    IMP_winners_of_the_first_central_Russian
+    IMP_splinter_administration
+}
 
 set_politics = {
 	ruling_party = humanists
 	elections_allowed = no
 }
 set_popularities = {
-	humanists = 84
-	free_people = 6
+	humanists = 32
+	free_people = 16
 	technocracy = 10
 	chthonism = 0
 	sacraments = 0
-    militarists = 0
-    statesmen = 0
-    bandits = 0
+    militarists = 2
+    statesmen = 30
+    bandits = 10
 }
 
 add_opinion_modifier = {

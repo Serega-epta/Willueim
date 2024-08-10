@@ -1,62 +1,55 @@
 ideas = {
 
 	country = {
-		IMP_1 = {
-			picture = Prekrasnoe_daleko
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		IMP_winners_of_the_first_central_Russian = {
+			picture = winners_of_the_first_central_Russian
 			modifier = {
-				army_speed_factor = -0.5
-				army_org_factor = -0.5
-				army_org_regain = -0.5
-				
+				army_attack_factor = 0.02
+				army_defence_factor = 0.02
+				monthly_population = -0.1
+				experience_gain_army_factor = 0.02
 			}
 		}
-		IMP_2 = {
-			picture = Nepreklonniy_militarizm
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		IMP_winners_of_the_first_central_Russian_1 = {
+			picture = winners_of_the_first_central_Russian
 			modifier = {
-				army_speed_factor = -0.25
-				army_org_factor = -0.25
-				army_org_regain = -0.25
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				monthly_population = -0.1
+				experience_gain_army_factor = 0.03
 			}
 		}
-		IMP_3 = {
-			picture = Uzhas_neizbezhnogo
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		IMP_winners_of_the_first_central_Russian_2 = {
+			picture = winners_of_the_first_central_Russian
 			modifier = {
-				army_speed_factor = -0.1
-				army_org_factor = -0.1
-				army_org_regain = -0.1
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				monthly_population = -0.05
+				experience_gain_army_factor = 0.03
+			}
+		}
+		IMP_splinter_administration = {
+			picture = splinter_administration
+			modifier = {
+				war_support_factor = -0.1
+				stability_factor = -0.1
+				political_power_gain = -1.0
+			}
+		}
+		IMP_splinter_administration_1 = {
+			picture = splinter_administration
+			modifier = {
+				war_support_factor = -0.15
+				stability_factor = -0.15
+				political_power_gain = -1.0
+			}
+		}
+		IMP_splinter_administration_2 = {
+			picture = splinter_administration
+			modifier = {
+				war_support_factor = -0.15
+				stability_factor = -0.15
+				political_power_gain = -0.5
 			}
 		}
 		IMP_annoying_mistake = {
