@@ -448,3 +448,536 @@ AGE_their_freedoms = {
 		}
 	}
 }
+
+AGE_twd_category = {
+	twd_mission_1 = {
+    	activation = {
+        	AGE = {
+				has_completed_focus = AGE_visit_our_comrades
+			}
+    	}
+	    available = {
+    	    always = no
+    	}
+    	is_good = yes
+    	days_mission_timeout = 40
+    	selectable_mission = no
+		fire_only_once = yes
+		complete_effect = {
+		}
+    	timeout_effect = {
+        	TWD = {
+				declare_war_on = {
+           			target = CHU
+            		type = annex_everything
+        		}
+			}
+    	}
+	}
+	twd_mission_2 = {
+    	activation = {
+			AGE = {
+				has_completed_focus = AGE_visit_our_comrades
+			}
+        	CHU = {
+				has_capitulated = yes
+			}
+    	}
+	    available = {
+    		AGE = {
+				has_completed_focus = AGE_Punish_the_traitor
+			}
+    	}
+    	is_good = yes
+    	days_mission_timeout = 80
+    	selectable_mission = no
+		fire_only_once = yes
+		complete_effect = {
+		}
+    	timeout_effect = {
+        	TWD = {
+				add_ideas = AGE_revenge
+				declare_war_on = {
+           			target = AGE
+            		type = annex_everything
+        		}
+			}
+    	}
+	}
+}
+AGE_red_forest = {
+	AGE_red_forest_mission = {
+    	activation = {
+        	AGE = {
+				has_completed_focus = AGE_visit_our_comrades
+			}
+			country_exists = TIP
+    	}
+	    available = {
+    	    NOT = {
+				country_exists = TIP
+			}
+    	}
+    	is_good = yes
+    	days_mission_timeout = 75
+    	selectable_mission = no
+		complete_effect = {
+		}
+    	timeout_effect = {
+        	IF = {
+				limit = {
+					NOT = {
+						TIP = {
+							controls_state = 910
+						}
+					}
+				}
+				910 = {
+					transfer_state_to = TIP
+				}
+			}
+			else_if = {
+				limit = {
+					TIP = {
+							controls_state = 910
+						}
+					NOT = {
+						TIP = {
+							controls_state = 909
+						}
+					}
+				}
+				909 = {
+					transfer_state_to = TIP
+				}
+				set_country_flag = red_forest_flag
+			}
+			else_if = {
+				limit = {
+					TIP = {
+						controls_state = 910
+						controls_state = 909
+					}
+				}
+				TIP = {
+					random_controlled_state = {
+						limit = {
+							any_neighbor_state = {
+								is_owned_by = AGE
+							}
+						}
+						random_neighbor_state = {
+							limit = {
+								is_owned_by = AGE
+							}
+							transfer_state_to = TIP
+						}
+					}
+				}
+				set_country_flag = red_forest_flag
+			}
+    	}
+	}
+	AGE_burn_the_forest = {
+		available = {
+			has_equipment = {
+				anti_tank_equipment > 29
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_owned_by = TIP
+				any_neighbor_state = {
+					is_owned_by = AGE
+				}
+				NOT = {
+					state = 906
+					state = 206
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = red_forest_flag
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		cost = 0
+		days_remove = 40
+		complete_effect = {}
+		cancel_effect = {
+			hidden_trigger = {
+				has_country_flag = red_forest_flag
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = -5
+			}
+			FROM = {
+				transfer_state_to = AGE
+				add_core_of = AGE
+			}
+		}
+	}
+	AGE_burn_the_forest_glubohoje = {
+		available = {
+			has_equipment = {
+				anti_tank_equipment > 49
+			}
+		}
+		target_trigger = {
+			FROM = {
+				state = 906
+				is_owned_by = TIP
+				any_neighbor_state = {
+					is_owned_by = AGE
+				}
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_country_flag = red_forest_flag
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		cost = 0
+		days_remove = 40
+		complete_effect = {}
+		cancel_effect = {
+			clr_country_flag = red_forest_flag
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = -8
+			}
+			906 = {
+				transfer_state_to = AGE
+				add_core_of = AGE
+			}
+		}
+	}
+	AGE_burn_the_forest_Minsk = {
+		available = {
+			has_equipment = {
+				anti_tank_equipment > 149
+			}
+		}
+		target_trigger = {
+			FROM = {
+				state = 206
+				is_owned_by = TIP
+				any_neighbor_state = {
+					is_owned_by = AGE
+				}
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_country_flag = red_forest_flag
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		cost = 0
+		days_remove = 60
+		complete_effect = {}
+		cancel_effect = {
+			clr_country_flag = red_forest_flag
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = -20
+			}
+			206 = {
+				transfer_state_to = AGE
+				add_core_of = AGE
+			}
+		}
+	}
+	AGE_contain_the_forest = {
+		visible = {
+			is_neighbor_of = TIP
+		}
+		available = {
+			has_equipment = {
+				support_equipment > 44
+			}
+		}
+		cost = 40
+		custom_cost_trigger = {
+    		command_power > 29
+		}
+		custom_cost_text = decision_cost_CP_30_pp_40
+		days_remove = 40
+		days_re_enable = 30
+		complete_effect = {
+		}
+		remove_effect = {
+			add_days_mission_timeout = {
+    			mission = AGE_red_forest_mission
+    			days = 60
+			}
+		}
+	}
+}
+
+AGE_south_intervention = {
+	AGE_simon_mission_1 = {
+    	activation = {
+        	AGE = {
+				has_completed_focus = AGE_visit_our_comrades
+			}
+			country_exists = BLZ
+    	}
+	    available = {
+    	    always = no
+    	}
+    	is_good = yes
+    	days_mission_timeout = 70
+    	selectable_mission = no
+		fire_only_once = yes
+		complete_effect = {
+		}
+    	timeout_effect = {
+			SIM = {
+				transfer_state = 11
+				add_timed_idea = {
+					idea = SIM_amber_harvest
+					days = 90
+				}
+			}
+		}
+    }
+	AGE_simon_mission_2 = {
+    	activation = {
+        	11 = {
+				is_controlled_by = SIM
+			}
+			country_exists = BLZ
+    	}
+	    available = {
+    	    815 = {
+				is_controlled_by = AGE
+			}
+    	}
+    	is_good = yes
+    	days_mission_timeout = 60
+    	selectable_mission = no
+		fire_only_once
+		complete_effect = {
+		}
+    	timeout_effect = {
+			SIM = {
+				transfer_state = 815
+				modify_timed_idea = {
+    				idea = SIM_amber_harvest
+    				days = 90
+				}
+			}
+		}
+    }
+	AGE_protect_scientistst = {
+		available = {
+			is_neighbor_of = BAI
+			has_completed_focus = AGE_complex_Barrier
+		}
+
+		cost = 0
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			annex_country = {
+    			target = BAI
+    			transfer_troops = yes
+			}
+			907 = {
+				add_core_of = AGE
+			}
+			country_event = AGE.17
+		}
+	}
+
+	AGE_occupy_Ekabplis = {
+		visible = {
+			has_completed_focus = AGE_chaos_at_the_border
+		}
+		available = {		
+			command_power > 49
+			NOT = {
+				910 = {
+					is_controlled_by = HAR
+				}
+			}
+		}
+
+		cost = 100
+		custom_cost_trigger = {
+    		command_power > 49
+		}
+		custom_cost_text = decision_cost_CP_50
+		days_remove = 10
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			909 = {
+				transfer_state_to = AGE
+				add_core_of = AGE
+			}
+		}
+	}
+
+	AGE_occupy_Svedasai = {
+		visible = {
+			country_exists = BLZ
+			has_completed_focus = AGE_chaos_at_the_border
+		}
+		available = {
+			command_power > 49
+			11 = {
+				is_controlled_by = SIM
+			}
+		}
+
+		cost = 100
+		custom_cost_trigger = {
+    		command_power > 49
+		}
+		custom_cost_text = decision_cost_CP_50
+		days_remove = 10
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			815 = {
+				transfer_state_to = AGE
+				add_core_of = AGE
+			}
+		}
+	}
+	AGE_recapture_Kaunas = {
+		visible = {
+			11 = {
+				is_controlled_by = SIM
+			}
+			815 = {
+				is_controlled_by = AGE
+			}
+			NOT = {
+				country_exists = BLZ
+			}
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = AGE_recapture_flag
+				}
+			}
+			has_completed_focus = AGE_chaos_at_the_border
+			command_power > 24
+			has_equipment = {
+				anti_tank_equipment > 99
+			}
+			11 = {
+				is_controlled_by = SIM
+			}
+		}
+
+		cost = 50
+		custom_cost_trigger = {
+    		command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_50
+		days_remove = 20
+		days_re_enable = 25
+		complete_effect = {
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = -5
+			}
+			start_border_war = {
+    			change_state_after_war = no
+    			attacker = {
+        			state = 815
+        			num_provinces = 4
+        			on_win = AGE_border_conflict.1
+        			on_lose = AGE_border_conflict.2
+        			modifier = 0.1
+        			dig_in_factor = 0
+        			terrain_factor = 0
+    			}	
+    			defender = {
+        			state = 11
+        			num_provinces = 4
+				}
+			}
+		}
+	}
+
+	AGE_recapture_Svedasai = {
+		visible = {
+			815 = {
+				is_controlled_by = SIM
+			}
+			NOT = {
+				country_exists = BLZ
+			}
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = AGE_recapture_flag
+				}
+			}
+			has_completed_focus = AGE_chaos_at_the_border
+			command_power > 24
+			has_equipment = {
+				anti_tank_equipment > 99
+			}
+			815 = {
+				is_controlled_by = SIM
+			}
+		}
+
+		cost = 50
+		custom_cost_trigger = {
+    		command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_50
+		days_remove = 20
+		days_re_enable = 25
+		complete_effect = {
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = -5
+			}
+
+			start_border_war = {
+    			change_state_after_war = no
+    			attacker = {
+        			state = 809
+        				num_provinces = 4
+        			on_win = AGE_border_conflict.1
+        				on_lose = AGE_border_conflict.2
+        			modifier = 0.1
+        			dig_in_factor = 0
+        			terrain_factor = 0
+    			}	
+    			defender = {
+        			state = 815
+        			num_provinces = 4
+				}
+			}
+		}
+	}
+}

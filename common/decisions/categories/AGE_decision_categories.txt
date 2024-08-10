@@ -11,3 +11,40 @@ AGE_their_freedoms = {
 	#visible_when_empty = yes   
 	priority = { base = 5 }
 }
+
+AGE_twd_category = {  #Категория для Сумрачного дивизиона
+	icon = saf_anti_colonialist_crusade
+	allowed = { original_tag = AGE }
+	visible = {
+		AGE = {
+			has_completed_focus = AGE_visit_our_comrades
+		}
+	}
+	#visible_when_empty = no  
+	priority = { base = 5 }
+}
+
+AGE_red_forest = {  #Борьба с рыжим лесом
+	icon = saf_anti_colonialist_crusade
+	allowed = { original_tag = AGE }
+	visible = {
+		AGE = {
+			has_completed_focus = AGE_visit_our_comrades
+		}
+		country_exists = TIP
+	}
+	#visible_when_empty = no  
+	priority = { base = 5 }
+}
+
+AGE_south_intervention = {  #Присоединение мииноров и борьба с чащей
+	icon = saf_anti_colonialist_crusade
+	allowed = { original_tag = AGE }
+	visible = {
+		AGE = {
+			has_completed_focus = AGE_chaos_at_the_border
+		}
+	}
+	#visible_when_empty = no  
+	priority = { base = 5 }
+}

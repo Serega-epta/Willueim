@@ -68,7 +68,7 @@ focus_tree = {
 		x = 8
 		y = 2		
 		ai_will_do = { factor = 10 }
-		prerequisite = { focus = AGE_not_their_land}
+		prerequisite = { focus = AGE_not_their_land }
 		available = {
 			has_manpower > 2000
 		}
@@ -97,8 +97,8 @@ focus_tree = {
 		x = 8
 		y = 1
 		ai_will_do = { factor = 10 }
-		mutually_exclusive = { focus = AGE_still_their_land }
 		prerequisite = { focus = AGE_blood_on_hands }
+		mutually_exclusive = { focus = AGE_still_their_land }
 		completion_reward = {
 			add_stability = -0.05
 			remove_ideas = AGE_knife_at_throat
@@ -276,6 +276,10 @@ focus_tree = {
 				815 = { remove_dynamic_modifier = { modifier = clandestine_cells } }
 				11 = { remove_dynamic_modifier = { modifier = clandestine_cells } }
 				814 = { remove_dynamic_modifier = { modifier = clandestine_cells } }
+				IF = {
+					limit = { has_completed_focus = AGE_seek_for_peace }
+					load_focus_tree = AGE_phase_2_reconciliation
+				}
 			}
 		}
 	}
