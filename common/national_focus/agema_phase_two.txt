@@ -38,6 +38,10 @@ focus_tree = {
 					id = AGE.19
 					days = 75
 				}
+				country_event = {
+					id = AGE.technical.2
+					days = 40
+				}
 			}
 		}
 	}
@@ -413,11 +417,30 @@ focus_tree = {
                 	owner = ROOT
 					count = 2
             	}
-				create_unit = {
-                	division = "name = \"Местное ополчение\" division_template = \"Местное ополчение\" start_experience_factor = 0.2 start_equipment_factor = 0.9 start_manpower_factor = 1" 
-                	owner = ROOT
-					count = 2
-            	}
+			}
+			IF = {
+				limit = {
+					has_completed_focus = AGE_balts_workers
+				}
+				capital_scope = {
+					create_unit = {
+                		division = "name = \"Местное ополчение\" division_template = \"Местное ополчение\" start_experience_factor = 0.2 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+                		owner = ROOT
+						count = 2
+            		}
+				}
+			}
+			else_if ={
+				limit = {
+					has_completed_focus = AGE_mobilize_balts
+				}
+				capital_scope = {
+					create_unit = {
+                		division = "name = \"Балтийское ополчение\" division_template = \"Местное ополчение\" start_experience_factor = 0.2 start_equipment_factor = 0.9 start_manpower_factor = 1" 
+                		owner = ROOT
+						count = 2
+            		}
+				}
 			}
 		}
 	}

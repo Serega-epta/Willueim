@@ -448,63 +448,6 @@ AGE_their_freedoms = {
 		}
 	}
 }
-
-AGE_twd_category = {
-	twd_mission_1 = {
-    	activation = {
-        	AGE = {
-				has_completed_focus = AGE_visit_our_comrades
-			}
-    	}
-	    available = {
-    	    always = no
-    	}
-    	is_good = yes
-    	days_mission_timeout = 40
-    	selectable_mission = no
-		fire_only_once = yes
-		complete_effect = {
-		}
-    	timeout_effect = {
-        	TWD = {
-				declare_war_on = {
-           			target = CHU
-            		type = annex_everything
-        		}
-			}
-    	}
-	}
-	twd_mission_2 = {
-    	activation = {
-			AGE = {
-				has_completed_focus = AGE_visit_our_comrades
-			}
-        	CHU = {
-				has_capitulated = yes
-			}
-    	}
-	    available = {
-    		AGE = {
-				has_completed_focus = AGE_Punish_the_traitor
-			}
-    	}
-    	is_good = yes
-    	days_mission_timeout = 80
-    	selectable_mission = no
-		fire_only_once = yes
-		complete_effect = {
-		}
-    	timeout_effect = {
-        	TWD = {
-				add_ideas = AGE_revenge
-				declare_war_on = {
-           			target = AGE
-            		type = annex_everything
-        		}
-			}
-    	}
-	}
-}
 AGE_red_forest = {
 	AGE_red_forest_mission = {
     	activation = {

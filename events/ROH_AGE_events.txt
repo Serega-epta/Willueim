@@ -3,6 +3,7 @@ add_namespace = AGE_baltic_terror
 add_namespace = AGE_clandestine_cells
 add_namespace = AGE_baltics_are_probing
 add_namespace = AGE_border_conflict
+add_namespace = AGE.technical
 #Кладбища балтийских народов
 country_event = {
 	id = AGE.1
@@ -93,19 +94,7 @@ country_event = {
 	title = AGE.8.t
 	desc = AGE.8.d
     fire_only_once = no
-	trigger = {
-		has_country_flag = day_of_unity_glag
-		OR = {
-			date > 2023.10.06
-			date > 2024.10.06
-			date > 2025.10.06
-			date > 2026.10.06
-			date > 2027.10.06
-			date > 2028.10.06
-			date > 2029.10.06
-			date > 2030.10.06
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = AGE.8.a
@@ -385,7 +374,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-    		id = AGE.20
+    		id = AGE.technical.1
     		days = 220
 			}
 		}
@@ -416,17 +405,82 @@ country_event = {
 	}
 }
 
+
+###Технические ивенты
+
 #Техический ивент для идеи
 country_event = {
-	id = AGE.20
-	title = AGE.20.t
-	desc = AGE.20.d
+	id = AGE.technical.1
+	title = AGE.technical.1.t
+	desc = AGE.technical.1.d
     fire_only_once = yes
+	hidden = yes
 	is_triggered_only = yes
 
 	option = {
-	name = AGE.20.a
+	name = AGE.technical.1.a
 	add_ideas = AGE_scientists_of_complex
+	}
+}
+#Техический ивент для атаки на кордон
+country_event = {
+	id = AGE.technical.2
+	title = AGE.technical.2.t
+	desc = AGE.technical.2.d
+    fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.technical.2.a
+		TWD = {
+			declare_war_on = {
+           		target = CHU
+            	type = annex_everything
+        	}
+		}
+	}
+}
+Техический ивент-таймер
+country_event = {
+	id = AGE.technical.3
+	title = AGE.technical.3.t
+	desc = AGE.technical.3.d
+    fire_only_once = yes
+	hidden = yes
+	trigger = {
+		original_tag = AGE
+		CHU = {
+			has_capitulated = yes
+		}
+	}
+
+	option = {
+		name = AGE.technical.3.a
+		country_event = {
+			id = AGE.technical.4
+			days = 80
+		}
+	}
+}
+
+country_event = {
+	id = AGE.technical.4
+	title = AGE.technical.4.t
+	desc = AGE.technical.4.d
+    fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = AGE.technical.4.a
+		TWD = {
+			add_ideas = AGE_revenge
+			declare_war_on = {
+           		target = AGE
+            	type = annex_everything
+        	}
+		}
 	}
 }
 

@@ -12,18 +12,6 @@ AGE_their_freedoms = {
 	priority = { base = 5 }
 }
 
-AGE_twd_category = {  #Категория для Сумрачного дивизиона
-	icon = saf_anti_colonialist_crusade
-	allowed = { original_tag = AGE }
-	visible = {
-		AGE = {
-			has_completed_focus = AGE_visit_our_comrades
-		}
-	}
-	#visible_when_empty = no  
-	priority = { base = 5 }
-}
-
 AGE_red_forest = {  #Борьба с рыжим лесом
 	icon = saf_anti_colonialist_crusade
 	allowed = { original_tag = AGE }
