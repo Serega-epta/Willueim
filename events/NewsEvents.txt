@@ -44,7 +44,6 @@ news_event = {
 	picture = GFX_news_event_council_war_on_mad
 
 	major = yes
-
 	is_triggered_only = yes
 
 	option = {
@@ -59,7 +58,6 @@ news_event = {
 	picture = GFX_news_event_dog_clanging
 
 	major = yes
-
 	is_triggered_only = yes
 
 	option = {
@@ -74,8 +72,10 @@ news_event = { #Пылающая Волга
 	title = worldnews.5.t
 	desc = worldnews.5.d
 	picture = GFX_start_war_volga
+	
 	major = yes
 	is_triggered_only = yes
+	
 	option = {
 		name = worldnews.5.a
 	}
@@ -87,7 +87,6 @@ news_event = { #Коммерческий союз вступает в войну
 	desc = worldnews.6.d
 
 	major = yes
-
 	is_triggered_only = yes
 
 	option = {
@@ -101,7 +100,6 @@ news_event = { #Последние дни Борисенко
 	desc = worldnews.7.d
 
 	major = yes
-
 	is_triggered_only = yes
 
 	option = {
@@ -116,7 +114,6 @@ news_event = { #Решение ганзейского вопроса
 	picture = GFX_win_borisenko
 
 	major = yes
-
 	is_triggered_only = yes
 
 	option = {
@@ -131,7 +128,6 @@ news_event = { #Объединение Волго-Донского Рога
 	picture = GFX_win_ganze
 
 	major = yes
-
 	is_triggered_only = yes
 
 	option = {
@@ -146,15 +142,8 @@ news_event = { #Яркий свет надежды
 	picture = GFX_news_event_comet
 
 	major = yes
-
-	trigger = {
-		date > 2022.02.14
-		NOT = { has_global_flag = worldnews.10 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.10
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.10.a
@@ -168,15 +157,8 @@ news_event = { #Неизвестный радиосигнал!
 	picture = GFX_news_event_unknown_signal
 
 	major = yes
-
-	trigger = {
-		date > 2022.10.06
-		NOT = { has_global_flag = worldnews.11 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.11
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.11.a
@@ -190,15 +172,8 @@ news_event = { #Выход на связь Хаббла!
 	picture = GFX_news_event_hubble
 
 	major = yes
-
-	trigger = {
-		date > 2023.05.04
-		NOT = { has_global_flag = worldnews.12 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.12
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.12.a
@@ -212,15 +187,8 @@ news_event = { #Замечено НЛО!
 	picture = GFX_news_event_ufo
 
 	major = yes
-
-	trigger = {
-		date > 2023.12.09
-		NOT = { has_global_flag = worldnews.13 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.13
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.13.a
@@ -234,15 +202,8 @@ news_event = { #Открыт бозон Никольского!
 	picture = GFX_news_event_boson
 
 	major = yes
-
-	trigger = {
-		date > 2024.03.14
-		NOT = { has_global_flag = worldnews.14 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.14
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.14.a
@@ -256,15 +217,8 @@ news_event = { #Радиопереговоры?
 	picture = GFX_news_event_radio_conversations
 
 	major = yes
-
-	trigger = {
-		date > 2024.09.21
-		NOT = { has_global_flag = worldnews.15 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.15
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.15.a
@@ -278,15 +232,8 @@ news_event = { #Падение спутника!
 	picture = GFX_news_event_spuntnik_falls
 
 	major = yes
-
-	trigger = {
-		date > 2025.02.02
-		NOT = { has_global_flag = worldnews.16 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.16
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.16.a
@@ -300,15 +247,8 @@ news_event = { #Слухи о новой болезни!
 	picture = GFX_news_event_disease
 
 	major = yes
-
-	trigger = {
-		date > 2025.08.06
-		NOT = { has_global_flag = worldnews.17 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.17
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.17.a
@@ -322,15 +262,8 @@ news_event = { #Распространение новой религии!
 	picture = GFX_news_event_new_religion
 
 	major = yes
-
-	trigger = {
-		date > 2026.02.05
-		NOT = { has_global_flag = worldnews.18 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.18
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.18.a
@@ -344,15 +277,8 @@ news_event = { #Обнаружение архивов “Ленинки”!
 	picture = GFX_news_event_library
 
 	major = yes
-
-	trigger = {
-		date > 2026.06.04
-		NOT = { has_global_flag = worldnews.19 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.19
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.19.a
@@ -366,15 +292,8 @@ news_event = { #Обнаружена новая экзопланета!
 	picture = GFX_news_event_exoplanet
 
 	major = yes
-
-	trigger = {
-		date > 2027.07.06
-		NOT = { has_global_flag = worldnews.20 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.20
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.20.a
@@ -388,15 +307,8 @@ news_event = { #Аномальные бури!
 	picture = GFX_news_event_anomalous_storms
 
 	major = yes
-
-	trigger = {
-		date > 2027.09.08
-		NOT = { has_global_flag = worldnews.21 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.21
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.21.a
@@ -410,15 +322,8 @@ news_event = { #Восстановление Москвы!
 	picture = GFX_news_event_moscow_rebuilt
 
 	major = yes
-
-	trigger = {
-		date > 2028.03.09
-		NOT = { has_global_flag = worldnews.22 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.22
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.22.a
@@ -432,15 +337,8 @@ news_event = { #Падение метеорита!
 	picture = GFX_news_event_meteorite
 
 	major = yes
-
-	trigger = {
-		date > 2028.06.11
-		NOT = { has_global_flag = worldnews.23 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.23
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.23.a
@@ -454,15 +352,8 @@ news_event = { #Открытие нового элемента!
 	picture = GFX_news_event_new_element
 
 	major = yes
-
-	trigger = {
-		date > 2029.01.14
-		NOT = { has_global_flag = worldnews.24 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.24
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.24.a
@@ -476,15 +367,8 @@ news_event = { #Найден “Черный принц”!
 	picture = GFX_news_event_black_prince
 
 	major = yes
-
-	trigger = {
-		date > 2029.10.15
-		NOT = { has_global_flag = worldnews.25 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.25
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.25.a
@@ -498,15 +382,8 @@ news_event = { #Конец близко?
 	picture = GFX_news_event_end_is_near
 
 	major = yes
-
-	trigger = {
-		date > 2030.02.08
-		NOT = { has_global_flag = worldnews.26 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.26
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.26.a
@@ -520,15 +397,8 @@ news_event = { #Бесславный финал.
 	picture = GFX_news_event_end
 
 	major = yes
-
-	trigger = {
-		date > 2030.10.09
-		NOT = { has_global_flag = worldnews.27 }
-	}
-
-	immediate = {
-		set_global_flag = worldnews.27
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = worldnews.27.a

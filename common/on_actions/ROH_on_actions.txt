@@ -5,68 +5,27 @@ on_actions = {
 				if = {
 					limit = { is_ai = no }
 					set_country_flag = opening_screen_show
+					
+					news_event = { id = worldnews.10 days = 44 } # Яркий свет надежды
+					news_event = { id = worldnews.11 days = 278 } # Неизвестный радиосигнал!
+					news_event = { id = worldnews.12 days = 488 } # Выход на связь Хаббла!
+					news_event = { id = worldnews.13 days = 707 } # Замечено НЛО!
+					news_event = { id = worldnews.14 days = 803 } # Открыт бозон Никольского!
+					news_event = { id = worldnews.15 days = 994 } # Радиопереговоры?
+					news_event = { id = worldnews.16 days = 1128 } # Падение спутника!
+					news_event = { id = worldnews.17 days = 1313 } # Слухи о новой болезни!
+					news_event = { id = worldnews.18 days = 1497 } # Распространение новой религии!
+					news_event = { id = worldnews.19 days = 1615 } # Обнаружение архивов “Ленинки”!
+					news_event = { id = worldnews.20 days = 2012 } # Обнаружена новая экзопланета!
+					news_event = { id = worldnews.21 days = 2076 } # Аномальные бури!
+					news_event = { id = worldnews.22 days = 2259 } # Восстановление Москвы!
+					news_event = { id = worldnews.23 days = 2353 } # Падение метеорита!
+					news_event = { id = worldnews.24 days = 2570 } # Открытие нового элемента!
+					news_event = { id = worldnews.25 days = 2844 } # Найден “Черный принц”!
+					news_event = { id = worldnews.26 days = 2960 } # Конец близко?
+					news_event = { id = worldnews.27 days = 3203 } # Бесславный финал
 				}
 			}
-			set_global_flag = { 
-				flag = ELI_not_appears_yet
-				value = 1
-				days = 1850
-			}
-			set_global_flag = { 
-				flag = BMB_not_appears_yet
-				value = 1
-				days = 1460
-			}
-			
-			clear_array = ELI.elimination_targets 
-			add_to_array = { ELI.elimination_targets = RIK }
-			add_to_array = { ELI.elimination_targets = SMX }
-			add_to_array = { ELI.elimination_targets = SBT }
-			add_to_array = { ELI.elimination_targets = VLC }
-			add_to_array = { ELI.elimination_targets = MUC }
-			add_to_array = { ELI.elimination_targets = VOU }
-			add_to_array = { ELI.elimination_targets = NAR }
-			add_to_array = { ELI.elimination_targets = SMK }
-			add_to_array = { ELI.elimination_targets = OCH }
-			add_to_array = { ELI.elimination_targets = MSH }
-			add_to_array = { ELI.elimination_targets = TAB }
-			add_to_array = { ELI.elimination_targets = MAZ }
-			add_to_array = { ELI.elimination_targets = ORL }
-			add_to_array = { ELI.elimination_targets = ZAK }
-			add_to_array = { ELI.elimination_targets = TAR }
-			add_to_array = { ELI.elimination_targets = IMP }
-			add_to_array = { ELI.elimination_targets = ARM }
-			add_to_array = { ELI.elimination_targets = BRD }
-			add_to_array = { ELI.elimination_targets = OLD }
-			add_to_array = { ELI.elimination_targets = OKS }
-			add_to_array = { ELI.elimination_targets = BLT }
-			add_to_array = { ELI.elimination_targets = NVC }
-			
-			clear_array = BMB.elimination_targets
-			add_to_array = { BMB.elimination_targets = YJY }
-			add_to_array = { BMB.elimination_targets = ADT }
-			add_to_array = { BMB.elimination_targets = FHS }
-			add_to_array = { BMB.elimination_targets = PLC }
-			add_to_array = { BMB.elimination_targets = DRW }
-			add_to_array = { BMB.elimination_targets = PVS }
-			add_to_array = { BMB.elimination_targets = OBS }
-			add_to_array = { BMB.elimination_targets = BLT }
-			add_to_array = { BMB.elimination_targets = BRB }
-			add_to_array = { BMB.elimination_targets = KHU }
-			add_to_array = { BMB.elimination_targets = URA }
-			add_to_array = { BMB.elimination_targets = MOT }
-			add_to_array = { BMB.elimination_targets = TTL }
-			add_to_array = { BMB.elimination_targets = GLS }
-			add_to_array = { BMB.elimination_targets = ASR }
-			add_to_array = { BMB.elimination_targets = SII }
-			add_to_array = { BMB.elimination_targets = EDM }
-			add_to_array = { BMB.elimination_targets = BGR }
-			add_to_array = { BMB.elimination_targets = SFL }
-			add_to_array = { BMB.elimination_targets = NFL }
-			add_to_array = { BMB.elimination_targets = IRT }
-			add_to_array = { BMB.elimination_targets = WPK }
-			add_to_array = { BMB.elimination_targets = URC }
-			add_to_array = { BMB.elimination_targets = ZAN }
 		}
 	}
 	on_state_control_changed = {
@@ -77,13 +36,13 @@ on_actions = {
 			}
 		}
 	}
-	# on_nuke_drop = {
-	# 	effect = {
-	# 		FROM = {
-	# 			goto_state = {
-	# 				add_manpower = -100000
-	# 			}
-	# 		}
-	# 	}
-	# }
+	on_nuke_drop = {
+		effect = {
+			FROM = {
+				goto_state = {
+	 				add_manpower = -100000
+				}
+			}
+		}
+	}
 }
