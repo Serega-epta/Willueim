@@ -107,11 +107,6 @@ AGE_their_freedoms = {
 			AGE = { has_focus_tree = AGE_phase_2 }
 			has_country_flag = not_their_land_anymore_flag
 		}
-		on_map_area = {
-			target_array = CHU.owned_states
-			target_array = HAR.owned_states
-			target_array = BLZ.owned_states
-		}
 		state_target = yes
 		cost = 30
 		days_remove = 30
@@ -152,11 +147,6 @@ AGE_their_freedoms = {
 			}
 			AGE = { has_focus_tree = AGE_phase_2 }
 			has_country_flag = not_their_land_anymore_flag
-		}
-		on_map_area = {
-			target_array = CHU.owned_states
-			target_array = HAR.owned_states
-			target_array = BLZ.owned_states
 		}
 		state_target = yes
 		cost = 15
@@ -258,7 +248,7 @@ AGE_their_freedoms = {
 	}
 	AGE_baltic_terror = {
 		icon = GFX_decision_eng_trade_unions_support
-		#activation = { has_country_flag = baltic_terror_activation }
+		activation = { has_country_flag = baltic_terror_activation }
 		available = { 
 			any_owned_state = {
 				NOT = { 
@@ -415,7 +405,7 @@ AGE_their_freedoms = {
 					}
 					AGE = { country_event = { id = AGE_baltics_are_probing.1 } }
 				}
-				else = {
+				else_if = {
 					limit = { 
 						check_variable = { var_911 = 3 }
 						911 = { has_dynamic_modifier = { modifier = open_opposition } }
@@ -448,6 +438,7 @@ AGE_their_freedoms = {
 		}
 	}
 }
+
 AGE_red_forest = {
 	AGE_red_forest_mission = {
     	activation = {
@@ -534,8 +525,10 @@ AGE_red_forest = {
 					is_owned_by = AGE
 				}
 				NOT = {
-					state = 906
-					state = 206
+					OR = {
+						state = 906
+						state = 206
+					}
 				}
 			}
 		}
@@ -546,11 +539,10 @@ AGE_red_forest = {
 		on_map_mode = map_and_decisions_view
 		cost = 0
 		days_remove = 40
-		complete_effect = {}
 		cancel_effect = {
-			hidden_trigger = {
-				has_country_flag = red_forest_flag
-			}
+			#hidden_trigger = { # Ну бля, это чё за хуйня? Триггер в эффекте? Вы серьёзно?
+			#	has_country_flag = red_forest_flag
+			#}
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
@@ -710,9 +702,7 @@ AGE_south_intervention = {
     	is_good = yes
     	days_mission_timeout = 60
     	selectable_mission = no
-		fire_only_once
-		complete_effect = {
-		}
+		fire_only_once = yes
     	timeout_effect = {
 			SIM = {
 				transfer_state = 815
@@ -732,16 +722,12 @@ AGE_south_intervention = {
 		cost = 0
 		days_remove = 0
 		fire_only_once = yes
-		complete_effect = {
-		}
 		remove_effect = {
 			annex_country = {
     			target = BAI
     			transfer_troops = yes
 			}
-			907 = {
-				add_core_of = AGE
-			}
+			907 = { add_core_of = AGE }
 			country_event = AGE.17
 		}
 	}
@@ -909,9 +895,9 @@ AGE_south_intervention = {
     			change_state_after_war = no
     			attacker = {
         			state = 809
-        				num_provinces = 4
+        			num_provinces = 4
         			on_win = AGE_border_conflict.1
-        				on_lose = AGE_border_conflict.2
+        			on_lose = AGE_border_conflict.2
         			modifier = 0.1
         			dig_in_factor = 0
         			terrain_factor = 0

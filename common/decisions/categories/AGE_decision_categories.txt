@@ -1,13 +1,25 @@
 AGE_their_freedoms = { 
 	icon = saf_anti_colonialist_crusade
 	allowed = { original_tag = AGE } 
-	#visible = {
-	#	OR = {
-	#		has_country_flag = not_their_land_anymore_flag
-	#		has_country_flag = still_their_land_flag
-	#		has_country_flag = red_sabres_flag
-	#	}
-	#}
+	visible = {
+		OR = {
+			has_country_flag = not_their_land_anymore_flag
+			has_country_flag = still_their_land_flag
+			has_country_flag = red_sabres_flag
+		}
+	}
+	#on_map_area = {
+	#	target_array = owned_states
+	#	target_trigger = {
+	#		any_state = {
+	#			OR = {
+	#				is_owned_by = CHU
+	#				is_owned_by = HAR
+	#				is_owned_by = HAR
+	#			}
+	#		}
+	#	}	
+	#}	
 	#visible_when_empty = yes   
 	priority = { base = 5 }
 }
