@@ -273,6 +273,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				stability_factor = 0.05
+			}
 		}
 		behind_the_scenes_idea = {
 			traits = {
@@ -280,6 +283,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				drift_defence_factor = 0.1
 			}
 		}
 		without_any_hassle_idea = {
@@ -289,6 +295,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				
+			}
 		}
 		our_home_is_our_fortress_idea = {
 			traits = {
@@ -296,6 +305,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				production_speed_bunker_factor = 0.15
 			}
 		}
 		rural_militia_idea = {
@@ -305,6 +317,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				
+			}
 		}
 		industrial_militia_idea = {
 			traits = {
@@ -312,6 +327,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				
 			}
 		}
 		land_river_idea = {
@@ -321,6 +339,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				
+			}
 		}
 		scraping_down_the_bottom_idea = {
 			traits = {
@@ -328,6 +349,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor  = -0.05
 			}
 		}
 		in_a_blink_idea = {
@@ -337,6 +361,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.07
+			}
 		}
 		oprichnina_hand_idea = {
 			traits = {
@@ -344,6 +371,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				surrender_limit = 0.03
 			}
 		}
 		peripheral_cleansing_idea = {
@@ -353,6 +383,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				
+			}
 		}
 		destroy_anomalies_idea = {
 			traits = {
@@ -360,6 +393,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				
 			}
 		}
 		fighting_for_families_idea = {
@@ -369,6 +405,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				monthly_population = 0.15
+			}
 		}
 		military_loans_idea = {
 			traits = {
@@ -376,6 +415,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				
 			}
 		}
 		from_stones_and_sticks_idea = {
@@ -385,6 +427,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.07
+			}
 		}
 		autonomius_bataries_idea = {
 			traits = {
@@ -392,6 +437,10 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_org = -0.1
 			}
 		}
 		controlled_bataries_idea = {
@@ -401,6 +450,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				army_attack_factor = -0.075
+				army_org = 0.075
+			}
 		}
 		firstborn_of_sparta_idea = {
 			traits = {
@@ -408,6 +461,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				initiative_factor = 0.075
 			}
 		}
 		nerves_to_the_limit_idea = {
@@ -417,6 +473,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+			}
 		}
 		steel_grip_idea = {
 			traits = {
@@ -425,6 +485,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				
+			}
 		}
 		sweat_and_blood_idea = {
 			traits = {
@@ -432,6 +495,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				justify_war_goal_time = -0.30
 			}
 		}
 		#naumov system
@@ -442,6 +508,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				add_political_power = 150
+			}
 		}
 		existence_essence_idea = {
 			traits = {
@@ -449,6 +518,10 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				stability_factor = -0.05
+				research_speed_factor = 0.02
 			}
 		}
 		existence_horror_idea = {
@@ -458,6 +531,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.02
+			}
 		}
 		caring_eye_idea = {
 			traits = {
@@ -465,6 +542,10 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.70
 			}
 		}
 		interesting_observation_idea = {
@@ -474,6 +555,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.10
+			}
 		}
 		technological_revolution_idea = {
 			traits = {
@@ -481,6 +566,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.075
 			}
 		}
 		cultural_revolution_idea = {
@@ -490,6 +578,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				stability_factor = 0.175
+				 war_support_factor = 0.175
+			}
 		}
 		assured_survival_idea = {
 			traits = {
@@ -497,6 +589,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				stability_factor = 0.225
 			}
 		}
 		proportionate_fee_idea = {
@@ -506,6 +601,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
 		}
 		flawless_soldier_idea = {
 			traits = {
@@ -513,6 +612,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				army_org = 0.05
 			}
 		}
 		all_describing_formula_idea = {
@@ -522,6 +624,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				research_speed_factor = 0.15
+			}
 		}
 		primary_broth_idea = {
 			traits = {
@@ -529,6 +634,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				local_resources_factor = 0.05
 			}
 		}
 		flowers_of_life_idea = {
@@ -538,6 +646,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				monthly_population = 0.15
+			}
 		}
 		their_life_plans_idea = {
 			traits = {
@@ -545,6 +656,10 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				stability_factor = -0.075
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		cast_aside_doubts_idea = {
@@ -554,6 +669,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+			}
 		}
 		potential_realization_idea = {
 			traits = {
@@ -561,6 +680,10 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.075
+				production_factory_max_efficiency_factor = 0.075
 			}
 		}
 		order_in_mind_idea = {
@@ -570,6 +693,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				army_org = 0.05
+				army_speed_factor = 0.05
+			}
 		}
 		unity_by_blood_idea = {
 			traits = {
@@ -577,6 +704,10 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				stability_factor = -0.075
+				offence = 0.05
 			}
 		}
 		man_and_consciousness_idea = {
@@ -586,6 +717,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				research_speed_factor = 0.075
+			}
 		}
 		cognitive_warfare_idea = {
 			traits = {
@@ -594,6 +728,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			modifier = {
+				mobilization_speed = 0.10
+			}
 		}
 		body_limits_idea = {
 			traits = {
@@ -601,6 +738,12 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			modifier = {
+				army_org = 0.05
+				army_org_regain = 0.075
+				land_night_attack = 0.15
+				initiative_factor = 0.075
 			}
 		}
 	}
