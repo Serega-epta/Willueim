@@ -10,12 +10,12 @@ add_ideas = {
 }
 
 set_technology = {
-    infantry_weapons = 1
-   civilian_clothing = 1
-   tech_support = 1
-   pre_war_OPV = 1
-   gw_artillery = 1
-   instruments_of_any_era = 1
+	infantry_weapons = 1
+	civilian_clothing = 1
+	tech_support = 1
+	pre_war_OPV = 1
+	gw_artillery = 1
+	instruments_of_any_era = 1
 }
 
 set_research_slots = 2
@@ -65,7 +65,12 @@ recruit_character = AGE_rodolyub_vulovich
 recruit_character = AGE_deyan_berich 
 recruit_character = AGE_novak_jekovic 
 
+add_to_array = { AGE.allies = CHU }
+add_to_array = { AGE.allies = HAR }
+add_to_array = { AGE.allies = BLZ }
+
 911 = { add_dynamic_modifier = { modifier = open_opposition } }
+811 = { add_dynamic_modifier = { modifier = open_opposition } }
 809 = { add_dynamic_modifier = { modifier = open_opposition } }
 808 = { add_dynamic_modifier = { modifier = open_opposition } }
 12 = { add_dynamic_modifier = { modifier = open_opposition } }

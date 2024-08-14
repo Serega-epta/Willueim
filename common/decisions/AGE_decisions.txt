@@ -13,7 +13,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = open_opposition }
 			}
 			divisions_in_state = {
-				size > 1
+				size > 0
 				state = FROM
 			}			
 		}
@@ -46,7 +46,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = clandestine_cells }
 			}
 			divisions_in_state = {
-				size > 1
+				size > 0
 				state = FROM
 			}			
 		}
@@ -68,14 +68,29 @@ AGE_their_freedoms = {
 			}
 			army_experience = 5
 			add_to_variable = { var_terrorist_attack = -1 tooltip = var_terrorist_attack_minus_1_tt }
-			add_to_variable = { var_preventing_terrorist_attack = 5 tooltip = var_preventing_terrorist_attack_plus_5_tt }			
-			custom_effect_tooltip = AGE_modify_baltic_separatism_ns_intro
-			add_to_variable = { AGE_baltic_separatism_political_power_factor = 0.04 tooltip = political_power_factor_tt }
-			add_to_variable = { AGE_baltic_separatism_monthly_population = 0.05 tooltip = monthly_population_tt }
-			add_to_variable = { AGE_baltic_separatism_conscription_factor = 0.04 tooltip = conscription_factor_tt }
-			add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
-			add_to_variable = { AGE_baltic_separatism_stability_factor = 0.12 tooltip = stability_factor_tt }
-			add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = 0.15 tooltip = industry_free_repair_factor_tt }
+			add_to_variable = { var_preventing_terrorist_attack = 5 tooltip = var_preventing_terrorist_attack_plus_5_tt }
+			if = {
+				limit = { 
+					#NOT = { check_variable = { AGE_baltic_separatism_political_power_factor = 0 } } 
+					has_dynamic_modifier = { modifier = AGE_baltic_separatism }
+				}
+				custom_effect_tooltip = AGE_modify_baltic_separatism_ns_intro
+				add_to_variable = { AGE_baltic_separatism_political_power_factor = 0.04 tooltip = political_power_factor_tt }
+				add_to_variable = { AGE_baltic_separatism_monthly_population = 0.05 tooltip = monthly_population_tt }
+				add_to_variable = { AGE_baltic_separatism_conscription_factor = 0.04 tooltip = conscription_factor_tt }
+				add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
+				add_to_variable = { AGE_baltic_separatism_stability_factor = 0.12 tooltip = stability_factor_tt }
+				add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = 0.15 tooltip = industry_free_repair_factor_tt }
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						check_variable = { AGE_baltic_separatism_political_power_factor = 0 }
+						has_dynamic_modifier = { modifier = AGE_baltic_separatism }
+					}
+					remove_dynamic_modifier = { modifier = AGE_baltic_separatism }
+				}
+			}
 			AGE = { country_event = { id = AGE_clandestine_cells.1 } }
 		}
 	}
@@ -91,7 +106,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = open_opposition }
 			}
 			divisions_in_state = {
-				size > 1
+				size > 0
 				state = FROM
 			}			
 		}
@@ -107,6 +122,16 @@ AGE_their_freedoms = {
 			AGE = { has_focus_tree = AGE_phase_2 }
 			has_country_flag = not_their_land_anymore_flag
 		}
+		#target_trigger = {
+		#	FROM = {
+		#		OR = {
+		#			is_owned_by = CHU
+		#			is_owned_by = HAR
+		#			is_owned_by = BLZ
+		#		}
+		#	}		
+		#}
+		target_array = AGE.allies
 		state_target = yes
 		cost = 30
 		days_remove = 30
@@ -132,7 +157,7 @@ AGE_their_freedoms = {
 				has_dynamic_modifier = { modifier = clandestine_cells }
 			}
 			divisions_in_state = {
-				size > 1
+				size > 0
 				state = FROM
 			}
 		}
@@ -148,6 +173,16 @@ AGE_their_freedoms = {
 			AGE = { has_focus_tree = AGE_phase_2 }
 			has_country_flag = not_their_land_anymore_flag
 		}
+		#target_trigger = {
+		#	FROM = {
+		#		OR = {
+		#			is_owned_by = CHU
+		#			is_owned_by = HAR
+		#			is_owned_by = BLZ
+		#		}
+		#	}		
+		#}
+		target_array = AGE.allies
 		state_target = yes
 		cost = 15
 		days_remove = 50
@@ -159,13 +194,6 @@ AGE_their_freedoms = {
 			army_experience = 5
 			add_to_variable = { var_terrorist_attack = -1 tooltip = var_terrorist_attack_minus_1_tt }
 			add_to_variable = { var_preventing_terrorist_attack = 5 tooltip = var_preventing_terrorist_attack_plus_5_tt }
-			custom_effect_tooltip = AGE_modify_baltic_separatism_ns_intro
-			add_to_variable = { AGE_baltic_separatism_political_power_factor = 0.04 tooltip = political_power_factor_tt }
-			add_to_variable = { AGE_baltic_separatism_monthly_population = 0.05 tooltip = monthly_population_tt }
-			add_to_variable = { AGE_baltic_separatism_conscription_factor = 0.04 tooltip = conscription_factor_tt }
-			add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
-			add_to_variable = { AGE_baltic_separatism_stability_factor = 0.12 tooltip = stability_factor_tt }
-			add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = 0.15 tooltip = industry_free_repair_factor_tt }
 			AGE = { country_event = { id = AGE_clandestine_cells.1 } }
 		}
 	}
@@ -251,14 +279,12 @@ AGE_their_freedoms = {
 		activation = { has_country_flag = baltic_terror_activation }
 		available = { 
 			any_owned_state = {
-				NOT = { 
-					OR = {
-						has_dynamic_modifier = { modifier = open_opposition }
-						has_dynamic_modifier = { modifier = clandestine_cells }
-					}
+				OR = { 
+					NOT = { has_dynamic_modifier = { modifier = open_opposition } }
+					NOT	= { has_dynamic_modifier = { modifier = clandestine_cells } }
 				}
 			}
-			hidden_trigger = { NOT = { has_country_flag = baltic_terror_activation } }
+			#hidden_trigger = { NOT = { has_country_flag = baltic_terror_activation } }
 		}
 		days_mission_timeout = 60	
 		is_good = yes
@@ -270,7 +296,7 @@ AGE_their_freedoms = {
 						limit = { NOT = { has_dynamic_modifier = { modifier = resistance_completely_eradicated } } }
 						damage_building = {
 							type = industrial_complex
-							damage = 1
+							damage = 0.2
 						}
 						AGE = { country_event = { id = AGE_baltic_terror.1 } }
 					}
@@ -280,7 +306,7 @@ AGE_their_freedoms = {
 						limit = { NOT = { has_dynamic_modifier = { modifier = resistance_completely_eradicated } } }
 						damage_building = {
 							type = arms_factory
-							damage = 1
+							damage = 0.2
 						}
 						AGE = { country_event = { id = AGE_baltic_terror.2 } }
 					}
@@ -290,7 +316,7 @@ AGE_their_freedoms = {
 						limit = { NOT = { has_dynamic_modifier = { modifier = resistance_completely_eradicated } } }
 						damage_building = {
 							type = infrastructure
-							damage = 1
+							damage = 0.2
 						}
 						AGE = { country_event = { id = AGE_baltic_terror.3 } }
 					}
@@ -300,7 +326,7 @@ AGE_their_freedoms = {
 						limit = { NOT = { has_dynamic_modifier = { modifier = resistance_completely_eradicated } } }
 						damage_building = {
 							type = supply_node
-							damage = 1
+							damage = 0.2
 						}
 						AGE = { country_event = { id = AGE_baltic_terror.4 } }
 					}
@@ -310,7 +336,7 @@ AGE_their_freedoms = {
 						limit = { NOT = { has_dynamic_modifier = { modifier = resistance_completely_eradicated } } }
 						damage_building = {
 							type = air_base
-							damage = 1
+							damage = 0.2
 						}
 						AGE = { country_event = { id = AGE_baltic_terror.5 } }
 					}

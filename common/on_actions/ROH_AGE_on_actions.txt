@@ -44,4 +44,16 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly_AGE = {
+		effect = {
+			if = {
+				limit = { 
+					check_variable = { var_terrorist_attack < 0 }
+					check_variable = { var_preventing_terrorist_attack > 100 }
+				}
+				set_variable = { var_terrorist_attack = 0 }
+				set_variable = { var_preventing_terrorist_attack = 0 }
+			}
+		}
+	}
 }
