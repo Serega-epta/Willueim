@@ -281,7 +281,7 @@ country_event = {
 	}
 }
 
-#Ситуация вокруг нас
+#Обстановка вокруг нас
 country_event = {
 	id = AGE.11
 	title = AGE.11.t
@@ -291,10 +291,11 @@ country_event = {
 
 	option = {
 	name = AGE.11.a
+	country_event = AGE.12
 	}
 }
 
-#Воинская повинность
+#Обстановка вокруг нас ч. 2
 country_event = {
 	id = AGE.12
 	title = AGE.12.t
@@ -307,7 +308,7 @@ country_event = {
 	}
 }
 
-#Трудовая повинность
+#Воинская повинность
 country_event = {
 	id = AGE.13
 	title = AGE.13.t
@@ -320,7 +321,7 @@ country_event = {
 	}
 }
 
-#Казнь
+#Трудовая повинность
 country_event = {
 	id = AGE.14
 	title = AGE.14.t
@@ -329,11 +330,11 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-	name = AGE.14.a
+	name = AGE.13.a
 	}
 }
 
-#Бывшие друзья
+#Казнь
 country_event = {
 	id = AGE.15
 	title = AGE.15.t
@@ -346,7 +347,7 @@ country_event = {
 	}
 }
 
-#План военных действий
+#Бывшие друзья
 country_event = {
 	id = AGE.16
 	title = AGE.16.t
@@ -356,9 +357,23 @@ country_event = {
 
 	option = {
 	name = AGE.16.a
+	country_event = AGE.28
 	}
 }
-#Настоящий учёный
+#Бывшие друзья 
+country_event = { 
+	id = AGE.28 #Слишком поздно понял, что ивент слишком большой
+	title = AGE.28.t
+	desc = AGE.28.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.2.a
+	}
+}
+
+#План военных действий
 country_event = {
 	id = AGE.17
 	title = AGE.17.t
@@ -368,6 +383,18 @@ country_event = {
 
 	option = {
 	name = AGE.17.a
+	}
+}
+#Настоящий учёный
+country_event = {
+	id = AGE.18
+	title = AGE.18.t
+	desc = AGE.18.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.18.a
 		add_timed_idea = {
 			idea = AGE_funding_for_research
 			days = 220
@@ -382,18 +409,6 @@ country_event = {
 }
 #Разумный выбор
 country_event = {
-	id = AGE.18
-	title = AGE.18.t
-	desc = AGE.18.d
-    fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-	name = AGE.18.a
-	}
-}
-#Проблемы объединяют
-country_event = {
 	id = AGE.19
 	title = AGE.19.t
 	desc = AGE.19.d
@@ -404,6 +419,120 @@ country_event = {
 	name = AGE.19.a
 	}
 }
+#Проблемы объединяют
+country_event = {
+	id = AGE.20
+	title = AGE.20.t
+	desc = AGE.20.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.20.a
+		set_technology = {
+   	 		basic_MLRS = 1
+		}
+	}
+}
+
+#Обстановка вокруг нас Славянизация
+country_event = {
+	id = AGE.21
+	title = AGE.21.t
+	desc = AGE.21.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.21.a
+	country_event = AGE.22
+	}
+}
+
+#Обстановка вокруг нас Славянизация ч. 2
+country_event = {
+	id = AGE.22
+	title = AGE.22.t
+	desc = AGE.22.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.22.a
+	}
+}
+
+#Старая проблема на новый лад
+country_event = {
+	id = AGE.23
+	title = AGE.23.t
+	desc = AGE.23.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.23.a
+	}
+}
+
+#Чётче, лучше, грамотней
+country_event = {
+	id = AGE.24
+	title = AGE.24.t
+	desc = AGE.24.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.24.a
+	}
+}
+
+#План войны
+country_event = {
+	id = AGE.25
+	title = AGE.25.t
+	desc = AGE.25.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.25.a
+	}
+}
+
+
+#Бывшие товарищи
+country_event = {
+	id = AGE.26
+	title = AGE.26.t
+	desc = AGE.26.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.26.a
+		country_event = AGE.27
+	}
+}
+
+#Бывшие товарищи ч.2
+country_event = {
+	id = AGE.27
+	title = AGE.27.t
+	desc = AGE.27.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = AGE.27.a
+		set_division_template_lock = {
+    		division_template = "Сумрачный дивизион"
+    		is_locked = no
+		}
+	}
+}
+
 
 
 ###Технические ивенты
@@ -480,6 +609,135 @@ country_event = {
            		target = AGE
             	type = annex_everything
         	}
+		}
+	}
+}
+
+#Захват Сумрачного дивизиона
+country_event = {
+	id = AGE.technical.5
+	title = AGE.technical.5.t
+	desc = AGE.technical.5.d
+    fire_only_once = yes
+	hidden = yes
+	trigger = {
+		country_exists = AGE
+		has_country_flag = slavicization_flag
+		TWD = {
+			has_capitulated = yes
+		}
+	}
+
+	option = {
+		name = AGE.technical.5.a
+		country_event = {
+			id = AGE.26
+			days = 14
+		}
+		812 = {
+			transfer_state_to = AGE
+			add_core_of = AGE
+		}
+		811 = {
+			transfer_state_to = AGE
+			add_core_of = AGE
+		}
+		927 = {
+			transfer_state_to = CHU
+			add_core_of = CHU
+		}
+	}
+}
+
+#Захват Балтосферы
+country_event = {
+	id = AGE.technical.6
+	title = AGE.technical.6.t
+	desc = AGE.technical.6.d
+    fire_only_once = yes
+	hidden = yes
+	trigger = {
+		country_exists = AGE
+		has_country_flag = slavicization_flag
+		BTC = {
+			has_capitulated = yes
+		}
+	}
+
+	option = {
+		name = AGE.technical.6.a
+		189 = {
+			transfer_state_to = AGE
+		}
+		190 = {
+			transfer_state_to = AGE
+		}
+	}
+}
+
+#Захват  Симоновы чащи
+country_event = {
+	id = AGE.technical.7
+	title = AGE.technical.7.t
+	desc = AGE.technical.7.d
+    fire_only_once = yes
+	hidden = yes
+	trigger = {
+		country_exists = AGE
+		has_country_flag = slavicization_flag
+		SIM = {
+			has_capitulated = yes
+		}
+	}
+
+	option = {
+		name = AGE.technical.7.a
+		908 = {
+			transfer_state_to = HAR
+			add_core_of = HAR
+		}
+		784 = {
+			transfer_state_to = HAR
+			add_core_of = HAR
+		}
+		810 = {
+			transfer_state_to = HAR
+			add_core_of = HAR
+		}
+	}
+}
+
+#Захват ОМК
+country_event = {
+	id = AGE.technical.7
+	title = AGE.technical.7.t
+	desc = AGE.technical.7.d
+    fire_only_once = yes
+	hidden = yes
+	trigger = {
+		country_exists = AGE
+		has_country_flag = slavicization_flag
+		LPC = {
+			has_capitulated = yes
+		}
+	}
+
+	option = {
+		name = AGE.technical.7.a
+		763 = {
+			transfer_state_to = AGE
+		}
+		188 = {
+			transfer_state_to = AGE
+		}
+		5 = {
+			transfer_state_to = AGE
+		}
+		915 = {
+			transfer_state_to = AGE
+		}
+		814 = {
+			transfer_state_to = AGE
 		}
 	}
 }

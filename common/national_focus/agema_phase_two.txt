@@ -22,6 +22,7 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = -15
 			country_event = AGE.10
+			set_country_flag = reconciliation_flag
 		}
 	}
     focus = {
@@ -33,9 +34,11 @@ focus_tree = {
         prerequisite = { focus = AGE_through_compassion_for_paradise }
 		completion_reward = {
 			country_event = AGE.11
+			mark_focus_tree_layout_dirty = yes
+			set_country_flag = fight_red_forest
 			hidden_effect = {
 				country_event = {
-					id = AGE.19
+					id = AGE.20
 					days = 75
 				}
 				country_event = {
@@ -52,6 +55,9 @@ focus_tree = {
 		y = 3
 		ai_will_do = { factor = 10 }
         prerequisite = { focus = AGE_visit_our_comrades }
+		allow_branch = {
+			has_completed_focus = AGE_visit_our_comrades
+		}
 		completion_reward = {
 			add_political_power = -30
 			add_stability = -0.03
@@ -156,7 +162,7 @@ focus_tree = {
 		mutually_exclusive = { focus = AGE_balts_workers }
 		completion_reward = {
 			add_ideas = AGE_balts_in_army
-			country_event = AGE.12
+			country_event = AGE.13
 		}
 	}
     focus = {
@@ -169,7 +175,7 @@ focus_tree = {
 		mutually_exclusive = { focus = AGE_mobilize_balts }
 		completion_reward = {
 			add_ideas = AGE_balts_in_factories
-			country_event = AGE.13
+			country_event = AGE.14
 		}
 	}
     focus = {
@@ -314,7 +320,7 @@ focus_tree = {
 			add_political_power = 100
 			add_stability = 0.07
 			add_war_support = 0.07
-			country_event = AGE.14
+			country_event = AGE.15
 		}
 	}
     focus = {
@@ -337,7 +343,7 @@ focus_tree = {
     				target = CHU
     				transfer_troops = yes
 				}
-				country_event = AGE.18
+				country_event = AGE.19
 			}
 		}
 	}
@@ -349,7 +355,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
         prerequisite = { focus = AGE_Punish_the_traitor }
 		completion_reward = {
-			country_event = AGE.15
+			country_event = AGE.16
 			191 = {
 				add_core_of = AGE
 			}
@@ -410,7 +416,7 @@ focus_tree = {
 		prerequisite = { focus = AGE_industrial_rear }
 		completion_reward = {
 			add_war_support = 0.1
-			country_event = AGE.16
+			country_event = AGE.17
 			capital_scope = {
 				create_unit = {
                 	division = "name = \"Зеленый полк\" division_template = \"Зеленый полк\" start_experience_factor = 0.2 start_equipment_factor = 0.9 start_manpower_factor = 1" 

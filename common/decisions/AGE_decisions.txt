@@ -559,16 +559,16 @@ AGE_red_forest = {
 			}
 		}
 		cancel_trigger = {
-			has_country_flag = red_forest_flag
+			hidden_trigger = {
+				has_country_flag = red_forest_flag
+			}
 		}
 		state_target = yes
 		on_map_mode = map_and_decisions_view
 		cost = 0
 		days_remove = 40
 		cancel_effect = {
-			#hidden_trigger = { # Ну бля, это чё за хуйня? Триггер в эффекте? Вы серьёзно?
-			#	has_country_flag = red_forest_flag
-			#}
+			clr_country_flag = red_forest_flag #Каюсь, затупил немного, в cancel trigger хотел записать#
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
@@ -588,11 +588,28 @@ AGE_red_forest = {
 			}
 		}
 		target_trigger = {
-			FROM = {
-				state = 906
-				is_owned_by = TIP
-				any_neighbor_state = {
-					is_owned_by = AGE
+			IF = {
+				limit = {
+					has_country_flag = slavicization_flag
+				}
+				FROM = {
+					state = 906
+					is_owned_by = TIP
+					any_neighbor_state = {
+						is_owned_by = HAR
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_country_flag = reconciliation_flag
+				}
+				FROM = {
+					state = 906
+					is_owned_by = TIP
+					any_neighbor_state = {
+						is_owned_by = AGE
+					}
 				}
 			}
 		}
@@ -614,9 +631,23 @@ AGE_red_forest = {
 				type = anti_tank_equipment
 				amount = -8
 			}
-			906 = {
-				transfer_state_to = AGE
-				add_core_of = AGE
+			IF = {
+				limit = {
+					has_country_flag = slavicization_flag
+				}
+				906 = {
+					transfer_state_to = HAR
+					add_core_of = HAR
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = reconciliation_flag
+				}
+				906 = {
+					transfer_state_to = AGE
+					add_core_of = AGE
+				}
 			}
 		}
 	}
@@ -627,11 +658,28 @@ AGE_red_forest = {
 			}
 		}
 		target_trigger = {
-			FROM = {
-				state = 206
-				is_owned_by = TIP
-				any_neighbor_state = {
-					is_owned_by = AGE
+			IF = {
+				limit = {
+					has_country_flag = slavicization_flag
+				}
+				FROM = {
+					state = 206
+					is_owned_by = TIP
+					any_neighbor_state = {
+						is_owned_by = HAR
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_country_flag = reconciliation_flag
+				}
+				FROM = {
+					state = 206
+					is_owned_by = TIP
+					any_neighbor_state = {
+						is_owned_by = AGE
+					}
 				}
 			}
 		}
@@ -653,9 +701,141 @@ AGE_red_forest = {
 				type = anti_tank_equipment
 				amount = -20
 			}
-			206 = {
-				transfer_state_to = AGE
-				add_core_of = AGE
+			IF = {
+				limit = {
+					has_country_flag = slavicization_flag
+				}
+				206 = {
+					transfer_state_to = HAR
+					add_core_of = HAR
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = reconciliation_flag
+				}
+				206 = {
+					transfer_state_to = AGE
+					add_core_of = AGE
+				}
+			}
+		}
+	}
+	AGE_burn_the_forest_sim = {
+		visible = {
+			has_completed_focus = AGE_scary_Red_Forest
+		}
+		available = {
+			has_equipment = {
+				anti_tank_equipment > 199
+			}
+			hidden_trigger = {
+				command_power >39
+			}
+		}
+		cost = 40
+		custom_cost_trigger = {
+    		command_power > 39
+		}
+		custom_cost_text = decision_cost_CP_40_pp_40
+		days_remove = 40
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -40
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = -25
+			}
+			declare_war_on = {
+				target = SIM
+				type = annex_everything
+			}
+			SIM = {
+				add_ideas = SIM_fire_of_infidels
+			}
+			hidden_effect = {
+				BLZ = {
+					add_to_war = {
+    					targeted_alliance = AGE
+    					enemy = SIM
+    					hostility_reason = asked_to_join
+					}
+				}
+				HAR = {
+					add_to_war = {
+    					targeted_alliance = AGE
+    					enemy = SIM
+    					hostility_reason = asked_to_join
+					}
+				}
+				CHU = {
+					add_to_war = {
+    					targeted_alliance = AGE
+    					enemy = SIM
+    					hostility_reason = asked_to_join
+					}
+				}
+			}
+		}
+	}
+	AGE_protect_scientistst = {
+		visible = {
+			OR = {
+				has_completed_focus = AGE_complex_Barrier
+				has_completed_focus = AGE_complex_Barrier_slavic
+			}
+		}
+		available = {
+			IF = {
+				limit = {
+					has_country_flag = slavicization_flag
+				}
+				OR = {
+					HAR = {
+						is_neighbor_of = BAI
+					}
+					BLZ = {
+						is_neighbor_of = BAI
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_country_flag = reconciliation_flag
+				}
+				is_neighbor_of = BAI
+			}
+		}
+		cost = 0
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			country_event = AGE.18
+			IF = {
+				limit = {
+					has_country_flag = reconciliation_flag
+				}
+				annex_country = {
+    				target = BAI
+    				transfer_troops = yes
+				}
+				907 = { add_core_of = AGE }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = slavicization_flag
+				}
+				HAR = {
+					annex_country = {
+    				target = BAI
+    				transfer_troops = yes
+				}
+				907 = { add_core_of = HAR }
+				}
 			}
 		}
 	}
@@ -676,6 +856,9 @@ AGE_red_forest = {
 		days_remove = 40
 		days_re_enable = 30
 		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+			}
 		}
 		remove_effect = {
 			add_days_mission_timeout = {
@@ -739,24 +922,6 @@ AGE_south_intervention = {
 			}
 		}
     }
-	AGE_protect_scientistst = {
-		available = {
-			is_neighbor_of = BAI
-			has_completed_focus = AGE_complex_Barrier
-		}
-
-		cost = 0
-		days_remove = 0
-		fire_only_once = yes
-		remove_effect = {
-			annex_country = {
-    			target = BAI
-    			transfer_troops = yes
-			}
-			907 = { add_core_of = AGE }
-			country_event = AGE.17
-		}
-	}
 
 	AGE_occupy_Ekabplis = {
 		visible = {
@@ -779,6 +944,9 @@ AGE_south_intervention = {
 		days_remove = 10
 		fire_only_once = yes
 		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+			}
 		}
 		remove_effect = {
 			909 = {
@@ -788,7 +956,7 @@ AGE_south_intervention = {
 		}
 	}
 
-	AGE_occupy_Svedasai = {
+	AGE_occupy_Panevezis = {
 		visible = {
 			country_exists = BLZ
 			has_completed_focus = AGE_chaos_at_the_border
@@ -808,6 +976,9 @@ AGE_south_intervention = {
 		days_remove = 10
 		fire_only_once = yes
 		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+			}
 		}
 		remove_effect = {
 			815 = {
@@ -852,6 +1023,9 @@ AGE_south_intervention = {
 		days_remove = 20
 		days_re_enable = 25
 		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
@@ -877,7 +1051,7 @@ AGE_south_intervention = {
 		}
 	}
 
-	AGE_recapture_Svedasai = {
+	AGE_recapture_Panevezis = {
 		visible = {
 			815 = {
 				is_controlled_by = SIM
@@ -910,6 +1084,9 @@ AGE_south_intervention = {
 		days_remove = 20
 		days_re_enable = 25
 		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
@@ -931,6 +1108,436 @@ AGE_south_intervention = {
     			defender = {
         			state = 815
         			num_provinces = 4
+				}
+			}
+		}
+	}
+}
+
+AGE_help_from_allies = {
+	AGE_help_from_blz_1 = {
+		available = {
+			has_completed_focus = AGE_south_direction
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_manpower = 350
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 150 
+			}
+		}
+	}
+	AGE_help_from_blz_2 = {
+		available = {
+			has_completed_focus = AGE_help_Zhukovsky
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_manpower = 350
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 150 
+			}
+			add_tech_bonus = {
+    			bonus = 0.5
+   	 			uses = 1
+    			category = hospital_tech
+			}
+		}
+	}
+	AGE_help_from_blz_3 = {
+		available = {
+			has_completed_focus = AGE_our_haters
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_manpower = 400
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 150 
+			}
+			add_tech_bonus = {
+    			bonus = 0.5
+   	 			uses = 1
+    			category = hospital_tech
+			}
+		}
+	}
+	AGE_help_from_har_1 = {
+		available = {
+			has_completed_focus = AGE_south_east_direction
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_manpower = 100
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 100 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150 
+			}
+		}
+	}
+	AGE_help_from_har_2 = {
+		available = {
+			has_completed_focus = AGE_help_Paramonov
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_manpower = 150
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 130 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 180 
+			}
+		}
+	}
+	AGE_help_from_har_3 = {
+		available = {
+			has_completed_focus = AGE_contain_nature
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_manpower = 200
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 160 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 210 
+			}
+		}
+	}
+	AGE_help_from_chu_1 = {
+		available = {
+			has_completed_focus = AGE_north_east_direction
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 240
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 50
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+			}
+		}
+	}
+	AGE_help_from_chu_2 = {
+		available = {
+			has_completed_focus = AGE_help_Shazer
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_tech_bonus = {
+    			bonus = 0.25
+   	 			uses = 1
+    			category = engineers_tech
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 270
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 50
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+			}
+		}
+	}
+	AGE_help_from_chu_3 = {
+		available = {
+			has_completed_focus = AGE_calm_the_despairing
+		}
+
+		cost = 15
+		days_remove = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_tech_bonus = {
+    			bonus = 0.75
+   	 			uses = 1
+    			category = engineers_tech
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 300
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = 50
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+			}
+		}
+	}
+}
+
+AGE_partisans = {
+	AGE_destroy_supply_node_klaipeda = {
+		available = {
+			has_completed_focus = AGE_north_east_direction
+			command_power > 49
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+    		command_power > 49
+		}
+		custom_cost_text = decision_cost_CP_50
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+			}
+		}
+		remove_effect = {
+			188 = {
+				damage_building = {
+    				type = supply_node
+    				damage = 1
+					province = 3288
+				}
+			}
+		}
+	}
+	AGE_destroy_supply_node_kaliningrad = {
+		available = {
+			has_completed_focus = AGE_north_east_direction
+			command_power > 49
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+    		command_power > 49
+		}
+		custom_cost_text = decision_cost_CP_50
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+			}
+		}
+		remove_effect = {
+			763 = {
+				damage_building = {
+    				type = supply_node
+    				damage = 1
+					province = 6332
+				}
+			}
+			
+		}
+	}
+	AGE_destroy_supply_node_masuria = {
+		available = {
+			has_completed_focus = AGE_north_east_direction
+			command_power > 49
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+    		command_power > 49
+		}
+		custom_cost_text = decision_cost_CP_50
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+			}
+		}
+		remove_effect = {
+			5 = {
+				damage_building = {
+    				type = supply_node
+    				damage = 1
+					province = 6375
+				}
+			}
+		}
+	}
+	AGE_destroy_supply_node_marijampole = {
+		available = {
+			has_completed_focus = AGE_north_east_direction
+			command_power > 49
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+    		command_power > 49
+		}
+		custom_cost_text = decision_cost_CP_50
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+			}
+		}
+		remove_effect = {
+			814 = {
+				damage_building = {
+    				type = supply_node
+    				damage = 1
+					province = 3254
+				}
+			}
+		}
+	}
+	AGE_destroy_railway_kaliningrad = {
+		available = {
+			has_completed_focus = AGE_north_east_direction
+			command_power > 34 
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+    		command_power > 34
+		}
+		custom_cost_text = decision_cost_CP_50
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -35
+			}
+		}
+		remove_effect = {
+			763 = {
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 6332
+				}
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 395
+				}
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 3384
+				}
+			}
+		}
+	}
+	AGE_destroy_railway_masuria = {
+		available = {
+			has_completed_focus = AGE_north_east_direction
+			command_power > 34
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+    		command_power > 34
+		}
+		custom_cost_text = decision_cost_CP_50
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -35
+			}
+		}
+		remove_effect = {
+			5 = {
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 6375
+				}
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 9372
+				}
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 11386
+				}
+			}
+		}
+	}
+	AGE_destroy_railway_marijampole = {
+		available = {
+			has_completed_focus = AGE_north_east_direction
+			command_power > 34
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+    		command_power > 34
+		}
+		custom_cost_text = decision_cost_CP_35
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -35
+			}
+		}
+		remove_effect = {
+			814 = {
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 3254
+				}
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 11312
+				}
+				damage_building = {
+    				type = rail_way
+    				damage = 1
+					province = 3272
 				}
 			}
 		}

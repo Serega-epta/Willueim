@@ -64,6 +64,22 @@ ideas = {
 				resistance_damage_to_garrison_on_our_occupied_states = -0.05
 			}
 		}
+		#Красные сабли# 1-2
+		AGE_red_sabres_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_AGE_red_sabres
+			modifier ={
+				political_power_gain = 0.2
+				resistance_growth_on_our_occupied_states = -0.1
+				resistance_damage_to_garrison_on_our_occupied_states = -0.1
+			}
+		}
 		#Красные сабли# 2
 		AGE_red_sabres_second = {
 			allowed = {
@@ -78,6 +94,22 @@ ideas = {
 				offence = 0.05
 				defence = 0.05
 				army_org_factor = 0.05
+			}
+		}
+		#Красные сабли# 2-2
+		AGE_red_sabres_second_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_AGE_red_sabres_second
+			modifier ={
+				offence = 0.1
+				defence = 0.1
+				army_org_factor = 0.1
 			}
 		}
 		#Другой путь#
@@ -248,7 +280,7 @@ ideas = {
 				defense_bonus_against = 0.15
 			}
 		}
-			SIM_amber_harvest = { #Янтарная жатва
+		SIM_amber_harvest = { #Янтарная жатва
 			
 			allowed = {
 				always = no
@@ -263,6 +295,23 @@ ideas = {
 			modifier = {
 				monthly_population = -10
 				weekly_manpower = +500
+			}
+		}
+		SIM_fire_of_infidels = { #Огонь неверных
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = -0.15
+				army_core_defence_factor = -0.15
 			}
 		}
 		#Финансирование научных исследований#
@@ -292,6 +341,57 @@ ideas = {
 			
 			modifier = {
 				research_speed_factor = 0.15
+			}
+		}
+	#Балтийская экономика#
+		AGE_Baltic_economy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+	#Защитный вал#
+		AGE_cold_blooded_defense_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier ={
+			}
+			targeted_modifier = {
+				tag = LPC
+				defense_bonus_against = 0.1
+			}
+		}
+		#Решительный штурм#
+		AGE_decisive_assault_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = LPC
+				attack_bonus_against = 0.1
 			}
 		}
 	}
