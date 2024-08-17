@@ -52,7 +52,7 @@ country_event = {
 	name = AGE.4.a	
 	}
 }
-#Дом…
+#Дом...
 country_event = {
 	id = AGE.5
 	title = AGE.5.t
@@ -637,14 +637,17 @@ country_event = {
 		812 = {
 			transfer_state_to = AGE
 			add_core_of = AGE
+			remove_core_of = TWD
 		}
 		811 = {
 			transfer_state_to = AGE
 			add_core_of = AGE
+			remove_core_of = TWD
 		}
 		927 = {
 			transfer_state_to = CHU
 			add_core_of = CHU
+			remove_core_of = TWD
 		}
 	}
 }
@@ -695,14 +698,17 @@ country_event = {
 		908 = {
 			transfer_state_to = HAR
 			add_core_of = HAR
+			remove_core_of = SIM
 		}
 		784 = {
 			transfer_state_to = HAR
 			add_core_of = HAR
+			remove_core_of = SIM
 		}
 		810 = {
 			transfer_state_to = HAR
 			add_core_of = HAR
+			remove_core_of = SIM
 		}
 	}
 }
@@ -741,6 +747,32 @@ country_event = {
 		}
 	}
 }
+#Удаление нацдухов
+country_event = {
+	id = AGE.technical.8
+	title = AGE.technical.8.t
+	desc = AGE.technical.7.d
+    fire_only_once = yes
+	hidden = yes
+	trigger = {
+		country_exists = AGE
+		NOT = {
+			country_exists = LPC
+		}
+	}
+
+	option = {
+		name = AGE.technical.8.a
+		AGE = {
+			remove_ideas = {
+				AGE_protective_shaft_idea
+				AGE_powerful_onslaught_idea
+				AGE_cold_blooded_defense_idea
+				AGE_decisive_assault_idea
+			}
+		}
+	}
+}
 
 #Мы прогнали сектантов!
 country_event = {
@@ -765,6 +797,7 @@ country_event = {
 			815 = {
 				transfer_state_to = AGE
 				add_core_of = AGE
+				remove_core_of = BLZ
 			}
 		}
 		else_if = {
@@ -776,6 +809,7 @@ country_event = {
 			11 = {
 				transfer_state_to = AGE
 				add_core_of = AGE
+				remove_core_of = BLZ
 			}
 		}
 		hidden_effect = {

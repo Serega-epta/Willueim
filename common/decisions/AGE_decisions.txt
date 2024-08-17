@@ -119,7 +119,7 @@ AGE_their_freedoms = {
 				}
 				has_dynamic_modifier = { modifier = open_opposition }
 			}
-			AGE = { has_focus_tree = AGE_phase_2 }
+			AGE = { has_completed_focus = AGE_protect_borders }
 			has_country_flag = not_their_land_anymore_flag
 		}
 		#target_trigger = {
@@ -170,7 +170,7 @@ AGE_their_freedoms = {
 				}
 				has_dynamic_modifier = { modifier = clandestine_cells }
 			}
-			AGE = { has_focus_tree = AGE_phase_2 }
+			AGE = { has_completed_focus = AGE_protect_borders }
 			has_country_flag = not_their_land_anymore_flag
 		}
 		#target_trigger = {
@@ -204,7 +204,7 @@ AGE_their_freedoms = {
 				has_idea = AGE_red_sabres
 				has_idea = AGE_red_sabres_second
 			}		
-			has_focus_tree = AGE_phase_1
+			has_country_flag =red_sabres_flag
 		}
 		available = {
 			has_equipment = {
@@ -579,6 +579,11 @@ AGE_red_forest = {
 				transfer_state_to = AGE
 				add_core_of = AGE
 			}
+			hidden_effect = {
+				FROM = {
+					remove_core_of = HAR
+				}
+			}
 		}
 	}
 	AGE_burn_the_forest_glubohoje = {
@@ -638,6 +643,7 @@ AGE_red_forest = {
 				906 = {
 					transfer_state_to = HAR
 					add_core_of = HAR
+					remove_core_of = TIP
 				}
 			}
 			else_if = {
@@ -647,6 +653,7 @@ AGE_red_forest = {
 				906 = {
 					transfer_state_to = AGE
 					add_core_of = AGE
+					remove_core_of = TIP
 				}
 			}
 		}
@@ -708,6 +715,7 @@ AGE_red_forest = {
 				206 = {
 					transfer_state_to = HAR
 					add_core_of = HAR
+					remove_core_of = TIP
 				}
 			}
 			else_if = {
@@ -717,6 +725,7 @@ AGE_red_forest = {
 				206 = {
 					transfer_state_to = AGE
 					add_core_of = AGE
+					remove_core_of = TIP
 				}
 			}
 		}
@@ -823,7 +832,10 @@ AGE_red_forest = {
     				target = BAI
     				transfer_troops = yes
 				}
-				907 = { add_core_of = AGE }
+				907 = {
+					add_core_of = AGE
+					remove_core_of = BAI
+				}
 			}
 			else_if = {
 				limit = {
@@ -833,8 +845,11 @@ AGE_red_forest = {
 					annex_country = {
     				target = BAI
     				transfer_troops = yes
+					}
 				}
-				907 = { add_core_of = HAR }
+				907 = {
+					add_core_of = HAR
+					remove_core_of = BAI
 				}
 			}
 		}
@@ -940,7 +955,7 @@ AGE_south_intervention = {
 		custom_cost_trigger = {
     		command_power > 49
 		}
-		custom_cost_text = decision_cost_CP_50
+		custom_cost_text = decision_cost_CP_50_pp_100
 		days_remove = 10
 		fire_only_once = yes
 		complete_effect = {
@@ -952,6 +967,7 @@ AGE_south_intervention = {
 			909 = {
 				transfer_state_to = AGE
 				add_core_of = AGE
+				remove_core_of = HAR
 			}
 		}
 	}
@@ -984,6 +1000,7 @@ AGE_south_intervention = {
 			815 = {
 				transfer_state_to = AGE
 				add_core_of = AGE
+				remove_core_of = BLZ
 			}
 		}
 	}

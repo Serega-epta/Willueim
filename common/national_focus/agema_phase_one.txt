@@ -18,11 +18,6 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			country_event = AGE.1
-			# add_trait = {
-			# 	character = AGE_aleksandr_lazarevich
-			# 	ideology = 
-			# 	trait = AGE_agony_of_choice
-		    # }
 			custom_effect_tooltip = AGE_blood_on_hands_tt
 		}
 	}
@@ -40,7 +35,6 @@ focus_tree = {
 			add_manpower = 1000
 			country_event = AGE.2
 			custom_effect_tooltip = AGE_seek_for_peace_tt
-			set_country_flag = still_their_land_flag
 		}
 	}
 	focus = {
@@ -54,11 +48,11 @@ focus_tree = {
 		mutually_exclusive = { focus = AGE_not_their_land }
 		completion_reward = {
 			add_stability = 0.05
-			remove_ideas = AGE_knife_at_throat
 			remove_ideas = AGE_time_wasted
 			add_ideas = AGE_land_for_baltics
 			country_event = AGE.3
-			custom_effect_tooltip = AGE_still_their_land_tt	
+			custom_effect_tooltip = AGE_still_their_land_tt
+			set_country_flag = still_their_land_flag
 		}
 	}
 	focus = {
@@ -80,6 +74,7 @@ focus_tree = {
 			add_manpower = -1000
 			army_experience = -5
 			remove_ideas = AGE_time_wasted
+			add_ideas = AGE_red_sabres
 			country_event = AGE.4
 			custom_effect_tooltip = AGE_red_sables_tt
 			set_country_flag = red_sabres_flag
@@ -101,10 +96,10 @@ focus_tree = {
 		mutually_exclusive = { focus = AGE_still_their_land }
 		completion_reward = {
 			add_stability = -0.05
-			remove_ideas = AGE_knife_at_throat
 			country_event = AGE.6
 			set_country_flag = not_their_land_anymore_flag
 			set_country_flag = baltic_terror_activation
+			custom_effect_tooltip = not_their_land_tt
 		}
 	}
 	focus = {

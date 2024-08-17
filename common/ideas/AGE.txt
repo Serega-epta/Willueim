@@ -1,21 +1,5 @@
 ideas = {
 	country = {
-		#Нож у горла#
-		AGE_knife_at_throat = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = GFX_idea_AGE_knife_at_throat
-			modifier ={
-				stability_factor = -0.3 #Стабильность
-				monthly_population = -0.15 #Прирост населения
-			}
-			
-		}
 		#Время, потраченное впустую#
 		AGE_time_wasted = {
 			allowed = {
@@ -27,8 +11,8 @@ ideas = {
 			removal_cost = -1
 			picture = GFX_idea_AGE_time_wasted
 			modifier ={
-				stability_weekly_factor = -0.15 #стаб. в нед. -0,15%
-				war_support_weekly_factor = -0.20 #война в нед. -0,20%
+				stability_weekly_factor = -0.0015  #стаб. в нед. -0,15%
+				war_support_weekly_factor =-0.002 #война в нед. -0,20%
 				research_speed_factor = -0.1 #темпы исследования - 10%
 				political_power_gain = -0.1 #пп -0,1
 			}
