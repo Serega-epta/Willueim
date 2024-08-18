@@ -1,6 +1,6 @@
 capital = 244
 
-oob = base #"OLD_1936"
+oob = base 
 add_ideas = OLD_emptied_fraternity
 
 # Starting tech
@@ -12,7 +12,7 @@ set_technology = {
    instruments_of_any_era = 1
 }
 
-set_research_slots = 2
+set_research_slots = 1
 set_convoys = 0
 
 
@@ -23,19 +23,11 @@ set_politics = {
 }
 
 set_popularities = {
-	free_people = 60
-	humanists = 40
+	free_people = 48
+	chthonism = 32
+    sacraments = 20
 }
 
- 
-
-create_country_leader = {
-    name = "daniil_korneev"
-    desc = "daniil_korneev_DESC"
-    picture = "gfx/leaders/DNN/Portrait_Pepe_Komunistov.dds"
-    ideology = free_people_subideology
-    traits = {
-        #
-    }
-}
+recruit_character = OLD_daniil_koreniev
+recruit_character = OLD_krulin
 

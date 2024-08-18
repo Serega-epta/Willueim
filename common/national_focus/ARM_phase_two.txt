@@ -5,7 +5,7 @@ focus_tree = {
         factor = 0
 
         modifier = {
-            add = 100
+            add = 400
             tag = ARM
         }
     }
@@ -416,15 +416,12 @@ focus_tree = {
             }
             CAR = {
                 set_politics = {
-                    ruling_party = militarists
+                    ruling_party = statesmen
                     elections_allowed = no
                 }
                 promote_character = CAR_Pavlik_Morozov
                 set_popularities = {
-                    militarists = 55
-                    humanists = 25
-                    bandits = 10
-                    statesmen = 10
+                    statesmen = 100
                 }
             }
             hidden_effect = {
