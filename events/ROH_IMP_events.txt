@@ -1,25 +1,27 @@
 add_namespace = IMP
-
 country_event = {
     id = IMP.1
-    title = IMP.1
-    desc = IMP.1
+    title = IMP.1.t
+    desc = IMP.1.d
     #picture = 
 
-    is_triggered_only = no
+    is_triggered_only = yes
     fire_only_once = yes
-    trigger = {
-        IMP_war_with_MAD = yes
-    }
 
     option = {
-        name = IMP.1
-        IMP = {
-            declare_war_on = {
-                target = MAD
-                type = annex_everything
+        name = IMP.1.a
+        declare_war_on = {
+            target = MAD
+            type = annex_everything
+        }
+        BSO = {
+            add_to_war = {
+                targeted_alliance = IMP
+                enemy = MAD
             }
-            news_event = worldnews.3
+        }
+        hidden_effect = {
+            news_event = worldnews.3            
         }
     }
 }
@@ -40,7 +42,7 @@ country_event = {
         name = IMP.2.a
         IMP = {
             880 = {
-                transfer_state_to = SOL
+                transfer_state_to = BSO
             }
         }
         country_event = {
