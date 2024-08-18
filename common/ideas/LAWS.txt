@@ -455,71 +455,86 @@ ideas = {
 	roh_study_of_distortions ={
 		law = yes
 		use_list_view = yes
-		
 		ignore_distortions = {
+			level = 1
 			allowed = {
 				always = yes 
 			}
 			available = {
-				always = yes
+				NOT = {
+					has_idea = destroy_anomalies_idea
+				}
 			}
 			cost = 100
-			removal_cost = -1
-			level = 1			
+			removal_cost = -1		
 			default = yes 	
 			modifier = {
-				monthly_population = -0.03	
+				monthly_population = -0.09	
 			}		
-			cancel_if_invalid = yes 		
+			cancel_if_invalid = no		
 		}
-		restrain_distortions = {
+		limited_research_of_distortions = {
+			level = 2
 			allowed = {
 				always = yes 
 			}
 			available = {
+				NOT = {
+					has_idea = destroy_anomalies_idea
+				}
+			}
+			cost = 100
+			modifier = {
+				research_speed_factor = 0.02
+				monthly_population = -0.03
+				political_power_factor = -0.05
+			}		
+			cancel_if_invalid = no 			
+		}
+		extensive_research_of_distortions = {
+			level = 3
+			allowed = {
+				always = yes 
+			}
+			available = {
+				NOT = {
+					has_idea = destroy_anomalies_idea
+				}
+			}
+			cost = 100
+			modifier = {
+				research_speed_factor = 0.05
+				monthly_population = -0.05
+				stability_factor = -0.05
+				political_power_factor = -0.07
+			}		
+			cancel_if_invalid = no 			
+		}
+		restrain_distortions = {
+			level = 4
+			allowed = {
 				always = yes 
 			}
 			cost = 100
 			removal_cost = -1
-			level = 2
 			modifier = {
 				political_power_factor = -0.03
 			}		
-			cancel_if_invalid = yes 	
+			cancel_if_invalid = no 	
 		}
 		liquidation_of_distortions = {
+			level = 5
 			allowed = {
-				always = yes 
-			}
-			available = {
 				always = yes 
 			}
 			cost = 100
 			removal_cost = -1
-			level = 3
 			modifier = {
 				political_power_factor = -0.05
-				monthly_population = 0.01	
-				production_speed_infrastructure_factor = 0.03		
+				monthly_population = 0.03	
+				production_speed_infrastructure_factor = 0.07		
 			}
-			cancel_if_invalid = yes 	
-		}
-		limited_research_of_distortions = {
-			allowed = {
-				always = yes 
-			}
-			available = {
-				always = yes 
-			}
-			cost = 100
-			removal_cost = -1
-			level = 4
-			modifier = {
-				research_speed_factor = 0.05 
-				research_speed_factor = 0.02
-				monthly_population = -0.05
-			}		
-			cancel_if_invalid = yes 			
+			cancel_if_invalid = no	
 		}
 	}
 	

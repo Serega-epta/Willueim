@@ -1,18 +1,8 @@
 on_actions = {
-	on_startup = {
-		effect = {
-			set_variable = { 
-				ochki_gos_progressa = 0 
-			}
-			set_variable = { 
-				ochki_gos_progressa_growth = 5 
-			}
-		}
-	}
 	on_weekly = {
 		effect = {
 			add_to_variable = {
-				ochki_gos_progressa = ochki_gos_progressa_growth
+				ochki_gos_progressa = modifier@reform_point_income
 			}
 		}
 	}

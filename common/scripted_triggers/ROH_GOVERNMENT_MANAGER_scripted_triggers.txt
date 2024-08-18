@@ -38,6 +38,16 @@ goverment_system_can_be_upgraded_45 = {
 		}
 	}
 }
+goverment_system_can_be_upgraded_40 = {
+	custom_trigger_tooltip = {
+		tooltip = goverment_system_can_be_upgraded_40_tt
+		check_variable = {
+			var = ochki_gos_progressa
+			value = 40
+			compare = greater_than_or_equals
+		}
+	}
+}
 goverment_system_can_be_upgraded_30 = {
 	custom_trigger_tooltip = {
 		tooltip = goverment_system_can_be_upgraded_30_tt

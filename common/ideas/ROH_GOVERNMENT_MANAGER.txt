@@ -296,7 +296,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				
+				reform_point_income = 5
 			}
 		}
 		our_home_is_our_fortress_idea = {
@@ -317,9 +317,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			modifier = {
-				
-			}
 		}
 		industrial_militia_idea = {
 			traits = {
@@ -328,9 +325,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			modifier = {
-				
-			}
 		}
 		land_river_idea = {
 			traits = {
@@ -338,9 +332,6 @@ ideas = {
 			}
 			allowed = {
 				always = no
-			}
-			modifier = {
-				
 			}
 		}
 		scraping_down_the_bottom_idea = {
@@ -383,9 +374,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			modifier = {
-				
-			}
 		}
 		destroy_anomalies_idea = {
 			traits = {
@@ -393,9 +381,6 @@ ideas = {
 			}
 			allowed = {
 				always = no
-			}
-			modifier = {
-				
 			}
 		}
 		fighting_for_families_idea = {
@@ -415,9 +400,6 @@ ideas = {
 			}
 			allowed = {
 				always = no
-			}
-			modifier = {
-				
 			}
 		}
 		from_stones_and_sticks_idea = {
@@ -440,7 +422,8 @@ ideas = {
 			}
 			modifier = {
 				army_attack_factor = 0.1
-				army_org = -0.1
+				army_org_factor = -0.1
+				army_artillery_attack_factor = 0.05
 			}
 		}
 		controlled_bataries_idea = {
@@ -452,7 +435,8 @@ ideas = {
 			}
 			modifier = {
 				army_attack_factor = -0.075
-				army_org = 0.075
+				army_org_factor = 0.075
+				army_artillery_defence_factor = 0.075
 			}
 		}
 		firstborn_of_sparta_idea = {
@@ -474,8 +458,8 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				stability_factor = 0.10
-				war_support_factor = 0.10
+				stability_factor = 0.1
+				war_support_factor = 0.1
 			}
 		}
 		steel_grip_idea = {
@@ -484,9 +468,6 @@ ideas = {
 			}
 			allowed = {
 				always = no
-			}
-			modifier = {
-				
 			}
 		}
 		sweat_and_blood_idea = {
@@ -497,7 +478,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				justify_war_goal_time = -0.30
+				justify_war_goal_time = -0.3
 			}
 		}
 		#naumov system
@@ -580,7 +561,7 @@ ideas = {
 			}
 			modifier = {
 				stability_factor = 0.175
-				 war_support_factor = 0.175
+				war_support_factor = 0.175
 			}
 		}
 		assured_survival_idea = {
