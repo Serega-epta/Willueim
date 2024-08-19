@@ -14,19 +14,19 @@ integration_category = {
 			}
 		}
 		custom_cost_trigger = {
-			has_manpower > 399
 			has_equipment = {
 				infantry_equipment > 399
 			}
 		}
 		custom_cost_text = decision_cost_400_mp_400_ie_tt
 		days_remove = 70
-		remove_effect = {
+		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -400
-			}
-			add_manpower = -400
+			}			
+		}
+		remove_effect = {
 			FROM = {
 				every_core_state = {
 					add_core_of = ROOT
