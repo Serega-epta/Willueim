@@ -586,7 +586,7 @@ focus_tree = {
 		y = 14
 		ai_will_do = { factor = 10 }
 		prerequisite = {
-			focus = AGE_Supply_the_partisans_slavic
+			focus = AGE_help_the_partisans
 			focus = AGE_Provide_the_army_slavic
 		}
 		completion_reward = {
@@ -594,6 +594,8 @@ focus_tree = {
     			target = LPC
     			type = annex_everything
 			}
+			unlock_decision_category_tooltip = expansion_category
+			set_country_flag = end_of_phase_two
 		}
 	}
 }

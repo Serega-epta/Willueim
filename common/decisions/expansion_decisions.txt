@@ -1,0 +1,71 @@
+expansion_category = {
+    start_expansion = {
+        priority = 100
+        available = { 
+            num_divisions > 9
+            has_manpower > 299
+        }
+        cost = 150
+        fire_only_once = yes
+        complete_effect = {
+            set_country_flag = access_to_justifications_of_war
+            custom_effect_tooltip = ARM_Open_diplomacy_tt        
+            hidden_effect = { add_ideas = lower_time_for_justification_of_wargoal }    
+            ROOT = {
+                every_subject_country = {
+                    PREV = {
+                        annex_country = {
+                            target = PREV
+                            transfer_troops = yes
+                        }
+                    }
+                }
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    unite_motherland = {
+        available = {
+            all_other_country = {
+                exists = no
+            }
+        }
+        priority = 100
+        fire_only_once = yes
+        complete_effect = {
+            if = {
+                limit = {
+                    OR = {
+                        has_government = statesmen
+                        has_government = militarists
+                    }
+                }
+                set_cosmetic_tag = motherland_statesmen
+            } 
+            if = {
+                limit = {
+                    OR = {
+                        has_government = humanists
+                        has_government = technocracy
+                        has_government = free_people
+                        has_government = bandits
+                    }
+                }
+                set_cosmetic_tag = motherland_humanists
+            } 
+            if = {
+                limit = {
+                    has_government = sacraments
+                }
+                set_cosmetic_tag = motherland_sacraments           
+            }
+            if = {
+                limit = {
+                    has_government = chthonism
+                }
+                set_cosmetic_tag = motherland_chthonism        
+            }
+        }
+        ai_will_do = { factor = 100 }
+    }
+}
