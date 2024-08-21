@@ -1,36 +1,11 @@
 expansion_category = {
-    start_expansion = {
-        priority = 100
-        available = { 
-            num_divisions > 9
-            has_manpower > 299
-        }
-        cost = 150
-        fire_only_once = yes
-        complete_effect = {
-            set_country_flag = access_to_justifications_of_war
-            custom_effect_tooltip = ARM_Open_diplomacy_tt        
-            hidden_effect = { add_ideas = lower_time_for_justification_of_wargoal }    
-            ROOT = {
-                every_subject_country = {
-                    PREV = {
-                        annex_country = {
-                            target = PREV
-                            transfer_troops = yes
-                        }
-                    }
-                }
-            }
-        }
-        ai_will_do = { factor = 0 }
-    }
     unite_motherland = {
         available = {
             all_other_country = {
                 exists = no
             }
         }
-        priority = 100
+        priority = 200
         fire_only_once = yes
         complete_effect = {
             if = {
@@ -67,5 +42,53 @@ expansion_category = {
             }
         }
         ai_will_do = { factor = 100 }
+    }
+    start_expansion = {
+        priority = 150
+        available = { 
+            num_divisions > 9
+            has_manpower > 299
+        }
+        cost = 250
+        fire_only_once = yes
+        complete_effect = {
+            set_country_flag = access_to_justifications_of_war
+            custom_effect_tooltip = ARM_Open_diplomacy_tt        
+            hidden_effect = { add_ideas = lower_time_for_justification_of_wargoal }    
+            ROOT = {
+                every_subject_country = {
+                    PREV = {
+                        annex_country = {
+                            target = PREV
+                            transfer_troops = yes
+                        }
+                    }
+                }
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    annex_anarchy = {
+        priority = 100
+        targets = { BLS SIL WTR MOS BLT SOC SAC WEC }
+        targets_dynamic = yes
+        visible = { 
+            ROOT = { is_neighbor_of = FROM }
+        }
+        cost = 200
+        fire_only_once = yes
+        days_remove = 180
+        remove_effect = {
+            ROOT = {
+                annex_country = { target = FROM }
+            }
+            FROM = {
+                every_core_state = {
+                    remove_core_of = FROM
+                    add_core_of = ROOT
+                }
+            }
+        }
+        ai_will_do = { factor = 0 }
     }
 }
