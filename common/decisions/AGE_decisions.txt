@@ -461,6 +461,47 @@ AGE_their_freedoms = {
 					type = annex_everything
 				}
 			}
+			hidden_effect = {
+				BTC = {
+					division_template = {
+						name = "Baltic militia"
+						division_names_group = BANDIT_INF_01
+						regiments = {
+        					light_infantry = { x = 0 y = 0 }
+							light_infantry = { x = 1 y = 0 }
+						}
+						priority = 1
+					}
+					12 = {
+						create_unit = {
+                    		division = "name = \"Mežabrāļi\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1" 
+                    		owner = BTC
+							allow_spawning_on_enemy_provs = yes
+                		}
+					}
+					13 = {
+						create_unit = {
+                    		division = "name = \"Mežabrāļi\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1" 
+                    		owner = BTC
+							allow_spawning_on_enemy_provs = yes
+                		}
+					}
+				809 = {
+						create_unit = {
+                    		division = "name = \"Miško broliai\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1" 
+                    		owner = BTC
+							allow_spawning_on_enemy_provs = yes
+                		}
+					}
+					911 = {
+						create_unit = {
+                    		division = "name = \"Miško broliai\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1" 
+                    		owner = BTC
+							allow_spawning_on_enemy_provs = yes
+                		}
+					}
+				}
+			}
 		}
 	}
 }

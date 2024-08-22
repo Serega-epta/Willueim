@@ -284,7 +284,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = AGE.7
 			add_stability = 0.1
-			set_country_flag = war_with_baltosphere_flag
 			hidden_effect = {
 				911 = { remove_dynamic_modifier = { modifier = clandestine_cells } }
 				809 = { remove_dynamic_modifier = { modifier = clandestine_cells } }
@@ -304,6 +303,7 @@ focus_tree = {
 				IF = {
 					limit = { has_completed_focus = AGE_still_their_land }
 					load_focus_tree = AGE_phase_2_reconciliation
+					set_country_flag = war_with_baltosphere_flag
 				}
 				else_if = {
 					limit = { has_completed_focus = AGE_not_their_land }
