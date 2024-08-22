@@ -482,7 +482,8 @@ ideas = {
 			}
 		}
 		#naumov system
-		common_duty_common_law_idea = {
+		naumov_system_idea = {
+			#we already has var to check selected model, but naumov system selection has modifier
 			traits = {
 				naumov_system_trait
 			}
@@ -490,7 +491,15 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				add_political_power = 150
+				reform_point_income = 5
+			}
+		}
+		common_duty_common_law_idea = {
+			traits = {
+				naumov_system_trait
+			}
+			allowed = {
+				always = no
 			}
 		}
 		existence_essence_idea = {
@@ -526,7 +535,7 @@ ideas = {
 			}
 			modifier = {
 				stability_factor = 0.05
-				drift_defence_factor = 0.70
+				drift_defence_factor = 0.7
 			}
 		}
 		interesting_observation_idea = {
@@ -538,7 +547,7 @@ ideas = {
 			}
 			modifier = {
 				research_speed_factor = 0.05
-				stability_factor = -0.10
+				stability_factor = -0.1
 			}
 		}
 		technological_revolution_idea = {
@@ -595,7 +604,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				army_org = 0.05
+				army_org_factor = 0.05
 			}
 		}
 		all_describing_formula_idea = {
@@ -651,8 +660,8 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				stability_factor = 0.10
-				war_support_factor = 0.10
+				stability_factor = 0.1
+				war_support_factor = 0.1
 			}
 		}
 		potential_realization_idea = {
@@ -675,7 +684,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				army_org = 0.05
+				army_org_factor = 0.05
 				army_speed_factor = 0.05
 			}
 		}
@@ -710,7 +719,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				mobilization_speed = 0.10
+				mobilization_speed = 0.1
 			}
 		}
 		body_limits_idea = {
@@ -721,7 +730,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				army_org = 0.05
+				army_org_factor = 0.05
 				army_org_regain = 0.075
 				land_night_attack = 0.15
 				initiative_factor = 0.075
