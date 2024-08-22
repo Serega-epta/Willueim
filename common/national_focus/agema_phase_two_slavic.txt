@@ -55,6 +55,41 @@ focus_tree = {
 				add_to_faction = HAR
 				add_to_faction = BLZ
 			}
+			hidden_effect = {
+				191 = {
+					set_state_name = STATE_191_age
+					set_province_name = {
+    					id = 9221
+    					name = VICTORY_POINTS_9221_age
+					}
+				}
+				910 = {
+					set_province_name = {
+    					id = 310
+    					name = VICTORY_POINTS_310_age
+					}
+				}
+				909 = {
+					set_province_name = {
+    					id = 11358
+    					name = VICTORY_POINTS_11358_age
+					}
+				}
+				815 = {
+					set_state_name = STATE_815_age
+					set_province_name = {
+    					id = 9438
+    					name = VICTORY_POINTS_9438_age
+					}
+				}
+				11 = {
+					set_state_name = STATE_11_age
+					set_province_name = {
+    					id = 6296
+    					name = VICTORY_POINTS_6296_age
+					}
+				}
+			}
 		}
 	}
 
@@ -213,7 +248,15 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_south_east_direction }
 		completion_reward = {
-			
+			HAR = {
+				capital_scope = {
+                    create_unit = {
+                    	division = "name = \"Передовой заслон\" division_template = \"Передовой заслон\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                    	owner = HAR
+						count = 2
+                	}
+            	}
+			}
 		}
 	}
 
@@ -404,6 +447,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
 				amount = 50
+				producer = HAR
 			}
 			custom_effect_tooltip = scary_red_forest_tt
 		}
@@ -586,7 +630,7 @@ focus_tree = {
 		y = 14
 		ai_will_do = { factor = 10 }
 		prerequisite = {
-			focus = AGE_Supply_the_partisans_slavic
+			focus = AGE_help_the_partisans
 			focus = AGE_Provide_the_army_slavic
 		}
 		completion_reward = {
