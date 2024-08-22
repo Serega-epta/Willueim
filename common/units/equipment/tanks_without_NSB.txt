@@ -1,7 +1,7 @@
 equipments = {
 
-	pre_war_OPV_equipment = {
-		year = 2010
+	pre_war_OPV_equipment_archetype = {
+		year = 2000
 	
 		is_archetype = yes
 		is_buildable = no
@@ -12,12 +12,12 @@ equipments = {
 		
 		interface_category = interface_category_armor
 		
-		upgrades = {
-			tank_reliability_upgrade
-			tank_engine_upgrade
-			tank_armor_upgrade
-			tank_gun_upgrade
-		}
+		# upgrades = {
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_gun_upgrade
+		# }
 
 		#Различные способности
 		maximum_speed = 10
@@ -43,11 +43,29 @@ equipments = {
 		fuel_consumption = 2
 	}
 
+	pre_war_OPV_equipment = {
+		year = 2010
+
+		archetype = pre_war_OPV_equipment_archetype
+		priority = 5
+		visual_level = 0
+		
+		interface_category = interface_category_armor
+		
+		# upgrades = {
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_gun_upgrade
+		# }
+		soft_attack = 25
+	}
+
 	#Массовые танки
 	basic_mass_OPF_equipment = {
 		year = 2020
 	
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		priority = 5
 		visual_level = 0
 
@@ -74,7 +92,7 @@ equipments = {
 	improved_mass_OPF_equipment = {
 		year = 2025
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = basic_mass_OPF_equipment
 		priority = 10
 		visual_level = 0
@@ -103,7 +121,7 @@ equipments = {
 	advanced_mass_OPF_equipment = {
 		year = 2030
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_mass_OPF_equipment
 		priority = 10
 		visual_level = 0
@@ -132,7 +150,7 @@ equipments = {
 	mass_OPF_of_the_future_equipment = {
 		year = 2040
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_mass_OPF_equipment
 		priority = 10
 		visual_level = 0
@@ -162,7 +180,7 @@ equipments = {
 	basic_specialized_OPF_equipment = {
 		year = 2020
 	
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		priority = 5
 		visual_level = 0
 
@@ -189,7 +207,7 @@ equipments = {
 	improved_specialized_OPF_equipment = {
 		year = 2025
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = basic_specialized_OPF_equipment
 		priority = 10
 		visual_level = 0
@@ -218,7 +236,7 @@ equipments = {
 	advanced_specialized_OPF_equipment = {
 		year = 2030
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_specialized_OPF_equipment
 		priority = 10
 		visual_level = 0
@@ -247,7 +265,7 @@ equipments = {
 	specialized_OPF_of_the_future_equipment = {
 		year = 2040
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_specialized_OPF_equipment
 		priority = 10
 		visual_level = 0
@@ -277,7 +295,7 @@ equipments = {
 	basic_ai_OPF_equipment = {
 		year = 2020
 	
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		priority = 5
 		visual_level = 0
 
@@ -304,7 +322,7 @@ equipments = {
 	improved_ai_OPF_equipment = {
 		year = 2025
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = basic_ai_OPF_equipment
 		priority = 10
 		visual_level = 0
@@ -333,7 +351,7 @@ equipments = {
 	advanced_ai_OPF_equipment = {
 		year = 2030
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_ai_OPF_equipment
 		priority = 10
 		visual_level = 0
@@ -362,7 +380,7 @@ equipments = {
 	ai_OPF_of_the_future_equipment = {
 		year = 2040
 		
-		archetype = pre_war_OPV_equipment
+		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_ai_OPF_equipment
 		priority = 10
 		visual_level = 0

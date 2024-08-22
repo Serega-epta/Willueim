@@ -215,6 +215,13 @@ focus_tree = {
 		x = 6
 		y = 4
 		cost = 5
+		available = {
+			OR = {
+				is_neighbor_of = WOD
+				is_neighbor_of = YWD
+				is_neighbor_of = MOD
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -245,6 +252,13 @@ focus_tree = {
 		x = 8
 		y = 4
 		cost = 5
+		available = {
+			OR = {
+				is_neighbor_of = MAP
+				is_neighbor_of = POP
+				is_neighbor_of = CST
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -275,6 +289,17 @@ focus_tree = {
 		x = 10
 		y = 4
 		cost = 5
+		available = {
+			OR = {
+				is_neighbor_of = ODS
+				is_neighbor_of = HER
+				is_neighbor_of = CRI
+				is_neighbor_of = BOD
+				is_neighbor_of = SOD
+				is_neighbor_of = CRW
+				is_neighbor_of = KUB
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -327,6 +352,22 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 10
+		}
+		available = {
+			OR = {
+				is_neighbor_of = FUD
+				is_neighbor_of = AZB
+				is_neighbor_of = ECD
+				is_neighbor_of = KUH
+				is_neighbor_of = HAN
+				is_neighbor_of = BRI
+				is_neighbor_of = FSR
+				is_neighbor_of = BRD
+				is_neighbor_of = WAC
+				is_neighbor_of = STW
+				is_neighbor_of = DOM
+				is_neighbor_of = LUG
+			}
 		}
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -403,6 +444,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			OR = {
+				is_neighbor_of = VDS
+				is_neighbor_of = DIB
+				is_neighbor_of = BIH
+				is_neighbor_of = BAG
+				is_neighbor_of = ARM
+				is_neighbor_of = MAD
+				is_neighbor_of = SUM
+			}
+		}
 		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = { has_war = no }
@@ -454,7 +506,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-		202 = { is_core_of = LWV }
+			202 = { is_core_of = LWV }
 		}	
 		
 		prerequisite = { focus = LWV_osviatit_bessarabiu }
@@ -464,13 +516,12 @@ focus_tree = {
 		prerequisite = { focus = LWV_osviatit_dikie_lesa }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
-		remove_country_leader_trait = New_vera
-		add_country_leader_trait = LWV_avtor_sviatosti		
-		country_event = {
-			id = LWV.39 
-			days = 1
-		}
+			remove_country_leader_trait = New_vera
+			add_country_leader_trait = LWV_avtor_sviatosti		
+			country_event = {
+				id = LWV.39 
+				days = 1
+			}
 		}
 	}
 	focus = {
@@ -486,6 +537,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
+            set_country_flag = access_to_justifications_of_war
+            custom_effect_tooltip = ARM_Open_diplomacy_tt
 			country_event = {
 				id = LWV.40 
 				days = 1
@@ -504,7 +557,7 @@ focus_tree = {
 		prerequisite = { focus = LWV_sviatoe_pisanie }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		add_political_power = 50
+			add_political_power = 50
 		}
 	}
 	focus = {
@@ -539,7 +592,9 @@ focus_tree = {
 		prerequisite = { focus = LWV_religion_isskustvo }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			recruit_character = LWV_miroslav_popov
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 15
 		}
 	}
 	
@@ -594,7 +649,7 @@ focus_tree = {
 		}
 	}
 	
-######################################### VTOROE DREVO ###############################################	
+######################################### ВТОРОЕ ДРЕВО ФОКУСОВ ###############################################	
 	
 		
 	focus = {
