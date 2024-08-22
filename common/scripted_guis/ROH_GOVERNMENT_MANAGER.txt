@@ -772,7 +772,6 @@ scripted_gui = {
 		}
 		effects = {		
 			select_model_button_click = {
-				#tooltips to do
 				if = {
 					limit = {
 						check_variable = {
@@ -2837,7 +2836,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 				}
 			}
 			existence_essence_button_click_enabled = {
@@ -2850,7 +2849,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					NOT = {
 						has_idea = existence_horror_idea
 					}
@@ -2867,7 +2866,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					NOT = {
 						has_idea = existence_essence_idea
 					}
@@ -2884,7 +2883,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					NOT = {
 						has_idea = interesting_observation_idea
 					}
@@ -2901,7 +2900,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					NOT = {
 						has_idea = caring_eye_idea
 					}
@@ -2918,7 +2917,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					NOT = {
 						has_idea = cultural_revolution_idea
 					}
@@ -2935,7 +2934,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					NOT = {
 						has_idea = technological_revolution_idea
 					}
@@ -2952,7 +2951,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					OR = {
 						has_idea = caring_eye_idea
 						has_idea = interesting_observation_idea
@@ -2969,7 +2968,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					OR = {
 						has_idea = technological_revolution_idea
 						has_idea = cultural_revolution_idea
@@ -2986,7 +2985,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					OR = {
 						has_idea = assured_survival_idea
 						has_idea = proportionate_fee_idea
@@ -3003,7 +3002,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_45 = yes
 					has_idea = flawless_soldier_idea
 				}
 			}
@@ -3017,7 +3016,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					has_idea = flawless_soldier_idea
 				}
 			}
@@ -3031,7 +3030,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					has_idea = all_describing_formula_idea
 					has_idea = primary_broth_idea
 				}
@@ -3046,7 +3045,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = flowers_of_life_idea
 				}
 			}
@@ -3060,7 +3059,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = their_life_plans_idea
 				}
 			}
@@ -3074,7 +3073,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = their_life_plans_idea
 				}
 			}
@@ -3088,7 +3087,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_60 = yes
 					has_idea = cast_aside_doubts_idea
 				}
 			}
@@ -3102,7 +3101,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_15 = yes
 					has_idea = potential_realization_idea
 				}
 			}
@@ -3116,7 +3115,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_30 = yes
 					has_idea = unity_by_blood_idea
 				}
 			}
@@ -3130,7 +3129,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_60 = yes
 					has_idea = order_in_mind_idea
 				}
 			}
@@ -3144,7 +3143,7 @@ scripted_gui = {
 							selected_government_system = 3
 						}
 					}
-					goverment_system_can_be_upgraded = yes
+					goverment_system_can_be_upgraded_90 = yes
 					has_idea = cognitive_warfare_idea
 					has_idea = man_and_consciousness_idea
 				}
@@ -3357,7 +3356,6 @@ scripted_gui = {
 		}
 		effects = {		
 			select_model_button_click = {
-				#tooltips to do
 				if = {
 					limit = {
 						check_variable = {
@@ -3383,6 +3381,7 @@ scripted_gui = {
 					value = 20
 					tooltip = goverment_system_upgrade_20_tt
 				}
+				custom_effect_tooltip = select_naumov_system_idea_tt
 			}
 			close_button_click = {
 				set_variable = {
@@ -3392,45 +3391,48 @@ scripted_gui = {
 			common_duty_common_law_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = common_duty_common_law_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = common_duty_common_law_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = common_duty_common_law_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = common_duty_common_law_idea
+						add_political_power = 150
 					}
 					subtract_from_variable = {
 						var = ochki_gos_progressa
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = common_duty_common_law_available_tt
+				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = common_duty_common_law_reform_tt
+				effect_tooltip = {
+					add_political_power = 150
 				}
 			}
 			existence_essence_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = existence_essence_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = existence_essence_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = existence_essence_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = existence_essence_idea
 					}
@@ -3439,25 +3441,26 @@ scripted_gui = {
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = existence_essence_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = existence_essence_reform_tt
 			}
 			existence_horror_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = existence_horror_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = existence_horror_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = existence_horror_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = existence_horror_idea
 					}
@@ -3466,25 +3469,26 @@ scripted_gui = {
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = existence_horror_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = existence_horror_reform_tt
 			}
 			caring_eye_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = caring_eye_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = caring_eye_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = caring_eye_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = caring_eye_idea
 					}
@@ -3493,25 +3497,26 @@ scripted_gui = {
 						value = 30
 						tooltip = goverment_system_upgrade_30_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = caring_eye_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = caring_eye_reform_tt
 			}
 			interesting_observation_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = interesting_observation_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = interesting_observation_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = interesting_observation_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = interesting_observation_idea
 					}
@@ -3520,25 +3525,26 @@ scripted_gui = {
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = interesting_observation_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = interesting_observation_reform_tt
 			}
 			technological_revolution_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = technological_revolution_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = technological_revolution_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = technological_revolution_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = technological_revolution_idea
 					}
@@ -3547,25 +3553,26 @@ scripted_gui = {
 						value = 30
 						tooltip = goverment_system_upgrade_30_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = technological_revolution_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = technological_revolution_reform_tt
 			}
 			cultural_revolution_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = cultural_revolution_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = cultural_revolution_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = cultural_revolution_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = cultural_revolution_idea
 					}
@@ -3574,25 +3581,26 @@ scripted_gui = {
 						value = 30
 						tooltip = goverment_system_upgrade_30_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = cultural_revolution_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = cultural_revolution_reform_tt
 			}
 			assured_survival_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = assured_survival_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = assured_survival_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = assured_survival_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = assured_survival_idea
 					}
@@ -3601,25 +3609,26 @@ scripted_gui = {
 						value = 30
 						tooltip = goverment_system_upgrade_30_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = assured_survival_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = assured_survival_reform_tt
 			}
 			proportionate_fee_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = proportionate_fee_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = proportionate_fee_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = proportionate_fee_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = proportionate_fee_idea
 					}
@@ -3628,25 +3637,26 @@ scripted_gui = {
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = proportionate_fee_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = proportionate_fee_reform_tt
 			}
 			flawless_soldier_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = flawless_soldier_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = flawless_soldier_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = flawless_soldier_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = flawless_soldier_idea
 					}
@@ -3655,52 +3665,54 @@ scripted_gui = {
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = flawless_soldier_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = flawless_soldier_reform_tt
 			}
 			all_describing_formula_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = all_describing_formula_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = all_describing_formula_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = all_describing_formula_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = all_describing_formula_idea
 					}
 					subtract_from_variable = {
 						var = ochki_gos_progressa
-						value = 15
-						tooltip = goverment_system_upgrade_15_tt
+						value = 45
+						tooltip = goverment_system_upgrade_45_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = all_describing_formula_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_45_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = all_describing_formula_reform_tt
 			}
 			primary_broth_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = primary_broth_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = primary_broth_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = primary_broth_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = primary_broth_idea
 					}
@@ -3709,25 +3721,26 @@ scripted_gui = {
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = primary_broth_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = primary_broth_reform_tt
 			}
 			flowers_of_life_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = flowers_of_life_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = flowers_of_life_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = flowers_of_life_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = flowers_of_life_idea
 					}
@@ -3736,25 +3749,26 @@ scripted_gui = {
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = flowers_of_life_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = flowers_of_life_reform_tt
 			}
 			their_life_plans_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = their_life_plans_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = their_life_plans_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = their_life_plans_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = their_life_plans_idea
 					}
@@ -3763,25 +3777,26 @@ scripted_gui = {
 						value = 30
 						tooltip = goverment_system_upgrade_30_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = their_life_plans_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = their_life_plans_reform_tt
 			}
 			cast_aside_doubts_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = cast_aside_doubts_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = cast_aside_doubts_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = cast_aside_doubts_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = cast_aside_doubts_idea
 					}
@@ -3790,25 +3805,26 @@ scripted_gui = {
 						value = 30
 						tooltip = goverment_system_upgrade_30_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = cast_aside_doubts_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = cast_aside_doubts_reform_tt
 			}
 			potential_realization_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = potential_realization_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = potential_realization_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = potential_realization_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = potential_realization_idea
 					}
@@ -3817,25 +3833,26 @@ scripted_gui = {
 						value = 30
 						tooltip = goverment_system_upgrade_30_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = potential_realization_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = potential_realization_reform_tt
 			}
 			order_in_mind_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = order_in_mind_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = order_in_mind_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = order_in_mind_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = order_in_mind_idea
 					}
@@ -3844,25 +3861,26 @@ scripted_gui = {
 						value = 60
 						tooltip = goverment_system_upgrade_60_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = order_in_mind_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_60_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = order_in_mind_reform_tt
 			}
 			unity_by_blood_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = unity_by_blood_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = unity_by_blood_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = unity_by_blood_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = unity_by_blood_idea
 					}
@@ -3871,25 +3889,26 @@ scripted_gui = {
 						value = 15
 						tooltip = goverment_system_upgrade_15_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = unity_by_blood_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_15_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = unity_by_blood_reform_tt
 			}
 			man_and_consciousness_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = man_and_consciousness_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = man_and_consciousness_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = man_and_consciousness_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = man_and_consciousness_idea
 					}
@@ -3898,25 +3917,26 @@ scripted_gui = {
 						value = 30
 						tooltip = goverment_system_upgrade_30_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = man_and_consciousness_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_30_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = man_and_consciousness_reform_tt
 			}
 			cognitive_warfare_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = cognitive_warfare_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = cognitive_warfare_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = cognitive_warfare_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = cognitive_warfare_idea
 					}
@@ -3925,25 +3945,26 @@ scripted_gui = {
 						value = 60
 						tooltip = goverment_system_upgrade_60_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = cognitive_warfare_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_60_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = cognitive_warfare_reform_tt
 			}
 			body_limits_button_click = {
 				if = {
 					limit = {
-						OR = {
-							has_idea = body_limits_idea
-							NOT = {
-								check_variable = {
-									selected_government_system = 3
-								}
-							}
+						has_idea = body_limits_idea
+					}
+					custom_effect_tooltip = reform_researched_tt
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							selected_government_system = 3
 						}
 					}
-					custom_effect_tooltip = body_limits_used_tt
-				}
-				else = {
 					hidden_effect = {
 						add_ideas = body_limits_idea
 					}
@@ -3952,9 +3973,12 @@ scripted_gui = {
 						value = 90
 						tooltip = goverment_system_upgrade_90_tt
 					}
-					use_goverment_upgrade = yes
-					custom_effect_tooltip = body_limits_available_tt
 				}
+				else = {
+					custom_effect_tooltip = goverment_system_upgrade_90_tt
+					custom_effect_tooltip = model_is_not_selected_tt
+				}
+				custom_effect_tooltip = body_limits_reform_tt
 			}
 		}
 	}
