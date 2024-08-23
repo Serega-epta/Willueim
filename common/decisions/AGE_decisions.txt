@@ -582,7 +582,7 @@ AGE_red_forest = {
 	AGE_burn_the_forest = {
 		available = {
 			has_equipment = {
-				anti_tank_equipment > 29
+				basic_MLRS_equipment > 29
 			}
 		}
 		target_trigger = {
@@ -613,7 +613,7 @@ AGE_red_forest = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
+				type = basic_MLRS_equipment
 				amount = -5
 			}
 			FROM = {
@@ -630,7 +630,7 @@ AGE_red_forest = {
 	AGE_burn_the_forest_glubohoje = {
 		available = {
 			has_equipment = {
-				anti_tank_equipment > 49
+				basic_MLRS_equipment > 49
 			}
 		}
 		target_trigger = {
@@ -674,7 +674,7 @@ AGE_red_forest = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
+				type = basic_MLRS_equipment
 				amount = -8
 			}
 			IF = {
@@ -702,7 +702,7 @@ AGE_red_forest = {
 	AGE_burn_the_forest_Minsk = {
 		available = {
 			has_equipment = {
-				anti_tank_equipment > 149
+				basic_MLRS_equipment > 149
 			}
 		}
 		target_trigger = {
@@ -746,7 +746,7 @@ AGE_red_forest = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
+				type = basic_MLRS_equipment
 				amount = -20
 			}
 			IF = {
@@ -777,7 +777,7 @@ AGE_red_forest = {
 		}
 		available = {
 			has_equipment = {
-				anti_tank_equipment > 199
+				basic_MLRS_equipment > 199
 			}
 			hidden_trigger = {
 				command_power >39
@@ -797,7 +797,7 @@ AGE_red_forest = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
+				type = basic_MLRS_equipment
 				amount = -25
 			}
 			declare_war_on = {
@@ -1066,7 +1066,7 @@ AGE_south_intervention = {
 			has_completed_focus = AGE_chaos_at_the_border
 			command_power > 24
 			has_equipment = {
-				anti_tank_equipment > 99
+				basic_MLRS_equipment > 99
 			}
 			11 = {
 				is_controlled_by = SIM
@@ -1087,7 +1087,7 @@ AGE_south_intervention = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
+				type = basic_MLRS_equipment
 				amount = -5
 			}
 			start_border_war = {
@@ -1127,7 +1127,7 @@ AGE_south_intervention = {
 			has_completed_focus = AGE_chaos_at_the_border
 			command_power > 24
 			has_equipment = {
-				anti_tank_equipment > 99
+				basic_MLRS_equipment > 99
 			}
 			815 = {
 				is_controlled_by = SIM
@@ -1148,7 +1148,7 @@ AGE_south_intervention = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
+				type = basic_MLRS_equipment
 				amount = -5
 			}
 
