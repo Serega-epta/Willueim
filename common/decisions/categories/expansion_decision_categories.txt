@@ -11,3 +11,8 @@ expansion_category = {
 		}
 	}
 }
+reunification_category = {
+	icon = GFX_decision_category_expedition
+	priority = 10
+	visible = { has_country_flag = is_major }	
+}

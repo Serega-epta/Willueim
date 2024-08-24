@@ -92,3 +92,42 @@ expansion_category = {
         ai_will_do = { factor = 0 }
     }
 }
+
+reunification_category = {
+    major_unite_motherland = {
+        available = {
+            all_other_country = {
+                exists = no
+            }
+        }
+        priority = 200
+        fire_only_once = yes
+        complete_effect = {
+            if = {
+                limit = { tag = GLS }
+                news_event = worldnews.4
+                add_political_power = 10
+                add_stability = 0.03
+            }
+            # if = {
+            #     limit = { tag = ARM }
+            #     news_event = worldnews.4
+            #     add_political_power = 25
+            #     add_stability = 0.03                
+            # }
+            # if = {
+            #     limit = { tag = ODS }
+            #     news_event = worldnews.4
+            #     add_political_power = 25
+            #     add_stability = 0.03                
+            # }
+            # if = {
+            #     limit = { tag = LWV }
+            #     news_event = worldnews.4
+            #     add_political_power = 25
+            #     add_stability = 0.03                
+            # }
+        }
+        ai_will_do = { factor = 100 }
+    }    
+}

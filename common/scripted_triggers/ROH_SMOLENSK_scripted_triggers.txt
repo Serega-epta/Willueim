@@ -10,10 +10,9 @@ Smolensk_war_finished = {
 				exists = no 
 				AND = {
 					has_war = no 
-					owns_state = 242
-					owns_state = 210
-					owns_state = 207
-					owns_state = 931					
+					controls_state = 242
+					controls_state = 863
+					controls_state = 931					
 				} 
 			}
 		} 
@@ -22,8 +21,8 @@ Smolensk_war_finished = {
 				exists = no
 				AND = {
 					has_war = no 
-					owns_state = 246
-					owns_state = 263					
+					controls_state = 246
+					controls_state = 263					
 				} 
 			}
 		} 
@@ -33,10 +32,10 @@ Smolensk_war_finished = {
 NARFRONT_win = {
 	NAR = { 
 		has_war = no 
-		owns_state = 242
-		owns_state = 210
-		owns_state = 207
-		owns_state = 931
+		controls_state = 242
+		controls_state = 210
+		controls_state = 207
+		controls_state = 931
 	}
 	SMK = { 
 		exists = no 
@@ -46,8 +45,8 @@ NARFRONT_win = {
 SMOLENSK_win = {
 	SMK = { 
 		has_war = no 
-		owns_state = 246
-		owns_state = 263
+		controls_state = 246
+		controls_state = 263
 	}
 	NAR = { 
 		exists = no 
