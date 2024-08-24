@@ -75,3 +75,4 @@ tags={
 }
 name="The Requiem of Humankind: Open Alpha"
 supported_version="1.14.*"
+path="mod/RoH/"
