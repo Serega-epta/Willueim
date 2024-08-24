@@ -25,6 +25,7 @@
 			add_command_power = 15
 			add_stability = 0.05
 			add_war_support = 0.03
+			country_event = IMP_phase_one.1
 		}
 		
 	}
@@ -44,6 +45,7 @@
 				remove_idea = IMP_splinter_administration
 				add_idea = IMP_splinter_administration_1
 			}
+			country_event = IMP_phase_one.3
 		}
 		
 	}
@@ -89,6 +91,7 @@
 				remove_idea = ignore_social
 				add_idea = suppression_social
 			}
+			country_event = IMP_phase_one.2
 		}
 		
 	}
@@ -113,6 +116,12 @@
 				ideology = bandits
 				popularity = -0.05
 			}	
+			BSO = {
+				add_popularity = {
+					ideology = statesmen
+					popularity = -0.1
+				}				
+			}
 		}
 		
 	}
@@ -195,6 +204,7 @@
 		completion_reward = {
 			army_experience = 5
 			air_experience = 5
+			country_event = IMP_phase_one.5
 		}
 		
 	}
@@ -211,6 +221,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			895 = { add_manpower = 2000 }
+			country_event = IMP_phase_one.4
 		}
 		
 	}
@@ -260,6 +271,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			unlock_decision_tooltip = IMP_scorshed_earth
+			country_event = IMP_phase_one.6
 		}
 		
 	}
@@ -279,6 +291,7 @@
 				remove_idea = IMP_winners_of_the_first_central_Russian
 				add_idea = IMP_winners_of_the_first_central_Russian_1
 			}
+			country_event = IMP_phase_one.7
 		}
 		
 	}
@@ -302,6 +315,7 @@
 				remove_idea = IMP_winners_of_the_first_central_Russian_1
 				add_idea = IMP_winners_of_the_first_central_Russian_2
 			}
+			country_event = IMP_phase_one.8
 		}
 		
 	}
