@@ -104,6 +104,29 @@ on_actions = {
 						}						
 					}
 				}
+
+				ROOT = {
+					GLS = {
+						clr_country_flag = GLS_negotiation_process_fail
+						set_cosmetic_tag = GLS_URAL_MANDATE
+						load_focus_tree = anarchy_focus_tree
+						kill_country_leader = yes
+						set_party_name = {
+							ideology = statesmen
+							long_name = GLS_statesmen_party_MANDATE_long
+							name = GLS_statesmen_party_MANDATE
+						}
+						set_party_name = {
+							ideology = humanists
+							long_name = GLS_humanists_party_MANDATE_long
+							name = GLS_humanists_party_MANDATE
+						}
+						set_rule = {
+							can_not_declare_war = yes
+						}
+						country_lock_all_division_template = yes
+					}
+				}
 				
 				FROM = {
 					white_peace = ROOT
@@ -135,45 +158,21 @@ on_actions = {
 					}
 					SI1 = {
 						transfer_state = 993
-					}					
+					}				
 					URC = {
 						set_autonomy = {
 							target = GLS
 							autonomy_state = autonomy_puppet
 						}
 					}
+					GLS = {
+						set_political_party = {
+							ideology = humanists
+							popularity = 100
+						}
+					}	
 					every_state = {
 						remove_core_of = ROOT
-					}
-				}
-				
-				ROOT = {
-					GLS = {
-						clr_country_flag = GLS_negotiation_process_fail
-						set_cosmetic_tag = GLS_URAL_MANDATE
-						load_focus_tree = state_liquidation_board_collapsed
-						kill_country_leader = yes
-						set_political_party = {
-    							ideology = humanists
-    							popularity = 100
-						}
-						set_party_name = {
-    							ideology = statesmen
-    							#long_name = GLS_patriots_party_MANDATE_long
-    							name = GLS_patriots_party_MANDATE
-						}
-						set_party_name = {
-    							ideology = humanists
-    							long_name = GLS_gumanists_party_MANDATE_long
-    							name = GLS_gumanists_party_MANDATE
-						}
-						GLS_Mandate_Parliament = {
-							promote_character = colloborators
-						}
-						set_rule = {
-							can_not_declare_war = yes
-						}
-						country_lock_all_division_template = yes
 					}
 				}
 				set_global_flag = skip_default_capitulation
