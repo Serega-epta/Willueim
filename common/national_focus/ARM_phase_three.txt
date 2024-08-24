@@ -1107,6 +1107,7 @@ focus_tree = {
         ai_will_do = { factor = 10 }
         completion_reward = {
             set_country_flag = access_to_justifications_of_war
+            hidden_effect = { add_ideas = lower_time_for_justification_of_wargoal }    
             custom_effect_tooltip = ARM_Open_diplomacy_tt
             BRD = {
                 add_stability = -0.05

@@ -1,5 +1,5 @@
 focus_tree = {
-	id = admiralty_phase_III
+	id = admiralty_phase_three
 	country = {
 		factor = 0
 		modifier = {
@@ -363,7 +363,8 @@ focus_tree = {
 				add_idea = OKO7
 			}
             set_country_flag = access_to_justifications_of_war
-            custom_effect_tooltip = ARM_Open_diplomacy_tt
+            hidden_effect = { add_ideas = lower_time_for_justification_of_wargoal }    
+            custom_effect_tooltip = can_declare_war_tt
 		}
 		
 	}
