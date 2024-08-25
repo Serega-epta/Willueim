@@ -57,7 +57,26 @@ scripted_gui = {
 						has_global_flag = GLS_Unite_the_Motherland
 					}
 					clr_global_flag = GLS_Unite_the_Motherland
-				}			
+				}		
+				
+				if = {
+					limit = {
+						has_global_flag = ODS_Unite_the_Motherland
+					}
+					clr_global_flag = ODS_Unite_the_Motherland
+				}	
+				if = {
+					limit = {
+						has_global_flag = ARM_Unite_the_Motherland
+					}
+					clr_global_flag = ARM_Unite_the_Motherland
+				}	
+				if = {
+					limit = {
+						has_global_flag = LWV_Unite_the_Motherland
+					}
+					clr_global_flag = LWV_Unite_the_Motherland
+				}	
 			}		
 		}
 	}

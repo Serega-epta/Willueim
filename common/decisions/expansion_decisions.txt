@@ -70,7 +70,7 @@ expansion_category = {
     }
     annex_anarchy = {
         priority = 100
-        targets = { BLS SIL WTR MOS BLT SOC SAC WEC }
+        targets = { SIL WTR MOS BLT SOC SAC WEC }
         targets_dynamic = yes
         visible = { 
             ROOT = { is_neighbor_of = FROM }
@@ -95,38 +95,46 @@ expansion_category = {
 
 reunification_category = {
     major_unite_motherland = {
-        available = {
-            all_other_country = {
-                exists = no
-            }
-        }
+        available = { all_other_country = { tag = BLS } }
         priority = 200
         fire_only_once = yes
         complete_effect = {
             if = {
                 limit = { tag = GLS }
-                news_event = worldnews.4
+                news_event = super.5
                 add_political_power = 10
                 add_stability = 0.03
             }
-            # if = {
-            #     limit = { tag = ARM }
-            #     news_event = worldnews.4
-            #     add_political_power = 25
-            #     add_stability = 0.03                
-            # }
-            # if = {
-            #     limit = { tag = ODS }
-            #     news_event = worldnews.4
-            #     add_political_power = 25
-            #     add_stability = 0.03                
-            # }
-            # if = {
-            #     limit = { tag = LWV }
-            #     news_event = worldnews.4
-            #     add_political_power = 25
-            #     add_stability = 0.03                
-            # }
+            if = {
+                limit = { tag = ODS }
+                news_event = super.6
+                add_political_power = 25
+                add_stability = 0.03   
+                add_popularity = {
+                    ideology = sacraments
+                    popularity = 0.05
+                }             
+            }
+            if = {
+                limit = { tag = ARM }
+                news_event = super.7
+                add_political_power = 25
+                add_stability = 0.03   
+                add_popularity = {
+                    ideology = statesmen
+                    popularity = 0.05
+                }                    
+            }
+            if = {
+                limit = { tag = LWV }
+                news_event = super.8
+                add_political_power = 25
+                add_stability = 0.03 
+                add_popularity = {
+                    ideology = sacraments
+                    popularity = 0.05
+                }                
+            }
         }
         ai_will_do = { factor = 100 }
     }    

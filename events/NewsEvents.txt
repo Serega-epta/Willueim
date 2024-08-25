@@ -51,30 +51,6 @@ news_event = {
 	}
 }
 
-news_event = {
-	id = worldnews.4
-	title = worldnews.4.t
-	desc = worldnews.4.d
-	picture = GFX_news_event_dog_clanging
-
-	major = yes
-	is_triggered_only = yes
-
-	option = {
-		name = worldnews.4.a
-		if = {
-			limit = {
-				is_ai = no
-			}
-			set_global_flag = GLS_Unite_the_Motherland
-			set_global_flag = super_Event_Visible	
-			hidden_effect = {	
-				play_song = "iron_hevest_russvet_hymn"
-			}
-		}
-	}
-}
-
 #Blazing_Volga_newsevent
 news_event = { #Пылающая Волга
 	id = worldnews.5

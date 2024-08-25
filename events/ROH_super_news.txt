@@ -24,7 +24,7 @@ news_event = { #Собачий Лязг
    	}
 }
 
-news_event = { #Бессознательное Бегство
+news_event = { #Грызня в черной хунте
 	id = super.2
 	title = super.2.t
 	desc = super.2.d
@@ -100,13 +100,12 @@ news_event = {
 	id = super.5
 	title = super.5.t
 	desc = super.5.d
-	#picture = GFX_news_event_resurrected_colossus
+	picture = GFX_news_event_dog_clanging
 
 	is_triggered_only = yes
 
-    	option = {
+    option = {
 		name = super.5.a
-		ai_chance = { factor = 1 }
 		if = {
 			limit = {
 				is_ai = no
@@ -114,8 +113,79 @@ news_event = {
 			set_global_flag = GLS_Unite_the_Motherland
 			set_global_flag = super_Event_Visible	
 			hidden_effect = {	
-				play_song = "iron_hevest_russvet_hymn"
+				play_song = "GLS_unite_motherland"
 			}
 		}
    	}
 }
+
+news_event = {
+	id = super.6
+	title = super.6.t
+	desc = super.6.d
+	picture = GFX_news_event_dog_clanging
+
+	is_triggered_only = yes
+
+    option = {
+		name = super.6.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_global_flag = ODS_Unite_the_Motherland
+			set_global_flag = super_Event_Visible	
+			hidden_effect = {	
+				play_song = "ODS_unite_motherland"
+			}
+		}
+   	}
+}
+
+news_event = {
+	id = super.7
+	title = super.7.t
+	desc = super.7.d
+	picture = GFX_news_event_dog_clanging
+
+	is_triggered_only = yes
+
+    option = {
+		name = super.7.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_global_flag = ARM_Unite_the_Motherland
+			set_global_flag = super_Event_Visible	
+			hidden_effect = {	
+				play_song = "ARM_unite_motherland"
+			}
+		}
+   	}
+}
+
+news_event = {
+	id = super.8
+	title = super.8.t
+	desc = super.8.d
+	picture = GFX_news_event_dog_clanging
+
+	is_triggered_only = yes
+
+    option = {
+		name = super.8.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_global_flag = LWV_Unite_the_Motherland
+			set_global_flag = super_Event_Visible	
+			hidden_effect = {	
+				play_song = "LWV_unite_motherland"
+			}
+		}
+   	}
+}
+
+
