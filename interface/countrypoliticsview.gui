@@ -678,7 +678,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 70 y = 14 }
-			font = "hoi_20b"
+			font = "3270_20_outline"
 			text = "Government"
 			maxWidth = 300
 			maxHeight = 20
@@ -688,8 +688,8 @@ guiTypes = {
 			name = "ideas_grid"
 			position = { x = 17 y = 46 }
 			size = { width = 100%% height = 100%% }
-			slotsize = { width = 80 height = 64 }
-			max_slots = { x = 7 y = 1 }
+			slotsize = { width = 133 height = 74 }
+			max_slots = { x = 4 y = 2 }
 			format = "UPPER_LEFT"
 		}
 	}
@@ -712,19 +712,19 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "title"
-			position = { x = 0 y = 4 }
-			font = "hoi_20b"
+			position = { x = 0 y = 6 }
+			font = "3270_22_outline"
 			text = "Economic Laws"
-			maxWidth = 450
+			maxWidth = 460
 			maxHeight = 20
 			format = center
 		}
 		instantTextboxType = {
 			name = "switch"
 			position = { x = 0 y = 26 }
-			font = "hoi_18b"
+			font = "3270_18_outline"
 			text = "Switch out Henschel"
-			maxWidth = 450
+			maxWidth = 460
 			maxHeight = 20
 			format = center
 		}
@@ -776,7 +776,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "close"
-			position = { x = -50 y = 5 }
+			position = { x = -39 y = 8 }
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
@@ -958,7 +958,7 @@ guiTypes = {
 			
 		iconType = {
 			name = "icon"
-			position = { x = 42 y = 38 }
+			position = { x = 42 y = 37 }
 			spriteType = "GFX_placeholder_bordered"
 			centerposition = yes
 			alwaystransparent = yes
@@ -982,7 +982,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "name"
 				position = { x = 0 y = -13 }
-				font = "hoi_18mbs"
+				font = "3270_22_outline"
 				fixedsize = yes			
 				text = ""
 				maxWidth = 160
@@ -995,7 +995,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "traits"
 				position = { x = 0 y = 10 }
-				font = "hoi_16mbs"
+				font = "3270_16_outline"
 				fixedsize = yes			
 				text = "name"
 				maxWidth = 160
@@ -1008,7 +1008,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "cost"
 			position = { x = 200 y = 32 }
-			font = "hoi_16mbs"
+			font = "3270_18_outline"
 			text = ""
 			maxWidth = 142
 			maxHeight = 10
@@ -1019,7 +1019,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "stats"
 			position = { x = 300 y = 32 }
-			font = "hoi_16mbs"
+			font = "3270_18_outline"
 			text = ""
 			maxWidth = 142
 			maxHeight = 10

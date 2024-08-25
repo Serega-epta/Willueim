@@ -7,14 +7,19 @@ scripted_gui = {
 			government_manager_toggle_click = {
 				if = {
 					limit = {
-						has_variable = gos_usroistvo
+						NOT = { has_variable = gos_usroistvo }
 					} 
-					clear_variable = gos_usroistvo
-				}
-				else = {
 					set_variable = {
 						gos_usroistvo = 0 
 					}
+				}
+			}
+			laws_toggle_click = {
+				if = {
+					limit = {
+						has_variable = gos_usroistvo
+					} 
+					clear_variable = gos_usroistvo
 				}
 			}
 		}
