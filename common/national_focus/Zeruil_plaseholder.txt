@@ -26,6 +26,17 @@ focus_tree = {
                 target = TRO
                 type = annex_everything
             }
+            hidden_effect = {
+                IF = {
+                    limit = {
+                      is_ai = yes
+                    }
+                    country_event = {
+                        id = scripted_peace.1
+                        days = 200
+                    }
+                }
+            }
         }
     }
     focus = {
@@ -71,6 +82,17 @@ focus_tree = {
             declare_war_on = {
                 target = MIN
                 type = annex_everything
+            }
+            hidden_effect = {
+                IF = {
+                    limit = {
+                      is_ai = yes
+                    }
+                    country_event = {
+                        id = scripted_peace.2
+                        days = 100
+                    }
+                }
             }
         }
     }

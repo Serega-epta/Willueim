@@ -23,32 +23,17 @@ sub_units = {
 		}
 
 	
-		combat_width = 0
-	
-		#Size Definitions
-		max_strength = 1
-		max_organisation = 20
-		default_morale = 0.3
 		manpower = 300
-		training_time = 120
-		build_cost_ic = 54
-
-		#Misc Abilities
+		breakthrough = 0.005
+		entrenchment = 2
+		max_organisation = 20
 		weight = 0.1
-		supply_consumption = 0.08
-		
-		entrenchment  = 2
-	
-		#Offensive
-		soft_attack = 5
-		hard_attack = 2
-		breakthrough = 4
-		ap_attack = 5
-
-		#Deffensive
-		defense = 15
-		armor_value = 0
-		hardness = 0
+		training_time = 120	
+		defense = 0.001
+		soft_attack = -0.005
+		default_morale = 0.3
+		supply_consumption = 0.02	
+		max_strength = 2
 
 		essential = {
 			support_equipment

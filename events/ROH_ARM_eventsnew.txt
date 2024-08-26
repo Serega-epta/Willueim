@@ -450,7 +450,7 @@ country_event = { #Перековка
         name = ARMnew.26.a
     }
 }
-country_event = { #
+country_event = { #Использовать нашу мощь
     id = ARMnew.27
 	title = ARMnew.27.t
 	desc = ARMnew.27.d
@@ -461,7 +461,7 @@ country_event = { #
         name = ARMnew.27.a
     }
 }
-country_event = { #
+country_event = { #Репетиция перед штурмом
     id = ARMnew.28
 	title = ARMnew.28.t
 	desc = ARMnew.28.d
@@ -472,7 +472,7 @@ country_event = { #
         name = ARMnew.28.a
     }
 }
-country_event = { #
+country_event = { #Вторая Фаза
     id = ARMnew.29
 	title = ARMnew.29.t
 	desc = ARMnew.29.d
@@ -483,7 +483,7 @@ country_event = { #
         name = ARMnew.29.a
     }
 }
-country_event = { #
+country_event = { #Привлечь наёмников
     id = ARMnew.30
 	title = ARMnew.30.t
 	desc = ARMnew.30.d
@@ -494,7 +494,8 @@ country_event = { #
         name = ARMnew.30.a
     }
 }
-country_event = { #
+country_event = { #Операция “Альфа”
+
     id = ARMnew.31
 	title = ARMnew.31.t
 	desc = ARMnew.31.d
@@ -505,7 +506,7 @@ country_event = { #
         name = ARMnew.31.a
     }
 }
-country_event = { #
+country_event = { #Третья фаза
     id = ARMnew.32
 	title = ARMnew.32.t
 	desc = ARMnew.32.d
@@ -516,7 +517,7 @@ country_event = { #
         name = ARMnew.32.a
     }
 }
-country_event = { #
+country_event = { #Невиновных нет
     id = ARMnew.33
 	title = ARMnew.33.t
 	desc = ARMnew.33.d
@@ -527,7 +528,7 @@ country_event = { #
         name = ARMnew.33.a
     }
 }
-country_event = { #
+country_event = { #Связаться с патриотами
     id = ARMnew.34
 	title = ARMnew.34.t
 	desc = ARMnew.34.d
@@ -623,6 +624,171 @@ country_event = { #Аппетит приходит во время еды
     }
 }
 
+country_event = { #Первая фаза
+    id = ARMnew.42
+	title = ARMnew.42.t
+	desc = ARMnew.42.d
+    fire_only_once = yes
+	is_triggered_only = yes
 
-######################################2 фаза#################################################################
+    option = {
+        name = ARMnew.42.a
+    }
+}
+
+country_event = { #Вопрос рациональности или…
+    id = ARMnew.43
+	title = ARMnew.43.t
+	desc = ARMnew.43.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.43.a
+        country_event = ARMnew.44
+    }
+}
+
+country_event = { #Вопрос рациональности ч. 2
+    id = ARMnew.44
+	title = ARMnew.44.t
+	desc = ARMnew.44.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.44.a
+    }
+}
+
+country_event = { #Распределение средств
+    id = ARMnew.45
+	title = ARMnew.45.t
+	desc = ARMnew.45.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.45.a
+    }
+}
+
+country_event = { #Правильное воспитание – дорога в будущее
+    id = ARMnew.46
+	title = ARMnew.46.t
+	desc = ARMnew.46.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.46.a
+        country_event = ARMnew.47
+    }
+}
+
+country_event = { #Правильное воспитание – дорога в будущее ч.2
+    id = ARMnew.47
+	title = ARMnew.47.t
+	desc = ARMnew.47.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.47.a
+    }
+}
+
+country_event = { #Новое и необычное
+    id = ARMnew.48
+	title = ARMnew.48.t
+	desc = ARMnew.48.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.48.a
+        hidden_effect = {
+            complete_national_focus = ARM_touch_unknown
+        }
+    }
+    option = {
+        name = ARMnew.48.b
+        hidden_effect = {
+            complete_national_focus = ARM_eliminate_danger
+        }
+    }
+}
+
+country_event = { #Отдавая долг родине
+    id = ARMnew.49
+	title = ARMnew.49.t
+	desc = ARMnew.49.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.49.a
+    }
+}
+
+country_event = { #Все мы - кузнецы наших побед
+    id = ARMnew.50
+	title = ARMnew.50.t
+	desc = ARMnew.50.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.50.a
+    }
+}
+
+country_event = { #Вечер в темноте
+    id = ARMnew.51
+	title = ARMnew.51.t
+	desc = ARMnew.51.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.51.a
+        country_event = ARMnew.52
+    }
+}
+
+country_event = { #Вечер в темноте ч.2
+    id = ARMnew.52
+	title = ARMnew.52.t
+	desc = ARMnew.52.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.52.a
+    }
+}
+
+
+country_event = { #Выбор нового флага
+
+    id = ARMnew.53
+	title = ARMnew.53.t
+	desc = ARMnew.53.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = ARMnew.53.a
+        set_cosmetic_tag = ARM_SOV
+    }
+    option = {
+        name = ARMnew.53.b
+        set_cosmetic_tag = ARM_RUS
+    }
+}
+
+
+
+
+
 
