@@ -23,13 +23,20 @@ sub_units = {
 		essential = {
 			pre_war_OPV_equipment
 			infantry_equipment_0
+			infantry_odejda_0
 		}
 		need = {
 			pre_war_OPV_equipment = 4
 			infantry_equipment_0 = 12
+			infantry_odejda_0 = 26
 		}
 		manpower = 26
-
+		# max_organisation = 60
+		default_morale = 0.3
+		weight = 1.5
+		supply_consumption = 0.25
+		initiative = 0.2
+		experience_loss_factor = 0.001
 		forest = {
 		    attack = -0.3
 			movement = -0.4
@@ -85,13 +92,21 @@ sub_units = {
 		essential = {
 			pre_war_spec_tank_chassis
 			infantry_equipment_0
+			infantry_odejda_0
 		}
 		need = {
 			pre_war_spec_tank_chassis = 4
 			infantry_equipment_0 = 12
+			infantry_odejda_0 = 26
 		}
 		manpower = 26
-		
+
+		default_morale = 0.3
+		weight = 1.75
+		supply_consumption = 0.35
+		initiative = 0.2
+		experience_loss_factor = 0.001
+
 		forest = {
 		    attack = -0.3
 			movement = -0.4
@@ -151,9 +166,14 @@ sub_units = {
 		need = {
 			pre_war_ai_tank_chassis = 4
 			infantry_equipment_0 = 12
+			infantry_odejda_0 = 26
 		}
 		manpower = 26
-		
+		default_morale = 0.3
+		weight = 1.75
+		supply_consumption = 0.4
+		initiative = 0.2
+		experience_loss_factor = 0.001
 		forest = {
 		    attack = -0.3
 			movement = -0.4
