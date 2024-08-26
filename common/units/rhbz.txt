@@ -23,13 +23,19 @@ sub_units = {
 			infantry_equipment
 			support_equipment
 		}
-		max_strength = 0.2
-		soft_attack = 4
-		hard_attack = 1
+		training_time = 240
+		default_morale  = 0.3
+		recon = 0.5
+		maximum_speed = 0.05
+		defense = 0.01
+		supply_consumption = 0.08
+		max_organisation = 35
+		max_strength = 3
+		weight = 0.3
+		manpower = 350
 		need = {
-			infantry_equipment = 75
-			support_equipment = 10
+			infantry_equipment = 350
+			support_equipment = 150
 		}
-		manpower = 500
 	}
 }
