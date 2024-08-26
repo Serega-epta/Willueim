@@ -156,6 +156,17 @@ focus_tree = {
                 target = TAG
                 type = annex_everything
             }
+            hidden_effect = {
+                IF = {
+                    limit = {
+                      is_ai = yes
+                    }
+                    country_event = {
+                        id = scripted_peace.5
+                        days = 90
+                    }
+                }
+            }
         }
     }
     focus = {
@@ -232,6 +243,9 @@ focus_tree = {
         id = SDC_march_east   #Марш на восток
         icon = GFX_Marsh_na_vostok
         prerequisite = { focus = SDC_expand_influence }
+        available = {
+            has_war = no
+        }
         cost = 5
         x = 2
         y = 5
@@ -243,6 +257,17 @@ focus_tree = {
             declare_war_on = {
                 target = ARK 
                 type = annex_everything
+            }
+            hidden_effect = {
+                IF = {
+                    limit = {
+                      is_ai = yes
+                    }
+                    country_event = {
+                        id = scripted_peace.6
+                        days = 150
+                    }
+                }
             }
         }
     }

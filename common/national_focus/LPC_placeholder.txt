@@ -25,6 +25,17 @@ focus_tree = {
                 target = BAL
                 type = annex_everything
             }
+            hidden_effect = {
+                IF = {
+                    limit = {
+                      is_ai = yes
+                    }
+                    country_event = {
+                        id = scripted_peace.3
+                        days = 150
+                    }
+                }
+            }
         }
     }
     focus = {
@@ -99,6 +110,17 @@ focus_tree = {
             declare_war_on = {
                 target = POP
                 type = annex_everything
+            }
+            hidden_effect = {
+                IF = {
+                    limit = {
+                      is_ai = yes
+                    }
+                    country_event = {
+                        id = scripted_peace.4
+                        days = 200
+                    }
+                }
             }
         }
     }
