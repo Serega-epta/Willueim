@@ -63,9 +63,6 @@ focus_tree = {
 		y = 2		
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_not_their_land }
-		available = {
-			has_manpower > 2000
-		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
