@@ -19,12 +19,14 @@ set_convoys = 0
 
 add_ideas = DRG_under_the_banner_of_perun
 set_politics = {
-	ruling_party = sacraments 
+	ruling_party = free_people 
 	elections_allowed = no
 }
 
 set_popularities = {
-	sacraments = 100
+	free_people = 85
+	technocracy = 10
+	humanists = 5
 }
 
 
@@ -32,7 +34,7 @@ create_country_leader = {
     name = "DRG_pavel_glin"
     desc = "DRG_pavel_glin_desc"
     picture = "gfx/leaders/DRG/pavel_glin.dds"
-    ideology = pagans
+    ideology = free_people_subideology
     traits = {
         #
     }

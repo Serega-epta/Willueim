@@ -19,12 +19,13 @@ set_convoys = 0
 
 add_ideas = SFR_forwards_to_the_past
 set_politics = {
-	ruling_party = free_people 
+	ruling_party = bandits 
 	elections_allowed = no
 }
 
 set_popularities = {
-	free_people = 100
+	bandits = 99
+	sacraments = 1
 }
 
 
@@ -32,7 +33,7 @@ create_country_leader = {
     name = "SFR_Dmitry_safronov"
     desc = "SFR_Dmitry_safronov_DESC"
     picture = "gfx/leaders/SFR/Dmitry_safronov.dds"
-    ideology = primitivists   
+    ideology = bandits_subideology   
     traits = {
         #
     }
