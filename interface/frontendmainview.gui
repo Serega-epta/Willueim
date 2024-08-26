@@ -117,13 +117,16 @@ guiTypes = {
 	containerWindowType = {
 		name  ="mainmenu_panel_upperleft"
 		position = { x=0 y =0 }
-		size = { width = 256 height = 768 }
+		size = { width = 1920 height = 1080 }
+		Orientation = CENTER
+		origo = center		
 		
 		iconType = 
 		{
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
-			position = { x=213 y=20 }
+			position = { x=675 y=20 }
+			scale = 0.9
 		}
 	}	
 
@@ -145,7 +148,7 @@ guiTypes = {
 		{
 			name ="pdx_int_logo"
 			quadTextureSprite = "GFX_pdx_int_logo"
-			position = { x= 85 y = 15 }
+			position = { x = -5000 y = -5000 } #x = 85 y = 15
 			web_link = "https://vk.com/requiemofhumankind"
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -160,29 +163,42 @@ guiTypes = {
 		Orientation = CENTER
 		Origo = center
 				
+		#iconType = {
+		#	name = "roh_main_menu" #Тут был main_menu_black_pencil_green_pencil_big_banana_pencil
+		#	spriteType ="GFX_main_menu"
+		#	position = { x=-13 y=-368 }
+		#	alwaystransparent = yes
+		#}	
+		
+		background = {
+			name = "Background"	
+			spriteType ="GFX_bottom_bar"
+			position = { x=0 y=-368 }
+			alwaystransparent = yes
+		}
+		
 		iconType = {
-			name = "roh_main_menu" #Тут был main_menu_black_pencil_green_pencil_big_banana_pencil
-			spriteType ="GFX_main_menu"
-			position = { x=-13 y=-368 }
-			allwaystransparent = yes
-		}	
-			
+			name = "alpha_version_bar"
+			position = { x = 520 y = 16 }
+			spriteType = "GFX_alpha_version_bar"		
+		}
+		
 		ButtonType = {
 			name = "single_player_button"
-			position = { x = 209 y = 60 }
+			position = { x = 652 y = 115 }
 			quadTextureSprite ="GFX_single_player_button"
-			font = "hoi_24header"			
-			text = ""				
+			font = "bender_54_bold"			
+			text = "FE_SINGLE_PLAYER"
 			clicksound = click_default			
 			oversound = ui_menu_over
 		}
 
 		ButtonType = {
 			name = "multi_player_button"
-			position = { x = 209 y = 140 }
+			position = { x = 652 y = 204 }
 			quadTextureSprite ="GFX_multiplayer_button"
-			font = "hoi_24header"			
-			text = ""			
+			font = "bender_54_bold"			
+			text = "FE_MULTI_PLAYER"			
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -194,65 +210,93 @@ guiTypes = {
 			spriteType = "GFX_missing_dlc_warning_sign"
 		}
 		instantTextBoxType = {
-
 			name ="version_label"
-			position = { x = 392 y = 625 }
+			position = { x = -5000 y = -5000 } # x = 9 y = 655 <- для проверки чексуммы
 			textureFile = ""
-			font = "hoi_18b"
+			font = "bender_18"
 			borderSize = {x = 0 y = 0}
-			text = "ALPHA"	
-			format = centre
+			text = ""	
+			format = left
 			maxWidth = 250
 			maxHeight = 20	
 		}
+		instantTextBoxType = {
+			name ="RoH_version_label"
+			position = { x = 9 y = 686 }
+			textureFile = ""
+			font = "bender_18"
+			borderSize = {x = 0 y = 0}
+			text = "RoH_version_label_text"
+			format = left
+			maxWidth = 250
+			maxHeight = 20	
+		}		
 		positionType = {
 			name = "version_label_subscription_position"
 			position = { x = 392 y = 625 }
 		}
 		ButtonType = {
 			name = "settings_button"
-			position = { x = 209 y = 220 }
+			position = { x = 652 y = 404 }
 			quadTextureSprite ="GFX_settings_button"	
-			buttonText = ""
-			buttonFont = "hoi_24header"
+			buttonText = "OPTIONS"
+			buttonFont = "bender_42"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		buttonType = {
 			name = "career_profile_button"
-			position = { x = 209 y = 300 }
+			position = { x = 652 y = 332 }
 			quadTextureSprite ="GFX_career_profile_button"
-			buttonText = ""
-			buttonFont = "hoi_24header"
+			buttonText = "MENU_BAR_CAREER_PROFILE"
+			buttonFont = "bender_42"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 
 		ButtonType = {
 			name = "credits_button"
-			position = {  x = 209 y = 380 }
+			position = {  x = 652 y = 473 }
 			quadTextureSprite ="GFX_authors_of_modification_button"	
-			buttonText = ""
-			buttonFont = "hoi_24header"
+			buttonText = "FE_CREDITS"
+			buttonFont = "bender_42"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 209 y = 460 }
-			quadTextureSprite ="GFX_nudge_button"	
+			position = { x = 1438 y = 683 }
+			quadTextureSprite = "GFX_nudge_button"	
 			buttonText = ""
-			buttonFont = "hoi_24header"
+			buttonFont = "bender_42"
 		}
 
 		ButtonType = {
+			name = "bugreports_button"
+			position = { x = 1577 y = 683 }
+			quadTextureSprite = "GFX_bugreports_button"
+			web_link = "https://vk.com/requiemofhumankind"
+			buttonText = ""
+			buttonFont = "bender_42"
+		}
+		
+		ButtonType = {
+			name = "developers_button"
+			position = { x = 1709 y = 683 }
+			quadTextureSprite = "GFX_developers_button"	
+			web_link = "https://vk.com/requiemofhumankind"
+			buttonText = ""
+			buttonFont = "bender_42"
+		}	
+
+		ButtonType = {
 			name = "exit_button"
-			position = { x = 209 y = 540 }
+			position = { x = 652 y = 540 }
 			quadTextureSprite ="GFX_exit_button"
-			font = "hoi_24header"			
-			text = ""			
+			font = "bender_42"
+			text = "FE_EXIT"
 			clicksound = click_default
 			oversound = ui_menu_over
 			
@@ -274,17 +318,35 @@ guiTypes = {
 		
 		background = {
 			name = "Background"	
-			spriteType ="GFX_main_menu"
-			position = { x=-13 y=-368 }
-			#allwaystransparent = yes
-		}	
+			spriteType ="GFX_bottom_bar"
+			position = { x=0 y=-368 }
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "alpha_version_bar"
+			position = { x = 520 y = 16 }
+			spriteType = "GFX_alpha_version_bar"
+		}		
+
+		instantTextBoxType = {
+			name ="RoH_version_label"
+			position = { x = 9 y = 686 } 
+			textureFile = ""
+			font = "bender_18"
+			borderSize = {x = 0 y = 0}
+			text = "RoH_version_label_text"	
+			format = left
+			maxWidth = 250
+			maxHeight = 20	
+		}
 		
 		ButtonType = {
 			name = "sp_continue_button"
-			position = { x = 209 y = 60 }
+			position = { x = 652 y = 115 }
 			quadTextureSprite ="GFX_continue_button"	
-			buttonText = ""
-			buttonFont = "hoi_24header"
+			buttonText = "FE_CONTINUE"
+			buttonFont = "bender_54_bold"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -323,20 +385,20 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "sp_new_button"
-			position = { x = 209 y = 140 }
+			position = { x = 652 y = 204 }
 			quadTextureSprite ="GFX_new_button"	
-			buttonText = ""
-			buttonFont = "hoi_24header"
+			buttonText = "FE_NEW"
+			buttonFont = "bender_54_bold"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		ButtonType = {
 			name = "sp_load_button"
-			position = {  x = 209 y = 220 }
+			position = {  x = 652 y = 332 }
 			quadTextureSprite ="GFX_load_button"	
-			buttonText = ""
-			buttonFont = "hoi_24header"
+			buttonText = "MENU_BAR_LOAD"
+			buttonFont = "bender_42"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -346,21 +408,39 @@ guiTypes = {
 			position = { x = -5000 y = -5000 }
 			quadTextureSprite ="GFX_main_lobby_button"	
 			buttonText = "FE_TUTORIAL"
-			buttonFont = "hoi_24header"
+			buttonFont = "bender_42"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		ButtonType = {
-			name = "sp_back_button"
-			position = { x = 209 y = 300 }
-			quadTextureSprite ="GFX_back_button"	
+			name = "bugreports_button"
+			position = { x = 1577 y = 683 }
+			quadTextureSprite = "GFX_bugreports_button"
+			web_link = "https://vk.com/requiemofhumankind"
 			buttonText = ""
-			buttonFont = "hoi_24header"
+			buttonFont = "bender_42"
+		}
+		
+		ButtonType = {
+			name = "developers_button"
+			position = { x = 1709 y = 683 }
+			quadTextureSprite = "GFX_developers_button"	
+			web_link = "https://vk.com/requiemofhumankind"
+			buttonText = ""
+			buttonFont = "bender_42"
+		}
+		
+		ButtonType = {
+			name = "sp_back_button"
+			position = { x = 652 y = 404 }
+			quadTextureSprite ="GFX_back_button"	
+			buttonText = "BACK"
+			buttonFont = "bender_42"
 			clicksound = click_close
 			oversound = ui_menu_over
 			shortcut = "ESCAPE"
-		}
+		}		
 	}
 
 	containerWindowType = {

@@ -8,9 +8,13 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.shader"
 	}
 	spriteType = {
-		name = "GFX_main_menu"
-		texturefile = "gfx/interface/vignette_menu.dds"
+		name = "GFX_bottom_bar"
+		texturefile = "gfx/interface/bottom_bar.dds"
 	}
+	spriteType = {
+		name = "GFX_alpha_version_bar"
+		texturefile = "gfx/interface/alpha_version_bar.dds"
+	}	
 	textSpriteType = {
 		name = "GFX_single_player_button"
 		textureFile = "gfx/interface/single_player_button.dds"
@@ -40,13 +44,25 @@ spriteTypes = {
 		textureFile = "gfx/interface/authors_of_modification_button.dds"
 		noOfFrames = 3
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-	}
+	}	
 	textSpriteType = {
 		name = "GFX_nudge_button"
 		textureFile = "gfx/interface/nudge_button.dds"
 		noOfFrames = 3
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
+	textSpriteType = {
+		name = "GFX_bugreports_button"
+		textureFile = "gfx/interface/bugreports_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	textSpriteType = {
+		name = "GFX_developers_button"
+		textureFile = "gfx/interface/developers_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}	
 	textSpriteType = {
 		name = "GFX_exit_button"
 		textureFile = "gfx/interface/exit_button.dds"
