@@ -47,7 +47,11 @@ resource_expansion_category = {
             }
         }
         ai_will_do = {
-            factor = 10
+            factor = 0
+            modifier = {
+                add = 100
+                steel < 1
+            }
         }
     }
     expand_strategic_material_production = {
@@ -134,7 +138,19 @@ resource_expansion_category = {
             }
         }
         ai_will_do = {
-            factor = 10
+            factor = 0
+            modifier = {
+                add = 35
+                aluminium < 1
+            }
+            modifier = {
+                add = 35
+                tungsten < 1
+            }
+            modifier = {
+                add = 30
+                chromium < 1
+            }
         }
     }
     start_synthetic_oil_experiments = {
@@ -184,7 +200,15 @@ resource_expansion_category = {
             }
         }
         ai_will_do = {
-            factor = 10
+            factor = 0
+            modifier = {
+                add = 50
+                rubber < 1
+            }
+            modifier = {
+                add = 50
+                oil < 1
+            }
         }
         fire_only_once = no 
     }
