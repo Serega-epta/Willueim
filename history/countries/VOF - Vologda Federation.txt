@@ -13,10 +13,8 @@ set_technology = {
 }
 
 
-set_research_slots = 5
+set_research_slots = 2
 set_convoys = 0
-
-add_ideas = VOU_conceptual_life
 
 set_research_slots = 2
 set_convoys = 0
@@ -24,11 +22,14 @@ set_stability = 0.75
 set_war_support = 1
 
 set_politics = {
-	ruling_party = bandits
+	ruling_party = statesmen
 	elections_allowed = no
 }
 set_popularities = {
-	bandits = 100
+	statesmen = 40
+    humanists = 20
+    chthonism = 20
+    militarists = 20
 }
 
 recruit_character = VOF_Shaman

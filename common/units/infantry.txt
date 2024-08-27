@@ -27,7 +27,8 @@ sub_units = {
 		}
 		
 		maximum_speed = 1	
-		max_organisation = 60
+		max_organisation = 70
+		combat_width = 2
 		max_strength = 12.5
 		soft_attack = 2
 		hard_attack = 0.25
@@ -37,6 +38,7 @@ sub_units = {
 		supply_consumption = 0.06
 		initiative = 0.2
 		experience_loss_factor = 0.001
+
 		essential = {
             infantry_equipment
 			infantry_odejda_0
@@ -71,7 +73,8 @@ sub_units = {
 			category_army
 		}
 		maximum_speed = 1	
-		max_organisation = 60
+		max_organisation = 70
+		combat_width = 2
 		max_strength = 6.5
 		soft_attack = 1
 		hard_attack = 0.125
@@ -109,7 +112,8 @@ sub_units = {
 		
 		group = infantry
 		maximum_speed = 1	
-		max_organisation = 60
+		max_organisation = 70
+		combat_width = 2
 		max_strength = 17.5
 		soft_attack = 3
 		hard_attack = 0.75
@@ -174,7 +178,8 @@ sub_units = {
 			infantry_odejda_0 = 112
 		}
 		manpower = 112
-
+		max_organisation = 70
+		combat_width = 2
 		default_morale = 0.3
 		weight = 0.75
 		supply_consumption = 0.065
@@ -249,7 +254,8 @@ sub_units = {
 		}
 		manpower = 30
 
-		max_organisation = 60
+		max_organisation = 70
+		combat_width = 2
 		default_morale = 0.3
 		weight = 0.75
 		supply_consumption = 0.14
