@@ -38,14 +38,14 @@ sub_units = {
 		supply_consumption = 0.06
 		initiative = 0.2
 		experience_loss_factor = 0.001
-
+		training_time = 90
 		essential = {
             infantry_equipment
 			infantry_odejda_0
         }
 		need = {
 			infantry_equipment = 100
-			infantry_odejda_0 = 1000
+			infantry_odejda_0 = 100
 		}
 		manpower = 1000
 	}
@@ -84,6 +84,7 @@ sub_units = {
 		supply_consumption = 0.03
 		initiative = 0.2
 		experience_loss_factor = 0.001
+		training_time = 60
 		essential = {
             infantry_equipment
 			infantry_odejda_0
@@ -91,7 +92,7 @@ sub_units = {
 	
 		need = {
 			infantry_equipment = 50
-			infantry_odejda_0 = 500
+			infantry_odejda_0 = 50
 		}
 		manpower = 500
 	}
@@ -123,6 +124,7 @@ sub_units = {
 		supply_consumption = 0.09
 		initiative = 0.2
 		experience_loss_factor = 0.001
+		training_time = 120
 		categories = {
 			category_front_line
 			category_light_infantry
@@ -139,7 +141,7 @@ sub_units = {
 		need = {
 			infantry_equipment = 150
 			support_equipment = 25
-			infantry_odejda_0 = 1500
+			infantry_odejda_0 = 150
 		}
 		manpower = 1000
 
@@ -175,7 +177,7 @@ sub_units = {
 		need = {
 			infantry_equipment = 102
 			motorized_equipment = 6
-			infantry_odejda_0 = 112
+			infantry_odejda_0 = 66
 		}
 		manpower = 112
 		max_organisation = 70
@@ -185,7 +187,7 @@ sub_units = {
 		supply_consumption = 0.065
 		initiative = 0.2
 		experience_loss_factor = 0.001
-
+		training_time = 200
 		forest = {
 			attack = -0.1
 			movement = -0.5
@@ -261,7 +263,7 @@ sub_units = {
 		supply_consumption = 0.14
 		initiative = 0.2
 		experience_loss_factor = 0.001
-
+		training_time = 200
 		forest = {
 			attack = -0.2
 		}

@@ -426,6 +426,11 @@ focus_tree = {
             }
             hidden_effect = {
                 load_focus_tree = ARM_phase_three
+                CAR = {
+                    if = { limit = { country_exists = NOR } annex_country = { target = NOR } }
+                    if = { limit = { country_exists = PLR } annex_country = { target = PLR } }
+                    if = { limit = { country_exists = COR } annex_country = { target = COR } }
+                }
             }
         }
     }
