@@ -67,22 +67,16 @@ scripted_gui = {
 				}
 				if = {
 					limit = {
-						check_variable = {
-							economic_income > economic_expenses
-						}
+						has_positive_budget_growth = yes
 					}
-					check_variable = {
-						black_rubles_budget > 4999.999
-					}
+					has_5000_rubles = yes
 				}
 			}
 			increase_production_financing_click_enabled = {
 				check_variable = {
 					production_finances < 10
 				}
-				check_variable = {
-					black_rubles_budget > 4999.999
-				}
+				has_5000_rubles = yes
 			}
 			decrease_civil_financing_click_enabled = {
 				check_variable = {
@@ -90,22 +84,16 @@ scripted_gui = {
 				}
 				if = {
 					limit = {
-						check_variable = {
-							economic_income > economic_expenses
-						}
+						has_positive_budget_growth = yes
 					}
-					check_variable = {
-						black_rubles_budget > 4999.999
-					}
+					has_5000_rubles = yes
 				}
 			}
 			increase_civil_financing_click_enabled = {
 				check_variable = {
 					civil_finances < 10
 				}
-				check_variable = {
-					black_rubles_budget > 4999.999
-				}
+				has_5000_rubles = yes
 			}
 			decrease_army_financing_click_enabled = {
 				check_variable = {
@@ -113,39 +101,44 @@ scripted_gui = {
 				}
 				if = {
 					limit = {
-						check_variable = {
-							economic_income > economic_expenses
-						}
+						has_positive_budget_growth = yes
 					}
-					check_variable = {
-						black_rubles_budget > 4999.999
-					}
+					has_5000_rubles = yes
 				}
 			}
 			increase_army_financing_click_enabled = {
 				check_variable = {
 					army_finances < 10
 				}
-				check_variable = {
-					black_rubles_budget > 4999.999
-				}
+				has_5000_rubles = yes
 			}
 		}
 		effects = {
 			decrease_production_financing_click = {
 				subtract_from_variable = {
-					production_finances = 1
+					var = production_finances
+					value = 1
+					tooltip = production_finances_dec_tt
 				}
-				#temp variable for possible tooltip
-				set_temp_variable = {
-					dbudget = 5000
+				if = {
+					limit = {
+						has_positive_budget_growth = no
+					}
+					custom_effect_tooltip = emergency_finacial_situation_tt
 				}
-				clamp_temp_variable = {
-					var = dbudget
-					max = black_rubles_budget
-				}
-				subtract_from_variable = {
-					black_rubles_budget = dbudget
+				else = {
+					set_temp_variable = {
+						dbudget = 5000
+					}
+					clamp_temp_variable = {
+						var = dbudget
+						max = black_rubles_budget
+					}
+					subtract_from_variable = {
+						var = black_rubles_budget
+						value = dbudget
+						tooltip = budget_neg_change_tt
+					}
 				}
 				calc_production_finances = yes
 				calc_economic_expenses = yes
@@ -153,10 +146,14 @@ scripted_gui = {
 			}
 			increase_production_financing_click = {
 				add_to_variable = {
-					production_finances = 1
+					var = production_finances 
+					value = 1
+					tooltip = production_finances_inc_tt
 				}
 				subtract_from_variable = {
-					black_rubles_budget = 5000
+					var = black_rubles_budget
+					value = 5000
+					tooltip = budget_neg_change_tt
 				}
 				calc_production_finances = yes
 				calc_economic_expenses = yes
@@ -164,18 +161,29 @@ scripted_gui = {
 			}
 			decrease_civil_financing_click = {
 				subtract_from_variable = {
-					civil_finances = 1
+					var = civil_finances
+					value = 1
+					tooltip = civil_finances_dec_tt
 				}
-				#temp variable for possible tooltip
-				set_temp_variable = {
-					dbudget = 5000
+				if = {
+					limit = {
+						has_positive_budget_growth = no
+					}
+					custom_effect_tooltip = emergency_finacial_situation_tt
 				}
-				clamp_temp_variable = {
-					var = dbudget
-					max = black_rubles_budget
-				}
-				subtract_from_variable = {
-					black_rubles_budget = dbudget
+				else = {
+					set_temp_variable = {
+						dbudget = 5000
+					}
+					clamp_temp_variable = {
+						var = dbudget
+						max = black_rubles_budget
+					}
+					subtract_from_variable = {
+						var = black_rubles_budget
+						value = dbudget
+						tooltip = budget_neg_change_tt
+					}
 				}
 				calc_civil_finances = yes
 				calc_economic_expenses = yes
@@ -183,10 +191,14 @@ scripted_gui = {
 			}
 			increase_civil_financing_click = {
 				add_to_variable = {
-					civil_finances = 1
+					var = civil_finances
+					value = 1
+					tooltip = civil_finances_inc_tt
 				}
 				subtract_from_variable = {
-					black_rubles_budget = 5000
+					var = black_rubles_budget
+					value = 5000
+					tooltip = budget_neg_change_tt
 				}
 				calc_civil_finances = yes
 				calc_economic_expenses = yes
@@ -194,18 +206,29 @@ scripted_gui = {
 			}
 			decrease_army_financing_click = {
 				subtract_from_variable = {
-					army_finances = 1
+					var = army_finances
+					value = 1
+					tooltip = army_finances_dec_tt
 				}
-				#temp variable for possible tooltip
-				set_temp_variable = {
-					dbudget = 5000
+				if = {
+					limit = {
+						has_positive_budget_growth = no
+					}
+					custom_effect_tooltip = emergency_finacial_situation_tt
 				}
-				clamp_temp_variable = {
-					var = dbudget
-					max = black_rubles_budget
-				}
-				subtract_from_variable = {
-					black_rubles_budget = dbudget
+				else = {
+					set_temp_variable = {
+						dbudget = 5000
+					}
+					clamp_temp_variable = {
+						var = dbudget
+						max = black_rubles_budget
+					}
+					subtract_from_variable = {
+						var = black_rubles_budget
+						value = dbudget
+						tooltip = budget_neg_change_tt
+					}
 				}
 				calc_army_finances = yes
 				calc_economic_expenses = yes
@@ -213,10 +236,14 @@ scripted_gui = {
 			}
 			increase_army_financing_click = {
 				add_to_variable = {
-					army_finances = 1
+					var = army_finances
+					value = 1
+					tooltip = army_finances_inc_tt
 				}
 				subtract_from_variable = {
-					black_rubles_budget = 5000
+					var = black_rubles_budget
+					value = 5000
+					tooltip = budget_neg_change_tt
 				}
 				calc_army_finances = yes
 				calc_economic_expenses = yes
