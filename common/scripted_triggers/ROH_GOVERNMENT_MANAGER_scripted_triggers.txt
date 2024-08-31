@@ -78,3 +78,13 @@ goverment_system_can_be_upgraded_15 = {
 		}
 	}
 }
+goverment_system_can_be_upgraded_50 = {
+	custom_trigger_tooltip = {
+		tooltip = goverment_system_can_be_upgraded_50_tt
+		check_variable = {
+			var = reform_points
+			value = 50
+			compare = greater_than_or_equals
+		}
+	}
+}

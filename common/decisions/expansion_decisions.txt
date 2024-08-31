@@ -148,4 +148,27 @@ reunification_category = {
         }
         ai_will_do = { factor = 100 }
     }    
+    major_annex_anarchy = {
+        priority = 100
+        targets = { SIL WTR MOS BLT SOC SAC WEC }
+        targets_dynamic = yes
+        visible = { 
+            ROOT = { is_neighbor_of = FROM }
+        }
+        cost = 400
+        fire_only_once = yes
+        days_remove = 365
+        remove_effect = {
+            ROOT = {
+                annex_country = { target = FROM }
+            }
+            FROM = {
+                every_core_state = {
+                    remove_core_of = FROM
+                    add_core_of = ROOT
+                }
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
 }
