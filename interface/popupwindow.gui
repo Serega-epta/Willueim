@@ -1782,15 +1782,15 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "peace_summary_popup_window"
-		position = { x = 0 y = 0 }
+		position = { x = -5000 y = -5000 }
 		size = { width = 480 height = 382 }		
-		orientation= center
+		orientation = center
 		origo = center
 		moveable = yes
 		fade_time = 200
 		fade_type = linear
-		show_sound = peace_summary_message
-		hide_sound = menu_close_window
+		#show_sound = peace_summary_message
+		#hide_sound = menu_close_window
 		click_to_front = yes
 
 		background = {
