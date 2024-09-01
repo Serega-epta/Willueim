@@ -1,5 +1,4 @@
 spriteTypes = {
-
 	# Order of the mapmodes in the game:
 	#	DEFAULT, (army)
 	#STATES,
@@ -25,7 +24,6 @@ spriteTypes = {
 		texturefile = "gfx//interface//mapmode//mapmode_buttons_deselected_small.dds"
 		noOfFrames = 16
 	}
-	
 	spriteType = {
 		name = "GFX_mapmode_buttons_selected_big"
 		texturefile = "gfx//interface//mapmode//mapmode_buttons_selected_big.dds"
@@ -52,17 +50,14 @@ spriteTypes = {
 		noOfFrames = 3
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-
 	spriteType = {
 		name = "GFX_mapmode_button_depressed"
 		texturefile = "gfx//interface/mapmode/mapmode_button_depressed.dds"
 	}
-
 	spriteType = {
 		name = "GFX_mapmode_button_bg"
 		texturefile = "gfx//interface/mapmode/mapmode_button_bg.dds"
 	}
-
 	frameAnimatedSpriteType = {
 		name = "GFX_tutorial_default_mapmode_highlight"
 		texturefile = "gfx//interface//tutorial//default_mapmode_highlight.dds"
@@ -74,7 +69,6 @@ spriteTypes = {
 		alwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
-
 	frameAnimatedSpriteType = {
 		name = "GFX_logistics_tutorial_glow"
 		texturefile = "gfx//interface//tutorial//logistics_supply_map_mode_glow.dds"
@@ -86,26 +80,21 @@ spriteTypes = {
 		alwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
-
-	
 	#spriteType = {
 	#	name = "GFX_mapmode_air_button"
 	#	texturefile = "gfx//interface//mapmode_air_button.dds"
 	#	noOfFrames = 2
 	#}
-
 	#spriteType = {
 	#	name = "GFX_mapmode_naval_button"
 	#	texturefile = "gfx//interface//mapmode_naval_button.dds"
 	#	noOfFrames = 2
 	#}
-
 	#spriteType = {
 	#	name = "GFX_mapmode_land_button"
 	#	texturefile = "gfx//interface//mapmode_land_button.dds"
 	#	noOfFrames = 2
 	#}
-
 	#spriteType = {
 	#	name = "GFX_mapmodes_bg"
 	#	texturefile = "gfx//interface//mapmodes_bg.dds"
