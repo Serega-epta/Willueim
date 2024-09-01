@@ -1,43 +1,51 @@
 can_ROOT_get_wargoal_on_THIS = {
 	exists = yes
-	NOT = { is_in_faction_with = ROOT }
-	NOT = { is_subject_of = ROOT }
+	NOT = {
+		is_in_faction_with = ROOT
+	}
+	NOT = {
+		is_subject_of = ROOT
+	}
 }
-
 is_border_conflict_defender_vs_FROM = {
 	has_variable = ROOT.defender_state_vs_@FROM
 }
-
 has_not_initiated_border_incident_with_FROM = {
 	custom_trigger_tooltip = {
 		tooltip = not_initiated_border_incident_with_FROM
 		NOT = {
 			any_state = {
-				check_variable = { FROM.defender_state_vs_@PREV = id }
+				check_variable = {
+					FROM.defender_state_vs_@PREV = id
+				}
 			}
 		}
 	}
 }
-
 has_not_initiated_border_incident_with_ROOT = {
 	custom_trigger_tooltip = {
 		tooltip = not_initiated_border_incident_with_ROOT
 		NOT = {
 			any_state = {
-				check_variable = { ROOT.defender_state_vs_@PREV = id }
+				check_variable = {
+					ROOT.defender_state_vs_@PREV = id
+				}
 			}
 		}
 	}
 }
-
 #State scope
 has_ROOT_at_least_1_div_in_current_state_scope = {
 	custom_trigger_tooltip = {
 		tooltip = at_least_one_division_in_state
-		ROOT = { divisions_in_state = { state = PREV size > 0 } }
+		ROOT = {
+			divisions_in_state = {
+				state = PREV
+				size > 0
+			}
+		}
 	}
 }
-
 #State scope
 is_controlled_by_ROOT_or_subject = {
 	custom_trigger_tooltip = {
@@ -50,7 +58,6 @@ is_controlled_by_ROOT_or_subject = {
 		}
 	}
 }
-
 #Country scope
 is_free_or_subject_of_root = {
 	OR = {
@@ -58,7 +65,6 @@ is_free_or_subject_of_root = {
 		is_subject_of = ROOT
 	}
 }
-
 #State scope
 is_controlled_by_ROOT_or_ally = {
 	custom_trigger_tooltip = {
@@ -72,7 +78,6 @@ is_controlled_by_ROOT_or_ally = {
 		}
 	}
 }
-
 ai_air_doctrine_tier_1_trigger = {
 	OR = {
 		has_tech = naval_strike_tactics
@@ -80,7 +85,6 @@ ai_air_doctrine_tier_1_trigger = {
 		has_tech = low_echelon_support
 	}
 }
-
 ai_air_doctrine_tier_2_trigger = {
 	OR = {
 		has_tech = multialtitude_flying
@@ -95,7 +99,6 @@ ai_air_doctrine_tier_3_trigger = {
 		has_tech = infiltration_bombing
 	}
 }
-
 ai_land_doctrine_tier_1_trigger = {
 	OR = {
 		has_tech = elastic_defence
@@ -104,7 +107,6 @@ ai_land_doctrine_tier_1_trigger = {
 		has_tech = defence_in_depth
 	}
 }
-
 ai_land_doctrine_tier_2_trigger = {
 	OR = {
 		has_tech = kampfgruppe
@@ -115,16 +117,15 @@ ai_land_doctrine_tier_2_trigger = {
 		has_tech = large_front_offensive
 	}
 }
-
 has_large_ally_not_pick_closed_economy = {
 	any_of_scopes = {
 		array = faction_members
-
-		NOT = { tag = PREV }
+		NOT = {
+			tag = PREV
+		}
 		num_of_military_factories > 30
 	}
 }
-
 owns_or_subject_of = {
 	custom_trigger_tooltip = {
 		tooltip = owns_or_subject_of_tt
@@ -136,7 +137,6 @@ owns_or_subject_of = {
 		}
 	}
 }
-
 controls_or_subject_of = {
 	custom_trigger_tooltip = {
 		tooltip = controls_or_subject_of_tt
@@ -148,45 +148,42 @@ controls_or_subject_of = {
 		}
 	}
 }
-
 is_core_or_compliance_60 = {
 	custom_trigger_tooltip = {
 		tooltip = is_core_or_compliance_60_tt
 		OR = {
 			controller = {
-				PREV = { is_core_of = PREV }
+				PREV = {
+					is_core_of = PREV
+				}
 			}
 			compliance > 60
 		}
 	}
 }
-
 has_specialist_level_trigger = {
 	skill > 5
 	skill < 6
 }
-
 has_expert_level_trigger = {
 	skill > 6
 	skill < 7
 }
-
 has_genius_level_trigger = {
 	skill > 7
 }
-
 is_major_not_original_tag_root = {
 	is_major = yes
 	hidden_trigger = {
-		NOT = { original_tag = ROOT }
+		NOT = {
+			original_tag = ROOT
+		}
 	}
 }
-
 has_subject_autonomy_feature = {
 	has_dlc = "Together for Victory"
 	#TODO_Manu: More DLCs?
 }
-
 has_tech_sharing_feature = {
 	OR = {
 		has_dlc = "Together for Victory"
@@ -195,7 +192,6 @@ has_tech_sharing_feature = {
 		has_dlc = "La Resistance"
 	}
 }
-
 has_war_with_non_exiled_country = {
 	custom_trigger_tooltip = {
 		tooltip = has_war_with_non_exiled_country_tt
@@ -204,9 +200,7 @@ has_war_with_non_exiled_country = {
 			is_government_in_exile = no
 		}
 	}
-
 }
-
 is_at_peace_exiled_countries_excluded = {
 	custom_trigger_tooltip = {
 		tooltip = is_at_peace_exiled_countries_excluded_tt
@@ -217,7 +211,6 @@ is_at_peace_exiled_countries_excluded = {
 		}
 	}
 }
-
 #State scope
 state_is_fully_controlled_by_ROOT_or_subject = {
 	custom_trigger_tooltip = {
@@ -231,7 +224,6 @@ state_is_fully_controlled_by_ROOT_or_subject = {
 		}
 	}
 }
-
 state_has_any_resource = {
 	OR = {
 		has_resources_amount = {
@@ -260,8 +252,8 @@ state_has_any_resource = {
 		}
 	}
 }
-
-country_can_be_reasonable_target_of_wargoal = { #Expected scopes: Target country is THIS, country getting wargoal is PREV
+#Expected scopes: Target country is THIS, country getting wargoal is PREV
+country_can_be_reasonable_target_of_wargoal = {
 	NOT = {
 		has_war_with = ROOT
 		is_in_faction_with = PREV
@@ -271,46 +263,38 @@ country_can_be_reasonable_target_of_wargoal = { #Expected scopes: Target country
 		is_subject_of = PREV
 	}
 }
-
 has_lar = {
 	has_dlc = "La Resistance"
 }
-
 has_mtg = {
 	has_dlc = "Man the Guns"
 }
-
-
-
 ###########################################################################################
 ###########################################################################################
 ###########################################################################################
-
-							########    ###       ###    ######## 
-							   ##      ## ##     ## ##      ##    
-							   ##     ##   ##   ##   ##     ##    
-							   ##    ##     ## ##     ##    ##    
-							   ##    ######### #########    ##    
-							   ##    ##     ## ##     ##    ##    
-							   ##    ##     ## ##     ##    ##    
-
+########    ###       ###    ######## 
+##      ## ##     ## ##      ##    
+##     ##   ##   ##   ##     ##    
+##    ##     ## ##     ##    ##    
+##    ######### #########    ##    
+##    ##     ## ##     ##    ##    
+##    ##     ## ##     ##    ##    
 ###########################################################################################
 ###########################################################################################
 ###########################################################################################
-
 has_aat = {
 	has_dlc = "Arms Against Tyranny"
 }
-
-
-
-mio_original_country_exists_and_not_at_war_with_ROOT = { #Used for MIO decisions visibility - THIS is original country
+#Used for MIO decisions visibility - THIS is original country
+mio_original_country_exists_and_not_at_war_with_ROOT = {
 	exists = yes
 	has_capitulated = no
-	NOT = { has_war_with = ROOT }
+	NOT = {
+		has_war_with = ROOT
+	}
 }
-
-mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = { #Used for MIO decisions availability - THIS is original country
+#Used for MIO decisions availability - THIS is original country
+mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = {
 	has_opinion = {
 		target = ROOT
 		value > 49
@@ -320,40 +304,35 @@ mio_original_country_available_with_opinion_subject_and_war_requirements_fulfill
 		is_subject_of = ROOT
 	}
 	has_capitulated = no
-	NOT = { has_war_with = ROOT }
+	NOT = {
+		has_war_with = ROOT
+	}
 }
-
-
 # These are to make strength comparisons easier 
-
 FROM_is_stronger = {
 	strength_ratio = {
-		tag = FROM 
+		tag = FROM
 		ratio < 1
 	}
 }
-
 FROM_is_twice_as_strong = {
 	strength_ratio = {
-		tag = FROM 
+		tag = FROM
 		ratio < 0.5
 	}
 }
-
 FROM_is_weaker = {
 	strength_ratio = {
-		tag = FROM 
+		tag = FROM
 		ratio > 1
 	}
 }
-
 FROM_is_twice_as_weak = {
 	strength_ratio = {
-		tag = FROM 
+		tag = FROM
 		ratio > 2
 	}
 }
-
 ai_has_completed_army_doctrine = {
 	is_ai = yes
 	OR = {
@@ -367,7 +346,6 @@ ai_has_completed_army_doctrine = {
 		has_tech = guerilla_warfare
 	}
 }
-
 ai_has_completed_air_doctrine = {
 	is_ai = yes
 	OR = {
@@ -377,21 +355,20 @@ ai_has_completed_air_doctrine = {
 		has_tech = high_level_bombing
 	}
 }
-
 ### Neutrality Act - only trade with countries at peace 
 trade_partner_not_at_war = {
 	custom_trigger_tooltip = {
 		tooltip = trade_partner_not_at_war_tt
-		FROM = { 
-			has_war = yes 
+		FROM = {
+			has_war = yes
 		}
 	}
 }
-
 is_allied_seller_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = subsidy_allied_nation_tt
-		FROM = { is_in_faction_with = ROOT }
+		FROM = {
+			is_in_faction_with = ROOT
+		}
 	}
 }
-

@@ -1,30 +1,22 @@
 equipments = {
-
 	pre_war_mass_tank_chassis = {
 		year = 2010
 		is_archetype = yes
 		is_buildable = no
-
 		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
-		
-
 		module_slots = none
-
 		max_strength = 2
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.65
-
 		#Защитные свойства
 		defense = 2
 		breakthrough = 2
 		armor_value = 2
-
 		#Наступательные способности
 		soft_attack = 7
 		hard_attack = 7
@@ -35,34 +27,26 @@ equipments = {
 			steel = 3
 			chromium = 4
 		}
-
 		fuel_consumption = 8
-
 	}
 	pre_war_spec_tank_chassis = {
 		year = 2010
 		is_archetype = yes
 		is_buildable = no
-
 		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
-		
-
 		module_slots = none
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.65
-
 		max_strength = 2
 		#Защитные свойства
 		defense = 2
 		breakthrough = 2
 		armor_value = 2
-
 		#Наступательные способности
 		soft_attack = 7
 		hard_attack = 7
@@ -73,35 +57,26 @@ equipments = {
 			steel = 3
 			chromium = 4
 		}
-
 		fuel_consumption = 8
-
 	}
 	pre_war_ai_tank_chassis = {
 		year = 2010
 		is_archetype = yes
 		is_buildable = no
-
 		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
-		
-
 		module_slots = none
-
 		max_strength = 2
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.65
-
 		#Защитные свойства
 		defense = 2
 		breakthrough = 2
 		armor_value = 2
-
 		#Наступательные способности
 		soft_attack = 7
 		hard_attack = 7
@@ -112,35 +87,26 @@ equipments = {
 			steel = 3
 			chromium = 4
 		}
-
 		fuel_consumption = 8
-
 	}
 	pre_war_early_tank_chassis = {
 		year = 2010
 		is_archetype = yes
 		is_buildable = no
-
 		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
-		
-
 		module_slots = none
-
 		max_strength = 2
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.65
-
 		#Защитные свойства
 		defense = 2
 		breakthrough = 2
 		armor_value = 2
-
 		#Наступательные способности
 		soft_attack = 7
 		hard_attack = 7
@@ -151,17 +117,13 @@ equipments = {
 			steel = 3
 			chromium = 4
 		}
-
 		fuel_consumption = 8
 		resources = {
 			steel = 1
 		}
-
 	}
-
 	### Ранний танк
-
-	early_mbt_equipment = { 
+	early_mbt_equipment = {
 		abbreviation = "MBT0"
 		derived_variant_name = basic_mass_OPF_equipment
 		visual_level = 0
@@ -173,17 +135,14 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.65
-
 		#Защитные свойства
 		defense = 2
 		breakthrough = 2
 		armor_value = 2
-
 		#Наступательные способности
 		soft_attack = 7
 		hard_attack = 7
@@ -194,12 +153,9 @@ equipments = {
 			steel = 3
 			chromium = 4
 		}
-
 		fuel_consumption = 8
 	}
-
 	#Массовые танки
-
 	mass_tank_chassis_0 = {
 		abbreviation = "MT0"
 		derived_variant_name = basic_mass_OPF_equipment
@@ -212,17 +168,14 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.6
-
 		#Защитные свойства
 		defense = 4
 		breakthrough = 4
 		armor_value = 4
-
 		#Наступательные способности
 		soft_attack = 8
 		hard_attack = 8
@@ -233,10 +186,8 @@ equipments = {
 			steel = 3
 			chromium = 1
 		}
-
 		fuel_consumption = 12
 	}
-
 	mass_tank_chassis_1 = {
 		abbreviation = "MT1"
 		derived_variant_name = basic_mass_OPF_equipment
@@ -250,17 +201,14 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.55
-
 		#Защитные свойства
 		defense = 6
 		breakthrough = 4
 		armor_value = 4
-
 		#Наступательные способности
 		soft_attack = 9
 		hard_attack = 9
@@ -271,10 +219,8 @@ equipments = {
 			steel = 3
 			chromium = 1
 		}
-
 		fuel_consumption = 12
 	}
-
 	mass_tank_chassis_2 = {
 		abbreviation = "MT2"
 		derived_variant_name = basic_mass_OPF_equipment
@@ -288,17 +234,14 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.5
-
 		#Защитные свойства
 		defense = 8
 		breakthrough = 6
 		armor_value = 6
-
 		#Наступательные способности
 		soft_attack = 10
 		hard_attack = 10
@@ -309,10 +252,8 @@ equipments = {
 			steel = 8
 			chromium = 1
 		}
-
 		fuel_consumption = 16
 	}
-
 	mass_tank_chassis_3 = {
 		abbreviation = "MT3"
 		derived_variant_name = basic_mass_OPF_equipment
@@ -326,17 +267,14 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		#Различные способности
 		maximum_speed = 5
 		reliability = 0.5
-
 		#Защитные свойства
 		defense = 10
 		breakthrough = 10
 		armor_value = 8
-
 		#Наступательные способности
 		soft_attack = 11
 		hard_attack = 11
@@ -347,12 +285,9 @@ equipments = {
 			steel = 8
 			chromium = 1
 		}
-
 		fuel_consumption = 16
 	}
-
 	#Специализированные танки
-
 	specialized_tank_chassis_0 = {
 		abbreviation = "ST0"
 		derived_variant_name = basic_specialized_OPF_equipment
@@ -365,7 +300,6 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 8
@@ -383,7 +317,6 @@ equipments = {
 			chromium = 1
 		}
 	}
-
 	specialized_tank_chassis_1 = {
 		abbreviation = "ST1"
 		derived_variant_name = basic_specialized_OPF_equipment
@@ -397,7 +330,6 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 9
@@ -416,7 +348,6 @@ equipments = {
 			tungsten = 1
 		}
 	}
-
 	specialized_tank_chassis_2 = {
 		abbreviation = "ST2"
 		derived_variant_name = basic_specialized_OPF_equipment
@@ -430,7 +361,6 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 10
@@ -449,7 +379,6 @@ equipments = {
 			tungsten = 2
 		}
 	}
-
 	specialized_tank_chassis_3 = {
 		abbreviation = "ST#"
 		derived_variant_name = basic_specialized_OPF_equipment
@@ -463,7 +392,6 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		maximum_speed = 5
 		soft_attack = 12
@@ -482,9 +410,7 @@ equipments = {
 			tungsten = 2
 		}
 	}
-
-	#ИИ - танки
-
+	#�?�? - танки
 	ai_tank_chassis_0 = {
 		abbreviation = "AT0"
 		derived_variant_name = basic_ai_OPF_equipment
@@ -497,7 +423,6 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 9
@@ -516,7 +441,6 @@ equipments = {
 			tungsten = 1
 		}
 	}
-
 	ai_tank_chassis_1 = {
 		abbreviation = "AT1"
 		derived_variant_name = basic_ai_OPF_equipment
@@ -530,7 +454,6 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 10
@@ -549,7 +472,6 @@ equipments = {
 			tungsten = 2
 		}
 	}
-
 	ai_tank_chassis_2 = {
 		abbreviation = "AT2"
 		derived_variant_name = basic_ai_OPF_equipment
@@ -563,7 +485,6 @@ equipments = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
-		
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 11
@@ -582,7 +503,6 @@ equipments = {
 			tungsten = 2
 		}
 	}
-
 	ai_tank_chassis_3 = {
 		abbreviation = "AT#"
 		derived_variant_name = basic_ai_OPF_equipment
@@ -613,5 +533,5 @@ equipments = {
 			chromium = 8
 			tungsten = 4
 		}
-	}	
+	}
 }

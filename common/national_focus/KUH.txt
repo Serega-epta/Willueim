@@ -3,19 +3,20 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-            add = 100
-            tag = KUH
-        }
+			add = 100
+			tag = KUH
+		}
 	}
 	default = no
-
 	focus = {
 		id = KUH_our_way
 		icon = GFX_KUH_Our_way
 		cost = 3.00
 		x = 2
 		y = 0
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			add_political_power = 70
 		}
@@ -26,8 +27,12 @@ focus_tree = {
 		icon = GFX_KUH_Explain_to_flock
 		x = 2
 		y = 1
-		ai_will_do = { factor = 10 }
-		prerequisite = { focus = KUH_our_way }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = KUH_our_way
+		}
 		completion_reward = {
 			add_war_support = 0.2
 		}
@@ -38,15 +43,19 @@ focus_tree = {
 		icon = GFX_KUH_Persistent_one
 		x = 0
 		y = 2
-		ai_will_do = { factor = 10 }
-		prerequisite = { focus = KUH_explan_to_flock }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = KUH_explan_to_flock
+		}
 		completion_reward = {
 			853 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-   					 type = industrial_complex
-    					level = 1
-    					instant_build = yes
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -57,8 +66,12 @@ focus_tree = {
 		icon = GFX_KUH_Loyal_one
 		x = 2
 		y = 2
-		ai_will_do = { factor = 10 }
-		prerequisite = { focus = KUH_explan_to_flock }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = KUH_explan_to_flock
+		}
 		completion_reward = {
 			853 = {
 				create_unit = {
@@ -82,8 +95,12 @@ focus_tree = {
 		icon = GFX_KUH_Strong_one
 		x = 4
 		y = 2
-		ai_will_do = { factor = 10 }
-		prerequisite = { focus = KUH_explan_to_flock }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = KUH_explan_to_flock
+		}
 		completion_reward = {
 			854 = {
 				add_extra_state_shared_building_slots = 1
@@ -101,7 +118,9 @@ focus_tree = {
 		icon = GFX_KUH_Trample_heretics
 		x = 2
 		y = 3
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		prerequisite = {
 			focus = KUH_persistent_one
 			focus = KUH_loyal_one
@@ -109,7 +128,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-  				tooltip = kuban_crisis_tt
+				tooltip = kuban_crisis_tt
 				NOT = {
 					has_global_flag = kuban_crisis
 				}
@@ -122,16 +141,16 @@ focus_tree = {
 			set_global_flag = kuban_crisis
 			declare_war_on = {
 				target = FSR
-				type = annex_everything	
+				type = annex_everything
 			}
 			declare_war_on = {
 				target = STW
-				type = annex_everything	
+				type = annex_everything
 			}
 			STW = {
 				declare_war_on = {
 					target = FSR
-					type = annex_everything	
+					type = annex_everything
 				}
 			}
 		}
@@ -142,7 +161,9 @@ focus_tree = {
 		icon = GFX_KUH_New_parish
 		x = 8
 		y = 0
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		available = {
 			has_war = no
 			NOT = {
@@ -155,13 +176,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KUH_death_to_atheists 
+		id = KUH_death_to_atheists
 		cost = 3.00
 		icon = GFX_KUH_death_to_atheists
 		x = 6
 		y = 1
-		ai_will_do = { factor = 10 }
-		prerequisite = { focus = KUH_new_parish }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = KUH_new_parish
+		}
 		completion_reward = {
 			add_ideas = KUH_death_to_atheists_idea
 			unlock_decision_category_tooltip = expansion_category
@@ -174,8 +199,12 @@ focus_tree = {
 		icon = GFX_KUH_Revive_cults
 		x = 8
 		y = 1
-		ai_will_do = { factor = 10 }
-		prerequisite = { focus = KUH_new_parish }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = KUH_new_parish
+		}
 		completion_reward = {
 			puppet = {
 				target = ECD
@@ -201,8 +230,12 @@ focus_tree = {
 		icon = GFX_KUH_United_ring
 		x = 10
 		y = 1
-		ai_will_do = { factor = 10 }
-		prerequisite = { focus = KUH_new_parish }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = KUH_new_parish
+		}
 		available = {
 			has_completed_focus = KUH_revive_cults
 		}
@@ -215,7 +248,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
 			234 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -224,7 +256,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
 			234 = {
 				add_building_construction = {
 					type = infrastructure
@@ -239,7 +270,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
 			218 = {
 				add_building_construction = {
 					type = infrastructure

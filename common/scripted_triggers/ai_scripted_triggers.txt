@@ -26,7 +26,11 @@ has_potential_for_agression = {
 	#equipment related triggers
 	if = {
 		limit = {
-			NOT = { check_variable = { num_target_equipment_in_armies@infantry_equipment = num_equipment_in_armies@infantry_equipment } }
+			NOT = {
+				check_variable = {
+					num_target_equipment_in_armies@infantry_equipment = num_equipment_in_armies@infantry_equipment
+				}
+			}
 		}
 		set_temp_variable = {
 			equipment_shortage = num_target_equipment_in_armies@infantry_equipment
@@ -41,11 +45,14 @@ has_potential_for_agression = {
 			equipment_shortage < 0.3
 		}
 	}
-
 	if = {
 		limit = {
-			NOT = { check_variable = { num_target_equipment_in_armies@infantry_odejda = num_equipment_in_armies@infantry_odejda } }
-		}	
+			NOT = {
+				check_variable = {
+					num_target_equipment_in_armies@infantry_odejda = num_equipment_in_armies@infantry_odejda
+				}
+			}
+		}
 		set_temp_variable = {
 			equipment_shortage = num_target_equipment_in_armies@infantry_odejda
 		}
@@ -59,11 +66,14 @@ has_potential_for_agression = {
 			equipment_shortage < 0.2
 		}
 	}
-	
 	if = {
 		limit = {
-			NOT = { check_variable = { num_target_equipment_in_armies@support_equipment = num_equipment_in_armies@support_equipment } }
-		}		
+			NOT = {
+				check_variable = {
+					num_target_equipment_in_armies@support_equipment = num_equipment_in_armies@support_equipment
+				}
+			}
+		}
 		set_temp_variable = {
 			equipment_shortage = num_target_equipment_in_armies@support_equipment
 		}
@@ -77,11 +87,14 @@ has_potential_for_agression = {
 			equipment_shortage < 0.2
 		}
 	}
-	
 	if = {
 		limit = {
-			NOT = { check_variable = { num_target_equipment_in_armies@artillery_equipment = num_equipment_in_armies@artillery_equipment } }
-		}	
+			NOT = {
+				check_variable = {
+					num_target_equipment_in_armies@artillery_equipment = num_equipment_in_armies@artillery_equipment
+				}
+			}
+		}
 		set_temp_variable = {
 			equipment_shortage = num_target_equipment_in_armies@artillery_equipment
 		}

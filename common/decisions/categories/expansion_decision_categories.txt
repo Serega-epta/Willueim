@@ -2,13 +2,15 @@ expansion_category = {
 	icon = GFX_decision_category_expedition
 	picture = GFX_desicion_reunification
 	priority = 10
-	visible = { 
+	visible = {
 		AND = {
 			OR = {
-				has_completed_focus = enmity_with_neighbors 
+				has_completed_focus = enmity_with_neighbors
 				has_country_flag = end_of_phase_two
 			}
-			NOT = { tag = WAC }
+			NOT = {
+				tag = WAC
+			}
 		}
 	}
 }
@@ -16,5 +18,7 @@ reunification_category = {
 	icon = GFX_decision_category_expedition
 	picture = GFX_desicion_reunification
 	priority = 500
-	visible = { has_country_flag = is_major }	
+	visible = {
+		has_country_flag = is_major
+	}
 }

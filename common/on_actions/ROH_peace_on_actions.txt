@@ -2,9 +2,7 @@ on_actions = {
 	on_capitulation = {
 		effect = {
 			#log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
-			
 			set_global_flag = show_peace_popup_alert
-
 			FROM = {
 				save_global_event_target_as = winning_country
 			}
@@ -21,7 +19,6 @@ on_actions = {
 				}
 				set_global_flag = losing_country_multiple
 			}
-
 			if = {
 				limit = {
 					event_target:winning_country = {
@@ -32,13 +29,9 @@ on_actions = {
 				}
 				set_global_flag = winning_country_multiple
 			}
-
 			#log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
-			
 			#add_to_variable = { global.peace_popup_dirty = 1 }
-
 			################################
-
 			if = {
 				limit = {
 					ROOT = {
@@ -64,7 +57,6 @@ on_actions = {
 						}
 					}
 				}
-				
 				GLS = {
 					white_peace = ROOT
 					annex_country = {
@@ -78,7 +70,6 @@ on_actions = {
 				}
 				set_global_flag = skip_default_capitulation
 			}
-
 			else_if = {
 				limit = {
 					ROOT = {
@@ -101,10 +92,9 @@ on_actions = {
 						AND = {
 							is_in_faction = yes
 							is_in_faction_with = URC
-						}						
+						}
 					}
 				}
-
 				ROOT = {
 					GLS = {
 						clr_country_flag = GLS_negotiation_process_fail
@@ -127,7 +117,6 @@ on_actions = {
 						country_lock_all_division_template = yes
 					}
 				}
-				
 				FROM = {
 					white_peace = ROOT
 					WPK = {
@@ -149,16 +138,16 @@ on_actions = {
 					BL1 = {
 						transfer_state = 406
 						transfer_state = 994
-					}		
+					}
 					URA = {
 						transfer_state = 407
-					}	
+					}
 					ISK = {
 						transfer_state = 999
 					}
 					SI1 = {
 						transfer_state = 993
-					}				
+					}
 					URC = {
 						set_autonomy = {
 							target = GLS
@@ -170,14 +159,13 @@ on_actions = {
 							ideology = humanists
 							popularity = 100
 						}
-					}	
+					}
 					every_state = {
 						remove_core_of = ROOT
 					}
 				}
 				set_global_flag = skip_default_capitulation
 			}
-
 			else_if = {
 				limit = {
 					ROOT = {
@@ -192,7 +180,6 @@ on_actions = {
 						}
 					}
 				}
-				
 				FROM = {
 					white_peace = ROOT
 					SDC = {
@@ -206,15 +193,15 @@ on_actions = {
 					}
 				}
 			}
-
 			##########################
 			###Default Capitulation###
 			##########################
-
 			else_if = {
 				limit = {
 					OR = {
-						ROOT = { is_in_faction = no }
+						ROOT = {
+							is_in_faction = no
+						}
 						ROOT = {
 							all_allied_country = {
 								if = {
@@ -230,9 +217,12 @@ on_actions = {
 				}
 				#log = "war_won"
 				set_global_flag = war_won
-				
 				if = {
-					limit = { NOT = { has_global_flag = skip_default_capitulation } }
+					limit = {
+						NOT = {
+							has_global_flag = skip_default_capitulation
+						}
+					}
 					#log = "Default Capitulation"
 					FROM = {
 						every_enemy_country = {
@@ -253,7 +243,7 @@ on_actions = {
 						}
 					}
 					set_global_flag = skip_default_capitulation
-				}				
+				}
 			}
 			clr_global_flag = skip_default_capitulation
 		}

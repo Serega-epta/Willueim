@@ -1,26 +1,28 @@
 add_namespace = black
-
 country_event = {
-	id = black.1 #Начало войны
+	#Начало войны
+	id = black.1
 	title = black.1.t
 	desc = black.1.d
 	#picture =  
-
 	is_triggered_only = no
 	fire_only_once = yes
-	hidden = yes	
-
+	hidden = yes
 	trigger = {
 		Dog_Clanging_has_not_begun = yes
 	}
-	
 	option = {
 		name = black.1.a
-		every_country = { news_event = { id = super.1 days = 1 } }
-		WAC = { 
-			end_puppet = HAN 
-			end_puppet = BRD 
-			end_puppet = BRI 
+		every_country = {
+			news_event = {
+				id = super.1
+				days = 1
+			}
+		}
+		WAC = {
+			end_puppet = HAN
+			end_puppet = BRD
+			end_puppet = BRI
 			add_ideas = dog_clanging
 			add_state_core = 874
 			add_state_core = 226
@@ -32,16 +34,16 @@ country_event = {
 		HAN = {
 			add_ideas = dog_clanging
 			declare_war_on = {
-					target = WAC
-					type = civil_war
+				target = WAC
+				type = civil_war
 			}
 			declare_war_on = {
-					target = BRD
-					type = civil_war
+				target = BRD
+				type = civil_war
 			}
 			declare_war_on = {
-					target = BRI
-					type = civil_war
+				target = BRI
+				type = civil_war
 			}
 			add_state_core = 874
 			add_state_core = 221
@@ -54,12 +56,12 @@ country_event = {
 		BRD = {
 			add_ideas = dog_clanging
 			declare_war_on = {
-					target = WAC
-					type = civil_war
+				target = WAC
+				type = civil_war
 			}
 			declare_war_on = {
-					target = BRI
-					type = civil_war
+				target = BRI
+				type = civil_war
 			}
 			add_state_core = 874
 			add_state_core = 221
@@ -69,8 +71,8 @@ country_event = {
 		BRI = {
 			add_ideas = dog_clanging
 			declare_war_on = {
-					target = WAC
-					type = civil_war
+				target = WAC
+				type = civil_war
 			}
 			add_state_core = 226
 			add_state_core = 221
@@ -80,69 +82,90 @@ country_event = {
 			add_state_core = 932
 			add_state_core = 949
 		}
-	}	
+	}
 }
-
-
 country_event = {
-	id = black.2 #Проверка и выдача кастом тега
+	#Проверка и выдача кастом тега
+	id = black.2
 	title = black.2.t
 	desc = black.2.d
 	#picture =  
-
 	is_triggered_only = no
 	fire_only_once = yes
-	hidden = yes	
-
+	hidden = yes
 	trigger = {
 		Dog_Clanging_finished = yes
-	}		
-	
+	}
 	option = {
 		name = black.2.a
 		trigger = {
 			WAC_unified_Black_Junta = yes
 		}
-		every_country = { news_event = { id = worldnews.2 } }
-		WAC = { 
+		every_country = {
+			news_event = {
+				id = worldnews.2
+			}
+		}
+		WAC = {
 			set_cosmetic_tag = WAC_unified_Black_Junta
 			remove_ideas = dog_clanging
-		} 
+		}
 	}
 	option = {
 		name = black.2.b
 		trigger = {
 			HAN_unified_Black_Junta = yes
 		}
-		every_country = { news_event = { id = worldnews.2 } }
-		HAN = { 
+		every_country = {
+			news_event = {
+				id = worldnews.2
+			}
+		}
+		HAN = {
 			set_cosmetic_tag = HAN_unified_Black_Junta
-			remove_ideas = dog_clanging 
-			set_capital = { state = 221 remember_old_capital = no }
-		} 
+			remove_ideas = dog_clanging
+			set_capital = {
+				state = 221
+				remember_old_capital = no
+			}
+		}
 	}
 	option = {
 		name = black.2.c
 		trigger = {
 			BRI_unified_Black_Junta = yes
 		}
-		every_country = { news_event = { id = worldnews.2 } }
-		BRI = { 
+		every_country = {
+			news_event = {
+				id = worldnews.2
+			}
+		}
+		BRI = {
 			set_cosmetic_tag = BRI_unified_Black_Junta
-			remove_ideas = dog_clanging 
-			set_capital = { state = 221 remember_old_capital = no }
-		} 
+			remove_ideas = dog_clanging
+			set_capital = {
+				state = 221
+				remember_old_capital = no
+			}
+		}
 	}
 	option = {
 		name = black.2.i
 		trigger = {
 			BRD_unified_Black_Junta = yes
 		}
-		every_country = { news_event = { id = worldnews.2 } }
-		BRD = { 
+		every_country = {
+			news_event = {
+				id = worldnews.2
+			}
+		}
+		BRD = {
 			set_cosmetic_tag = BRD_unified_Black_Junta
-			remove_ideas = dog_clanging 
-			set_capital = { state = 221 remember_old_capital = no }
-		} 
+			remove_ideas = dog_clanging
+			set_capital = {
+				state = 221
+				remember_old_capital = no
+			}
+		}
 	}
 }

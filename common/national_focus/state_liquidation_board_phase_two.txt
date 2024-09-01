@@ -1,14 +1,13 @@
 focus_tree = {
 	id = state_liquidation_board_phase_two
-		country = {
+	country = {
 		factor = 0
 		modifier = {
-		add = 100
-		tag = GLS
+			add = 100
+			tag = GLS
 		}
 	}
 	default = no
-
 	focus = {
 		id = GLS_lawmaking
 		icon = GFX_lawmaking
@@ -18,8 +17,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.22
 				days = 1
@@ -36,16 +37,20 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = { focus = GLS_lawmaking }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_lawmaking
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.21
 				days = 1
 			}
 			add_stability = 0.05
 			set_country_flag = GLS_freedom_and_order_start
-			custom_effect_tooltip = unlock_freedom_and_order			
+			custom_effect_tooltip = unlock_freedom_and_order
 		}
 	}
 	focus = {
@@ -57,17 +62,21 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = { focus = GLS_process }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = GLS_process
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = has_clicked_continue_practice
 				hidden_trigger = {
 					has_country_flag = continue_practice
-				}	
+				}
 			}
 		}
-		completion_reward = { 
+		completion_reward = {
 			country_event = {
 				id = GLS.23
 				days = 1
@@ -101,12 +110,16 @@ focus_tree = {
 				tooltip = has_clicked_start_mobilisation
 				hidden_trigger = {
 					has_country_flag = start_mobilisation
-				}	
+				}
 			}
 		}
-		prerequisite = {focus = GLS_process}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_process
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.24
 				days = 1
@@ -135,16 +148,21 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = { focus = GLS_romance focus = GLS_cursed }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_romance
+			focus = GLS_cursed
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.25
 				days = 1
 			}
 			set_country_flag = GLS_negotiation_process_start
 			custom_effect_tooltip = unlock_negotiation_process
-		} 
+		}
 	}
 	focus = {
 		id = GLS_south
@@ -156,9 +174,13 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_pereputie}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_pereputie
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			add_war_support = 0.15
 			add_political_power = 100
 			every_owned_state = {
@@ -180,9 +202,13 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_south}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_south
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.15
 				uses = 1
@@ -205,10 +231,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_chess}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = GLS_chess
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		will_lead_to_war_with = MOT
-		completion_reward = { 
+		completion_reward = {
 			declare_war_on = {
 				target = MOT
 				type = annex_everything
@@ -225,10 +255,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_madness}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = GLS_madness
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		will_lead_to_war_with = URA
-		completion_reward = { 
+		completion_reward = {
 			declare_war_on = {
 				target = URA
 				type = annex_everything
@@ -245,10 +279,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_the_weakest_sex}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = GLS_the_weakest_sex
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		will_lead_to_war_with = ISK
-		completion_reward = { 
+		completion_reward = {
 			declare_war_on = {
 				target = ISK
 				type = annex_everything
@@ -265,10 +303,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_sufferers}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = GLS_sufferers
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		will_lead_to_war_with = BL1
-		completion_reward = { 
+		completion_reward = {
 			country_event = {
 				id = GLS.26
 				days = 1
@@ -289,28 +331,32 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_The_Thing}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
-			652 = { 
+		prerequisite = {
+			focus = GLS_The_Thing
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			652 = {
 				add_manpower = 7000
 			}
-			251 = { 
+			251 = {
 				add_manpower = 7000
 			}
-			401 = { 
+			401 = {
 				add_manpower = 7000
 			}
-			407 = { 
+			407 = {
 				add_manpower = 7000
 			}
-			994 = { 
+			994 = {
 				add_manpower = 7000
 			}
-			406 = { 
+			406 = {
 				add_manpower = 7000
 			}
-			999 = { 
+			999 = {
 				add_manpower = 7000
 			}
 			if = {
@@ -342,16 +388,20 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_pereputie}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_pereputie
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.27
 				days = 1
 			}
 			swap_ideas = {
 				remove_idea = GLS_kotly
-				add_idea =  GLS_kotly_1
+				add_idea = GLS_kotly_1
 			}
 			add_political_power = 100
 		}
@@ -365,13 +415,21 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		mutually_exclusive = { focus = GLS_holy_book}
-		prerequisite = {focus = GLS_power_and_love}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		mutually_exclusive = {
+			focus = GLS_holy_book
+		}
+		prerequisite = {
+			focus = GLS_power_and_love
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			add_war_support = 0.05
 			add_stability = -0.05
-			add_to_variable = { freedom = 10 }
+			add_to_variable = {
+				freedom = 10
+			}
 			custom_effect_tooltip = get_ten_percent_of_freedom
 		}
 	}
@@ -384,10 +442,16 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		mutually_exclusive = {focus = GLS_hell}
-		prerequisite = {focus = GLS_power_and_love}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		mutually_exclusive = {
+			focus = GLS_hell
+		}
+		prerequisite = {
+			focus = GLS_power_and_love
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			add_war_support = -0.05
 			add_stability = 0.05
 			add_tech_bonus = {
@@ -395,7 +459,9 @@ focus_tree = {
 				uses = 1
 				category = military_police_tech
 			}
-			add_to_variable = { order = 10 } 
+			add_to_variable = {
+				order = 10
+			}
 			custom_effect_tooltip = get_ten_percent_of_order
 		}
 	}
@@ -408,41 +474,56 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		mutually_exclusive = {focus = GLS_mascs}
-		prerequisite = {focus = GLS_hell focus = GLS_holy_book}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		mutually_exclusive = {
+			focus = GLS_mascs
+		}
+		prerequisite = {
+			focus = GLS_hell
+			focus = GLS_holy_book
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.28
 				days = 1
 			}
-			add_to_variable = { order = 10 } 
+			add_to_variable = {
+				order = 10
+			}
 			custom_effect_tooltip = get_ten_percent_of_order
 			if = {
-				limit = { has_idea = GLS_fathers_and_not_fathers_3 }
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_3
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_3
 					add_idea = GLS_fathers_and_not_fathers_7
 				}
 			}
 			else_if = {
-				limit =  {has_idea = GLS_fathers_and_not_fathers_4 }
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_4
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_4
 					add_idea = GLS_fathers_and_not_fathers_8
 				}
 			}
-
 			else_if = {
-				limit = { has_idea = GLS_fathers_and_not_fathers_5 }
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_5
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_5
 					add_idea = GLS_fathers_and_not_fathers_9
 				}
 			}
-
 			else_if = {
-				limit = { has_idea = GLS_fathers_and_not_fathers_6 }
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_6
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_6
 					add_idea = GLS_fathers_and_not_fathers_10
@@ -459,48 +540,65 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		mutually_exclusive = {focus = GLS_KALASH }
-		prerequisite = {focus = GLS_hell focus = GLS_holy_book}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		mutually_exclusive = {
+			focus = GLS_KALASH
+		}
+		prerequisite = {
+			focus = GLS_hell
+			focus = GLS_holy_book
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.29
 				days = 1
 			}
-			add_to_variable = { freedom = 10 } 
+			add_to_variable = {
+				freedom = 10
+			}
 			custom_effect_tooltip = get_ten_percent_of_freedom
 			if = {
-				limit = {has_idea = GLS_fathers_and_not_fathers_3}
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_3
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_3
 					add_idea = GLS_fathers_and_not_fathers_11
 				}
 			}
 			if = {
-				limit = {has_idea = GLS_fathers_and_not_fathers_31}
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_31
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_31
 					add_idea = GLS_fathers_and_not_fathers_111
 				}
 			}
 			else_if = {
-				limit = {has_idea = GLS_fathers_and_not_fathers_4}
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_4
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_4
 					add_idea = GLS_fathers_and_not_fathers_12
 				}
 			}
-
 			else_if = {
-				limit = {has_idea = GLS_fathers_and_not_fathers_5}
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_5
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_5
 					add_idea = GLS_fathers_and_not_fathers_13
 				}
 			}
-
 			else_if = {
-				limit = {has_idea = GLS_fathers_and_not_fathers_6}
+				limit = {
+					has_idea = GLS_fathers_and_not_fathers_6
+				}
 				swap_ideas = {
 					remove_idea = GLS_fathers_and_not_fathers_6
 					add_idea = GLS_fathers_and_not_fathers_14
@@ -517,18 +615,23 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_mascs focus = GLS_KALASH}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_mascs
+			focus = GLS_KALASH
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.30
 				days = 1
 			}
 			add_research_slot = 1
 			clamp_variable = {
-    			var = ready_charge
-    			min = 0
-   				max = 100
+				var = ready_charge
+				min = 0
+				max = 100
 			}
 			set_country_flag = GLS_kurchatov_project_start
 			custom_effect_tooltip = unlock_kurchatov_project
@@ -543,12 +646,20 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		mutually_exclusive = {focus = GLS_free_mind}
-		prerequisite = {focus = GLS_kurchatov}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		mutually_exclusive = {
+			focus = GLS_free_mind
+		}
+		prerequisite = {
+			focus = GLS_kurchatov
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			add_stability = -0.15
-			add_to_variable = { order = 10 } 
+			add_to_variable = {
+				order = 10
+			}
 			custom_effect_tooltip = get_ten_percent_of_order
 			custom_effect_tooltip = get_one_percent_of_ready_charge_weekly
 		}
@@ -562,15 +673,23 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		mutually_exclusive = {focus = GLS_sharashki}
-		prerequisite = {focus = GLS_kurchatov}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		mutually_exclusive = {
+			focus = GLS_sharashki
+		}
+		prerequisite = {
+			focus = GLS_kurchatov
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			add_stability = 0.1
-			add_to_variable = { freedom = 10 } 
+			add_to_variable = {
+				freedom = 10
+			}
 			custom_effect_tooltip = get_ten_percent_of_freedom
 			if = {
-				limit = { 
+				limit = {
 					has_idea = GLS_memories_of_rodina_2
 				}
 				swap_ideas = {
@@ -579,7 +698,7 @@ focus_tree = {
 				}
 			}
 			else_if = {
-				limit = { 
+				limit = {
 					has_idea = GLS_memories_of_rodina_3
 				}
 				swap_ideas = {
@@ -598,9 +717,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_free_mind focus = GLS_sharashki}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_free_mind
+			focus = GLS_sharashki
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.32
 				days = 1
@@ -608,10 +732,11 @@ focus_tree = {
 			set_country_flag = GLS_nuclear_strike_start
 			custom_effect_tooltip = unlock_nuclear_strike
 			custom_effect_tooltip = adds_one_nuclear_charge
-			add_to_variable = { nuclear_charges = 1 }
+			add_to_variable = {
+				nuclear_charges = 1
+			}
 		}
 	}
-	
 	focus = {
 		id = GLS_expedition
 		icon = GFX_expedition
@@ -622,12 +747,18 @@ focus_tree = {
 			base = 10
 		}
 		available = {
-			NOT = { country_exists = MOT }
+			NOT = {
+				country_exists = MOT
+			}
 		}
-		prerequisite = {focus = GLS_pereputie}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
-		country_event = {
+		prerequisite = {
+			focus = GLS_pereputie
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			country_event = {
 				id = GLS.31
 				days = 1
 			}
@@ -644,10 +775,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_expedition}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = GLS_expedition
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-		country_event = {
+			country_event = {
 				id = GLS.35
 				days = 1
 			}
@@ -664,10 +799,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_marouders}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
-		country_event = {
+		prerequisite = {
+			focus = GLS_marouders
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			country_event = {
 				id = GLS.38
 				days = 1
 			}
@@ -684,9 +823,13 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_punisher}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_punisher
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.36
 				days = 1
@@ -704,9 +847,13 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_prayers}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = { 
+		prerequisite = {
+			focus = GLS_prayers
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			country_event = {
 				id = GLS.37
 				days = 1
@@ -730,10 +877,18 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
-		prerequisite = {focus = GLS_nibelungs}
-		prerequisite = {focus = GLS_zhukov}
-		prerequisite = {focus = GLS_clear}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = GLS_nibelungs
+		}
+		prerequisite = {
+			focus = GLS_zhukov
+		}
+		prerequisite = {
+			focus = GLS_clear
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		will_lead_to_war_with = EDM
 		will_lead_to_war_with = WPK
 		will_lead_to_war_with = URC
@@ -741,7 +896,7 @@ focus_tree = {
 		will_lead_to_war_with = TAR
 		will_lead_to_war_with = OCH
 		will_lead_to_war_with = DIS
-		completion_reward = { 
+		completion_reward = {
 			declare_war_on = {
 				target = EDM
 				type = annex_everything

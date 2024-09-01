@@ -1,16 +1,13 @@
 focus_tree = {
 	id = Lwov_focus_tretia_faza
-	
 	country = {
-		factor = 0	
+		factor = 0
 		modifier = {
 			add = 10
 			tag = LWV
 		}
 	}
-	
 	default = no
-	
 	focus = {
 		id = LWV_osviatit_land
 		icon = GFX_osviatit_land
@@ -18,13 +15,15 @@ focus_tree = {
 		y = 0
 		cost = 5
 		ai_will_do = {
-		factor = 1
+			factor = 1
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-			add_ideas = LWV_begushie_otstupniki		
+			add_ideas = LWV_begushie_otstupniki
 			add_stability = 0.05
-			add_political_power = 50		
+			add_political_power = 50
 			country_event = {
 				id = LWV.38
 				days = 1
@@ -33,9 +32,9 @@ focus_tree = {
 			every_neighbor_country = {
 				country_event = LWV.31
 				days = 5
-			}	
+			}
 		}
-	}	
+	}
 	focus = {
 		id = LWV_nizlojit_sektantov
 		icon = GFX_nizlojit_sektantov
@@ -45,13 +44,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_osviatit_land }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_osviatit_land
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-			swap_ideas ={
+			swap_ideas = {
 				remove_idea = heaven_on_earth_4
 				add_idea = LWV_voina_vo_tme
-			}	
+			}
 		}
 	}
 	focus = {
@@ -63,65 +66,107 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_nizlojit_sektantov }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_nizlojit_sektantov
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-		
-		if = {
-			limit = { has_idea = LWV_scared_war_upgrate }
-				swap_ideas ={
+			if = {
+				limit = {
+					has_idea = LWV_scared_war_upgrate
+				}
+				swap_ideas = {
 					remove_idea = LWV_scared_war_upgrate
 					add_idea = LWV_scared_war_upgrate_ultra
 				}
-		}
-		else = {
-			if = {
-				limit = { has_idea = LWV_scared_war }
-					swap_ideas ={
+			}
+			else = {
+				if = {
+					limit = {
+						has_idea = LWV_scared_war
+					}
+					swap_ideas = {
 						remove_idea = LWV_scared_war
 						add_idea = LWV_scared_war_upgrate
 					}
-			}
-			else = {
-				add_ideas = LWV_scared_war
-			}
-		}
-	
-		LWV = {	
-			division_template = { 
-				name = "Bojiya dlan"
-				division_names_group = LWV_CAM_02
-				is_locked = no
-				regiments = {
-					infantry  = { x = 0 y = 0 }
-					infantry  = { x = 1 y = 0 }
-					infantry  = { x = 0 y = 1 }
-					infantry  = { x = 1 y = 1 }
-					infantry  = { x = 0 y = 2 }
-					infantry  = { x = 2 y = 0 }
-					infantry  = { x = 2 y = 1 }
-					infantry  = { x = 2 y = 2 }
-					infantry  = { x = 2 y = 3 }
-					infantry  = { x = 2 y = 4 }	
 				}
-				support = {
-					engineer = { x = 0 y = 0 }
-					artillery = { x = 0 y = 1 }	
-				}
-				priority = 0
-			}				
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = LWV
-					is_fully_controlled_by = ROOT
-				}
-				create_unit = {
-					division = "division_template = \"Bojiya dlan\" start_experience_factor = 1 start_equipment_factor = 1.0"
-					owner = ROOT
-					count = 1
+				else = {
+					add_ideas = LWV_scared_war
 				}
 			}
-		}
+			LWV = {
+				division_template = {
+					name = "Bojiya dlan"
+					division_names_group = LWV_CAM_02
+					is_locked = no
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 3
+						}
+						infantry = {
+							x = 2
+							y = 4
+						}
+					}
+					support = {
+						engineer = {
+							x = 0
+							y = 0
+						}
+						artillery = {
+							x = 0
+							y = 1
+						}
+					}
+					priority = 0
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = LWV
+						is_fully_controlled_by = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Bojiya dlan\" start_experience_factor = 1 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 1
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -133,29 +178,36 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_nizlojit_sektantov }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		if = {
-		limit = { has_idea = LWV_scared_war_upgrate }
-			swap_ideas ={
-				remove_idea = LWV_scared_war_upgrate
-				add_idea = LWV_scared_war_upgrate_ultra
-			}
+		prerequisite = {
+			focus = LWV_nizlojit_sektantov
 		}
-		else = {
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			if = {
-				limit = { has_idea = LWV_scared_war }
-					swap_ideas ={
+				limit = {
+					has_idea = LWV_scared_war_upgrate
+				}
+				swap_ideas = {
+					remove_idea = LWV_scared_war_upgrate
+					add_idea = LWV_scared_war_upgrate_ultra
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						has_idea = LWV_scared_war
+					}
+					swap_ideas = {
 						remove_idea = LWV_scared_war
 						add_idea = LWV_scared_war_upgrate
 					}
+				}
+				else = {
+					add_ideas = LWV_scared_war
+				}
 			}
-			else = {
-				add_ideas = LWV_scared_war
-			}
-		}	
 		}
 	}
 	focus = {
@@ -167,29 +219,36 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_nizlojit_sektantov }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_nizlojit_sektantov
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-		
-		if = {
-			limit = { has_idea = LWV_scared_war_upgrate }
-				swap_ideas ={
+			if = {
+				limit = {
+					has_idea = LWV_scared_war_upgrate
+				}
+				swap_ideas = {
 					remove_idea = LWV_scared_war_upgrate
 					add_idea = LWV_scared_war_upgrate_ultra
 				}
-		}
-		else = {
-			if = {
-				limit = { has_idea = LWV_scared_war }
-					swap_ideas ={
+			}
+			else = {
+				if = {
+					limit = {
+						has_idea = LWV_scared_war
+					}
+					swap_ideas = {
 						remove_idea = LWV_scared_war
 						add_idea = LWV_scared_war_upgrate
 					}
+				}
+				else = {
+					add_ideas = LWV_scared_war
+				}
 			}
-			else = {
-				add_ideas = LWV_scared_war
-			}
-		}	
 		}
 	}
 	focus = {
@@ -201,10 +260,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_boji_gnev }
-		prerequisite = { focus = LWV_voorujitsia_veroy }
-		prerequisite = { focus = LWV_blagie_namerineya }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_boji_gnev
+		}
+		prerequisite = {
+			focus = LWV_voorujitsia_veroy
+		}
+		prerequisite = {
+			focus = LWV_blagie_namerineya
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_country_leader_trait = LWV_defender_of_faith
 		}
@@ -225,9 +292,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		available = { has_war = no }
+		prerequisite = {
+			focus = LWV_kajdi_doljen_uslishat
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_war = no
+		}
 		will_lead_to_war_with = WOD
 		will_lead_to_war_with = YWD
 		will_lead_to_war_with = MOD
@@ -262,9 +335,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		available = { has_war = no }
+		prerequisite = {
+			focus = LWV_kajdi_doljen_uslishat
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_war = no
+		}
 		will_lead_to_war_with = MAP
 		will_lead_to_war_with = POP
 		will_lead_to_war_with = CST
@@ -303,9 +382,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		available = { has_war = no }
+		prerequisite = {
+			focus = LWV_kajdi_doljen_uslishat
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_war = no
+		}
 		will_lead_to_war_with = ODS
 		will_lead_to_war_with = HER
 		will_lead_to_war_with = CRI
@@ -369,9 +454,15 @@ focus_tree = {
 				is_neighbor_of = LUG
 			}
 		}
-		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		available = { has_war = no }
+		prerequisite = {
+			focus = LWV_kajdi_doljen_uslishat
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_war = no
+		}
 		will_lead_to_war_with = FUD
 		will_lead_to_war_with = AZB
 		will_lead_to_war_with = ECD
@@ -432,7 +523,7 @@ focus_tree = {
 			declare_war_on = {
 				target = LUG
 				type = annex_everything
-			}	
+			}
 		}
 	}
 	focus = {
@@ -455,9 +546,15 @@ focus_tree = {
 				is_neighbor_of = SUM
 			}
 		}
-		prerequisite = { focus = LWV_kajdi_doljen_uslishat }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		available = { has_war = no }
+		prerequisite = {
+			focus = LWV_kajdi_doljen_uslishat
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_war = no
+		}
 		will_lead_to_war_with = VDS
 		will_lead_to_war_with = DIB
 		will_lead_to_war_with = BIH
@@ -506,20 +603,33 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			202 = { is_core_of = LWV }
-		}	
-		
-		prerequisite = { focus = LWV_osviatit_bessarabiu }
-		prerequisite = { focus = LWV_osviatit_sever }
-		prerequisite = { focus = LWV_osviatit_iug }
-		prerequisite = { focus = LWV_osviatit_malorossiu }
-		prerequisite = { focus = LWV_osviatit_dikie_lesa }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+			202 = {
+				is_core_of = LWV
+			}
+		}
+		prerequisite = {
+			focus = LWV_osviatit_bessarabiu
+		}
+		prerequisite = {
+			focus = LWV_osviatit_sever
+		}
+		prerequisite = {
+			focus = LWV_osviatit_iug
+		}
+		prerequisite = {
+			focus = LWV_osviatit_malorossiu
+		}
+		prerequisite = {
+			focus = LWV_osviatit_dikie_lesa
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			remove_country_leader_trait = New_vera
-			add_country_leader_trait = LWV_avtor_sviatosti		
+			add_country_leader_trait = LWV_avtor_sviatosti
 			country_event = {
-				id = LWV.39 
+				id = LWV.39
 				days = 1
 			}
 		}
@@ -533,15 +643,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_kievan_vselen_sobor }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_kievan_vselen_sobor
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 100
-            set_country_flag = access_to_justifications_of_war
-            hidden_effect = { add_ideas = lower_time_for_justification_of_wargoal }    
-            custom_effect_tooltip = can_declare_war_tt
+			set_country_flag = access_to_justifications_of_war
+			hidden_effect = {
+				add_ideas = lower_time_for_justification_of_wargoal
+			}
+			custom_effect_tooltip = can_declare_war_tt
 			country_event = {
-				id = LWV.40 
+				id = LWV.40
 				days = 1
 			}
 		}
@@ -555,8 +671,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_sviatoe_pisanie }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_sviatoe_pisanie
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 50
 		}
@@ -570,8 +690,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_new_ikonopis }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_new_ikonopis
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 50
 			every_owned_state = {
@@ -589,16 +713,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_new_ikonopis }
-		prerequisite = { focus = LWV_religion_isskustvo }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_new_ikonopis
+		}
+		prerequisite = {
+			focus = LWV_religion_isskustvo
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_political_power = 15
 		}
 	}
-	
 	focus = {
 		id = LWV_religion_obrazovanie
 		icon = GFX_religion_obrazovanie
@@ -608,8 +737,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_rukopolojit_vernih }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_rukopolojit_vernih
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 50
 		}
@@ -623,12 +756,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_rukopolojit_vernih }
-		prerequisite = { focus = LWV_religion_obrazovanie }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {	
-			add_ideas = LWV_rianost_yonih	
-			recruit_character = LWV_MARIA	
+		prerequisite = {
+			focus = LWV_rukopolojit_vernih
+		}
+		prerequisite = {
+			focus = LWV_religion_obrazovanie
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = LWV_rianost_yonih
+			recruit_character = LWV_MARIA
 		}
 	}
 	focus = {
@@ -640,19 +779,20 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_vzrastit_unih }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_vzrastit_unih
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_stability = -0.15
 			add_political_power = 200
 			set_country_flag = uprazdnit_troitsy
-			mark_focus_tree_layout_dirty = yes			
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	
-######################################### ВТОРОЕ ДРЕВО ФОКУСОВ ###############################################	
-	
-		
+	######################################### ВТОРОЕ ДРЕВО ФОКУСОВ ###############################################	
 	focus = {
 		id = LWV_vernii
 		icon = GFX_vernii
@@ -660,23 +800,25 @@ focus_tree = {
 		y = 0
 		cost = 5
 		ai_will_do = {
-		factor = 1
+			factor = 1
 		}
 		available = {
 			has_country_flag = uprazdnit_troitsy
 		}
 		allow_branch = {
 			has_country_flag = uprazdnit_troitsy
-		}	
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-			add_war_support	= 0.01
+			add_war_support = 0.01
 			country_event = {
-				id = LWV.37 
+				id = LWV.37
 				days = 1
 			}
 		}
-	}	
+	}
 	focus = {
 		id = LWV_uchredit_boji_perst
 		icon = GFX_uchredit_boji_perst
@@ -686,11 +828,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_vernii }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {		
-			add_ideas = LWV_boji_perst_cut		
-			set_country_flag = reshenia_na_boji_perst		
+		prerequisite = {
+			focus = LWV_vernii
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = LWV_boji_perst_cut
+			set_country_flag = reshenia_na_boji_perst
 		}
 	}
 	focus = {
@@ -702,16 +848,20 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_vernii }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {		
+		prerequisite = {
+			focus = LWV_vernii
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
 			891 = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-			}			
+			}
 		}
 	}
 	focus = {
@@ -723,14 +873,23 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_uchredit_boji_perst }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {		
-			remove_ideas = LWV_begushie_otstupniki			
-			every_neighbor_country = { 
+		prerequisite = {
+			focus = LWV_uchredit_boji_perst
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			remove_ideas = LWV_begushie_otstupniki
+			every_neighbor_country = {
 				if = {
-					limit = { has_idea = LWV_bejinsy_from_holy_land } 			
-					country_event = { id = LWV.32 days = 1 }
+					limit = {
+						has_idea = LWV_bejinsy_from_holy_land
+					}
+					country_event = {
+						id = LWV.32
+						days = 1
+					}
 				}
 			}
 		}
@@ -744,10 +903,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_presledovat_otstupnikov }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		prerequisite = {
+			focus = LWV_presledovat_otstupnikov
 		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
 	}
 	focus = {
 		id = LWV_pooshrit_dostoinih
@@ -758,8 +920,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_blagoslovlenie }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_blagoslovlenie
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = -100
 			random_owned_state = {
@@ -769,7 +935,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			
 		}
 	}
 	focus = {
@@ -781,12 +946,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_pooshrit_dostoinih }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_pooshrit_dostoinih
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_ideas = LWV_holy_gramots
 		}
-	}	
+	}
 	focus = {
 		id = LWV_razoslat_misionerov
 		icon = GFX_razoslat_misionerov
@@ -796,16 +965,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_rasprostraniat_religiu }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_rasprostraniat_religiu
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-		
-		custom_effect_tooltip = razoslat_missionerov
-		
-		set_country_flag = otpravlini_misioneri	
-		
-		
-		
+			custom_effect_tooltip = razoslat_missionerov
+			set_country_flag = otpravlini_misioneri
 		}
 	}
 	focus = {
@@ -817,8 +985,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_rasprostraniat_religiu }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_rasprostraniat_religiu
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_offsite_building = {
 				type = arms_factory
@@ -835,8 +1007,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_vruchit_sviatii_gramoti }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_vruchit_sviatii_gramoti
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			random_owned_state = {
 				add_building_construction = {
@@ -856,8 +1032,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_vruchit_sviatii_gramoti }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_vruchit_sviatii_gramoti
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 10
 			random_owned_state = {
@@ -868,7 +1048,7 @@ focus_tree = {
 				}
 			}
 		}
-	}	
+	}
 	focus = {
 		id = LWV_podgotovit_pochvu
 		icon = GFX_podgotovit_pochvu
@@ -878,10 +1058,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_razoslat_misionerov }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+		prerequisite = {
+			focus = LWV_razoslat_misionerov
 		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {}
 	}
 	focus = {
 		id = LWV_zavershit_industrialization
@@ -892,8 +1075,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_nasitit_narod focus = LWV_kovat_mechi }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_nasitit_narod
+			focus = LWV_kovat_mechi
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_ideas = LWV_new_promishlenost
 			country_event = {
@@ -911,8 +1099,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_zvon_kolocolov }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_zvon_kolocolov
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 10
 			random_owned_state = {
@@ -924,7 +1116,6 @@ focus_tree = {
 			}
 		}
 	}
-	
 	focus = {
 		id = LWV_zaseet_semena_pravednosti
 		icon = GFX_zaseet_semena_pravednosti
@@ -934,24 +1125,34 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_podgotovit_pochvu }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 50		
+		prerequisite = {
+			focus = LWV_podgotovit_pochvu
 		}
-	}	
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
 	focus = {
 		id = LWV_concentrirovat_promku
 		icon = GFX_concentrirovat_promku
 		x = 38
 		y = 6
 		cost = 5
-		mutually_exclusive = { focus = LWV_rasssredotochit_promku }
+		mutually_exclusive = {
+			focus = LWV_rasssredotochit_promku
+		}
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_zavershit_industrialization }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_zavershit_industrialization
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = LWV_new_promishlenost
@@ -971,23 +1172,29 @@ focus_tree = {
 		x = 42
 		y = 6
 		cost = 5
-		mutually_exclusive = { focus = LWV_concentrirovat_promku }
+		mutually_exclusive = {
+			focus = LWV_concentrirovat_promku
+		}
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_zavershit_industrialization }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_zavershit_industrialization
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				name = dispersed_industry_bonus
 				bonus = 1
 				uses = 1
 				technology = dispersed_industry
-			}	
+			}
 			swap_ideas = {
 				remove_idea = LWV_new_promishlenost
 				add_idea = LWV_new_promishlenost_raspredelit_1
-			}	
+			}
 		}
 	}
 	focus = {
@@ -999,17 +1206,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_tserkovni_hor }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_tserkovni_hor
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-			add_political_power = 10	
+			add_political_power = 10
 			random_owned_state = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-			}			
+			}
 		}
 	}
 	focus = {
@@ -1021,8 +1232,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_zaseet_semena_pravednosti }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_zaseet_semena_pravednosti
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 5
 			country_event = {
@@ -1047,18 +1262,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_concentrirovat_promku }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_concentrirovat_promku
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			if = {
-				limit = {has_idea = LWV_new_promishlenost_concetrirovat_1}
+				limit = {
+					has_idea = LWV_new_promishlenost_concetrirovat_1
+				}
 				swap_ideas = {
 					remove_idea = LWV_new_promishlenost_concetrirovat_1
 					add_idea = LWV_new_promishlenost_concetrirovat_2
 				}
 			}
 			else_if = {
-				limit = {has_idea = LWV_contsetrirovat_vostanovleniye_1}
+				limit = {
+					has_idea = LWV_contsetrirovat_vostanovleniye_1
+				}
 				swap_ideas = {
 					remove_idea = LWV_contsetrirovat_vostanovleniye_1
 					add_idea = LWV_contsetrirovat_vostanovleniye_2
@@ -1069,7 +1292,7 @@ focus_tree = {
 					remove_idea = LWV_contsetrirovat_raschirit_1
 					add_idea = LWV_contsetrirovat_raschirit_2
 				}
-			}	
+			}
 		}
 	}
 	focus = {
@@ -1081,65 +1304,86 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_concentrirovat_promku focus = LWV_rasssredotochit_promku }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_concentrirovat_promku
+			focus = LWV_rasssredotochit_promku
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-		if = {
-			limit = { has_idea = LWV_new_promishlenost_concetrirovat_1 }
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost_concetrirovat_1
-				add_idea = LWV_contsetrirovat_vostanovleniye_1
-			}			
-		}
-		else_if = {
-			limit = {has_idea = LWV_new_promishlenost_raspredelit_1}
-			swap_ideas = {
-			remove_idea = LWV_new_promishlenost_raspredelit_1
-			add_idea = LWV_raspredelit_vostanovleniye_1
+			if = {
+				limit = {
+					has_idea = LWV_new_promishlenost_concetrirovat_1
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_concetrirovat_1
+					add_idea = LWV_contsetrirovat_vostanovleniye_1
+				}
 			}
-		}
-		if = {
-			limit = { has_idea = LWV_new_promishlenost_concetrirovat_2 }
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost_concetrirovat_2
-				add_idea = LWV_contsetrirovat_vostanovleniye_2
-			}			
-		}
-		else_if = {
-			limit = {has_idea = LWV_new_promishlenost_raspredelit_2}
-			swap_ideas = {
-			remove_idea = LWV_new_promishlenost_raspredelit_2
-			add_idea = LWV_raspredelit_vostanovleniye_2
+			else_if = {
+				limit = {
+					has_idea = LWV_new_promishlenost_raspredelit_1
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_raspredelit_1
+					add_idea = LWV_raspredelit_vostanovleniye_1
+				}
 			}
-		}
-		if = {
-			limit = { has_idea = LWV_new_promishlenost_concetrirovat_3 }
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost_concetrirovat_3
-				add_idea = LWV_contsetrirovat_vostanovleniye_3
-			}			
-		}
-		else_if = {
-			limit = {has_idea = LWV_new_promishlenost_raspredelit_3}
-			swap_ideas = {
-			remove_idea = LWV_new_promishlenost_raspredelit_3
-			add_idea = LWV_raspredelit_vostanovleniye_3
+			if = {
+				limit = {
+					has_idea = LWV_new_promishlenost_concetrirovat_2
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_concetrirovat_2
+					add_idea = LWV_contsetrirovat_vostanovleniye_2
+				}
 			}
-		}
-		if = {
-			limit = { has_idea = LWV_new_promishlenost_concetrirovat_4 }
-			swap_ideas = {
-				remove_idea = LWV_new_promishlenost_concetrirovat_4
-				add_idea = LWV_contsetrirovat_vostanovleniye_4
-			}			
-		}
-		else_if = {
-			limit = {has_idea = LWV_new_promishlenost_raspredelit_4}
-			swap_ideas = {
-			remove_idea = LWV_new_promishlenost_raspredelit_4
-			add_idea = LWV_raspredelit_vostanovleniye_4
+			else_if = {
+				limit = {
+					has_idea = LWV_new_promishlenost_raspredelit_2
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_raspredelit_2
+					add_idea = LWV_raspredelit_vostanovleniye_2
+				}
 			}
-		}
+			if = {
+				limit = {
+					has_idea = LWV_new_promishlenost_concetrirovat_3
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_concetrirovat_3
+					add_idea = LWV_contsetrirovat_vostanovleniye_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = LWV_new_promishlenost_raspredelit_3
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_raspredelit_3
+					add_idea = LWV_raspredelit_vostanovleniye_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = LWV_new_promishlenost_concetrirovat_4
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_concetrirovat_4
+					add_idea = LWV_contsetrirovat_vostanovleniye_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = LWV_new_promishlenost_raspredelit_4
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_raspredelit_4
+					add_idea = LWV_raspredelit_vostanovleniye_4
+				}
+			}
 		}
 	}
 	focus = {
@@ -1151,18 +1395,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_rasssredotochit_promku }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_rasssredotochit_promku
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			if = {
-				limit = {has_idea = LWV_new_promishlenost_concetrirovat_1}
+				limit = {
+					has_idea = LWV_new_promishlenost_concetrirovat_1
+				}
 				swap_ideas = {
 					remove_idea = LWV_new_promishlenost_raspredelit_1
 					add_idea = LWV_new_promishlenost_raspredelit_2
 				}
 			}
 			else_if = {
-				limit = {has_idea = LWV_contsetrirovat_vostanovleniye_1}
+				limit = {
+					has_idea = LWV_contsetrirovat_vostanovleniye_1
+				}
 				swap_ideas = {
 					remove_idea = LWV_raspredelit_vostanovleniye_1
 					add_idea = LWV_raspredelit_vostanovleniye_2
@@ -1173,7 +1425,7 @@ focus_tree = {
 					remove_idea = LWV_raspredelit_raschirit_1
 					add_idea = LWV_raspredelit_raschirit_2
 				}
-			}			
+			}
 		}
 	}
 	focus = {
@@ -1185,14 +1437,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_blesk_kresta }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_blesk_kresta
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 20
 			country_event = {
-				id = LWV.35 
+				id = LWV.35
 				days = 1
-			}	
+			}
 			random_owned_state = {
 				add_building_construction = {
 					type = industrial_complex
@@ -1201,7 +1457,7 @@ focus_tree = {
 				}
 			}
 		}
-	}	
+	}
 	focus = {
 		id = LWV_Create_us
 		icon = GFX_Create_us
@@ -1211,12 +1467,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_Our_bog }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_Our_bog
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-			add_political_power = 5		
+			add_political_power = 5
 			country_event = {
-				id = LWV.36 
+				id = LWV.36
 				days = 1
 			}
 		}
@@ -1230,18 +1490,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_effektivnost }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_effektivnost
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			if = {
-				limit = {has_idea = LWV_new_promishlenost_concetrirovat_2}
+				limit = {
+					has_idea = LWV_new_promishlenost_concetrirovat_2
+				}
 				swap_ideas = {
 					remove_idea = LWV_new_promishlenost_concetrirovat_2
 					add_idea = LWV_new_promishlenost_concetrirovat_3
 				}
 			}
 			else_if = {
-				limit = {has_idea = LWV_contsetrirovat_vostanovleniye_2}
+				limit = {
+					has_idea = LWV_contsetrirovat_vostanovleniye_2
+				}
 				swap_ideas = {
 					remove_idea = LWV_contsetrirovat_vostanovleniye_2
 					add_idea = LWV_contsetrirovat_vostanovleniye_3
@@ -1252,7 +1520,7 @@ focus_tree = {
 					remove_idea = LWV_contsetrirovat_raschirit_2
 					add_idea = LWV_raspredelit_raschirit_3
 				}
-			}			
+			}
 		}
 	}
 	focus = {
@@ -1264,82 +1532,105 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_vosstanovlenie }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_vosstanovlenie
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-			owned_states = { from = 3
+			owned_states = {
+				FROM = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
-		if = {
-			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_1 }
-			swap_ideas = {
-				remove_idea = LWV_contsetrirovat_vostanovleniye_1
-				add_idea = LWV_contsetrirovat_raschirit_1
-			}			
-		}
-		else_if = {
-			limit = {has_idea = LWV_raspredelit_vostanovleniye_1}
-			swap_ideas = {
-			remove_idea = LWV_raspredelit_vostanovleniye_1
-			add_idea = LWV_raspredelit_raschirit_1
+			if = {
+				limit = {
+					has_idea = LWV_contsetrirovat_vostanovleniye_1
+				}
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_vostanovleniye_1
+					add_idea = LWV_contsetrirovat_raschirit_1
+				}
 			}
-		}
-		if = {
-			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_2 }
-			swap_ideas = {
-				remove_idea = LWV_contsetrirovat_vostanovleniye_2
-				add_idea = LWV_contsetrirovat_raschirit_2
-			}			
-		}
-		else_if = {
-			limit = {has_idea = LWV_raspredelit_vostanovleniye_2}
-			swap_ideas = {
-			remove_idea = LWV_new_promishlenost_raspredelit_2
-			add_idea = LWV_raspredelit_raschirit_2
+			else_if = {
+				limit = {
+					has_idea = LWV_raspredelit_vostanovleniye_1
+				}
+				swap_ideas = {
+					remove_idea = LWV_raspredelit_vostanovleniye_1
+					add_idea = LWV_raspredelit_raschirit_1
+				}
 			}
-		}
-		if = {
-			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_3 }
-			swap_ideas = {
-				remove_idea = LWV_contsetrirovat_vostanovleniye_3
-				add_idea = LWV_contsetrirovat_raschirit_3
-			}			
-		}
-		else_if = {
-			limit = {has_idea = LWV_raspredelit_vostanovleniye_3}
-			swap_ideas = {
-			remove_idea = LWV_raspredelit_vostanovleniye_3
-			add_idea = LWV_raspredelit_vostanovleniye_3
+			if = {
+				limit = {
+					has_idea = LWV_contsetrirovat_vostanovleniye_2
+				}
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_vostanovleniye_2
+					add_idea = LWV_contsetrirovat_raschirit_2
+				}
 			}
-		}
-		if = {
-			limit = { has_idea = LWV_contsetrirovat_vostanovleniye_4 }
-			swap_ideas = {
-				remove_idea = LWV_contsetrirovat_vostanovleniye_4
-				add_idea = LWV_contsetrirovat_raschirit_4
-			}			
-		}
-		else_if = {
-			limit = {has_idea = LWV_raspredelit_vostanovleniye_4}
-			swap_ideas = {
-			remove_idea = LWV_raspredelit_vostanovleniye_4
-			add_idea = LWV_raspredelit_raschirit_4
+			else_if = {
+				limit = {
+					has_idea = LWV_raspredelit_vostanovleniye_2
+				}
+				swap_ideas = {
+					remove_idea = LWV_new_promishlenost_raspredelit_2
+					add_idea = LWV_raspredelit_raschirit_2
+				}
 			}
-		}
-		every_owned_state = {
+			if = {
+				limit = {
+					has_idea = LWV_contsetrirovat_vostanovleniye_3
+				}
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_vostanovleniye_3
+					add_idea = LWV_contsetrirovat_raschirit_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = LWV_raspredelit_vostanovleniye_3
+				}
+				swap_ideas = {
+					remove_idea = LWV_raspredelit_vostanovleniye_3
+					add_idea = LWV_raspredelit_vostanovleniye_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = LWV_contsetrirovat_vostanovleniye_4
+				}
+				swap_ideas = {
+					remove_idea = LWV_contsetrirovat_vostanovleniye_4
+					add_idea = LWV_contsetrirovat_raschirit_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = LWV_raspredelit_vostanovleniye_4
+				}
+				swap_ideas = {
+					remove_idea = LWV_raspredelit_vostanovleniye_4
+					add_idea = LWV_raspredelit_raschirit_4
+				}
+			}
+			every_owned_state = {
 				if = {
-					limit = { infrastructure < 3 }
+					limit = {
+						infrastructure < 3
+					}
 					add_building_construction = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
-					}	
-				}			
-			}	
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -1351,21 +1642,29 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_kolichestvo }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_kolichestvo
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			if = {
-				limit = {has_idea = LWV_new_promishlenost_raspredelit_2}
+				limit = {
+					has_idea = LWV_new_promishlenost_raspredelit_2
+				}
 				swap_ideas = {
 					remove_idea = LWV_new_promishlenost_raspredelit_2
 					add_idea = LWV_new_promishlenost_raspredelit_3
 				}
 			}
 			else_if = {
-				limit = {has_idea = LWV_raspredelit_vostanovleniye_2}
+				limit = {
+					has_idea = LWV_raspredelit_vostanovleniye_2
+				}
 				swap_ideas = {
-					remove_idea =  LWV_raspredelit_vostanovleniye_2
-					add_idea =  LWV_raspredelit_vostanovleniye_3
+					remove_idea = LWV_raspredelit_vostanovleniye_2
+					add_idea = LWV_raspredelit_vostanovleniye_3
 				}
 			}
 			else = {
@@ -1373,9 +1672,9 @@ focus_tree = {
 					remove_idea = LWV_raspredelit_raschirit_2
 					add_idea = LWV_raspredelit_raschirit_3
 				}
-			}	
+			}
 			country_event = {
-				id = LWV.45 
+				id = LWV.45
 				days = 1
 			}
 		}
@@ -1389,14 +1688,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_our_creator }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_our_creator
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-			add_political_power = 20	
+			add_political_power = 20
 			country_event = {
 				id = LWV.42
 				days = 1
-			}	
+			}
 			random_owned_state = {
 				add_building_construction = {
 					type = industrial_complex
@@ -1415,12 +1718,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_Create_us }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_Create_us
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
-			add_political_power = 5	
+			add_political_power = 5
 			country_event = {
-				id = LWV.34 
+				id = LWV.34
 				days = 1
 			}
 		}
@@ -1434,18 +1741,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_obuchit_upravlentsev }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_obuchit_upravlentsev
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			if = {
-				limit = {has_idea = LWV_new_promishlenost_concetrirovat_3}
+				limit = {
+					has_idea = LWV_new_promishlenost_concetrirovat_3
+				}
 				swap_ideas = {
 					remove_idea = LWV_new_promishlenost_concetrirovat_3
 					add_idea = LWV_new_promishlenost_concetrirovat_4
 				}
 			}
 			else_if = {
-				limit = {has_idea = LWV_contsetrirovat_vostanovleniye_3}
+				limit = {
+					has_idea = LWV_contsetrirovat_vostanovleniye_3
+				}
 				swap_ideas = {
 					remove_idea = LWV_contsetrirovat_vostanovleniye_3
 					add_idea = LWV_contsetrirovat_vostanovleniye_4
@@ -1456,14 +1771,14 @@ focus_tree = {
 					remove_idea = LWV_contsetrirovat_raschirit_3
 					add_idea = LWV_raspredelit_raschirit_4
 				}
-			}	
+			}
 			add_tech_bonus = {
 				name = industry_bonus
 				bonus = 0.5
 				ahead_reduction = 1
 				uses = 2
 				category = industry
-			   }	
+			}
 		}
 	}
 	focus = {
@@ -1475,8 +1790,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_expand_ifrastructure }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_expand_ifrastructure
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			every_owned_state = {
 				FROM = {
@@ -1505,21 +1824,29 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_pooshriat_vernost }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_pooshriat_vernost
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			if = {
-				limit = {has_idea = LWV_new_promishlenost_raspredelit_3}
+				limit = {
+					has_idea = LWV_new_promishlenost_raspredelit_3
+				}
 				swap_ideas = {
 					remove_idea = LWV_new_promishlenost_raspredelit_3
 					add_idea = LWV_new_promishlenost_raspredelit_4
 				}
 			}
 			else_if = {
-				limit = {has_idea = LWV_raspredelit_vostanovleniye_3}
+				limit = {
+					has_idea = LWV_raspredelit_vostanovleniye_3
+				}
 				swap_ideas = {
-					remove_idea =  LWV_raspredelit_vostanovleniye_3
-					add_idea =  LWV_raspredelit_vostanovleniye_4
+					remove_idea = LWV_raspredelit_vostanovleniye_3
+					add_idea = LWV_raspredelit_vostanovleniye_4
 				}
 			}
 			else = {
@@ -1527,7 +1854,7 @@ focus_tree = {
 					remove_idea = LWV_raspredelit_raschirit_3
 					add_idea = LWV_raspredelit_raschirit_4
 				}
-			}			
+			}
 		}
 	}
 	focus = {
@@ -1539,8 +1866,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_give_mind_to_us }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_give_mind_to_us
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_political_power = 30
 			country_event = {
@@ -1555,8 +1886,7 @@ focus_tree = {
 				}
 			}
 		}
-	}	
-	
+	}
 	focus = {
 		id = LWV_sut_mira
 		icon = GFX_sut_mira
@@ -1566,10 +1896,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		prerequisite = { focus = LWV_zochem }
-		prerequisite = { focus = LWV_but_why }
-		prerequisite = { focus = LWV_new_metod  focus = LWV_adaptirovat_tradition }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = LWV_zochem
+		}
+		prerequisite = {
+			focus = LWV_but_why
+		}
+		prerequisite = {
+			focus = LWV_new_metod
+			focus = LWV_adaptirovat_tradition
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = {
 			add_stability = -0.3
 			country_event = {

@@ -1,43 +1,35 @@
 ideas = {
-
 	country = {
-		MOS_nuclear_wasteland = {		#Ядерная пустошь
-			
+		#Ядерная пустошь
+		MOS_nuclear_wasteland = {
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-			
 			modifier = {
 				army_attack_factor = -1
 				army_defence_factor = -1
-				army_org_regain = -1				
+				army_org_regain = -1
 			}
 		}
-
-		MOS_the_ruins_of_the_old_world = {		#Руины старого мира
-			
+		#Руины старого мира
+		MOS_the_ruins_of_the_old_world = {
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-			
 			modifier = {
 				research_speed_factor = -1
 				production_speed_buildings_factor = -1
 				consumer_goods_factor = 1
-				line_change_production_efficiency_factor = -1	
-				industrial_capacity_factory = -1							
+				line_change_production_efficiency_factor = -1
+				industrial_capacity_factory = -1
 			}
 		}
 	}

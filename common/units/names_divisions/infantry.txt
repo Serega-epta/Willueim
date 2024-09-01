@@ -5,7 +5,9 @@ BANDIT_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%d Bandit formation"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -19,7 +21,9 @@ BAGROVIE_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%d Bagrovie luchi"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -32,7 +36,9 @@ BAGROVIE_INF_02 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%d Bagroviy klin"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -46,7 +52,9 @@ TVARI_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%d Trari group"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -60,7 +68,9 @@ PEKHOTNAYA_GRUPPA_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%d Pekhotnaya gruppa"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -74,7 +84,9 @@ SQUAD_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%s First generation squad"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -87,7 +99,9 @@ SQUAD_INF_02 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%s Second generation squad"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -101,7 +115,9 @@ PUNISHER_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%s Punishers"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -115,7 +131,9 @@ CORPS_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%s Infantry Corps"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -128,7 +146,9 @@ CORPS_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%s Infantry Corps"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -141,7 +161,9 @@ CORPS_INF_02 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%s Assault Corps"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -155,7 +177,9 @@ MOTORIZED_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%d Infanterie-Division (mot)"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -169,7 +193,9 @@ LOYALISTI_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%d Loyalist-Division"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -183,7 +209,9 @@ HOLY_INF_01 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%s Sviatoe opolchenie"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -196,7 +224,9 @@ HOLY_INF_02 = {
 	can_use = {
 		always = yes
 	}
-	division_types = { "infantry" }
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "%s Bojiya dlan"
 	#TODO: add ordered names if want something special
 	#ordered = {
@@ -206,29 +236,53 @@ HOLY_INF_02 = {
 #SDC armies
 SDC_CORDONIK_REG = {
 	name = "Кордонники"
-	for_countries = { SDC }
-	can_use = { always = yes }
-	division_types = { "infantry" }
+	for_countries = {
+		SDC
+	}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "Кордонники"
 }
 SDC_CONSСRIPT_REG = {
 	name = "Призывники"
-	for_countries = { SDC }
-	can_use = { always = yes }
-	division_types = { "infantry" }
+	for_countries = {
+		SDC
+	}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "Призывники"
 }
 TAG_REG = {
 	name = "Сельское ополчение"
-	for_countries = { TAG }
-	can_use = { always = yes }
-	division_types = { "infantry" }
+	for_countries = {
+		TAG
+	}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "Сельское ополчение"
 }
 ARK_REG = {
 	name = "Городское ополчение"
-	for_countries = { ARK }
-	can_use = { always = yes }
-	division_types = { "infantry" }
+	for_countries = {
+		ARK
+	}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
 	fallback_name = "Городское ополчение"
 }

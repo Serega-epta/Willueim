@@ -1,20 +1,20 @@
 ideas = {
-
 	country = {
-		TWD_kill_kill_kill = {		#Убивать, убивать, убивать...
+		#Убивать, убивать, убивать...
+		TWD_kill_kill_kill = {
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			removal_cost = -1			
+			removal_cost = -1
 			modifier = {
 				mobilization_speed = 0.05
 				non_core_manpower = -0.1
 				resistance_growth = 0.15
 				army_org = 5
-				offence = 0.05									
+				offence = 0.05
 			}
 		}
 	}

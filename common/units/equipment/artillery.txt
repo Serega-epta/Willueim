@@ -1,19 +1,16 @@
 equipments = {
-
 	artillery_equipment = {
 		year = 2010
-
 		is_archetype = yes
-		picture = archetype_artillery_equipment		
+		picture = archetype_artillery_equipment
 		type = {
 			artillery
-			infantry #adding infantry type
+			#adding infantry type
+			infantry
 			#motorized #Removing motorized type
 		}
 		group_by = archetype
-		
 		interface_category = interface_category_land
-
 		max_strength = 0.6
 		soft_attack = 20
 		hard_attack = 1
@@ -27,14 +24,11 @@ equipments = {
 			steel = 2
 		}
 	}
-
 	pre_war_artillery_equipment = {
 		year = 2015
-
 		archetype = artillery_equipment
 		priority = 50
 		visual_level = 0
-
 		max_strength = 0.6
 		soft_attack = 20
 		hard_attack = 1
@@ -48,15 +42,12 @@ equipments = {
 			steel = 2
 		}
 	}
-
 	basic_towed_artillery_equipment = {
 		year = 2020
-
 		archetype = artillery_equipment
 		parent = pre_war_artillery_equipment
 		priority = 50
 		visual_level = 0
-
 		max_strength = 0.6
 		soft_attack = 25
 		hard_attack = 2
@@ -70,15 +61,12 @@ equipments = {
 			steel = 4
 		}
 	}
-
 	advanced_towed_artillery_equipment = {
 		year = 2025
-
 		archetype = artillery_equipment
 		parent = basic_towed_artillery_equipment
 		priority = 50
 		visual_level = 0
-
 		max_strength = 0.6
 		soft_attack = 30
 		hard_attack = 2
@@ -92,15 +80,12 @@ equipments = {
 			steel = 4
 		}
 	}
-
 	towed_artillery_of_the_future_equipment = {
 		year = 2030
-
 		archetype = artillery_equipment
 		parent = advanced_towed_artillery_equipment
 		priority = 50
 		visual_level = 0
-
 		max_strength = 0.6
 		soft_attack = 34
 		hard_attack = 2

@@ -4,41 +4,53 @@ expedition_category = {
 	####################################
 	form_search_squad = {
 		icon = GFX_decision_eng_trade_unions_support
-		priority = 100	
+		priority = 100
 		available = {
 			has_manpower > 500
 		}
 		cost = 50
 		days_remove = 30
-
 		complete_effect = {
-			ROOT = { add_manpower = -500 }
-		}		
+			ROOT = {
+				add_manpower = -500
+			}
+		}
 		remove_effect = {
 			custom_effect_tooltip = form_search_squad_tt
 			hidden_effect = {
-				ROOT = { add_to_variable = { search_squad_var = 1 } }
+				ROOT = {
+					add_to_variable = {
+						search_squad_var = 1
+					}
+				}
 			}
 		}
 	}
 	form_combat_squad = {
 		icon = GFX_decision_eng_trade_unions_support
-		priority = 100	
+		priority = 100
 		available = {
 			has_manpower > 500
-			has_army_manpower = { size > 999 }
+			has_army_manpower = {
+				size > 999
+			}
 		}
 		cost = 50
 		days_remove = 30
-
 		complete_effect = {
-			ROOT = { add_manpower = -500 }		
+			ROOT = {
+				add_manpower = -500
+			}
 		}
 		remove_effect = {
 			custom_effect_tooltip = form_combat_squad_tt
 			hidden_effect = {
-				ROOT = { add_to_variable = { combat_squad_var = 1 } }
-			}	
+				ROOT = {
+					add_to_variable = {
+						combat_squad_var = 1
+					}
+				}
+			}
 		}
 	}
 	#################################
@@ -48,30 +60,47 @@ expedition_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 100
 		available = {
-			custom_trigger_tooltip = { 
+			custom_trigger_tooltip = {
 				tooltip = at_least_one_search_squad_tt
-				ROOT = { check_variable = { search_squad_var > 0} }
+				ROOT = {
+					check_variable = {
+						search_squad_var > 0
+					}
+				}
 			}
 		}
 		visible = {
-			ROOT = { check_variable = { search_squad_var > 0} }
+			ROOT = {
+				check_variable = {
+					search_squad_var > 0
+				}
+			}
 		}
 		cost = 100
 		days_remove = 20
-
 		complete_effect = {
 			custom_effect_tooltip = subtract_from_number_of_search_squads_tt
-			hidden_effect = { 
-				ROOT = { subtract_from_variable = { search_squad_var = 1 } }
+			hidden_effect = {
+				ROOT = {
+					subtract_from_variable = {
+						search_squad_var = 1
+					}
+				}
 			}
 		}
 		remove_effect = {
 			random_list = {
 				50 = {
-					country_event = { id = expedition.1 } #Untouchable reserve
+					country_event = {
+						id = expedition.1
+					}
+					#Untouchable reserve
 				}
 				50 = {
-					country_event = { id = expedition.2 } #Empty shelves
+					country_event = {
+						id = expedition.2
+					}
+					#Empty shelves
 				}
 			}
 		}
@@ -80,34 +109,54 @@ expedition_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 100
 		available = {
-			custom_trigger_tooltip = { 
+			custom_trigger_tooltip = {
 				tooltip = at_least_one_search_squad_tt
-				ROOT = { check_variable = { search_squad_var > 0 } }
+				ROOT = {
+					check_variable = {
+						search_squad_var > 0
+					}
+				}
 			}
 		}
 		visible = {
-			ROOT = { check_variable = { search_squad_var > 0} }
+			ROOT = {
+				check_variable = {
+					search_squad_var > 0
+				}
+			}
 		}
 		cost = 75
 		days_remove = 20
-
 		complete_effect = {
 			custom_effect_tooltip = subtract_from_number_of_search_squads_tt
-			hidden_effect = { 
-				ROOT = { subtract_from_variable = { search_squad_var = 1 } }
+			hidden_effect = {
+				ROOT = {
+					subtract_from_variable = {
+						search_squad_var = 1
+					}
+				}
 			}
 		}
 		remove_effect = {
 			random_list = {
 				34 = {
-					country_event = { id = expedition.3 } #Papers, papers, papers...
+					country_event = {
+						id = expedition.3
+					}
+					#Papers, papers, papers...
 				}
 				33 = {
-					country_event = { id = expedition.4 } #This could be interesting
+					country_event = {
+						id = expedition.4
+					}
+					#This could be interesting
 				}
 				33 = {
-					country_event = { id = expedition.5 } #It's best not to talk about it...
-				}				
+					country_event = {
+						id = expedition.5
+					}
+					#It's best not to talk about it...
+				}
 			}
 		}
 	}
@@ -115,31 +164,48 @@ expedition_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 100
 		available = {
-			custom_trigger_tooltip = { 
+			custom_trigger_tooltip = {
 				tooltip = at_least_one_search_squad_tt
-				ROOT = { check_variable = { search_squad_var > 0 } }
+				ROOT = {
+					check_variable = {
+						search_squad_var > 0
+					}
+				}
 			}
 		}
 		visible = {
-			ROOT = { check_variable = { search_squad_var > 0} }
+			ROOT = {
+				check_variable = {
+					search_squad_var > 0
+				}
+			}
 		}
 		cost = 100
 		days_remove = 20
-
 		complete_effect = {
 			custom_effect_tooltip = subtract_from_number_of_search_squads_tt
-			hidden_effect = { 
-				ROOT = { subtract_from_variable = { search_squad_var = 1 } }
+			hidden_effect = {
+				ROOT = {
+					subtract_from_variable = {
+						search_squad_var = 1
+					}
+				}
 			}
 		}
 		remove_effect = {
 			random_list = {
 				50 = {
-					country_event = { id = expedition.6 } #Black gold
+					country_event = {
+						id = expedition.6
+					}
+					#Black gold
 				}
 				50 = {
-					country_event = { id = expedition.7 } #Absolute zero
-				}				
+					country_event = {
+						id = expedition.7
+					}
+					#Absolute zero
+				}
 			}
 		}
 	}
@@ -147,33 +213,53 @@ expedition_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 100
 		available = {
-			custom_trigger_tooltip = { 
+			custom_trigger_tooltip = {
 				tooltip = at_least_one_search_squad_tt
-				ROOT = { check_variable = { search_squad_var > 0 } }
+				ROOT = {
+					check_variable = {
+						search_squad_var > 0
+					}
+				}
 			}
 		}
 		visible = {
-			ROOT = { check_variable = { search_squad_var > 0 } }
+			ROOT = {
+				check_variable = {
+					search_squad_var > 0
+				}
+			}
 		}
 		cost = 150
 		days_remove = 20
-
 		complete_effect = {
 			custom_effect_tooltip = subtract_from_number_of_search_squads_tt
-			hidden_effect = { 
-				ROOT = { subtract_from_variable = { search_squad_var = 1 } }
+			hidden_effect = {
+				ROOT = {
+					subtract_from_variable = {
+						search_squad_var = 1
+					}
+				}
 			}
 		}
 		remove_effect = {
 			random_list = {
 				34 = {
-					country_event = { id = expedition.8 } #Technical illiteracy
+					country_event = {
+						id = expedition.8
+					}
+					#Technical illiteracy
 				}
 				33 = {
-					country_event = { id = expedition.9 } #Production facilities
+					country_event = {
+						id = expedition.9
+					}
+					#Production facilities
 				}
 				33 = {
-					country_event = { id = expedition.10 } #Mechanism of war
+					country_event = {
+						id = expedition.10
+					}
+					#Mechanism of war
 				}
 			}
 		}
@@ -184,9 +270,13 @@ expedition_category = {
 	raid_neighbor_prepare = {
 		icon = GFX_decision_eng_trade_unions_support
 		available = {
-			custom_trigger_tooltip = { 
+			custom_trigger_tooltip = {
 				tooltip = at_least_one_combat_squad_tt
-				ROOT = { check_variable = { combat_squad_var > 0 } }
+				ROOT = {
+					check_variable = {
+						combat_squad_var > 0
+					}
+				}
 			}
 			any_owned_state = {
 				is_fully_controlled_by = ROOT
@@ -196,11 +286,21 @@ expedition_category = {
 				}
 			}
 			has_war = no
-			FROM = { has_war = no }
-			NOT = { FROM = { is_ally_with = ROOT } }			
+			FROM = {
+				has_war = no
+			}
+			NOT = {
+				FROM = {
+					is_ally_with = ROOT
+				}
+			}
 		}
 		visible = {
-			ROOT = { check_variable = { combat_squad_var > 0 } }
+			ROOT = {
+				check_variable = {
+					combat_squad_var > 0
+				}
+			}
 		}
 		target_array = neighbors_owned
 		target_trigger = {
@@ -263,14 +363,17 @@ expedition_category = {
 				factor = 0
 			}
 		}
-		
 		cost = 150
 		days_remove = 10
-
-		complete_effect = { # Effect WHEN CLICKED
+		# Effect WHEN CLICKED
+		complete_effect = {
 			custom_effect_tooltip = subtract_from_number_of_combat_squads_tt
 			hidden_effect = {
-				ROOT = { subtract_from_variable = { combat_squad_var = 1 } }
+				ROOT = {
+					subtract_from_variable = {
+						combat_squad_var = 1
+					}
+				}
 				FROM = {
 					random_owned_controlled_state = {
 						limit = {
@@ -279,7 +382,9 @@ expedition_category = {
 								has_ROOT_at_least_1_div_in_current_state_scope = yes
 							}
 						}
-						set_variable = { PREV.defender_state_vs_@ROOT = id }
+						set_variable = {
+							PREV.defender_state_vs_@ROOT = id
+						}
 					}
 				}
 				random_owned_controlled_state = {
@@ -289,18 +394,27 @@ expedition_category = {
 							is_fully_controlled_by = FROM
 						}
 					}
-					set_variable = { FROM.attacker_state_vs_@ROOT = id }
+					set_variable = {
+						FROM.attacker_state_vs_@ROOT = id
+					}
 				}
 				set_country_flag = preparing_raid
 			}
 		}
-		remove_effect = { # Effect ON timeout
-			activate_targeted_decision = { target = FROM decision = raid_neighbor_initiate }			
+		# Effect ON timeout
+		remove_effect = {
+			activate_targeted_decision = {
+				target = FROM
+				decision = raid_neighbor_initiate
+			}
 		}
 	}
 	raid_neighbor_initiate = {
 		icon = GFX_decision_eng_trade_unions_support
-		allowed = { always = no } #Activated from effect
+		allowed = {
+			always = no
+		}
+		#Activated from effect
 		fixed_random_seed = no
 		available = {
 			ROOT = {
@@ -332,18 +446,19 @@ expedition_category = {
 		cancel_trigger = {
 			OR = {
 				has_war = yes
-				FROM = { has_war = yes }
+				FROM = {
+					has_war = yes
+				}
 				has_non_aggression_pact_with = FROM
 			}
 		}
 		cancel_effect = {
 			clr_country_flag = preparing_raid
 		}
-
-		fire_only_once = yes #Reactivation handled in effect
+		#Reactivation handled in effect
+		fire_only_once = yes
 		selectable_mission = yes
 		days_mission_timeout = 65
-		
 		timeout_effect = {
 			hidden_effect = {
 				FROM = {
@@ -351,8 +466,14 @@ expedition_category = {
 					clear_variable = defender_state_vs_@ROOT
 				}
 				clr_country_flag = preparing_raid
-				remove_targeted_decision = { target = FROM decision = raid_neighbor_initiate }
-				activate_targeted_decision = { target = FROM decision = raid_neighbor_prepare }
+				remove_targeted_decision = {
+					target = FROM
+					decision = raid_neighbor_initiate
+				}
+				activate_targeted_decision = {
+					target = FROM
+					decision = raid_neighbor_prepare
+				}
 			}
 		}
 		complete_effect = {
@@ -361,29 +482,44 @@ expedition_category = {
 				attacker = {
 					state = var:FROM.attacker_state_vs_@ROOT
 					num_provinces = 4
-					on_win = expedition_raid.1 #Successful raid
-					on_lose = expedition_raid.2 #Unfortunate raid
+					#Successful raid
+					on_win = expedition_raid.1
+					#Unfortunate raid
+					on_lose = expedition_raid.2
 					#on_cancel = expedition_raid.3 #?
 				}
 				defender = {
 					state = var:FROM.defender_state_vs_@ROOT
 					num_provinces = 4
-					on_win = expedition_raid.1 #Successful raid
-					on_lose = expedition_raid.2 #Unfortunate raid
+					#Successful raid
+					on_win = expedition_raid.1
+					#Unfortunate raid
+					on_lose = expedition_raid.2
 					#on_cancel = expedition_raid.3 #?
 				}
 			}
 			hidden_effect = {
-				remove_targeted_decision = { target = FROM decision = raid_neighbor_initiate }
-				activate_targeted_decision = { target = FROM decision = raid_neighbor_in_progress }
+				remove_targeted_decision = {
+					target = FROM
+					decision = raid_neighbor_initiate
+				}
+				activate_targeted_decision = {
+					target = FROM
+					decision = raid_neighbor_in_progress
+				}
 			}
 		}
 	}
 	raid_neighbor_in_progress = {
 		icon = GFX_decision_eng_trade_unions_support
-		allowed = { always = no } #Activated from effect
+		allowed = {
+			always = no
+		}
+		#Activated from effect
 		available = {
-			NOT = { has_border_war = yes }
+			NOT = {
+				has_border_war = yes
+			}
 		}
 		highlight_states = {
 			highlight_states_trigger = {
@@ -396,11 +532,11 @@ expedition_category = {
 				has_war_with = FROM
 			}
 		}
-
-		fire_only_once = yes #Reactivation handled in effect
+		#Reactivation handled in effect
+		fire_only_once = yes
 		days_mission_timeout = 180
-
-		timeout_effect = { #inconclusive battle
+		#inconclusive battle
+		timeout_effect = {
 			cancel_border_war = {
 				dont_fire_events = no
 				attacker = var:FROM.attacker_state_vs_@ROOT
@@ -412,15 +548,27 @@ expedition_category = {
 					clear_variable = defender_state_vs_@ROOT
 				}
 				clr_country_flag = preparing_raid
-				remove_targeted_decision = { target = FROM decision = raid_neighbor_in_progress }
-				activate_targeted_decision = { target = FROM decision = raid_neighbor_prepare }
+				remove_targeted_decision = {
+					target = FROM
+					decision = raid_neighbor_in_progress
+				}
+				activate_targeted_decision = {
+					target = FROM
+					decision = raid_neighbor_prepare
+				}
 			}
 		}
 		complete_effect = {
 			hidden_effect = {
 				clr_country_flag = preparing_raid
-				remove_targeted_decision = { target = FROM decision = raid_neighbor_in_progress }
-				activate_targeted_decision = { target = FROM decision = raid_neighbor_prepare }
+				remove_targeted_decision = {
+					target = FROM
+					decision = raid_neighbor_in_progress
+				}
+				activate_targeted_decision = {
+					target = FROM
+					decision = raid_neighbor_prepare
+				}
 			}
 		}
 	}

@@ -8,7 +8,7 @@ ideas = {
 				stability_weekly = 0.03
 				production_factory_efficiency_gain_factor = 0.03
 				production_speed_buildings_factor = 0.03
-				enemy_justify_war_goal_time = 0.05 
+				enemy_justify_war_goal_time = 0.05
 				offence = -0.02
 				defence = -0.02
 			}
@@ -21,7 +21,7 @@ ideas = {
 				stability_weekly = 0.06
 				production_factory_efficiency_gain_factor = 0.06
 				production_speed_buildings_factor = 0.06
-				enemy_justify_war_goal_time = 0.1 
+				enemy_justify_war_goal_time = 0.1
 				offence = -0.04
 				defence = -0.04
 			}
@@ -34,7 +34,7 @@ ideas = {
 				stability_weekly = 0.09
 				production_factory_efficiency_gain_factor = 0.09
 				production_speed_buildings_factor = 0.09
-				enemy_justify_war_goal_time = 0.15 
+				enemy_justify_war_goal_time = 0.15
 				offence = -0.06
 				defence = -0.06
 			}
@@ -60,7 +60,7 @@ ideas = {
 				stability_weekly = 0.15
 				production_factory_efficiency_gain_factor = 0.15
 				production_speed_buildings_factor = 0.15
-				enemy_justify_war_goal_time = 0.25 
+				enemy_justify_war_goal_time = 0.25
 				offence = -0.1
 				defence = -0.1
 			}
@@ -73,7 +73,7 @@ ideas = {
 				stability_weekly = 0.18
 				production_factory_efficiency_gain_factor = 0.18
 				production_speed_buildings_factor = 0.18
-				enemy_justify_war_goal_time = 0.3 
+				enemy_justify_war_goal_time = 0.3
 				offence = -0.12
 				defence = -0.12
 			}
@@ -86,7 +86,7 @@ ideas = {
 				stability_weekly = 0.21
 				production_factory_efficiency_gain_factor = 0.21
 				production_speed_buildings_factor = 0.21
-				enemy_justify_war_goal_time = 0.35 
+				enemy_justify_war_goal_time = 0.35
 				offence = -0.14
 				defence = -0.14
 			}
@@ -99,7 +99,7 @@ ideas = {
 				stability_weekly = 0.24
 				production_factory_efficiency_gain_factor = 0.24
 				production_speed_buildings_factor = 0.24
-				enemy_justify_war_goal_time = 0.4 
+				enemy_justify_war_goal_time = 0.4
 				offence = -0.16
 				defence = -0.16
 			}
@@ -112,7 +112,7 @@ ideas = {
 				stability_weekly = 0.27
 				production_factory_efficiency_gain_factor = 0.27
 				production_speed_buildings_factor = 0.27
-				enemy_justify_war_goal_time = 0.45 
+				enemy_justify_war_goal_time = 0.45
 				offence = -0.18
 				defence = -0.18
 			}
@@ -245,7 +245,7 @@ ideas = {
 				army_core_defence_factor = -0.2
 				army_core_attack_factor = -0.2
 				army_org_factor = -0.3
-			}		
+			}
 		}
 		GLS_fathers_and_not_fathers = {
 			picture = fathers_and_not_fathers
@@ -269,7 +269,8 @@ ideas = {
 				conscription = 0.07
 			}
 		}
-		GLS_fathers_and_not_fathers_31 = {	#<- вот эта идея добавляется в фокусе 'Прокляты и забыты'
+		#<- вот эта идея добавляется в фокусе 'Прокляты и забыты'
+		GLS_fathers_and_not_fathers_31 = {
 			picture = fathers_and_not_fathers
 			modifier = {
 				conscription = 0.02
@@ -323,7 +324,6 @@ ideas = {
 				experience_loss_factor = -0.15
 			}
 		}
-
 		GLS_fathers_and_not_fathers_9 = {
 			picture = fathers_and_not_fathers
 			modifier = {
@@ -348,7 +348,6 @@ ideas = {
 			}
 		}
 		##############
-
 		#Маски сброшены
 		GLS_fathers_and_not_fathers_11 = {
 			picture = fathers_and_not_fathers
@@ -403,8 +402,6 @@ ideas = {
 				army_org_factor = -0.1
 			}
 		}
-
-		
 		GLS_memories_of_rodina = {
 			picture = memories_of_rodina
 			modifier = {
@@ -430,7 +427,6 @@ ideas = {
 				weekly_manpower = 350
 			}
 		}
-
 		#Наследие Жукова
 		GLS_memories_of_rodina_3 = {
 			picture = memories_of_rodina
@@ -581,7 +577,8 @@ ideas = {
 				conscription = -0.05
 			}
 		}
-		GLS_our_starvation_idea_Ryaznov = { #Полная Зачистка
+		#Полная Зачистка
+		GLS_our_starvation_idea_Ryaznov = {
 			picture = GLS_our_starvation_pic_idea
 			modifier = {
 				stability_factor = -0.4
@@ -669,7 +666,7 @@ ideas = {
 				max_planning = 0.1
 				planning_speed = 0.1
 				justify_war_goal_time = -0.4
-				army_leader_start_logistics_level = 1 
+				army_leader_start_logistics_level = 1
 			}
 		}
 		GLS_KGB = {
@@ -689,7 +686,7 @@ ideas = {
 			picture = GLS_through_fire_idea_pic
 			modifier = {
 				offence = 0.05
-				defence = 0.05 
+				defence = 0.05
 				army_speed_factor = 0.05
 				army_org_regain = 0.1
 			}

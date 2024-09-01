@@ -1,14 +1,12 @@
 add_namespace = expedition
 add_namespace = expedition_raid
-
-country_event = { #Untouchable reserve
+#Untouchable reserve
+country_event = {
 	id = expedition.1
 	title = expedition.1.t
 	desc = expedition.1.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.1.a
 		ROOT = {
@@ -23,41 +21,35 @@ country_event = { #Untouchable reserve
 		}
 	}
 }
-
-country_event = { #Empty shelves
+#Empty shelves
+country_event = {
 	id = expedition.2
 	title = expedition.2.t
 	desc = expedition.2.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.2.a
 	}
 }
-
-country_event = { #Papers, papers, papers...
+#Papers, papers, papers...
+country_event = {
 	id = expedition.3
 	title = expedition.3.t
 	desc = expedition.3.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.3.a
 	}
 }
-
-country_event = { #This could be interesting
+#This could be interesting
+country_event = {
 	id = expedition.4
 	title = expedition.4.t
 	desc = expedition.4.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.4.a
 		ROOT = {
@@ -74,93 +66,91 @@ country_event = { #This could be interesting
 						bonus = 0.5
 						uses = 1
 						category = electronics
-					}				
+					}
 				}
 				25 = {
 					add_tech_bonus = {
 						bonus = 0.5
 						uses = 1
 						category = infantry_weapons
-					}				
+					}
 				}
 				25 = {
 					add_tech_bonus = {
 						bonus = 0.5
 						uses = 1
 						category = support_tech
-					}				
+					}
 				}
 			}
 		}
 	}
 }
-
-country_event = { #It's best not to talk about it...
+#It's best not to talk about it...
+country_event = {
 	id = expedition.5
 	title = expedition.5.t
 	desc = expedition.5.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.5.a
-		ROOT = { add_manpower = -200 }
+		ROOT = {
+			add_manpower = -200
+		}
 	}
 }
-
-country_event = { #Black gold
+#Black gold
+country_event = {
 	id = expedition.6
 	title = expedition.6.t
 	desc = expedition.6.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.6.a
 		custom_effect_tooltip = add_500_rubles_tt
-		hidden_effect = { 
-			ROOT = { add_to_variable = { black_rubles_budget = 500 } }
-		}		
+		hidden_effect = {
+			ROOT = {
+				add_to_variable = {
+					black_rubles_budget = 500
+				}
+			}
+		}
 	}
 }
-
-country_event = { #Absolute zero
+#Absolute zero
+country_event = {
 	id = expedition.7
 	title = expedition.7.t
 	desc = expedition.7.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.7.a
 	}
 }
-
-country_event = { #Technical illiteracy
+#Technical illiteracy
+country_event = {
 	id = expedition.8
 	title = expedition.8.t
 	desc = expedition.8.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.8.a
-		ROOT = { add_manpower = -100 }
+		ROOT = {
+			add_manpower = -100
+		}
 	}
 }
-
-country_event = { #Production facilities
+#Production facilities
+country_event = {
 	id = expedition.9
 	title = expedition.9.t
 	desc = expedition.9.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.9.a
 		random_owned_state = {
@@ -173,15 +163,13 @@ country_event = { #Production facilities
 		}
 	}
 }
-
-country_event = { #Mechanism of war
+#Mechanism of war
+country_event = {
 	id = expedition.10
 	title = expedition.10.t
 	desc = expedition.10.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition.10.a
 		ROOT = {
@@ -196,15 +184,13 @@ country_event = { #Mechanism of war
 		}
 	}
 }
-
-country_event = { #Successful raid
+#Successful raid
+country_event = {
 	id = expedition_raid.1
 	title = expedition_raid.1.t
 	desc = expedition_raid.1.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition_raid.1.a
 		ROOT = {
@@ -225,20 +211,19 @@ country_event = { #Successful raid
 					add_manpower = 500
 				}
 				25 = {
-					add_political_power = 50	
+					add_political_power = 50
 				}
 			}
 		}
 	}
 }
-country_event = { #Unfortunate raid
+#Unfortunate raid
+country_event = {
 	id = expedition_raid.2
 	title = expedition_raid.2.t
 	desc = expedition_raid.2.d
 	#picture = 
-
 	is_triggered_only = yes
-
 	option = {
 		name = expedition_raid.2.a
 		ROOT = {
@@ -250,7 +235,7 @@ country_event = { #Unfortunate raid
 				type = infantry_odejda
 				amount = -150
 			}
-			add_manpower = -500 
+			add_manpower = -500
 			add_political_power = -50
 		}
 	}

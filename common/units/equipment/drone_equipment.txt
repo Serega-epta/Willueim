@@ -1,8 +1,6 @@
 equipments = {
-
 	pre_war_attack_drone_equipment = {
 		year = 2015
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -19,7 +17,6 @@ equipments = {
 		sprite = light_plane
 		air_map_icon_frame = 1
 		interface_category = interface_category_air
-
 		manpower = 5
 		air_defence = 50
 		air_agility = 20
@@ -32,7 +29,6 @@ equipments = {
 		reliability = 0.6
 		build_cost_ic = 50
 		air_range = 300
-
 		resources = {
 			aluminium = 2
 			rubber = 1
@@ -40,13 +36,12 @@ equipments = {
 	}
 	pre_war_kamikaze_drone_equipment = {
 		year = 2015
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
 		is_buildable = no
 		type = suicide
-		allow_mission_type = {  
+		allow_mission_type = {
 			strategic_bomber
 			attack_logistics
 			cas
@@ -58,7 +53,6 @@ equipments = {
 		sprite = light_plane
 		air_map_icon_frame = 1
 		interface_category = interface_category_air
-
 		manpower = 5
 		air_defence = 50
 		air_agility = 20
@@ -71,21 +65,16 @@ equipments = {
 		reliability = 0.01
 		build_cost_ic = 50
 		air_range = 300
-
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
 	}
-
-
 	#Штурмовые дроны
-
-	basic_attack_drone_equipment = { 
+	basic_attack_drone_equipment = {
 		abbreviation = "bade"
 		derived_variant_name = basic_attack_drone_equipment
 		year = 2020
-
 		archetype = pre_war_attack_drone_equipment
 		manpower = 5
 		air_defence = 60
@@ -100,12 +89,10 @@ equipments = {
 		build_cost_ic = 90
 		air_range = 500
 	}
-
-	improved_attack_drone_equipment = { 
+	improved_attack_drone_equipment = {
 		abbreviation = "iade"
 		derived_variant_name = improved_attack_drone_equipment
 		year = 2025
-
 		archetype = pre_war_attack_drone_equipment
 		parent = basic_attack_drone_equipment
 		manpower = 5
@@ -121,12 +108,10 @@ equipments = {
 		build_cost_ic = 105
 		air_range = 800
 	}
-
-	advanced_attack_drone_equipment = { 
+	advanced_attack_drone_equipment = {
 		abbreviation = "aade"
 		derived_variant_name = advanced_attack_drone_equipment
 		year = 2030
-
 		archetype = pre_war_attack_drone_equipment
 		parent = improved_attack_drone_equipment
 		manpower = 5
@@ -142,12 +127,10 @@ equipments = {
 		build_cost_ic = 107
 		air_range = 1000
 	}
-
-	attack_drone_of_the_future_equipment = { 
+	attack_drone_of_the_future_equipment = {
 		abbreviation = "adfe"
 		derived_variant_name = attack_drone_of_the_future_equipment
 		year = 2040
-
 		archetype = pre_war_attack_drone_equipment
 		parent = advanced_attack_drone_equipment
 		manpower = 5
@@ -163,10 +146,8 @@ equipments = {
 		build_cost_ic = 110
 		air_range = 1000
 	}
-
 	#Дроны - камикадзе
-
-	basic_kamikaze_drone_equipment = { 
+	basic_kamikaze_drone_equipment = {
 		abbreviation = "bkde"
 		derived_variant_name = basic_kamikaze_drone_equipment
 		year = 2020
@@ -183,8 +164,7 @@ equipments = {
 		reliability = 0.85
 		build_cost_ic = 25
 	}
-
-	improved_kamikaze_drone_equipment = { 
+	improved_kamikaze_drone_equipment = {
 		abbreviation = "ikde"
 		derived_variant_name = basic_kamikaze_drone_equipment
 		year = 2025
@@ -202,8 +182,7 @@ equipments = {
 		reliability = 0.85
 		build_cost_ic = 30
 	}
-
-	advanced_kamikaze_drone_equipment = { 
+	advanced_kamikaze_drone_equipment = {
 		abbreviation = "akde"
 		derived_variant_name = basic_kamikaze_drone_equipment
 		year = 2030
@@ -221,8 +200,7 @@ equipments = {
 		reliability = 0.85
 		build_cost_ic = 35
 	}
-
-	kamikaze_drone_of_the_future_equipment = { 
+	kamikaze_drone_of_the_future_equipment = {
 		abbreviation = "kdfe"
 		derived_variant_name = basic_kamikaze_drone_equipment
 		year = 2040

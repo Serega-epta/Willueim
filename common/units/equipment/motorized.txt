@@ -1,31 +1,24 @@
 equipments = {
-
 	motorized_equipment = {
 		year = 2015
-
 		is_archetype = yes
-		picture = archetype_motorized_equipment		
+		picture = archetype_motorized_equipment
 		is_buildable = no
 		type = {
 			#infantry #Removing inf type 
 			motorized
 		}
 		group_by = archetype
-		
 		interface_category = interface_category_land
-		
-        active = no
-
-
+		active = no
 		supply_truck = yes
 	}
-
 	motorized_equipment_1 = {
 		year = 2015
 		archetype = motorized_equipment
-		priority = 30	
-        active = no
-		visual_level = 0	
+		priority = 30
+		active = no
+		visual_level = 0
 		maximum_speed = 4
 		breakthrough = 1
 		hardness = 0.025
@@ -35,15 +28,11 @@ equipments = {
 		resources = {
 			steel = 1
 			rubber = 1
-		}	
+		}
 		supply_truck = yes
 	}
-	
-	
-	
 	motorized_equipment_2 = {
 		year = 2020
-
 		type = {
 			#infantry #Removing inf type 
 			motorized
@@ -52,7 +41,6 @@ equipments = {
 		interface_category = interface_category_land
 		archetype = motorized_equipment
 		parent = motorized_equipment_1
-
 		maximum_speed = 4
 		breakthrough = 1
 		hardness = 0.025
@@ -65,14 +53,8 @@ equipments = {
 		}
 		supply_truck = yes
 	}
-	
-
-	
-
 	motorized_equipment_3 = {
 		year = 2025
-
-
 		type = {
 			#infantry #Removing inf type 
 			motorized
@@ -81,7 +63,6 @@ equipments = {
 		interface_category = interface_category_land
 		visual_level = 2
 		archetype = motorized_equipment
-
 		maximum_speed = 4
 		breakthrough = 1
 		hardness = 0.025
@@ -94,10 +75,8 @@ equipments = {
 		}
 		supply_truck = yes
 	}
-			
 	motorized_equipment_4 = {
 		year = 2030
-
 		type = {
 			#infantry #Removing inf type 
 			motorized
@@ -106,7 +85,6 @@ equipments = {
 		interface_category = interface_category_land
 		visual_level = 3
 		archetype = motorized_equipment
-
 		maximum_speed = 4
 		breakthrough = 1
 		hardness = 0.025
@@ -119,10 +97,8 @@ equipments = {
 		}
 		supply_truck = yes
 	}
-	
 	motorized_equipment_5 = {
 		year = 2033
-
 		type = {
 			#infantry #Removing inf type 
 			motorized
@@ -131,7 +107,6 @@ equipments = {
 		interface_category = interface_category_land
 		visual_level = 4
 		archetype = motorized_equipment
-
 		maximum_speed = 4
 		breakthrough = 1
 		hardness = 0.025

@@ -1,17 +1,13 @@
 equipments = {
-
 	pre_war_fighter = {
 		year = 2010
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
 		is_buildable = no
 		type = fighter
-		
 		allow_mission_type = training
 		group_by = archetype
-
 		manpower = 20
 		air_range = 650
 		air_defence = 50
@@ -27,32 +23,26 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 100
 		module_slots = none
-
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
 	}
-
-	pre_war_fighter_equipment = { 
+	pre_war_fighter_equipment = {
 		archetype = pre_war_fighter
 		abbreviation = "mbt1"
 		derived_variant_name = early_fighter_equipment
 		visual_level = 0
 		priority = 2000
-
 	}
-
-
-	mass_fighter_airframe = { 
+	mass_fighter_airframe = {
 		year = 2010
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
 		is_buildable = no
 		type = fighter
-		allow_mission_type = {  
+		allow_mission_type = {
 			air_superiority
 			interception
 		}
@@ -76,21 +66,19 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 100
 		module_slots = none
-
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
 	}
-	mass_bomber_airframe = { 
+	mass_bomber_airframe = {
 		year = 2010
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
 		is_buildable = no
 		type = fighter
-		allow_mission_type = {  
+		allow_mission_type = {
 			strategic_bomber
 			attack_logistics
 			cas
@@ -102,7 +90,6 @@ equipments = {
 		sprite = light_plane
 		air_map_icon_frame = 1
 		interface_category = interface_category_air
-
 		manpower = 20
 		air_range = 650
 		air_defence = 50
@@ -118,15 +105,13 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 100
 		module_slots = none
-
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
 	}
-	mass_heli_airframe = { 
+	mass_heli_airframe = {
 		year = 2010
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -142,7 +127,6 @@ equipments = {
 		sprite = light_plane
 		air_map_icon_frame = 1
 		interface_category = interface_category_air
-
 		manpower = 20
 		air_range = 650
 		air_defence = 50
@@ -158,20 +142,16 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 100
 		module_slots = none
-
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
 	}
-
 	#Массовая авиация
-
-	basic_mass_airplane_equipment = { 
+	basic_mass_airplane_equipment = {
 		abbreviation = "bmae"
 		derived_variant_name = basic_mass_airplane_equipment
 		year = 2015
-
 		archetype = mass_fighter_airframe
 		type = fighter
 		manpower = 22
@@ -189,13 +169,11 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 188
 	}
-
 	#-Подветка фронтовых бомбардировщиков
-	basic_mass_bomber_equipment = { 
+	basic_mass_bomber_equipment = {
 		abbreviation = "bmbe"
 		derived_variant_name = basic_mass_bomber_equipment
 		year = 2020
-
 		archetype = mass_bomber_airframe
 		type = tactical_bomber
 		manpower = 22
@@ -213,12 +191,10 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 188
 	}
-
-	improved_mass_bomber_equipment = { 
+	improved_mass_bomber_equipment = {
 		abbreviation = "imbe"
 		derived_variant_name = improved_mass_bomber_equipment
 		year = 2025
-
 		archetype = mass_bomber_airframe
 		parent = basic_mass_bomber_equipment
 		type = tactical_bomber
@@ -237,12 +213,10 @@ equipments = {
 		supply_consumption = 4
 		build_cost_ic = 260
 	}
-
-	advanced_mass_bomber_equipment = { 
+	advanced_mass_bomber_equipment = {
 		abbreviation = "ambe"
 		derived_variant_name = advanced_mass_bomber_equipment
 		year = 2030
-
 		archetype = mass_bomber_airframe
 		parent = improved_mass_bomber_equipment
 		type = tactical_bomber
@@ -261,12 +235,10 @@ equipments = {
 		supply_consumption = 5
 		build_cost_ic = 290
 	}
-
-	mass_bomber_of_the_future_equipment = { 
+	mass_bomber_of_the_future_equipment = {
 		abbreviation = "mbfe"
 		derived_variant_name = mass_bomber_of_the_future_equipment
 		year = 2040
-
 		archetype = mass_bomber_airframe
 		parent = advanced_mass_bomber_equipment
 		type = tactical_bomber
@@ -285,13 +257,11 @@ equipments = {
 		supply_consumption = 7
 		build_cost_ic = 320
 	}
-
 	#-Подветка истребителей
-	basic_mass_fighter_equipment = { 
+	basic_mass_fighter_equipment = {
 		abbreviation = "bmfe"
 		derived_variant_name = basic_mass_fighter_equipment
 		year = 2020
-
 		archetype = mass_fighter_airframe
 		parent = basic_mass_airplane_equipment
 		type = fighter
@@ -309,12 +279,10 @@ equipments = {
 		supply_consumption = 3
 		build_cost_ic = 180
 	}
-
-	improved_mass_fighter_equipment = { 
+	improved_mass_fighter_equipment = {
 		abbreviation = "imfe"
 		derived_variant_name = improved_mass_fighter_equipment
 		year = 2025
-
 		archetype = mass_fighter_airframe
 		parent = basic_mass_fighter_equipment
 		type = fighter
@@ -332,12 +300,10 @@ equipments = {
 		supply_consumption = 4
 		build_cost_ic = 250
 	}
-
-	advanced_mass_fighter_equipment = { 
+	advanced_mass_fighter_equipment = {
 		abbreviation = "amfe"
 		derived_variant_name = advanced_mass_fighter_equipment
 		year = 2030
-
 		archetype = mass_fighter_airframe
 		parent = improved_mass_fighter_equipment
 		type = fighter
@@ -355,12 +321,10 @@ equipments = {
 		supply_consumption = 4.5
 		build_cost_ic = 280
 	}
-
-	mass_fighter_of_the_future_equipment = { 
+	mass_fighter_of_the_future_equipment = {
 		abbreviation = "mffe"
 		derived_variant_name = mass_fighter_of_the_future_equipment
 		year = 2040
-
 		archetype = mass_fighter_airframe
 		parent = advanced_mass_fighter_equipment
 		type = fighter
@@ -378,13 +342,11 @@ equipments = {
 		supply_consumption = 5
 		build_cost_ic = 320
 	}
-
 	#-Подветка вертолетов
-	basic_mass_helicopter_equipment = { 
+	basic_mass_helicopter_equipment = {
 		abbreviation = "bmhe"
 		derived_variant_name = basic_mass_helicopter_equipment
 		year = 2025
-
 		archetype = mass_heli_airframe
 		type = cas
 		manpower = 20
@@ -401,12 +363,10 @@ equipments = {
 		supply_consumption = 2
 		build_cost_ic = 100
 	}
-	
-	improved_mass_helicopter_equipment = { 
+	improved_mass_helicopter_equipment = {
 		abbreviation = "imhe"
 		derived_variant_name = improved_mass_helicopter_equipment
 		year = 2030
-
 		archetype = mass_heli_airframe
 		parent = basic_mass_helicopter_equipment
 		type = cas
@@ -424,12 +384,10 @@ equipments = {
 		supply_consumption = 4
 		build_cost_ic = 150
 	}
-
-	mass_helicopter_of_the_future_equipment = { 
+	mass_helicopter_of_the_future_equipment = {
 		abbreviation = "mhfe"
 		derived_variant_name = mass_helicopter_of_the_future_equipment
 		year = 2040
-
 		archetype = mass_heli_airframe
 		parent = improved_mass_helicopter_equipment
 		type = cas
@@ -447,20 +405,15 @@ equipments = {
 		supply_consumption = 6
 		build_cost_ic = 225
 	}
-
-
 	#Специализированная авиация
-
-	
-	spec_fighter_airframe = { 
+	spec_fighter_airframe = {
 		year = 2010
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
 		is_buildable = no
 		type = fighter
-		allow_mission_type = {  
+		allow_mission_type = {
 			air_superiority
 			interception
 		}
@@ -469,7 +422,6 @@ equipments = {
 		sprite = light_plane
 		air_map_icon_frame = 1
 		interface_category = interface_category_air
-
 		manpower = 20
 		air_range = 650
 		air_defence = 50
@@ -485,21 +437,19 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 100
 		module_slots = none
-
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
 	}
-	spec_bomber_airframe = { 
+	spec_bomber_airframe = {
 		year = 2010
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
 		is_buildable = no
 		type = fighter
-		allow_mission_type = {  
+		allow_mission_type = {
 			strategic_bomber
 			attack_logistics
 			cas
@@ -511,7 +461,6 @@ equipments = {
 		sprite = light_plane
 		air_map_icon_frame = 1
 		interface_category = interface_category_air
-
 		manpower = 20
 		air_range = 650
 		air_defence = 50
@@ -527,15 +476,13 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 100
 		module_slots = none
-
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
 	}
-	spec_heli_airframe = { 
+	spec_heli_airframe = {
 		year = 2010
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -551,7 +498,6 @@ equipments = {
 		sprite = light_plane
 		air_map_icon_frame = 1
 		interface_category = interface_category_air
-
 		manpower = 20
 		air_range = 650
 		air_defence = 50
@@ -567,18 +513,15 @@ equipments = {
 		supply_consumption = 1
 		build_cost_ic = 100
 		module_slots = none
-
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
 	}
-
-	basic_specialized_airplane_equipment = { 
+	basic_specialized_airplane_equipment = {
 		abbreviation = "bcae"
 		derived_variant_name = basic_specialized_airplane_equipment
 		year = 2015
-
 		archetype = spec_fighter_airframe
 		type = fighter
 		manpower = 20
@@ -596,13 +539,11 @@ equipments = {
 		supply_consumption = 0.9
 		build_cost_ic = 130
 	}
-
 	#-Подветка фронтовых бомбардировщиков
-	basic_specialized_bomber_equipment = { 
+	basic_specialized_bomber_equipment = {
 		abbreviation = "bsbe"
 		derived_variant_name = basic_specialized_airplane_equipment
 		year = 2020
-
 		archetype = spec_bomber_airframe
 		type = tactical_bomber
 		manpower = 30
@@ -620,12 +561,10 @@ equipments = {
 		supply_consumption = 2
 		build_cost_ic = 230
 	}
-
-	improved_specialized_bomber_equipment = { 
+	improved_specialized_bomber_equipment = {
 		abbreviation = "isbe"
 		derived_variant_name = improved_specialized_bomber_equipment
 		year = 2025
-
 		archetype = spec_bomber_airframe
 		parent = basic_specialized_bomber_equipment
 		type = tactical_bomber
@@ -644,12 +583,10 @@ equipments = {
 		supply_consumption = 5
 		build_cost_ic = 320
 	}
-
-	advanced_specialized_bomber_equipment = { 
+	advanced_specialized_bomber_equipment = {
 		abbreviation = "asbe"
 		derived_variant_name = advanced_specialized_bomber_equipment
 		year = 2030
-
 		archetype = spec_bomber_airframe
 		parent = improved_specialized_bomber_equipment
 		type = tactical_bomber
@@ -668,12 +605,10 @@ equipments = {
 		supply_consumption = 9
 		build_cost_ic = 400
 	}
-
-	specialized_bomber_of_the_future_equipment = { 
+	specialized_bomber_of_the_future_equipment = {
 		abbreviation = "sbfe"
 		derived_variant_name = specialized_bomber_of_the_future_equipment
 		year = 2040
-
 		archetype = spec_bomber_airframe
 		parent = advanced_specialized_bomber_equipment
 		type = tactical_bomber
@@ -692,13 +627,11 @@ equipments = {
 		supply_consumption = 10
 		build_cost_ic = 450
 	}
-
 	#-Подветка истребителей
-	basic_specialized_fighter_equipment = { 
+	basic_specialized_fighter_equipment = {
 		abbreviation = "bsfe"
 		derived_variant_name = basic_specialized_fighter_equipment
 		year = 2020
-
 		archetype = spec_fighter_airframe
 		parent = basic_specialized_airplane_equipment
 		type = fighter
@@ -716,12 +649,10 @@ equipments = {
 		supply_consumption = 4
 		build_cost_ic = 225
 	}
-
-	improved_specialized_fighter_equipment = { 
+	improved_specialized_fighter_equipment = {
 		abbreviation = "isfe"
 		derived_variant_name = improved_specialized_fighter_equipment
 		year = 2025
-
 		archetype = spec_fighter_airframe
 		parent = basic_specialized_fighter_equipment
 		type = fighter
@@ -739,12 +670,10 @@ equipments = {
 		supply_consumption = 6
 		build_cost_ic = 290
 	}
-
-	advanced_specialized_fighter_equipment = { 
+	advanced_specialized_fighter_equipment = {
 		abbreviation = "asfe"
 		derived_variant_name = advanced_specialized_fighter_equipment
 		year = 2030
-
 		archetype = spec_fighter_airframe
 		parent = improved_specialized_fighter_equipment
 		type = fighter
@@ -762,12 +691,10 @@ equipments = {
 		supply_consumption = 5.5
 		build_cost_ic = 325
 	}
-
-	specialized_fighter_of_the_future_equipment = { 
+	specialized_fighter_of_the_future_equipment = {
 		abbreviation = "sffe"
 		derived_variant_name = specialized_fighter_of_the_future_equipment
 		year = 2040
-
 		archetype = spec_fighter_airframe
 		parent = advanced_specialized_fighter_equipment
 		type = fighter
@@ -785,13 +712,11 @@ equipments = {
 		supply_consumption = 10
 		build_cost_ic = 480
 	}
-
 	#-Подветка вертолетов
-	basic_specialized_helicopter_equipment = { 
+	basic_specialized_helicopter_equipment = {
 		abbreviation = "bshe"
 		derived_variant_name = basic_specialized_helicopter_equipment
 		year = 2025
-
 		archetype = spec_heli_airframe
 		type = cas
 		manpower = 20
@@ -808,12 +733,10 @@ equipments = {
 		supply_consumption = 3
 		build_cost_ic = 130
 	}
-	
-	improved_specialized_helicopter_equipment = { 
+	improved_specialized_helicopter_equipment = {
 		abbreviation = "ishe"
 		derived_variant_name = improved_specialized_helicopter_equipment
 		year = 2030
-
 		archetype = spec_heli_airframe
 		parent = basic_specialized_helicopter_equipment
 		type = cas
@@ -831,12 +754,10 @@ equipments = {
 		supply_consumption = 6
 		build_cost_ic = 220
 	}
-
-	specialized_helicopter_of_the_future_equipment = { 
+	specialized_helicopter_of_the_future_equipment = {
 		abbreviation = "shfe"
 		derived_variant_name = specialized_helicopter_of_the_future_equipment
 		year = 2040
-
 		archetype = spec_heli_airframe
 		parent = improved_specialized_helicopter_equipment
 		type = cas

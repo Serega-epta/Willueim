@@ -22,7 +22,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.1
 			}
 		}
-
 		holy_nadely = {
 			modifier = {
 				conscription_factor = -0.2
@@ -85,11 +84,11 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.20
 				production_factory_start_efficiency_factor = -0.15
 			}
-		}	
+		}
 		art_of_persuasion = {
 			picture = brother
 			modifier = {
-				resistance_damage_to_garrison= -0.5
+				resistance_damage_to_garrison = -0.5
 				non_core_manpower = 0.15
 				required_garrison_factor = -0.2
 			}
@@ -117,49 +116,48 @@ ideas = {
 				army_org = 0.05
 			}
 			targeted_modifier = {
-			tag = COA
-			attack_bonus_against = 0.15
-			defense_bonus_against = 0.15
+				tag = COA
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
 			}
 		}
 		zapoved = {
 			picture = GFX_idea_zapoved
 			modifier = {
-			monthly_population = -0.05
-			consumer_goods_factor = -0.03
-			production_lack_of_resource_penalty_factor = -0.15
-			production_factory_efficiency_gain_factor = 0.05
-			production_factory_start_efficiency_factor = 0.1
+				monthly_population = -0.05
+				consumer_goods_factor = -0.03
+				production_lack_of_resource_penalty_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
 			}
 		}
 		heaven_on_earth_2 = {
 			picture = blazh_warriors
 			modifier = {
-			attrition = -0.05
-			political_power_cost = 0.02
-			production_lack_of_resource_penalty_factor = -0.15
+				attrition = -0.05
+				political_power_cost = 0.02
+				production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
 		heaven_on_earth_3 = {
 			picture = blazh_warriors
 			modifier = {
-			command_power_gain = 2
-			attrition = -0.05
-			political_power_cost = 0.02
-			production_lack_of_resource_penalty_factor = -0.15
+				command_power_gain = 2
+				attrition = -0.05
+				political_power_cost = 0.02
+				production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
 		heaven_on_earth_4 = {
 			picture = blazh_warriors
 			modifier = {
-			command_power_gain = 2
-			attrition = -0.05
-			political_power_cost = 0.02
-			production_lack_of_resource_penalty_factor = -0.15
+				command_power_gain = 2
+				attrition = -0.05
+				political_power_cost = 0.02
+				production_lack_of_resource_penalty_factor = -0.15
 			}
-		}				
-########################################## 3 FAZA ################################################
-			
+		}
+		########################################## 3 FAZA ################################################
 		LWV_bejinsy_from_holy_land = {
 			picture = bejinsy_from_holy_land
 			modifier = {
@@ -167,7 +165,7 @@ ideas = {
 				production_speed_buildings_factor = 0.03
 				research_speed_factor = 0.03
 			}
-		}	
+		}
 		LWV_begushie_otstupniki = {
 			picture = cute_knightboy
 			modifier = {
@@ -175,13 +173,13 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 				research_speed_factor = -0.05
 			}
-		}	
+		}
 		LWV_boji_perst_cut = {
 			picture = cute_knightboy
 			modifier = {
 				drift_defence_factor = 0.05
 			}
-		}	
+		}
 		LWV_boji_perst_full = {
 			picture = cute_knightboy
 			modifier = {
@@ -192,26 +190,24 @@ ideas = {
 				resistance_damage_to_garrison_on_our_occupied_states = 0.05
 				compliance_growth_on_our_occupied_states = 0.05
 				enemy_intel_network_gain_factor_over_occupied_tag = 0.1
-			#-10% гражданских разведданных (прочие страны хуже видят)
-			#-10% военных разведданных
-			#-10% авиационных разведанных
-			#-10% морских разведданных
+				#-10% гражданских разведданных (прочие страны хуже видят)
+				#-10% военных разведданных
+				#-10% авиационных разведанных
+				#-10% морских разведданных
 				political_power_gain = -0.15
 				consumer_goods_factor = 0.05
 			}
-		}		
+		}
 		LWV_holy_gramots = {
 			picture = cute_knightboy
 			modifier = {
 				political_power_gain = -0.05
 				global_building_slots_factor = 0.1
 			}
-		}	
+		}
 		LWV_new_promishlenost = {
 			picture = cute_knightboy
-			modifier = {
-
-			}
+			modifier = {}
 		}
 		LWV_new_promishlenost_concetrirovat_1 = {
 			picture = cute_knightboy
@@ -249,217 +245,217 @@ ideas = {
 		LWV_new_promishlenost_raspredelit_1 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_industrial_complex_factor = 0.1
-			global_building_slots_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				global_building_slots_factor = 0.1
 			}
 		}
 		LWV_new_promishlenost_raspredelit_2 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.3
-			production_speed_industrial_complex_factor = 0.2
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.3
+				production_speed_industrial_complex_factor = 0.2
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
 			}
 		}
 		LWV_new_promishlenost_raspredelit_3 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.25
-			research_speed_factor = -0.05
-			production_speed_industrial_complex_factor = 0.2
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
-			political_power_gain = 0.05
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.25
+				research_speed_factor = -0.05
+				production_speed_industrial_complex_factor = 0.2
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
+				political_power_gain = 0.05
 			}
 		}
 		LWV_new_promishlenost_raspredelit_4 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.25
-			research_speed_factor = -0.07
-			line_change_production_efficiency_factor = 0.2
-			production_speed_industrial_complex_factor = 0.2
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
-			political_power_gain = 0.05
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.25
+				research_speed_factor = -0.07
+				line_change_production_efficiency_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
+				political_power_gain = 0.05
 			}
 		}
 		LWV_contsetrirovat_vostanovleniye_1 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_buildings_factor = 0.1
-			industry_repair_factor = 0.5
+				production_speed_buildings_factor = 0.1
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_contsetrirovat_vostanovleniye_2 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_buildings_factor = 0.1
-			production_factory_efficiency_gain_factor = 0.2
-			production_speed_industrial_complex_factor = -0.3
-			industry_repair_factor = 0.5
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_industrial_complex_factor = -0.3
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_contsetrirovat_vostanovleniye_3 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
 				production_speed_industrial_complex_factor = -0.3
 				political_power_gain = -0.1
-			industry_repair_factor = 0.5
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_contsetrirovat_vostanovleniye_4 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_buildings_factor = 0.2
-			production_factory_efficiency_gain_factor = 0.2
-			production_speed_industrial_complex_factor = -0.3
-			political_power_gain = -0.1
-			research_speed_factor = 0.05
-			industry_repair_factor = 0.5
+				production_speed_buildings_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_industrial_complex_factor = -0.3
+				political_power_gain = -0.1
+				research_speed_factor = 0.05
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_raspredelit_vostanovleniye_1 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_industrial_complex_factor = 0.1
-			global_building_slots_factor = 0.1
-			industry_repair_factor = 0.5
+				production_speed_industrial_complex_factor = 0.1
+				global_building_slots_factor = 0.1
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_raspredelit_vostanovleniye_2 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.3
-			production_speed_industrial_complex_factor = 0.2
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
-			industry_repair_factor = 0.5
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.3
+				production_speed_industrial_complex_factor = 0.2
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_raspredelit_vostanovleniye_3 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.25
-			research_speed_factor = -0.05
-			production_speed_industrial_complex_factor = 0.2
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
-			political_power_gain = 0.05
-			industry_repair_factor = 0.5
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.25
+				research_speed_factor = -0.05
+				production_speed_industrial_complex_factor = 0.2
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
+				political_power_gain = 0.05
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_raspredelit_vostanovleniye_4 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.25
-			research_speed_factor = -0.07
-			line_change_production_efficiency_factor = 0.2
-			production_speed_industrial_complex_factor = 0.2
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
-			political_power_gain = 0.05
-			industry_repair_factor = 0.5
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.25
+				research_speed_factor = -0.07
+				line_change_production_efficiency_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
+				political_power_gain = 0.05
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_contsetrirovat_raschirit_1 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_buildings_factor = 0.1
-			industry_repair_factor = 0.5
-			production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industry_repair_factor = 0.5
+				production_speed_infrastructure_factor = 0.1
 			}
 		}
 		LWV_contsetrirovat_raschirit_2 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_buildings_factor = 0.1
-			production_factory_efficiency_gain_factor = 0.2
-			production_speed_industrial_complex_factor = -0.3
-			production_speed_infrastructure_factor = 0.1
-			industry_repair_factor = 0.5
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_infrastructure_factor = 0.1
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_contsetrirovat_raschirit_3 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
 				production_speed_industrial_complex_factor = -0.3
 				political_power_gain = -0.1
 				production_speed_infrastructure_factor = 0.1
-			industry_repair_factor = 0.5
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_contsetrirovat_raschirit_4 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_buildings_factor = 0.2
-			production_factory_efficiency_gain_factor = 0.2
-			production_speed_industrial_complex_factor = -0.3
-			production_speed_infrastructure_factor = 0.1
-			political_power_gain = -0.1
-			research_speed_factor = 0.05
-			industry_repair_factor = 0.5
+				production_speed_buildings_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_infrastructure_factor = 0.1
+				political_power_gain = -0.1
+				research_speed_factor = 0.05
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_raspredelit_raschirit_1 = {
 			picture = cute_knightboy
 			modifier = {
-			production_speed_industrial_complex_factor = 0.1
-			production_speed_infrastructure_factor = 0.1
-			global_building_slots_factor = 0.1
-			industry_repair_factor = 0.5
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				global_building_slots_factor = 0.1
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_raspredelit_raschirit_2 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.3
-			production_speed_industrial_complex_factor = 0.2
-			production_speed_infrastructure_factor = 0.1
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
-			industry_repair_factor = 0.5
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.3
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_raspredelit_raschirit_3 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.25
-			research_speed_factor = -0.05
-			production_speed_industrial_complex_factor = 0.2
-			production_speed_infrastructure_factor = 0.1
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
-			political_power_gain = 0.05
-			industry_repair_factor = 0.5
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.25
+				research_speed_factor = -0.05
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
+				political_power_gain = 0.05
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_raspredelit_raschirit_4 = {
 			picture = cute_knightboy
 			modifier = {
-			production_factory_start_efficiency_factor = 0.3
-			production_speed_buildings_factor = -0.25
-			research_speed_factor = -0.07
-			line_change_production_efficiency_factor = 0.2
-			production_speed_infrastructure_factor = 0.1
-			production_speed_industrial_complex_factor = 0.2
-			production_factory_efficiency_gain_factor = -0.1
-			global_building_slots_factor = 0.1
-			political_power_gain = 0.05
-			industry_repair_factor = 0.5
+				production_factory_start_efficiency_factor = 0.3
+				production_speed_buildings_factor = -0.25
+				research_speed_factor = -0.07
+				line_change_production_efficiency_factor = 0.2
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_factory_efficiency_gain_factor = -0.1
+				global_building_slots_factor = 0.1
+				political_power_gain = 0.05
+				industry_repair_factor = 0.5
 			}
 		}
 		LWV_rianost_yonih = {
@@ -469,7 +465,7 @@ ideas = {
 				army_leader_cost_factor = -0.5
 				army_leader_start_level = 2
 			}
-		}		
+		}
 		LWV_voina_vo_tme = {
 			picture = cute_knightboy
 			modifier = {
@@ -477,8 +473,10 @@ ideas = {
 				attrition = -0.05
 				political_power_cost = 0.02
 				production_lack_of_resource_penalty_factor = -0.15
-				defence = -0.1 ###################################################против кризисных сектантов
-				offence = 0.2 ###################################################против кризисных сектантов
+				###################################################против кризисных сектантов
+				defence = -0.1
+				###################################################против кризисных сектантов
+				offence = 0.2
 			}
 		}
 		LWV_scared_war = {
@@ -490,10 +488,10 @@ ideas = {
 		LWV_scared_war_upgrate = {
 			picture = cute_knightboy
 			modifier = {
-			conscription =  0.025
-			offence = 0.15
-			defence = 0.1
-			special_forces_attack_factor = 0.2
+				conscription = 0.025
+				offence = 0.15
+				defence = 0.1
+				special_forces_attack_factor = 0.2
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -505,15 +503,14 @@ ideas = {
 		LWV_scared_war_upgrate_ultra = {
 			picture = cute_knightboy
 			modifier = {
-				conscription =  0.025
+				conscription = 0.025
 				offence = 0.15
 				defence = 0.1
 				special_forces_attack_factor = 0.2
 				defensive_war_stability_factor = 0.2
 				offensive_war_stability_factor = 0.2
 				justify_war_goal_time = -0.25
-				
-				}
+			}
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.2

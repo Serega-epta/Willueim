@@ -1,24 +1,19 @@
 ideas = {
-
 	country = {
-		BTC_asinis_par_asinim  = { #Asinis_par_asinim (глаз за глаз)
-			
+		#Asinis_par_asinim (глаз за глаз)
+		BTC_asinis_par_asinim = {
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-			
 			modifier = {
 				surrender_limit = 0.25
 				attrition = -0.05
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
-				
 			}
 		}
 	}

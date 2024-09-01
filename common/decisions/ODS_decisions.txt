@@ -3,7 +3,7 @@ ODS_kuban = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
-			base = 100	
+			base = 100
 		}
 		visible = {
 			has_country_flag = Kuban_in_fire
@@ -18,21 +18,21 @@ ODS_kuban = {
 			}
 			has_equipment = {
 				motorized_equipment_1 > 99
-			}			
+			}
 		}
 		days_remove = 180
-		complete_effect = {	
+		complete_effect = {
 			add_manpower = -5000
 			add_equipment_to_stockpile = {
-				type = infantry_equipment 
+				type = infantry_equipment
 				amount = -5000
 			}
 			add_equipment_to_stockpile = {
-				type = support_equipment_1 
+				type = support_equipment_1
 				amount = -5000
 			}
 			add_equipment_to_stockpile = {
-				type = motorized_equipment_1 
+				type = motorized_equipment_1
 				amount = -100
 			}
 		}
@@ -40,81 +40,87 @@ ODS_kuban = {
 			custom_effect_tooltip = krasnodar_annex_tt
 			hidden_effect = {
 				random_list = {
-					50 = { 
-						ODS = { 
-							clr_country_flag = Kuban_in_fire 
-							country_event = { id = kuban.2 }
-							annex_country = { 
-								target = ECD 
-								transfer_troops = no 
-							} 
-						} 
-					}
-					50 = { 
-						ODS = { 
-							clr_country_flag = Kuban_in_fire 
-							country_event = { id = kuban.3 } 
-							declare_war_on = { 
-								target = ECD 
-								type = annex_everything 
-							} 
-							KUB = { 
-								declare_war_on = { 
-									target = ECD 
-									type = annex_everything 
-								} 
+					50 = {
+						ODS = {
+							clr_country_flag = Kuban_in_fire
+							country_event = {
+								id = kuban.2
 							}
-						} 
+							annex_country = {
+								target = ECD
+								transfer_troops = no
+							}
+						}
+					}
+					50 = {
+						ODS = {
+							clr_country_flag = Kuban_in_fire
+							country_event = {
+								id = kuban.3
+							}
+							declare_war_on = {
+								target = ECD
+								type = annex_everything
+							}
+							KUB = {
+								declare_war_on = {
+									target = ECD
+									type = annex_everything
+								}
+							}
+						}
 					}
 				}
 			}
-		}		
+		}
 	}
 }
-
 # ╔══╗╔══╗─╔══╗─╔╗╔╗╔╗╔╗╔╗╔╗╔═══╗╔╗╔╗╔╗╔╗╔═══╗
 # ║╔╗║║╔╗║─║╔╗║─║║║║║║║║║║║║║╔══╝║║║║║║║║║╔══╝
 # ║║║║║║║║─║║║║─║╚╝║║║║║║╚╝║║╚══╗║╚╝║║║║║║╚══╗
 # ║║║║║║║║─║║║║─╚═╗║║║╔║║╔╗║║╔══╝║╔╗║║║╔║║╔══╝
 # ║║║║║╚╝║╔╝╚╝╚╗──║║║╚╝║║║║║║╚══╗║║║║║╚╝║║╚══╗
 # ╚╝╚╝╚══╝╚════╝──╚╝╚══╝╚╝╚╝╚═══╝╚╝╚╝╚══╝╚═══╝
-
 #Сделал Sum Tea Jay
-
 ODS_subordination = {
 	ODS_veil_reinforcement = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
-			base = 100	
+			base = 100
 		}
 		available = {
 			has_manpower > 299
 			custom_trigger_tooltip = {
 				tooltip = has_more_than_three_hundred_black_rubles_tt
-				check_variable = { black_rubles_budget > 299 } 
+				check_variable = {
+					black_rubles_budget > 299
+				}
 			}
 			has_political_power > 9
-			from = { 
-				has_dynamic_modifier = { modifier = ODS_new_land }
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = ODS_new_land
+				}
 			}
 		}
 		visible = {
 			FROM = {
-				has_dynamic_modifier = { modifier = ODS_new_land }
+				has_dynamic_modifier = {
+					modifier = ODS_new_land
+				}
 			}
 		}
 		target_trigger = {
-			FROM = { 
+			FROM = {
 				is_fully_controlled_by = ROOT
-				NOT = { 
-					is_core_of = ROOT 
+				NOT = {
+					is_core_of = ROOT
 					has_state_flag = first_level_of_authority
-				} 
-			} 
+				}
+			}
 		}
 		on_map_mode = decision_view_only
-
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
@@ -122,13 +128,17 @@ ODS_subordination = {
 		remove_effect = {
 			FROM = {
 				set_state_flag = first_level_of_authority
-				add_dynamic_modifier = { modifier = ODS_reinforced_veil }
-				remove_dynamic_modifier = { modifier = ODS_new_land }
+				add_dynamic_modifier = {
+					modifier = ODS_reinforced_veil
+				}
+				remove_dynamic_modifier = {
+					modifier = ODS_new_land
+				}
 			}
 			add_to_variable = {
 				var = Conception_var
 				value = 1
-			}		
+			}
 			add_manpower = -300
 			add_political_power = -10
 			subtract_from_variable = {
@@ -137,27 +147,29 @@ ODS_subordination = {
 			}
 		}
 	}
-
 	ODS_focus_on = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
-			base = 100	
+			base = 100
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = two_hundred_people_in_the_capital_tt	
-				839 = { state_population > 9999 }
+				tooltip = two_hundred_people_in_the_capital_tt
+				839 = {
+					state_population > 9999
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = has_more_than_two_hundred_black_rubles_tt
-				check_variable = { black_rubles_budget > 199 } 
+				check_variable = {
+					black_rubles_budget > 199
+				}
 			}
 			has_political_power > 9
 		}
-
 		visible = {
-			FROM = { 
+			FROM = {
 				has_state_flag = first_level_of_authority
 			}
 			NOT = {
@@ -167,7 +179,6 @@ ODS_subordination = {
 			}
 		}
 		on_map_mode = decision_view_only
-
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
@@ -176,41 +187,47 @@ ODS_subordination = {
 			FROM = {
 				clr_state_flag = first_level_of_authority
 				set_state_flag = second_level_of_authority
-				add_dynamic_modifier = { modifier = ODS_focused_eye }
-				remove_dynamic_modifier = { modifier = ODS_reinforced_veil }
+				add_dynamic_modifier = {
+					modifier = ODS_focused_eye
+				}
+				remove_dynamic_modifier = {
+					modifier = ODS_reinforced_veil
+				}
 			}
 			add_to_variable = {
 				var = Conception_var
 				value = 1
-			}		
+			}
 			subtract_from_variable = {
 				var = black_rubles_budget
 				value = 200
 			}
-			839 = { add_manpower = -50 }
-			add_manpower = 500	
-			add_political_power = -2 
+			839 = {
+				add_manpower = -50
+			}
+			add_manpower = 500
+			add_political_power = -2
 			subtract_from_variable = {
 				var = black_rubles_budget
 				value = 200
 			}
 		}
 	}
-
 	ODS_promoting_mindfulness_in = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		ai_will_do = {
-			base = 100	
+			base = 100
 		}
 		available = {
-			custom_trigger_tooltip = { 
+			custom_trigger_tooltip = {
 				tooltip = has_more_than_three_hundred_black_rubles_tt
-				check_variable = { black_rubles_budget > 299 } 
+				check_variable = {
+					black_rubles_budget > 299
+				}
 			}
 			has_political_power > 9
 		}
-
 		visible = {
 			FROM = {
 				has_state_flag = second_level_of_authority
@@ -222,20 +239,23 @@ ODS_subordination = {
 			}
 		}
 		on_map_mode = decision_view_only
-
 		state_target = yes
 		target_array = ODS.controlled_states
 		fire_only_once = yes
 		days_remove = 21
 		remove_effect = {
 			FROM = {
-				add_dynamic_modifier = { modifier = ODS_informed_society }
-				remove_dynamic_modifier = { modifier = ODS_focused_eye }				
+				add_dynamic_modifier = {
+					modifier = ODS_informed_society
+				}
+				remove_dynamic_modifier = {
+					modifier = ODS_focused_eye
+				}
 			}
 			add_to_variable = {
 				var = Conception_var
 				value = 1
-			}	
+			}
 			add_state_core = FROM
 			add_political_power = -10
 			subtract_from_variable = {
