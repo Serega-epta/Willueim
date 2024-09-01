@@ -1,18 +1,14 @@
 capital = 137
-
 oob = CRW
-
-
 # Starting tech
 set_technology = {
-    infantry_weapons = 1
-   civilian_clothing = 1
-   tech_support = 1
-   pre_war_OPV = 1
-   gw_artillery = 1
-   instruments_of_any_era = 1
+	infantry_weapons = 1
+	civilian_clothing = 1
+	tech_support = 1
+	pre_war_OPV = 1
+	gw_artillery = 1
+	instruments_of_any_era = 1
 }
-
 set_research_slots = 2
 set_convoys = 0
 army_experience = 50
@@ -33,22 +29,19 @@ add_equipment_to_stockpile = {
 	producer = CRW
 }
 set_politics = {
-	ruling_party = free_people 
+	ruling_party = free_people
 	elections_allowed = no
 }
-
 set_popularities = {
 	free_people = 100
 }
- 
 create_country_leader = {
-    name = "vojd"
-    desc = "vojd_desc"
-    picture = "gfx/leaders/CRW/vojd.dds"
-    ideology = free_people_subideology
-    traits = {
-        #
-    }
+	name = "vojd"
+	desc = "vojd_desc"
+	picture = "gfx/leaders/CRW/vojd.dds"
+	ideology = free_people_subideology
+	traits = {
+		#
+	}
 }
-
 add_ideas = otchayaniy_obrechonnykh

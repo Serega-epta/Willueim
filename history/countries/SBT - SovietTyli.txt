@@ -1,21 +1,16 @@
 capital = 939
-
 oob = SBT
-
-
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-   civilian_clothing = 1
-   tech_support = 1
-   gw_artillery = 1
-   instruments_of_any_era = 1
+	civilian_clothing = 1
+	tech_support = 1
+	gw_artillery = 1
+	instruments_of_any_era = 1
 }
-
 set_research_slots = 2
 set_convoys = 0
 add_manpower = 18000
-
 add_opinion_modifier = {
 	target = ORL
 	modifier = ORL_battle_brothers
@@ -30,7 +25,7 @@ add_opinion_modifier = {
 }
 add_opinion_modifier = {
 	target = SMX
-	modifier = ORL_traitors 
+	modifier = ORL_traitors
 }
 add_opinion_modifier = {
 	target = MAZ
@@ -40,18 +35,15 @@ add_opinion_modifier = {
 	target = TAB
 	modifier = ORL_idiots_and_idealists
 }
-
 set_politics = {
-	ruling_party = militarists 
+	ruling_party = militarists
 	elections_allowed = no
 }
-
 set_popularities = {
 	bandits = 5
 	sacraments = 5
 	free_people = 15
 	militarists = 75
-    }
-
+}
 recruit_character = SBT_Dmitriy_Gusev
 recruit_character = SBT_generic_general
