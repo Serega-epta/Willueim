@@ -24,7 +24,7 @@ NDefines_Graphics.NGraphics.BORDER_COLOR_DEMILITARIZED_A = 1.0
 --------------------------
 --SMOOTH BORDERS DEFINES--
 --------------------------
-NDefines_Graphics.NGraphics.GRADIENT_BORDERS_COUNTRY_CENTER_THICKNESS = 0
+NDefines_Graphics.NGraphics.GRADIENT_BORDERS_COUNTRY_CENTER_THICKNESS = 1.0 -- The center gradient is linear 1/255 per pixel for this many pixels
 NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_DIPLOMACY = 1
 NDefines_Graphics.NGraphics.BORDER_WIDTH = 1.0
 NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 1500
@@ -38,19 +38,20 @@ NDefines_Graphics.NGraphics.SUN_DIFFUSE_COLOR   = {0.5, 0.0, 1.3}
 NDefines_Graphics.NGraphics.BLOOM_SCALE = 0.0
 NDefines_Graphics.NGraphics.SUN_INTENSITY = 0.3 -- 0.4
 NDefines_Graphics.NGraphics.SECOND_SUN_LATITUDE = 0
-NDefines_Graphics.NGraphics.COUNTRY_COLOR_HUE_MODIFIER = 0.0
-NDefines_Graphics.NGraphics.COUNTRY_COLOR_SATURATION_MODIFIER = 0.6
-NDefines_Graphics.NGraphics.COUNTRY_COLOR_BRIGHTNESS_MODIFIER = 0.8
+NDefines_Graphics.NGraphics.COUNTRY_COLOR_HUE_MODIFIER = 0.0 -- 0.0
+NDefines_Graphics.NGraphics.COUNTRY_COLOR_SATURATION_MODIFIER = 0.8 -- 0.6
+NDefines_Graphics.NGraphics.COUNTRY_COLOR_BRIGHTNESS_MODIFIER = 0.75 -- 0.8
 NDefines_Graphics.NGraphics.DRAW_SHADOWS_CUTOFF = 800
 NDefines_Graphics.NGraphics.DRAW_SHADOWS_FADE_LENGTH = 100
-NDefines_Graphics.NGraphics.DRAW_FOW_CUTOFF = 108
-NDefines_Graphics.NGraphics.DRAW_FOW_FADE_LENGTH = 10
+NDefines_Graphics.NGraphics.DRAW_FOW_CUTOFF = 0; -- 108
+NDefines_Graphics.NGraphics.DRAW_FOW_FADE_LENGTH = 0; -- 10
 NDefines_Graphics.NGraphics.WEATHER_DISTANCE_CUTOFF = 50 -- At what distance weather effects are hidden
 NDefines_Graphics.NGraphics.WEATHER_DISTANCE_FADE_LENGTH = 400 -- How far the fade out distance should be
 NDefines_Graphics.NGraphics.CAMERA_OUTSIDE_MAP_DISTANCE_TOP = 100.0
 NDefines_Graphics.NGraphics.CAMERA_OUTSIDE_MAP_DISTANCE_BOTTOM = 50.0
-NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED_DISTANCE_MULT = 10.0
-NDefines_Graphics.NGraphics.CAMERA_ZOOM_KEY_SCALE = 0.10
+NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED_DISTANCE_MULT = 15.0
+NDefines_Graphics.NGraphics.CAMERA_ZOOM_KEY_SCALE = 0.02
+NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED = 50
 NDefines_Graphics.NGraphics.DRAW_REFRACTIONS_CUTOFF = 300
 NDefines_Graphics.NGraphics.DRAW_DETAILED_CUTOFF = 500		-- When country names disappear from the map
 NDefines_Graphics.NGraphics.GRADIENT_BORDERS_OUTLINE_CUTOFF_COUNTRY = 0.98
@@ -59,8 +60,8 @@ NDefines_Graphics.NGraphics.GRADIENT_BORDERS_OUTLINE_CUTOFF_DIPLOMACY = 0.98
 NDefines_Graphics.NMapMode.SELECTED_COUNTRY_HIGHLIGHT_THICKNESS_MULT = 1.0
 NDefines_Graphics.NGraphics.GRADIENT_BORDERS_FIELD_COUNTRY_LOW = 0.0 -- country area in sum of pixels ...
 NDefines_Graphics.NGraphics.GRADIENT_BORDERS_FIELD_COUNTRY_HIGH = 9000.0 -- ... the value is squared, so fe. country of size 100x100pix = 10000
-NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_COUNTRY_LOW = 0.0 -- thickness in pixels
-NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_COUNTRY_HIGH = 35.0
+NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_COUNTRY_LOW = 6.0 -- thickness in pixels -- 5 --10
+NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_COUNTRY_HIGH = 25.0 --25.0
 NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_STATE = 1.0
 
 -----------------------
