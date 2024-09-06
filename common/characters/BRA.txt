@@ -1,9 +1,9 @@
 characters={
 	BRA_Vremenniy_Sovet={
-		name = BRA_Vremenniy_Sovet
+		name=BRA_Vremenniy_Sovet
 		portraits={
 			civilian={
-				large="GFX_portrait_BRA_Vremenniy_Sovet.dds"
+				large="gfx/leaders/BRA/Vremenniy_Sovet.dds"
 			}
 		}
 		
@@ -11,6 +11,22 @@ characters={
 			ideology=humanists_subideology
 			expire="3333.1.1.1"
 			desc = Vremenniy_Sovet_desk
+		}
+	}
+	BRA_Veche={
+		name=BRA_Veche
+		portraits={
+			
+			civilian={
+				large="gfx/leaders/BRA/Veche.dds"
+			}
+		}
+		
+		country_leader={
+			ideology=humanists_subideology
+			expire="3333.1.1.1"
+			id=2
+			desc = BRA_Veche_desc
 		}
 	}
 }
