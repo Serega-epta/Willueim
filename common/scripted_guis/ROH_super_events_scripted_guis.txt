@@ -1,31 +1,18 @@
 scripted_gui = {
-
 	sp_event_window = {
-
 		window_name = "sp_event_window"
-
-		visible = {
-			has_global_flag = Super_Event_Visible
-		}
-		
-		properties = { 
-			Super_Event_Image_Get = {
-				image = "[get_superevent]" 
-			} 
-        	}
-		
+		visible = { has_global_flag = Super_Event_Visible }
+		properties = { Super_Event_Image_Get = { image = "[get_superevent]" } }
 		effects = {
 			sp_event_close_button_click = {
 				clr_global_flag = Super_Event_Visible
-				
 				if = {
 					limit = {
 						has_global_flag = Dog_Clanging
 
 					}		
 					clr_global_flag = Dog_Clanging
-				}	
-
+				}
 				if = {
 					limit = {
 						has_global_flag = Unconscious_Flight
@@ -33,8 +20,6 @@ scripted_gui = {
 					}		
 					clr_global_flag = Unconscious_Flight
 				}
-
-
 				if = {
 					limit = {
 						has_global_flag = Dynamics_of_Life
@@ -42,8 +27,6 @@ scripted_gui = {
 					}		
 					clr_global_flag = Dynamics_of_Life
 				}
-
-
 				if = {
 					limit = {
 						has_global_flag = Stability_of_Being
@@ -51,14 +34,12 @@ scripted_gui = {
 					}		
 					clr_global_flag = Stability_of_Being
 				}
-				
 				if = {
 					limit = {
 						has_global_flag = GLS_Unite_the_Motherland
 					}
 					clr_global_flag = GLS_Unite_the_Motherland
 				}		
-				
 				if = {
 					limit = {
 						has_global_flag = ODS_Unite_the_Motherland
