@@ -1,10 +1,16 @@
 scripted_gui = {
-	TNO_Anarchy_Diplomacy = {
+	RoH_Anarchy_Diplomacy = {
 		context_type = selected_country_context
 		parent_window_token = selected_country_view
-		window_name = "TNO_Anarchy_Diplomacy_Container"
+		window_name = "RoH_Anarchy_Diplomacy_Container"
 		
-		visible = { RoH_anarchy_visible = yes }
+		visible = { 
+			OR = {
+				original_tag = BLS
+				original_tag = WTR
+				has_country_flag = no_war_with_LWV
+			}
+		}
 		
 		properties = {
 			RoH_anarchy = {

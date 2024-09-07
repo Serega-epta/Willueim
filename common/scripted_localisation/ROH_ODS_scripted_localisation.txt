@@ -45,18 +45,10 @@ defined_text = {
 			FROM = { 
 				NOT = {
 					OR = { 
-						has_dynamic_modifier = { 
-							modifier = ods_industrial_region
-						} 
-						has_dynamic_modifier = { 
-							modifier = ods_resource_region
-						} 
-						has_dynamic_modifier = { 
-							modifier = ods_agricultural_region 
-						} 
-						has_dynamic_modifier = { 
-							modifier = ods_research_region
-						} 
+						has_dynamic_modifier = {  modifier = ods_industrial_region } 
+						has_dynamic_modifier = {  modifier = ods_resource_region } 
+						has_dynamic_modifier = { modifier = ods_agricultural_region } 
+						has_dynamic_modifier = { modifier = ods_research_region } 
 					}
 				}
 			}
@@ -70,9 +62,7 @@ defined_text = {
 	text = {
 		trigger = {
 			FROM = { 
-				has_dynamic_modifier = { 
-					modifier = ods_industrial_region
-				}
+				has_dynamic_modifier = {  modifier = ods_industrial_region } 
 			}
 		}
 		localization_key = "ods_industrial_region"
@@ -80,9 +70,7 @@ defined_text = {
 	text = {
 		trigger = {
 			FROM = { 
-				has_dynamic_modifier = { 
-					modifier = ods_resource_region
-				} 
+				has_dynamic_modifier = {  modifier = ods_resource_region } 
 			}
 		}
 		localization_key = "ods_resource_region"
@@ -90,9 +78,7 @@ defined_text = {
 	text = {
 		trigger = {
 			FROM = { 
-				has_dynamic_modifier = { 
-					modifier = ods_agricultural_region 
-				}
+				has_dynamic_modifier = { modifier = ods_agricultural_region } 
 			}
 		}
 		localization_key = "ods_agricultural_region"
@@ -100,9 +86,7 @@ defined_text = {
 	text = {
 		trigger = {
 			FROM = { 
-				has_dynamic_modifier = { 
-					modifier = ods_research_region
-				} 
+				has_dynamic_modifier = { modifier = ods_research_region } 
 			}
 		}
 		localization_key = "ods_research_region"
@@ -112,18 +96,10 @@ defined_text = {
 			FROM = { 
 				NOT = {
 					OR = { 
-						has_dynamic_modifier = { 
-							modifier = ods_industrial_region
-						} 
-						has_dynamic_modifier = { 
-							modifier = ods_resource_region
-						} 
-						has_dynamic_modifier = { 
-							modifier = ods_agricultural_region 
-						} 
-						has_dynamic_modifier = { 
-							modifier = ods_research_region
-						} 
+						has_dynamic_modifier = {  modifier = ods_industrial_region } 
+						has_dynamic_modifier = {  modifier = ods_resource_region } 
+						has_dynamic_modifier = { modifier = ods_agricultural_region } 
+						has_dynamic_modifier = { modifier = ods_research_region } 
 					}
 				}
 			}
