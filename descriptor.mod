@@ -84,6 +84,6 @@ tags={
 	"Sound"
 	"Technologies"
 }
-name="The Requiem of Humankind: Open Alpha"
+name="The Requiem of Humankind: Open Alpha DEV"
 supported_version="1.14.*"
 path="mod/RoH/"
