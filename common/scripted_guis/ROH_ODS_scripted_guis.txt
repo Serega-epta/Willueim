@@ -6,7 +6,7 @@ scripted_gui = {
 			always = yes
 		}
 		properties = {		
-			ODS_intention_scale = { frame = Conception_var }
+			ODS_intention_scale = { frame = conception_var }
 		}			
     }
 
@@ -41,7 +41,7 @@ scripted_gui = {
 					}
 					ODS = { add_political_power = -10 }
 					ODS = { subtract_from_variable = { black_rubles_budget = 300 } }
-					ODS = { add_to_variable = { Conception_var = 1 } }
+					ODS = { add_to_variable = { conception_var = 1 } }
 					FROM = {
 						add_dynamic_modifier = { modifier = ods_industrial_region }
 					}
@@ -55,7 +55,7 @@ scripted_gui = {
 					}
 					ODS = { add_political_power = -10 }
 					ODS = { subtract_from_variable = { black_rubles_budget = 300 } }
-					ODS = { add_to_variable = { Conception_var = 1 } }
+					ODS = { add_to_variable = { conception_var = 1 } }
 					FROM = {
 						add_dynamic_modifier = { modifier = ods_resource_region }
 					}
@@ -69,7 +69,7 @@ scripted_gui = {
 					}
 					ODS = { add_political_power = -10 }
 					ODS = { subtract_from_variable = { black_rubles_budget = 300 } }
-					ODS = { add_to_variable = { Conception_var = 1 } }
+					ODS = { add_to_variable = { conception_var = 1 } }
 					FROM = {
 						add_dynamic_modifier = { modifier = ods_agricultural_region }
 					}
@@ -83,7 +83,7 @@ scripted_gui = {
 					}	
 					ODS = { add_political_power = -10 }
 					ODS = { subtract_from_variable = { black_rubles_budget = 500 } }
-					ODS = { add_to_variable = { Conception_var = 1 } }
+					ODS = { add_to_variable = { conception_var = 1 } }
 					FROM = {
 						add_dynamic_modifier = { modifier = ods_research_region }
 					}

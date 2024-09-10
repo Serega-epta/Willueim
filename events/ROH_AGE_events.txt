@@ -3,7 +3,7 @@ add_namespace = AGE_baltic_terror
 add_namespace = AGE_clandestine_cells
 add_namespace = AGE_baltics_are_probing
 add_namespace = AGE_border_conflict
-add_namespace = AGE.technical
+add_namespace = AGE_technical
 #Кладбища балтийских народов
 country_event = {
 	id = AGE.1
@@ -419,7 +419,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = AGE.technical.1
+				id = AGE_technical.1
 				days = 220
 			}
 		}
@@ -536,27 +536,27 @@ country_event = {
 ###Технические ивенты
 #Техический ивент для идеи
 country_event = {
-	id = AGE.technical.1
-	title = AGE.technical.1.t
-	desc = AGE.technical.1.d
+	id = AGE_technical.1
+	title = AGE_technical.1.t
+	desc = AGE_technical.1.d
 	fire_only_once = yes
 	hidden = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.technical.1.a
+		name = AGE_technical.1.a
 		add_ideas = AGE_scientists_of_complex
 	}
 }
 #Технический ивент для атаки на кордон
 country_event = {
-	id = AGE.technical.2
-	title = AGE.technical.2.t
-	desc = AGE.technical.2.d
+	id = AGE_technical.2
+	title = AGE_technical.2.t
+	desc = AGE_technical.2.d
 	fire_only_once = yes
 	hidden = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.technical.2.a
+		name = AGE_technical.2.a
 		TWD = {
 			declare_war_on = {
 				target = CHU
@@ -567,9 +567,9 @@ country_event = {
 }
 #Технический ивент-таймер
 country_event = {
-	id = AGE.technical.3
-	title = AGE.technical.3.t
-	desc = AGE.technical.3.d
+	id = AGE_technical.3
+	title = AGE_technical.3.t
+	desc = AGE_technical.3.d
 	fire_only_once = yes
 	hidden = yes
 	trigger = {
@@ -579,22 +579,22 @@ country_event = {
 		}
 	}
 	option = {
-		name = AGE.technical.3.a
+		name = AGE_technical.3.a
 		country_event = {
-			id = AGE.technical.4
+			id = AGE_technical.4
 			days = 80
 		}
 	}
 }
 country_event = {
-	id = AGE.technical.4
-	title = AGE.technical.4.t
-	desc = AGE.technical.4.d
+	id = AGE_technical.4
+	title = AGE_technical.4.t
+	desc = AGE_technical.4.d
 	fire_only_once = yes
 	hidden = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.technical.4.a
+		name = AGE_technical.4.a
 		TWD = {
 			add_ideas = AGE_revenge
 			declare_war_on = {
@@ -606,9 +606,9 @@ country_event = {
 }
 #Захват Сумрачного дивизиона
 country_event = {
-	id = AGE.technical.5
-	title = AGE.technical.5.t
-	desc = AGE.technical.5.d
+	id = AGE_technical.5
+	title = AGE_technical.5.t
+	desc = AGE_technical.5.d
 	fire_only_once = yes
 	hidden = yes
 	trigger = {
@@ -619,7 +619,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = AGE.technical.5.a
+		name = AGE_technical.5.a
 		country_event = {
 			id = AGE.26
 			days = 14
@@ -658,9 +658,9 @@ country_event = {
 }
 #Захват Балтосферы
 country_event = {
-	id = AGE.technical.6
-	title = AGE.technical.6.t
-	desc = AGE.technical.6.d
+	id = AGE_technical.6
+	title = AGE_technical.6.t
+	desc = AGE_technical.6.d
 	fire_only_once = yes
 	hidden = yes
 	trigger = {
@@ -671,7 +671,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = AGE.technical.6.a
+		name = AGE_technical.6.a
 		189 = {
 			transfer_state_to = AGE
 			set_state_name = STATE_189_age
@@ -692,9 +692,9 @@ country_event = {
 }
 #Захват  Симоновы чащи
 country_event = {
-	id = AGE.technical.7
-	title = AGE.technical.7.t
-	desc = AGE.technical.7.d
+	id = AGE_technical.7
+	title = AGE_technical.7.t
+	desc = AGE_technical.7.d
 	fire_only_once = yes
 	hidden = yes
 	trigger = {
@@ -705,7 +705,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = AGE.technical.7.a
+		name = AGE_technical.7.a
 		908 = {
 			transfer_state_to = HAR
 			add_core_of = HAR
@@ -726,9 +726,9 @@ country_event = {
 }
 #Захват ОМК
 country_event = {
-	id = AGE.technical.7
-	title = AGE.technical.7.t
-	desc = AGE.technical.7.d
+	id = AGE_technical.8
+	title = AGE_technical.8.t
+	desc = AGE_technical.8.d
 	fire_only_once = yes
 	hidden = yes
 	trigger = {
@@ -739,7 +739,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = AGE.technical.7.a
+		name = AGE_technical.8.a
 		763 = {
 			transfer_state_to = AGE
 			set_state_name = STATE_763_age
@@ -782,9 +782,9 @@ country_event = {
 }
 #Удаление нацдухов
 country_event = {
-	id = AGE.technical.8
-	title = AGE.technical.8.t
-	desc = AGE.technical.7.d
+	id = AGE_technical.9
+	title = AGE_technical.9.t
+	desc = AGE_technical.9.d
 	fire_only_once = yes
 	hidden = yes
 	trigger = {
@@ -794,7 +794,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = AGE.technical.8.a
+		name = AGE_technical.9.a
 		AGE = {
 			remove_ideas = {
 				AGE_protective_shaft_idea
