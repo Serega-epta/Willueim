@@ -1,28 +1,4 @@
-centralization_dynamic_modifier = {
-	enable = {
-		always = yes
-	}
-	#optional, the modifier won't apply if not enabled
-	remove_trigger = {
-		always = no
-	}
-	#optional, will remove the modifier if true
-	political_power_gain = centralization
-	global_building_slots_factor = centralization
-	#partisan_effect = centralization		 
-}
-#СВЯТАЯ ПОСТУПЬ
-sviataya_postup = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_impassable_icon
-	targeted_modifier = {
-		tag = LWV
-		defense_bonus_against = -0.15
-	}
-}
-#СУДНЫЙ ДЕНЬ
+
 sudni_den = {
 	enable = {
 		always = yes
@@ -39,386 +15,6 @@ sudni_den = {
 		breakthrough_factor = 1.0
 	}
 }
-#ПОДГОТОВЛЕННАЯ ПОЧВА
-podgotovlennaya_pochva = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_impassable_icon
-	production_speed_buildings_factor = 0.5
-	local_manpower = 0.5
-}
-#ЗАСЕЯННЫЕ СЕМЕНА
-zaseyannyje_semena = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_impassable_icon
-	production_speed_buildings_factor = 1.0
-	local_manpower = 1.0
-	local_resources = 1.0
-}
-#СВЯТОСТЬ
-whisper_of_holiness = {
-	enable = {
-		always = yes
-	}
-	remove_trigger = {
-		NOT = {
-			country_exists = LWV
-		}
-	}
-	icon = GFX_impassable_icon
-	local_manpower = 0.01
-	army_defence_factor = 0.05
-}
-#БОЖ�?Й ГЛАС
-gods_voice = {
-	enable = {
-		always = yes
-	}
-	remove_trigger = {
-		NOT = {
-			country_exists = LWV
-		}
-	}
-	icon = GFX_impassable_icon
-	local_manpower = 0.05
-	compliance_growth = 0.01
-	resistance_growth = -0.01
-	army_defence_factor = 0.05
-	local_building_slots_factor = 0.1
-}
-#ПЕСНЬ БЛАГОДАТ�?
-song_of_grace = {
-	enable = {
-		always = yes
-	}
-	remove_trigger = {
-		NOT = {
-			country_exists = LWV
-		}
-	}
-	icon = GFX_impassable_icon
-	local_manpower = 0.1
-	army_defence_factor = 0.1
-	local_building_slots_factor = 0.3
-	production_speed_buildings_factor = 0.1
-	local_supplies_for_controller = 0.1
-	army_attack_factor = -0.05
-}
-#Бонусы специализации гарнизона
-garnizon_baff = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_impassable_icon
-	mobilization_speed = 0.5
-	local_org_regain = 0.2
-	planning_speed = 0.25
-	local_manpower = 0.15
-	attrition_for_controller = -0.5
-}
-#Бонусы специализации переферии
-pereferia_baff = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_impassable_icon
-	local_building_slots_factor = 0.25
-	supply_node_range = 0.4
-	mobilization_speed = -0.5
-}
-#Бонусы специализации сырьевого
-sirievoi_baff = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_impassable_icon
-	state_resources_factor = 0.25
-	local_supplies_for_controller = 0.3
-	army_speed_factor_for_controller = 0.40
-}
-#Бонусы специализации промышленного
-promishlenni_baff = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_impassable_icon
-	state_production_speed_buildings_factor = 0.4
-	air_accidents = 0.3
-	air_detection = -0.2
-}
-nuke_aftermath = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_nuclear_attack_icon_icon
-	local_manpower = -0.5
-	local_supplies = -0.5
-}
-refuees = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_refugees_icon
-	local_intel_to_enemies = 0.1
-	local_supplies = -0.05
-	local_non_core_manpower = -0.05
-}
-chemweapons_basic_lethal = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_chemweapons_basic_lethal_icon
-	army_attack_factor = -0.1
-	army_defence_factor = -0.1
-	local_org_regain = -0.1
-}
-bioweapons_basic_lethal = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_chemweapons_basic_psychadelics_icon
-	MONTHLY_POPULATION = -1
-	local_factory_sabotage = 0.1
-}
-anomaly = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_chemweapons_basic_nonlethal_icon
-	local_org_regain = -0.25
-	local_supplies = -0.25
-}
-people = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	weekly_manpower = ROOT.manmore
-}
-people_1 = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	weekly_manpower = FROM.manmore
-}
-issled = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	research_speed_factor = ROOT.Issled
-}
-fabricks = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	production_speed_buildings_factor = ROOT.fab
-}
-warzawod = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	industrial_capacity_factory = ROOT.warzav
-}
-issled_1 = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	research_speed_factor = FROM.Issled
-}
-fabricks_1 = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	production_speed_buildings_factor = FROM.fab
-}
-warzawod_1 = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	industrial_capacity_factory = FROM.warzav
-}
-loyal_sov = {
-	enable = {
-		always = yes
-	}
-	industrial_capacity_factory = Loyal_all
-	production_speed_buildings_factor = Loyal_all
-}
-war_napr = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	army_attack_factor = Warnap_all
-}
-peace_napr = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	consumer_goods_factor = GrazdNap_all
-}
-interg_1 = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	local_manpower = 0.1
-}
-interg_2 = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	local_manpower = 0.25
-	production_speed_buildings_factor = 0.05
-}
-interg_3 = {
-	icon = GFX_idea_unknown
-	enable = {
-		always = yes
-	}
-	local_manpower = 0.5
-	production_speed_buildings_factor = 0.10
-	research_speed_factor = 0.002
-}
-chemweapons_advanced_lethal = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_chemweapons_advanced_lethal_icon
-	local_factories = -0.25
-	attrition_for_controller = 0.25
-}
-chemweapons_advanced_psychadelics = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_chemweapons_advanced_psychadelics_icon
-	local_manpower = -0.25
-	army_speed_factor_for_controller = -0.25
-}
-chemweapons_paranoia_bomb = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_chemweapons_chemweapons_paranoia_bomb_icon
-	local_org_regain = -0.25
-	local_supplies = -0.25
-	local_factory_sabotage = 0.5
-	local_intel_to_enemies = -0.5
-}
-chemweapons_meltabomb = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_chemweapons_meltabomb_icon
-	local_factories = -0.50
-	attrition_for_controller = 0.50
-	local_supplies_for_controller = -0.50
-	disable_strategic_redeployment = 1
-}
-chemweapons_mindbreaker = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_chemweapons_mindbreaker_icon
-	local_manpower = -0.50
-	army_speed_factor_for_controller = -0.50
-	local_factory_sabotage = 0.5
-	local_intel_to_enemies = 0.5
-}
-bioweapons_anthrax_modifier = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_bioweapons_anthrax_modifier_icon
-	local_manpower = -0.25
-	local_non_core_manpower = -0.5
-	attrition_for_controller = 0.25
-}
-bioweapons_smallpox_modifier = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_bioweapons_smallpox_modifier_icon
-	local_manpower = -0.5
-	local_non_core_manpower = -0.75
-	local_supplies_for_controller = -0.5
-}
-bioweapons_botulism_modifier = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_bioweapons_botulism_modifier_icon
-	local_resources = -0.25
-	local_non_core_manpower = -0.25
-	local_supplies_for_controller = -0.5
-}
-bioweapons_influenza_modifier = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_bioweapons_influenza_modifier_icon
-	local_manpower = -0.25
-	local_org_regain = -0.25
-}
-bioweapons_secondary_outbreak_modifier = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_bioweapons_secondary_outbreak_modifier_icon
-	local_manpower = -0.25
-	local_org_regain = -0.05
-	local_supplies = -0.05
-}
-livewire_modifier = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_livewire_modifier_icon
-	army_speed_factor_for_controller = -0.25
-	state_production_speed_buildings_factor = -0.15
-}
-coalition_popularity_modifier = {
-	enable = {
-		always = yes
-	}
-	political_power_factor = coalition_modifier
-	stability_factor = coalition_modifier
-	production_speed_buildings_factor = coalition_modifier
-}
-banned_popularity_modifier = {
-	enable = {
-		always = yes
-	}
-	political_power_factor = banned_modifier
-	stability_factor = banned_modifier
-	production_speed_buildings_factor = banned_modifier
-}
-PB_Automation_Crisis_Dynamic_Modifier = {
-	enable = {
-		always = yes
-	}
-	stability_factor = PB_AC_stability_factor
-	research_speed_factor = PB_AC_Research_Speed_Factor
-	consumer_goods_factor = PB_AC_Consumer_Goods
-	production_factory_max_efficiency_factor = PB_AC_ProductionMaxEfficiency
-	production_factory_efficiency_gain_factor = PB_AC_ProductionEfficiencyGain
-	line_change_production_efficiency_factor = PB_AC_line_change_production_efficiency_factor
-	industrial_capacity_factory = PB_AC_ic_factory
-}
-#Уровни подчинения в Адмиралтействе
 ODS_new_land = {
 	enable = {
 		always = yes
@@ -467,7 +63,6 @@ ODS_informed_society = {
 	state_production_speed_industrial_complex_factor = 0.05
 	state_production_speed_arms_factory_factor = 0.05
 }
-########Типы специализации стейтов в Адмиралтействе####################
 ods_industrial_region = {
 	enable = {
 		always = yes
@@ -522,64 +117,44 @@ ods_research_region = {
 	local_building_slots_factor = 0.05
 	state_production_speed_buildings_factor = 0.05
 }
-#######################################################################
-#Балтийский сепаратизм
 AGE_baltic_separatism = {
 	enable = {
 		always = yes
 	}
 	icon = GFX_idea_unknown
-	#-0.2
 	political_power_factor = AGE_baltic_separatism_political_power_factor
-	#-0.25
 	monthly_population = AGE_baltic_separatism_monthly_population
-	#-0.2
 	conscription_factor = AGE_baltic_separatism_conscription_factor
-	#0.15
 	consumer_goods_factor = AGE_baltic_separatism_consumer_goods_factor
-	#-0.6
 	stability_factor = AGE_baltic_separatism_stability_factor
-	#-0.8
 	industry_free_repair_factor = AGE_baltic_separatism_industry_free_repair_factor
 }
-#Открытое противодействие
 open_opposition = {
 	enable = {
 		always = yes
 	}
 	icon = GFX_impassable_icon
-	#максимум фабрик в регионе: -20%
 	global_building_slots_factor = -0.2
-	#скорость стр-тва. -20%
 	production_speed_buildings_factor = -0.2
-	#эффективность снабжения: -12%
 	attrition = -0.12
-	#(скорость дивизии -25%) 
 	army_speed_factor = -0.25
 }
-#Подпольные ячейки
 clandestine_cells = {
 	enable = {
 		always = yes
 	}
 	icon = GFX_impassable_icon
-	#максимум фабрик в регионе: -5%
 	global_building_slots_factor = -0.05
-	#скорость стр-ства: -10%
 	production_speed_buildings_factor = -0.1
-	#эффективность снабжения: - 8%
 	attrition = -0.08
-	#Скорость дивизии: -10%
 	army_speed_factor = -0.1
 }
-#Сопротивление полностью искоренено
 resistance_completely_eradicated = {
 	enable = {
 		always = yes
 	}
 	icon = GFX_impassable_icon
 }
-#Мертвый регион
 dead_region = {
 	enable = {
 		always = yes
@@ -587,7 +162,6 @@ dead_region = {
 	icon = GFX_impassable_icon
 	monthly_population = -1
 }
-#Generic
 apocaliptic_march = {
 	enable = {
 		always = yes
@@ -634,7 +208,6 @@ juridical_anomaly = {
 	enemy_declare_war_tension = generic_enemy_declare_war_tension
 	mobilization_speed = generic_mobilization_speed_2
 }
-#ODS
 NERC_idea = {
 	enable = {
 		always = yes
@@ -681,7 +254,6 @@ dicarstvo_dynamic = {
 	production_speed_infrastructure_factor = production_speed_infrastructure_factor_dicarstvo
 	attrition = attrition_dicarstvo
 }
-#ARM
 ARM_hearts_dynamic = {
 	enable = {
 		always = yes
@@ -698,41 +270,12 @@ MSH_no_surrender = {
 	}
 	surrender_limit = 1
 }
-integrated_state_humanist = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_SOV_factory_worker_militias
-	local_manpower = -0.1
-}
-integrated_state_patriots = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_SOV_factory_worker_militias
-	local_manpower = -0.05
-}
 integrated_state_others = {
 	enable = {
 		always = yes
 	}
 	icon = GFX_modifiers_SOV_factory_worker_militias
 	local_manpower = -0.15
-}
-patriots_partisan_communes = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_modifiers_SOV_invaders_must_die
-	no_compliance_gain = 1
-	required_garrison_factor = 0.5
-	resistance_activity = 0.5
-	resistance_damage_to_garrison_on_our_occupied_states = 0.8
-	compliance_growth = -0.15
-	resistance_growth = 0.15
-	resistance_target = 0.15
-	resistance_decay = -0.30
-	local_manpower = 0.03
 }
 volga_war_cgf_modifier = {
 	enable = {
