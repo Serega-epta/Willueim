@@ -21,7 +21,7 @@ focus_tree = {
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_political_power = 15
-			country_event = AGE.10
+			country_event = AGE_phase_two.1
 			set_country_flag = slavicization_flag
 		}
 	}
@@ -39,7 +39,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
-			country_event = AGE.21
+			country_event = AGE_phase_two.12
 		}
 	}
 	focus = {
@@ -304,7 +304,7 @@ focus_tree = {
 			focus = AGE_help_Paramonov
 		}
 		completion_reward = {
-			country_event = AGE.23
+			country_event = AGE_phase_two.14
 			set_country_flag = fight_red_forest
 			custom_effect_tooltip = fight_red_forest_tt
 		}
@@ -471,7 +471,7 @@ focus_tree = {
 			focus = AGE_find_Braunmans_soldiers
 		}
 		completion_reward = {
-			country_event = AGE.24
+			country_event = AGE_phase_two.15
 			IF = {
 				limit = {
 					has_idea = AGE_red_sabres
@@ -573,7 +573,7 @@ focus_tree = {
 			focus = AGE_reorganization_of_Red_Sabres
 		}
 		completion_reward = {
-			country_event = AGE.25
+			country_event = AGE_phase_two.16
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Зеленый полк\" division_template = \"Зеленый полк\" start_experience_factor = 0.2 start_equipment_factor = 0.9 start_manpower_factor = 1"

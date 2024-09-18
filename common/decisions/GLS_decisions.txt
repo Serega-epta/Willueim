@@ -167,7 +167,7 @@ GLS_negotiation_process = {
 		complete_effect = {
 			clr_country_flag = GLS_negotiation_process_start
 			country_event = {
-				id = GLS.222
+				id = GLS_decisions.2
 				days = 1
 			}
 		}
@@ -237,7 +237,7 @@ GLS_negotiation_process = {
 					clr_country_flag = GLS_negotiation_process_start
 					set_country_flag = GLS_negotiation_process_fail
 					country_event = {
-						id = GLS.111
+						id = GLS_decisions.1
 						days = 1
 					}
 				}
@@ -274,7 +274,7 @@ GLS_kurchatov_project = {
 					black_rubles_budget = 5000
 				}
 				country_event = {
-					id = GLS.750
+					id = GLS_decisions.10
 					days = 1
 				}
 			}
@@ -367,14 +367,14 @@ GLS_nuclear_strike = {
 						days = 70
 					}
 					country_event = {
-						id = GLS.666
+						id = GLS_decisions.7
 						days = 1
 					}
 					country_event = {
-						id = GLS.888
+						id = GLS_decisions.9
 						days = 70
 					}
-					#�?вент, чтобы снять флаг
+					#�?вент, чтобы снять флаг
 				}
 				GLS = {
 					add_stability = -0.03
@@ -388,7 +388,7 @@ GLS_nuclear_strike = {
 						nuclear_charges = 1
 					}
 					country_event = {
-						id = GLS.777
+						id = GLS_decisions.8
 						days = 1
 					}
 					launch_nuke = {

@@ -777,7 +777,7 @@ AGE_their_freedoms = {
 			clr_country_flag = war_with_baltosphere_flag
 			AGE = {
 				country_event = {
-					id = AGE.9
+					id = AGE_phase_one.9
 				}
 			}
 			BTC = {
@@ -1194,7 +1194,7 @@ AGE_red_forest = {
 		days_remove = 0
 		fire_only_once = yes
 		remove_effect = {
-			country_event = AGE.18
+			country_event = AGE_phase_two.9
 			IF = {
 				limit = {
 					has_country_flag = reconciliation_flag

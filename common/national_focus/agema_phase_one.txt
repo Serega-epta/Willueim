@@ -18,7 +18,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			country_event = AGE.1
+			country_event = AGE_phase_one.1
 			custom_effect_tooltip = AGE_blood_on_hands_tt
 		}
 	}
@@ -38,7 +38,7 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = -50
 			add_manpower = 1000
-			country_event = AGE.2
+			country_event = AGE_phase_one.2
 			custom_effect_tooltip = AGE_seek_for_peace_tt
 		}
 	}
@@ -61,7 +61,7 @@ focus_tree = {
 			add_stability = 0.05
 			remove_ideas = AGE_time_wasted
 			add_ideas = AGE_land_for_baltics
-			country_event = AGE.3
+			country_event = AGE_phase_one.3
 			custom_effect_tooltip = AGE_still_their_land_tt
 			set_country_flag = still_their_land_flag
 		}
@@ -87,7 +87,7 @@ focus_tree = {
 			army_experience = -5
 			remove_ideas = AGE_time_wasted
 			add_ideas = AGE_red_sabres
-			country_event = AGE.4
+			country_event = AGE_phase_one.4
 			custom_effect_tooltip = AGE_red_sables_tt
 			set_country_flag = red_sabres_flag
 			if = {
@@ -122,7 +122,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = -0.05
-			country_event = AGE.6
+			country_event = AGE_phase_one.6
 			set_country_flag = not_their_land_anymore_flag
 			set_country_flag = baltic_terror_activation
 			custom_effect_tooltip = not_their_land_tt
@@ -175,7 +175,7 @@ focus_tree = {
 			army_experience = 5
 			air_experience = 5
 			add_stability = 0.02
-			country_event = AGE.5
+			country_event = AGE_phase_one.5
 		}
 	}
 	focus = {
@@ -343,7 +343,7 @@ focus_tree = {
 			focus = AGE_day_of_freedom
 		}
 		completion_reward = {
-			country_event = AGE.7
+			country_event = AGE_phase_one.7
 			add_stability = 0.1
 			hidden_effect = {
 				911 = {

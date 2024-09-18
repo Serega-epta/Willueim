@@ -1,95 +1,101 @@
-add_namespace = AGE
+add_namespace = AGE_phase_one
+add_namespace = AGE_phase_two
+add_namespace = AGE_phase_three
+add_namespace = AGE_phase_four
+add_namespace = AGE_phase_five
+
 add_namespace = AGE_baltic_terror
 add_namespace = AGE_clandestine_cells
 add_namespace = AGE_baltics_are_probing
-add_namespace = AGE_border_conflict
 add_namespace = AGE_technical
+add_namespace = AGE_border_conflict
+
 #Кладбища балтийских народов
 country_event = {
-	id = AGE.1
-	title = AGE.1.t
-	desc = AGE.1.d
+	id = AGE_phase_one.1
+	title = AGE_phase_one.1.t
+	desc = AGE_phase_one.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.1.a
+		name = AGE_phase_one.1.a
 	}
 }
 #Балтский вопрос
 country_event = {
-	id = AGE.2
-	title = AGE.2.t
-	desc = AGE.2.d
+	id = AGE_phase_one.2
+	title = AGE_phase_one.2.t
+	desc = AGE_phase_one.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.2.a
+		name = AGE_phase_one.2.a
 	}
 }
 #Разделяй
 country_event = {
-	id = AGE.3
-	title = AGE.3.t
-	desc = AGE.3.d
+	id = AGE_phase_one.3
+	title = AGE_phase_one.3.t
+	desc = AGE_phase_one.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.3.a
+		name = AGE_phase_one.3.a
 	}
 }
 #Балтийский вопрос
 country_event = {
-	id = AGE.4
-	title = AGE.4.t
-	desc = AGE.4.d
+	id = AGE_phase_one.4
+	title = AGE_phase_one.4.t
+	desc = AGE_phase_one.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.4.a
+		name = AGE_phase_one.4.a
 	}
 }
 #Дом...
 country_event = {
-	id = AGE.5
-	title = AGE.5.t
-	desc = AGE.5.d
+	id = AGE_phase_one.5
+	title = AGE_phase_one.5.t
+	desc = AGE_phase_one.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.5.a
+		name = AGE_phase_one.5.a
 	}
 }
 #Склоним их…
 country_event = {
-	id = AGE.6
-	title = AGE.6.t
-	desc = AGE.6.d
+	id = AGE_phase_one.6
+	title = AGE_phase_one.6.t
+	desc = AGE_phase_one.6.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.6.a
+		name = AGE_phase_one.6.a
 	}
 }
 #Прекрасный сон
 country_event = {
-	id = AGE.7
-	title = AGE.7.t
-	desc = AGE.7.d
+	id = AGE_phase_one.7
+	title = AGE_phase_one.7.t
+	desc = AGE_phase_one.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.7.a
+		name = AGE_phase_one.7.a
 	}
 }
 #Празднование дня единства
 country_event = {
-	id = AGE.8
-	title = AGE.8.t
-	desc = AGE.8.d
+	id = AGE_phase_one.8
+	title = AGE_phase_one.8.t
+	desc = AGE_phase_one.8.d
 	fire_only_once = no
 	is_triggered_only = yes
 	option = {
-		name = AGE.8.a
+		name = AGE_phase_one.8.a
 		add_timed_idea = {
 			idea = AGE_day_of_unity_celebration
 			days = 30
@@ -98,13 +104,13 @@ country_event = {
 }
 #Обратный результат
 country_event = {
-	id = AGE.9
-	title = AGE.9.t
-	desc = AGE.9.d
+	id = AGE_phase_one.9
+	title = AGE_phase_one.9.t
+	desc = AGE_phase_one.9.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.9.a
+		name = AGE_phase_one.9.a
 	}
 }
 #Произошло нападение прибалтов! #фабрика
@@ -304,86 +310,85 @@ country_event = {
 }
 #Мечты о доме
 country_event = {
-	id = AGE.10
-	title = AGE.10.t
-	desc = AGE.10.d
+	id = AGE_phase_two.1
+	title = AGE_phase_two.1.t
+	desc = AGE_phase_two.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.10.a
+		name = AGE_phase_two.1.a
 	}
 }
 #Обстановка вокруг нас
 country_event = {
-	id = AGE.11
-	title = AGE.11.t
-	desc = AGE.11.d
+	id = AGE_phase_two.2
+	title = AGE_phase_two.2.t
+	desc = AGE_phase_two.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.11.a
-		country_event = AGE.12
+		name = AGE_phase_two.2.a
+		country_event = AGE_phase_two.3
 	}
 }
 #Обстановка вокруг нас ч. 2
 country_event = {
-	id = AGE.12
-	title = AGE.12.t
-	desc = AGE.12.d
+	id = AGE_phase_two.3
+	title = AGE_phase_two.3.t
+	desc = AGE_phase_two.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.12.a
+		name = AGE_phase_two.3.a
 	}
 }
 #Воинская повинность
 country_event = {
-	id = AGE.13
-	title = AGE.13.t
-	desc = AGE.13.d
+	id = AGE_phase_two.4
+	title = AGE_phase_two.4.t
+	desc = AGE_phase_two.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.13.a
+		name = AGE_phase_two.4.a
 	}
 }
 #Трудовая повинность
 country_event = {
-	id = AGE.14
-	title = AGE.14.t
-	desc = AGE.14.d
+	id = AGE_phase_two.5
+	title = AGE_phase_two.5.t
+	desc = AGE_phase_two.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.13.a
+		name = AGE_phase_two.4.a
 	}
 }
 #Казнь
 country_event = {
-	id = AGE.15
-	title = AGE.15.t
-	desc = AGE.15.d
+	id = AGE_phase_two.6
+	title = AGE_phase_two.6.t
+	desc = AGE_phase_two.6.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.15.a
+		name = AGE_phase_two.6.a
 	}
 }
 #Бывшие друзья
 country_event = {
-	id = AGE.16
-	title = AGE.16.t
-	desc = AGE.16.d
+	id = AGE_phase_two.7
+	title = AGE_phase_two.7.t
+	desc = AGE_phase_two.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.16.a
+		name = AGE_phase_two.7.a
 		country_event = AGE.28
 	}
 }
 #Бывшие друзья 
 country_event = {
-	#Слишком поздно понял, что ивент слишком большой
 	id = AGE.28
 	title = AGE.28.t
 	desc = AGE.28.d
@@ -395,24 +400,24 @@ country_event = {
 }
 #План военных действий
 country_event = {
-	id = AGE.17
-	title = AGE.17.t
-	desc = AGE.17.d
+	id = AGE_phase_two.8
+	title = AGE_phase_two.8.t
+	desc = AGE_phase_two.8.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.17.a
+		name = AGE_phase_two.8.a
 	}
 }
 #Настоящий учёный
 country_event = {
-	id = AGE.18
-	title = AGE.18.t
-	desc = AGE.18.d
+	id = AGE_phase_two.9
+	title = AGE_phase_two.9.t
+	desc = AGE_phase_two.9.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.18.a
+		name = AGE_phase_two.9.a
 		add_timed_idea = {
 			idea = AGE_funding_for_research
 			days = 220
@@ -427,24 +432,24 @@ country_event = {
 }
 #Разумный выбор
 country_event = {
-	id = AGE.19
-	title = AGE.19.t
-	desc = AGE.19.d
+	id = AGE_phase_two.10
+	title = AGE_phase_two.10.t
+	desc = AGE_phase_two.10.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.19.a
+		name = AGE_phase_two.10.a
 	}
 }
 #Проблемы объединяют
 country_event = {
-	id = AGE.20
-	title = AGE.20.t
-	desc = AGE.20.d
+	id = AGE_phase_two.11
+	title = AGE_phase_two.11.t
+	desc = AGE_phase_two.11.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.20.a
+		name = AGE_phase_two.11.a
 		set_technology = {
 			basic_MLRS = 1
 		}
@@ -452,81 +457,81 @@ country_event = {
 }
 #Обстановка вокруг нас Славянизация
 country_event = {
-	id = AGE.21
-	title = AGE.21.t
-	desc = AGE.21.d
+	id = AGE_phase_two.12
+	title = AGE_phase_two.12.t
+	desc = AGE_phase_two.12.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.21.a
-		country_event = AGE.22
+		name = AGE_phase_two.12.a
+		country_event = AGE_phase_two.13
 	}
 }
 #Обстановка вокруг нас Славянизация ч. 2
 country_event = {
-	id = AGE.22
-	title = AGE.22.t
-	desc = AGE.22.d
+	id = AGE_phase_two.13
+	title = AGE_phase_two.13.t
+	desc = AGE_phase_two.13.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.22.a
+		name = AGE_phase_two.13.a
 	}
 }
 #Старая проблема на новый лад
 country_event = {
-	id = AGE.23
-	title = AGE.23.t
-	desc = AGE.23.d
+	id = AGE_phase_two.14
+	title = AGE_phase_two.14.t
+	desc = AGE_phase_two.14.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.23.a
+		name = AGE_phase_two.14.a
 	}
 }
 #Чётче, лучше, грамотней
 country_event = {
-	id = AGE.24
-	title = AGE.24.t
-	desc = AGE.24.d
+	id = AGE_phase_two.15
+	title = AGE_phase_two.15.t
+	desc = AGE_phase_two.15.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.24.a
+		name = AGE_phase_two.15.a
 	}
 }
 #План войны
 country_event = {
-	id = AGE.25
-	title = AGE.25.t
-	desc = AGE.25.d
+	id = AGE_phase_two.16
+	title = AGE_phase_two.16.t
+	desc = AGE_phase_two.16.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.25.a
+		name = AGE_phase_two.16.a
 	}
 }
 #Бывшие товарищи
 country_event = {
-	id = AGE.26
-	title = AGE.26.t
-	desc = AGE.26.d
+	id = AGE_phase_two.17
+	title = AGE_phase_two.17.t
+	desc = AGE_phase_two.17.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.26.a
-		country_event = AGE.27
+		name = AGE_phase_two.17.a
+		country_event = AGE_phase_two.18
 	}
 }
 #Бывшие товарищи ч.2
 country_event = {
-	id = AGE.27
-	title = AGE.27.t
-	desc = AGE.27.d
+	id = AGE_phase_two.18
+	title = AGE_phase_two.18
+	desc = AGE_phase_two.18
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = AGE.27.a
+		name = AGE_phase_two.18.a
 		set_division_template_lock = {
 			division_template = "Сумрачный дивизион"
 			is_locked = no
@@ -621,7 +626,7 @@ country_event = {
 	option = {
 		name = AGE_technical.5.a
 		country_event = {
-			id = AGE.26
+			id = AGE_phase_two.17
 			days = 14
 		}
 		812 = {
