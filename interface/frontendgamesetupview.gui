@@ -1118,6 +1118,32 @@ guiTypes = {
 				format = right
 			}
 		}
+		
+		containerWindowType = {
+			name = "SL_scanlines_effect_gui_container_ls"
+			position = { x = -3707 y = 0 }
+			
+			iconType = {
+				name = "hoi4_scanlines_100"
+				quadTextureSprite = "GFX_hoi4_scanlines_100"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}	
+			
+			iconType = {
+				name = "hoi4_scanlines_extended_100"
+				quadTextureSprite = "GFX_hoi4_scanlines_100"
+				position = { x = 1920 y = 0 }
+				alwaystransparent = yes
+			}			
+			
+			iconType = {
+				name = "hoi4_scanlines_extended_100_2"
+				quadTextureSprite = "GFX_hoi4_scanlines_100"
+				position = { x = 3840 y = 0 }
+				alwaystransparent = yes
+			}	
+		}	
 	}
 
 	containerWindowType = {

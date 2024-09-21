@@ -10,6 +10,33 @@ guiTypes = {
 		position = { x=-631 y=-244 }
 		size = { width=314 height=31 }
 		Orientation = lower_RIGHT
+		clipping = no
+
+		containerWindowType = {
+			name = "SL_scanlines_effect_gui_container_ms"
+			position = { x = -3209 y = -1916 }
+			
+			iconType = {
+				name = "hoi4_scanlines_100"
+				quadTextureSprite = "GFX_hoi4_scanlines_100"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}	
+			
+			iconType = {
+				name = "hoi4_scanlines_extended_100"
+				quadTextureSprite = "GFX_hoi4_scanlines_100"
+				position = { x = 1920 y = 0 }
+				alwaystransparent = yes
+			}			
+			
+			iconType = {
+				name = "hoi4_scanlines_extended_100_2"
+				quadTextureSprite = "GFX_hoi4_scanlines_100"
+				position = { x = 3840 y = 0 }
+				alwaystransparent = yes
+			}			
+		}
 
 		containerWindowType = {
 			name = "social_view_interface_window"
