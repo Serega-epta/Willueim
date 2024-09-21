@@ -23,7 +23,7 @@ focus_tree = {
 				popularity = -0.14
 			}
 			add_stability = 0.05
-			country_event = pautov.14
+			country_event = SDC_phase_two.1
 		}
 	}
 	focus = {
@@ -155,7 +155,7 @@ focus_tree = {
 					type = annex_everything
 				}
 			}
-			country_event = pautov.15
+			country_event = SDC_phase_two.2
 		}
 	}
 	focus = {
@@ -195,7 +195,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = SDC_great_chess_game_tt
-			country_event = pautov.16
+			country_event = SDC_phase_two.3
 		}
 	}
 	focus = {
@@ -267,7 +267,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			division_template = {
-				name = "ФС�?Н"
+				name = "ФС�?Н"
 				is_locked = yes
 				priority = 2
 				regiments = {
@@ -299,7 +299,7 @@ focus_tree = {
 			}
 			random_owned_state = {
 				create_unit = {
-					division = "name = \"ФС�?Н\" division_template = \"ФС�?Н\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"ФС�?Н\" division_template = \"ФС�?Н\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
 				}
 			}
@@ -327,7 +327,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SDC_science_academy_tt
-			country_event = pautov.17
+			country_event = SDC_phase_two.4
 		}
 	}
 	focus = {
@@ -344,7 +344,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SDC_Martins_comunications_tt
-			country_event = pautov.18
+			country_event = SDC_phase_two.5
 		}
 	}
 	focus = {
@@ -443,14 +443,14 @@ focus_tree = {
 				target = VOZ
 				type = annex_everything
 			}
-			country_event = pautov.19
+			country_event = SDC_phase_two.6
 			hidden_effect = {
 				if = {
 					limit = {
 						country_exists = GLS
 					}
 					country_event = {
-						id = pautov.20
+						id = SDC_phase_two.7
 						days = 10
 					}
 				}
@@ -459,7 +459,7 @@ focus_tree = {
 						country_exists = PMD
 					}
 					country_event = {
-						id = pautov.21
+						id = SDC_phase_two.8
 						days = 20
 					}
 				}
@@ -468,7 +468,7 @@ focus_tree = {
 						country_exists = ARM
 					}
 					country_event = {
-						id = pautov.22
+						id = SDC_phase_two.9
 						days = 30
 					}
 				}
@@ -477,7 +477,7 @@ focus_tree = {
 						country_exists = AGE
 					}
 					country_event = {
-						id = pautov.23
+						id = SDC_phase_two.10
 						days = 40
 					}
 				}
@@ -975,7 +975,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			country_event = pautov.24
+			country_event = SDC_phase_two.11
 		}
 	}
 	focus = {
@@ -1017,7 +1017,7 @@ focus_tree = {
 				add_core_of = SDC
 				remove_core_of = SOC
 			}
-			country_event = pautov.25
+			country_event = SDC_phase_two.12
 			hidden_effect = {
 				load_focus_tree = {
 					tree = SDC_phase_two_five

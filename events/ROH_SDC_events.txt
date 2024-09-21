@@ -1,64 +1,71 @@
-add_namespace = pautov
+add_namespace = SDC_phase_one
+add_namespace = SDC_phase_two
+add_namespace = SDC_phase_three
+add_namespace = SDC_phase_four
+add_namespace = SDC_phase_five
+
+add_namespace = SDC_decisions
+
 #Несмотря ни на что
 country_event = {
-	id = pautov.3
-	title = pautov.3.t
-	desc = pautov.3.d
+	id = SDC_phase_one.1
+	title = SDC_phase_one.1.t
+	desc = SDC_phase_one.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.3.a
+		name = SDC_phase_one.1.a
 	}
 }
 #Концепция общественной безопасности
 country_event = {
-	id = pautov.4
-	title = pautov.4.t
-	desc = pautov.4.d
+	id = SDC_phase_one.2
+	title = SDC_phase_one.2.t
+	desc = SDC_phase_one.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.4.a
+		name = SDC_phase_one.2.a
 	}
 }
-#�?скоренить виллуимов
+#�?скоренить виллуимов
 country_event = {
-	id = pautov.5
-	title = pautov.5.t
-	desc = pautov.5.d
+	id = SDC_phase_one.3
+	title = SDC_phase_one.3.t
+	desc = SDC_phase_one.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.5.a
+		name = SDC_phase_one.3.a
 	}
 }
 #Нефтяная игла
 country_event = {
-	id = pautov.6
-	title = pautov.6.t
-	desc = pautov.6.d
+	id = SDC_phase_one.4
+	title = SDC_phase_one.4.t
+	desc = SDC_phase_one.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.6.a
+		name = SDC_phase_one.4.a
 	}
 }
 #Стабилизация Фронта
 country_event = {
-	id = pautov.7
-	title = pautov.7.t
-	desc = pautov.7.d
+	id = SDC_phase_one.5
+	title = SDC_phase_one.5.t
+	desc = SDC_phase_one.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.7.a
+		name = SDC_phase_one.5.a
 	}
 }
 #Эндшпиль
 country_event = {
-	id = pautov.8
-	title = pautov.8.t
-	desc = pautov.8.d
+	id = SDC_phase_one.6
+	title = SDC_phase_one.6.t
+	desc = SDC_phase_one.6.d
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
@@ -68,42 +75,42 @@ country_event = {
 		}
 	}
 	option = {
-		name = pautov.8.a
+		name = SDC_phase_one.6.a
 	}
 }
 #День зарплаты
 country_event = {
-	id = pautov.9
-	title = pautov.9.t
-	desc = pautov.9.d
+	id = SDC_phase_one.7
+	title = SDC_phase_one.7.t
+	desc = SDC_phase_one.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.9.a
+		name = SDC_phase_one.7.a
 		if = {
 			limit = {
 				has_country_flag = big_debt_flag
 			}
-			country_event = pautov.10
+			country_event = SDC_decisions.1
 		}
 		else = {
-			country_event = pautov.11
+			country_event = SDC_decisions.2
 		}
 	}
 	option = {
-		name = pautov.9.b
-		country_event = pautov.12
+		name = SDC_phase_one.7.b
+		country_event = SDC_decisions.3
 	}
 }
 #Напряжение сил
 country_event = {
-	id = pautov.10
-	title = pautov.10.t
-	desc = pautov.10.d
+	id = SDC_decisions.1
+	title = SDC_decisions.1.t
+	desc = SDC_decisions.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.10.a
+		name = SDC_decisions.1.a
 		clr_country_flag = payment_flag
 		add_timed_idea = {
 			idea = SDC_pay_big_debt
@@ -113,13 +120,13 @@ country_event = {
 }
 #Своевременная уплата
 country_event = {
-	id = pautov.11
-	title = pautov.11.t
-	desc = pautov.11.d
+	id = SDC_decisions.2
+	title = SDC_decisions.2.t
+	desc = SDC_decisions.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.11.a
+		name = SDC_decisions.2.a
 		clr_country_flag = payment_flag
 		add_timed_idea = {
 			idea = SDC_pay_debt
@@ -129,13 +136,13 @@ country_event = {
 }
 #Обман!
 country_event = {
-	id = pautov.12
-	title = pautov.12.t
-	desc = pautov.12.d
+	id = SDC_decisions.3
+	title = SDC_decisions.3.t
+	desc = SDC_decisions.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.12.a
+		name = SDC_decisions.3.a
 		clr_country_flag = payment_flag
 		set_country_flag = we_payed_flag
 		add_timed_idea = {
@@ -146,13 +153,13 @@ country_event = {
 }
 #Добровольцы согашаются
 country_event = {
-	id = pautov.13
-	title = pautov.13.t
-	desc = pautov.13.d
+	id = SDC_decisions.4
+	title = SDC_decisions.4.t
+	desc = SDC_decisions.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.13.a
+		name = SDC_decisions.4.a
 		add_days_mission_timeout = {
 			mission = SDC_pay_mission
 			days = 50
@@ -161,127 +168,127 @@ country_event = {
 }
 #Установка
 country_event = {
-	id = pautov.14
-	title = pautov.14.t
-	desc = pautov.14.d
+	id = SDC_phase_two.1
+	title = SDC_phase_two.1.t
+	desc = SDC_phase_two.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.14.a
+		name = SDC_phase_two.1.a
 	}
 }
 #Превентивный удар
 country_event = {
-	id = pautov.15
-	title = pautov.15.t
-	desc = pautov.15.d
+	id = SDC_phase_two.2
+	title = SDC_phase_two.2.t
+	desc = SDC_phase_two.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.15.a
+		name = SDC_phase_two.2.a
 	}
 }
 #Великая шахматная игра
 country_event = {
-	id = pautov.16
-	title = pautov.16.t
-	desc = pautov.16.d
+	id = SDC_phase_two.3
+	title = SDC_phase_two.3.t
+	desc = SDC_phase_two.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.16.a
+		name = SDC_phase_two.3.a
 	}
 }
 #Академия наук
 country_event = {
-	id = pautov.17
-	title = pautov.17.t
-	desc = pautov.17.d
+	id = SDC_phase_two.4
+	title = SDC_phase_two.4.t
+	desc = SDC_phase_two.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.17.a
+		name = SDC_phase_two.4.a
 	}
 }
 #Связи Мартина
 country_event = {
-	id = pautov.18
-	title = pautov.18.t
-	desc = pautov.18.d
+	id = SDC_phase_two.5
+	title = SDC_phase_two.5.t
+	desc = SDC_phase_two.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.18.a
+		name = SDC_phase_two.5.a
 	}
 }
 #Специальная военная операция
 country_event = {
-	id = pautov.19
-	title = pautov.19.t
-	desc = pautov.19.d
+	id = SDC_phase_two.6
+	title = SDC_phase_two.6.t
+	desc = SDC_phase_two.6.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.19.a
+		name = SDC_phase_two.6.a
 	}
 }
 #Ликвидаторы
 country_event = {
-	id = pautov.20
-	title = pautov.20.t
-	desc = pautov.20.d
+	id = SDC_phase_two.7
+	title = SDC_phase_two.7.t
+	desc = SDC_phase_two.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.20.a
+		name = SDC_phase_two.7.a
 		add_manpower = 10
 	}
 }
 #Офицерский состав
 country_event = {
-	id = pautov.21
-	title = pautov.21.t
-	desc = pautov.21.d
+	id = SDC_phase_two.8
+	title = SDC_phase_two.8.t
+	desc = SDC_phase_two.8.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.21.a
+		name = SDC_phase_two.8.a
 		add_manpower = 100
 	}
 }
 #Опалённые местью
 country_event = {
-	id = pautov.22
-	title = pautov.22.t
-	desc = pautov.22.d
+	id = SDC_phase_two.9
+	title = SDC_phase_two.9.t
+	desc = SDC_phase_two.9.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.22.a
+		name = SDC_phase_two.9.a
 		add_manpower = 500
 	}
 }
 #Сербские добровольцы
 country_event = {
-	id = pautov.23
-	title = pautov.23.t
-	desc = pautov.23.d
+	id = SDC_phase_two.10
+	title = SDC_phase_two.10.t
+	desc = SDC_phase_two.10.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.23.a
+		name = SDC_phase_two.10.a
 		add_manpower = 1000
 	}
 }
 #Страшный час
 country_event = {
-	id = pautov.24
-	title = pautov.24.t
-	desc = pautov.24.d
+	id = SDC_phase_two.11
+	title = SDC_phase_two.11.t
+	desc = SDC_phase_two.11.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.24.a
+		name = SDC_phase_two.11.a
 		if = {
 			limit = {
 				has_completed_focus = SDC_integration
@@ -335,23 +342,23 @@ country_event = {
 }
 #КС-3
 country_event = {
-	id = pautov.25
-	title = pautov.25.t
-	desc = pautov.25.d
+	id = SDC_phase_two.12
+	title = SDC_phase_two.12.t
+	desc = SDC_phase_two.12.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.25.a
+		name = SDC_phase_two.12.a
 	}
 }
 #Перерождение
 country_event = {
-	id = pautov.26
-	title = pautov.26.t
-	desc = pautov.26.d
+	id = SDC_phase_two.13
+	title = SDC_phase_two.13.t
+	desc = SDC_phase_two.13.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = pautov.26.a
+		name = SDC_phase_two.13.a
 	}
 }

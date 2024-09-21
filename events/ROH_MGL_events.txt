@@ -1,8 +1,15 @@
-add_namespace = MGL
+add_namespace = MGL_phase_one
+add_namespace = MGL_phase_two
+add_namespace = MGL_phase_three
+add_namespace = MGL_phase_four
+add_namespace = MGL_phase_five
+
+add_namespace = MGL_decisions
+
 country_event = {
-	id = MGL.1
-	title = MGL.1
-	desc = MGL.1
+	id = MGL_phase_one.1
+	title = MGL_phase_one.1
+	desc = MGL_phase_one.1
 	#picture = 
 	is_triggered_only = no
 	fire_only_once = yes
@@ -11,7 +18,7 @@ country_event = {
 		date > 2032.02.01
 	}
 	option = {
-		name = MGL.1
+		name = MGL_phase_one.1
 		add_country_leader_role = {
 			#Пока такой фейлстейт
 			character = MGL_Exclusion_zone
@@ -28,138 +35,138 @@ country_event = {
 }
 country_event = {
 	#Цитадель
-	id = MGL.2
-	title = MGL.2.t
-	desc = MGL.2.d
+	id = MGL_phase_one.2
+	title = MGL_phase_one.2.t
+	desc = MGL_phase_one.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.2.a
+		name = MGL_phase_one.2.a
 	}
 }
 country_event = {
 	#Солдаты Удачи
-	id = MGL.3
-	title = MGL.3.t
-	desc = MGL.3.d
+	id = MGL_phase_one.3
+	title = MGL_phase_one.3.t
+	desc = MGL_phase_one.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.3.a
+		name = MGL_phase_one.3.a
 		country_event = {
-			id = MGL.4
+			id = MGL_phase_one.4
 			days = 1
 		}
 	}
 }
 country_event = {
 	#Наша служба и опасна, и трудна
-	id = MGL.4
-	title = MGL.4.t
-	desc = MGL.4.d
+	id = MGL_phase_one.4
+	title = MGL_phase_one.4.t
+	desc = MGL_phase_one.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.4.a
+		name = MGL_phase_one.4.a
 		country_event = {
-			id = MGL.5
+			id = MGL_phase_one.5
 			days = 1
 		}
 	}
 }
 country_event = {
 	#Проникая в неизвестность
-	id = MGL.5
-	title = MGL.5.t
-	desc = MGL.5.d
+	id = MGL_phase_one.5
+	title = MGL_phase_one.5.t
+	desc = MGL_phase_one.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.5.a
+		name = MGL_phase_one.5.a
 		country_event = {
-			id = MGL.6
+			id = MGL_phase_one.6
 			days = 1
 		}
 	}
 }
 country_event = {
 	#Самоубийство по заявкам
-	id = MGL.6
-	title = MGL.6.t
-	desc = MGL.6.d
+	id = MGL_phase_one.6
+	title = MGL_phase_one.6.t
+	desc = MGL_phase_one.6.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.6.a
+		name = MGL_phase_one.6.a
 		country_event = {
-			id = MGL.7
+			id = MGL_phase_one.7
 			days = 1
 		}
 	}
 }
 country_event = {
 	#Спектакль окончен
-	id = MGL.7
-	title = MGL.7.t
-	desc = MGL.7.d
+	id = MGL_phase_one.7
+	title = MGL_phase_one.7.t
+	desc = MGL_phase_one.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.7.a
+		name = MGL_phase_one.7.a
 	}
 }
 country_event = {
 	#Успешная реанимация
-	id = MGL.8
-	title = MGL.8.t
-	desc = MGL.8.d
+	id = MGL_phase_one.8
+	title = MGL_phase_one.8.t
+	desc = MGL_phase_one.8.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.8.a
+		name = MGL_phase_one.8.a
 	}
 }
 country_event = {
 	#Прах к праху
-	id = MGL.9
-	title = MGL.9.t
-	desc = MGL.9.d
+	id = MGL_phase_one.9
+	title = MGL_phase_one.9.t
+	desc = MGL_phase_one.9.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.9.a
+		name = MGL_phase_one.9.a
 	}
 }
 country_event = {
 	#Отчёт о проведении восстановительных работах #12
-	id = MGL.10
-	title = MGL.10.t
-	desc = MGL.10.d
+	id = MGL_phase_one.10
+	title = MGL_phase_one.10.t
+	desc = MGL_phase_one.10.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.10.a
+		name = MGL_phase_one.10.a
 	}
 }
 country_event = {
 	#"Дорогие товарищи!"
-	id = MGL.11
-	title = MGL.11.t
-	desc = MGL.11.d
+	id = MGL_phase_one.11
+	title = MGL_phase_one.11.t
+	desc = MGL_phase_one.11.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.11.a
+		name = MGL_phase_one.11.a
 	}
 }
 country_event = {
 	#Очная ставка
-	id = MGL.12
-	title = MGL.12.t
-	desc = MGL.12.d
+	id = MGL_phase_one.12
+	title = MGL_phase_one.12.t
+	desc = MGL_phase_one.12.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = MGL.12.a
+		name = MGL_phase_one.12.a
 	}
 }

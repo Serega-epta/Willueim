@@ -18,7 +18,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			country_event = ORL.1
+			country_event = ORL_phase_one.1
 			add_war_support = 0.05
 		}
 	}
@@ -41,7 +41,7 @@ focus_tree = {
 			focus = ORL_best_in_hell
 		}
 		completion_reward = {
-			country_event = ORL.5
+			country_event = ORL_phase_one.5
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 200
@@ -194,7 +194,7 @@ focus_tree = {
 			focus = ORL_best_in_hell
 		}
 		completion_reward = {
-			country_event = ORL.2
+			country_event = ORL_phase_one.2
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Группа Глинки\" division_template = \"Группа Глинки\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
@@ -220,7 +220,7 @@ focus_tree = {
 			focus = ORL_veteran_squads
 		}
 		completion_reward = {
-			country_event = ORL.3
+			country_event = ORL_phase_one.3
 			swap_ideas = {
 				remove_idea = ORL_corporative_ethics
 				add_idea = ORL_corporative_ethics_2
@@ -240,7 +240,7 @@ focus_tree = {
 			focus = ORL_we_cant_forget
 		}
 		completion_reward = {
-			country_event = ORL.4
+			country_event = ORL_phase_one.4
 			add_popularity = {
 				ideology = sacraments
 				popularity = 0.15
@@ -296,7 +296,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			country_event = ORL.6
+			country_event = ORL_phase_one.6
 			add_manpower = 500
 			935 = {
 				add_extra_state_shared_building_slots = 1
