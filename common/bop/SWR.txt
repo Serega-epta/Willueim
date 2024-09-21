@@ -1,0 +1,95 @@
+SWR_power_balance = {
+    left_side = workers_side
+    right_side = huntsman_side
+    range = {
+        id = balance
+        min = -0.1
+        max = 0.1
+        modifier = {
+        }
+    }
+    side = {
+        id = workers_side
+        range = {
+            id = dictatorship_of_workers
+            min = -1
+            max = -0.8
+            modifier = {
+                production_speed_buildings_factor = 0.1
+                industrial_capacity_factory = 0.1
+                line_change_production_efficiency_factor = 0.05
+                consumer_goods_factor = 0.1
+                offence = -0.07
+                defence = -0.07
+            }
+        }
+        range = {
+            id = dominance_of_workers
+            min = -0.8
+            max = -0.4
+            modifier = {
+                production_speed_buildings_factor = 0.07
+                industrial_capacity_factory = 0.07
+                line_change_production_efficiency_factor = 0.035
+                consumer_goods_factor = 0.05
+                offence = -0.055
+                defence = -0.055
+            }
+        }
+        range = {
+            id = predominance_of_workers
+            min = -0.4
+            max = -0.1
+            modifier = {
+                production_speed_buildings_factor = 0.05
+                industrial_capacity_factory = 0.05
+                line_change_production_efficiency_factor = 0.025
+                consumer_goods_factor = 0.025
+                offence = -0.035
+                defence = -0.035
+            }
+        }
+    }
+    side = {
+        id = huntsman_side
+        range = {
+            id = predominance_of_huntsman
+            min = 0.1
+            max = 0.4
+            modifier = {
+                production_speed_buildings_factor = -0.05
+                industrial_capacity_factory = -0.05
+                line_change_production_efficiency_factor = -0.025
+                consumer_goods_factor =-0.025
+                offence = 0.035
+                defence = 0.035
+            }
+        }
+        range = {
+            id = dominance_of_huntsman
+            min = 0.4
+            max = 0.8
+            modifier = {
+                production_speed_buildings_factor = -0.07
+                industrial_capacity_factory = -0.07
+                line_change_production_efficiency_factor = -0.035
+                consumer_goods_factor = -0.05
+                offence = 0.055
+                defence = 0.055
+            }
+        }
+        range = {
+            id = dictatorship_of_huntsman
+            min = 0.8
+            max = 1
+            modifier = {
+                production_speed_buildings_factor = -0.1
+                industrial_capacity_factory = -0.1
+                line_change_production_efficiency_factor = -0.05
+                consumer_goods_factor = -0.1
+                offence = 0.07
+                defence = 0.07
+            }
+        }
+    }
+}

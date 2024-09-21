@@ -1,0 +1,1269 @@
+focus_tree = {
+	id = SWR_phase_1_ep_1.1
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = SWR
+        }		
+	}
+	default = no
+
+    focus = {
+		id = SWR_after_the_storm
+		cost = 0.57
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			country_event = SWR_phase_one.1
+		}
+	}
+    focus = {
+		id = SWR_finish_the_survivors
+		cost = 0.57
+		x = 3
+		y = 2
+		ai_will_do = { factor = 10 }
+        prerequisite = { focus = SWR_after_the_storm }
+		completion_reward = {
+			add_stability = 0.02
+			country_event = SWR_phase_one.2
+		}
+	}
+    focus = {
+		id = SWR_bringing_people_together
+		cost = 0.57
+		x = 7
+		y = 2
+		ai_will_do = { factor = 10 }
+        prerequisite = { focus = SWR_after_the_storm }
+		completion_reward = {
+			add_stability = 0.02
+			country_event = SWR_phase_one.3
+		}
+	}
+    focus = {
+		id = SWR_make_sense_of_what_happened
+		cost = 0.57
+		x = 5
+		y = 4
+		ai_will_do = { factor = 10 }
+        prerequisite = { focus = SWR_finish_the_survivors }
+        prerequisite = { focus = SWR_bringing_people_together }
+		completion_reward = {
+			country_event = SWR_phase_one.4
+			load_focus_tree = SWR_phase_1_ep_1.2
+		}
+	}
+}
+
+focus_tree = {
+	id = SWR_phase_1_ep_1.2
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = SWR
+        }		
+	}
+	default = no
+
+    focus = {
+		id = SWR_discussing_what_happened
+		cost = 0.57
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			country_event = SWR_phase_one.5
+		}
+	}
+    focus = {
+		id = SWR_our_thoughts
+		cost = 0.57
+		x = 5
+		y = 2
+		ai_will_do = { factor = 10 }
+        prerequisite = { focus = SWR_discussing_what_happened }
+		completion_reward = {
+			country_event = SWR_phase_one.6
+		}
+	}
+    focus = {
+		id = SWR_view_from_left
+		cost = 0.57
+		x = 3
+		y = 4
+		ai_will_do = { factor = 10 }
+        prerequisite = { focus = SWR_our_thoughts }
+		completion_reward = {
+			country_event = SWR_phase_one.7
+		}
+	}
+    focus = {
+		id = SWR_view_from_right
+		cost = 0.57
+		x = 7
+		y = 4
+		ai_will_do = { factor = 10 }
+        prerequisite = { focus = SWR_our_thoughts }
+		completion_reward = {
+			country_event = SWR_phase_one.8
+		}
+	}
+    focus = {
+		id = SWR_sum_it_up
+		cost = 0.57
+		x = 5
+		y = 6
+		ai_will_do = { factor = 10 }
+        prerequisite = { focus = SWR_view_from_left }
+        prerequisite = { focus = SWR_view_from_right }
+		completion_reward = {
+			country_event = SWR_phase_one.9
+			hidden_effect = {
+				country_event = SWR_phase_one.10
+			}
+		}
+	}
+}
+
+focus_tree = {
+	id = SWR_phase_1_ep_2_revolution
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = SWR
+        }		
+	}
+	focus = {
+		id = SWR_thoughts
+		cost = 1
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = SWR_define_strategy
+		cost = 1
+		x = 5
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_thoughts }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = SWR_create_plan
+		cost = 1
+		x = 5
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_define_strategy }
+		completion_reward = {
+			add_political_power = 100
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = SWR_time_to_act
+		cost = 1
+		x = 5
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_create_plan }
+		allow_branch = {
+			has_completed_focus = SWR_create_plan
+		}
+		completion_reward = {
+			add_stability = -0.02
+			set_variable = {
+    			var = readiness_var
+    			value = 0
+			}
+			hidden_effect = {
+				country_event = {
+					id = SWR_phase_one.11
+					days = 60
+				}
+				country_event = {
+					id = SWR_phase_one.12
+					days = 100
+				}
+			}
+		}
+	}
+	focus = {
+		id = SWR_wreak_chaos
+		cost = 1
+		x = 3
+		y = 8
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_time_to_act }
+		completion_reward = {
+			add_stability = -0.01
+			add_political_power = 15
+			custom_effect_tooltip = wreak_chaos_tt
+		}
+	}
+	focus = {
+		id = SWR_silent_majority
+		cost = 1
+		x = 2
+		y = 10
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = SWR_our_main_ally }
+		prerequisite = { focus = SWR_wreak_chaos }
+		completion_reward = {
+			add_stability = 0.03
+			country_event = SWR_phase_one.39
+			add_to_variable = {
+                var = readiness_var
+                value = 3
+                tooltip = 3_readiness_tt
+            }
+		}
+	}
+	focus = {
+		id = SWR_our_main_ally
+		cost = 1
+		x = 4
+		y = 10
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = SWR_silent_majority }
+		prerequisite = { focus = SWR_wreak_chaos }
+		completion_reward = {
+			add_political_power = 20
+			add_to_variable = {
+                var = readiness_var
+                value = 5
+                tooltip = 5_readiness_tt
+            }
+			custom_effect_tooltip = our_main_ally_tt
+		}
+	}
+	focus = {
+		id = SWR_disarm_villains
+		cost = 1
+		x = 5
+		y = 8
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_time_to_act }
+		completion_reward = {
+			add_stability = -0.01
+			add_political_power = 15
+			add_to_variable = {
+       			var = swr_army_speed_factor 
+        		value = -0.01
+    		}
+			add_to_variable = {
+        		var = swr_army_org_factor  
+        		value = -0.02
+    		}
+			add_to_variable = {
+       			var = swr_planning_speed 
+        		value = -0.02
+    		}
+			custom_effect_tooltip = huntsman_squads_1_tt
+		}
+	}
+	focus = {
+		id = SWR_old_acquaintances
+		cost = 1
+		x = 7
+		y = 8
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_time_to_act }
+		completion_reward = {
+			hidden_effect = {
+				add_ideas = SWR_connections
+			}
+			custom_effect_tooltip = old_acquaintances_tt
+		}
+	}
+	focus = {
+		id = SWR_art_of_killing
+		cost = 1
+		x = 5
+		y = 12
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_disarm_villains }
+		prerequisite = { focus = SWR_old_acquaintances }
+		prerequisite = {
+			focus = SWR_silent_majority
+			focus = SWR_our_main_ally
+		}
+		completion_reward = {
+			add_stability = -0.01
+			add_political_power = 15
+			custom_effect_tooltip = art_of_killing_tt
+		}
+	}
+}
+
+focus_tree = {
+	id = SWR_phase_1_ep_2_elections
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = SWR
+        }		
+	}
+	focus = {
+		id = SWR_time
+		cost = 0.42
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = -0.02
+			country_event = SWR_phase_one.40
+			set_variable = {
+    			var = acceptance_var
+    			value = 0
+			}
+			set_variable = {
+    			var = power_var
+    			value = 0
+			}
+			set_country_flag = election_flag
+		}
+	}
+	focus = {
+		id = SWR_stay_the_course
+		cost = 1
+		x = 3
+		y = 2
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = SWR_right_rudder }
+		available = {
+			hidden_trigger = {
+				has_country_flag = conciliators_flag
+			}	
+		}
+		prerequisite = { focus = SWR_time }
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = stay_the_course_tt
+		}
+	}
+	focus = {
+		id = SWR_right_rudder
+		cost = 1
+		x = 7
+		y = 2
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = SWR_stay_the_course }
+		available = {
+			hidden_trigger = {
+				has_country_flag = elders_flag
+			}	
+		}
+		prerequisite = { focus = SWR_time }
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = right_rudder_tt
+		}
+	}
+	focus = {
+		id = SWR_race_has_begun
+		cost = 3.14
+		x = 5
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = {
+			focus = SWR_stay_the_course
+			focus = SWR_right_rudder
+		}
+		completion_reward = {
+			custom_effect_tooltip = race_has_begun_tt
+			country_event = SWR_phase_one.41
+			hidden_effect = {
+				activate_mission = SWR_election_day_mission
+				activate_mission = SWR_looking_for_supporters_mission
+			}
+		}
+	}
+	focus = {
+		id = SWR_our_actions
+		cost = 3.14
+		x = 3
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_stay_the_course }
+		prerequisite = { focus = SWR_race_has_begun }
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 15
+			country_event = SWR_phase_one.42
+			add_to_variable = {
+                var = power_var
+                value = 1
+                tooltip = 1_power_tt
+            }
+			power_calibrate = yes
+		}
+	}
+	focus = {
+		id = SWR_our_words
+		cost = 3.14
+		x = 7
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_right_rudder }
+		prerequisite = { focus = SWR_race_has_begun }
+		completion_reward = {
+			add_war_support = 0.02
+			add_political_power = 15
+			country_event = SWR_phase_one.43
+			add_to_variable = {
+                var = acceptance_var
+                value = 2
+                tooltip = 2_acceptance_tt
+            }
+			acceptance_calibrate = yes
+		}
+	}
+	focus = {
+		id = SWR_patronage_of_loyal
+		cost = 3.14
+		x = 3
+		y = 8
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_our_actions }
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = free_people
+				popularity = 0.01
+			}
+			custom_effect_tooltip = patronage_of_loyal_tt
+		}
+	}
+	focus = {
+		id = SWR_discrediting_the_enemy
+		cost = 3.14
+		x = 5
+		y = 8
+		ai_will_do = { factor = 10 }
+		prerequisite = { 
+			focus = SWR_our_actions
+			focus = SWR_our_words
+		}
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.05
+			IF = {
+				limit = {
+					has_completed_focus = SWR_stay_the_course
+				}
+				add_popularity = {
+    				ideology = free_people
+    				popularity = 0.02
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = SWR_right_rudder
+				}
+				add_popularity = {
+    				ideology = bandits
+    				popularity = 0.02
+				}
+			}
+			custom_effect_tooltip = discrediting_the_enemy_tt
+			hidden_effect = {
+				add_ideas = SWR_agitation
+			}
+		}
+	}
+	focus = {
+		id = SWR_prove_our_suitability
+		cost = 3.14
+		x = 7
+		y = 8
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_our_words }
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = bandits
+				popularity = 0.01
+			}
+			set_variable = {
+    			var = elder_brigades_var
+    			value = 0
+			}
+			custom_effect_tooltip = prove_our_suitability_tt
+		}
+	}
+}
+
+focus_tree = {
+	id = SWR_phase_1_ep_3_freethinkers
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = SWR
+        }		
+	}
+	focus = {
+		id = SWR_victory_of_revolution
+		cost = 5.42
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			remove_ideas = SWR_connections
+			add_ideas = SWR_resistance_of_huntsman
+			add_power_balance_value = {
+    			id = SWR_power_balance
+    			value = -0.05
+				tooltip_side = workers_side
+			}
+			add_stability = -0.05
+			add_political_power = 30
+			hidden_effect = {
+				country_event = SWR_phase_one.55
+				country_event = SWR_phase_one.57
+			}
+		}
+	}
+	focus = {
+		id = SWR_consolidating_superiority
+		cost = 5.42
+		x = 3
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory_of_revolution }
+		completion_reward = {
+			add_stability = -0.03
+			add_political_power = 10
+			hidden_effect = {
+				set_popularities = {
+					humanists = 50
+						free_people = 22
+					technocracy = 8
+					bandits = 11
+					militarists = 9
+				}
+				set_party_name = {
+    				ideology = technocracy
+					name = SWR_technocracy_party_freethinkers
+				}
+				set_party_name = {
+    				ideology = free_people
+					name = SWR_free_people_party_freethinkers
+				}
+				set_party_name = {
+    				ideology = bandits
+					name = SWR_bandits_party_freethinkers
+				}
+				set_party_name = {
+    				ideology = militarists
+					name = SWR_militarists_party_freethinkers
+				}
+			}
+			custom_effect_tooltip = consolidating_superiority_tt
+		}
+	}
+	focus = {
+		id = SWR_develop_a_strategy
+		cost = 5.42
+		x = 7
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory_of_revolution }
+		completion_reward = {
+			add_political_power = 20
+			add_command_power = 10
+			country_event = SWR_phase_one.61
+		}
+	}
+	focus = {
+		id = SWR_forward_to_future
+		cost = 4.28
+		x = 5
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_consolidating_superiority }
+		prerequisite = { focus = SWR_develop_a_strategy }
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = forward_to_future_tt
+		}
+	}
+}
+
+focus_tree = {
+	id = SWR_phase_1_ep_3_conciliators
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = SWR
+        }		
+	}
+	focus = {
+		id = SWR_victory_of_government
+		cost = 4.28
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 30
+			add_power_balance_value = {
+    			id = SWR_power_balance
+    			value = 0.05
+				tooltip_side = huntsman_side
+			}
+			add_ideas = SWR_poorly_functioning_state_apparatus
+			hidden_effect = {
+				country_event = SWR_phase_one.55
+				country_event = SWR_phase_one.57
+			}
+		}
+	}
+	focus = {
+		id =  SWR_split_revolutionaries
+		cost = 4.28
+		x = 3
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory_of_government }
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 15
+			custom_effect_tooltip = split_revolutionaries_tt
+			hidden_effect = {
+				set_popularities = {
+					free_people = 50
+					humanists = 2
+					technocracy = 3
+					statesmen = 5
+					bandits = 40
+				}
+				set_party_name = {
+    				ideology = technocracy
+					name = SWR_technocracy_party_conciliators
+				}
+				set_party_name = {
+    				ideology = humanists
+					name = SWR_humanists_party_conciliators
+				}
+				set_party_name = {
+    				ideology = statesmen
+					name = SWR_statesmen_party_conciliators
+				}
+			}
+		}
+	}
+	focus = {
+		id = SWR_analyze_past_events
+		cost = 4.28
+		x = 5
+		y = 1
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory_of_government }
+		completion_reward = {
+			add_political_power = 20
+			country_event = SWR_phase_one.62
+		}
+	}
+	focus = {
+		id = SWR_thank_loyal
+		cost = 4.28
+		x = 7
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory_of_government }
+		completion_reward = {
+			custom_effect_tooltip = thank_loyal_tt
+			hidden_effect = {
+				add_timed_idea = {
+					idea = SWR_gratitude
+					days = 180
+				}
+			}
+		}
+	}
+	focus = {
+		id = SWR_general_congress
+		cost = 4.28
+		x = 5
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_split_revolutionaries }
+		prerequisite = { focus = SWR_analyze_past_events }
+		prerequisite = { focus = SWR_thank_loyal }
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = general_congress_tt
+		}
+	}
+}
+
+focus_tree = {
+	id = SWR_phase_1_ep_3_elders
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = SWR
+        }		
+	}
+	focus = {
+		id = SWR_victory_of_elders
+		cost = 4.28
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 30
+			add_power_balance_value = {
+    			id = SWR_power_balance
+    			value = 0.1
+				tooltip_side = huntsman_side
+			}
+			hidden_effect = {
+				country_event = SWR_phase_one.55
+				country_event = SWR_phase_one.58
+			}
+		}
+	}
+	focus = {
+		id = SWR_terror
+		cost = 4.28
+		x = 3
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory_of_elders }
+		completion_reward = {
+			add_ideas = SWR_mass_terror
+			custom_effect_tooltip = mass_terror_tt
+			hidden_effect = {
+				remove_ideas = SWR_terror
+				set_popularities = {
+					bandits = 45
+					humanists = 40
+					militarists = 15
+				}
+				set_party_name = {
+    				ideology = technocracy
+					name = SWR_technocracy_party_elders
+				}
+				set_party_name = {
+    				ideology = free_people
+					name = SWR_free_people_party_elders
+				}
+				set_party_name = {
+    				ideology = statesmen
+					name = SWR_statesmen_party_elders
+				}
+				set_party_name = {
+    				ideology = militarists
+					name = SWR_militarists_party_elders
+				}
+				set_party_name = {
+    				ideology = humanists
+					name = SWR_humanists_party_elders
+				}
+			}
+		}
+	}
+	focus = {
+		id = SWR_do_some_cleaning
+		cost = 4.28
+		x = 5
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory_of_elders }
+		completion_reward = {
+			add_political_power = 30
+			country_event = SWR_phase_one.63
+		}
+	}
+	focus = {
+		id = SWR_thank_creditors
+		cost = 4.28
+		x = 7
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory_of_elders }
+		completion_reward = {
+			custom_effect_tooltip = thank_creditors_tt
+			hidden_effect = {
+				add_timed_idea = {
+					idea = SWR_gratitude
+					days = 180
+				}
+			}
+		}
+	}
+	focus = {
+		id = SWR_declaration_of_unity
+		cost = 4.28
+		x = 5
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_terror }
+		prerequisite = { focus = SWR_do_some_cleaning }
+		prerequisite = { focus = SWR_thank_creditors }
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = declaration_of_unity_tt
+		}
+	}
+}
+
+focus_tree = {
+	id = SWR_phase_1_ep_3_army_reform_plan
+	country = {
+		factor = 0
+        modifier = {
+            add = 1.42
+            tag = SWR
+        }		
+	}
+
+	focus = {
+		id = SWR_victory
+		cost = 1.42
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			hidden_effect = {
+					country_event = SWR_phase_one.55
+				}
+			IF = {
+				limit = {
+					ruling_party = humanists
+				}
+			
+				remove_ideas = SWR_connections
+				add_ideas = SWR_resistance_of_huntsman
+				add_power_balance_value = {
+    				id = SWR_power_balance
+    				value = -0.05
+					tooltip_side = workers_side
+				}
+				add_stability = -0.05
+				add_political_power = 30
+			}
+			else_if = {
+				limit = {
+					ruling_party = free_people
+				}
+				add_stability = -0.05
+				add_political_power = 30
+				add_power_balance_value = {
+    				id = SWR_power_balance
+    				value = 0.05
+					tooltip_side = huntsman_side
+				}
+				add_ideas = SWR_poorly_functioning_state_apparatus	
+			}
+			else_if = {
+				limit = {
+					ruling_party = bandits
+				}
+				add_stability = -0.05
+				add_political_power = 30
+				add_power_balance_value = {
+    				id = SWR_power_balance
+    				value = 0.1
+					tooltip_side = huntsman_side
+				}
+				remove_ideas = SWR_terror
+				add_ideas = SWR_mass_terror
+			}
+		}
+	}
+
+	focus = {
+		id = SWR_state_of_army
+
+		cost = 1.42
+		x = 5
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_victory }
+		completion_reward = {
+			country_event = SWR_phase_one.64
+		}
+	}
+
+	focus = {
+		id = SWR_action_plan
+		cost = 1.42
+		x = 5
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_state_of_army }
+		completion_reward = {
+			country_event = SWR_phase_one.65
+			custom_effect_tooltip = action_plan_tt
+		}
+	}
+}
+
+focus_tree = {
+	id = SWR_phase_1_ep_3_army_reform
+	country = {
+		factor = 0
+        modifier = {
+            add = 10
+            tag = SWR
+        }		
+	}
+
+	focus = {
+		id = SWR_leaders_decision
+		cost = 1.42
+		x = 5
+		y = 0
+		ai_will_do = { factor = 10 }
+		available = {
+			always = no
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWR_elite
+		cost = 1.42
+		x = 1
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_leaders_decision }
+		available = {
+			has_country_flag = elders_flag
+		}
+		completion_reward = {
+			custom_effect_tooltip = elite_tt
+			hidden_effect = {
+				division_template = {
+                	name = "Элитные отряды егерей"
+                	is_locked = yes
+                	priority = 1
+                	regiments = {
+                 		light_infantry = { x = 0 y = 0}
+                		light_infantry = { x = 0 y = 1}
+                		light_infantry = { x = 1 y = 0}
+                    	light_infantry = { x = 1 y = 1}
+						light_infantry = { x = 2 y = 0}
+                    	light_infantry = { x = 2 y = 1}
+                	}
+					support = {
+						stvol_art_sup = { x = 0 y = 0 }
+					}
+            	}
+			}
+		}
+	}
+
+	focus = {
+		id = SWR_balance
+		cost = 1.42
+		x = 3
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_leaders_decision }
+		available = {
+			has_country_flag = conciliators_flag
+		}
+		completion_reward = {
+			custom_effect_tooltip = balance_tt
+		}
+	}
+
+	focus = {
+		id = SWR_everyone_in_row
+		cost = 1.42
+		x = 5
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_leaders_decision }
+		available = {
+			has_country_flag = freethinkers_flag
+		}
+		completion_reward = {
+			custom_effect_tooltip = everyone_tt
+			hidden_effect = {
+				division_template = {
+                	name = "Отряды рабочих"
+                	is_locked = yes
+                	priority = 1
+                	regiments = {
+                 		light_infantry = { x = 0 y = 0}
+                		light_infantry = { x = 0 y = 1}
+						light_infantry = { x = 0 y = 2}
+                		light_infantry = { x = 1 y = 0}
+                    	light_infantry = { x = 1 y = 1}
+						light_infantry = { x = 1 y = 2}
+						light_infantry = { x = 2 y = 0}
+                    	light_infantry = { x = 2 y = 1}
+						light_infantry = { x = 2 y = 2}
+                	}
+            	}
+			}
+		}
+	}
+
+	focus = {
+		id = SWR_change_appearance_of_army
+		cost = 1.42
+		x = 3
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = {
+			focus = SWR_elite
+			focus = SWR_balance
+			focus = SWR_everyone_in_row
+		}
+		completion_reward = {
+			custom_effect_tooltip = army_reform_tt
+		}
+	}
+
+	focus = {
+		id = SWR_propaganda_tools
+		cost = 1.42
+		x = 1
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_change_appearance_of_army }
+		completion_reward = {
+			custom_effect_tooltip = army_reform_tt
+		}
+	}
+
+	focus = {
+		id = SWR_quality_weapons
+		cost = 1.42
+		x = 3
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_change_appearance_of_army }
+		completion_reward = {
+			add_command_power = 25
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = 1000
+    			producer = SWR
+			}
+		}
+	}
+
+	focus = {
+		id = SWR_quality_people
+		cost = 1.42
+		x = 5
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_change_appearance_of_army }
+		completion_reward = {
+			add_manpower = 1000
+			swap_ideas = {
+				remove_idea = limited_recruting
+				add_idea = mass_recruting
+			}
+		}
+	}
+
+	focus = {
+		id = SWR_wise_suggestion
+		cost = 1.42
+		x = 7
+		y = 0
+		ai_will_do = { factor = 10 }
+		available = {
+			always = no
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SWR_talk_to_czar
+		cost = 1.42
+		x = 7
+		y = 2
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_wise_suggestion }
+		completion_reward = {
+			country_event = SWR_phase_one.66
+		}
+	}
+
+	focus = {
+		id = SWR_move_troops
+		available = {
+			OR = {
+				has_country_flag = success_flag
+				has_country_flag = compromise_flag
+			}
+		}
+		cost = 1.42
+		x = 7
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_talk_to_czar }
+		completion_reward = {
+			hidden_effect = {
+				WOD = {
+					delete_unit = {
+    					division_template = "Bandits_1"
+					}
+				}
+				division_template = {
+                	name = "Bandits"
+                	is_locked = no
+                	priority = 1
+                	regiments = {
+                    	light_infantry = { x = 0 y = 0}
+                    	light_infantry = { x = 0 y = 1}
+                    	light_infantry = { x = 1 y = 0}
+                    	light_infantry = { x = 1 y = 1}
+                	}
+            	}
+				IF = {
+					limit = {
+						has_country_flag = success_flag
+					}
+					capital_scope = {
+                    	create_unit = {
+                    		division = "name = \"Bandits\" division_template = \"Bandits\" start_experience_factor = 0.6 start_equipment_factor = 0.6 start_manpower_factor = 0.7" 
+                    		owner = ROOT
+							count = 4
+                		}
+            		}
+					WOD = {
+						delete_unit = {
+    						division_template = "Bandits_1"
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = compromise_flag
+					}
+					capital_scope = {
+                    	create_unit = {
+                    		division = "name = \"Bandits\" division_template = \"Bandits\" start_experience_factor = 0.6 start_equipment_factor = 0.6 start_manpower_factor = 0.7" 
+                    		owner = ROOT
+							count = 2
+                		}
+            		}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SWR_give_guarantees
+		available = {
+			OR = {
+				has_country_flag = success_flag
+				has_country_flag = compromise_flag
+			}
+		}
+		cost = 1.42
+		x = 9
+		y = 4
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_talk_to_czar }
+		completion_reward = {
+			give_guarantee = WOD
+			WOD = {
+				add_opinion_modifier = {
+    				target = SWR
+    				modifier = broken_relationships
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SWR_integrate_troops
+		cost = 1.42
+		x = 8
+		y = 6
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = SWR_move_troops }
+		prerequisite = { focus = SWR_give_guarantees }
+		completion_reward = {
+			add_to_variable = {
+ 		 		var = swr_army_attack_factor
+  				value = 0.02
+			}
+			add_to_variable = {
+  				var = swr_army_defence_factor
+  				value = 0.02
+			}
+			add_to_variable = {
+  				var = swr_army_speed_factor
+  				value = - 0.01
+			}
+			add_to_variable = {
+  				var = swr_land_night_attack
+  				value = 0.02
+			}
+			add_to_variable = {
+  				var = swr_planning_speed
+  				value =  -0.05
+			}
+			add_to_variable = {
+  				var = swr_acclimatization_cold_climate_gain_factor
+  				value = 0.03
+			}
+			add_to_variable = {
+  				var = swr_acclimatization_hot_climate_gain_factor
+  				value = 0.03
+			}
+			custom_effect_tooltip = huntsman_squads_7_tt
+		}
+	}
+	focus = {
+		id = SWR_preemptive_strike
+		cost = 1.42
+		x = 6
+		y = 8
+		ai_will_do = { factor = 10 }
+		available = {
+			OR = {
+				has_completed_focus = SWR_integrate_troops
+				AND = {
+					has_completed_focus = SWR_quality_weapons
+					has_completed_focus = SWR_quality_people
+				}
+			}
+		}
+		prerequisite = {
+			focus = SWR_propaganda_tools
+			focus = SWR_integrate_troops
+		}
+		completion_reward = {
+			
+		}
+	}
+}
+
+
+
+
+
+	

@@ -1,0 +1,1269 @@
+SWR_preparing_uprising = {
+
+    SWR_election_day_mission_revolution = {
+		activation = {
+			has_completed_focus = SWR_time_to_act
+		}
+	    available = {
+    	    has_stability > 0.2
+			custom_trigger_tooltip = {
+				tooltip = check_readiness_70_tt
+				check_variable = {
+                	readiness_var > 69
+            	}
+			}  
+    	}
+    	is_good = yes
+    	days_mission_timeout = 130
+    	selectable_mission = no
+		complete_effect = {
+            country_event = SWR_phase_one.26
+		}
+    	timeout_effect = {
+        	country_event = SWR_phase_one.27
+		}
+    }
+    SWR_distribute_leaflets = {
+		visible = {
+			has_completed_focus = SWR_time_to_act
+		}
+		available = {
+		}
+		cost = 20
+		days_remove = 2
+		complete_effect = {
+			add_stability = -0.02
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = readiness_var
+                value = 2
+                tooltip = 2_readiness_tt
+            }
+			readiness_calibrate = yes
+		}
+	}
+    SWR_distribute_newspaper = {
+		visible = {
+			has_completed_focus = SWR_time_to_act
+		}
+		available = {
+			
+		}
+		cost = 30
+		days_remove = 4
+		complete_effect = {
+			add_stability = -0.03
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = readiness_var
+                value = 3
+                tooltip = 3_readiness_tt
+            }
+			readiness_calibrate = yes
+		}
+	}
+    SWR_talk_to_lumberjacks = {
+		visible = {
+			has_completed_focus = SWR_time_to_act
+		}
+		available = {
+			
+		}
+		cost = 20
+		days_remove = 2
+		complete_effect = {
+			add_stability = 0.02
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = readiness_var
+                value = -2
+                tooltip = remove_2_readiness_tt
+            }
+			readiness_calibrate = yes
+		}
+	}
+    SWR_talk_to_workers = {
+		visible = {
+			has_completed_focus = SWR_time_to_act
+		}
+		available = {
+			
+		}
+		cost = 30
+		days_remove = 4
+		complete_effect = {
+			add_stability = 0.03
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = readiness_var
+                value = -3
+                tooltip = remove_3_readiness_tt
+            }
+			readiness_calibrate = yes
+		}
+	}
+    SWR_create_trade_union = {
+		visible = {
+			has_completed_focus = SWR_wreak_chaos
+		}
+		available = {
+		}
+		cost = 40
+		days_remove = 7
+		complete_effect = {
+			add_stability = -0.05
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = readiness_var
+                value = 5
+                tooltip = 5_readiness_tt
+            }
+			readiness_calibrate = yes
+		}
+	}
+    SWR_expand_trade_union = {
+		visible = {
+			has_completed_focus = SWR_wreak_chaos
+		}
+		available = {
+		}
+		cost = 45
+		days_remove = 10
+		days_re_enable = 
+		complete_effect = {
+			add_stability = -0.06
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = readiness_var
+                value = 6
+                tooltip = 6_readiness_tt
+            }
+			readiness_calibrate = yes
+		}
+	}
+    SWR_prepare_strike = {
+		visible = {
+			has_completed_focus = SWR_wreak_chaos
+		}
+		available = {
+			
+		}
+		cost = 75
+		days_remove = 20
+        fire_only_once = yes
+		complete_effect = {
+            country_event = SWR_phase_one.32
+		}
+		remove_effect = {
+			add_power_balance_value = {
+                id = SWR_power_balance
+                value = -0.1
+                tooltip_side = my_bop_side
+            }
+		}
+	}
+    SWR_take_over_empty_enterprise = {
+		visible = {
+			has_completed_focus = SWR_wreak_chaos
+		}
+		available = {
+		}
+		cost = 55
+		days_remove = 15
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+                id = SWR_power_balance
+                value = -0.1
+                tooltip_side = my_bop_side
+            }
+            add_to_variable = {
+                var = readiness_var
+                value = 6
+                tooltip = 6_readiness_tt
+            }
+			readiness_calibrate = yes
+            add_stability = -0.06
+		}
+	}
+    SWR_advance_army_reform = {
+		visible = {
+			has_completed_focus = SWR_disarm_villains
+		}
+		available = {		
+		}
+		cost = 80
+		days_remove = 30
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+		}
+	}
+    SWR_organize_training_for_workers = {
+		visible = {
+			has_completed_focus = SWR_our_main_ally
+		}
+		available = {	
+		}
+		cost = 40
+		days_remove = 11
+		days_re_enable = 
+		complete_effect = {
+			add_stability = -0.05
+            add_political_power = 30
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = readiness_var
+                value = 3
+                tooltip = 3_readiness_tt
+            }
+			readiness_calibrate = yes
+		}
+	}
+    SWR_prepare_to_kill_huntsman = {
+		visible = {
+			has_completed_focus = SWR_art_of_killing
+		}
+		available = {
+			
+		}
+		cost = 60
+		days_remove = 15
+		fire_only_once = yes
+		complete_effect = {
+			country_event = SWR_phase_one.28
+		}
+		remove_effect = {
+			add_power_balance_value = {
+                id = SWR_power_balance
+                value = -0.1
+                tooltip_side = my_bop_side
+            }
+		}
+	}
+    SWR_prepare_to_kill_official = {
+		visible = {
+			has_completed_focus = SWR_art_of_killing
+			NOT = {
+				has_completed_focus = SWR_silent_majority
+			}
+		}
+		available = {
+			
+		}
+		cost = 40
+		days_remove = 15
+		fire_only_once = yes
+		complete_effect = {
+			country_event = SWR_phase_one.36
+		}
+		remove_effect = {
+			add_power_balance_value = {
+                id = SWR_power_balance
+                value = -0.05
+                tooltip_side = my_bop_side
+            }
+		}
+	}
+}
+
+SWR_struggle_for_influence = {
+	SWR_election_day_mission = {
+		activation = {
+			always = no
+		}
+	    available = {
+    	    always = no
+    	}
+    	is_good = yes
+    	days_mission_timeout = 130
+    	selectable_mission = no
+		fire_only_once = yes
+		complete_effect = {
+		}
+    	timeout_effect = {
+        	country_event = SWR_phase_one.46
+		}
+    }
+	SWR_looking_for_supporters_mission = {
+		activation = {
+			always = no
+		}
+	    available = {
+    	    has_political_power > 14
+    	}
+    	is_good = yes
+    	days_mission_timeout = 4
+    	selectable_mission = yes
+		complete_effect = {
+			IF = {
+				limit = {
+					has_completed_focus = SWR_stay_the_course
+				}
+				random_list = {
+					10 = {
+						activate_mission = SWR_agitating_mission
+					}
+					10 = {
+						activate_mission = SWR_encourage_huntsman_mission
+					}
+					10 = {
+						activate_mission = SWR_eliminate_huntsman_mission
+					}
+				}
+			}
+			else = {
+				add_political_power = -15
+				random_list = {
+					10 = {
+						activate_mission = SWR_training_mission
+					}
+					10 = {
+						activate_mission = SWR_demonstration_mission
+					}
+					10 = {
+						activate_mission = SWR_brigades_mission
+					}
+				}
+			}
+		}
+    	timeout_effect = {
+			add_to_variable = {
+                var = power_var
+                value = -2
+                tooltip = remove_2_power_tt
+            }
+			power_calibrate = yes
+        	add_to_variable = {
+                var = acceptance_var
+                value = -2
+                tooltip = remove_2_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			IF = {
+				limit = {
+					has_completed_focus = SWR_stay_the_course
+				}
+				random_list = {
+					10 = {
+						activate_mission = SWR_looking_for_supporters_mission
+					}
+					10 = {
+						activate_mission = SWR_agitating_mission
+					}
+					10 = {
+						activate_mission = SWR_encourage_huntsman_mission
+					}
+					10 = {
+						activate_mission = SWR_eliminate_huntsman_mission
+					}
+				}
+			}
+			else = {
+				add_political_power = -15
+				random_list = {
+					10 = {
+						activate_mission = SWR_looking_for_supporters_mission
+					}
+					10 = {
+						activate_mission = SWR_training_mission
+					}
+					10 = {
+						activate_mission = SWR_demonstration_mission
+					}
+					10 = {
+						activate_mission = SWR_brigades_mission
+					}
+				}
+			}
+		}
+    }
+
+	SWR_agitating_mission = {
+		activation = {
+			always = no
+		}
+	    available = {
+    	    has_political_power > 44
+    	}
+    	is_good = yes
+    	days_mission_timeout = 6
+    	selectable_mission = yes
+		complete_effect = {
+			add_political_power = -45
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_encourage_huntsman_mission
+				}
+				10 = {
+					activate_mission = SWR_eliminate_huntsman_mission
+				}
+			}
+		}
+    	timeout_effect = {
+        	add_to_variable = {
+                var = acceptance_var
+                value = -5
+                tooltip = remove_5_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_agitating_mission
+				}
+				10 = {
+					activate_mission = SWR_encourage_huntsman_mission
+				}
+				10 = {
+					activate_mission = SWR_eliminate_huntsman_mission
+				}
+			}
+		}	
+    }
+	SWR_encourage_huntsman_mission = {
+		activation = {
+			always = no
+		}
+	    available = {
+    	   has_political_power > 24
+    	}
+    	is_good = yes
+    	days_mission_timeout = 10
+    	selectable_mission = yes
+		complete_effect = {
+			add_political_power = -25
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_agitating_mission
+				}
+				10 = {
+					activate_mission = SWR_eliminate_huntsman_mission
+				}
+			}
+		}
+    	timeout_effect = {
+        	add_to_variable = {
+                var = acceptance_var
+                value = -10
+                tooltip = remove_10_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_agitating_mission
+				}
+				10 = {
+					activate_mission = SWR_encourage_huntsman_mission
+				}
+				10 = {
+					activate_mission = SWR_eliminate_huntsman_mission
+				}
+			}
+		}	
+    }
+	SWR_eliminate_huntsman_mission = {
+		activation = {
+			always = no
+		}
+	    available = {
+    	   has_political_power > 34
+    	}
+    	is_good = yes
+    	days_mission_timeout = 14
+    	selectable_mission = yes
+		complete_effect = {
+			add_political_power = -35
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_agitating_mission
+				}
+				10 = {
+					activate_mission = SWR_encourage_huntsman_mission
+				}
+			}
+		}
+    	timeout_effect = {
+        	add_to_variable = {
+                var = acceptance_var
+                value = -14
+                tooltip = remove_15_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_agitating_mission
+				}
+				10 = {
+					activate_mission = SWR_encourage_huntsman_mission
+				}
+				10 = {
+					activate_mission = SWR_eliminate_huntsman_mission
+				}
+			}
+		}	
+    }
+
+	SWR_training_mission = {
+		activation = {
+			always = no
+		}
+	    available = {
+    	    has_political_power > 44
+    	}
+    	is_good = yes
+    	days_mission_timeout = 6
+    	selectable_mission = yes
+		complete_effect = {
+			add_political_power = -45
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_demonstration_mission
+				}
+				10 = {
+					activate_mission = SWR_brigades_mission
+				}
+			}
+		}
+    	timeout_effect = {
+        	add_to_variable = {
+                var = acceptance_var
+                value = -5
+                tooltip = remove_5_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_training_mission
+				}
+				10 = {
+					activate_mission = SWR_demonstration_mission
+				}
+				10 = {
+					activate_mission = SWR_brigades_mission
+				}
+			}
+		}	
+    }
+
+	SWR_demonstration_mission = {
+		activation = {
+			always = no
+		}
+	    available = {
+    	    has_political_power > 24
+    	}
+    	is_good = yes
+    	days_mission_timeout = 10
+    	selectable_mission = yes
+		complete_effect = {
+			add_political_power = -25
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_training_mission
+				}
+				10 = {
+					activate_mission = SWR_brigades_mission
+				}
+			}
+		}
+    	timeout_effect = {
+        	add_to_variable = {
+                var = acceptance_var
+                value = -10
+                tooltip = remove_10_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_training_mission
+				}
+				10 = {
+					activate_mission = SWR_demonstration_mission
+				}
+				10 = {
+					activate_mission = SWR_brigades_mission
+				}
+			}
+		}	
+    }
+
+	SWR_brigades_mission = {
+		activation = {
+			always = no
+		}
+	    available = {
+    	    has_political_power > 34
+    	}
+    	is_good = yes
+    	days_mission_timeout = 14
+    	selectable_mission = yes
+		complete_effect = {
+			add_political_power = -35
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_training_mission
+				}
+				10 = {
+					activate_mission = SWR_demonstration_mission
+				}
+			}
+		}
+    	timeout_effect = {
+        	add_to_variable = {
+                var = acceptance_var
+                value = -5
+                tooltip = remove_5_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			random_list = {
+				10 = {
+					activate_mission = SWR_looking_for_supporters_mission
+				}
+				10 = {
+					activate_mission = SWR_training_mission
+				}
+				10 = {
+					activate_mission = SWR_demonstration_mission
+				}
+				10 = {
+					activate_mission = SWR_brigades_mission
+				}
+			}
+		}	
+    }
+	
+	
+	SWR_supporters_among_industrialists = {
+		visible = {
+			has_completed_focus = SWR_race_has_begun
+		}
+		available = {
+			
+		}
+		cost = 25
+		days_remove = 4 
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = acceptance_var
+                value = 1
+                tooltip = 1_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			IF = {
+				limit = {
+					has_completed_focus = SWR_stay_the_course
+				}
+				add_to_variable = {
+                	var = power_var
+                	value = 2
+                	tooltip = 2_power_tt
+            	}
+				power_calibrate = yes
+			}
+			else = {
+				add_to_variable = {
+                	var = power_var
+                	value = 1
+                	tooltip = 1_power_tt
+            	}
+				power_calibrate = yes
+				add_political_power = 20
+			}
+		}
+	}
+	SWR_supporters_among_lumberjacks = {
+		visible = {
+			has_completed_focus = SWR_race_has_begun
+		}
+		available = {
+			
+		}
+		cost = 25
+		days_remove = 4
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = acceptance_var
+                value = 1
+                tooltip = 1_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			IF = {
+				limit = {
+					has_completed_focus = SWR_right_rudder
+				}
+				add_to_variable = {
+                	var = power_var
+                	value = 2
+                	tooltip = 2_power_tt
+            	}
+				power_calibrate = yes
+			}
+			else = {
+				add_to_variable = {
+                	var = power_var
+                	value = 1
+                	tooltip = 1_power_tt
+            	}
+				power_calibrate = yes
+				add_political_power = 20
+			}
+		}
+	}
+	SWR_involve_inquisition = {
+		visible = {
+			has_completed_focus = SWR_stay_the_course
+		}
+		available = {
+			
+		}
+		cost = 30
+		days_remove = 5
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = power_var
+                value = 5
+                tooltip = 5_power_tt
+            }
+			power_calibrate = yes
+			add_to_variable = {
+                var = acceptance_var
+                value = -3
+                tooltip = remove_3_acceptance_tt
+            }
+			acceptance_calibrate = yes
+		}
+	}
+	SWR_agitate_people = {
+		visible = {
+			has_completed_focus = SWR_stay_the_course
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_2_tt
+				check_variable = {
+					power_var > 2
+				}
+			}
+		}
+		cost = 55
+		days_remove = 7
+		complete_effect = {
+			random = {
+    			chance = swr_calculations_var
+    			country_event = SWR_phase_one.45
+			}
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = power_var
+                value = -2
+                tooltip = remove_2_power_tt
+            }
+			power_calibrate = yes
+			add_to_variable = {
+                var = acceptance_var
+                value = 3
+                tooltip = 3_acceptance_tt
+            }
+			acceptance_calibrate = yes
+		}
+	}
+	SWR_encourage_huntsman = {
+		visible = {
+			has_completed_focus = SWR_our_actions
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_6_tt
+				check_variable = {
+					power_var > 6
+				}
+			}
+		}
+		cost = 35
+		days_remove = 10
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = power_var
+                value = -7
+                tooltip = remove_7_power_tt
+            }
+			power_calibrate = yes
+			add_to_variable = {
+                var = acceptance_var
+                value = 10
+                tooltip = 10_acceptance_tt
+            }
+			acceptance_calibrate = yes
+		}
+	}
+	SWR_help_with_competitor = {
+		visible = {
+			has_completed_focus = SWR_patronage_of_loyal
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_6_tt
+				check_variable = {
+					power_var > 6
+				}
+			}
+		}
+		cost = 45
+		days_remove = 10
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = power_var
+                value = -7
+                tooltip = remove_7_power_tt
+            }
+			power_calibrate = yes
+			add_to_variable = {
+                var = acceptance_var
+                value = 14
+                tooltip = 14_acceptance_tt
+            }
+			acceptance_calibrate = yes
+		}
+	}
+	SWR_hold_meeting_with_Orlov = {
+		visible = {
+			has_completed_focus = SWR_our_actions
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_9_tt
+				check_variable = {
+					power_var > 9
+				}
+			}
+		}
+		cost = 60
+		days_remove = 10
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			country_event = SWR_phase_one.50
+		}
+	}
+	SWR_build_temple = {
+		visible = {
+			has_completed_focus = SWR_our_actions
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_12_tt
+				check_variable = {
+					power_var > 12
+				}
+			}
+		}
+		cost = 75
+		days_remove = 10
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			country_event = SWR_phase_one.51
+			hidden_effect = {
+				country_event = SWR_phase_one.13
+			}
+		}
+	}
+	SWR_invest_in_Kulikovs_enterprises = {
+		visible = {
+			has_completed_focus = SWR_our_actions
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_14_tt
+				check_variable = {
+					power_var > 14
+				}
+			}
+		}
+		cost = 50
+		days_remove = 10
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = power_var
+                value = -3
+                tooltip = remove_3_power_tt
+            }
+			power_calibrate = yes
+			add_to_variable = {
+                var = acceptance_var
+                value = 7
+                tooltip = 7_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			add_ideas = SWR_invest_in_Kulikovs_enterprises
+		}
+	}
+	SWR_money_from_huntsman = {
+		visible = {
+			has_completed_focus = SWR_right_rudder
+		}
+		available = {
+			
+		}
+		cost = 30
+		days_remove = 7
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = power_var
+                value = 5
+                tooltip = 5_power_tt
+            }
+			power_calibrate = yes
+			add_to_variable = {
+                var = acceptance_var
+                value = -3
+                tooltip = remove_3_acceptance_tt
+            }
+			acceptance_calibrate = yes
+		}
+	}
+	SWR_trainings_in_army = {
+		visible = {
+			has_completed_focus = SWR_right_rudder
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_2_tt
+				check_variable = {
+					power_var > 2
+				}
+			}
+		}
+		cost = 55
+		days_remove = 6
+		complete_effect = {
+			random = {
+    			chance = swr_calculations_var
+    			country_event = SWR_phase_one.44
+			}
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = acceptance_var
+                value = 5
+                tooltip = 5_acceptance_tt
+            }
+			acceptance_calibrate = yes
+		}
+	}
+	SWR_conduct_demonstration = {
+		visible = {
+			has_completed_focus = SWR_our_words
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_3_tt
+				check_variable = {
+					power_var > 3
+				}
+			}
+		}
+		cost = 35
+		days_remove = 10
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = power_var
+                value = -4
+                tooltip = remove_4_power_tt
+            }
+			power_calibrate = yes
+			add_to_variable = {
+                var = acceptance_var
+                value = 10
+                tooltip = 10_acceptance_tt
+            }
+			acceptance_calibrate = yes
+		}
+	}
+	SWR_deploy_elders_teams = {
+		visible = {
+			has_completed_focus = SWR_prove_our_suitability
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_4_tt
+				check_variable = {
+					power_var > 4
+				}
+			}
+		}
+		cost = 45
+		days_remove = 14
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = power_var
+                value = 5
+                tooltip = 5_power_tt
+            }
+			power_calibrate = yes
+			add_to_variable = {
+                var = acceptance_var
+                value = -5
+                tooltip = remove_5_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			add_to_variable = {
+                var = elder_brigades_var
+                value = 1
+                tooltip = 1_elder_brigades_tt
+            }
+		}
+	}
+	SWR_hold_meeting_with_Savinov = {
+		visible = {
+			has_completed_focus = SWR_our_words
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_power_9_tt
+				check_variable = {
+					power_var > 9
+				}
+			}
+		}
+		cost = 60
+		days_remove = 10
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			country_event = SWR_phase_one.52
+		}
+	}
+	SWR_propose_army_reform = {
+		visible = {
+			has_completed_focus = SWR_our_words
+		}
+		available = {
+			
+		}
+		cost = 75
+		days_remove = 10
+		fire_only_once = yes 
+		complete_effect = {
+		}
+		remove_effect = {
+			country_event = SWR_phase_one.53
+		}
+	}
+	SWR_terror_in_countryside = {
+		visible = {
+			has_completed_focus = SWR_prove_our_suitability
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = 3_elder_brigades_tt
+				check_variable = {
+					elder_brigades_var > 2
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_13_tt
+				check_variable = {
+					power_var > 13
+				}
+			}
+		}
+		cost = 150
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			add_to_variable = {
+                var = acceptance_var
+                value = 5
+                tooltip = 5_acceptance_tt
+            }
+			acceptance_calibrate = yes
+			custom_effect_tooltip = terror_tt
+			hidden_effect = {
+				add_ideas = SWR_terror
+			}
+		}
+	}
+}
+
+SWR_army_reform = {
+	SWR_elite_huntsman_division = {
+		visible = {
+			has_completed_focus = SWR_elite
+		}
+		cost = 30
+		days_remove = 15
+		complete_effect = {
+		}
+		remove_effect = {
+			create_unit = {
+                division = "name = \"Элитные отряды егерей\" division_template = \"Элитные отряды егерей\" start_experience_factor = 0.8 start_equipment_factor = 0.3 start_manpower_factor = 0.3" 
+                owner = ROO8
+            }
+		}
+	}
+	SWR_huntsman_division = {
+		visible = {
+			has_completed_focus = SWR_balance
+		}
+		cost = 30
+		days_remove = 15
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			create_unit = {
+                division = "name = \"Huntsmans\" division_template = \"Huntsmans\" start_experience_factor = 0.3 start_equipment_factor = 0.8 start_manpower_factor = 0.7" 
+                owner = ROO8
+            }
+		}
+	}
+	SWR_worker_division = {
+		visible = {
+			has_completed_focus = SWR_everyone_in_row
+		}
+		cost = 30
+		days_remove = 5
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			create_unit = {
+                division = "name = \"Отряды рабочих\" division_template = \"Отряды рабочих\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
+                owner = ROO8
+            }
+		}
+	}
+	SWR_propaganda_against_Allotment = {
+		visible = {
+			has_completed_focus = SWR_propaganda_tools
+		}
+		cost = 40
+		days_remove = 90
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			add_ideas = SWR_against_revisionists
+		}
+	}
+	SWR_improve_conditions_in_army = {
+		visible = {
+			has_completed_focus = SWR_change_appearance_of_army
+		}
+		cost = 20
+		days_remove = 10
+		fire_only_once = yes
+		modifier = {
+            political_power_gain = -0.5
+        }
+		complete_effect = {
+		}
+		remove_effect = {
+			custom_effect_tooltip = huntsman_squads_8_tt
+			add_to_variable = {
+				var = swr_army_attack_factor
+  				value = 0.01
+			}
+			add_to_variable = {
+  				var = swr_army_defence_factor
+  				value = 0.01
+			}
+			add_to_variable = {
+  				var = swr_army_speed_factor
+  				value = 0.01
+			}
+			add_to_variable = {
+ 				var = swr_army_org_factor
+  				value = 0.01
+			}
+		}
+	}
+}
+
+SWR_preemptive_strike_category = {
+	SWR_preemptive_strike_decisions = {
+		visible = {
+			has_completed_focus = SWR_preemptive_strike
+		}
+		cost = 150
+		days_remove = 30
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			declare_war_on = {
+                target = SWR
+                type = annex_everything
+            }
+		}
+	}
+}

@@ -1,0 +1,268 @@
+ideas = {
+	country = {
+		#Расколотое общество#
+		SWR_divided_society = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.01
+                war_support_factor = -0.01
+                surrender_limit = -0.05
+			}
+		}
+        #Русская Православная Церковь#
+		SWR_russian_orthodox_church = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor= 0.07
+			}
+		}
+
+        #Инквизиция#
+		SWR_inquisition = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.05
+                compliance_growth= 0.05
+                compliance_gain = 0.02
+			}
+		}
+		#Сопротивление егерей#
+		SWR_resistance_of_huntsman = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			hidden = yes
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				offence = -0.05
+				defence = -0.05
+			}
+		}
+		#Плохо работающий государственный аппарат#
+		SWR_poorly_functioning_state_apparatus = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			hidden = yes
+			modifier = {
+				political_power_gain = -0.5
+				offence = -0.05
+				defence = -0.05
+			}
+		}
+		#Благодарность#
+		SWR_gratitude = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			hidden = yes
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		#Благодарность старцы#
+		SWR_gratitude_elders = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			hidden = yes
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		#Массовый террор#
+		SWR_mass_terror = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			hidden = yes
+			modifier = {
+				humanists_drift = -0.01
+				political_power_gain = 0.5
+				monthly_population = -0.1
+				offence = -0.05
+				defence = -0.05
+			}
+		}
+		#Замедление вырубки деревьев#
+		SWR_slowing_down_tree_felling = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			hidden = yes
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.02
+				production_factory_max_efficiency_factor = -0.25
+			}
+		}
+		#Парализованная Инквизиция#
+		SWR_paralyzed_inquisition = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			hidden = yes
+			modifier = {
+				compliance_growth= -0.1
+				compliance_gain =- 0.05
+				decryption_factor = -0.1
+				encryption_factor = -0.1
+				stability_factor = -0.01
+			}
+		}
+		#Хаос на производстве одежды#
+		SWR_chaos_in_clothing_production = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.3
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.02
+			}
+		}
+
+		#Против ревизионистов!#
+		SWR_against_revisionists = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				targeted_modifier = {
+    				tag = LWV
+    				attack_bonus_against = 0.02
+    				breakthrough_bonus_against = 0.02
+				}
+			}
+		}
+    }
+	hidden_ideas = {
+		#Связи#
+		SWR_connections = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_weekly_factor = 0.005
+			}
+		}
+		#Инвестиции в производство#
+		SWR_investments_in_production = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_start_efficiency_factor = 0.03
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		#Террор#
+		SWR_terror = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.03
+				monthly_population = -0.06
+			}
+		}
+		#Агитация#
+		SWR_agitation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			hidden = yes
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+	}
+}

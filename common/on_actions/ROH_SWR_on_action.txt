@@ -1,0 +1,18 @@
+on_actions = {
+	on_daily_SWR = {
+		effect = {
+			set_variable = {
+    			var = swr_calculations_var #не видна в игре, но нужно для решений
+    			value = power_var
+			}
+            multiply_variable = {
+                var = swr_calculations_var
+                value = 10
+            }
+            add_to_variable = {
+                var = swr_calculations_var
+                value = acceptance_var
+            }
+		}
+	}
+}

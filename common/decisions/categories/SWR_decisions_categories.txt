@@ -1,0 +1,42 @@
+SWR_preparing_uprising = {  #Подготовка восстания
+
+	allowed = { original_tag = SWR }
+	visible = {
+		SWR = {
+			has_country_flag = freethinkers_flag
+		}
+	}
+	#visible_when_empty = no  
+	priority = { base = 5 }
+}
+
+SWR_struggle_for_influence = {  #Борьба за влияние
+
+	allowed = { original_tag = SWR }
+	visible = {
+		SWR = {
+			has_country_flag = election_flag
+		}
+	}
+	#visible_when_empty = no  
+	priority = { base = 5 }
+}
+
+SWR_army_reform = {  #Реформа армии
+
+	allowed = { original_tag = SWR }
+	visible = {
+		has_completed_focus = SWR_leaders_decision
+	}
+	#visible_when_empty = no  
+	priority = { base = 5 }
+}
+
+SWR_preemptive_strike_category = {
+	allowed = { original_tag = SWR }
+	visible = {
+		has_completed_focus = SWR_preemptive_strike
+	}
+	#visible_when_empty = no  
+	priority = { base = 5 }
+}

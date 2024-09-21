@@ -1,0 +1,1545 @@
+add_namespace = SWR_phase_one
+
+#После бури
+country_event = {
+	id = SWR_phase_one.1
+	title = SWR_phase_one.1.t
+	desc = SWR_phase_one.1.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.1.a	
+	}
+}
+
+#В погоне за непокорными
+country_event = {
+	id = SWR_phase_one.2
+	title = SWR_phase_one.2.t
+	desc = SWR_phase_one.2.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.2.a	
+	}
+}
+
+#Основа нашего общества
+country_event = {
+	id = SWR_phase_one.3
+	title = SWR_phase_one.3.t
+	desc = SWR_phase_one.3.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.3.a	
+	}
+}
+
+#Рассылая письма
+country_event = {
+	id = SWR_phase_one.4
+	title = SWR_phase_one.4.t
+	desc = SWR_phase_one.4.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.4.a	
+	}
+}
+
+#Открывая собрание
+country_event = {
+	id = SWR_phase_one.5
+	title = SWR_phase_one.5.t
+	desc = SWR_phase_one.5.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.5.a	
+	}
+}
+
+#Слово Анисифорова
+country_event = {
+	id = SWR_phase_one.6
+	title = SWR_phase_one.6.t
+	desc = SWR_phase_one.6.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.6.a	
+	}
+}
+
+#Слово Велехова
+country_event = {
+	id = SWR_phase_one.7
+	title = SWR_phase_one.7.t
+	desc = SWR_phase_one.7.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.7.a	
+	}
+}
+
+#Слово Кадомского
+country_event = {
+	id = SWR_phase_one.8
+	title = SWR_phase_one.8.t
+	desc = SWR_phase_one.8.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.8.a	
+	}
+}
+
+#Выслушав всех
+country_event = {
+	id = SWR_phase_one.9
+	title = SWR_phase_one.9.t
+	desc = SWR_phase_one.9.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.9.a	
+	}
+}
+
+#Выбор, от которого не убежишь
+country_event = {
+	id = SWR_phase_one.10
+	title = SWR_phase_one.10.t
+	desc = SWR_phase_one.10.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.10.a
+		hidden_effect = {
+			load_focus_tree = SWR_phase_1_ep_2_revolution
+			set_country_flag = freethinkers_flag
+			set_country_flag = revolution_flag
+		}
+	}
+    option = {
+		name = SWR_phase_one.10.b
+		hidden_effect = {
+			load_focus_tree = SWR_phase_1_ep_2_elections
+			set_country_flag = conciliators_flag
+		}
+	}
+    option = {
+		name = SWR_phase_one.10.c
+		hidden_effect = {
+			load_focus_tree = SWR_phase_1_ep_2_elections
+			set_country_flag = elders_flag
+		}
+	}
+}
+
+#Новый храм
+country_event = {
+	id = SWR_phase_one.11
+	title = SWR_phase_one.11.t
+	desc = SWR_phase_one.11.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.11.a
+    	add_stability = 0.03
+		add_to_variable = {
+       		var = readiness_var
+        	value = -3
+        	tooltip = remove_3_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Насилие над рабочими
+country_event = {
+	id = SWR_phase_one.12
+	title = SWR_phase_one.12.t
+	desc = SWR_phase_one.12.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.12.a
+    	add_stability = -0.03
+		add_to_variable = {
+      		var = readiness_var
+        	value = -5
+        	tooltip = remove_5_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Старцы против храма
+country_event = {
+	id = SWR_phase_one.13
+	title = SWR_phase_one.13.t
+	desc = SWR_phase_one.13.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.13.a	
+	}
+}
+
+#Реформы армии
+country_event = {
+	id = SWR_phase_one.14
+	title = SWR_phase_one.14.t
+	desc = SWR_phase_one.14.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.14.a
+    	add_political_power = 25
+	}
+    option = {
+		name = SWR_phase_one.14.b
+		add_to_variable = {
+			add_political_power = 50
+			add_command_power = 20
+        	var = power_var
+       		value = -3
+        	tooltip = remove_3_power_tt
+    	}
+		power_calibrate = yes
+		add_to_variable = {
+        	var = swr_army_speed_factor 
+        	value = -0.01
+    	}
+		add_to_variable = {
+        	var = swr_army_org_factor  
+        	value = -0.02
+    	}
+		add_to_variable = {
+       		var = swr_planning_speed 
+        	value = 0.03
+    	}
+		add_to_variable = {
+       		var = swr_army_strength_factor 
+    		value = 0.02
+    	}
+		add_to_variable = {
+        	var = swr_army_morale_factor 
+        	value = 0.02
+    	}
+		custom_effect_tooltip = huntsman_squads_2_tt
+		add_to_variable = {
+    		var = acceptance_var
+        	value = -5
+        	tooltip = remove_5_acceptance_tt
+    	}
+		acceptance_calibrate = yes
+	}
+    option = {
+		name = SWR_phase_one.14.c
+		add_political_power = 50
+		add_to_variable = {
+       		var = swr_army_speed_factor 
+        	value = 0.03
+    	}
+		add_to_variable = {
+        	var = swr_army_org_factor  
+        	value = 0.05
+    	}
+		add_to_variable = {
+       		var = swr_planning_speed 
+        	value = 0.05
+    	}
+		custom_effect_tooltip = huntsman_squads_3_tt
+		add_to_variable = {
+        	var = power_var
+        	value = -3
+        	tooltip = remove_3_power_tt
+    	}
+		power_calibrate = yes
+		add_to_variable = {
+        	var = acceptance_var
+        	value = 3
+        	tooltip = 3_acceptance_tt
+    	}
+		acceptance_calibrate = yes
+	}
+}
+
+#Террор
+country_event = {
+	id = SWR_phase_one.15
+	title = SWR_phase_one.15.t
+	desc = SWR_phase_one.15.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.15.a
+    	add_to_variable = {
+        	var = power_var
+        	value = 2
+        	tooltip = 2_power_tt
+    	}
+		power_calibrate = yes
+		custom_effect_tooltip = terror_tt
+    	hidden_effect = {
+			add_ideas = SWR_terror
+		}
+	}
+}
+
+#Убийство Орлова
+country_event = {
+	id = SWR_phase_one.16
+	title = SWR_phase_one.16.t
+	desc = SWR_phase_one.16.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.16.a
+    	add_ideas = SWR_slowing_down_tree_felling
+		add_to_variable = {
+        	var = power_var
+        	value = 4
+        	tooltip = 4_power_tt
+    	}
+		power_calibrate = yes
+	}
+}
+
+#Убийство Леонида
+country_event = {
+	id = SWR_phase_one.17
+	title = SWR_phase_one.17.t
+	desc = SWR_phase_one.17.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.17.a	
+    	swap_ideas = {
+        	remove_idea = SWR_inquisition
+        	add_idea = SWR_paralyzed_inquisition
+    	}
+		add_to_variable = {
+        	var = power_var
+        	value = -3
+        	tooltip = remove_3_power_tt
+    	}
+		power_calibrate = yes
+	}
+}
+
+#Новый храм Старцы
+country_event = {
+	id = SWR_phase_one.18
+	title = SWR_phase_one.18.t
+	desc = SWR_phase_one.18.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.18.a
+    	add_political_power = -25
+		add_to_variable = {
+        	var = power_var
+        	value = -3
+        	tooltip = remove_3_power_tt
+    	}
+		power_calibrate = yes
+	}
+}
+
+#Инвестиции в Куликова
+country_event = {
+	id = SWR_phase_one.19
+	title = SWR_phase_one.19.t
+	desc = SWR_phase_one.19.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.19.a
+		custom_effect_tooltip = investments_in_production_tt
+    	hidden_effect = {
+			add_timed_idea = {
+				idea = SWR_investments_in_production
+				days = 180
+			}
+		}
+		add_to_variable = {
+        	var = acceptance_var
+        	value = -7
+        	tooltip = remove_7_acceptance_tt
+    	}
+	}
+}
+
+#Убийство Орлова старцы
+country_event = {
+	id = SWR_phase_one.20
+	title = SWR_phase_one.20.t
+	desc = SWR_phase_one.20.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.20.a
+    	add_ideas = SWR_slowing_down_tree_felling
+		add_to_variable = {
+       		var = power_var
+        	value = -3
+        	tooltip = remove_3_power_tt
+    	}
+		power_calibrate = yes
+	}
+}
+
+#Убийство Леонида старцы
+country_event = {
+	id = SWR_phase_one.21
+	title = SWR_phase_one.21.t
+	desc = SWR_phase_one.21.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.21.a
+    	swap_ideas = {
+       		remove_idea = SWR_inquisition
+        	add_idea = SWR_paralyzed_inquisition
+    	}
+		add_to_variable = {
+       		var = power_var
+        	value = 4
+        	tooltip = 4_power_tt
+    	}
+		power_calibrate = yes
+	}
+}  
+
+#Что делать?
+country_event = {
+	id = SWR_phase_one.22
+	title = SWR_phase_one.22.t
+	desc = SWR_phase_one.22.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.22.a
+	}
+}
+
+#Наша стратегия
+country_event = {
+	id = SWR_phase_one.23
+	title = SWR_phase_one.23.t
+	desc = SWR_phase_one.23.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.23.a
+	}
+}
+
+#Серьезный разговор
+country_event = {
+	id = SWR_phase_one.24
+	title = SWR_phase_one.24.t
+	desc = SWR_phase_one.26.d
+    fire_only_once = yes
+	trigger = {
+		tag = SWR
+		has_stability < 0.3
+		has_country_flag = revolution_flag
+	}
+
+	option = {
+		name = SWR_phase_one.24.a
+		add_to_variable = {
+        	var = readiness_var
+        	value = -20
+        	tooltip = remove_20_readiness_tt
+    	}
+		readiness_calibrate = yes
+		set_country_flag = revolution_fail_flag
+	}
+}
+
+#Конец революции
+country_event = {
+	id = SWR_phase_one.25
+	title = SWR_phase_one.25.t
+	desc = SWR_phase_one.25.d
+    fire_only_once = yes
+	trigger = {
+		has_stability < 0.3
+		has_country_flag = revolution_fail_flag
+		has_country_flag = revolution_flag
+	}
+
+	option = {
+		name = SWR_phase_one.25.a
+		custom_effect_tooltip = revolution_fail_tt
+		hidden_effect = {
+			set_popularities = {
+				free_people = 45
+				bandits = 55
+			}
+			load_focus_tree = {
+    			tree = generic
+    			keep_completed = no
+			}
+		}
+	}
+}
+
+
+#Штурм
+country_event = {
+	id = SWR_phase_one.26
+	title = SWR_phase_one.26.t
+	desc = SWR_phase_one.26.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.26.a
+		set_politics = {
+    		ruling_party = humanists
+    		elections_allowed = no
+		}
+		country_event = SWR_phase_one.56
+		clr_country_flag = revolution_flag
+	}
+}
+
+#Опоздание
+country_event = {
+	id = SWR_phase_one.27
+	title = SWR_phase_one.27.t
+	desc = SWR_phase_one.27.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.27.a
+		custom_effect_tooltip = revolution_fail_tt
+		hidden_effect = {
+			set_popularities = {
+				free_people = 45
+				bandits = 55
+			}
+			load_focus_tree = {
+    			tree = generic
+    			keep_completed = no
+			}
+		}
+	}
+}
+
+#Кандидаты
+country_event = {
+	id = SWR_phase_one.28
+	title = SWR_phase_one.28.t
+	desc = SWR_phase_one.28.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.28.a
+		country_event = SWR_phase_one.29
+	}
+	option = {
+		name = SWR_phase_one.28.b
+		country_event = SWR_phase_one.30
+	}
+	option = {
+		name = SWR_phase_one.28.c
+		country_event = SWR_phase_one.31
+	}
+}
+
+#Машина
+country_event = {
+	id = SWR_phase_one.29
+	title = SWR_phase_one.29.t
+	desc = SWR_phase_one.29.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.29.a
+		add_stability = -0.1
+		add_manpower = -1
+		add_ideas = SWR_chaos_in_clothing_production
+		add_to_variable = {
+        	var = readiness_var
+        	value = 10
+        	tooltip = 10_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Конь
+country_event = {
+	id = SWR_phase_one.30
+	title = SWR_phase_one.30.t
+	desc = SWR_phase_one.30.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.30.a
+		add_stability = -0.1
+		add_manpower = -1
+		add_ideas = SWR_slowing_down_tree_felling
+		add_to_variable = {
+        	var = readiness_var
+        	value = 10
+        	tooltip = 10_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Ноги
+country_event = {
+	id = SWR_phase_one.31
+	title = SWR_phase_one.31.t
+	desc = SWR_phase_one.31.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.31.a
+		add_stability = -0.1
+		add_manpower = -1
+		add_ideas = SWR_chaos_in_clothing_production
+		add_to_variable = {
+        	var = readiness_var
+        	value = 10
+        	tooltip = 10_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Планирование забастовки
+country_event = {
+	id = SWR_phase_one.32
+	title = SWR_phase_one.32.t
+	desc = SWR_phase_one.32.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.32.a
+		country_event = SWR_phase_one.33
+	}
+	option = {
+		name = SWR_phase_one.32.b
+		country_event = SWR_phase_one.34
+	}
+	option = {
+		name = SWR_phase_one.32.c
+		country_event = SWR_phase_one.35
+	}
+}
+
+#Ярость детей
+country_event = {
+	id = SWR_phase_one.33
+	title = SWR_phase_one.33.t
+	desc = SWR_phase_one.33.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.33.a
+		add_stability = -0.1
+		add_to_variable = {
+       		var = readiness_var
+        	value = 10
+        	tooltip = 10_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Гнев простых мужиков
+country_event = {
+	id = SWR_phase_one.34
+	title = SWR_phase_one.34.t
+	desc = SWR_phase_one.34.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.34.a
+		add_stability = -0.05
+		add_to_variable = {
+        	var = readiness_var
+        	value = 5
+        	tooltip = 5_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Безумие матерей
+country_event = {
+	id = SWR_phase_one.35
+	title = SWR_phase_one.35.t
+	desc = SWR_phase_one.35.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.35.a
+		add_stability = -0.03
+		add_to_variable = {
+        	var = readiness_var
+        	value = 3
+        	tooltip = 3_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Варианты
+country_event = {
+	id = SWR_phase_one.36
+	title = SWR_phase_one.36.t
+	desc = SWR_phase_one.36.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.36.a
+	}
+	option = {
+		name = SWR_phase_one.36.b
+	}
+}
+
+#Убийство с честью
+country_event = {
+	id = SWR_phase_one.37
+	title = SWR_phase_one.37.t
+	desc = SWR_phase_one.37.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.37.a
+		add_stability = -0.05
+		add_manpower = -1
+		add_to_variable = {
+        	var = readiness_var
+        	value = 5
+        	tooltip = 5_readiness_tt
+    	}
+		readiness_calibrate = yes
+	}
+}
+
+#Похищение
+country_event = {
+	id = SWR_phase_one.38
+	title = SWR_phase_one.38.t
+	desc = SWR_phase_one.38.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.38.a
+		add_to_variable = {
+        	var = readiness_var
+        	value = 15
+        	tooltip = 15_readiness_tt
+    	}
+		readiness_calibrate = yes
+		add_stability = -0.04
+		add_manpower = -1
+		swap_ideas = {
+        	remove_idea = SWR_inquisition
+        	add_idea = SWR_paralyzed_inquisition
+    	}
+	}
+}
+
+#Гость
+country_event = {
+	id = SWR_phase_one.39
+	title = SWR_phase_one.39.t
+	desc = SWR_phase_one.39.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.39.a
+		add_to_variable = {
+        	var = readiness_var
+        	value = 7
+        	tooltip = 7_readiness_tt
+    	}
+		readiness_calibrate = yes
+		add_manpower = -1
+		swap_ideas = {
+        	remove_idea = SWR_inquisition
+        	add_idea = SWR_paralyzed_inquisition
+    	}
+	}
+}
+
+#Четыре месяца
+country_event = {
+	id = SWR_phase_one.40
+	title = SWR_phase_one.40.t
+	desc = SWR_phase_one.40.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.40.a
+	}
+}
+
+#Взгляд
+country_event = {
+	id = SWR_phase_one.41
+	title = SWR_phase_one.41.t
+	desc = SWR_phase_one.41.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.41.a
+	}
+}
+
+#Приятное удивление
+country_event = {
+	id = SWR_phase_one.42
+	title = SWR_phase_one.42.t
+	desc = SWR_phase_one.42.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.42.a
+	}
+}
+
+#Приятная беседа
+country_event = {
+	id = SWR_phase_one.43
+	title = SWR_phase_one.43.t
+	desc = SWR_phase_one.43.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.43.a
+	}
+}
+
+#Наших инструкторов разгоняют!
+country_event = {
+	id = SWR_phase_one.44
+	title = SWR_phase_one.44.t
+	desc = SWR_phase_one.44.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.44.a
+		remove_decision_on_cooldown = SWR_trainings_in_army
+	}
+}
+
+#Наша компания терпит неудачу!
+country_event = {
+	id = SWR_phase_one.45
+	title = SWR_phase_one.45.t
+	desc = SWR_phase_one.45.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.45.a
+		remove_decision_on_cooldown = SWR_agitate_people
+	}
+}
+
+#День выборов
+country_event = {
+	id = SWR_phase_one.46
+	title = SWR_phase_one.46.t
+	desc = SWR_phase_one.46.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.46.a
+		country_event = SWR_phase_one.47
+		clr_country_flag = election_flag
+	}
+}
+
+#Восстание
+country_event = {
+	id = SWR_phase_one.47
+	title = SWR_phase_one.47.t
+	desc = SWR_phase_one.47.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.47.a
+		IF = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = conciliators_flag
+						check_variable = {
+							acceptance_var > 60
+						}
+					}
+					AND = {
+						has_country_flag = elders_flag
+						check_variable = {
+							acceptance_var < 60
+						}
+					}
+				}
+			}
+			country_event = SWR_phase_one.48
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = elders_flag
+						check_variable = {
+							acceptance_var > 60
+						}
+					}
+					AND = {
+						has_country_flag = conciliators_flag
+						check_variable = {
+							acceptance_var < 60
+						}
+					}
+				}
+			}
+			country_event = SWR_phase_one.49
+		}
+	}
+}
+
+#Подавление революционеров
+country_event = {
+	id = SWR_phase_one.48
+	title = SWR_phase_one.48.t
+	desc = SWR_phase_one.48.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.48.a
+		country_event = SWR_phase_one.56
+	}
+}
+#Переворот
+country_event = {
+	id = SWR_phase_one.49
+	title = SWR_phase_one.49.t
+	desc = SWR_phase_one.49.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.49.a
+		set_politics = {
+    		ruling_party = bandits
+    		elections_allowed = no
+		}
+		country_event = SWR_phase_one.56
+	}
+}
+
+#За круглым столом
+country_event = {
+	id = SWR_phase_one.50
+	title = SWR_phase_one.50.t
+	desc = SWR_phase_one.50.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.50.a
+		add_to_variable = {
+       		var = power_var
+        	value = -5
+        	tooltip = remove_5_power_tt
+    	}
+		power_calibrate = yes
+		add_to_variable = {
+        	var = acceptance_var
+        	value = 6
+        	tooltip = 6_acceptance_tt
+    	}
+		acceptance_calibrate = yes
+		custom_effect_tooltip = swr_50_tt
+	}
+}
+
+#Стройка
+country_event = {
+	id = SWR_phase_one.51
+	title = SWR_phase_one.51.t
+	desc = SWR_phase_one.51.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.51.a
+		add_political_power = -25
+		add_to_variable = {
+        	var = power_var
+        	value = -3
+        	tooltip = remove_3_power_tt
+    	}
+		power_calibrate = yes
+		add_to_variable = {
+        	var = acceptance_var
+        	value = 8
+        	tooltip = 8_acceptance_tt
+    	}
+		acceptance_calibrate = yes
+	}
+	option = {
+		name = SWR_phase_one.51.b
+		add_political_power = 25
+		add_to_variable = {
+        	var = power_var
+        	value = 3
+        	tooltip = 3_power_tt
+    	}
+		power_calibrate = yes
+		add_to_variable = {
+       		var = acceptance_var
+        	value = -8
+        	tooltip = remove_8_acceptance_tt
+    	}
+		acceptance_calibrate = yes
+	}
+}
+
+#Гений мысли
+country_event = {
+	id = SWR_phase_one.52
+	title = SWR_phase_one.52.t
+	desc = SWR_phase_one.52.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.52.a
+		add_political_power = -30
+		add_to_variable = {
+        	var = power_var
+        	value = -5
+        	tooltip = remove_5_power_tt
+    	}
+		power_calibrate = yes
+		add_to_variable = {
+        	var = acceptance_var
+        	value = 10
+        	tooltip = 10_acceptance_tt
+    	}
+		acceptance_calibrate = yes
+	}
+}
+
+#Обсуждение реформы
+country_event = {
+	id = SWR_phase_one.53
+	title = SWR_phase_one.53.t
+	desc = SWR_phase_one.53.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.53.a
+		country_event = SWR_phase_one.54
+	}
+	option = {
+		name = SWR_phase_one.53.b
+		add_political_power = 10
+	}
+	option = {
+		name = SWR_phase_one.53.c
+		add_to_variable = {
+       		var = swr_army_speed_factor 
+        		value = 0.01
+    		}
+		add_to_variable = {
+        	var = swr_army_org_factor  
+        	value = 0.02
+    	}
+		add_to_variable = {
+       		var = swr_planning_speed 
+        	value = 0.02
+    	}
+		custom_effect_tooltip = huntsman_squads_4_tt
+		add_to_variable = {
+       		var = power_var
+        	value = -1
+        	tooltip = remove_1_power_tt
+    	}
+		power_calibrate = yes
+		add_to_variable = {
+        	var = acceptance_var
+        	value = 1
+        	tooltip = 1_acceptance_tt
+    	}
+		acceptance_calibrate = yes
+	}
+}
+
+#Жесткая речь
+country_event = {
+	id = SWR_phase_one.54
+	title = SWR_phase_one.54.t
+	desc = SWR_phase_one.54.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.54.a
+		add_to_variable = {
+       		var = swr_army_speed_factor 
+        		value = 0.03
+    		}
+		add_to_variable = {
+        	var = swr_army_org_factor  
+        	value = 0.06
+    	}
+		add_to_variable = {
+       		var = swr_planning_speed 
+        	value = 0.05
+    	}
+		custom_effect_tooltip = huntsman_squads_5_tt
+		add_to_variable = {
+        	var = power_var
+        	value = 3
+        	tooltip = 3_power_tt
+    	}
+		power_calibrate = yes
+		add_to_variable = {
+        	var = acceptance_var
+        	value = 5
+        	tooltip = 5_acceptance_tt
+    	}
+		acceptance_calibrate = yes
+	}
+}
+
+#Специализация
+country_event = {
+	id = SWR_phase_one.55
+	title = SWR_phase_one.55.t
+	desc = SWR_phase_one.55.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.55.a
+		add_country_leader_trait = educated_officer_trait
+	}
+	option = {
+		name = SWR_phase_one.55.b
+		add_country_leader_trait = certified_builder_trait
+	}
+	option = {
+		name = SWR_phase_one.55.c
+		add_country_leader_trait = engineer_trait
+	}
+}
+
+#Наши приоритеты
+country_event = {
+	id = SWR_phase_one.56
+	title = SWR_phase_one.56.t
+	desc = SWR_phase_one.56.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.56.a
+		load_focus_tree = SWR_phase_1_ep_3_army_reform_plan
+	}
+	option = {
+		name = SWR_phase_one.56.b
+		IF = {
+			limit = {
+				has_government = humanists
+			}
+			load_focus_tree = SWR_phase_1_ep_3_freethinkers
+		}
+		else_if = {
+			limit = {
+				has_government = free_people
+			}
+			load_focus_tree = SWR_phase_1_ep_3_conciliators
+		}
+		else_if = {
+			limit = {
+				has_government = bandits
+			}
+			load_focus_tree = SWR_phase_1_ep_3_elders
+		}
+	}
+}
+
+#Последствия революции
+country_event = {
+	id = SWR_phase_one.57
+	title = SWR_phase_one.57.t
+	desc = SWR_phase_one.57.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.57.a
+	}
+}
+
+#Наше положение
+country_event = {
+	id = SWR_phase_one.58
+	title = SWR_phase_one.58.t
+	desc = SWR_phase_one.58.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.58.a
+	}
+}
+
+#Разговор с Савиновым
+country_event = {
+	id = SWR_phase_one.59
+	title = SWR_phase_one.59.t
+	desc = SWR_phase_one.59.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.59.a
+	}
+}
+
+#Разговор с Куликовым
+country_event = {
+	id = SWR_phase_one.60
+	title = SWR_phase_one.60.t
+	desc = SWR_phase_one.60.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.60.a
+	}
+}
+
+#Новый план
+country_event = {
+	id = SWR_phase_one.61
+	title = SWR_phase_one.61.t
+	desc = SWR_phase_one.61.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.61.a
+	}
+}
+
+#Ошибки прошлого
+country_event = {
+	id = SWR_phase_one.62
+	title = SWR_phase_one.62.t
+	desc = SWR_phase_one.62.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.62.a
+	}
+}
+
+#Изменение стратегии
+country_event = {
+	id = SWR_phase_one.63
+	title = SWR_phase_one.63.t
+	desc = SWR_phase_one.63.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.63.a
+	}
+}
+
+#Отчет
+country_event = {
+	id = SWR_phase_one.64
+	title = SWR_phase_one.64.t
+	desc = SWR_phase_one.64.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.64.a
+		add_to_variable = {
+ 			var = swr_army_attack_factor
+  			value = -0.05
+		}
+
+		add_to_variable = {
+  			var = swr_army_defence_factor
+  			value = -0.05
+		}
+
+		add_to_variable = {
+  			var = swr_army_speed_factor
+  			value = -0.05
+		}
+
+		add_to_variable= {
+  			var = swr_army_org_factor
+ 			value = -0.03
+		}
+
+		add_to_variable = {
+  			var = swr_land_night_attack
+  			value = 0.03
+		}
+
+		add_to_variable = {
+  			var = swr_planning_speed
+  			value =  -0.05
+		}
+
+		add_to_variable = {
+  			var = swr_acclimatization_cold_climate_gain_factor
+  			value = 0.03
+		}
+
+		add_to_variable = {
+  			var = swr_acclimatization_hot_climate_gain_factor
+  			value = 0.03
+		}
+		custom_effect_tooltip = huntsman_squads_6_tt
+	}
+}
+
+#Предложение
+country_event = {
+	id = SWR_phase_one.65
+	title = SWR_phase_one.65.t
+	desc = SWR_phase_one.65.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.65.a
+		load_focus_tree = SWR_phase_1_ep_3_army_reform
+		complete_national_focus = SWR_leaders_decision
+	}
+	option = {
+		name = SWR_phase_one.65.b
+		load_focus_tree = SWR_phase_1_ep_3_army_reform
+		complete_national_focus = SWR_wise_suggestion
+	}
+}
+
+#Из князи в грязи
+country_event = {
+	id = SWR_phase_one.66
+	title = SWR_phase_one.66.t
+	desc = SWR_phase_one.66.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.66.a
+		hidden_effect = {
+			country_event = SWR_phase_one.67
+		}
+	}
+	option = {
+		name = SWR_phase_one.66.b
+		hidden_effect = {
+			country_event = SWR_phase_one.68
+		}
+	}
+}
+
+#Приятное начало
+country_event = {
+	id = SWR_phase_one.67
+	title = SWR_phase_one.67.t
+	desc = SWR_phase_one.67.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.67.a
+		hidden_effect = {
+			country_event = SWR_phase_one.69
+		}
+	}
+	option = {
+		name = SWR_phase_one.67.b
+		hidden_effect = {
+			country_event = SWR_phase_one.70
+		}
+	}
+}
+
+#Напряжение
+country_event = {
+	id = SWR_phase_one.68
+	title = SWR_phase_one.68.t
+	desc = SWR_phase_one.68.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = SWR_phase_one.68.a
+		hidden_effect = {
+			country_event = SWR_phase_one.72
+		}
+	}
+	option = {
+		name = SWR_phase_one.68.b
+		hidden_effect = {
+			country_event = SWR_phase_one.73
+		}
+	}
+}
+
+#Цель
+country_event = {
+	id = SWR_phase_one.69
+	title = SWR_phase_one.69.t
+	desc = SWR_phase_one.69.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.69.a
+		hidden_effect = {
+			country_event = SWR_phase_one.68
+		}
+	}
+	option = {
+		name = SWR_phase_one.69.b
+		hidden_effect = {
+			country_event = SWR_phase_one.71
+		}
+	}
+}
+
+#Конец
+country_event = {
+	id = SWR_phase_one.70
+	title = SWR_phase_one.70.t
+	desc = SWR_phase_one.70.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.70.a
+		hidden_effect = {
+			complete_focus = SWR_leaders_decision
+		}
+	}
+}
+
+#Успех
+country_event = {
+	id = SWR_phase_one.71
+	title = SWR_phase_one.71.t
+	desc = SWR_phase_one.71.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.71.a
+		set_country_flag = success_flag
+	}
+}
+
+#Неприязнь
+country_event = {
+	id = SWR_phase_one.72
+	title = SWR_phase_one.72.t
+	desc = SWR_phase_one.72.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.72.a
+		set_country_flag = success_flag
+		WOD = {
+			add_opinion_modifier = {
+    			target = SWR
+    			modifier = broken_relationships
+			}
+		}
+	}
+}
+
+#Успокоение
+country_event = {
+	id = SWR_phase_one.73
+	title = SWR_phase_one.73.t
+	desc = SWR_phase_one.73.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SWR_phase_one.73.a
+		set_country_flag = compromise_flag
+	}
+}
+

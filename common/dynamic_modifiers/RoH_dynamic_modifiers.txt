@@ -662,3 +662,26 @@ volga_war_cgf_modifier = {
 	enable = { always = yes }
 	consumer_goods_factor = volga_war_cgf
 }
+
+
+#Отряды егерей#
+SWR_huntsman_squads = {
+	icon = no
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+	army_attack_factor = swr_army_attack_factor
+    army_defence_factor = swr_army_defence_factor
+	army_speed_factor = swr_army_speed_factor
+	army_org_factor = swr_army_org_factor
+	land_night_attack = swr_land_night_attack
+	planning_speed = swr_planning_speed
+	acclimatization_cold_climate_gain_factor = swr_acclimatization_cold_climate_gain_factor
+	acclimatization_hot_climate_gain_factor = swr_acclimatization_hot_climate_gain_factor
+	army_strength_factor = swr_army_strength_factor
+	army_morale_factor = swr_army_morale_factor 
+}
