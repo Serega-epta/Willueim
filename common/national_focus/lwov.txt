@@ -108,7 +108,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			add_ideas = Istinnoe_obcshestvo
+			add_ideas = LWV_True_Society
 		}
 	}
 	focus = {
@@ -164,20 +164,20 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = holy_nadely
+					has_idea = LWV_Holy_Allotments
 				}
 				swap_ideas = {
-					remove_idea = holy_nadely
-					add_idea = holy_nadely_2
+					remove_idea = LWV_Holy_Allotments
+					add_idea = LWV_Holy_Allotments_2
 				}
 			}
 			if = {
 				limit = {
-					has_idea = holy_nadely_3
+					has_idea = LWV_Holy_Allotments_3
 				}
 				swap_ideas = {
-					remove_idea = holy_nadely_3
-					add_idea = holy_nadely_4
+					remove_idea = LWV_Holy_Allotments_3
+					add_idea = LWV_Holy_Allotments_4
 				}
 			}
 			random_owned_controlled_state = {
@@ -275,7 +275,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = LWV_Rabochii_moleben
+		id = LWV_LWV_Worker_Prayer
 		icon = GFX_Vvesti_rab_m
 		prerequisite = {
 			focus = LWV_Yk_svyatie_nadeli
@@ -295,7 +295,7 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
-			add_ideas = Rabochii_moleben
+			add_ideas = LWV_Worker_Prayer
 			hidden_effect = {
 				country_event = {
 					id = LWV_phase_one.7
@@ -308,14 +308,14 @@ focus_tree = {
 		id = LWV_Skrepit_veru_klinkom
 		icon = GFX_Skrepit_very_klinkom
 		prerequisite = {
-			focus = LWV_Rabochii_moleben
+			focus = LWV_LWV_Worker_Prayer
 		}
 		prerequisite = {
 			focus = LWV_Izyat_orydia_truda
 		}
 		x = -1
 		y = 1
-		relative_position_id = LWV_Rabochii_moleben
+		relative_position_id = LWV_LWV_Worker_Prayer
 		available = {
 			is_subject = no
 		}
@@ -443,23 +443,23 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_idea = holy_nadely_2
+					has_idea = LWV_Holy_Allotments_2
 				}
 				swap_ideas = {
-					remove_idea = holy_nadely_2
-					add_idea = holy_nadely_4
+					remove_idea = LWV_Holy_Allotments_2
+					add_idea = LWV_Holy_Allotments_4
 				}
 			}
 			if = {
 				limit = {
-					has_idea = holy_nadely
+					has_idea = LWV_Holy_Allotments
 				}
 				swap_ideas = {
-					remove_idea = holy_nadely
-					add_idea = holy_nadely_3
+					remove_idea = LWV_Holy_Allotments
+					add_idea = LWV_Holy_Allotments_3
 				}
 			}
-			remove_ideas = uniat_nationalists
+			remove_ideas = LWV_uniat_nationalists
 			hidden_effect = {
 				country_event = {
 					id = LWV_phase_one.9

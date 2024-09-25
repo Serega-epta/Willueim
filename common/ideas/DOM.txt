@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+		DOM_Amber_Mold = {
+			picture = yantarnaya_plesen
+			modifier = {
+				weekly_manpower = -25
+			}
+		}
+		DOM_donbass_mines = {
+			picture = kopatel_offline
+			modifier = {
+				local_resources_factor = 0.5
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.1
+				war_support_factor = -0.15
+			}
+		}
+	}
+}

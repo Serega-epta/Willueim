@@ -48,8 +48,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = dicarstvo6
-				add_idea = dicarstvo7
+				remove_idea = ODS_Savagery6
+				add_idea = ODS_Savagery7
 			}
 		}
 	}
@@ -64,8 +64,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = dicarstvo7
-				add_idea = dicarstvo8
+				remove_idea = ODS_Savagery7
+				add_idea = ODS_Savagery8
 			}
 			country_event = ODS_phase_three.15
 		}
@@ -81,8 +81,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = OKO4
-				add_idea = OKO5
+				remove_idea = ODS_OKO4
+				add_idea = ODS_OKO5
 			}
 			country_event = ODS_phase_three.14
 		}
@@ -118,13 +118,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = dicarstvo8
+				remove_ideas = ODS_Savagery8
 				add_dynamic_modifier = {
-					modifier = dicarstvo_dynamic
+					modifier = ODS_Savagery_dynamic
 				}
-				remove_ideas = black_beret4
+				remove_ideas = ODS_Black_Berets4
 				add_dynamic_modifier = {
-					modifier = black_beret_dynamic
+					modifier = ODS_Black_Berets_dynamic
 				}
 			}
 			country_event = ODS_phase_three.9
@@ -185,8 +185,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -50
 			swap_ideas = {
-				remove_idea = OKO5
-				add_idea = OKO6
+				remove_idea = ODS_OKO5
+				add_idea = ODS_OKO6
 			}
 		}
 	}
@@ -297,13 +297,13 @@ focus_tree = {
 			focus = ODS_printout_of_archives
 		}
 		completion_reward = {
-			custom_effect_tooltip = change_black_beret_tt
-			custom_effect_tooltip = black_beret1_tt
+			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets1_tt
 			set_variable = {
-				army_defence_black_beret = 0.1
+				army_defence_ODS_Black_Berets = 0.1
 			}
 			set_variable = {
-				army_defence_against_minor_factor_black_beret = 0.2
+				army_defence_against_minor_factor_ODS_Black_Berets = 0.2
 			}
 		}
 	}
@@ -317,10 +317,10 @@ focus_tree = {
 			focus = ODS_great_intentions_great_projects
 		}
 		completion_reward = {
-			custom_effect_tooltip = change_dicarstvo_tt
-			custom_effect_tooltip = dicarstvo1_tt
+			custom_effect_tooltip = change_ODS_Savagery_tt
+			custom_effect_tooltip = ODS_Savagery1_tt
 			set_variable = {
-				production_speed_infrastructure_factor_dicarstvo = 0.1
+				production_speed_infrastructure_factor_ODS_Savagery = 0.1
 			}
 			country_event = ODS_phase_three.11
 		}
@@ -349,10 +349,10 @@ focus_tree = {
 			focus = ODS_great_intentions_great_projects
 		}
 		completion_reward = {
-			custom_effect_tooltip = change_dicarstvo_tt
-			custom_effect_tooltip = dicarstvo2_tt
+			custom_effect_tooltip = change_ODS_Savagery_tt
+			custom_effect_tooltip = ODS_Savagery2_tt
 			set_variable = {
-				attrition_dicarstvo = -0.05
+				attrition_ODS_Savagery = -0.05
 			}
 			country_event = ODS_phase_three.6
 		}
@@ -395,10 +395,10 @@ focus_tree = {
 			focus = ODS_grassroots_initiative
 		}
 		completion_reward = {
-			custom_effect_tooltip = change_black_beret_tt
-			custom_effect_tooltip = black_beret2_tt
+			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets2_tt
 			set_variable = {
-				max_command_power_black_beret = 30
+				max_command_power_ODS_Black_Berets = 30
 			}
 		}
 	}
@@ -418,10 +418,10 @@ focus_tree = {
 			focus = ODS_coordination_of_headquarters
 		}
 		completion_reward = {
-			custom_effect_tooltip = change_black_beret_tt
-			custom_effect_tooltip = black_beret3_tt
+			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets3_tt
 			set_variable = {
-				org_loss_when_moving_black_beret = -0.1
+				org_loss_when_moving_ODS_Black_Berets = -0.1
 			}
 		}
 	}
@@ -437,10 +437,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 30000
-			custom_effect_tooltip = change_black_beret_tt
-			custom_effect_tooltip = black_beret4_tt
+			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets4_tt
 			set_variable = {
-				army_morale_factor_black_beret = 0.05
+				army_morale_factor_ODS_Black_Berets = 0.05
 			}
 		}
 	}
@@ -458,8 +458,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = OKO6
-				add_idea = OKO7
+				remove_idea = ODS_OKO6
+				add_idea = ODS_OKO7
 			}
 			set_country_flag = access_to_justifications_of_war
 			hidden_effect = {

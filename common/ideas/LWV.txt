@@ -1,6 +1,7 @@
 ideas = {
 	country = {
-		godsdl = {
+		LWV_God's_Hand = {
+			picture = GFX_idea_LWV_God's_Hand
 			modifier = {
 				army_defence_factor = 0.03
 				training_time_army_factor = 0.03
@@ -12,7 +13,8 @@ ideas = {
 				attack_bonus_against = 0.05
 			}
 		}
-		uniat_nationalists = {
+		LWV_uniat_nationalists = {
+			picture = GFX_idea_LWV_uniat_nationalists
 			modifier = {
 				political_power_factor = -0.7
 				consumer_goods_factor = 0.15
@@ -22,7 +24,8 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.1
 			}
 		}
-		holy_nadely = {
+		LWV_Holy_Allotments = {
+			picture = GFX_idea_LWV_Holy_Allotments
 			modifier = {
 				conscription_factor = -0.2
 				political_power_factor = -0.1
@@ -33,7 +36,8 @@ ideas = {
 				war_support_factor = 0.1
 			}
 		}
-		holy_nadely_2 = {
+		LWV_Holy_Allotments_2 = {
+			picture = GFX_idea_LWV_Holy_Allotments
 			modifier = {
 				political_power_cost = 0.05
 				political_power_factor = -0.1
@@ -46,7 +50,8 @@ ideas = {
 				war_support_factor = 0.1
 			}
 		}
-		holy_nadely_3 = {
+		LWV_Holy_Allotments_3 = {
+			picture = GFX_idea_LWV_Holy_Allotments
 			modifier = {
 				conscription_factor = -0.10
 				political_power_factor = -0.1
@@ -59,7 +64,8 @@ ideas = {
 				local_non_core_manpower = -0.01
 			}
 		}
-		holy_nadely_4 = {
+		LWV_Holy_Allotments_4 = {
+			picture = GFX_idea_LWV_Holy_Allotments
 			modifier = {
 				political_power_factor = -0.15
 				offence = 0.05
@@ -71,45 +77,44 @@ ideas = {
 				local_non_core_manpower = -0.05
 			}
 		}
-		Istinnoe_obcshestvo = {
-			picture = istinoe_obshestvo
+		LWV_True_Society = {
+			picture = GFX_idea_LWV_True_Society
 			modifier = {
 				surrender_limit = 0.25
 				conscription_factor = 0.15
 			}
 		}
-		Rabochii_moleben = {
-			picture = Molyaschiesya
+		LWV_Worker_Prayer = {
+			picture = GFX_idea_LWV_Worker_Prayer
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.20
 				production_factory_start_efficiency_factor = -0.15
 			}
 		}
-		art_of_persuasion = {
-			picture = brother
+		LWV_art_of_persuasion = {
+			picture = GFX_idea_LWV_art_of_persuasion
 			modifier = {
 				resistance_damage_to_garrison = -0.5
 				non_core_manpower = 0.15
 				required_garrison_factor = -0.2
 			}
 		}
-		Blagoslavleny = {
-			picture = GFX_idea_blagoslavleny
+		LWV_Blessed = {
 			modifier = {
 				attrition = -0.25
 				army_core_attack_factor = 0.05
 				mobilization_speed = 0.1
 			}
 		}
-		heaven_on_earth = {
-			picture = blazh_warriors
+		LWD_heaven_on_earth = {
+			picture = GFX_idea_LWD_heaven_on_earth
 			modifier = {
 				political_power_cost = 0.02
 				production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
-		bez_slabosti = {
-			picture = blazh_warriors
+		LWV_Without_Weakness = {
+			picture = GFX_idea_LWD_heaven_on_earth
 			modifier = {
 				production_lack_of_resource_penalty_factor = -0.25
 				army_speed_factor = -0.1
@@ -121,8 +126,7 @@ ideas = {
 				defense_bonus_against = 0.15
 			}
 		}
-		zapoved = {
-			picture = GFX_idea_zapoved
+		LWV_Commandment = {
 			modifier = {
 				monthly_population = -0.05
 				consumer_goods_factor = -0.03
@@ -131,16 +135,16 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.1
 			}
 		}
-		heaven_on_earth_2 = {
-			picture = blazh_warriors
+		LWD_heaven_on_earth_2 = {
+			picture = GFX_idea_LWD_heaven_on_earth
 			modifier = {
 				attrition = -0.05
 				political_power_cost = 0.02
 				production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
-		heaven_on_earth_3 = {
-			picture = blazh_warriors
+		LWD_heaven_on_earth_3 = {
+			picture = GFX_idea_LWD_heaven_on_earth
 			modifier = {
 				command_power_gain = 2
 				attrition = -0.05
@@ -148,8 +152,8 @@ ideas = {
 				production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
-		heaven_on_earth_4 = {
-			picture = blazh_warriors
+		LWD_heaven_on_earth_4 = {
+			picture = GFX_idea_LWD_heaven_on_earth
 			modifier = {
 				command_power_gain = 2
 				attrition = -0.05
@@ -158,30 +162,27 @@ ideas = {
 			}
 		}
 		########################################## 3 FAZA ################################################
-		LWV_bejinsy_from_holy_land = {
-			picture = bejinsy_from_holy_land
+		LWV_Refugees_from_holy_land = {
+			picture = GFX_idea_LWV_Refugees_from_holy_land 
 			modifier = {
 				monthly_population = 0.03
 				production_speed_buildings_factor = 0.03
 				research_speed_factor = 0.03
 			}
 		}
-		LWV_begushie_otstupniki = {
-			picture = cute_knightboy
+		LWV_Runners_Renegades = {
 			modifier = {
 				monthly_population = -0.05
 				production_speed_buildings_factor = -0.05
 				research_speed_factor = -0.05
 			}
 		}
-		LWV_boji_perst_cut = {
-			picture = cute_knightboy
+		LWV_God's_Finger = {
 			modifier = {
 				drift_defence_factor = 0.05
 			}
 		}
-		LWV_boji_perst_full = {
-			picture = cute_knightboy
+		LWV_God's_Finger_full = {
 			modifier = {
 				resistance_growth = -0.02
 				resistance_damage_to_garrison = -0.1
@@ -198,33 +199,28 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
-		LWV_holy_gramots = {
-			picture = cute_knightboy
+		LWV_Holy_letters = {
 			modifier = {
 				political_power_gain = -0.05
 				global_building_slots_factor = 0.1
 			}
 		}
-		LWV_new_promishlenost = {
-			picture = cute_knightboy
+		LWV_New_Industry = {
 			modifier = {}
 		}
-		LWV_new_promishlenost_concetrirovat_1 = {
-			picture = cute_knightboy
+		LWV_New_Industry_concetrirovat_1 = {
 			modifier = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
-		LWV_new_promishlenost_concetrirovat_2 = {
-			picture = cute_knightboy
+		LWV_New_Industry_concetrirovat_2 = {
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.2
 				production_speed_industrial_complex_factor = -0.3
 			}
 		}
-		LWV_new_promishlenost_concetrirovat_3 = {
-			picture = cute_knightboy
+		LWV_New_Industry_concetrirovat_3 = {
 			modifier = {
 				production_speed_buildings_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
@@ -232,8 +228,7 @@ ideas = {
 				political_power_gain = -0.1
 			}
 		}
-		LWV_new_promishlenost_concetrirovat_4 = {
-			picture = cute_knightboy
+		LWV_New_Industry_concetrirovat_4 = {
 			modifier = {
 				production_speed_buildings_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
@@ -242,15 +237,13 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-		LWV_new_promishlenost_raspredelit_1 = {
-			picture = cute_knightboy
+		LWV_New_Industry_raspredelit_1 = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 				global_building_slots_factor = 0.1
 			}
 		}
-		LWV_new_promishlenost_raspredelit_2 = {
-			picture = cute_knightboy
+		LWV_New_Industry_raspredelit_2 = {
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.3
@@ -259,8 +252,7 @@ ideas = {
 				global_building_slots_factor = 0.1
 			}
 		}
-		LWV_new_promishlenost_raspredelit_3 = {
-			picture = cute_knightboy
+		LWV_New_Industry_raspredelit_3 = {
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.25
@@ -271,8 +263,7 @@ ideas = {
 				political_power_gain = 0.05
 			}
 		}
-		LWV_new_promishlenost_raspredelit_4 = {
-			picture = cute_knightboy
+		LWV_New_Industry_raspredelit_4 = {
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.25
@@ -285,14 +276,12 @@ ideas = {
 			}
 		}
 		LWV_contsetrirovat_vostanovleniye_1 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				industry_repair_factor = 0.5
 			}
 		}
 		LWV_contsetrirovat_vostanovleniye_2 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.2
@@ -301,7 +290,6 @@ ideas = {
 			}
 		}
 		LWV_contsetrirovat_vostanovleniye_3 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_buildings_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
@@ -311,7 +299,6 @@ ideas = {
 			}
 		}
 		LWV_contsetrirovat_vostanovleniye_4 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_buildings_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
@@ -322,7 +309,6 @@ ideas = {
 			}
 		}
 		LWV_raspredelit_vostanovleniye_1 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 				global_building_slots_factor = 0.1
@@ -330,7 +316,6 @@ ideas = {
 			}
 		}
 		LWV_raspredelit_vostanovleniye_2 = {
-			picture = cute_knightboy
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.3
@@ -341,7 +326,6 @@ ideas = {
 			}
 		}
 		LWV_raspredelit_vostanovleniye_3 = {
-			picture = cute_knightboy
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.25
@@ -354,7 +338,6 @@ ideas = {
 			}
 		}
 		LWV_raspredelit_vostanovleniye_4 = {
-			picture = cute_knightboy
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.25
@@ -368,7 +351,6 @@ ideas = {
 			}
 		}
 		LWV_contsetrirovat_raschirit_1 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				industry_repair_factor = 0.5
@@ -376,7 +358,6 @@ ideas = {
 			}
 		}
 		LWV_contsetrirovat_raschirit_2 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.2
@@ -386,7 +367,6 @@ ideas = {
 			}
 		}
 		LWV_contsetrirovat_raschirit_3 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_buildings_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
@@ -397,7 +377,6 @@ ideas = {
 			}
 		}
 		LWV_contsetrirovat_raschirit_4 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_buildings_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
@@ -409,7 +388,6 @@ ideas = {
 			}
 		}
 		LWV_raspredelit_raschirit_1 = {
-			picture = cute_knightboy
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_infrastructure_factor = 0.1
@@ -418,7 +396,6 @@ ideas = {
 			}
 		}
 		LWV_raspredelit_raschirit_2 = {
-			picture = cute_knightboy
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.3
@@ -430,7 +407,6 @@ ideas = {
 			}
 		}
 		LWV_raspredelit_raschirit_3 = {
-			picture = cute_knightboy
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.25
@@ -444,7 +420,6 @@ ideas = {
 			}
 		}
 		LWV_raspredelit_raschirit_4 = {
-			picture = cute_knightboy
 			modifier = {
 				production_factory_start_efficiency_factor = 0.3
 				production_speed_buildings_factor = -0.25
@@ -458,16 +433,14 @@ ideas = {
 				industry_repair_factor = 0.5
 			}
 		}
-		LWV_rianost_yonih = {
-			picture = cute_knightboy
+		LWV_Zeal_of_the_Youth = {
 			modifier = {
 				grant_medal_cost_factor = -0.5
 				army_leader_cost_factor = -0.5
 				army_leader_start_level = 2
 			}
 		}
-		LWV_voina_vo_tme = {
-			picture = cute_knightboy
+		LWV_War_In_the_Dark = {
 			modifier = {
 				command_power_gain = 2
 				attrition = -0.05
@@ -480,13 +453,11 @@ ideas = {
 			}
 		}
 		LWV_scared_war = {
-			picture = cute_knightboy
 			modifier = {
 				special_forces_attack_factor = 0.2
 			}
 		}
 		LWV_scared_war_upgrate = {
-			picture = cute_knightboy
 			modifier = {
 				conscription = 0.025
 				offence = 0.15
@@ -501,7 +472,6 @@ ideas = {
 			}
 		}
 		LWV_scared_war_upgrate_ultra = {
-			picture = cute_knightboy
 			modifier = {
 				conscription = 0.025
 				offence = 0.15
@@ -519,19 +489,16 @@ ideas = {
 			}
 		}
 		LWV_blessing_for_labor = {
-			picture = blazh_warriors
 			modifier = {
 				industrial_capacity_factory = 0.15
 			}
 		}
 		LWV_stone_skin = {
-			picture = blazh_warriors
 			modifier = {
 				army_defence_factor = 0.5
 			}
 		}
 		LWV_prepare_the_provision = {
-			picture = blazh_warriors
 			modifier = {
 				production_speed_buildings_factor = 0.1
 			}

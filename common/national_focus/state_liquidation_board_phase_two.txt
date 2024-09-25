@@ -82,8 +82,8 @@ focus_tree = {
 				days = 1
 			}
 			swap_ideas = {
-				remove_idea = GLS_fathers_and_not_fathers_1
-				add_idea = GLS_fathers_and_not_fathers_31
+				remove_idea = GLS_fathers_and_child_1
+				add_idea = GLS_fathers_and_child_31
 			}
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 1
@@ -125,8 +125,8 @@ focus_tree = {
 				days = 1
 			}
 			swap_ideas = {
-				remove_idea = GLS_fathers_and_not_fathers_1
-				add_idea = GLS_fathers_and_not_fathers_3
+				remove_idea = GLS_fathers_and_child_1
+				add_idea = GLS_fathers_and_child_3
 			}
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 1
@@ -400,8 +400,8 @@ focus_tree = {
 				days = 1
 			}
 			swap_ideas = {
-				remove_idea = GLS_kotly
-				add_idea = GLS_kotly_1
+				remove_idea = GLS_Boilers
+				add_idea = GLS_Boilers_1
 			}
 			add_political_power = 100
 		}
@@ -495,38 +495,38 @@ focus_tree = {
 			custom_effect_tooltip = get_ten_percent_of_order
 			if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_3
+					has_idea = GLS_fathers_and_child_3
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_3
-					add_idea = GLS_fathers_and_not_fathers_7
+					remove_idea = GLS_fathers_and_child_3
+					add_idea = GLS_fathers_and_child_7
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_4
+					has_idea = GLS_fathers_and_child_4
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_4
-					add_idea = GLS_fathers_and_not_fathers_8
+					remove_idea = GLS_fathers_and_child_4
+					add_idea = GLS_fathers_and_child_8
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_5
+					has_idea = GLS_fathers_and_child_5
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_5
-					add_idea = GLS_fathers_and_not_fathers_9
+					remove_idea = GLS_fathers_and_child_5
+					add_idea = GLS_fathers_and_child_9
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_6
+					has_idea = GLS_fathers_and_child_6
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_6
-					add_idea = GLS_fathers_and_not_fathers_10
+					remove_idea = GLS_fathers_and_child_6
+					add_idea = GLS_fathers_and_child_10
 				}
 			}
 		}
@@ -561,47 +561,47 @@ focus_tree = {
 			custom_effect_tooltip = get_ten_percent_of_freedom
 			if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_3
+					has_idea = GLS_fathers_and_child_3
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_3
-					add_idea = GLS_fathers_and_not_fathers_11
+					remove_idea = GLS_fathers_and_child_3
+					add_idea = GLS_fathers_and_child_11
 				}
 			}
 			if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_31
+					has_idea = GLS_fathers_and_child_31
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_31
-					add_idea = GLS_fathers_and_not_fathers_111
+					remove_idea = GLS_fathers_and_child_31
+					add_idea = GLS_fathers_and_child_111
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_4
+					has_idea = GLS_fathers_and_child_4
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_4
-					add_idea = GLS_fathers_and_not_fathers_12
+					remove_idea = GLS_fathers_and_child_4
+					add_idea = GLS_fathers_and_child_12
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_5
+					has_idea = GLS_fathers_and_child_5
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_5
-					add_idea = GLS_fathers_and_not_fathers_13
+					remove_idea = GLS_fathers_and_child_5
+					add_idea = GLS_fathers_and_child_13
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = GLS_fathers_and_not_fathers_6
+					has_idea = GLS_fathers_and_child_6
 				}
 				swap_ideas = {
-					remove_idea = GLS_fathers_and_not_fathers_6
-					add_idea = GLS_fathers_and_not_fathers_14
+					remove_idea = GLS_fathers_and_child_6
+					add_idea = GLS_fathers_and_child_14
 				}
 			}
 		}

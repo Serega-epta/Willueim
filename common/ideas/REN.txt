@@ -1,13 +1,6 @@
 ideas = {
 	country = {
-		REN_BARON = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
+		REN_Baron_of_Violence = {
 			modifier = {
 				army_org = -0.1
 				production_factory_max_efficiency_factor = -0.15
@@ -18,13 +11,6 @@ ideas = {
 			}
 		}
 		REN_activists = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			targeted_modifier = {
 				tag = SDC
 				defense_bonus_against = -0.1

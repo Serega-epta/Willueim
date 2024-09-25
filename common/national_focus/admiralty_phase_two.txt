@@ -50,7 +50,7 @@ focus_tree = {
 			country_event = {
 				id = ODS_phase_two.7
 			}
-			add_ideas = OKO
+			add_ideas = ODS_OKO
 			hidden_effect = {
 				set_country_flag = ODS_access_to_specialization_of_regions
 				set_country_flag = intension_show
@@ -81,11 +81,11 @@ focus_tree = {
 			}
 			capital_scope = {
 				create_unit = {
-					division = "name = \"1. OKO\" division_template = \"OKO\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"1. ODS_OKO\" division_template = \"ODS_OKO\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"1. OKO\" division_template = \"OKO\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"1. ODS_OKO\" division_template = \"ODS_OKO\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
 				}
 			}
@@ -112,8 +112,8 @@ focus_tree = {
 				id = ODS_phase_two.11
 			}
 			swap_ideas = {
-				remove_idea = OKO
-				add_idea = OKO2
+				remove_idea = ODS_OKO
+				add_idea = ODS_OKO2
 			}
 		}
 	}
@@ -159,8 +159,8 @@ focus_tree = {
 				id = ODS_phase_two.3
 			}
 			swap_ideas = {
-				remove_idea = OKO2
-				add_idea = OKO3
+				remove_idea = ODS_OKO2
+				add_idea = ODS_OKO3
 			}
 		}
 	}
@@ -187,8 +187,8 @@ focus_tree = {
 				id = ODS_phase_two.4
 			}
 			swap_ideas = {
-				remove_idea = OKO3
-				add_idea = OKO4
+				remove_idea = ODS_OKO3
+				add_idea = ODS_OKO4
 			}
 		}
 	}
@@ -212,7 +212,7 @@ focus_tree = {
 				id = ODS_phase_two.6
 			}
 			add_timed_idea = {
-				idea = plan3
+				idea = ODS_Plan_Bridgehead3
 				days = 360
 			}
 		}
@@ -412,29 +412,29 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = doverie_6
+					has_idea = ODS_Trust_6
 				}
 				swap_ideas = {
-					remove_idea = doverie_6
-					add_idea = doverie_7
+					remove_idea = ODS_Trust_6
+					add_idea = ODS_Trust_7
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = doverie_7
+					has_idea = ODS_Trust_7
 				}
 				swap_ideas = {
-					remove_idea = doverie_7
-					add_idea = doverie_8
+					remove_idea = ODS_Trust_7
+					add_idea = ODS_Trust_8
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = doverie_5
+					has_idea = ODS_Trust_5
 				}
 				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = doverie_6
+					remove_idea = ODS_Trust_5
+					add_idea = ODS_Trust_6
 				}
 			}
 		}
@@ -460,20 +460,20 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_idea = dicarstvo4
+					has_idea = ODS_Savagery4
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = dicarstvo5
+					remove_idea = ODS_Savagery4
+					add_idea = ODS_Savagery5
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = dicarstvo5
+					has_idea = ODS_Savagery5
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo5
-					add_idea = dicarstvo6
+					remove_idea = ODS_Savagery5
+					add_idea = ODS_Savagery6
 				}
 			}
 		}
@@ -499,29 +499,29 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = black_beret
+					has_idea = ODS_Black_Berets
 				}
 				swap_ideas = {
-					remove_idea = black_beret
-					add_idea = black_beret2
+					remove_idea = ODS_Black_Berets
+					add_idea = ODS_Black_Berets2
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = black_beret2
+					has_idea = ODS_Black_Berets2
 				}
 				swap_ideas = {
-					remove_idea = black_beret2
-					add_idea = black_beret3
+					remove_idea = ODS_Black_Berets2
+					add_idea = ODS_Black_Berets3
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = black_beret3
+					has_idea = ODS_Black_Berets3
 				}
 				swap_ideas = {
-					remove_idea = black_beret3
-					add_idea = black_beret4
+					remove_idea = ODS_Black_Berets3
+					add_idea = ODS_Black_Berets4
 				}
 			}
 		}
@@ -563,29 +563,29 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = doverie_6
+					has_idea = ODS_Trust_6
 				}
 				swap_ideas = {
-					remove_idea = doverie_6
-					add_idea = doverie_7
+					remove_idea = ODS_Trust_6
+					add_idea = ODS_Trust_7
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = doverie_7
+					has_idea = ODS_Trust_7
 				}
 				swap_ideas = {
-					remove_idea = doverie_7
-					add_idea = doverie_8
+					remove_idea = ODS_Trust_7
+					add_idea = ODS_Trust_8
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = doverie_5
+					has_idea = ODS_Trust_5
 				}
 				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = doverie_6
+					remove_idea = ODS_Trust_5
+					add_idea = ODS_Trust_6
 				}
 			}
 		}
@@ -608,29 +608,29 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = doverie_6
+					has_idea = ODS_Trust_6
 				}
 				swap_ideas = {
-					remove_idea = doverie_6
-					add_idea = doverie_7
+					remove_idea = ODS_Trust_6
+					add_idea = ODS_Trust_7
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = doverie_7
+					has_idea = ODS_Trust_7
 				}
 				swap_ideas = {
-					remove_idea = doverie_7
-					add_idea = doverie_8
+					remove_idea = ODS_Trust_7
+					add_idea = ODS_Trust_8
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = doverie_5
+					has_idea = ODS_Trust_5
 				}
 				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = doverie_6
+					remove_idea = ODS_Trust_5
+					add_idea = ODS_Trust_6
 				}
 			}
 		}
@@ -699,20 +699,20 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = black_beret
+					has_idea = ODS_Black_Berets
 				}
 				swap_ideas = {
-					remove_idea = black_beret
-					add_idea = black_beret2
+					remove_idea = ODS_Black_Berets
+					add_idea = ODS_Black_Berets2
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = black_beret2
+					has_idea = ODS_Black_Berets2
 				}
 				swap_ideas = {
-					remove_idea = black_beret2
-					add_idea = black_beret3
+					remove_idea = ODS_Black_Berets2
+					add_idea = ODS_Black_Berets3
 				}
 			}
 			add_tech_bonus = {
@@ -752,20 +752,20 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = black_beret2
+					has_idea = ODS_Black_Berets2
 				}
 				swap_ideas = {
-					remove_idea = black_beret2
-					add_idea = black_beret3
+					remove_idea = ODS_Black_Berets2
+					add_idea = ODS_Black_Berets3
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = black_beret3
+					has_idea = ODS_Black_Berets3
 				}
 				swap_ideas = {
-					remove_idea = black_beret3
-					add_idea = black_beret4
+					remove_idea = ODS_Black_Berets3
+					add_idea = ODS_Black_Berets4
 				}
 			}
 		}
@@ -1072,20 +1072,20 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_idea = dicarstvo4
+					has_idea = ODS_Savagery4
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo4
-					add_idea = dicarstvo5
+					remove_idea = ODS_Savagery4
+					add_idea = ODS_Savagery5
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = dicarstvo5
+					has_idea = ODS_Savagery5
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo5
-					add_idea = dicarstvo6
+					remove_idea = ODS_Savagery5
+					add_idea = ODS_Savagery6
 				}
 			}
 		}

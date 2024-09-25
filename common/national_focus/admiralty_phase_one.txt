@@ -91,7 +91,7 @@
 				id = ODS_phase_one.2
 			}
 			add_timed_idea = {
-				idea = black_perimetr
+				idea = ODS_Black_Perimeter
 				days = 500
 			}
 		}
@@ -114,11 +114,11 @@
 			}
 			if = {
 				limit = {
-					has_idea = doverie_1
+					has_idea = ODS_Trust_1
 				}
 				swap_ideas = {
-					remove_idea = doverie_1
-					add_idea = doverie_2
+					remove_idea = ODS_Trust_1
+					add_idea = ODS_Trust_2
 				}
 			}
 		}
@@ -160,11 +160,11 @@
 			}
 			if = {
 				limit = {
-					has_idea = dicarstvo
+					has_idea = ODS_Savagery
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo
-					add_idea = dicarstvo1
+					remove_idea = ODS_Savagery
+					add_idea = ODS_Savagery1
 				}
 			}
 		}
@@ -187,20 +187,20 @@
 			}
 			if = {
 				limit = {
-					has_idea = dicarstvo1
+					has_idea = ODS_Savagery1
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
+					remove_idea = ODS_Savagery1
+					add_idea = ODS_Savagery2
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = dicarstvo2
+					has_idea = ODS_Savagery2
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
+					remove_idea = ODS_Savagery2
+					add_idea = ODS_Savagery3
 				}
 			}
 		}
@@ -223,20 +223,20 @@
 			}
 			if = {
 				limit = {
-					has_idea = dicarstvo1
+					has_idea = ODS_Savagery1
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo1
-					add_idea = dicarstvo2
+					remove_idea = ODS_Savagery1
+					add_idea = ODS_Savagery2
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = dicarstvo2
+					has_idea = ODS_Savagery2
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo2
-					add_idea = dicarstvo3
+					remove_idea = ODS_Savagery2
+					add_idea = ODS_Savagery3
 				}
 			}
 		}
@@ -262,11 +262,11 @@
 			}
 			if = {
 				limit = {
-					has_idea = dicarstvo3
+					has_idea = ODS_Savagery3
 				}
 				swap_ideas = {
-					remove_idea = dicarstvo3
-					add_idea = dicarstvo4
+					remove_idea = ODS_Savagery3
+					add_idea = ODS_Savagery4
 				}
 			}
 		}
@@ -289,11 +289,11 @@
 			}
 			if = {
 				limit = {
-					has_idea = doverie_2
+					has_idea = ODS_Trust_2
 				}
 				swap_ideas = {
-					remove_idea = doverie_2
-					add_idea = doverie_3
+					remove_idea = ODS_Trust_2
+					add_idea = ODS_Trust_3
 				}
 			}
 		}
@@ -316,20 +316,20 @@
 			}
 			if = {
 				limit = {
-					has_idea = doverie_3
+					has_idea = ODS_Trust_3
 				}
 				swap_ideas = {
-					remove_idea = doverie_3
-					add_idea = doverie_4
+					remove_idea = ODS_Trust_3
+					add_idea = ODS_Trust_4
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = doverie_4
+					has_idea = ODS_Trust_4
 				}
 				swap_ideas = {
-					remove_idea = doverie_4
-					add_idea = doverie_5
+					remove_idea = ODS_Trust_4
+					add_idea = ODS_Trust_5
 				}
 			}
 		}
@@ -352,20 +352,20 @@
 			}
 			if = {
 				limit = {
-					has_idea = doverie_3
+					has_idea = ODS_Trust_3
 				}
 				swap_ideas = {
-					remove_idea = doverie_3
-					add_idea = doverie_4
+					remove_idea = ODS_Trust_3
+					add_idea = ODS_Trust_4
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = doverie_4
+					has_idea = ODS_Trust_4
 				}
 				swap_ideas = {
-					remove_idea = doverie_4
-					add_idea = doverie_5
+					remove_idea = ODS_Trust_4
+					add_idea = ODS_Trust_5
 				}
 			}
 		}
@@ -391,11 +391,11 @@
 			}
 			if = {
 				limit = {
-					has_idea = doverie_5
+					has_idea = ODS_Trust_5
 				}
 				swap_ideas = {
-					remove_idea = doverie_5
-					add_idea = doverie_6
+					remove_idea = ODS_Trust_5
+					add_idea = ODS_Trust_6
 				}
 			}
 		}

@@ -2,13 +2,6 @@ ideas = {
 	country = {
 		#Время, потраченное впустую#
 		AGE_time_wasted = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			picture = GFX_idea_AGE_time_wasted
 			modifier = {
 				#стаб. в нед. -0,15%
@@ -23,13 +16,6 @@ ideas = {
 		}
 		#Земля для балтийцев#
 		AGE_land_for_baltics = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			picture = GFX_idea_AGE_land_for_baltics
 			modifier = {
 				#Фабрики народного потребления
@@ -40,13 +26,6 @@ ideas = {
 		}
 		#Красные сабли# 1
 		AGE_red_sabres = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			picture = GFX_idea_AGE_red_sabres
 			modifier = {
 				political_power_gain = 0.1
@@ -56,13 +35,6 @@ ideas = {
 		}
 		#Красные сабли# 1-2
 		AGE_red_sabres_2 = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			picture = GFX_idea_AGE_red_sabres
 			modifier = {
 				political_power_gain = 0.2
@@ -72,13 +44,6 @@ ideas = {
 		}
 		#Красные сабли# 2
 		AGE_red_sabres_second = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			picture = GFX_idea_AGE_red_sabres_second
 			modifier = {
 				offence = 0.05
@@ -88,13 +53,6 @@ ideas = {
 		}
 		#Красные сабли# 2-2
 		AGE_red_sabres_second_2 = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			picture = GFX_idea_AGE_red_sabres_second
 			modifier = {
 				offence = 0.1
@@ -104,13 +62,6 @@ ideas = {
 		}
 		#Другой путь#
 		AGE_another_way = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			picture = GFX_AGE_idea_Another_way
 			modifier = {
 				#Стабильность
@@ -119,13 +70,6 @@ ideas = {
 		}
 		#Празднование дня единства#
 		AGE_day_of_unity_celebration = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				weekly_manpower = 500
 				experience_gain_army = 0.10
@@ -137,13 +81,6 @@ ideas = {
 		#Сами по себе#
 		AGE_by_ourself = {
 			picture = GFX_idea_AGE_by_ourself
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.1
 				stability_factor = -0.1
@@ -155,13 +92,6 @@ ideas = {
 		#Балтийцы в армии#
 		AGE_balts_in_army = {
 			picture = GFX_idea_AGE_balts_in_army
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				conscription = 0.04
 				army_org_factor = -0.1
@@ -170,13 +100,6 @@ ideas = {
 		#Балтийцы на заводах#
 		AGE_balts_in_factories = {
 			picture = GFX_idea_AGE_balts_in_factories
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = -0.1
@@ -186,13 +109,6 @@ ideas = {
 		#Мощный рост производства#
 		AGE_Strong_growth_in_production = {
 			picture = GFX_idea_AGE_Strong_growth_in_production
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.35
 				industrial_capacity_factory = 0.05
@@ -201,13 +117,6 @@ ideas = {
 		#Защитный вал#
 		AGE_protective_shaft_idea = {
 			picture = GFX_idea_AGE_protective_shaft_idea
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				army_org_factor = 0.05
 			}
@@ -219,13 +128,6 @@ ideas = {
 		#Мощный натиск#
 		AGE_powerful_onslaught_idea = {
 			picture = GFX_idea_AGE_powerful_onslaught_idea
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				army_speed_factor = 0.05
 				recon_factor = 0.05
@@ -238,13 +140,6 @@ ideas = {
 		#Повсеместное сопротивление#
 		AGE_resistance_everywhere = {
 			picture = GFX_idea_AGE_resistance_everywhere
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				supply_combat_penalties_on_core_factor = -0.25
 				attrition = -0.1
@@ -255,13 +150,6 @@ ideas = {
 		#Жажда мести#
 		AGE_revenge = {
 			picture = GFX_idea_AGE_revenge
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {}
 			targeted_modifier = {
 				tag = AGE
@@ -272,13 +160,6 @@ ideas = {
 		#Янтарная жатва
 		SIM_amber_harvest = {
 			picture = GFX_idea_SIM_amber_harvest
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				monthly_population = -10
 				weekly_manpower = +500
@@ -286,13 +167,6 @@ ideas = {
 		}
 		#Огонь неверных
 		SIM_fire_of_infidels = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				army_core_attack_factor = -0.15
 				army_core_defence_factor = -0.15
@@ -301,13 +175,6 @@ ideas = {
 		#Финансирование научных исследований#
 		AGE_funding_for_research = {
 			picture = GFX_idea_AGE_funding_for_research
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				research_speed_factor = -0.2
 				consumer_goods_factor = 0.12
@@ -316,13 +183,6 @@ ideas = {
 		#Учёные комплекса Барьер#
 		AGE_scientists_of_complex = {
 			picture = GFX_idea_AGE_scientists_of_complex
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.15
 			}
@@ -330,13 +190,6 @@ ideas = {
 		#Балтийская экономика#
 		AGE_Baltic_economy = {
 			picture = GFX_idea_AGE_Baltic_economy
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				production_speed_buildings_factor = 0.1
@@ -346,13 +199,6 @@ ideas = {
 		#Защитный вал#
 		AGE_cold_blooded_defense_idea = {
 			picture = GFX_idea_AGE_cold_blooded_defense_idea
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {}
 			targeted_modifier = {
 				tag = LPC
@@ -362,13 +208,6 @@ ideas = {
 		#Решительный штурм#
 		AGE_decisive_assault_idea = {
 			picture = GFX_idea_AGE_decisive_assault_idea
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				army_speed_factor = 0.05
 			}
