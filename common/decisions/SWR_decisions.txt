@@ -29,7 +29,7 @@ SWR_preparing_uprising = {
 		}
 		available = {
 		}
-		cost = 20
+		cost = 10
 		days_remove = 2
 		complete_effect = {
 			add_stability = -0.02
@@ -50,7 +50,7 @@ SWR_preparing_uprising = {
 		available = {
 			
 		}
-		cost = 30
+		cost = 15
 		days_remove = 4
 		complete_effect = {
 			add_stability = -0.03
@@ -71,7 +71,7 @@ SWR_preparing_uprising = {
 		available = {
 			
 		}
-		cost = 20
+		cost = 10
 		days_remove = 2
 		complete_effect = {
 			add_stability = 0.02
@@ -92,7 +92,7 @@ SWR_preparing_uprising = {
 		available = {
 			
 		}
-		cost = 30
+		cost = 15
 		days_remove = 4
 		complete_effect = {
 			add_stability = 0.03
@@ -112,8 +112,9 @@ SWR_preparing_uprising = {
 		}
 		available = {
 		}
-		cost = 40
+		cost = 30
 		days_remove = 7
+		fire_only_once = yes
 		complete_effect = {
 			add_stability = -0.05
 		}
@@ -132,9 +133,9 @@ SWR_preparing_uprising = {
 		}
 		available = {
 		}
-		cost = 45
+		cost = 40
 		days_remove = 10
-		days_re_enable = 
+		fire_only_once = yes
 		complete_effect = {
 			add_stability = -0.06
 		}
@@ -214,9 +215,8 @@ SWR_preparing_uprising = {
 		}
 		available = {	
 		}
-		cost = 40
+		cost = 30
 		days_remove = 11
-		days_re_enable = 
 		complete_effect = {
 			add_stability = -0.05
             add_political_power = 30
@@ -261,7 +261,7 @@ SWR_preparing_uprising = {
 		available = {
 			
 		}
-		cost = 40
+		cost = 30
 		days_remove = 15
 		fire_only_once = yes
 		complete_effect = {
@@ -303,7 +303,7 @@ SWR_struggle_for_influence = {
     	    has_political_power > 14
     	}
     	is_good = yes
-    	days_mission_timeout = 4
+    	days_mission_timeout = 8
     	selectable_mission = yes
 		complete_effect = {
 			IF = {
@@ -397,7 +397,7 @@ SWR_struggle_for_influence = {
     	    has_political_power > 44
     	}
     	is_good = yes
-    	days_mission_timeout = 6
+    	days_mission_timeout = 12
     	selectable_mission = yes
 		complete_effect = {
 			add_political_power = -45
@@ -444,7 +444,7 @@ SWR_struggle_for_influence = {
     	   has_political_power > 24
     	}
     	is_good = yes
-    	days_mission_timeout = 10
+    	days_mission_timeout = 20
     	selectable_mission = yes
 		complete_effect = {
 			add_political_power = -25
@@ -491,7 +491,7 @@ SWR_struggle_for_influence = {
     	   has_political_power > 34
     	}
     	is_good = yes
-    	days_mission_timeout = 14
+    	days_mission_timeout = 28
     	selectable_mission = yes
 		complete_effect = {
 			add_political_power = -35
@@ -539,7 +539,7 @@ SWR_struggle_for_influence = {
     	    has_political_power > 44
     	}
     	is_good = yes
-    	days_mission_timeout = 6
+    	days_mission_timeout = 12
     	selectable_mission = yes
 		complete_effect = {
 			add_political_power = -45
@@ -587,7 +587,7 @@ SWR_struggle_for_influence = {
     	    has_political_power > 24
     	}
     	is_good = yes
-    	days_mission_timeout = 10
+    	days_mission_timeout = 20
     	selectable_mission = yes
 		complete_effect = {
 			add_political_power = -25
@@ -635,7 +635,7 @@ SWR_struggle_for_influence = {
     	    has_political_power > 34
     	}
     	is_good = yes
-    	days_mission_timeout = 14
+    	days_mission_timeout = 28
     	selectable_mission = yes
 		complete_effect = {
 			add_political_power = -35
@@ -763,7 +763,7 @@ SWR_struggle_for_influence = {
 		available = {
 			
 		}
-		cost = 30
+		cost = 15
 		days_remove = 5
 		complete_effect = {
 		}
@@ -860,7 +860,7 @@ SWR_struggle_for_influence = {
 				}
 			}
 		}
-		cost = 45
+		cost = 40
 		days_remove = 10
 		complete_effect = {
 		}
@@ -964,7 +964,7 @@ SWR_struggle_for_influence = {
 		available = {
 			
 		}
-		cost = 30
+		cost = 15
 		days_remove = 7
 		complete_effect = {
 		}
@@ -1055,7 +1055,7 @@ SWR_struggle_for_influence = {
 				}
 			}
 		}
-		cost = 45
+		cost = 40
 		days_remove = 14
 		complete_effect = {
 		}
@@ -1159,7 +1159,7 @@ SWR_army_reform = {
 		visible = {
 			has_completed_focus = SWR_elite
 		}
-		cost = 30
+		cost = 15
 		days_remove = 15
 		complete_effect = {
 		}
@@ -1174,7 +1174,7 @@ SWR_army_reform = {
 		visible = {
 			has_completed_focus = SWR_balance
 		}
-		cost = 30
+		cost = 15
 		days_remove = 15
 		fire_only_once = yes
 		complete_effect = {
@@ -1190,7 +1190,7 @@ SWR_army_reform = {
 		visible = {
 			has_completed_focus = SWR_everyone_in_row
 		}
-		cost = 30
+		cost = 15
 		days_remove = 5
 		fire_only_once = yes
 		complete_effect = {
@@ -1206,7 +1206,7 @@ SWR_army_reform = {
 		visible = {
 			has_completed_focus = SWR_propaganda_tools
 		}
-		cost = 40
+		cost = 30
 		days_remove = 90
 		fire_only_once = yes
 		complete_effect = {
@@ -1219,7 +1219,7 @@ SWR_army_reform = {
 		visible = {
 			has_completed_focus = SWR_change_appearance_of_army
 		}
-		cost = 20
+		cost = 10
 		days_remove = 10
 		fire_only_once = yes
 		modifier = {
