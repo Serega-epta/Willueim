@@ -28,6 +28,50 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly = {
+		effect = {
+			### War losses being converted to losses in states
+			if = {
+				limit = {
+					check_variable = { casualties_k > casualties_calculated_deaths_k }
+				}
+				set_variable = { casualties_civs_to_be_removed_k = casualties_k }
+				subtract_from_variable = { casualties_civs_to_be_removed_k = casualties_calculated_deaths_k }
+				add_to_variable = { casualties_calculated_deaths_k = casualties_civs_to_be_removed_k }
+				set_variable = { casualties_civs_to_be_removed = casualties_civs_to_be_removed_k }
+				multiply_variable = { casualties_civs_to_be_removed = 400 }
+
+				every_state = { 
+					limit = {
+						OR = {
+							is_core_of = ROOT
+							is_owned_by = ROOT
+						}
+					}
+
+					set_variable = { casualties_civs_percent_for_state = state_population_k }
+					divide_variable = { casualties_civs_percent_for_state = ROOT.max_manpower_k }
+					clamp_variable = {
+						var = casualties_civs_percent_for_state
+						min = 0.001
+					}
+					set_variable = { casualties_civs_to_be_removed_for_state = ROOT.casualties_civs_to_be_removed }
+					multiply_variable = { casualties_civs_to_be_removed_for_state = casualties_civs_percent_for_state }
+					round_variable = casualties_civs_to_be_removed_for_state
+					multiply_variable = { casualties_civs_to_be_removed_for_state = -1 }
+					add_manpower = casualties_civs_to_be_removed_for_state
+				}
+			}
+			# War end/some shit happened
+			if = {
+				limit = {
+					check_variable = { casualties_calculated_deaths_k > casualties_k }
+				}
+				set_variable = { casualties_calculated_deaths_k = casualties_k }
+			}
+			
+		}
+	}
 	on_state_control_changed = {
 		effect = {
 			if = {
@@ -41,6 +85,13 @@ on_actions = {
 		effect = {
 			FROM = {
 				add_manpower = -100000
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = roh_achievement_has_dropped_a_nuke }
+					is_ai = no
+				}
+				set_country_flag = roh_achievement_has_dropped_a_nuke
 			}
 		}
 	}

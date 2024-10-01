@@ -1,0 +1,40 @@
+urban_restoration_categories = {
+	rebuilding_of_lysva = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 100
+		visible = {
+			ROOT = { any_owned_state = { state = 1003 } } 
+		}
+		available = {
+			has_manpower > 500
+		}
+		cost = 50
+		days_remove = 130
+
+		complete_effect = {
+			ROOT = { add_manpower = -500 }
+		}		
+		remove_effect = {
+			custom_effect_tooltip = rebuilding_of_lysva_tt
+		}		
+	}
+	rebuilding_of_ = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 100	
+		visible = {
+			ROOT = { any_owned_state = { state = 1000 } } 
+		}		
+		available = {
+			has_manpower > 500
+		}
+		cost = 50
+		days_remove = 130
+
+		complete_effect = {
+			ROOT = { add_manpower = -500 }
+		}		
+		remove_effect = {
+			custom_effect_tooltip = rebuilding_of__tt
+		}		
+	}	
+}

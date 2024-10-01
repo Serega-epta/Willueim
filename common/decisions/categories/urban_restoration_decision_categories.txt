@@ -1,0 +1,27 @@
+urban_restoration_categories = {
+	icon = GFX_decision_category_expedition # GFX_decision_category_urban_restoration
+	picture = GFX_desicion_urban_restoration
+	priority = 10
+	visible = { 
+		AND = {
+			any_owned_state = {
+				OR = {
+					state = 1003
+					state = 1000
+				}
+			}
+			NOT = {
+				tag = WEC
+				tag = SAC
+				tag = SOC
+				tag = BLS
+				tag = SFL
+				tag = NFL
+				tag = SIL
+				tag = WTR
+				tag = MOS
+				tag = KRT
+			}
+		}
+	}
+}

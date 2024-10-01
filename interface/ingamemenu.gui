@@ -3,7 +3,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "ingamemenu"
 		position = { x = 0 y = 0 }	
-		size = { width = 320 height = 455}
+		size = { width = 320 height = 445 }
 		Orientation = center
 		Origo = center		
 		fade_time = 500
@@ -17,40 +17,40 @@ guiTypes = {
 			
 		buttonType = {
 			name = "menu_load_button"
-			position = { x = 16 y = 18 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 30 y = 18 }
+			quadTextureSprite ="GFX_button_261x34" # GFX_main_lobby_button
 			buttonText = "MENU_BAR_LOAD_GAME"
-			buttonFont = "3270_24_outline"
+			buttonFont = "bender_24"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		buttonType = {
 			name = "menu_save_button"
-			position = { x = 16 y = 58 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 30 y = 58 }
+			quadTextureSprite ="GFX_button_261x34"	
 			buttonText = "MENU_BAR_SAVE_GAME"
-			buttonFont = "3270_24_outline"
+			buttonFont = "bender_24"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		buttonType = {
 			name = "menu_gamesettings_button"
-			position = { x = 16 y = 98}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 30 y = 98}
+			quadTextureSprite ="GFX_button_261x34"	
 			buttonText = "MENU_BAR_GAME_OPTIONS"
-			buttonFont = "3270_24_outline"
+			buttonFont = "bender_24"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		buttonType = {
 			name = "menu_playthrough_stats_button"
-			position = { x = 16 y = 138}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 30 y = 138}
+			quadTextureSprite ="GFX_button_261x34"	
 			buttonText = "MENU_BAR_PLAYTHROUGH_STATS"
-			buttonFont = "3270_24_outline"
+			buttonFont = "bender_24"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -66,40 +66,40 @@ guiTypes = {
 		
 		buttonType = {
 			name = "menu_wiki_button"
-			position = { x = 16 y = 178}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 30 y = 178}
+			quadTextureSprite ="GFX_button_261x34"	
 			buttonText = "MENU_BAR_GAME_WIKI"
-			buttonFont = "3270_24_outline"
+			buttonFont = "bender_24"
 			clicksound = click_default
 			oversound = ui_menu_over
-			web_link = ""
+			web_link = "https://the-requiem-of-humankind.fandom.com/ru/wiki/The_Requiem_Of_Humankind_%D0%92%D0%B8%D0%BA%D0%B8"
 		}
 		
 		buttonType = {
 			name = "menu_resign_button"
-			position = { x = 16 y = 218}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 30 y = 218}
+			quadTextureSprite ="GFX_button_261x34"	
 			buttonText = "MENU_BAR_GAME_RESIGN"
-			buttonFont = "3270_24_outline"
+			buttonFont = "bender_24"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 
 		buttonType = {
 			name = "menu_quit_button"
-			position = {  x = 16 y = 258 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = {  x = 30 y = 258 }
+			quadTextureSprite ="GFX_button_261x34"	
 			buttonText = "MENU_BAR_QUIT"
-			buttonFont = "3270_24_outline"
+			buttonFont = "bender_24"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 				
 		buttonType = {
 			name = "menu_close_button"
-			position = { x = 16 y = 340 }
-			quadTextureSprite ="GFX_main_lobby_button"	
-			buttonFont = "3270_24_outline"
+			position = { x = 30 y = 340 }
+			quadTextureSprite ="GFX_button_261x34"	
+			buttonFont = "bender_24"
 			buttonText = "CLOSE"
 			shortcut = "ESCAPE"
 			clicksound = click_default
@@ -110,7 +110,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "homepage_button"
-			position = { x=16 y=389 }
+			position = { x=16 y=392 }
 			quadTextureSprite ="homepage"
 			clicksound = click_default
 			pdx_tooltip = "MENU_HOMEPAGE"
@@ -118,7 +118,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "forum_button"
-			position = { x=52 y=389 }
+			position = { x=52 y=392 }
 			quadTextureSprite ="forum"
 			clicksound = click_default
 			pdx_tooltip = "MENU_FORUM"
@@ -127,7 +127,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "facebook_button"
-			position = { x=88 y=389 }
+			position = { x=88 y=392 }
 			quadTextureSprite ="facebook"
 			clicksound = click_default
 			pdx_tooltip = "MENU_FACEBOOK"
@@ -136,7 +136,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "twitter_button"
-			position = { x=124 y=389 }
+			position = { x=124 y=392 }
 			quadTextureSprite ="twitter"
 			#clicksound = click_default
 			pdx_tooltip = "MENU_TWITTER"
@@ -145,7 +145,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "instagram_button"
-			position = { x=160 y=389 }
+			position = { x=160 y=392 }
 			quadTextureSprite ="instagram"
 			#clicksound = click_default
 			pdx_tooltip = "MENU_INSTAGRAM"
@@ -154,17 +154,17 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "discord_button"
-			position = { x=196 y=389 }
+			position = { x=196 y=392 }
 			quadTextureSprite ="discord"
 			#clicksound = click_default
 			pdx_tooltip = "MENU_DISCORD"
-			web_link = "https://discord.gg/hoi4"
+			web_link = "https://discord.gg/uVgAQXzvsM"
 			scale = 0.9
 		}
 
 		ButtonType = {
 			name = "youtube_button"
-			position = { x=232 y=389 }
+			position = { x=232 y=392 }
 			quadTextureSprite ="youtube"
 			#clicksound = click_default
 			pdx_tooltip = "MENU_YOUTUBE"
@@ -173,7 +173,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "privacy_policy_button"
-			position = { x=268 y=389 }
+			position = { x=268 y=392 }
 			quadTextureSprite ="privacy"
 			#clicksound = click_default
 			pdx_tooltip = "MENU_PRIVACY_POLICY"
@@ -182,7 +182,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "achievements_button"
-			position = { x = 299 y = 389 }
+			position = { x = 299 y = 392 }
 			quadTextureSprite ="achievements"
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
 		}

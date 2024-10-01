@@ -7,23 +7,29 @@ unique_id = 01_roh_achievements_plot
 
 roh_achievement_from_ashes_of_nuclear_fire = {
 	possible = {
-		difficulty > 1
+		has_start_date < 2022.01.02
 		has_any_custom_difficulty_setting = no
-		game_rules_allow_achievements = yes
+		game_rules_allow_achievements = yes		
 	}
 	happened = {
 		custom_trigger_tooltip = {
 			tooltip = roh_achievement_from_ashes_of_nuclear_fire_tt
-			has_country_flag = roh_achievement_locker #<== Локер для того, чтобы ачивки нельзя было получить
+			OR = {
+				has_cosmetic_tag = motherland_statesmen
+				has_cosmetic_tag = motherland_humanists
+				has_cosmetic_tag = motherland_sacraments
+				has_cosmetic_tag = motherland_chthonism
+				
+			}
 		}
 	}
 }
 
 roh_achievement_big_bookworm = {
 	possible = {
-		difficulty > 1
+		has_start_date < 2022.01.02
 		has_any_custom_difficulty_setting = no
-		game_rules_allow_achievements = yes
+		game_rules_allow_achievements = yes	
 	}
 	happened = {
 		custom_trigger_tooltip = {
@@ -32,3 +38,19 @@ roh_achievement_big_bookworm = {
 		}
 	}
 }
+
+roh_achievement_get_your_overcoat = {
+	possible = {
+		has_start_date < 2022.01.02
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes	
+	}
+	happened = {
+		custom_trigger_tooltip = {
+			tooltip = roh_achievement_get_your_overcoat_tt
+			has_country_flag = roh_achievement_locker
+		}
+	}
+}
+
+#has_country_flag = roh_achievement_locker #<== Локер для того, чтобы ачивки нельзя было получить

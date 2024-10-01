@@ -751,7 +751,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "research_finished_popup_window"
 		position = { x = -225 y = -160 }
-		size = { width = 500 height = 260 }
+		size = { width = 500 height = 230 }
 		orientation= center
 		moveable = yes
 		fade_time = 200
@@ -779,15 +779,15 @@ guiTypes = {
 		iconType = {
 			name ="diplo_popup_header_bg"
 			spriteType = "GFX_diplo_popup_header_bg"
-			position = { x= 1 y = 8 }
+			position = { x= 7 y = 7 }
 			alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 72 y = 29 }
+			position = { x = 72 y = 3 }
 			textureFile = ""
-			font = "3270_24_outline"
+			font = "bender_24"
 			borderSize = {x = 0 y = 0}
 			text = "Title"
 			format = center
@@ -800,7 +800,7 @@ guiTypes = {
 		iconType = {
 			name = "tech_icon"
 			quadTextureSprite ="GFX_adjuster_forest_bg"
-			position = { x= 250 y = 130 }
+			position = { x= 250 y = 95 }
 			centerposition = yes
 		}
 
@@ -820,8 +820,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "tech_name"
-			position = { x = 70 y = 170 }
-			font = "3270_18_outline"
+			position = { x = 70 y = 135 }
+			font = "bender_18"
 			text = "Tech name"
 			maxWidth = 360
 			maxHeight = 24
@@ -841,7 +841,7 @@ guiTypes = {
 		#	name = "stat_name"
 		#	position = { x = 155 y = 190 }
 		#	textureFile = ""
-		#	font = "3270_18_outline"
+		#	font = "bender_18"
 		#	borderSize = {x = 0 y = 0}
 		#	text = "Stat Name"
 		#	maxWidth = 380
@@ -852,7 +852,7 @@ guiTypes = {
 		#	name = "stat_amount"
 		#	position = { x = 379 y = 190 }
 		#	textureFile = ""
-		#	font = "3270_18_outline"
+		#	font = "bender_18"
 		#	borderSize = {x = 0 y = 0}
 		#	text = "Stat Amount!"
 		#	maxWidth = 380
@@ -863,7 +863,7 @@ guiTypes = {
 		#	name = "stat_remaining"
 		#	position = { x = 119 y = 245 }
 		#	textureFile = ""
-		#	font = "3270_18_outline"
+		#	font = "bender_18"
 		#	borderSize = {x = 0 y = 0}
 		#	text = "additional stats amount"
 		#	maxWidth = 380
@@ -873,23 +873,23 @@ guiTypes = {
 		iconType = {
 			name ="diplo_popup_bottom"
 			spriteType = "GFX_diplo_popup_bottom"
-			position = { x= 3 y = 189 }
+			position = { x = -5000 y = -5000 } # x = 3 y = 189
 		}
 
 		buttonType = {
 			name = "details_button"
-			position = { x=40 y = 203}
+			position = { x = 40 y = 175 } # x = 40 y = 203
 			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "BUTTON_DETAILS"
-			buttonFont = "3270_18_outline"
+			buttonFont = "bender_18"
 		}
 
 		buttonType = {
 			name = "ok_button"
-			position = { x=340 y =203}
+			position = { x = 337 y = 175 } # x = 337 y = 203
 			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "BUTTON_OK"
-			buttonFont = "3270_18_outline"
+			buttonFont = "bender_18"
 			shortcut = "RETURN"
 			clicksound = click_ok
 		}
@@ -912,11 +912,19 @@ guiTypes = {
 			quadTextureSprite ="GFX_tiled_bg"
 		}
 
+		iconType = {
+			name = "diplo_war_background_bar" # diplo_war_large_icon
+			quadTextureSprite ="GFX_diplo_war_background_bar" # GFX_diplo_war_large_icon
+			position = { x = 7 y = 7 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
 		instantTextBoxType = {
 			name = "title"
-			position = { x = -105 y = 26 }
+			position = { x = -105 y = 7 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "bender_14"
 			borderSize = {x = 0 y = 0}
 			text = "Title"
 			maxWidth = 210
@@ -926,27 +934,19 @@ guiTypes = {
 			format = center
 			orientation = center_up
 		}
-		
-		iconType = {
-			name = "diplo_war_large_icon"
-			quadTextureSprite ="GFX_diplo_war_large_icon"
-			position = { x= 16 y = 6 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
 
-		iconType = {
-			name = "diplo_war_large_icon2"
-			quadTextureSprite ="GFX_diplo_war_large_icon"
-			position = { x= 427 y = 6 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
+		#iconType = {
+		#	name = "diplo_war_large_icon2"
+		#	quadTextureSprite ="GFX_diplo_war_large_icon"
+		#	position = { x= 427 y = 6 }
+		#	Orientation = "UPPER_LEFT"
+		#	alwaystransparent = yes
+		#}
 
 		iconType = {
 			name = "sender_flag"
 			quadTextureSprite ="GFX_flag_small2"
-			position = { x= 22 y = 23 }
+			position = { x= 22 y = 8 }
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -959,7 +959,7 @@ guiTypes = {
 		iconType = {
 			name = "receiver_flag"
 			quadTextureSprite ="GFX_flag_small2"
-			position = { x= -63 y = 23 }
+			position = { x= -63 y = 9 }
 			Orientation = "UPPER_RIGHT"
 		}
 
@@ -972,15 +972,16 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "message"
-			position = { x = 21 y = 76 }
+			position = { x = 19 y = 48 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "bender_16"
 			borderSize = {x = 0 y = 0}
 			text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a cras semper auctor neque vitae. Odio morbi quis commodo odio. Tortor at risus viverra adipiscing at in tellus integer. Amet dictum sit amet justo donec. Justo laoreet sit amet cursus sit amet dictum sit amet. Mauris pellentesque pulvinar pellentesque habitant morbi. Tortor pretium viverra suspendisse potenti nullam. Dignissim sodales ut eu sem integer vitae justo eget magna. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Duis convallis convallis tellus id interdum velit laoreet id. Purus faucibus ornare suspendisse sed nisi. Proin libero nunc consequat interdum. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Amet nisl purus in mollis. Aenean sed adipiscing diam donec. Mattis pellentesque id nibh tortor id aliquet lectus proin. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Et malesuada fames ac turpis egestas sed tempus urna et."
 			maxWidth = 308
-			maxHeight = 110
-			format = center
-			scrollbartype = "standardtext_slider"
+			maxHeight = 180
+			#format = center
+			Orientation = "UPPER_LEFT"
+			#scrollbartype = "standardtext_slider"
 		}
 
 		iconType = {
@@ -1456,7 +1457,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "default_confirmation_popup"
-		size = { width = 480 height=322 }
+		size = { width = 480 height = 222 }
 		orientation= center
 		origo = center
 		moveable = yes
@@ -1468,12 +1469,19 @@ guiTypes = {
 			name = "Background"
 			quadTextureSprite ="GFX_tiled_window_pol_goal"
 		}
+		
+		iconType = {
+			name ="default_popup_header_bg"
+			spriteType = "GFX_default_popup_header_bg"
+			position = { x = 7 y = 7 }
+			alwaystransparent = yes
+		}
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 10 y = 16 }
+			position = { x = 10 y = -8 }
 			textureFile = ""
-			font = "3270_24_outline"
+			font = "bender_20"
 			borderSize = {x = 0 y = 10}
 			text = "Title"
 			maxWidth = 450
@@ -1485,9 +1493,9 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "description"
-			position = { x = 24 y = 90 }
+			position = { x = 24 y = 55 }
 			textureFile = ""
-			font = "3270_18_outline"
+			font = "bender_18"
 			borderSize = {x = 0 y = 0}
 			text = "Long text here!"
 			maxWidth = 430
@@ -1498,20 +1506,20 @@ guiTypes = {
 
 		buttonType = {
 			name = "decline_button"
-			position = { x=90 y=250}
+			position = { x=40 y=167}
 			quadTextureSprite ="GFX_button_148x34"
 			buttonText = "PDXO_CANCEL"
-			buttonFont = "3270_18_outline"
+			buttonFont = "bender_18"
 			shortcut = "ESCAPE"
 			clicksound = click_close
 		}
 
 		buttonType = {
 			name = "accept_button"
-			position = { x=260 y=250}
+			position = { x=292 y=167}
 			quadTextureSprite ="GFX_button_148x34"
 			buttonText = "OK"
-			buttonFont = "3270_18_outline"
+			buttonFont = "bender_18"
 			shortcut = "RETURN"
 			clicksound = click_default
 		}
@@ -1693,7 +1701,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "focus_finished_popup_window"
 		position = { x = -225 y = -160 }
-		size = { width = 500 height = 260 }
+		size = { width = 500 height = 230 } # width = 500 height = 260
 		orientation= center
 		moveable = yes
 		fade_time = 200
@@ -1720,33 +1728,33 @@ guiTypes = {
 		{
 			name ="diplo_popup_header_bg"
 			spriteType = "GFX_diplo_popup_header_bg"
-			position = { x= 1 y = 8 }
+			position = { x= 7 y = 7 }
 			alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 98 y = 29 }
+			position = { x = 59 y = 6 } # x = 98 y = 29
 			textureFile = ""
-			font = "3270_24_outline"
+			font = "bender_20"
 			borderSize = {x = 0 y = 0}
 			text = "Title"
 			format = center
-			maxWidth = 300
+			maxWidth = 380
 			maxHeight = 24
 		}
 
 		iconType = {
 			name = "symbol"
 			quadTextureSprite ="GFX_goal_unknown"
-			position = { x= 250 y = 130 }
+			position = { x= 250 y = 100 } # x= 250 y = 130
 			centerposition = yes
 		}
 
 		instantTextBoxType = {
 			name = "focus_name"
-			position = { x = 70 y = 165 }
-			font = "3270_18_outline"
+			position = { x = 70 y = 145 } # x = 70 y = 165
+			font = "bender_18"
 			text = "Focus name"
 			maxWidth = 360
 			maxHeight = 100
@@ -1757,24 +1765,24 @@ guiTypes = {
 		{
 			name ="diplo_popup_bottom"
 			spriteType = "GFX_diplo_popup_bottom"
-			position = { x= 3 y = 189 }
+			position = { x = 3 y = 155 } # x = 3 y = 189
 		}
 
 		buttonType = {
 			name = "details_button"
-			position = { x=40 y = 203}
+			position = { x = 40 y = 175 } # x = 40 y = 203
 			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "BUTTON_DETAILS"
-			buttonFont = "3270_18_outline"
+			buttonFont = "bender_18"
 			shortcut = "ESCAPE"
 		}
 
 		buttonType = {
 			name = "ok_button"
-			position = { x=340 y =203}
+			position = { x = 337 y = 175 } # x = 340 y = 203
 			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "BUTTON_OK"
-			buttonFont = "3270_18_outline"
+			buttonFont = "bender_18"
 			shortcut = "RETURN"
 			clicksound = click_ok
 		}

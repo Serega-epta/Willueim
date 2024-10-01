@@ -159,6 +159,14 @@ on_actions = {
 	on_weekly = {
 		effect = {
 			economy_tick_effects = yes
+			if = {
+				limit = {
+					check_variable = { black_rubles_budget > 9999 }
+					NOT = { has_country_flag = roh_achievement_apocalyptic_economist }
+					is_ai = no
+				}
+				set_country_flag = roh_achievement_apocalyptic_economist
+			}
 		}
 	}
 }

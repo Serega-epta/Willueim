@@ -61,6 +61,18 @@ NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_DOT_CUTOFF_MAX = 1200.0
 
 NDefines_Graphics.NGraphics.MINIMUM_PROVINCE_SIZE_IN_PIXELS = 1
 
+NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
+	0.0/360.0, 1.0, 1.0,	--red
+	10.0/360.0, 1.0, 1.0,	--orange
+	60.0/360.0, 1.0, 1.0,	--yellow
+	120.0/360.0, 0.75, 1.0,	--green
+	180.0/360.0, 1.0, 1.0,	--turq
+	235.0/360.0, 1.0, 1.0,	--blue
+	260.0/360.0, 1.0, 1.0,	--dark purple
+	300.0/360.0, 1.0, 1.0,	--light purple
+	330.0/360.0, 0, 1.0		--white
+}
+
 -----------------------
 --OLD REQUIEM DEFINES--
 -----------------------
