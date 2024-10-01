@@ -14,10 +14,8 @@ focus_tree = {
 		icon = GFX_sen_gospodnya
 		x = 6
 		y = 0
-		available = {
-			is_subject = no
-		}
-		cost = 1.5
+
+		cost = 6.4
 		ai_will_do = {
 			factor = 1
 		}
@@ -38,12 +36,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = LWV_Sen
-		available = {
-			is_subject = no
-		}
-		cost = 2
+
+		cost = 6.4
 		ai_will_do = {
-		factor = 1
+			factor = 1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -62,12 +58,10 @@ focus_tree = {
 		x = -3
 		y = 3
 		relative_position_id = LWV_Sen
-		available = {
-			is_subject = no
-		}
-		cost = 2.2
+
+		cost = 6.4
 		ai_will_do = {
-		factor = 1
+			factor = 1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -88,10 +82,8 @@ focus_tree = {
 		x = 3
 		y = 3
 		relative_position_id = LWV_Sen
-		available = {
-			is_subject = no
-		}
-		cost = 2.2
+
+		cost = 6.4
 		ai_will_do = {
 			factor = 1
 		}
@@ -109,10 +101,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = LWV_Absol_svyatost
-		available = {
-			is_subject = no
-		}
-		cost = 2.9
+
+		cost = 6.4
 		ai_will_do = {
 			factor = 1
 		}
@@ -129,15 +119,13 @@ focus_tree = {
 		id = LWV_Yk_svyatie_nadeli
 		icon = GFX_ykrepit_svyatie_nadeli
 		prerequisite = { focus = LWV_Istinniy_god }
-		x = -6
+		x = 0
 		y = 2
 		relative_position_id = LWV_Istinniy_god
-		available = {
-			is_subject = no
-		}
-		cost = 3
+
+		cost = 6.4
 		ai_will_do = {
-		factor = 1
+			factor = 1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -194,12 +182,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = LWV_Yk_svyatie_nadeli
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 6.4
 		ai_will_do = {
-		factor = 1
+			factor = 1
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = { 
@@ -247,12 +233,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = LWV_Yk_svyatie_nadeli
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 6.4
 		ai_will_do = {
-		factor = 1
+			factor = 1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		completion_reward = { 
@@ -274,10 +258,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = LWV_Rabochii_moleben
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 6.4
 		ai_will_do = {
 			factor = 1
 		}
@@ -325,14 +307,12 @@ focus_tree = {
 	focus = {
 		id = LWV_bozhiya_dlan
 		icon = GFX_ysilit_bozhiyu_dlan
-		prerequisite = { focus = LWV_Istinniy_god }
-		x = 6
-		y = 2
-		relative_position_id = LWV_Istinniy_god
-		available = {
-			is_subject = no
-		}
-		cost = 3
+		prerequisite = { focus = LWV_Skrepit_veru_klinkom }
+		x = 0
+		y = 1
+		relative_position_id = LWV_Skrepit_veru_klinkom
+
+		cost = 6.4
 		ai_will_do = {
 			factor = 1
 		}
@@ -349,10 +329,8 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = LWV_bozhiya_dlan
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 6.4
 		ai_will_do = {
 			factor = 1
 		}
@@ -412,10 +390,8 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = LWV_bozhiya_dlan
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 6.4
 		ai_will_do = {
 			factor = 10
 		}
@@ -440,9 +416,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = LWV_Chernya_pastva
-		available = {
-			is_subject = no
-		}
+
 		cost = 1
 		ai_will_do = {
 			factor = 1
@@ -468,13 +442,12 @@ focus_tree = {
 		prerequisite = { focus = LWV_Net_yaz }
 		prerequisite = { focus = LWV_Skrepit_veru_klinkom}
 		x = 0
-		y = 5
+		y = 9
 		relative_position_id = LWV_Istinniy_god
 		available = {
-			is_subject = no
 			has_war = no
 		}
-		cost = 2
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -492,10 +465,9 @@ focus_tree = {
 		icon = GFX_Goida
 		prerequisite = { focus = LWV_Net_bezbozhnikov}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = LWV_Net_bezbozhnikov
 		available = {
-			is_subject = no
 			has_war = no #Фиг вам, а не война на два фронта
 		}
 		cost = 1
