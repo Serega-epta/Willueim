@@ -8,8 +8,8 @@ armor_generic = {
 		modifier = {
 			factor = 7
 			OR = {
-				has_tech = nsb_basic_mass_OPF
-				has_tech = basic_mass_OPF
+				has_tech = nsb_basic_mass_MBT
+				has_tech = basic_mass_MBT
 			}
 		}
 	}
@@ -30,7 +30,7 @@ armor_generic = {
 		}
 		can_upgrade_in_field = {
 			has_equipment = {
-				basic_specialized_OPF_equipment < 500
+				basic_specialized_MBT_equipment < 500
 			}
 		}
 		target_width = 18.0
@@ -115,12 +115,12 @@ armor_generic = {
 				artillery = 1
 			}
 			regiments = {
-				ai_OPF = 5
+				ai_MBT = 5
 				motorized = 4
 			}
 		}
 		allowed_types = {
-			ai_OPF
+			ai_MBT
 			motorized
 			engineer
 			mot_recon
@@ -220,12 +220,12 @@ armor_generic = {
 				recon = 1
 			}
 			regiments = {
-				specialized_OPF = 6
+				specialized_MBT = 6
 				infantry = 3
 			}
 		}
 		allowed_types = {
-			specialized_OPF
+			specialized_MBT
 			motorized
 			mechanized
 			#Cheaper but slower might be worth considering
@@ -244,8 +244,8 @@ armor_generic = {
 			modifier = {
 				factor = 4
 				OR = {
-					has_tech = nsb_basic_mass_OPF
-					has_tech = basic_mass_OPF
+					has_tech = nsb_basic_mass_MBT
+					has_tech = basic_mass_MBT
 				}
 			}
 		}
@@ -330,12 +330,12 @@ armor_generic = {
 				mot_recon = 1
 			}
 			regiments = {
-				OPF = 6
+				mass_MBT = 6
 				motorized = 4
 			}
 		}
 		allowed_types = {
-			OPF
+			mass_MBT
 			motorized
 			mechanized
 			infantry
@@ -439,12 +439,12 @@ armor_generic = {
 				armored_car_recon = 1
 			}
 			regiments = {
-				specialized_OPF = 6
+				specialized_MBT = 6
 				motorized = 4
 			}
 		}
 		allowed_types = {
-			specialized_OPF
+			specialized_MBT
 			motorized
 			mechanized
 			infantry
@@ -898,7 +898,7 @@ infantry_big_generic = {
 		}
 	}
 }
-###�?НФОРМАЦ�?Я �?З ВАН�?ЛЫ###
+###�?НФОРМНЦ�?Я �?З ВНН�?ЛЫ###
 ###ОБНОВ�?ТСЯ В БУДУЩЕМ###
 # REGIMENTS:
 #infantry

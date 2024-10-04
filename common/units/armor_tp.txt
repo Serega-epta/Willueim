@@ -1,5 +1,5 @@
 sub_units = {
-	OPF = {
+	mass_MBT = {
 		sprite = "medium_armor"
 		map_icon_category = armored
 		priority = 5
@@ -16,12 +16,12 @@ sub_units = {
 			category_army
 		}
 		essential = {
-			pre_war_OPV_equipment_archetype
+			mass_MBT_chassis
 			infantry_equipment
 			infantry_odejda
 		}
 		need = {
-			pre_war_OPV_equipment_archetype = 4
+			mass_MBT_chassis = 4
 			infantry_equipment = 12
 			infantry_odejda = 26
 		}
@@ -64,7 +64,7 @@ sub_units = {
 			attack = -0.7
 		}
 	}
-	specialized_OPF = {
+	specialized_MBT = {
 		sprite = "medium_armor"
 		map_icon_category = armored
 		priority = 5
@@ -81,12 +81,12 @@ sub_units = {
 			category_army
 		}
 		essential = {
-			basic_specialized_OPF_equipment
+			specialized_MBT_chassis
 			infantry_equipment
 			infantry_odejda
 		}
 		need = {
-			basic_specialized_OPF_equipment = 4
+			specialized_MBT_chassis = 4
 			infantry_equipment = 12
 			infantry_odejda = 26
 		}
@@ -129,7 +129,7 @@ sub_units = {
 			attack = -0.7
 		}
 	}
-	ai_OPF = {
+	ai_MBT = {
 		sprite = "medium_armor"
 		map_icon_category = armored
 		priority = 5
@@ -146,11 +146,11 @@ sub_units = {
 			category_army
 		}
 		essential = {
-			basic_ai_OPF_equipment
+			ai_MBT_chassis
 			infantry_equipment
 		}
 		need = {
-			basic_ai_OPF_equipment = 4
+			ai_MBT_chassis = 4
 			infantry_equipment = 12
 			infantry_odejda = 26
 		}

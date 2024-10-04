@@ -10,25 +10,9 @@ set_technology = {
 	instruments_of_any_era = 1
 	motorised_infantry = 1
 }
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_technology = {
-		pre_war_OPV = 1
-		basic_mass_OPF = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		nsb_pre_war_OPV = 1
-		nsb_basic_mass_OPF = 1
-	}
+set_technology = {
+	pre_war_MBT = 1
+	basic_mass_MBT = 1
 }
 if = {
 	limit = {
@@ -71,7 +55,7 @@ add_equipment_to_stockpile = {
 	amount = 15000
 }
 add_equipment_to_stockpile = {
-	type = basic_mass_OPF_equipment
+	type = mass_MBT_chassis
 	amount = 2000
 }
 add_equipment_to_stockpile = {
