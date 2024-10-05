@@ -2,13 +2,7 @@ ideas = {
 	country = {
 		#Расколотое общество#
 		SWR_divided_society = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
+			picture = GFX_idea_SWR_divaided_society_idea
 			modifier = {
 				stability_factor = -0.01
                 war_support_factor = -0.01
@@ -17,13 +11,7 @@ ideas = {
 		}
         #Русская Православная Церковь#
 		SWR_russian_orthodox_church = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
+			picture = GFX_idea_SWR_russuian_ortodox_church_idea
 			modifier = {
 				political_power_factor= 0.07
 			}
@@ -31,13 +19,7 @@ ideas = {
 
         #Инквизиция#
 		SWR_inquisition = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
+			picture = GFX_idea_SWR_inquisition_idea
 			modifier = {
 				monthly_population = -0.05
                 compliance_growth= 0.05
@@ -46,14 +28,6 @@ ideas = {
 		}
 		#Сопротивление егерей#
 		SWR_resistance_of_huntsman = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			hidden = yes
 			modifier = {
 				production_speed_buildings_factor = -0.05
@@ -64,14 +38,6 @@ ideas = {
 		}
 		#Плохо работающий государственный аппарат#
 		SWR_poorly_functioning_state_apparatus = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			hidden = yes
 			modifier = {
 				political_power_gain = -0.5
@@ -81,14 +47,6 @@ ideas = {
 		}
 		#Благодарность#
 		SWR_gratitude = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			hidden = yes
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -96,14 +54,6 @@ ideas = {
 		}
 		#Благодарность старцы#
 		SWR_gratitude_elders = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			hidden = yes
 			modifier = {
 				consumer_goods_factor = 0.1
@@ -111,14 +61,6 @@ ideas = {
 		}
 		#Массовый террор#
 		SWR_mass_terror = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			hidden = yes
 			modifier = {
 				humanists_drift = -0.01
@@ -130,14 +72,6 @@ ideas = {
 		}
 		#Замедление вырубки деревьев#
 		SWR_slowing_down_tree_felling = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			hidden = yes
 			modifier = {
 				political_power_factor = 0.1
@@ -148,14 +82,6 @@ ideas = {
 		}
 		#Парализованная Инквизиция#
 		SWR_paralyzed_inquisition = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			hidden = yes
 			modifier = {
 				compliance_growth= -0.1
@@ -167,14 +93,7 @@ ideas = {
 		}
 		#Хаос на производстве одежды#
 		SWR_chaos_in_clothing_production = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
+			picture = GFX_idea_SWR_slowdown_production_idea
 			modifier = {
 				political_power_factor = 0.3
 				consumer_goods_factor = 0.2
@@ -185,14 +104,7 @@ ideas = {
 
 		#Против ревизионистов!#
 		SWR_against_revisionists = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
+			picture = GFX_idea_SWR_inquisition_idea
 			modifier = {
 				targeted_modifier = {
     				tag = LWV
@@ -205,14 +117,6 @@ ideas = {
 	hidden_ideas = {
 		#Связи#
 		SWR_connections = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			modifier = {
 				political_power_factor = 0.05
 				stability_weekly_factor = 0.005
@@ -220,14 +124,6 @@ ideas = {
 		}
 		#Инвестиции в производство#
 		SWR_investments_in_production = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.03
 				production_factory_start_efficiency_factor = 0.03
@@ -236,14 +132,6 @@ ideas = {
 		}
 		#Террор#
 		SWR_terror = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			modifier = {
 				political_power_factor = 0.03
 				monthly_population = -0.06
@@ -251,14 +139,6 @@ ideas = {
 		}
 		#Агитация#
 		SWR_agitation = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
 			hidden = yes
 			modifier = {
 				political_power_factor = 0.1
