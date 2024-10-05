@@ -1,17 +1,14 @@
 bookmarks = {
 	bookmark = {
-		name = "REQUIEM_NAME_2"
+		name = "REQUIEM_NAME"
 		desc = "REQUIEM_DESC"
 		date = 2022.1.1.12
 		picture = "GFX_select_date_2022"
 		default_country = "GLS"
 		default = yes
-		
-		#МАЖОРЫ
 
 		"GLS"={
 			history = "REQUIEM_OF_HUMANKIND_condition_of_GLS"
-			ideology = statesmen
 			ideas = {				
 				GLS_fathers_and_not_fathers
 				GLS_memories_of_rodina
@@ -24,24 +21,8 @@ bookmarks = {
 			}
 		}
 
-		"ORL"={
-			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
-			ideology = militarists
-			ideas = {				
-				ORL_corporative_ethics
-				ORL_chance_for_everyone
-				ORL_victory_cult			
-			}
-			focuses = {
-				ORL_best_in_hell
-				ORL_first_among_equals
-				ORL_young_blood
-			}
-		}
-
 		"ARM"={
 			history = "REQUIEM_OF_HUMANKIND_condition_of_ARM"
-			ideology = statesmen
 			ideas = {
 				ARM_blood_on_snow
 			}
@@ -52,37 +33,8 @@ bookmarks = {
 			}
 		}
 
-		"SDC"={
-			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
-			ideology = statesmen
-			ideas = {
-				SDC_Willuem_influese1
-				SDC_Korodonniki1
-				SDC_hunger1
-			}
-			focuses = {
-				SDC_Visit
-				SDC_public_safety_concept
-				SDC_stabilization_situation
-			}
-		}
-
-		"AGE"={																	     																
-			history = "REQUIEM_OF_HUMANKIND_condition_of_AGE"			
-			ideology = statesmen														
-			ideas = {		
-				AGE_time_wasted
-			}																		
-			focuses = {																
-				AGE_blood_on_hands
-				AGE_seek_for_peace
-				AGE_red_sables
-			}																		
-		}			
-
 		"ODS"={
 			history = "REQUIEM_OF_HUMANKIND_condition_of_ODS"
-			ideology = chthonism
 			ideas = {				
 				dicarstvo
 				doverie_1
@@ -95,9 +47,48 @@ bookmarks = {
 			}
 		}
 
+		"ORL"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_ORL"
+			ideas = {				
+				ORL_corporative_ethics
+				ORL_chance_for_everyone
+				ORL_victory_cult			
+			}
+			focuses = {
+				ORL_best_in_hell
+				ORL_first_among_equals
+				ORL_young_blood
+			}
+		}
+
+		"SDC"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_SDC"
+			ideas = {
+				SDC_Willuem_influese1
+				SDC_Korodonniki1
+				SDC_hunger1
+			}
+			focuses = {
+				SDC_Visit
+				SDC_public_safety_concept
+				SDC_stabilization_situation
+			}
+		}
+
+		"AGE"={	
+			history = "REQUIEM_OF_HUMANKIND_condition_of_AGE"											
+			ideas = {		
+				AGE_time_wasted
+			}																		
+			focuses = {																
+				AGE_blood_on_hands
+				AGE_seek_for_peace
+				AGE_red_sables
+			}																		
+		}	
+		
 		"LWV"={
 			history = "REQUIEM_OF_HUMANKIND_condition_of_LWV"
-			ideology = sacraments
 			ideas = {
 				godsdl 
 				holy_nadely 
@@ -110,42 +101,35 @@ bookmarks = {
 			}
 		}
 
+		"MGL"={
+			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
+			ideas = {
+				MGL_Critical_arrhythmia 
+				MGL_Cybernetic_soul 
+				MGL_Rusted_mechanism_1
+			}
+			focuses = {
+				MGL_cybernetic_mind
+				MGL_plutonium_cardiology
+				MGL_create_safezone
+			}
+		}																															
 
-		#Миноры + Консульство																																
-		# "PLD"={
-		# 	minor = yes
-		# 	history = "REQUIEM_OF_HUMANKIND_condition_PLD"
-		# 	ideology = humanists
-		# 	ideas = {				
-
-		# 	}
-		# 	focuses = {			
-		# 		PLD_frozen_commonwealth
-		# 		PLD_his_will
-		# 		PLD_cries_hungry
-		# 	}
-		# }
-
-		# "IMP"={
-		# 	minor = yes
-		# 	history = "REQUIEM_OF_HUMANKIND_condition_of_IMP"
-		# 	ideology = humanists
-		# 	ideas = {				
-		# 		IMP_1
-		# 		IMP_winners_of_the_first_central_Russian
-		# 		IMP_splinter_administration
-		# 	}
-		# 	focuses = {			
-		# 		IMP_risen_from_the_ashes
-		# 		IMP_Order_inside
-		# 		IMP_check_army
-		# 	}
-		# }
+		"IMP"={
+			history = "REQUIEM_OF_HUMANKIND_condition_of_IMP"
+			ideas = {				
+				IMP_winners_of_the_first_central_Russian
+				IMP_splinter_administration
+			}
+			focuses = {			
+				IMP_risen_from_the_ashes
+				IMP_clean_up
+				IMP_we_are_invincible
+			}
+		}
 
 		"FSR"={
-			minor = yes
-			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
-			ideology = free_people
+			history = "REQUIEM_OF_HUMANKIND_condition_of_FSR"
 			ideas = {				
 				rostik
 			}
@@ -157,9 +141,7 @@ bookmarks = {
 		}
 
 		"KUH"={
-			minor = yes
-			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
-			ideology = sacraments
+			history = "REQUIEM_OF_HUMANKIND_condition_of_KUH"
 			ideas = {				
 				cult_iskazheniya
 			}
@@ -171,9 +153,7 @@ bookmarks = {
 		}
 
 		"STW"={
-			minor = yes
-			history = "REQUIEM_OF_HUMANKIND_condition_not_ready"
-			ideology = bandits
+			history = "REQUIEM_OF_HUMANKIND_condition_of_STW"
 			ideas = {				
 				krugom_vragi
 			}
@@ -192,6 +172,7 @@ bookmarks = {
 				set_variable = { order = 50 } 
 			}
 			AGE = {
+				set_variable = { monthly_counter_AGE = 1 }
 				add_dynamic_modifier = { modifier = AGE_baltic_separatism }
 				set_variable = { AGE_baltic_separatism_political_power_factor = -0.2 }
 				set_variable = { AGE_baltic_separatism_monthly_population = -0.25 }
