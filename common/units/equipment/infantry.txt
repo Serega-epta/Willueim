@@ -6,6 +6,11 @@ equipments = {
 		picture = archetype_infantry_equipment
 		is_buildable = no
 		type = infantry
+		can_be_produced = {
+			NOT = {
+				has_country_flag = forbid_eq_production
+			}
+		}
 		group_by = archetype
 		interface_category = interface_category_land
 		active = no
@@ -166,6 +171,11 @@ equipments = {
 		type = infantry
 		group_by = archetype
 		interface_category = interface_category_land
+		can_be_produced = {
+			NOT = {
+				has_country_flag = forbid_eq_production
+			}
+		}
 	}
 	infantry_odejda_0 = {
 		year = 2010

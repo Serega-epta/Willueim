@@ -6,6 +6,11 @@ equipments = {
 
 		picture = archetype_light_tank_equipment
 		type = armor
+		can_be_produced = {
+			NOT = {
+				has_country_flag = forbid_eq_production
+			}
+		}
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
@@ -164,6 +169,11 @@ equipments = {
 		
 		picture = archetype_medium_tank_equipment
 		type = armor
+		can_be_produced = {
+			NOT = {
+				has_country_flag = forbid_eq_production
+			}
+		}
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
@@ -321,6 +331,11 @@ equipments = {
 		is_buildable = no
 		picture = archetype_heavy_tank_equipment
 		type = armor
+		can_be_produced = {
+			NOT = {
+				has_country_flag = forbid_eq_production
+			}
+		}
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000

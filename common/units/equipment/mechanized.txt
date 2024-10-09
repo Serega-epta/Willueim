@@ -8,6 +8,11 @@ equipments = {
 			#infantry #Removing inf type
 			mechanized
 		}
+		can_be_produced = {
+			NOT = {
+				has_country_flag = forbid_eq_production
+			}
+		}
 		upgrades = {
 			tank_reliability_upgrade
 			tank_engine_upgrade

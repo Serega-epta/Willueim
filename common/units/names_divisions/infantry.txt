@@ -1,3 +1,14 @@
+#Generic militia
+GENERIC_MILITIA = {
+	name = "Generic Garnison Division"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%d. Militia"
+}
 #Bandits
 BANDIT_INF_01 = {
 	name = "Bandit formation"

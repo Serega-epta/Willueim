@@ -1,0 +1,160 @@
+#original source: https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/unit_generator_scripted_effects.txt
+generate_units = {
+	set_technology = {
+		infantry_weapons = 1
+		civilian_clothing = 1
+		popup = no
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_template = "Generic Infantry Division"
+			}
+		}
+		load_oob = "_default_oob"
+	}
+	add_to_array = { #light infantry
+		division_manpower = 3000
+	}
+	add_to_array = {
+		args = 2
+	}
+	add_to_array = {
+		args = 0.5
+	}
+	add_to_array = {
+		args = 0
+	}
+	add_to_array = {
+		args = 0.1
+	}
+	add_to_array = {
+		args = 0.7
+	}
+	add_to_array = {
+		args = 0.85
+	}
+	add_to_array = {
+		args = 0.7
+	}
+	add_to_array = {
+		args = 0.85
+	}
+	for_loop_effect = {
+		end = prev.args^num
+		value = i
+		meta_effect = {
+			text = {
+				if = {
+					limit = {
+						has_variable = UG_ARG_[I]
+					}
+					set_variable = {
+						args^[I] = UG_ARG_[I]
+					}
+					clear_variable = UG_ARG_[I]
+				}
+			}
+			I = i
+		}
+	}
+	every_controlled_state = {
+		for_loop_effect = {
+			start = -7
+			end = 0
+			value = i
+			set_temp_variable = {
+				ni = 8
+			}
+			add_to_temp_variable = {
+				ni = i
+			}
+			meta_effect = {
+				text = {
+					set_temp_variable = {
+						i_[NI] = [I]
+					}
+				}
+				I = i
+				NI = ni
+			}
+		}
+		for_loop_effect = {
+			end = PREV.args^num
+			value = i
+			add = 8
+			for_loop_effect = {
+				start = 1
+				end = 8
+				value = ii
+				meta_effect = {
+					text = {
+						add_to_temp_variable = {
+							i_[I] = 8
+						}
+					}
+					I = ii
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = PREV.args^i
+						value = 1
+						compare = greater_than_or_equals
+					}
+				}
+				set_temp_variable_to_random = {
+					var = R_S_XP_F
+					min = PREV.args^i_2
+					max = PREV.args^i_3
+				}
+				set_temp_variable_to_random = {
+					var = R_S_EQ_F
+					min = PREV.args^i_4
+					max = PREV.args^i_5
+				}
+				set_temp_variable_to_random = {
+					var = R_S_MP_F
+					min = PREV.args^i_6
+					max = PREV.args^i_7
+				}
+				set_temp_variable = {
+					index = i
+				}
+				divide_temp_variable = {
+					index = 8
+				}
+				set_temp_variable = {
+					div_mp = PREV.division_manpower^index
+				}
+				multiply_temp_variable = {
+					div_mp = R_S_MP_F
+				}
+				PREV = {
+					add_manpower = div_mp
+				}
+				meta_effect = {
+					text = {
+						create_unit = {
+							division = "division_name = { is_name_ordered = yes } division_template = \"[DT]\" start_experience_factor = [S_XP_F] start_equipment_factor = [S_EQ_F] start_manpower_factor = [S_MP_F]"
+							owner = PREV
+						}
+					}
+					DT = "[DT_name_generator]"
+					S_XP_F = R_S_XP_F
+					S_EQ_F = R_S_EQ_F
+					S_MP_F = R_S_MP_F
+				}
+				subtract_from_variable = {
+					PREV.args^i = 1
+				}
+			}
+			add_to_variable = {
+				PREV.args^i = PREV.args^i_1
+			}
+		}
+	}
+	clear_array = division_manpower
+	clear_array = args
+}

@@ -8,6 +8,11 @@ equipments = {
 		type = motorized
 		group_by = archetype
 		interface_category = interface_category_armor
+		can_be_produced = {
+			NOT = {
+				has_country_flag = forbid_eq_production
+			}
+		}
 	}
 	# БМП - 1
 	infantry_fighting_vehicle_1_equipment = {

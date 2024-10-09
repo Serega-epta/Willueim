@@ -1,0 +1,15 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					num_divisions = 0
+					NOT = {
+						has_country_flag = ignore_unit_generation
+					}
+				}
+				generate_units = yes
+			}
+		}
+	}
+}

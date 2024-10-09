@@ -9,6 +9,11 @@ equipments = {
 			motorized
 			support
 		}
+		can_be_produced = {
+			NOT = {
+				has_country_flag = forbid_eq_production
+			}
+		}
 		group_by = archetype
 		interface_category = interface_category_land
 		reliability = 0.8
