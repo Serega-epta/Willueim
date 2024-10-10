@@ -1,0 +1,42 @@
+FIRST_GEN_SQUAD = {
+	name = "First Gen Squad"
+	for_countries = {
+		GLS
+		ASR
+	}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%s First Gen Squad"
+}
+SECOND_GEN_SQUAD = {
+	name = "Second Gen Squad"
+	for_countries = {
+		GLS
+	}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%s Second Gen Squad"
+}
+TANK_GLS = {
+	name = "Tank batalion"
+	for_countries = {
+		GLS
+	}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"mass_MBT"
+		"specialized_MBT"
+		"ai_MBT"
+	}
+	fallback_name = "%d Tank batalion"
+}

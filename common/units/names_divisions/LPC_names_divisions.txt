@@ -1,0 +1,29 @@
+VOLUNTEER_INF = {
+	name = "Volunteer"
+	can_use = {
+		always = yes
+	}
+	for_countries = {
+		LPC
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%d. Volunteer"
+}
+COLLABORATOR_INF = {
+	name = "Collaborator"
+	can_use = {
+		always = yes
+	}
+	for_countries = {
+		LPC
+	}
+	division_types = {
+		"light_infantry"
+	}
+	fallback_name = "%d. Collaborator"
+	ordered = {
+		1 = { "1. Bundeswehr Division" }
+	}
+}

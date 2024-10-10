@@ -15,7 +15,7 @@ division_template = {
 }
 division_template = {
 	name = "Infantry brigade"
-	division_names_group = PEKHOTNAYA_GRUPPA_01
+	division_names_group = VOLUNTEER_INF
 	regiments = {
 		infantry= { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -32,7 +32,7 @@ division_template = {
 }
 division_template = {
 	name = "Baltic division"
-	division_names_group = PEKHOTNAYA_GRUPPA_01
+	division_names_group = COLLABORATOR_INF
 	regiments = {
 		infantry= { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -53,7 +53,10 @@ units = {
         start_manpower_factor = 0.75
 	}
     division = {
-		name = "Bundeswehr Division" 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
         location = 3288
 		division_template = "Infantry brigade"
 		start_experience_factor = 1.0
@@ -61,7 +64,6 @@ units = {
         start_manpower_factor = 0.80
 	}
     division = {
-		name = "Baltic division"
         location = 6332
 		division_template = "Baltic division"
 		start_experience_factor = 0.5
@@ -69,7 +71,6 @@ units = {
         start_manpower_factor = 1.0
 	}
     division = {
-		name = "Baltic division"
         location = 395
 		division_template = "Baltic division"
 		start_experience_factor = 0.5
@@ -77,7 +78,6 @@ units = {
         start_manpower_factor = 1.0
 	}
     division = {
-		name = "Baltic division"
         location = 3384
 		division_template = "Baltic division"
 		start_experience_factor = 0.5
@@ -85,7 +85,6 @@ units = {
         start_manpower_factor = 1.0
 	}
     division = {
-		name = "Baltic division"
         location = 281
 		division_template = "Baltic division"
 		start_experience_factor = 0.5

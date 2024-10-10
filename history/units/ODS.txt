@@ -20,6 +20,7 @@ division_template = {
 }
 division_template = {
 	name = "purity"
+	division_names_group = PURITY_INF
 	regiments = {
 		rcbd_troop = { x = 0 y = 0 }
 		rcbd_troop = { x = 0 y = 1 }
@@ -39,6 +40,7 @@ division_template = {
 }
 division_template = {
 	name = "prosperity"
+	division_names_group = PROSPERITY_INF
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -58,6 +60,7 @@ division_template = {
 }
 division_template = {
 	name = "black_berets"
+	division_names_group = BLACK_BERET_INF
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -73,6 +76,7 @@ division_template = {
 }
 division_template = {
 	name = "tank_group"
+	division_names_group = TANK_ODS
 	regiments = {
 		motopechotanabtr = { x = 0 y = 0 }
 		motopechotanabtr = { x = 0 y = 1 }
@@ -91,6 +95,7 @@ division_template = {
 }
 division_template = {
 	name = "priazovtsy"
+	division_names_group = PRIAZOVTSY_INF
 	regiments = {
 		light_infantry = { x = 0 y = 0 }
 		light_infantry = { x = 0 y = 1 }
@@ -107,42 +112,33 @@ division_template = {
 }
 units = {
 	division = {
-		name = "black_berets"
 		location = 13276
 		division_template = "black_berets"
         start_experience_factor = 0.1
         start_equipment_factor = 0.65
         start_manpower_factor = 1.0
 	}
-
 	division = {
-		name = "black_berets"
 		location = 13278
 		division_template = "black_berets"
         start_experience_factor = 0.1
         start_equipment_factor = 0.65
         start_manpower_factor = 1.0
 	}
-
 	division = {
-		name = "black_berets"
 		location = 11670
 		division_template = "black_berets"
         start_experience_factor = 0.1
         start_equipment_factor = 0.65
         start_manpower_factor = 1.0
 	}
-
 	division = {
-		name = "black_berets"
 		location = 11670
 		division_template = "black_berets"
         start_experience_factor = 0.1
         start_equipment_factor = 0.65
         start_manpower_factor = 1.0
 	}
-
-
 	division = {
 		name = "priazovtsy"
 		location = 13307
@@ -151,7 +147,6 @@ units = {
         start_equipment_factor = 1.0
         start_manpower_factor = 1.0
 	}
-
 	division = {
 		name = "priazovtsy"
 		location = 13307
@@ -160,7 +155,6 @@ units = {
         start_equipment_factor = 1.0
         start_manpower_factor = 1.0
 	}
-
 	division = {
 		name = "prosperity"
 		location = 13356
@@ -169,7 +163,6 @@ units = {
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
-
 	division = {
 		name = OKO
 		location = 3686
@@ -178,7 +171,6 @@ units = {
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
-
 	division = {
 		name = purity
 		location = 13277

@@ -1,0 +1,68 @@
+#Purity
+PURITY_INF = {
+	name = "Purity"
+	can_use = {
+		always = yes
+	}
+	for_countries = {
+		ODS
+	}
+	division_types = {
+		"rcbd_troop"
+	}
+	fallback_name = "%s. Purity"
+}
+PROSPERITY_INF = {
+	name = "Prosperity"
+	can_use = {
+		always = yes
+	}
+	for_countries = {
+		ODS
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%s. Prosperity"
+}
+BLACK_BERET_INF = {
+	name = "Black berets"
+	can_use = {
+		always = yes
+	}
+	for_countries = {
+		ODS
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%s. Black berets"
+}
+PRIAZOVTSY_INF = {
+	name = "Priazovtsy"
+	can_use = {
+		always = yes
+	}
+	for_countries = {
+		ODS
+	}
+	division_types = {
+		"light_infantry"
+	}
+	fallback_name = "%s. Priazovtsy"
+}
+TANK_ODS = {
+	name = "Tank group"
+	for_countries = {
+		ODS
+	}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"mass_MBT"
+		"specialized_MBT"
+		"ai_MBT"
+	}
+	fallback_name = "%d. Tank group"
+}

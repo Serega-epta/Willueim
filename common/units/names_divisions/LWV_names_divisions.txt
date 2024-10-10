@@ -1,0 +1,26 @@
+HOLY_MILITIA_INF = {
+	name = "Holy militia"
+	can_use = {
+		always = yes
+	}
+	for_countries = {
+		LWV
+	}
+	division_types = {
+		"light_infantry"
+	}
+	fallback_name = "%s. Holy militia"
+}
+DLAN_INF = {
+	name = "Bojiya dlan"
+	can_use = {
+		always = yes
+	}
+	for_countries = {
+		LWV
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%s. Bojiya dlan"
+}
