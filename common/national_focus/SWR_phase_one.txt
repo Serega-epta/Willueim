@@ -585,7 +585,7 @@ focus_tree = {
 			hidden_effect = {
 				set_popularities = {
 					humanists = 50
-						free_people = 22
+					free_people = 22
 					technocracy = 8
 					bandits = 11
 					militarists = 9
@@ -895,7 +895,7 @@ focus_tree = {
 				}
 			IF = {
 				limit = {
-					ruling_party = humanists
+					has_government = humanists
 				}
 			
 				remove_ideas = SWR_connections
@@ -910,7 +910,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					ruling_party = free_people
+					has_government = free_people
 				}
 				add_stability = -0.05
 				add_political_power = 30
@@ -923,7 +923,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					ruling_party = bandits
+					has_government = bandits
 				}
 				add_stability = -0.05
 				add_political_power = 30
@@ -942,19 +942,19 @@ focus_tree = {
 		id = SWR_state_of_army
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_army_status
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_army_condition_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_army_status_FREE
 		}
@@ -973,19 +973,19 @@ focus_tree = {
 		id = SWR_action_plan
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_action_plan
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_action_plan_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_action_plan_FREE
 		}
@@ -1017,19 +1017,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_leader_decision
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_leaders_decision_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_leader_desision_FREE
 		}
@@ -1050,19 +1050,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_elite
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_elite_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_elite_FREE
 		}
@@ -1101,19 +1101,19 @@ focus_tree = {
 		id = SWR_balance
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_balance
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_balance_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_balance_FREE
 		}
@@ -1135,19 +1135,19 @@ focus_tree = {
 		id = SWR_everyone_in_row
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_everything
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_everything_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_everethyng_FREE
 		}
@@ -1204,19 +1204,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_propaganda_tools
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_propaganda_means_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_propaganda_tools_FREE
 		}
@@ -1235,19 +1235,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_quality_weapons
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_quality_people_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_quality_weapon_FREE
 		}
@@ -1271,19 +1271,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_quality_people
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_quality_people_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_quality_people_FREE
 		}
@@ -1306,19 +1306,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_wise_proposal
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_wise_proposal_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_wise_proposal_FREE
 		}
@@ -1338,19 +1338,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_talk_with_the_king
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_talk_with_tsar_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_talk_to_king_FREE
 		}
@@ -1375,19 +1375,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_transport_troops
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_move_troops_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_move_troops_FREE
 		}
@@ -1458,19 +1458,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_give_guarantees
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_give_guarantees_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_give_garanties_FREE
 		}
@@ -1495,19 +1495,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_integrate_troops
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_integrate_troops_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_integrate_troops_FREE
 		}
@@ -1554,19 +1554,19 @@ focus_tree = {
 		cost = 1.42
 		icon = {
 			trigger = {
-				has_goverment = bandits
+				has_government = bandits
 			}
 			value = GFX_SWR_preemptive_strike
 		}
 		icon = {
 			trigger = {
-				has_goverment = free_people
+				has_government = free_people
 			}
 			value = GFX_SWR_preemptive_strike_PEACE
 		}
 		icon = {
 			trigger = {
-				has_goverment = humanists
+				has_government = humanists
 			}
 			value = GFX_SWR_perventive_strike_FREE
 		}
