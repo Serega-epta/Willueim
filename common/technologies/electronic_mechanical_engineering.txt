@@ -11,7 +11,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
-		start_year = 2020
+		start_year = 2021
 		folder = {
 			name = electronics_folder
 			position = {
@@ -37,7 +37,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = electronics_folder
 			position = {
@@ -55,7 +55,7 @@ technologies = {
 	automation_of_production_facilities = {
 		production_factory_start_efficiency_factor = 0.05
 		research_cost = 1
-		start_year = 2030
+		start_year = 2027
 		folder = {
 			name = electronics_folder
 			position = {
@@ -78,7 +78,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
-		start_year = 2040
+		start_year = 2031
 		folder = {
 			name = electronics_folder
 			position = {
@@ -106,7 +106,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = electronics_folder
 			position = {
@@ -122,7 +122,7 @@ technologies = {
 		}
 	}
 	improved_radio_communication = {
-		start_year = 2040
+		start_year = 2031
 		on_research_complete = {
 			custom_effect_tooltip = improved_radio_communication_tt
 		}
@@ -150,7 +150,7 @@ technologies = {
 		}
 	}
 	EMI = {
-		start_year = 2030
+		start_year = 2027
 		category_army = {
 			defense = 0.1
 		}
@@ -174,7 +174,7 @@ technologies = {
 		}
 	}
 	stationary_EMI_systems = {
-		start_year = 2040
+		start_year = 2031
 		category_army = {
 			soft_attack = 0.05
 		}
@@ -198,10 +198,9 @@ technologies = {
 		}
 	}
 	portable_EMI_systems = {
-		start_year = 2050
-		on_research_complete = {
-			custom_effect_tooltip = portable_EMI_systems_tt
-			set_country_flag = acess_to_pulse_jammers
+		start_year = 2036
+		enable_subunits = {
+			pulse_jammers
 		}
 		research_cost = 1
 		folder = {
@@ -222,7 +221,7 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = internet_tt
 		}
-		start_year = 2050
+		start_year = 2036
 		research_speed_factor = 0.1
 		path = {
 			leads_to_tech = quantum_internet
@@ -244,7 +243,7 @@ technologies = {
 		}
 	}
 	quantum_internet = {
-		start_year = 2060
+		start_year = 2041
 		research_cost = 1
 		research_speed_factor = 0.2
 		folder = {
@@ -276,7 +275,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 2020
+		start_year = 2021
 		folder = {
 			name = electronics_folder
 			position = {
@@ -298,7 +297,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = electronics_folder
 			position = {
@@ -318,7 +317,7 @@ technologies = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
-		start_year = 2030
+		start_year = 2026
 		path = {
 			leads_to_tech = nuclear_fusion
 			research_cost_coeff = 1
@@ -341,7 +340,7 @@ technologies = {
 	nuclear_fusion = {
 		research_cost = 2
 		local_resources_factor = 0.1
-		start_year = 2040
+		start_year = 2031
 		folder = {
 			name = electronics_folder
 			position = {
@@ -369,7 +368,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 2030
+		start_year = 2026
 		enable_building = {
 			building = nuclear_reactor
 			level = 1
@@ -393,7 +392,7 @@ technologies = {
 			air_attack = 0.05
 		}
 		research_cost = 2
-		start_year = 2040
+		start_year = 2031
 		folder = {
 			name = electronics_folder
 			position = {
@@ -419,7 +418,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 2040
+		start_year = 2031
 		folder = {
 			name = electronics_folder
 			position = {
@@ -440,7 +439,7 @@ technologies = {
 			hard_attack = 0.05
 		}
 		research_cost = 2
-		start_year = 2050
+		start_year = 2036
 		army_infantry_attack_factor = 0.05
 		folder = {
 			name = electronics_folder
@@ -457,7 +456,7 @@ technologies = {
 		}
 	}
 	radioactive_bombs = {
-		start_year = 2050
+		start_year = 2036
 		category_fighter = {
 			air_attack = 0.1
 		}

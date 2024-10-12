@@ -112,33 +112,11 @@ technology_folders = {
 	}
 	armour_folder = {
 		ledger = army
-		#:( NOT = { has_dlc = "No Step Back" }
-		available = {
-			always = yes
-		}
-	}
-	nsb_armour_folder = {
-		ledger = army
-		#:( has_dlc = "No Step Back"
-		available = { 
-			always = no 
-		} 
 	}
 	artillery_folder = {
 		ledger = army
 	}
 	air_techs_folder = {
-		#:( NOT = { has_dlc = "By Blood Alone" }
-		available = { 
-			always = yes
-		}
-		ledger = air
-	}
-	bba_air_techs_folder = {
-		#:( has_dlc = "By Blood Alone"
-		available = { 
-			always = no 
-		}
 		ledger = air
 	}
 	industry_folder = {
