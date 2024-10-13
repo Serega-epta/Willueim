@@ -14,28 +14,11 @@ set_technology = {
 	pre_war_MBT = 1
 	basic_mass_MBT = 1
 }
-if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-	set_technology = {
-		bba_pre_war_fighter = 1
-		bba_basic_specialized_fighter = 1
-		bba_basic_specialized_helicopter = 1
-	}
-}
-IF = {
-	limit = {
-		NOT = {
-			has_dlc = "By Blood Alone"
-		}
-	}
-	set_technology = {
-		pre_war_fighter = 1
-		basic_specialized_aircraft = 1
-		basic_specialized_fighter = 1
-		basic_specialized_helicopter = 1
-	}
+set_technology = {
+	pre_war_fighter = 1
+	basic_specialized_aircraft = 1
+	basic_specialized_fighter = 1
+	basic_specialized_helicopter = 1
 }
 set_research_slots = 2
 set_convoys = 0
