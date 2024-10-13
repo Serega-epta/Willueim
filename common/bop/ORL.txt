@@ -1,0 +1,134 @@
+ORL_power_balance = {
+    left_side = Messiah_side
+    right_side = Hypocrite_side
+    decision_category = ORL_balance_of_power_category
+    range = {
+        id = Confusion_in_soul
+        min = -0.15
+        max = 0.15
+        modifier = {
+        }
+    }
+    side = {
+        id = Messiah_side
+        range = {
+            id = Adept
+            max = -0.15
+            min = -0.35
+            modifier = {
+                enemy_justify_war_goal_time = -0.15
+                recruitable_population = -0.05
+            }
+        }
+        range = {
+            id = Acolyte
+            max = -0.35
+            min = -0.5
+            modifier = {
+                enemy_justify_war_goal_time = -0.15
+                recruitable_population = -0.05
+                mobilization_speed = 0.15
+                resistance_growth = 0.2
+            }
+        }
+        range = {
+            id = Fanatic
+            max = -0.5
+            min = -0.75
+            modifier = {
+                enemy_justify_war_goal_time = -0.15
+                recruitable_population = -0.05
+                mobilization_speed = 0.15
+                resistance_growth = 0.2
+                command_power_gain = 0.05
+                experience_gain_army = 0.02
+                resistance_damage_to_garrison = -0.05
+            }
+        }
+        range = {
+            id = Path_to_Hypostasis
+            max = -0.75
+            min = -0.9
+            modifier = {
+                enemy_justify_war_goal_time = -0.15
+                recruitable_population = -0.05
+                mobilization_speed = 0.15
+                resistance_growth = 0.2
+                command_power_gain = 0.05
+                experience_gain_army = 0.02
+                resistance_damage_to_garrison = -0.05
+                production_lack_of_resource_penalty_factor = -0.2
+                production_factory_efficiency_gain_factor = -0.2
+            }
+        }
+        range = {
+            id = Living_Saint
+            max = -0.9
+            min = -1
+            modifier = {
+                custom_modifier_tooltip = endgame_tt
+            }
+        }
+    }
+    side = {
+        id = Hypocrite_side
+        range = {
+            id = Agnostic
+            min = 0.15
+            max = 0.35
+            modifier = {
+                enemy_justify_war_goal_time = 0.15
+                recruitable_population = 0.05
+            }
+        }
+        range = {
+            id = Atheist
+            min = 0.35
+            max = 0.5
+            modifier = {
+                enemy_justify_war_goal_time = 0.15
+                recruitable_population = 0.05
+                mobilization_speed = -0.15
+                resistance_growth = -0.2
+            }
+        }
+        range = {
+            id = Blasphemer
+            min = 0.5
+            max = 0.75
+            modifier = {
+                enemy_justify_war_goal_time = 0.15
+                recruitable_population = 0.05
+                mobilization_speed = -0.15
+                resistance_growth = -0.2
+                command_power_gain = -0.05
+                experience_gain_army = -0.02
+                resistance_damage_to_garrison = 0.05
+            }
+        }
+        range = {
+            id = Militant_atheist
+            min = 0.75
+            max = 0.9
+            modifier = {
+                enemy_justify_war_goal_time = 0.15
+                recruitable_population = 0.05
+                mobilization_speed = -0.15
+                resistance_growth = -0.2
+                command_power_gain = -0.05
+                experience_gain_army = -0.02
+                resistance_damage_to_garrison = 0.05
+                production_lack_of_resource_penalty_factor = 0.2
+                production_factory_efficiency_gain_factor = 0.2
+            }
+        }
+        range = {
+            id = Heretic
+            min = 0.9
+            max = 1
+            modifier = {
+                custom_modifier_tooltip = endgame_tt
+            }
+        }
+    }
+}
