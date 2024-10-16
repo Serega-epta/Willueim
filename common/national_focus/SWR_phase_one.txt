@@ -57,7 +57,9 @@ focus_tree = {
         prerequisite = { focus = SWR_bringing_people_together }
 		completion_reward = {
 			country_event = SWR_phase_one.4
-			load_focus_tree = SWR_phase_1_ep_1.2
+			hidden_effect = {
+				load_focus_tree = SWR_phase_1_ep_1.2			
+			}
 		}
 	}
 }
@@ -396,6 +398,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SWR_race_has_begun
+		icon = GFX_SWR_race_started
 		cost = 1
 		x = 5
 		y = 4
@@ -1588,7 +1591,10 @@ focus_tree = {
 			focus = SWR_integrate_troops
 		}
 		completion_reward = {
-			
+			create_wargoal = {
+				target = LWV
+				type = annex_everything
+			}
 		}
 	}
 }

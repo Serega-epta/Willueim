@@ -2,7 +2,7 @@ ideas = {
 	country = {
 		#Расколотое общество#
 		SWR_divided_society = {
-			picture = GFX_idea_SWR_divaided_society_idea
+			picture = SWR_divided_society_idea
 			modifier = {
 				stability_factor = -0.01
                 war_support_factor = -0.01
@@ -11,7 +11,7 @@ ideas = {
 		}
         #Русская Православная Церковь#
 		SWR_russian_orthodox_church = {
-			picture = GFX_idea_SWR_russuian_ortodox_church_idea
+			picture = SWR_russian_orthodox_church_idea
 			modifier = {
 				political_power_factor= 0.07
 			}
@@ -19,98 +19,22 @@ ideas = {
 
         #Инквизиция#
 		SWR_inquisition = {
-			picture = GFX_idea_SWR_inquisition_idea
+			picture = SWR_inquisition_idea
 			modifier = {
 				monthly_population = -0.05
                 compliance_growth= 0.05
                 compliance_gain = 0.02
 			}
 		}
-		#Сопротивление егерей#
-		SWR_resistance_of_huntsman = {
-			hidden = yes
-			modifier = {
-				production_speed_buildings_factor = -0.05
-				production_factory_efficiency_gain_factor = -0.05
-				offence = -0.05
-				defence = -0.05
-			}
-		}
-		#Плохо работающий государственный аппарат#
-		SWR_poorly_functioning_state_apparatus = {
-			hidden = yes
-			modifier = {
-				political_power_gain = -0.5
-				offence = -0.05
-				defence = -0.05
-			}
-		}
-		#Благодарность#
-		SWR_gratitude = {
-			hidden = yes
-			modifier = {
-				consumer_goods_factor = 0.05
-			}
-		}
-		#Благодарность старцы#
-		SWR_gratitude_elders = {
-			hidden = yes
-			modifier = {
-				consumer_goods_factor = 0.1
-			}
-		}
-		#Массовый террор#
-		SWR_mass_terror = {
-			hidden = yes
-			modifier = {
-				humanists_drift = -0.01
-				political_power_gain = 0.5
-				monthly_population = -0.1
-				offence = -0.05
-				defence = -0.05
-			}
-		}
-		#Замедление вырубки деревьев#
-		SWR_slowing_down_tree_felling = {
-			hidden = yes
-			modifier = {
-				political_power_factor = 0.1
-				consumer_goods_factor = 0.05
-				production_speed_buildings_factor = -0.02
-				production_factory_max_efficiency_factor = -0.25
-			}
-		}
 		#Парализованная Инквизиция#
 		SWR_paralyzed_inquisition = {
-			hidden = yes
+			picture = SWR_paralaised_inquisitions_idea
 			modifier = {
 				compliance_growth= -0.1
-				compliance_gain =- 0.05
+				compliance_gain = -0.05
 				decryption_factor = -0.1
 				encryption_factor = -0.1
 				stability_factor = -0.01
-			}
-		}
-		#Хаос на производстве одежды#
-		SWR_chaos_in_clothing_production = {
-			picture = GFX_idea_SWR_slowdown_production_idea
-			modifier = {
-				political_power_factor = 0.3
-				consumer_goods_factor = 0.2
-				production_speed_buildings_factor = -0.1
-				production_factory_max_efficiency_factor = -0.02
-			}
-		}
-
-		#Против ревизионистов!#
-		SWR_against_revisionists = {
-			picture = GFX_idea_SWR_inquisition_idea
-			modifier = {
-				targeted_modifier = {
-    				tag = LWV
-    				attack_bonus_against = 0.02
-    				breakthrough_bonus_against = 0.02
-				}
 			}
 		}
     }
@@ -139,9 +63,74 @@ ideas = {
 		}
 		#Агитация#
 		SWR_agitation = {
-			hidden = yes
 			modifier = {
 				political_power_factor = 0.1
+			}
+		}
+		#Замедление вырубки деревьев#
+		SWR_slowing_down_tree_felling = {
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.02
+				production_factory_max_efficiency_factor = -0.25
+			}
+		}
+		#Хаос на производстве одежды#
+		SWR_chaos_in_clothing_production = {
+			modifier = {
+				political_power_factor = 0.3
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.02
+			}
+		}
+		#Сопротивление егерей#
+		SWR_resistance_of_huntsman = {
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				offence = -0.05
+				defence = -0.05
+			}
+		}
+		#Плохо работающий государственный аппарат#
+		SWR_poorly_functioning_state_apparatus = {
+			modifier = {
+				political_power_gain = -0.5
+				offence = -0.05
+				defence = -0.05
+			}
+		}
+		#Благодарность#
+		SWR_gratitude = {
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		#Благодарность старцы#
+		SWR_gratitude_elders = {
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		#Массовый террор#
+		SWR_mass_terror = {
+			modifier = {
+				humanists_drift = -0.01
+				political_power_gain = 0.5
+				monthly_population = -0.1
+				offence = -0.05
+				defence = -0.05
+			}
+		}
+
+		#Против ревизионистов!#
+		SWR_against_revisionists = {
+			targeted_modifier = {
+				tag = LWV
+				attack_bonus_against = 0.02
+				breakthrough_bonus_against = 0.02
 			}
 		}
 	}
