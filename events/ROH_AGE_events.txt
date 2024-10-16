@@ -240,7 +240,7 @@ country_event = {
 		add_to_variable = { AGE_baltic_separatism_conscription_factor = 0.04 tooltip = conscription_factor_tt }
 		add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
 		add_to_variable = { AGE_baltic_separatism_stability_factor = 0.12 tooltip = stability_factor_tt }
-		add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = 0.15 tooltip = industry_free_repair_factor_tt }		
+		add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = 0.15 tooltip = industry_free_repair_factor_tt }
 	}
 }
 
@@ -588,7 +588,7 @@ country_event = {
 		name = AGE.technical.3.a
 		country_event = {
 			id = AGE.technical.4
-			days = 80
+			days = 40
 		}
 	}
 }
@@ -638,31 +638,28 @@ country_event = {
 			transfer_state_to = AGE
 			add_core_of = AGE
 			remove_core_of = TWD
-			set_state_name = STATE_812_age
-			set_province_name = {
-    			id = 3152
-    			name = VICTORY_POINTS_3152_age
-			}
 		}
 		811 = {
 			transfer_state_to = AGE
 			add_core_of = AGE
 			remove_core_of = TWD
-			set_state_name = STATE_811_age
-			set_province_name = {
-    			id = 185
-    			name = VICTORY_POINTS_185_age
-			}
 		}
 		927 = {
 			transfer_state_to = CHU
 			add_core_of = CHU
 			remove_core_of = TWD
-			set_state_name = STATE_927_age
-			set_province_name = {
-    			id = 11127
-    			name = VICTORY_POINTS_11127_age
+		}
+		AGE = {
+			set_division_template_lock = {
+    			division_template = "Сумрачный дивизион"
+    			is_locked = no
 			}
+			add_to_variable = { AGE_baltic_separatism_political_power_factor = -0.08 }
+			add_to_variable = { AGE_baltic_separatism_monthly_population = -0.1 }
+			add_to_variable = { AGE_baltic_separatism_conscription_factor = -0.08 }
+			add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = 0.06 }
+			add_to_variable = { AGE_baltic_separatism_stability_factor = -0.24 }
+			add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = -0.3 }
 		}
 	}
 }
@@ -686,19 +683,17 @@ country_event = {
 		name = AGE.technical.6.a
 		189 = {
 			transfer_state_to = AGE
-			set_state_name = STATE_189_age
-			set_province_name = {
-    			id = 6314
-    			name = VICTORY_POINTS_6314_age
-			}
 		}
 		190 = {
 			transfer_state_to = AGE
-			set_state_name = STATE_190_age
-			set_province_name = {
-    			id = 9262
-    			name = VICTORY_POINTS_9262_age
-			}
+		}
+		AGE = {
+			add_to_variable = { AGE_baltic_separatism_political_power_factor = -0.08 }
+			add_to_variable = { AGE_baltic_separatism_monthly_population = -0.1 }
+			add_to_variable = { AGE_baltic_separatism_conscription_factor = -0.08 }
+			add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = 0.06 }
+			add_to_variable = { AGE_baltic_separatism_stability_factor = -0.24 }
+			add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = -0.3 }
 		}
 	}
 }
@@ -724,7 +719,6 @@ country_event = {
 			transfer_state_to = HAR
 			add_core_of = HAR
 			remove_core_of = SIM
-			set_state_name = STATE_908_age
 		}
 		784 = {
 			transfer_state_to = HAR
@@ -758,19 +752,9 @@ country_event = {
 		name = AGE.technical.7.a
 		763 = {
 			transfer_state_to = AGE
-			set_state_name = STATE_763_age
-			set_province_name = {
-    			id = 6332
-    			name = VICTORY_POINTS_9262_age
-			}
 		}
 		188 = {
 			transfer_state_to = AGE
-			set_state_name = STATE_188_age
-			set_province_name = {
-    			id = 3288
-    			name = VICTORY_POINTS_9262_age
-			}
 		}
 		5 = {
 			transfer_state_to = AGE
@@ -780,19 +764,6 @@ country_event = {
 		}
 		814 = {
 			transfer_state_to = AGE
-			set_state_name = STATE_814_age
-			set_province_name = {
-    			id = 3254
-    			name = VICTORY_POINTS_3254_age
-			}
-			set_province_name = {
-    			id = 11312
-    			name = VICTORY_POINTS_11312_age
-			}
-			set_province_name = {
-    			id = 3272
-    			name = VICTORY_POINTS_3272_age
-			}
 		}
 	}
 }
@@ -818,6 +789,39 @@ country_event = {
 				AGE_powerful_onslaught_idea
 				AGE_cold_blooded_defense_idea
 				AGE_decisive_assault_idea
+			}
+		}
+	}
+}
+
+#Завершени
+country_event = {
+	id = AGE.technical.9
+	title = AGE.technical.9.t
+	desc = AGE.technical.9.d
+    fire_only_once = yes
+	hidden = yes
+	trigger = {
+		AGE = {
+			has_country_flag = not_their_land_anymore_flag
+		}
+		all_state = {
+			NOT = { 
+				OR = {
+					has_dynamic_modifier = { modifier = open_opposition }
+					has_dynamic_modifier = { modifier = clandestine_cells }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = AGE.technical.9.a
+		AGE = {
+			add_ideas = AGE_will_of_Motherland_fulfilled
+			add_trait = {
+    			character = AGE_aleksandr_lazarevich
+     			trait = Father_of_Serbs_trait
 			}
 		}
 	}
@@ -904,3 +908,4 @@ country_event = { #на обьявление войны через 10 дней
 		}
 	}
 }
+

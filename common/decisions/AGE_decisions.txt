@@ -65,7 +65,98 @@ AGE_their_freedoms = {
 			FROM = {
 				remove_dynamic_modifier = { modifier = clandestine_cells }
 				add_dynamic_modifier = { modifier = resistance_completely_eradicated }
+				IF = {
+					limit = {
+						state = 911
+					}
+					set_state_name = STATE_911_age
+					set_province_name = {
+    					id = 3296
+    					name = VICTORY_POINTS_3296_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 809
+					}
+					set_state_name = STATE_809_age
+					set_province_name = {
+    					id = 6222
+    					name = VICTORY_POINTS_6222_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 12
+					}
+					set_state_name = STATE_12_age
+					set_province_name = {
+    					id = 9501
+    					name = VICTORY_POINTS_9501_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 13
+					}
+					set_state_name = STATE_13_age
+					set_province_name = {
+    					id = 3174
+    					name = VICTORY_POINTS_3174_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 812
+					}
+					set_state_name = STATE_812_age
+					set_province_name = {
+    					id = 3152
+    					name = VICTORY_POINTS_3152_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 811
+					}
+					set_state_name = STATE_811_age
+					set_province_name = {
+    					id = 185
+    					name = VICTORY_POINTS_185_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 189
+					}
+					set_state_name = STATE_189_age
+					set_province_name = {
+    					id = 6314
+    					name = VICTORY_POINTS_6314_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 190
+					}
+					set_state_name = STATE_190_age
+					set_province_name = {
+    					id = 9262
+    					name = VICTORY_POINTS_9262_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 188
+					}
+					set_state_name = STATE_188_age
+					set_province_name = {
+    					id = 3288
+    					name = VICTORY_POINTS_9262_age
+					}
+				}
 			}
+
 			army_experience = 5
 			add_to_variable = { var_terrorist_attack = -1 tooltip = var_terrorist_attack_minus_1_tt }
 			add_to_variable = { var_preventing_terrorist_attack = 5 tooltip = var_preventing_terrorist_attack_plus_5_tt }
@@ -131,7 +222,9 @@ AGE_their_freedoms = {
 		#		}
 		#	}		
 		#}
-		target_array = AGE.allies
+		target_array = CHU.owned_states
+		target_array = HAR.owned_states
+		target_array = BLZ.owned_states
 		state_target = yes
 		cost = 30
 		days_remove = 30
@@ -182,7 +275,9 @@ AGE_their_freedoms = {
 		#		}
 		#	}		
 		#}
-		target_array = AGE.allies
+		target_array = CHU.owned_states
+		target_array = HAR.owned_states
+		target_array = BLZ.owned_states
 		state_target = yes
 		cost = 15
 		days_remove = 50
@@ -190,6 +285,70 @@ AGE_their_freedoms = {
 			FROM = {
 				remove_dynamic_modifier = { modifier = clandestine_cells }
 				add_dynamic_modifier = { modifier = resistance_completely_eradicated }
+				IF = {
+					limit = {
+						state = 927
+					}
+					set_state_name = STATE_927_age
+					set_province_name = {
+    					id = 11127
+    					name = VICTORY_POINTS_11127_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 191
+					}
+					set_state_name = STATE_191_age
+					set_province_name = {
+    					id = 9221
+    					name = VICTORY_POINTS_9221_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 910
+					}
+					set_province_name = {
+    					id = 310
+    					name = VICTORY_POINTS_310_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 909
+					}
+					set_province_name = {
+    					id = 11358
+    					name = VICTORY_POINTS_11358_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 815
+					}
+					set_state_name = STATE_815_age
+					set_province_name = {
+    					id = 9438
+    					name = VICTORY_POINTS_9438_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 11
+					}
+					set_state_name = STATE_11_age
+					set_province_name = {
+    					id = 6296
+    					name = VICTORY_POINTS_6296_age
+					}
+				}
+				else_if = {
+					limit = {
+						state = 908
+					}
+					set_state_name = STATE_908_age
+				}
 			}
 			army_experience = 5
 			add_to_variable = { var_terrorist_attack = -1 tooltip = var_terrorist_attack_minus_1_tt }
@@ -350,7 +509,16 @@ AGE_their_freedoms = {
 	}
 	AGE_baltics_are_probing = {
 		icon = GFX_decision_eng_trade_unions_support
-		activation = { has_country_flag = still_their_land_flag }
+		activation = {
+			has_country_flag = still_their_land_flag
+			NOT = {
+				check_variable = {
+					var = AGE_baltic_separatism_political_power_factor
+					value = 0
+					compare = equals
+				}
+			}
+		}
 		available = { 
 			any_owned_state = {
 				NOT = { 
@@ -362,95 +530,80 @@ AGE_their_freedoms = {
 			}
 			hidden_trigger = { NOT = { has_country_flag = still_their_land_flag } }
 		}
-		days_mission_timeout = 45	
+		days_mission_timeout = 70	
 		is_good = yes
-		complete_effect = { clr_country_flag = still_their_land_flag }
+		complete_effect = {
+		}
 		timeout_effect = {
 			add_to_variable = { var_terrorist_attack = -2 tooltip = var_terrorist_attack_minus_2_tt }
 			add_to_variable = { var_preventing_terrorist_attack = 10 tooltip = var_preventing_terrorist_attack_plus_10_tt }		
 			custom_effect_tooltip = AGE_modify_baltic_separatism_ns_intro
-			if = {
-				limit = { 
-					check_variable = { AGE_baltic_separatism_political_power_factor = 0}
+						add_dynamic_modifier = { modifier = clandestine_cells }
+			add_to_variable = { AGE_baltic_separatism_political_power_factor = 0.04 tooltip = political_power_factor_tt }
+			add_to_variable = { AGE_baltic_separatism_monthly_population = 0.05 tooltip = monthly_population_tt }
+			add_to_variable = { AGE_baltic_separatism_conscription_factor = 0.04 tooltip = conscription_factor_tt }
+			add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { AGE_baltic_separatism_stability_factor = 0.12 tooltip = stability_factor_tt }
+			add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = 0.15 tooltip = industry_free_repair_factor_tt }
+		}
+	}
+	AGE_Reduction_of_insurgent_activity = {
+		icon = GFX_decision_eng_trade_unions_support
+		activation = {
+			has_country_flag = still_their_land_flag
+			any_owned_state = {
+				OR = {
+					has_dynamic_modifier = { modifier = open_opposition }
+					has_dynamic_modifier = { modifier = clandestine_cells }
 				}
-				add_to_variable = { AGE_baltic_separatism_political_power_factor = 0.04 tooltip = political_power_factor_tt }
-				add_to_variable = { AGE_baltic_separatism_monthly_population = 0.05 tooltip = monthly_population_tt }
-				add_to_variable = { AGE_baltic_separatism_conscription_factor = 0.04 tooltip = conscription_factor_tt }
-				add_to_variable = { AGE_baltic_separatism_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
-				add_to_variable = { AGE_baltic_separatism_stability_factor = 0.12 tooltip = stability_factor_tt }
-				add_to_variable = { AGE_baltic_separatism_industry_free_repair_factor = 0.15 tooltip = industry_free_repair_factor_tt }
+			} 
+		}
+		available = { 
+			all_state = {
+				NOT = { 
+					OR = {
+						has_dynamic_modifier = { modifier = open_opposition }
+						has_dynamic_modifier = { modifier = clandestine_cells }
+					}
+				}
 			}
-			hidden_effect = {
-				random_list = {
-					20 = { add_to_variable = { var_808 = 1 } }
-					20 = { add_to_variable = { var_809 = 1 } }
-					20 = { add_to_variable = { var_12 = 1 } }
-					20 = { add_to_variable = { var_13 = 1 } }
-					20 = { add_to_variable = { var_911 = 1 } }
+		}
+		days_mission_timeout = 35	
+		is_good = yes
+		complete_effect = {
+			clr_country_flag = still_their_land_flag
+			add_ideas = AGE_Harmony_and_agreement
+			add_trait = {
+    			character = AGE_aleksandr_lazarevich
+     			trait = Peacemaker_trait
+			}
+		}
+		timeout_effect = {
+			random_controlled_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = open_opposition }
+						has_dynamic_modifier = { modifier = clandestine_cells }
+					}
 				}
-				if = {
-					limit = { 
-						check_variable = { var_808 = 3 }
-						808 = { has_dynamic_modifier = { modifier = open_opposition } }
+				IF = {
+					limit = {
+						has_dynamic_modifier = { modifier = open_opposition }
 					}
-					set_variable = { var_808 = 0 }
-					808 = {
-						remove_dynamic_modifier = { modifier = open_opposition }
-						add_dynamic_modifier = { modifier = clandestine_cells }
-					}
-					AGE = { country_event = { id = AGE_baltics_are_probing.1 } }
-				}
-				else_if = {
-					limit = { 
-						check_variable = { var_808 = 3 }
-						809 = { has_dynamic_modifier = { modifier = open_opposition } }
-					}
-					set_variable = { var_809 = 0 }
-					809 = {
-						remove_dynamic_modifier = { modifier = open_opposition }
-						add_dynamic_modifier = { modifier = clandestine_cells }
-					}
-					AGE = { country_event = { id = AGE_baltics_are_probing.1 } }
+					remove_dynamic_modifier = { modifier = open_opposition }
+					add_dynamic_modifier = { modifier = clandestine_cells }
 				}
 				else_if = {
-					limit = { 
-						check_variable = { var_12 = 3 }
-						12 = { has_dynamic_modifier = { modifier = open_opposition } }
+					limit = {
+						has_dynamic_modifier = { modifier = clandestine_cells }
 					}
-					set_variable = { var_12 = 0 }
-					12 = {
-						remove_dynamic_modifier = { modifier = open_opposition }
-						add_dynamic_modifier = { modifier = clandestine_cells }
-					}
-					AGE = { country_event = { id = AGE_baltics_are_probing.1 } }
-				}
-				else_if = {
-					limit = { 
-						check_variable = { var_13 = 3 }
-						13 = { has_dynamic_modifier = { modifier = open_opposition } }
-					}
-					set_variable = { var_13 = 0 }
-					13 = {
-						remove_dynamic_modifier = { modifier = open_opposition }
-						add_dynamic_modifier = { modifier = clandestine_cells }
-					}
-					AGE = { country_event = { id = AGE_baltics_are_probing.1 } }
-				}
-				else_if = {
-					limit = { 
-						check_variable = { var_911 = 3 }
-						911 = { has_dynamic_modifier = { modifier = open_opposition } }
-					}
-					set_variable = { var_911 = 0 }
-					911 = {
-						remove_dynamic_modifier = { modifier = open_opposition }
-						add_dynamic_modifier = { modifier = clandestine_cells }
-					}
-					AGE = { country_event = { id = AGE_baltics_are_probing.1 } }
+					remove_dynamic_modifier = { modifier = clandestine_cells }
+					add_dynamic_modifier = { modifier = resistance_completely_eradicated }
 				}
 			}
 		}
 	}
+
 	AGE_war_with_baltosphere = {
 		icon = GFX_decision_eng_trade_unions_support
 		activation = { has_country_flag = war_with_baltosphere_flag }
@@ -525,7 +678,7 @@ AGE_red_forest = {
 			}
     	}
     	is_good = yes
-    	days_mission_timeout = 75
+    	days_mission_timeout = 105
     	selectable_mission = no
 		complete_effect = {
 		}
@@ -782,7 +935,7 @@ AGE_red_forest = {
 		}
 		available = {
 			has_equipment = {
-				basic_MLRS_equipment > 199
+				basic_MLRS_equipment > 134
 			}
 			hidden_trigger = {
 				command_power >39
@@ -793,7 +946,7 @@ AGE_red_forest = {
     		command_power > 39
 		}
 		custom_cost_text = decision_cost_CP_40_pp_40
-		days_remove = 40
+		days_remove = 30
 		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = {
@@ -803,7 +956,7 @@ AGE_red_forest = {
 		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = basic_MLRS_equipment
-				amount = -25
+				amount = -20
 			}
 			declare_war_on = {
 				target = SIM
@@ -942,7 +1095,7 @@ AGE_south_intervention = {
     	    always = no
     	}
     	is_good = yes
-    	days_mission_timeout = 70
+    	days_mission_timeout = 100
     	selectable_mission = no
 		fire_only_once = yes
 		complete_effect = {
@@ -970,7 +1123,7 @@ AGE_south_intervention = {
 			}
     	}
     	is_good = yes
-    	days_mission_timeout = 60
+    	days_mission_timeout = 80
     	selectable_mission = no
 		fire_only_once = yes
     	timeout_effect = {
@@ -1071,7 +1224,7 @@ AGE_south_intervention = {
 			has_completed_focus = AGE_chaos_at_the_border
 			command_power > 24
 			has_equipment = {
-				basic_MLRS_equipment > 99
+				basic_MLRS_equipment > 39
 			}
 			11 = {
 				is_controlled_by = SIM
@@ -1083,7 +1236,7 @@ AGE_south_intervention = {
     		command_power > 24
 		}
 		custom_cost_text = decision_cost_CP_25_pp_50
-		days_remove = 20
+		days_remove = 15
 		days_re_enable = 25
 		complete_effect = {
 			hidden_effect = {
@@ -1093,7 +1246,7 @@ AGE_south_intervention = {
 		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = basic_MLRS_equipment
-				amount = -5
+				amount = -4
 			}
 			start_border_war = {
     			change_state_after_war = no
@@ -1132,7 +1285,7 @@ AGE_south_intervention = {
 			has_completed_focus = AGE_chaos_at_the_border
 			command_power > 24
 			has_equipment = {
-				basic_MLRS_equipment > 99
+				basic_MLRS_equipment > 39
 			}
 			815 = {
 				is_controlled_by = SIM
@@ -1144,7 +1297,7 @@ AGE_south_intervention = {
     		command_power > 24
 		}
 		custom_cost_text = decision_cost_CP_25_pp_50
-		days_remove = 20
+		days_remove = 15
 		days_re_enable = 25
 		complete_effect = {
 			hidden_effect = {
@@ -1154,7 +1307,7 @@ AGE_south_intervention = {
 		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = basic_MLRS_equipment
-				amount = -5
+				amount = -4
 			}
 
 			start_border_war = {
@@ -1172,6 +1325,25 @@ AGE_south_intervention = {
         			state = 815
         			num_provinces = 4
 				}
+			}
+		}
+	}
+
+	AGE_attack_sectants = {
+		visible = {
+			has_completed_focus = AGE_chaos_at_the_border
+		}
+		available = {
+			has_war = no
+		}
+
+		cost = 0
+		days_remove = 10
+		fire_only_once = yes
+		remove_effect = {
+			declare_war_on = {
+				target = SIM
+				type = annex_everything
 			}
 		}
 	}

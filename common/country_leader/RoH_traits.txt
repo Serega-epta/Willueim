@@ -212,6 +212,31 @@ leader_traits = {
 	}
 
 
+
+	###################################
+	#### Черты Агемы ###
+	###################################
+
+
+	Father_of_Serbs_trait = {
+		random = no
+		Conscription = 0.03
+		army_core_defence_factor = 0.1	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	Peacemaker_trait = {
+		random = no
+		war_stability_factor = 0.5
+		production_speed_civil_factory _factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
 	###################################
 	###Черты миноров###
 	###################################

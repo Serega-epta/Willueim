@@ -12,6 +12,24 @@ on_actions = {
 				188 = { add_dynamic_modifier = { modifier = open_opposition } }
 			}
 			else_if = { 
+				limit = {
+					FROM.FROM = { state = 189 }
+					189 = {
+						is_owned_by = AGE
+					} 
+				}
+				189 = { add_dynamic_modifier = { modifier = open_opposition } }
+			}
+			else_if = { 
+				limit = {
+					FROM.FROM = { state = 190 }
+					190 = {
+						is_owned_by = AGE
+					} 
+				}
+				190 = { add_dynamic_modifier = { modifier = open_opposition } }
+			}
+			else_if = { 
 				limit = { 
 					FROM.FROM = { state = 814 }
 					814 = { 

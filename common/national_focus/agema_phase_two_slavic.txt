@@ -12,7 +12,7 @@ focus_tree = {
     focus = {
 		id = AGE_through_testaments_to_paradise
 		icon = GFX_AGE_through_testaments_to_paradise
-		cost = 2.00
+		cost = 3.00
 		x = 6
 		y = 0
 		ai_will_do = { factor = 10 }
@@ -28,7 +28,7 @@ focus_tree = {
 	focus = {
 		id = AGE_visit_our_comrades_slavic
 		icon = GFX_AGE_visit_our_comrades_slavic
-		cost = 1.00
+		cost = 4.00
 		x = 6
 		y = 1
 		ai_will_do = { factor = 10 }
@@ -42,7 +42,7 @@ focus_tree = {
 	focus = {
 		id = AGE_protect_borders
 		icon = GFX_AGE_protect_borders
-		cost = 2.00
+		cost = 3.00
 		x = 6
 		y = 3
 		ai_will_do = { factor = 10 }
@@ -58,48 +58,13 @@ focus_tree = {
 				add_to_faction = HAR
 				add_to_faction = BLZ
 			}
-			hidden_effect = {
-				191 = {
-					set_state_name = STATE_191_age
-					set_province_name = {
-    					id = 9221
-    					name = VICTORY_POINTS_9221_age
-					}
-				}
-				910 = {
-					set_province_name = {
-    					id = 310
-    					name = VICTORY_POINTS_310_age
-					}
-				}
-				909 = {
-					set_province_name = {
-    					id = 11358
-    					name = VICTORY_POINTS_11358_age
-					}
-				}
-				815 = {
-					set_state_name = STATE_815_age
-					set_province_name = {
-    					id = 9438
-    					name = VICTORY_POINTS_9438_age
-					}
-				}
-				11 = {
-					set_state_name = STATE_11_age
-					set_province_name = {
-    					id = 6296
-    					name = VICTORY_POINTS_6296_age
-					}
-				}
-			}
 		}
 	}
 
 	focus = {
 		id = AGE_mutual_assistance
 		icon = GFX_AGE_mutual_assistance
-		cost = 2.00
+		cost = 3.00
 		x = 6
 		y = 4
 		ai_will_do = { factor = 10 }
@@ -113,7 +78,7 @@ focus_tree = {
 	focus = {
 		id = AGE_south_direction
 		icon = GFX_AGE_south_direction
-		cost = 4.00
+		cost = 5.00
 		x = 2
 		y = 5
 		ai_will_do = { factor = 10 }
@@ -152,7 +117,7 @@ focus_tree = {
 	focus = {
 		id = AGE_help_Zhukovsky
 		icon = GFX_AGE_help_Zhukovsky
-		cost = 4.00
+		cost = 5.00
 		x = 2
 		y = 6
 		ai_will_do = { factor = 10 }
@@ -174,7 +139,7 @@ focus_tree = {
 	focus = {
 		id = AGE_our_haters
 		icon = GFX_AGE_our_haters
-		cost = 2.00
+		cost = 4.00
 		x = 2
 		y = 7
 		ai_will_do = { factor = 10 }
@@ -213,7 +178,7 @@ focus_tree = {
 	focus = {
 		id = AGE_south_east_direction
 		icon = GFX_AGE_south_east_direction
-		cost = 4.00
+		cost = 5.00
 		x = 6
 		y = 5
 		ai_will_do = { factor = 10 }
@@ -251,20 +216,23 @@ focus_tree = {
 	focus = {
 		id = AGE_help_Paramonov
 		icon = GFX_AGE_help_Paramonov
-		cost = 4.00
+		cost = 5.00
 		x = 6
 		y = 6
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = AGE_south_east_direction }
 		completion_reward = {
 			HAR = {
-				capital_scope = {
-                    create_unit = {
-                    	division = "name = \"Передовой заслон\" division_template = \"Передовой заслон\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = HAR
-						count = 2
-                	}
-            	}
+				create_unit = {
+                	division = "name = \"Передовой заслон\" division_template = \"Передовой заслон\" start_experience_factor = 0.5 start_equipment_factor = 0.45 start_manpower_factor = 1" 
+                	ownder = HAR
+					id = 909
+				}
+				create_unit = {
+                	division = "name = \"Передовой заслон\" division_template = \"Передовой заслон\" start_experience_factor = 0.5 start_equipment_factor = 0.45 start_manpower_factor = 1" 
+                	ownder = HAR
+					id = 910
+				}
 			}
 		}
 	}
@@ -272,7 +240,7 @@ focus_tree = {
 	focus = {
 		id = AGE_contain_nature
 		icon = GFX_AGE_contain_nature
-		cost = 2.00
+		cost = 4.00
 		x = 6
 		y = 7
 		ai_will_do = { factor = 10 }
@@ -287,7 +255,7 @@ focus_tree = {
 	focus = {
 		id = AGE_north_east_direction
 		icon = GFX_AGE_north_east_direction
-		cost = 4.00
+		cost = 5.00
 		x = 10
 		y = 5
 		ai_will_do = { factor = 10 }
@@ -321,7 +289,7 @@ focus_tree = {
 	focus = {
 		id = AGE_help_Shazer
 		icon = GFX_AGE_help_Shazer
-		cost = 4.00
+		cost = 5.00
 		x = 10
 		y = 6
 		ai_will_do = { factor = 10 }
@@ -362,7 +330,7 @@ focus_tree = {
 	focus = {
 		id = AGE_calm_the_despairing
 		icon = GFX_AGE_calm_the_despairing
-		cost = 2.00
+		cost = 4.00
 		x = 10
 		y = 7
 		ai_will_do = { factor = 10 }
@@ -401,7 +369,7 @@ focus_tree = {
 	focus = {
 		id = AGE_find_Braunmans_soldiers
 		icon = GFX_AGE_find_Braunmans_soldiers
-		cost = 3.00
+		cost = 6.00
 		x = 4
 		y = 8
 		ai_will_do = { factor = 10 }
@@ -421,7 +389,7 @@ focus_tree = {
 	focus = {
 		id = AGE_reorganization_of_Red_Sabres
 		icon = GFX_AGE_reorganization_of_Red_Sabres
-		cost = 5.00
+		cost = 6.00
 		x = 4
 		y = 10
 		ai_will_do = { factor = 10 }
@@ -452,7 +420,7 @@ focus_tree = {
 	focus = {
 		id = AGE_scary_Red_Forest
 		icon = GFX_AGE_scary_Red_Forest
-		cost = 4.00
+		cost = 5.00
 		x = 8
 		y = 8
 		ai_will_do = { factor = 10 }
@@ -485,7 +453,7 @@ focus_tree = {
 	focus = {
 		id = AGE_regional_economy
 		icon = GFX_AGE_regional_economy
-		cost = 2.00
+		cost = 8.00
 		x = 6
 		y = 9
 		ai_will_do = { factor = 10 }
@@ -500,7 +468,7 @@ focus_tree = {
 	focus = {
 		id = AGE_old_enemies_slavic
 		icon = GFX_AGE_old_enemies_slavic
-		cost = 2.00
+		cost = 4.00
 		x = 6
 		y = 11
 		ai_will_do = { factor = 10 }
@@ -525,7 +493,7 @@ focus_tree = {
     focus = {
 		id = AGE_cold_blooded_defense
 		icon = GFX_AGE_cold_blooded_defense
-		cost = 2.00
+		cost = 4.00
 		x = 2
 		y = 12
 		ai_will_do = { factor = 10 }
@@ -591,7 +559,7 @@ focus_tree = {
     focus = {
 		id = AGE_decisive_assault
 		icon = GFX_AGE_decisive_assault
-		cost = 2.00
+		cost = 4.00
 		x = 10
 		y = 12
 		ai_will_do = { factor = 10 }
@@ -604,7 +572,7 @@ focus_tree = {
     focus = {
 		id = AGE_help_the_partisans
 		icon = GFX_AGE_help_the_partisans
-		cost = 3.00
+		cost = 4.00
 		x = 2
 		y = 13
 		ai_will_do = { factor = 10 }
@@ -621,7 +589,7 @@ focus_tree = {
     focus = {
 		id = AGE_Provide_the_army_slavic
 		icon = GFX_AGE_Provide_the_army_slavic
-		cost = 3.00
+		cost = 4.00
 		x = 10
 		y = 13
 		ai_will_do = { factor = 10 }
