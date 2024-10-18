@@ -10,38 +10,50 @@ ODS_kuban = {
 	}
 	priority = 100
 }
-
 ODS_intention = {
 	icon = saf_anti_colonialist_crusade
 	picture = GFX_intention_picture
 	scripted_gui = ODS_intention
 	visible_when_empty = yes
-	visible  = {
+	visible = {
 		original_tag = ODS
 		has_country_flag = intension_show
 	}
-	allowed = { original_tag = ODS }
-	priority = { base = 5 }
-		
+	allowed = {
+		original_tag = ODS
+	}
+	priority = {
+		base = 5
+	}
 }
-
 ODS_subordination = {
 	icon = saf_anti_colonialist_crusade
 	picture = GFX_subordination_picture
 	visible_when_empty = yes
-	visible  = { original_tag = ODS  }
-	allowed = { original_tag = ODS }
-	priority = { base = 5 }	
+	visible = {
+		original_tag = ODS
+	}
+	allowed = {
+		original_tag = ODS
+	}
+	priority = {
+		base = 5
+	}
 }
 ODS_consciousness = {
 	icon = saf_anti_colonialist_crusade
 	#scripted_gui = ODS_consciousness_gui
 	visible_when_empty = yes
-	visible  = {
-		has_country_flag = ODS_consciousness_unlock	#<- флаг для debug
+	visible = {
+		#<- флаг для debug
+		has_country_flag = ODS_consciousness_unlock
 	}
-	allowed = { original_tag = ODS }
-	priority = { base = 5 }
+	allowed = {
+		original_tag = ODS
+	}
+	priority = {
+		base = 5
+	}
 	#vars
 	#points_consciousness
 	#common_consciousness

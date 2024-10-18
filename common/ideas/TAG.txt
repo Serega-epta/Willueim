@@ -1,18 +1,6 @@
 ideas = {
-
 	country = {
-		PAPIN_KURS = {		#БАЦЬКА
-			picture = TAG_papin_kurs_idea
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		TAG_Father's_Course = {
 			modifier = {
 				production_speed_buildings_factor = -0.1
 				production_factory_max_efficiency_factor = -0.15
@@ -20,7 +8,6 @@ ideas = {
 				monthly_population = 0.15
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
-				
 			}
 		}
 	}

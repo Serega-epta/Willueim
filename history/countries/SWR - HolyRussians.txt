@@ -1,143 +1,23 @@
 capital = 73
-
 oob = SWR
-
 set_technology = {
-   infantry_weapons = 1
-   infantry_weapons1 = 1
-   infantry_weapons2 = 1
-   civilian_clothing = 1
-   old_worlds_uniform = 1
-   gw_artillery = 1
-   tech_support = 1
+	infantry_weapons = 1
+	civilian_clothing = 1
+	tech_support = 1
+	gw_artillery = 1
+	instruments_of_any_era = 1
 }
-
-
-if = {
-    limit = { has_dlc = "By Blood Alone" }
-    set_technology = {
-      bba_pre_war_fighter = 1
-    }
-}
-if = {
-    limit = { NOT = { has_dlc = "By Blood Alone" } }
-    set_technology = {
-      pre_war_fighter = 1
-    }
-}
-
-if = {
-    limit = { has_dlc = "No Step Back" }
-    set_technology = {
-      nsb_pre_war_OPV = 1
-    }
-}
-if = {
-    limit = { NOT = { has_dlc = "No Step Back" } }
-    set_technology = {
-      pre_war_OPV = 1
-    }
-}
-
 set_research_slots = 1
-set_stability = 0.45
-set_war_support = 0.58
+set_stability = 0.46
+set_war_support = 0.57
 set_convoys = 0
-
-load_focus_tree = {
-    tree = SWR_phase_1_ep_1.1
-    keep_completed = no
-}
-
-
-set_power_balance = {
-  id = SWR_power_balance
-  set_value = 0.2
-}
-
-add_opinion_modifier = {
-    target = LWV
-    modifier = revisionists
-}
-
-add_opinion_modifier = {
-    target = BGD
-    modifier = smugglers
-}
-
-country_lock_all_division_template = yes
-
 set_politics = {
 	ruling_party = free_people
 	elections_allowed = no
 }
-
 set_popularities = {
-	bandits = 35
-   free_people = 40
-   humanists = 25
+	sacraments = 15
+	free_people = 85
 }
-
-recruit_character = SWR_Vladislav_Anisiforov
-recruit_character = SWR_Igor_Kadomsky
-recruit_character = SWR_Evgeny_Velehov
-recruit_character = SWR_Maxim_Uvin
-
-add_ideas = {
-   SWR_divided_society
-   SWR_russian_orthodox_church
-   SWR_inquisition
-   limited_recruting
-   classic_faith
-   border_control
-   unstopble_work
-   slaves_labour
-   papers
-   liquidation_of_distortions
-   suppression_social
-}
-
-add_dynamic_modifier = {
-  modifier = SWR_huntsman_squads
-}
-
-set_variable = {
-  var = swr_army_attack_factor
-  value = 0.03
-}
-
-set_variable = {
-  var = swr_army_defence_factor
-  value = 0.03
-}
-
-set_variable = {
-  var = swr_army_speed_factor
-  value = 0.02
-}
-
-set_variable = {
-  var = swr_army_org_factor
-  value = 0.01
-}
-
-set_variable = {
-  var = swr_land_night_attack
-  value =  0.03
-}
-
-set_variable = {
-  var = swr_planning_speed
-  value =  -0.03
-}
-
-set_variable = {
-  var = swr_acclimatization_cold_climate_gain_factor
-  value = 0.05
-}
-
-set_variable = {
-  var = swr_acclimatization_hot_climate_gain_factor
-  value = 0.05
-}
-
+recruit_character = SWR_Velimudr_Aikanenko
+add_ideas = SWR_Jaeger_Squads

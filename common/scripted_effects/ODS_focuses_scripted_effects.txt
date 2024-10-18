@@ -1,46 +1,46 @@
 # Эффект обновления нацдуха "Дикарство" (для фокусов Адмиралтейства)
 
-ODS_renewal_national_spirit_dicarstvo_effect = {
+ODS_renewal_national_spirit_ODS_Savagery_effect = {
 	if = { 
-		limit = { has_idea = dicarstvo }
+		limit = { has_idea = ODS_Savagery }
 		swap_ideas = {
-			remove_idea = dicarstvo
-			add_idea = dicarstvo1
+			remove_idea = ODS_Savagery
+			add_idea = ODS_Savagery1
 		}
 	}
 	else_if = { 
-		limit = { has_idea = dicarstvo1 } 
+		limit = { has_idea = ODS_Savagery1 } 
 		swap_ideas = {
-			remove_idea = dicarstvo1
-			add_idea = dicarstvo2
+			remove_idea = ODS_Savagery1
+			add_idea = ODS_Savagery2
 		}
 	}
 	else_if = { 
-		limit = { has_idea = dicarstvo2 } 
+		limit = { has_idea = ODS_Savagery2 } 
 		swap_ideas = {
-			remove_idea = dicarstvo2
-			add_idea = dicarstvo3
+			remove_idea = ODS_Savagery2
+			add_idea = ODS_Savagery3
 		}
 	}
 	else_if = { 
-		limit = { has_idea = dicarstvo3 } 
+		limit = { has_idea = ODS_Savagery3 } 
 		swap_ideas = {
-			remove_idea = dicarstvo3
-			add_idea = dicarstvo4
+			remove_idea = ODS_Savagery3
+			add_idea = ODS_Savagery4
 		}
 	}
 	else_if = { 
-		limit = { has_idea = dicarstvo4 } 
+		limit = { has_idea = ODS_Savagery4 } 
 		swap_ideas = {
-			remove_idea = dicarstvo4
-			add_idea = dicarstvo5
+			remove_idea = ODS_Savagery4
+			add_idea = ODS_Savagery5
 		}
 	}
 	else_if = { 
-		limit = { has_idea = dicarstvo5 } 
+		limit = { has_idea = ODS_Savagery5 } 
 		swap_ideas = {
-			remove_idea = dicarstvo5
-			add_idea = dicarstvo6
+			remove_idea = ODS_Savagery5
+			add_idea = ODS_Savagery6
 		}
 	}	
 }
@@ -48,54 +48,54 @@ ODS_renewal_national_spirit_dicarstvo_effect = {
 
 # Эффект обновления нацдуха "Доверие" (для фокусов Адмиралтейства)
 
-ODS_renewal_national_spirit_doverie_effect = {
+ODS_renewal_national_spirit_ODS_Trust_effect = {
 	if = { 
-		limit = { has_idea = doverie_1 }
+		limit = { has_idea = ODS_Trust_1 }
 		swap_ideas = {
-			remove_idea = doverie_1
-			add_idea = doverie_2
+			remove_idea = ODS_Trust_1
+			add_idea = ODS_Trust_2
 		}
 	}
 	else_if = { 
-		limit = { has_idea = doverie_2 } 
+		limit = { has_idea = ODS_Trust_2 } 
 		swap_ideas = {
-			remove_idea = doverie_2
-			add_idea = doverie_3
+			remove_idea = ODS_Trust_2
+			add_idea = ODS_Trust_3
 		}
 	}
 	else_if = { 
-		limit = { has_idea = doverie_3 } 
+		limit = { has_idea = ODS_Trust_3 } 
 		swap_ideas = {
-			remove_idea = doverie_3
-			add_idea = doverie_4
+			remove_idea = ODS_Trust_3
+			add_idea = ODS_Trust_4
 		}
 	}
 	else_if = { 
-		limit = { has_idea = doverie_4 } 
+		limit = { has_idea = ODS_Trust_4 } 
 		swap_ideas = {
-			remove_idea = doverie_4
-			add_idea = doverie_5
+			remove_idea = ODS_Trust_4
+			add_idea = ODS_Trust_5
 		}
 	}
 	else_if = { 
-		limit = { has_idea = doverie_5 } 
+		limit = { has_idea = ODS_Trust_5 } 
 		swap_ideas = {
-			remove_idea = doverie_5
-			add_idea = doverie_6
+			remove_idea = ODS_Trust_5
+			add_idea = ODS_Trust_6
 		}
 	}
 	else_if = { 
-		limit = { has_idea = doverie_6 } 
+		limit = { has_idea = ODS_Trust_6 } 
 		swap_ideas = {
-			remove_idea = doverie_6
-			add_idea = doverie_7
+			remove_idea = ODS_Trust_6
+			add_idea = ODS_Trust_7
 		}
 	}
 	else_if = { 
-		limit = { has_idea = doverie_7 } 
+		limit = { has_idea = ODS_Trust_7 } 
 		swap_ideas = {
-			remove_idea = doverie_7
-			add_idea = doverie_8
+			remove_idea = ODS_Trust_7
+			add_idea = ODS_Trust_8
 		}
 	}
 }

@@ -1,15 +1,17 @@
 characters = {
 	MOS_anarchy = {
-		portraits={
-			civilian={
-				large="gfx/leaders/MOS/MOS_anarchy.dds"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_MOS_anarchy"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology = free_people_subideology
-			traits={ MOS_powerlessness }
+			traits = {
+				powerlessness
+			}
 			expire = "3000.1.1.1"
-			id=-1
+			id = -1
 		}
 	}
 }

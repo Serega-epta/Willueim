@@ -1,15 +1,7 @@
 ideas = {
-
 	country = {
-		KRT_amber_dream = {		#Янтарный сон
-			picture = KRT_amber_dream_idea
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1			
+		#Янтарный сон
+		KRT_amber_dream = {
 			modifier = {
 				army_speed_factor = 0.1
 				offence = 0.15
@@ -17,17 +9,11 @@ ideas = {
 				production_speed_buildings_factor = -10
 				stability_factor = -10
 				war_support_factor = -10
-				production_factory_max_efficiency_factor = -10				
+				production_factory_max_efficiency_factor = -10
 			}
 		}
-		KRT_karelian_horde = { #Карельская орда
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
+		#Карельская орда
+		KRT_karelian_horde = {
 			modifier = {
 				industrial_capacity_factory = -0.1
 				production_speed_buildings_factor = -0.1

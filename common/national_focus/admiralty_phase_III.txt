@@ -17,7 +17,7 @@ focus_tree = {
 		completion_reward = {
 			set_cosmetic_tag = ODS_third_phase
 			add_political_power = 100
-			country_event = ODS.34
+			country_event = ODS_phase_three.1
 		}
 	}
 	focus = {
@@ -26,13 +26,16 @@ focus_tree = {
 		x = 10
 		y = 1
 		cost = 5
-		prerequisite = { focus = ODS_climbing_committees }
+		prerequisite = {
+			focus = ODS_climbing_committees
+		}
 		completion_reward = {
-			country_event = ODS.38
+			country_event = ODS_phase_three.5
 			unlock_decision_category_tooltip = ODS_consciousness
 			activate_mission = cementing_consciousness_mission
-			set_country_flag = ODS_consciousness_unlock	#<- удобно для debug 
-		}		
+			#<- удобно для debug 
+			set_country_flag = ODS_consciousness_unlock
+		}
 	}
 	focus = {
 		id = ODS_unresolved_differences
@@ -40,13 +43,15 @@ focus_tree = {
 		x = 10
 		y = 2
 		cost = 2
-		prerequisite = { focus = ODS_system_reorganisation }
+		prerequisite = {
+			focus = ODS_system_reorganisation
+		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = dicarstvo6
-				add_idea = dicarstvo7
+				remove_idea = ODS_Savagery6
+				add_idea = ODS_Savagery7
 			}
-		}		
+		}
 	}
 	focus = {
 		id = ODS_keeper_of_knowledge
@@ -54,13 +59,15 @@ focus_tree = {
 		x = 8
 		y = 3
 		cost = 2
-		prerequisite = { focus = ODS_unresolved_differences }
+		prerequisite = {
+			focus = ODS_unresolved_differences
+		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = dicarstvo7
-				add_idea = dicarstvo8
+				remove_idea = ODS_Savagery7
+				add_idea = ODS_Savagery8
 			}
-			country_event = ODS.48
+			country_event = ODS_phase_three.15
 		}
 	}
 	focus = {
@@ -69,13 +76,15 @@ focus_tree = {
 		x = 12
 		y = 3
 		cost = 2
-		prerequisite = { focus = ODS_unresolved_differences }
+		prerequisite = {
+			focus = ODS_unresolved_differences
+		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = OKO4
-				add_idea = OKO5
+				remove_idea = ODS_OKO4
+				add_idea = ODS_OKO5
 			}
-			country_event = ODS.47	
+			country_event = ODS_phase_three.14
 		}
 	}
 	focus = {
@@ -84,11 +93,13 @@ focus_tree = {
 		x = 10
 		y = 3
 		cost = 5
-		prerequisite = { focus = ODS_unresolved_differences }
+		prerequisite = {
+			focus = ODS_unresolved_differences
+		}
 		completion_reward = {
 			army_experience = 20
-			country_event = ODS.43
-		}		
+			country_event = ODS_phase_three.10
+		}
 	}
 	focus = {
 		id = ODS_dark_triad
@@ -96,21 +107,27 @@ focus_tree = {
 		x = 10
 		y = 4
 		cost = 2
-		prerequisite = { focus = ODS_keeper_of_knowledge }
-		prerequisite = { focus = ODS_hateful }
-		prerequisite = { focus = ODS_keeper_of_peace }
+		prerequisite = {
+			focus = ODS_keeper_of_knowledge
+		}
+		prerequisite = {
+			focus = ODS_hateful
+		}
+		prerequisite = {
+			focus = ODS_keeper_of_peace
+		}
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = dicarstvo8
+				remove_ideas = ODS_Savagery8
 				add_dynamic_modifier = {
-					modifier = dicarstvo_dynamic
+					modifier = ODS_Savagery_dynamic
 				}
-				remove_ideas = black_beret4
+				remove_ideas = ODS_Black_Berets4
 				add_dynamic_modifier = {
-					modifier = black_beret_dynamic
+					modifier = ODS_Black_Berets_dynamic
 				}
 			}
-			country_event = ODS.42
+			country_event = ODS_phase_three.9
 		}
 	}
 	focus = {
@@ -119,7 +136,9 @@ focus_tree = {
 		x = 13
 		y = 5
 		cost = 5
-		prerequisite = { focus = ODS_dark_triad }
+		prerequisite = {
+			focus = ODS_dark_triad
+		}
 		completion_reward = {
 			every_owned_state = {
 				random_select_amount = 6
@@ -129,7 +148,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		}		
+		}
 	}
 	focus = {
 		id = ODS_NERC
@@ -137,16 +156,22 @@ focus_tree = {
 		x = 7
 		y = 5
 		cost = 5
-		prerequisite = { focus = ODS_dark_triad }
+		prerequisite = {
+			focus = ODS_dark_triad
+		}
 		completion_reward = {
 			add_dynamic_modifier = {
 				modifier = NERC_idea
 			}
 			custom_effect_tooltip = NERC1_tt
-			set_variable = { research_NERC = 0.02 }
-			set_variable =  {pp_NERC = -0.05}
-			country_event = ODS.35
-		}		
+			set_variable = {
+				research_NERC = 0.02
+			}
+			set_variable = {
+				pp_NERC = -0.05
+			}
+			country_event = ODS_phase_three.2
+		}
 	}
 	focus = {
 		id = ODS_scientific_scope
@@ -154,14 +179,16 @@ focus_tree = {
 		x = 8
 		y = 6
 		cost = 5
-		prerequisite = { focus = ODS_NERC }
+		prerequisite = {
+			focus = ODS_NERC
+		}
 		completion_reward = {
 			add_political_power = -50
 			swap_ideas = {
-				remove_idea = OKO5
-				add_idea = OKO6
+				remove_idea = ODS_OKO5
+				add_idea = ODS_OKO6
 			}
-		}		
+		}
 	}
 	focus = {
 		id = ODS_revelation_initiative
@@ -169,15 +196,17 @@ focus_tree = {
 		x = 8
 		y = 7
 		cost = 5
-		prerequisite = { focus = ODS_scientific_scope }
+		prerequisite = {
+			focus = ODS_scientific_scope
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
 				category = industry
 			}
-			country_event = ODS.40
-		}		
+			country_event = ODS_phase_three.7
+		}
 	}
 	focus = {
 		id = ODS_printout_of_archives
@@ -185,12 +214,16 @@ focus_tree = {
 		x = 8
 		y = 8
 		cost = 5
-		prerequisite = { focus = ODS_revelation_initiative }
+		prerequisite = {
+			focus = ODS_revelation_initiative
+		}
 		completion_reward = {
 			custom_effect_tooltip = change_NERC_tt
 			custom_effect_tooltip = NERC2_tt
-			set_variable = { production_factory_efficiency_NERC = 0.05 }
-		}		
+			set_variable = {
+				production_factory_efficiency_NERC = 0.05
+			}
+		}
 	}
 	focus = {
 		id = ODS_shackles_grant
@@ -198,12 +231,16 @@ focus_tree = {
 		x = 6
 		y = 6
 		cost = 5
-		prerequisite = { focus = ODS_NERC }
+		prerequisite = {
+			focus = ODS_NERC
+		}
 		completion_reward = {
-			add_to_variable = { black_rubles_budget = -2000 }
+			add_to_variable = {
+				black_rubles_budget = -2000
+			}
 			add_political_power = -50
-			country_event = ODS.45
-		}		
+			country_event = ODS_phase_three.12
+		}
 	}
 	focus = {
 		id = ODS_power_of_mind_in_hands_of_design
@@ -211,15 +248,17 @@ focus_tree = {
 		x = 6
 		y = 7
 		cost = 5
-		prerequisite = { focus = ODS_shackles_grant }
+		prerequisite = {
+			focus = ODS_shackles_grant
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
 				category = infantry_weapons
 			}
-			country_event = ODS.46
-		}		
+			country_event = ODS_phase_three.13
+		}
 	}
 	focus = {
 		id = ODS_brain_burner
@@ -227,15 +266,23 @@ focus_tree = {
 		x = 6
 		y = 8
 		cost = 5
-		prerequisite = { focus = ODS_power_of_mind_in_hands_of_design }
+		prerequisite = {
+			focus = ODS_power_of_mind_in_hands_of_design
+		}
 		completion_reward = {
 			custom_effect_tooltip = change_NERC_tt
 			custom_effect_tooltip = NERC3_tt
-			set_variable = { resistance_NERC = -0.5 }
-			set_variable = { Resistance_activity_NERC = -0.5 }
-			set_variable = { Required_garrison_factor_NERC = -0.5 }
-			country_event = ODS.37
-		}		
+			set_variable = {
+				resistance_NERC = -0.5
+			}
+			set_variable = {
+				Resistance_activity_NERC = -0.5
+			}
+			set_variable = {
+				Required_garrison_factor_NERC = -0.5
+			}
+			country_event = ODS_phase_three.4
+		}
 	}
 	focus = {
 		id = ODS_integration_of_new_weapons
@@ -243,13 +290,21 @@ focus_tree = {
 		x = 7
 		y = 9
 		cost = 5
-		prerequisite = { focus = ODS_brain_burner }
-		prerequisite = { focus = ODS_printout_of_archives }
+		prerequisite = {
+			focus = ODS_brain_burner
+		}
+		prerequisite = {
+			focus = ODS_printout_of_archives
+		}
 		completion_reward = {
-			custom_effect_tooltip = change_black_beret_tt
-			custom_effect_tooltip = black_beret1_tt
-			set_variable = { army_defence_black_beret = 0.1 }
-			set_variable = { army_defence_against_minor_factor_black_beret = 0.2 }
+			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets1_tt
+			set_variable = {
+				army_defence_ODS_Black_Berets = 0.1
+			}
+			set_variable = {
+				army_defence_against_minor_factor_ODS_Black_Berets = 0.2
+			}
 		}
 	}
 	focus = {
@@ -258,13 +313,17 @@ focus_tree = {
 		x = 12
 		y = 6
 		cost = 5
-		prerequisite = { focus = ODS_great_intentions_great_projects }
+		prerequisite = {
+			focus = ODS_great_intentions_great_projects
+		}
 		completion_reward = {
-			custom_effect_tooltip = change_dicarstvo_tt
-			custom_effect_tooltip = dicarstvo1_tt
-			set_variable = { production_speed_infrastructure_factor_dicarstvo = 0.1 }
-			country_event = ODS.44
-		}		
+			custom_effect_tooltip = change_ODS_Savagery_tt
+			custom_effect_tooltip = ODS_Savagery1_tt
+			set_variable = {
+				production_speed_infrastructure_factor_ODS_Savagery = 0.1
+			}
+			country_event = ODS_phase_three.11
+		}
 	}
 	focus = {
 		id = ODS_exhausting_everything_for_sake_of_plot
@@ -272,11 +331,13 @@ focus_tree = {
 		x = 12
 		y = 7
 		cost = 5
-		prerequisite = { focus = ODS_energy_arteries }
+		prerequisite = {
+			focus = ODS_energy_arteries
+		}
 		completion_reward = {
 			add_political_power = 50
-			country_event = ODS.36
-		}		
+			country_event = ODS_phase_three.3
+		}
 	}
 	focus = {
 		id = ODS_communication_systems
@@ -284,12 +345,16 @@ focus_tree = {
 		x = 14
 		y = 6
 		cost = 5
-		prerequisite = { focus = ODS_great_intentions_great_projects }
+		prerequisite = {
+			focus = ODS_great_intentions_great_projects
+		}
 		completion_reward = {
-			custom_effect_tooltip = change_dicarstvo_tt
-			custom_effect_tooltip = dicarstvo2_tt
-			set_variable = { attrition_dicarstvo = -0.05 }
-			country_event = ODS.39
+			custom_effect_tooltip = change_ODS_Savagery_tt
+			custom_effect_tooltip = ODS_Savagery2_tt
+			set_variable = {
+				attrition_ODS_Savagery = -0.05
+			}
+			country_event = ODS_phase_three.6
 		}
 	}
 	focus = {
@@ -298,13 +363,21 @@ focus_tree = {
 		x = 14
 		y = 7
 		cost = 5
-		prerequisite = { focus = ODS_communication_systems }
+		prerequisite = {
+			focus = ODS_communication_systems
+		}
 		completion_reward = {
-			839 = { add_manpower = 5000 }
-			842 = { add_manpower = 5000 }
-			192 = { add_manpower = 5000 }
-			country_event = ODS.41
-		}		
+			839 = {
+				add_manpower = 5000
+			}
+			842 = {
+				add_manpower = 5000
+			}
+			192 = {
+				add_manpower = 5000
+			}
+			country_event = ODS_phase_three.8
+		}
 	}
 	focus = {
 		id = ODS_coordination_of_headquarters
@@ -312,13 +385,21 @@ focus_tree = {
 		x = 12
 		y = 8
 		cost = 5
-		prerequisite = { focus = ODS_exhausting_everything_for_sake_of_plot }
-		prerequisite = { focus = ODS_pulled_out_of_mud }
-		mutually_exclusive = { focus = ODS_grassroots_initiative }
+		prerequisite = {
+			focus = ODS_exhausting_everything_for_sake_of_plot
+		}
+		prerequisite = {
+			focus = ODS_pulled_out_of_mud
+		}
+		mutually_exclusive = {
+			focus = ODS_grassroots_initiative
+		}
 		completion_reward = {
-			custom_effect_tooltip = change_black_beret_tt
-			custom_effect_tooltip = black_beret2_tt
-			set_variable = { max_command_power_black_beret = 30 }
+			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets2_tt
+			set_variable = {
+				max_command_power_ODS_Black_Berets = 30
+			}
 		}
 	}
 	focus = {
@@ -327,13 +408,21 @@ focus_tree = {
 		x = 14
 		y = 8
 		cost = 5
-		prerequisite = { focus = ODS_exhausting_everything_for_sake_of_plot }
-		prerequisite = { focus = ODS_pulled_out_of_mud }
-		mutually_exclusive = { focus = ODS_coordination_of_headquarters }
+		prerequisite = {
+			focus = ODS_exhausting_everything_for_sake_of_plot
+		}
+		prerequisite = {
+			focus = ODS_pulled_out_of_mud
+		}
+		mutually_exclusive = {
+			focus = ODS_coordination_of_headquarters
+		}
 		completion_reward = {
-			custom_effect_tooltip = change_black_beret_tt
-			custom_effect_tooltip = black_beret3_tt
-			set_variable = { org_loss_when_moving_black_beret = -0.1 }
+			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets3_tt
+			set_variable = {
+				org_loss_when_moving_ODS_Black_Berets = -0.1
+			}
 		}
 	}
 	focus = {
@@ -342,12 +431,17 @@ focus_tree = {
 		x = 13
 		y = 9
 		cost = 5
-		prerequisite = { focus = ODS_grassroots_initiative focus = ODS_coordination_of_headquarters }
+		prerequisite = {
+			focus = ODS_grassroots_initiative
+			focus = ODS_coordination_of_headquarters
+		}
 		completion_reward = {
 			add_manpower = 30000
-			custom_effect_tooltip = change_black_beret_tt
-			custom_effect_tooltip = black_beret4_tt
-			set_variable = { army_morale_factor_black_beret = 0.05 }
+			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets4_tt
+			set_variable = {
+				army_morale_factor_ODS_Black_Berets = 0.05
+			}
 		}
 	}
 	focus = {
@@ -356,18 +450,23 @@ focus_tree = {
 		x = 10
 		y = 10
 		cost = 5
-		prerequisite = { focus = ODS_ultimate_heroism }
-		prerequisite = { focus = ODS_integration_of_new_weapons }
+		prerequisite = {
+			focus = ODS_ultimate_heroism
+		}
+		prerequisite = {
+			focus = ODS_integration_of_new_weapons
+		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = OKO6
-				add_idea = OKO7
+				remove_idea = ODS_OKO6
+				add_idea = ODS_OKO7
 			}
-            set_country_flag = access_to_justifications_of_war
-            hidden_effect = { add_ideas = lower_time_for_justification_of_wargoal }    
-            custom_effect_tooltip = can_declare_war_tt
+			set_country_flag = access_to_justifications_of_war
+			hidden_effect = {
+				add_ideas = lower_time_for_justification_of_wargoal
+			}
+			custom_effect_tooltip = can_declare_war_tt
 		}
-		
 	}
 	focus = {
 		id = ODS_operation_blasphemy
@@ -375,15 +474,19 @@ focus_tree = {
 		x = 9
 		y = 11
 		cost = 5
-		prerequisite = { focus = ODS_even_if_motherland_is_destined_to_fall }
+		prerequisite = {
+			focus = ODS_even_if_motherland_is_destined_to_fall
+		}
 		completion_reward = {
 			add_command_power = 30
 			create_wargoal = {
-            	target = LWV
-            	type = take_state_focus
-            	generator = { 123 }
-        	}
-		}		
+				target = LWV
+				type = take_state_focus
+				generator = {
+					123
+				}
+			}
+		}
 	}
 	focus = {
 		id = ODS_operation_unity
@@ -391,20 +494,26 @@ focus_tree = {
 		x = 11
 		y = 11
 		cost = 5
-		prerequisite = { focus = ODS_even_if_motherland_is_destined_to_fall }
+		prerequisite = {
+			focus = ODS_even_if_motherland_is_destined_to_fall
+		}
 		completion_reward = {
 			add_command_power = 30
-        	create_wargoal = {
-            	target = ARM
-            	type = take_state_focus
-            	generator = { 123 }
-        	}
-        	create_wargoal = {
-            	target = GLS
-            	type = take_state_focus
-            	generator = { 123 }
-        	}
-		}		
+			create_wargoal = {
+				target = ARM
+				type = take_state_focus
+				generator = {
+					123
+				}
+			}
+			create_wargoal = {
+				target = GLS
+				type = take_state_focus
+				generator = {
+					123
+				}
+			}
+		}
 	}
 	focus = {
 		id = ODS_eternal_order
@@ -412,8 +521,12 @@ focus_tree = {
 		x = 10
 		y = 12
 		cost = 5
-		prerequisite = { focus = ODS_operation_blasphemy }
-		prerequisite = { focus = ODS_operation_unity }
+		prerequisite = {
+			focus = ODS_operation_blasphemy
+		}
+		prerequisite = {
+			focus = ODS_operation_unity
+		}
 		available = {
 			NOT = {
 				AND = {
@@ -434,7 +547,9 @@ focus_tree = {
 		x = 10
 		y = 13
 		cost = 5
-		prerequisite = { focus = ODS_eternal_order }
+		prerequisite = {
+			focus = ODS_eternal_order
+		}
 		completion_reward = {
 			add_political_power = 100
 		}

@@ -1,18 +1,14 @@
 equipments = {
-
 	anti_air_equipment = {
 		year = 2010
-
 		is_archetype = yes
-		picture = archetype_anti_air_equipment		
+		picture = archetype_anti_air_equipment
 		type = {
 			anti_air
-			infantry 
+			infantry
 		}
 		group_by = archetype
-		
 		interface_category = interface_category_land
-
 		max_strength = 3
 		maximum_speed = 4
 		soft_attack = 3
@@ -26,16 +22,13 @@ equipments = {
 		build_cost_ic = 18.5
 		resources = {
 			steel = 3
-		}	
+		}
 	}
-
 	basic_air_defense_equipment = {
 		year = 2020
-
 		archetype = anti_air_equipment
 		priority = 80
 		visual_level = 0
-
 		max_strength = 3
 		maximum_speed = 4
 		soft_attack = 3
@@ -49,17 +42,14 @@ equipments = {
 		build_cost_ic = 18.5
 		resources = {
 			steel = 3
-		}	
+		}
 	}
-	
 	advanced_air_defense_equipment = {
 		year = 2025
-
 		archetype = anti_air_equipment
 		parent = basic_air_defense_equipment
 		priority = 80
 		visual_level = 0
-
 		max_strength = 3
 		maximum_speed = 4
 		soft_attack = 3.5
@@ -73,17 +63,14 @@ equipments = {
 		build_cost_ic = 20
 		resources = {
 			steel = 5
-		}	
+		}
 	}
-
 	air_defense_of_the_future_equipment = {
 		year = 2030
-
 		archetype = anti_air_equipment
 		parent = advanced_air_defense_equipment
 		priority = 80
 		visual_level = 0
-
 		max_strength = 3
 		maximum_speed = 4
 		soft_attack = 4
@@ -97,6 +84,6 @@ equipments = {
 		build_cost_ic = 22.5
 		resources = {
 			steel = 7
-		}		
+		}
 	}
 }

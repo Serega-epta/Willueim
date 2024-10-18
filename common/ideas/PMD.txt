@@ -1,14 +1,6 @@
 ideas = {
 	country = {
 		PMD_preparations_for_war = {
-			picture = PMD_preparations_for_war_idea
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				acclimatization_cold_climate_gain_factor = 0.1
 				army_core_attack_factor = 0.03
@@ -21,14 +13,6 @@ ideas = {
 			}
 		}
 		PMD_hunger = {
-			picture = PMD_hunger_idea
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				org_loss_when_moving = 0.03
 				army_org_regain = -0.05

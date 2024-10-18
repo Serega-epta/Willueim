@@ -1,20 +1,12 @@
 ideas = {
-
 	country = {
-		KSK_free_ot_freedom = {			#Свобода от свободы
-			picture = KSK_free_ot_freedom_idea
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1			
+		#Свобода от свободы
+		KSK_free_ot_freedom = {
 			modifier = {
-				monthly_population  = 1.5
+				monthly_population = 1.5
 				research_speed_factor = -2
 				local_resources_factor = -0.5
-				production_factory_max_efficiency_factor = -0.75					
+				production_factory_max_efficiency_factor = -0.75
 			}
 		}
 	}

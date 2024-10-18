@@ -1,11 +1,11 @@
 IMP_war = {
 	IMP_get_new_division = {
 		icon = GFX_decision_eng_trade_unions_support
-		available = { 
+		available = {
 			has_manpower > 999
 			has_equipment = {
 				infantry_equipment > 199
-			} 
+			}
 		}
 		days_remove = 50
 		days_re_enable = 20
@@ -27,12 +27,14 @@ IMP_war = {
 	}
 	IMP_train_soldier = {
 		icon = GFX_decision_eng_trade_unions_support
-		available = { 
+		available = {
 			has_equipment = {
 				infantry_equipment > 499
-			} 
+			}
 		}
-		visible = { has_completed_focus = IMP_scorched_earth }
+		visible = {
+			has_completed_focus = IMP_scorched_earth
+		}
 		days_remove = 60
 		days_re_enable = 30
 		complete_effect = {
@@ -46,15 +48,17 @@ IMP_war = {
 		}
 		remove_effect = {
 			army_experience = 25
-		}		
+		}
 	}
 	IMP_scorshed_earth = {
 		icon = GFX_decision_eng_trade_unions_support
-		available = { 
+		available = {
 			has_war = yes
 			surrender_progress > 0.5
 		}
-		visible = { has_completed_focus = IMP_scorched_earth }
+		visible = {
+			has_completed_focus = IMP_scorched_earth
+		}
 		days_re_enable = 31
 		days_remove = 7
 		remove_effect = {
@@ -63,7 +67,7 @@ IMP_war = {
 				damage_building = {
 					type = infrastructure
 					damage = 5
-				}				
+				}
 			}
 		}
 	}

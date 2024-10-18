@@ -2,13 +2,19 @@ ideas = {
 	country = {
 		STW_mine_idea = {
 			picture = GFX_idea_STW_mine_idea
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
 			targeted_modifier = {
 				tag = ODS
 				attack_bonus_against = 0.15
 				defense_bonus_against = 0.15
+			}
+		}
+		STW_All_Around_Enemies = {
+			picture = GFX_idea_STW_All_Around_Enemies
+			modifier = {
+				conscription_factor = 0.2
+				stability_factor = 0.1
+				army_org_factor = 0.1
+				production_speed_buildings_factor = 0.5
 			}
 		}
 	}

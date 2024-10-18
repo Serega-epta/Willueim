@@ -1,18 +1,7 @@
 ideas = {
-
 	country = {
-		BAL_the_bitterness_of_loss = {	#Горечь утрат
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		#Горечь утрат
+		BAL_the_bitterness_of_loss = {
 			modifier = {
 				attrition = 0.1
 				stability_factor = -0.05
@@ -20,7 +9,6 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.15
 				army_core_attack_factor = -0.1
 				army_core_defence_factor = -0.1
-				
 			}
 		}
 	}

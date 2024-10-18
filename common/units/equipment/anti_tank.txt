@@ -1,18 +1,14 @@
 equipments = {
-
 	anti_tank_equipment = {
 		year = 2010
-
 		is_archetype = yes
-		picture = archetype_anti_tank_equipment		
-		type = { 
+		picture = archetype_anti_tank_equipment
+		type = {
 			anti_tank
 			infantry
 		}
 		group_by = archetype
-		
 		interface_category = interface_category_land
-
 		max_strength = 3
 		maximum_speed = 4
 		soft_attack = 25
@@ -26,16 +22,13 @@ equipments = {
 		resources = {
 			steel = 6
 			tungsten = 3
-		}	
+		}
 	}
-
 	basic_MLRS_equipment = {
 		year = 2020
-
 		archetype = anti_tank_equipment
 		priority = 90
 		visual_level = 0
-
 		max_strength = 3
 		maximum_speed = 4
 		soft_attack = 25
@@ -49,17 +42,14 @@ equipments = {
 		resources = {
 			steel = 6
 			tungsten = 3
-		}	
+		}
 	}
-
 	advanced_MLRS_equipment = {
 		year = 2027
-
 		archetype = anti_tank_equipment
 		parent = basic_MLRS_equipment
 		priority = 90
 		visual_level = 0
-
 		max_strength = 3
 		maximum_speed = 4
 		soft_attack = 30
@@ -73,17 +63,14 @@ equipments = {
 		resources = {
 			steel = 8
 			tungsten = 4
-		}	
+		}
 	}
-
 	MLRS_of_the_future_equipment = {
 		year = 2035
-
 		archetype = anti_tank_equipment
 		parent = advanced_MLRS_equipment
 		priority = 90
 		visual_level = 0
-
 		max_strength = 3
 		maximum_speed = 4
 		soft_attack = 38

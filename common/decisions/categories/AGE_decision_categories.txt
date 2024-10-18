@@ -1,6 +1,8 @@
-AGE_their_freedoms = { 
+AGE_their_freedoms = {
 	icon = saf_anti_colonialist_crusade
-	allowed = { original_tag = AGE } 
+	allowed = {
+		original_tag = AGE
+	}
 	visible = {
 		OR = {
 			has_country_flag = not_their_land_anymore_flag
@@ -21,12 +23,16 @@ AGE_their_freedoms = {
 	#	}	
 	#}	
 	#visible_when_empty = yes   
-	priority = { base = 5 }
+	priority = {
+		base = 5
+	}
 }
-
-AGE_red_forest = {  #Борьба с рыжим лесом
+#Борьба с рыжим лесом
+AGE_red_forest = {
 	icon = saf_anti_colonialist_crusade
-	allowed = { original_tag = AGE }
+	allowed = {
+		original_tag = AGE
+	}
 	visible = {
 		AGE = {
 			has_country_flag = fight_red_forest
@@ -34,24 +40,32 @@ AGE_red_forest = {  #Борьба с рыжим лесом
 		country_exists = TIP
 	}
 	#visible_when_empty = no  
-	priority = { base = 5 }
+	priority = {
+		base = 5
+	}
 }
-
-AGE_south_intervention = {  #Присоединение мииноров и борьба с чащей
+#Присоединение мииноров и борьба с чащей
+AGE_south_intervention = {
 	icon = saf_anti_colonialist_crusade
-	allowed = { original_tag = AGE }
+	allowed = {
+		original_tag = AGE
+	}
 	visible = {
 		AGE = {
 			has_completed_focus = AGE_chaos_at_the_border
 		}
 	}
 	#visible_when_empty = no  
-	priority = { base = 5 }
+	priority = {
+		base = 5
+	}
 }
-
-AGE_help_from_allies = {  #Помощь от союзников
+#Помощь от союзников
+AGE_help_from_allies = {
 	icon = saf_anti_colonialist_crusade
-	allowed = { original_tag = AGE }
+	allowed = {
+		original_tag = AGE
+	}
 	visible = {
 		AGE = {
 			has_completed_focus = AGE_visit_our_comrades_slavic
@@ -59,13 +73,16 @@ AGE_help_from_allies = {  #Помощь от союзников
 		country_exists = TIP
 	}
 	#visible_when_empty = no  
-	priority = { base = 5 }
+	priority = {
+		base = 5
+	}
 }
-
-
-AGE_partisans = {  #Взаимодействие с калининградскими партизанами
+#Взаимодействие с калининградскими партизанами
+AGE_partisans = {
 	icon = saf_anti_colonialist_crusade
-	allowed = { original_tag = AGE }
+	allowed = {
+		original_tag = AGE
+	}
 	visible = {
 		AGE = {
 			has_completed_focus = AGE_help_the_partisans
@@ -73,5 +90,7 @@ AGE_partisans = {  #Взаимодействие с калининградски
 		country_exists = TIP
 	}
 	#visible_when_empty = no  
-	priority = { base = 5 }
+	priority = {
+		base = 5
+	}
 }

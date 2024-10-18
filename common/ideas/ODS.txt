@@ -1,18 +1,7 @@
 ideas = {
 	country = {
-		dicarstvo = {
-			picture = Dikarstvo
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Savagery = {
+			picture = GFX_idea_ODS_Savagery
 			modifier = {
 				#max_surrender_limit_offset = -0.85
 				surrender_limit = -0.85
@@ -20,85 +9,51 @@ ideas = {
 				supply_factor = -0.2
 				production_factory_efficiency_gain_factor = -0.25
 				production_factory_max_efficiency_factor = -0.25
-			
-			}
-		}	
-		dicarstvo1 = { # Меняется на фокусе Основать КЭБ
-			picture = Dikarstvo
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				surrender_limit = -0.85
-				production_speed_buildings_factor = -0.2 # +10%
-				supply_factor = -0.1 # +10%
-				production_factory_efficiency_gain_factor = -0.15 # +10%
-				production_factory_max_efficiency_factor = -0.25
 			}
 		}
-		dicarstvo2 = { # Меняется на фокусе Искоренить дикость
-			picture = Dikarstvo
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		# Меняется на фокусе Основать КЭБ
+		ODS_Savagery1 = {
+			picture = GFX_idea_ODS_Savagery
 			modifier = {
 				surrender_limit = -0.85
-				production_speed_buildings_factor = 0.0 # +20%
+				# +10%
+				production_speed_buildings_factor = -0.2
+				# +10%
 				supply_factor = -0.1
-				production_factory_efficiency_gain_factor = -0.05 # +10%
+				# +10%
+				production_factory_efficiency_gain_factor = -0.15
 				production_factory_max_efficiency_factor = -0.25
 			}
 		}
-		dicarstvo3 = { # Меняется на фокусе Реализовать каждого
-			picture = Dikarstvo
-			
-			allowed = {
-				always = no
+		# Меняется на фокусе �?скоренить дикость
+		ODS_Savagery2 = {
+			picture = GFX_idea_ODS_Savagery
+			modifier = {
+				surrender_limit = -0.85
+				# +20%
+				production_speed_buildings_factor = 0.0
+				supply_factor = -0.1
+				# +10%
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.25
 			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		}
+		# Меняется на фокусе Реализовать каждого
+		ODS_Savagery3 = {
+			picture = GFX_idea_ODS_Savagery
 			modifier = {
 				surrender_limit = -0.85
 				production_speed_buildings_factor = 0.0
-				supply_factor = 0.0 # +10%
+				# +10%
+				supply_factor = 0.0
 				production_factory_efficiency_gain_factor = -0.05
-				production_factory_max_efficiency_factor = -0.05 # +20%
+				# +20%
+				production_factory_max_efficiency_factor = -0.05
 			}
 		}
-		dicarstvo4 = { # Меняется на фокусе Вены режима
-			picture = Veny_reshima
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		# Меняется на фокусе Вены режима
+		ODS_Savagery4 = {
+			picture = GFX_idea_ODS_Veins_Regime
 			modifier = {
 				surrender_limit = -0.85
 				production_speed_buildings_factor = 0.1
@@ -106,19 +61,8 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 			}
 		}
-		dicarstvo5 = {
-			picture = Veny_reshima
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Savagery5 = {
+			picture = GFX_idea_ODS_Veins_Regime
 			modifier = {
 				surrender_limit = -0.85
 				production_factory_efficiency_gain_factor = -0.05
@@ -128,19 +72,8 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
-		dicarstvo6 = {
-			picture = Veny_reshima
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Savagery6 = {
+			picture = GFX_idea_ODS_Veins_Regime
 			modifier = {
 				surrender_limit = -0.15
 				production_factory_efficiency_gain_factor = -0.05
@@ -150,19 +83,8 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
-		dicarstvo7 = {
-			picture = Veny_reshima
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Savagery7 = {
+			picture = GFX_idea_ODS_Veins_Regime
 			modifier = {
 				surrender_limit = -0.15
 				production_factory_efficiency_gain_factor = -0.05
@@ -172,19 +94,8 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
-		dicarstvo8 = {
-			picture = Veny_reshima
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Savagery8 = {
+			picture = GFX_idea_ODS_Veins_Regime
 			modifier = {
 				surrender_limit = -0.15
 				production_factory_efficiency_gain_factor = -0.05
@@ -195,19 +106,8 @@ ideas = {
 				research_speed_factor = 0.02
 			}
 		}
-		dicarstvo9 = {
-			picture = Veny_reshima
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Savagery9 = {
+			picture = GFX_idea_ODS_Veins_Regime
 			modifier = {
 				surrender_limit = -0.15
 				production_factory_efficiency_gain_factor = -0.05
@@ -220,19 +120,8 @@ ideas = {
 				political_power_factor = 0.1
 			}
 		}
-		doverie_1 = {
-			picture = doverie
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Trust_1 = {
+			picture = GFX_idea_ODS_Trust_low
 			modifier = {
 				stability_factor = -0.4
 				recruitable_population_factor = -0.01
@@ -243,19 +132,9 @@ ideas = {
 				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		doverie_2 = { # Меняется на фокусе Политика Благоприятствования
-			picture = doverie
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		# Меняется на фокусе Политика Благоприятствования
+		ODS_Trust_2 = {
+			picture = GFX_idea_ODS_Trust_low
 			modifier = {
 				stability_factor = -0.3
 				recruitable_population_factor = -0.01
@@ -266,21 +145,12 @@ ideas = {
 				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		doverie_3 = { # Меняется на фокусе Основать КОБ
-			picture = doverie
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		# Меняется на фокусе Основать КОБ
+		ODS_Trust_3 = {
+			picture = GFX_idea_ODS_Trust_low
 			modifier = {
-				stability_factor = -0.25 # +5%
+				# +5%
+				stability_factor = -0.25
 				recruitable_population_factor = -0.01
 				production_speed_buildings_factor = -0.3
 				weekly_manpower = -500
@@ -289,65 +159,39 @@ ideas = {
 				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		doverie_4 = { # Меняется на фокусе Новый гражданин
-			picture = doverie
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		# Меняется на фокусе Новый гражданин
+		ODS_Trust_4 = {
+			picture = GFX_idea_ODS_Trust_low
 			modifier = {
 				stability_factor = -0.25
-				recruitable_population_factor = 0.02 # + 3%
-				production_speed_buildings_factor = -0.3
-				weekly_manpower = -250 # +250
-				max_surrender_limit_offset = -0.7
-				resistance_damage_to_garrison_on_our_occupied_states = -0.4
-				resistance_growth_on_our_occupied_states = -0.5
-			}
-		}
-		doverie_5 = { # Меняется на фокусе Ростки благоразумия
-			picture = doverie
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				stability_factor = -0.15 # +10%
+				# + 3%
 				recruitable_population_factor = 0.02
 				production_speed_buildings_factor = -0.3
-				weekly_manpower = 250 # +500
+				# +250
+				weekly_manpower = -250
 				max_surrender_limit_offset = -0.7
 				resistance_damage_to_garrison_on_our_occupied_states = -0.4
 				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		doverie_6 = { # Меняется на фокусе Артерии режима. Получает новое название
-			picture = doverie
-			
-			allowed = {
-				always = no
+		# Меняется на фокусе Ростки благоразумия
+		ODS_Trust_5 = {
+			picture = GFX_idea_ODS_Trust_low
+			modifier = {
+				# +10%
+				stability_factor = -0.15
+				recruitable_population_factor = 0.02
+				production_speed_buildings_factor = -0.3
+				# +500
+				weekly_manpower = 250
+				max_surrender_limit_offset = -0.7
+				resistance_damage_to_garrison_on_our_occupied_states = -0.4
+				resistance_growth_on_our_occupied_states = -0.5
 			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		}
+		# Меняется на фокусе Артерии режима. Получает новое название
+		ODS_Trust_6 = {
+			picture = GFX_idea_ODS_Trust_low
 			modifier = {
 				stability_factor = -0.1
 				recruitable_population_factor = 0.02
@@ -358,19 +202,8 @@ ideas = {
 				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		doverie_7 = {
-			picture = doverie
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Trust_7 = {
+			picture = GFX_idea_ODS_Trust_low
 			modifier = {
 				stability_factor = -0.2
 				production_speed_buildings_factor = -0.1
@@ -382,19 +215,8 @@ ideas = {
 				compliance_growth_on_our_occupied_states = 0.1
 			}
 		}
-		doverie_8 = {
-			picture = doverie
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Trust_8 = {
+			picture = GFX_idea_ODS_Trust_low
 			modifier = {
 				stability_factor = -0.2
 				production_speed_buildings_factor = 0.1
@@ -407,77 +229,33 @@ ideas = {
 				resistance_target_on_our_occupied_states = 0.4
 			}
 		}
-		black_beret = {
-			picture = black_berets
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Black_Berets = {
+			picture = GFX_idea_ODS_Black_Berets
 			modifier = {
 				resistance_damage_to_garrison_on_our_occupied_states = -0.4
 				resistance_growth_on_our_occupied_states = -0.5
 			}
 		}
-		black_beret2 = {
-			picture = black_berets
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Black_Berets2 = {
+			picture = GFX_idea_ODS_Black_Berets
 			modifier = {
 				resistance_damage_to_garrison_on_our_occupied_states = 0.4
 				resistance_growth_on_our_occupied_states = 0.5
 			}
 		}
-		black_beret3 = {
-			picture = black_berets
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		ODS_Black_Berets3 = {
+			picture = GFX_idea_ODS_Black_Berets
 			modifier = {
 				resistance_damage_to_garrison_on_our_occupied_states = 0.4
 				resistance_growth_on_our_occupied_states = 0.5
 				max_planning = 0.2
 				planning_speed = 0.2
-				supply_combat_penalties_on_core_factor =  0.05
+				supply_combat_penalties_on_core_factor = 0.05
 				army_leader_start_level = 1
 			}
 		}
-		black_beret4 = {
-			picture = black_berets
-
-			allowed = {
-				always = no
-			}
-				
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+		ODS_Black_Berets4 = {
+			picture = GFX_idea_ODS_Black_Berets
 			modifier = {
 				resistance_damage_to_garrison_on_our_occupied_states = 0.4
 				resistance_growth_on_our_occupied_states = 0.5
@@ -487,81 +265,40 @@ ideas = {
 				army_leader_start_level = 1
 			}
 		}
-		black_perimetr = {
-			picture = black_perimeter
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = 360
-			
+		ODS_Black_Perimeter = {
+			picture = GFX_idea_ODS_Black_Perimeter
 			modifier = {
 				production_speed_bunker_factor = 0.5
 				production_speed_infrastructure_factor = 0.2
 			}
 		}
-		plan = {
-			picture = nenavid_serdza
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = 365
-			
+		ODS_Plan_Bridgehead = {
+			picture = GFX_idea_ODS_Plan_Bridgehead
 			modifier = {
-				production_speed_Infrastructure_factor = 0.5 
+				production_speed_Infrastructure_factor = 0.5
 				production_speed_rail_way_factor = 0.4
 				production_speed_supply_node_factor = 0.4
 			}
-		}	
-		OKO = {
-			picture = OKO
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = 365
-			
+		}
+		ODS_OKO = {
+			picture = GFX_idea_ODS_OKO
 			modifier = {
 				stability_weekly_factor = 0.1
 				resistance_growth = -0.25
 				resistance_damage_to_garrison = -0.2
-			}	
-		}
-		OKO2 = {
-			picture = OKO
-				
-			allowed = {
-				always = no
 			}
+		}
+		ODS_OKO2 = {
+			picture = GFX_idea_ODS_OKO
 			modifier = {
 				stability_weekly_factor = 0.15
 				resistance_growth = -0.25
 				resistance_damage_to_garrison = -0.2
 				resistance_decay = 0.4
-			}	
-		}
-		OKO3 = {
-			picture = OKO
-
-			allowed = {
-				always = no
 			}
+		}
+		ODS_OKO3 = {
+			picture = GFX_idea_ODS_OKO
 			modifier = {
 				stability_weekly_factor = 0.2
 				resistance_growth = -0.25
@@ -570,12 +307,8 @@ ideas = {
 				monthly_population = -0.05
 			}
 		}
-		OKO4 = {
-			picture = OKO
-
-			allowed = {
-				always = no
-			}
+		ODS_OKO4 = {
+			picture = GFX_idea_ODS_OKO
 			modifier = {
 				stability_weekly_factor = 0.2
 				resistance_growth = -0.25
@@ -585,12 +318,8 @@ ideas = {
 				attrition = -0.1
 			}
 		}
-		OKO5 = {
-			picture = OKO
-
-			allowed = {
-				always = no
-			}
+		ODS_OKO5 = {
+			picture = GFX_idea_ODS_OKO
 			modifier = {
 				stability_weekly_factor = 0.2
 				resistance_growth = -0.25
@@ -601,12 +330,8 @@ ideas = {
 				command_power_gain_mult = 0.1
 			}
 		}
-		OKO6 = {
-			picture = OKO
-
-			allowed = {
-				always = no
-			}
+		ODS_OKO6 = {
+			picture = GFX_idea_ODS_OKO
 			modifier = {
 				stability_weekly_factor = 0.2
 				resistance_growth = -0.25
@@ -618,12 +343,8 @@ ideas = {
 				research_speed_factor = 0.02
 			}
 		}
-		OKO7 = {
-			picture = OKO
-
-			allowed = {
-				always = no
-			}
+		ODS_OKO7 = {
+			picture = GFX_idea_ODS_OKO
 			modifier = {
 				stability_weekly_factor = 0.2
 				resistance_growth = -0.25
@@ -635,137 +356,10 @@ ideas = {
 				monthly_population = 0.02
 			}
 		}
-		plan2 = {
-			picture = nenavid_serdza
-			
-			allowed = {
-				always = no
-			}
-			modifier = {
-				production_speed_Infrastructure_factor = 0.5 
-				production_speed_rail_way_factor = 0.4
-				production_speed_supply_node_factor = 0.4
-				industry_repair_factor = 0.4
-			}	
-		}
-		plan3 = {
-			picture = Plan_Platsdarm
-			
-			allowed = {
-				always = no
-			}
-			modifier = {
-				industry_repair_factor = 0.4
-				production_speed_industrial_complex_factor = 0.2
-				production_speed_Infrastructure_factor = 0.5 
-				production_speed_rail_way_factor = 0.4
-				production_speed_supply_node_factor = 0.4
-			}	
-		}
-
-		food_level_one = {
-			picture = glaz_ebuchiy
-
-			modifier = {
-				stability_factor = -1
-				war_support_factor = -1
-				production_speed_buildings_factor = -0.8
-			}
-		}
-
-		food_level_two = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.9
-				war_support_factor = -0.9
-				production_speed_buildings_factor = -0.7
-			}
-		}
-
-		food_level_three = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.8
-				war_support_factor = -0.8
-				production_speed_buildings_factor = -0.6
-			}
-		}
-
-		food_level_four = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.7
-				war_support_factor = -0.7
-				production_speed_buildings_factor = -0.5
-			}
-		}
-
-		food_level_five = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.6
-				war_support_factor = -0.6
-				production_speed_buildings_factor = -0.4
-			}
-		}
-
-		food_level_six = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.5
-				war_support_factor = -0.5
-				production_speed_buildings_factor = -0.3
-			}
-		}
-
-		food_level_seven = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.4
-				war_support_factor = -0.4
-				production_speed_buildings_factor = -0.2
-			}
-		}
-
-		food_level_eight = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.3
-				war_support_factor = -0.3
-				production_speed_buildings_factor = -0.1
-			}
-		}
-
-		food_level_nine = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.2
-				war_support_factor = -0.2
-			}
-		}
-
-		food_level_ten = {
-			picture = glaz_ebuchiy		
-			modifier = {
-				stability_factor = -0.1
-				war_support_factor = -0.1
-			}
-		}
-
-
-
-
 		#meta named ideas:
 		ODS_consciousness_idea_0 = {
-			picture = glaz_ebuchiy
 			traits = {
 				ODS_consciousness_idea
-			}
-			allowed = {
-				original_tag = ODS
-			}
-			allowed_civil_war = {
-				original_tag = ODS
 			}
 			modifier = {
 				army_morale_factor = -0.05
@@ -775,15 +369,8 @@ ideas = {
 			}
 		}
 		ODS_consciousness_idea_1 = {
-			picture = glaz_ebuchiy
 			traits = {
 				ODS_consciousness_idea
-			}
-			allowed = {
-				original_tag = ODS
-			}
-			allowed_civil_war = {
-				original_tag = ODS
 			}
 			modifier = {
 				army_morale_factor = -0.02
@@ -793,15 +380,8 @@ ideas = {
 			}
 		}
 		ODS_consciousness_idea_2 = {
-			picture = glaz_ebuchiy
 			traits = {
 				ODS_consciousness_idea
-			}
-			allowed = {
-				original_tag = ODS
-			}
-			allowed_civil_war = {
-				original_tag = ODS
 			}
 			modifier = {
 				army_morale_factor = 0.01
@@ -811,15 +391,8 @@ ideas = {
 			}
 		}
 		ODS_consciousness_idea_3 = {
-			picture = glaz_ebuchiy
 			traits = {
 				ODS_consciousness_idea
-			}
-			allowed = {
-				original_tag = ODS
-			}
-			allowed_civil_war = {
-				original_tag = ODS
 			}
 			modifier = {
 				army_morale_factor = 0.03
@@ -829,15 +402,8 @@ ideas = {
 			}
 		}
 		ODS_consciousness_idea_4 = {
-			picture = glaz_ebuchiy
 			traits = {
 				ODS_consciousness_idea
-			}
-			allowed = {
-				original_tag = ODS
-			}
-			allowed_civil_war = {
-				original_tag = ODS
 			}
 			modifier = {
 				army_morale_factor = 0.05
@@ -847,15 +413,8 @@ ideas = {
 			}
 		}
 		ODS_consciousness_idea_5 = {
-			picture = glaz_ebuchiy
 			traits = {
 				ODS_consciousness_idea
-			}
-			allowed = {
-				original_tag = ODS
-			}
-			allowed_civil_war = {
-				original_tag = ODS
 			}
 			modifier = {
 				army_morale_factor = 0.1
@@ -865,15 +424,8 @@ ideas = {
 			}
 		}
 		ODS_consciousness_idea_6 = {
-			picture = glaz_ebuchiy
 			traits = {
 				ODS_consciousness_idea
-			}
-			allowed = {
-				original_tag = ODS
-			}
-			allowed_civil_war = {
-				original_tag = ODS
 			}
 			modifier = {
 				army_morale_factor = 0.12

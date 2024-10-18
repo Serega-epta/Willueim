@@ -8,7 +8,7 @@ on_actions = {
 					}
 				}
 				set_variable = {
-					var = Voz_divisions_var
+					var = VOZ_divisions_var
 					value = num_divisions
 				}
 			}
@@ -27,16 +27,16 @@ on_actions = {
 					value = num_divisions
 				}
 				set_variable = {
-					var = Voz_divisions_var
-					value = VOZ.Voz_divisions_var
+					var = VOZ_divisions_var
+					value = VOZ.VOZ_divisions_var
 				}
 				add_to_variable = {
-					var = Voz_divisions_var
+					var = VOZ_divisions_var
 					value = SDC_divisions_var
 				}
 				divide_variable = {
 					var = SDC_divisions_var
-					value = Voz_divisions_var
+					value = VOZ_divisions_var
 				}
 				multiply_variable = {
 					var = SDC_divisions_var

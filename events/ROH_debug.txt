@@ -1,13 +1,11 @@
 ﻿add_namespace = ROH_debug
-
 #Дебаг ивент для проверки механики Божьего Надела
 country_event = {
 	id = ROH_debug.1
 	title = ROH_debug.1.t
 	desc = ROH_debug.1.d
-    fire_only_once = yes
+	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
 		name = ROH_debug.1.a
 		set_power_balance = {
@@ -38,9 +36,8 @@ country_event = {
 	id = ROH_debug.2
 	title = ROH_debug.2.t
 	desc = ROH_debug.2.d
-    fire_only_once = yes
+	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
 		name = ROH_debug.2.a
 		every_country = {
@@ -48,44 +45,39 @@ country_event = {
 		}
 	}
 }
-
-
-#Ивент на проверку работоспособности механики Святости БНГВ
+#�?вент на проверку работоспособности механики Святости БНГВ
 country_event = {
 	id = ROH_debug.5
 	title = ROH_debug.5.t
 	desc = ROH_debug.5.d
-    fire_only_once = yes
+	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
 		name = ROH_debug.5.a
-		LWV = { 
+		LWV = {
 			annex_country = {
-    			target = COA
-    			transfer_troops = no
-			}	
+				target = COA
+				transfer_troops = no
+			}
 			annex_country = {
-    			target = SWR
-    			transfer_troops = no
-			}	
+				target = SWR
+				transfer_troops = no
+			}
 			annex_country = {
-    			target = BGD
-    			transfer_troops = no
-			}	
-			set_country_flag = decision_for_holiness 
+				target = BGD
+				transfer_troops = no
+			}
+			set_country_flag = decision_for_holiness
 		}
 	}
 }
-
-#Ивент на проверку работоспособности ачивок
+#�?вент на проверку работоспособности ачивок
 country_event = {
 	id = ROH_debug.6
 	title = ROH_debug.6.t
 	desc = ROH_debug.6.d
-    fire_only_once = yes
+	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
 		name = ROH_debug.6.a
 		set_country_flag = enemies_of_humanity_achievement

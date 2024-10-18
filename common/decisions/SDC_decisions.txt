@@ -1,21 +1,24 @@
 SDC_Chess_game = {
-    take_posisions_SDI = {
+	take_posisions_SDI = {
 		icon = GFX_decision_eng_trade_unions_support
-		priority = 10		
-		allowed = { original_tag = SDC }	
+		priority = 10
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			country_exists = SDI
 			has_completed_focus = SDC_hybrid_war
 			has_war = no
 			custom_trigger_tooltip = {
 				tooltip = take_posisions_SDI_tt
-				check_variable = { SDC_divisions_var > 19 }
+				check_variable = {
+					SDC_divisions_var > 19
+				}
 			}
-        }
+		}
 		cost = 150
 		days_remove = 30
 		fire_only_once = yes
-
 		remove_effect = {
 			annex_country = {
 				target = SDI
@@ -25,13 +28,15 @@ SDC_Chess_game = {
 				add_core_of = SDC
 				remove_core_of = SDI
 			}
-			set_country_flag = take_posisions_SDI_flag		
-		}		
+			set_country_flag = take_posisions_SDI_flag
+		}
 	}
 	take_posisions_REN = {
 		icon = GFX_decision_eng_trade_unions_support
-		priority = 10		
-		allowed = { original_tag = SDC }	
+		priority = 10
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			country_exists = REN
 			has_completed_focus = SDC_national_traitors
@@ -39,44 +44,50 @@ SDC_Chess_game = {
 			custom_trigger_tooltip = {
 				tooltip = take_posisions_REN_tt
 				if = {
-					limit ={
+					limit = {
 						has_completed_focus = SDC_archangelsk_sever
 					}
-					check_variable = { SDC_divisions_var > 69 }
+					check_variable = {
+						SDC_divisions_var > 69
+					}
 				}
-				else ={
-					check_variable = { SDC_divisions_var > 79 }
+				else = {
+					check_variable = {
+						SDC_divisions_var > 79
+					}
 				}
 			}
-        }
+		}
 		cost = 150
 		days_remove = 30
 		fire_only_once = yes
-
 		remove_effect = {
 			annex_country = {
 				target = REN
 				transfer_troops = no
 			}
-		}		
+		}
 	}
 	attack_REN = {
 		icon = GFX_decision_eng_trade_unions_support
-		priority = 10		
-		allowed = { original_tag = SDC }	
+		priority = 10
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			country_exists = REN
 			has_completed_focus = SDC_force_methods
 			has_war = no
 			custom_trigger_tooltip = {
 				tooltip = attack_REN_tt
-				check_variable = { SDC_divisions_var > 64 }
+				check_variable = {
+					SDC_divisions_var > 64
+				}
 			}
-        }
+		}
 		cost = 100
 		days_remove = 15
 		fire_only_once = yes
-
 		remove_effect = {
 			declare_war_on = {
 				target = REN
@@ -85,44 +96,49 @@ SDC_Chess_game = {
 			VOZ = {
 				add_to_war = {
 					targeted_alliance = REN
-    				enemy = SDC
-    				hostility_reason = asked_to_join
+					enemy = SDC
+					hostility_reason = asked_to_join
 				}
 			}
 			hidden_effect = {
 				complete_national_focus = SDC_special_military_operation
-			}	
-		}		
+			}
+		}
 	}
 	take_posisions_ODJ = {
 		icon = GFX_decision_eng_trade_unions_support
-		priority = 10		
-		allowed = { original_tag = SDC }	
+		priority = 10
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			country_exists = ODJ
 			has_completed_focus = SDC_science_academy
 			has_war = no
-            NOT = {
-					country_exists = SDI
-					country_exists = REN
-				}
+			NOT = {
+				country_exists = SDI
+				country_exists = REN
+			}
 			custom_trigger_tooltip = {
 				tooltip = take_posisions_ODJ_tt
 				if = {
-					limit ={
+					limit = {
 						has_completed_focus = SDC_Martins_comunications
 					}
-					check_variable = { SDC_divisions_var > 49 }
+					check_variable = {
+						SDC_divisions_var > 49
+					}
 				}
-				else ={
-					check_variable = { SDC_divisions_var > 59 }
+				else = {
+					check_variable = {
+						SDC_divisions_var > 59
+					}
 				}
 			}
-        }
+		}
 		cost = 200
 		days_remove = 30
 		fire_only_once = yes
-
 		remove_effect = {
 			annex_country = {
 				target = ODJ
@@ -131,16 +147,18 @@ SDC_Chess_game = {
 			ODJ = {
 				every_core_state = {
 					add_core_of = SDC
-					remove_core_of = ODJ					
+					remove_core_of = ODJ
 				}
 			}
 			set_country_flag = take_posisions_ODJ_flag
-		}		
+		}
 	}
 	attack_ODJ = {
 		icon = GFX_decision_eng_trade_unions_support
-		priority = 10		
-		allowed = { original_tag = SDC }	
+		priority = 10
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			country_exists = ODJ
 			has_war = no
@@ -148,7 +166,7 @@ SDC_Chess_game = {
 				AND = {
 					country_exists = VOZ
 					has_army_manpower = {
-    					size > 55000
+						size > 55000
 					}
 				}
 				NOT = {
@@ -156,11 +174,10 @@ SDC_Chess_game = {
 					country_exists = VOZ
 				}
 			}
-        }
+		}
 		cost = 175
 		days_remove = 15
 		fire_only_once = yes
-
 		remove_effect = {
 			declare_war_on = {
 				target = ODJ
@@ -169,21 +186,23 @@ SDC_Chess_game = {
 			VOZ = {
 				add_to_war = {
 					targeted_alliance = ODJ
-    				enemy = SDC
-    				hostility_reason = asked_to_join
+					enemy = SDC
+					hostility_reason = asked_to_join
 				}
 			}
 			set_country_flag = take_posisions_ODJ_flag
 			hidden_effect = {
 				complete_national_focus = SDC_special_military_operation
 			}
-		}		
+		}
 	}
 }
 SDC_payment = {
 	SDC_pay_mission = {
 		icon = GFX_decision_eng_trade_unions_support
-		activation = { has_country_flag = payment_flag }
+		activation = {
+			has_country_flag = payment_flag
+		}
 		available = {
 			hidden_trigger = {
 				has_country_flag = we_payed_flag
@@ -194,13 +213,15 @@ SDC_payment = {
 		days_mission_timeout = 250
 		timeout_effect = {
 			set_country_flag = we_payed_flag
-			country_event = pautov.9
+			country_event = SDC_phase_one.7
 		}
 	}
 	pay_debt = {
 		icon = GFX_decision_eng_trade_unions_support
-		priority = 5	
-		allowed = { original_tag = SDC }	
+		priority = 5
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			NOT = {
 				custom_trigger_tooltip = {
@@ -211,7 +232,7 @@ SDC_payment = {
 					has_country_flag = block_flag
 				}
 			}
-        }
+		}
 		cost = 100
 		days_remove = 10
 		fire_only_once = yes
@@ -219,13 +240,15 @@ SDC_payment = {
 			set_country_flag = we_payed_flag
 		}
 		remove_effect = {
-			country_event = pautov.11
-		}		
+			country_event = SDC_decisions.2
+		}
 	}
 	pay_big_debt = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 10
-		allowed = { original_tag = SDC }
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = big_debt_tt
@@ -239,13 +262,15 @@ SDC_payment = {
 			set_country_flag = we_payed_flag
 		}
 		remove_effect = {
-			country_event = pautov.10
+			country_event = SDC_decisions.1
 		}
 	}
 	pay_no_debt = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 10
-		allowed = { original_tag = SDC }
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			hidden_trigger = {
 				NOT = {
@@ -258,13 +283,15 @@ SDC_payment = {
 		days_remove = 5
 		fire_only_once = yes
 		remove_effect = {
-			country_event = pautov.12
+			country_event = SDC_decisions.3
 		}
 	}
 	extra_help = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 10
-		allowed = { original_tag = SDC }
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			NOT = {
 				custom_trigger_tooltip = {
@@ -288,18 +315,19 @@ SDC_payment = {
 		}
 		remove_effect = {
 			random_owned_state = {
-                create_unit = { 
-                    division = "name = \"Добровольцы\" division_template = \"Добровольцы\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    owner = ROOT
-                }
+				create_unit = {
+					division = "name = \"Добровольцы\" division_template = \"Добровольцы\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
-	
 	ask_delay = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 10
-		allowed = { original_tag = SDC }
+		allowed = {
+			original_tag = SDC
+		}
 		available = {
 			NOT = {
 				custom_trigger_tooltip = {
@@ -317,11 +345,11 @@ SDC_payment = {
 		remove_effect = {
 			random_list = {
 				10 = {
-					country_event = pautov.9
+					country_event = SDC_phase_one.7
 					set_country_flag = we_payed_flag
 				}
 				10 = {
-					country_event = pautov.13
+					country_event = SDC_decisions.4
 					set_country_flag = big_debt_flag
 					clr_country_flag = block_flag
 				}

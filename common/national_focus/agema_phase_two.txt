@@ -2,62 +2,71 @@ focus_tree = {
 	id = AGE_phase_2_reconciliation
 	country = {
 		factor = 0
-        modifier = {
-            add = 10
-            tag = AGE
-        }		
+		modifier = {
+			add = 10
+			tag = AGE
+		}
 	}
 	default = no
-
-    focus = {
+	focus = {
 		id = AGE_through_compassion_for_paradise
 		icon = GFX_AGE_through_compassion_for_paradise
-		cost = 3.00
+		cost = 2.00
 		x = 6
 		y = 0
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		available = {
 			has_war = no
 		}
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = -15
-			country_event = AGE.10
+			country_event = AGE_phase_two.1
 			set_country_flag = reconciliation_flag
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_visit_our_comrades
 		icon = GFX_AGE_visit_our_comrades
-		cost = 4.00
+		cost = 1.00
 		x = 6
 		y = 1
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_through_compassion_for_paradise }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_through_compassion_for_paradise
+		}
 		completion_reward = {
-			country_event = AGE.11
+			country_event = AGE_phase_two.2
 			mark_focus_tree_layout_dirty = yes
 			set_country_flag = fight_red_forest
 			hidden_effect = {
 				country_event = {
-					id = AGE.20
-					days = 105
+					id = AGE_phase_two.11
+					days = 75
 				}
 				country_event = {
 					id = AGE.technical.2
-					days = 50
+					days = 40
 				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_all_alone
 		icon = GFX_AGE_all_alone
-		cost = 2.00
+		cost = 1.00
 		x = 6
 		y = 3
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_visit_our_comrades }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_visit_our_comrades
+		}
 		allow_branch = {
 			has_completed_focus = AGE_visit_our_comrades
 		}
@@ -66,133 +75,155 @@ focus_tree = {
 			add_stability = -0.03
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_help_wont_come
 		icon = GFX_AGE_help_wont_come
-		cost = 3.00
+		cost = 2.00
 		x = 6
 		y = 4
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_all_alone }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_all_alone
+		}
 		completion_reward = {
 			add_ideas = AGE_by_ourself
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_Our_home_our_castle
 		icon = GFX_AGE_Our_home_our_castle
-		cost = 5.00
+		cost = 4.00
 		x = 3
 		y = 5
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_help_wont_come }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_help_wont_come
+		}
 		completion_reward = {
 			13 = {
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 3174
 				}
 			}
 			12 = {
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 3388
 				}
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 11302
 				}
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 3298
 				}
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 10323
 				}
 			}
 			809 = {
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 6342
 				}
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 265
 				}
 			}
 			189 = {
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 6314
 				}
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 9499
 				}
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 3337
 				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_mobilize_balts
 		icon = GFX_AGE_mobilize_balts
-		cost = 6.00
+		cost = 4.00
 		x = 1
 		y = 6
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_Our_home_our_castle}
-		mutually_exclusive = { focus = AGE_balts_workers }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_Our_home_our_castle
+		}
+		mutually_exclusive = {
+			focus = AGE_balts_workers
+		}
 		completion_reward = {
 			add_ideas = AGE_balts_in_army
-			country_event = AGE.13
+			country_event = AGE_phase_two.4
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_balts_workers
 		icon = GFX_AGE_balts_workers
-		cost = 6.00
+		cost = 4.00
 		x = 5
 		y = 6
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_Our_home_our_castle}
-		mutually_exclusive = { focus = AGE_mobilize_balts }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_Our_home_our_castle
+		}
+		mutually_exclusive = {
+			focus = AGE_mobilize_balts
+		}
 		completion_reward = {
 			add_ideas = AGE_balts_in_factories
-			country_event = AGE.14
+			country_event = AGE_phase_two.5
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_chaos_at_the_border
 		icon = GFX_AGE_chaos_at_the_border
 		cost = 3.00
 		x = 1
 		y = 7
-		ai_will_do = { factor = 10 }
-        prerequisite = {
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
 			focus = AGE_mobilize_balts
 			focus = AGE_balts_workers
 		}
@@ -200,14 +231,16 @@ focus_tree = {
 			custom_effect_tooltip = chaos_at_the_border_tt
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_find_those_who_follow
 		icon = GFX_AGE_find_those_who_follow
-		cost = 6.00
+		cost = 4.00
 		x = 5
 		y = 7
-		ai_will_do = { factor = 10 }
-         prerequisite = {
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
 			focus = AGE_mobilize_balts
 			focus = AGE_balts_workers
 		}
@@ -216,14 +249,18 @@ focus_tree = {
 			army_experience = 20
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_urgently_increase_production
 		icon = GFX_AGE_urgently_increase_production
 		cost = 3.00
 		x = 1
 		y = 8
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_chaos_at_the_border }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_chaos_at_the_border
+		}
 		completion_reward = {
 			add_timed_idea = {
 				idea = AGE_Strong_growth_in_production
@@ -231,47 +268,61 @@ focus_tree = {
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_complex_Barrier
 		icon = GFX_AGE_complex_Barrier
 		cost = 1.00
 		x = 3
 		y = 9
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_urgently_increase_production }
-		prerequisite = { focus = AGE_find_those_who_follow }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_urgently_increase_production
+		}
+		prerequisite = {
+			focus = AGE_find_those_who_follow
+		}
 		completion_reward = {
 			custom_effect_tooltip = complex_Barrier_tt
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_soldiers_universal_friend
 		icon = GFX_AGE_soldiers_universal_friend
-		cost = 4.00
+		cost = 3.00
 		x = 9
 		y = 5
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_help_wont_come}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_help_wont_come
+		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 250
 			}
 			add_tech_bonus = {
-    			bonus = 0.5
-   	 			uses = 1
-    			category = engineers_tech
+				bonus = 0.5
+				uses = 1
+				category = engineers_tech
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_weapons_of_partisans
 		icon = GFX_AGE_weapons_of_partisans
-		cost = 5.00
+		cost = 3.00
 		x = 7
 		y = 6
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_soldiers_universal_friend }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_soldiers_universal_friend
+		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -285,172 +336,198 @@ focus_tree = {
 				type = support_equipment
 				amount = 34
 			}
-
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_time_to_arm
 		icon = GFX_AGE_time_to_arm
-		cost = 4.00
+		cost = 3.00
 		x = 10
 		y = 6
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_soldiers_universal_friend }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_soldiers_universal_friend
+		}
 		completion_reward = {
 			808 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-    				type = arms_factory
-    				level = 1
-    				instant_build = yes
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
 			12 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-    				type = arms_factory
-    				level = 1
-    				instant_build = yes
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
 			809 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-    				type = arms_factory
-    				level = 1
-    				instant_build = yes
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_punish_resistance_leaders
 		icon = GFX_AGE_punish_resistance_leaders
-		cost = 3.00
+		cost = 2.00
 		x = 7
 		y = 7
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_weapons_of_partisans }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_weapons_of_partisans
+		}
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.07
 			add_war_support = 0.07
-			country_event = AGE.15
+			country_event = AGE_phase_two.6
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_Punish_the_traitor
 		icon = GFX_AGE_Punish_the_traitor
-		cost = 4.00
+		cost = 2.00
 		x = 10
 		y = 7
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_time_to_arm }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_time_to_arm
+		}
 		completion_reward = {
 			declare_war_on = {
-    			target = TWD
-    			type = annex_everything
+				target = TWD
+				type = annex_everything
 			}
 			IF = {
 				limit = {
 					country_exists = CHU
 				}
 				annex_country = {
-    				target = CHU
-    				transfer_troops = yes
+					target = CHU
+					transfer_troops = yes
 				}
-				country_event = AGE.19
+				country_event = AGE_phase_two.10
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_calm_people_down
 		icon = GFX_AGE_calm_people_down
-		cost = 6.00
+		cost = 2.00
 		x = 10
 		y = 8
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_Punish_the_traitor }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_Punish_the_traitor
+		}
 		available = {
 			NOT = {
 				country_exists = TWD
 			}
 		}
 		completion_reward = {
-			country_event = AGE.16
+			country_event = AGE_phase_two.7
 			191 = {
 				add_core_of = AGE
 				remove_core_of = CHU
 			}
-			927  = {
+			927 = {
 				add_core_of = AGE
 				remove_core_of = TWD
 			}
-			812  = {
+			812 = {
 				add_core_of = AGE
 				remove_core_of = TWD
 			}
-			811  = {
+			811 = {
 				add_core_of = AGE
 				remove_core_of = TWD
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_industrial_rear
 		icon = GFX_AGE_industrial_rear
-		cost = 4.00
+		cost = 3.00
 		x = 9
 		y = 9
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_punish_resistance_leaders }
-		prerequisite = { focus = AGE_calm_people_down }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_punish_resistance_leaders
+		}
+		prerequisite = {
+			focus = AGE_calm_people_down
+		}
 		completion_reward = {
 			812 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-    				type = industrial_complex
-    				level = 1
-    				instant_build = yes
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 			927 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-    					level = 1
-    					instant_build = yes
-				
+					level = 1
+					instant_build = yes
 				}
 			}
 			191 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-    				type = industrial_complex
-    				level = 1
-    				instant_build = yes
-				}					
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_old_enemies
 		icon = GFX_AGE_old_enemies
-		cost = 4.00
+		cost = 2.00
 		x = 6
 		y = 10
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_complex_Barrier }
-		prerequisite = { focus = AGE_industrial_rear }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_complex_Barrier
+		}
+		prerequisite = {
+			focus = AGE_industrial_rear
+		}
 		completion_reward = {
 			add_war_support = 0.1
-			country_event = AGE.17
+			country_event = AGE_phase_two.8
 			capital_scope = {
 				create_unit = {
-                	division = "name = \"Зеленый полк\" division_template = \"Зеленый полк\" start_experience_factor = 0.1 start_equipment_factor = 0.8 start_manpower_factor = 1" 
-                	owner = ROOT
+					division = "name = \"Зеленый полк\" division_template = \"Зеленый полк\" start_experience_factor = 0.1 start_equipment_factor = 0.8 start_manpower_factor = 1"
+					owner = ROOT
 					count = 2
-            	}
+				}
 			}
 			IF = {
 				limit = {
@@ -458,101 +535,121 @@ focus_tree = {
 				}
 				capital_scope = {
 					create_unit = {
-                		division = "name = \"Местное ополчение\" division_template = \"Местное ополчение\" start_experience_factor = 0.2 start_equipment_factor = 0.8 start_manpower_factor = 1" 
-                		owner = ROOT
+						division = "name = \"Местное ополчение\" division_template = \"Местное ополчение\" start_experience_factor = 0.2 start_equipment_factor = 0.8 start_manpower_factor = 1"
+						owner = ROOT
 						count = 2
-            		}
+					}
 				}
 			}
-			else_if ={
+			else_if = {
 				limit = {
 					has_completed_focus = AGE_mobilize_balts
 				}
 				capital_scope = {
 					create_unit = {
-                		division = "name = \"Балтийское ополчение\" division_template = \"Местное ополчение\" start_experience_factor = 0.2 start_equipment_factor = 0.9 start_manpower_factor = 1" 
-                		owner = ROOT
+						division = "name = \"Балтийское ополчение\" division_template = \"Местное ополчение\" start_experience_factor = 0.2 start_equipment_factor = 0.9 start_manpower_factor = 1"
+						owner = ROOT
 						count = 2
-            		}
+					}
 				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_protective_shaft
 		icon = GFX_AGE_protective_shaft
-		cost = 4.00
+		cost = 2.00
 		x = 4
 		y = 11
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_old_enemies }
-		mutually_exclusive = { focus = AGE_powerful_onslaught }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_old_enemies
+		}
+		mutually_exclusive = {
+			focus = AGE_powerful_onslaught
+		}
 		completion_reward = {
 			add_ideas = AGE_protective_shaft_idea
 			189 = {
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 6314
 				}
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 9499
 				}
 				add_building_construction = {
-    				type = bunker
-    				level = 1
-    				instant_build = yes
+					type = bunker
+					level = 1
+					instant_build = yes
 					province = 3337
 				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_powerful_onslaught
 		icon = GFX_AGE_powerful_onslaught
-		cost = 4.00
+		cost = 2.00
 		x = 8
 		y = 11
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = AGE_old_enemies }
-		mutually_exclusive = { focus = AGE_protective_shaft }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AGE_old_enemies
+		}
+		mutually_exclusive = {
+			focus = AGE_protective_shaft
+		}
 		completion_reward = {
 			add_ideas = AGE_powerful_onslaught_idea
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_Supply_the_partisans
 		icon = GFX_AGE_Supply_the_partisans
-		cost = 4.00
+		cost = 3.00
 		x = 4
 		y = 12
-		ai_will_do = { factor = 10 }
-        prerequisite = {
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
 			focus = AGE_protective_shaft
 			focus = AGE_powerful_onslaught
 		}
-			mutually_exclusive = { focus = AGE_Provide_the_army }
+		mutually_exclusive = {
+			focus = AGE_Provide_the_army
+		}
 		completion_reward = {
 			set_country_flag = AGE_Supply_the_partisans_flag
 			custom_effect_tooltip = AGE_Supply_the_partisans_tt
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_Provide_the_army
 		icon = GFX_AGE_Provide_the_army
-		cost = 4.00
+		cost = 3.00
 		x = 8
 		y = 12
-		ai_will_do = { factor = 10 }
-        prerequisite = {
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
 			focus = AGE_protective_shaft
 			focus = AGE_powerful_onslaught
 		}
-			mutually_exclusive = { focus = AGE_Supply_the_partisans }
+		mutually_exclusive = {
+			focus = AGE_Supply_the_partisans
+		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -569,21 +666,23 @@ focus_tree = {
 			add_manpower = 950
 		}
 	}
-    focus = {
+	focus = {
 		id = AGE_Liberate_Kaliningrad
 		icon = GFX_AGE_Liberate_Kaliningrad
 		cost = 2.00
 		x = 6
 		y = 13
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		prerequisite = {
 			focus = AGE_Supply_the_partisans
 			focus = AGE_Provide_the_army
 		}
 		completion_reward = {
 			declare_war_on = {
-    			target = LPC
-    			type = annex_everything
+				target = LPC
+				type = annex_everything
 			}
 			IF = {
 				limit = {
@@ -598,4 +697,3 @@ focus_tree = {
 		}
 	}
 }
-    

@@ -1,18 +1,6 @@
 ideas = {
-
 	country = {
-		klyatva_of_blood = {
-			picture = SDI_klyatva_of_blood_idea
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		SDI_Blood_Oath = {
 			modifier = {
 				surrender_limit = 0.3
 				defensive_war_stability_factor = 0.3
@@ -20,7 +8,6 @@ ideas = {
 				war_support_factor = 0.25
 				offence = 0.1
 				defence = 0.1
-				
 			}
 		}
 	}

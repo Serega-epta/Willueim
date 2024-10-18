@@ -1,15 +1,8 @@
 ideas = {
-
 	country = {
-		OLD_emptied_fraternity = { #Опустевшее братство
-			picture = Opustevshee_bratstvo1		
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1			
+		#Опустевшее братство
+		OLD_emptied_fraternity = {
+			picture = GFX_idea_OLD_Empty_Brotherhood
 			modifier = {
 				stability_factor = -0.05
 				recruitable_population_factor = -0.1

@@ -7,34 +7,27 @@ sub_units = {
 		ai_priority = 0
 		active = no
 		affects_speed = no
-
 		type = {
 			infantry
 			support
 		}
-		
 		group = support
-		
 		categories = {
 			category_support_battalions
 			category_army
 		}
-
 		maximum_speed = 2
 		default_morale = 0.2
 		max_organisation = 25
 		max_strength = 2
 		supply_consumption = 0.01
-		
 		manpower = 10
 		essential = {
 			support_equipment
 		}
-
 		need = {
 			support_equipment = 10
 		}
-
 		can_be_parachuted = yes
 	}
 }

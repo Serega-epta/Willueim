@@ -1,18 +1,18 @@
 characters = {
 	SDC_Putin = {
 		name = SDC_Putin
-		portraits={
-			civilian={
-				large = GFX_portrait_SDC_Pautov
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SDC_Pautov"
 			}
 		}
-		country_leader={
-			ideology=statesmen_subideology
+		country_leader = {
+			ideology = statesmen_subideology
 			desc = SDC_Putin_desc
-			expire="2965.1.1.1"
-			id=-1
+			expire = "2965.1.1.1"
+			id = -1
 		}
-		field_marshal = { 
+		field_marshal = {
 			skill = 2
 			attack_skill = 3
 			defense_skill = 1
@@ -25,7 +25,7 @@ characters = {
 		name = SDC_Sergey_Shoigov
 		portraits = {
 			army = {
-				large = GFX_portrait_SDC_Sergey_Shoigov
+				large = "GFX_portrait_SDC_Sergey_Shoigov"
 			}
 		}
 		corps_commander = {
@@ -41,7 +41,7 @@ characters = {
 		name = SDC_Valeriy_Gerasov
 		portraits = {
 			army = {
-				large = GFX_portrait_SDC_Valeriy_Gerasov
+				large = "GFX_portrait_SDC_Valeriy_Gerasov"
 			}
 		}
 		corps_commander = {
@@ -57,7 +57,7 @@ characters = {
 		name = SDC_Alexander_Lapinov
 		portraits = {
 			army = {
-				large = GFX_portrait_SDC_Alexander_Lapinov
+				large = "GFX_portrait_SDC_Alexander_Lapinov"
 			}
 		}
 		corps_commander = {
@@ -79,29 +79,29 @@ characters = {
 	}
 	SDC_Martin_Dugin = {
 		name = SDC_Martin_Dugin
-		portraits={
-			civilian={
-				large = GFX_portrait_SDC_Martin_Dugin
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SDC_Martin_Dugin"
 			}
 		}
-		country_leader={
-			ideology=technocracy_subideology
-			expire="2965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = technocracy_subideology
+			expire = "2965.1.1.1"
+			id = -1
 		}
 	}
 	SDC_Putin_evil = {
 		name = SDC_Putin_evil
-		portraits={
-			civilian={
-				large = GFX_portrait_SDC_Pautov
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SDC_Pautov"
 			}
 		}
-		country_leader={
-			ideology= chthonism_subideology
+		country_leader = {
+			ideology = chthonism_subideology
 			desc = SDC_Putin_desc
-			expire="2965.1.1.1"
-			id=-1
+			expire = "2965.1.1.1"
+			id = -1
 		}
 	}
 }

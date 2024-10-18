@@ -1,17 +1,13 @@
 equipments = {
-
 	pre_war_OPV_equipment_archetype = {
 		year = 2000
-	
 		is_archetype = yes
 		is_buildable = no
 		is_convertable = yes
-		picture = archetype_light_tank_equipment			
+		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
-		
 		interface_category = interface_category_armor
-		
 		upgrades = {
 			tank_reliability_upgrade
 			tank_engine_upgrade
@@ -22,12 +18,10 @@ equipments = {
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.65
-
 		#Защитные свойства
 		defense = 2
 		breakthrough = 2
 		armor_value = 2
-
 		#Наступательные способности
 		soft_attack = 7
 		hard_attack = 7
@@ -38,24 +32,18 @@ equipments = {
 			steel = 3
 			chromium = 4
 		}
-
 		fuel_consumption = 8
 	}
-
 	pre_war_OPV_equipment = {
 		year = 2010
-
 		archetype = pre_war_OPV_equipment_archetype
 		priority = 5
 		visual_level = 0
-		
 		interface_category = interface_category_armor
 	}
-
 	#Массовые танки
 	basic_mass_OPF_equipment = {
 		year = 2020
-	
 		archetype = pre_war_OPV_equipment_archetype
 		priority = 5
 		visual_level = 0
@@ -63,12 +51,10 @@ equipments = {
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.6
-
 		#Защитные свойства
 		defense = 4
 		breakthrough = 4
 		armor_value = 4
-
 		#Наступательные способности
 		soft_attack = 8
 		hard_attack = 8
@@ -79,13 +65,10 @@ equipments = {
 			steel = 3
 			chromium = 1
 		}
-
 		fuel_consumption = 12
 	}
-
 	improved_mass_OPF_equipment = {
 		year = 2025
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = basic_mass_OPF_equipment
 		priority = 10
@@ -95,12 +78,10 @@ equipments = {
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.55
-
 		#Защитные свойства
 		defense = 6
 		breakthrough = 4
 		armor_value = 4
-
 		#Наступательные способности
 		soft_attack = 9
 		hard_attack = 9
@@ -111,13 +92,10 @@ equipments = {
 			steel = 3
 			chromium = 1
 		}
-
 		fuel_consumption = 12
 	}
-
 	advanced_mass_OPF_equipment = {
 		year = 2030
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_mass_OPF_equipment
 		priority = 10
@@ -127,12 +105,10 @@ equipments = {
 		#Различные способности
 		maximum_speed = 4
 		reliability = 0.5
-
 		#Защитные свойства
 		defense = 8
 		breakthrough = 6
 		armor_value = 6
-
 		#Наступательные способности
 		soft_attack = 10
 		hard_attack = 10
@@ -143,13 +119,10 @@ equipments = {
 			steel = 8
 			chromium = 1
 		}
-
 		fuel_consumption = 16
 	}
-
 	mass_OPF_of_the_future_equipment = {
 		year = 2040
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_mass_OPF_equipment
 		priority = 10
@@ -159,12 +132,10 @@ equipments = {
 		#Различные способности
 		maximum_speed = 5
 		reliability = 0.5
-
 		#Защитные свойства
 		defense = 10
 		breakthrough = 10
 		armor_value = 8
-
 		#Наступательные способности
 		soft_attack = 11
 		hard_attack = 11
@@ -175,18 +146,14 @@ equipments = {
 			steel = 8
 			chromium = 1
 		}
-
 		fuel_consumption = 16
 	}
-
 	#Специализированные танки
 	basic_specialized_OPF_equipment = {
 		year = 2020
-	
 		archetype = pre_war_OPV_equipment_archetype
 		priority = 5
 		visual_level = 0
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 8
@@ -204,16 +171,13 @@ equipments = {
 			chromium = 1
 		}
 	}
-
 	improved_specialized_OPF_equipment = {
 		year = 2025
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = basic_specialized_OPF_equipment
 		priority = 10
 		visual_level = 0
 		is_convertable = yes
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 9
@@ -232,16 +196,13 @@ equipments = {
 			tungsten = 1
 		}
 	}
-
 	advanced_specialized_OPF_equipment = {
 		year = 2030
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_specialized_OPF_equipment
 		priority = 10
 		visual_level = 0
 		is_convertable = yes
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 10
@@ -260,16 +221,13 @@ equipments = {
 			tungsten = 2
 		}
 	}
-
 	specialized_OPF_of_the_future_equipment = {
 		year = 2040
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_specialized_OPF_equipment
 		priority = 10
 		visual_level = 0
 		is_convertable = yes
-
 		max_strength = 2
 		maximum_speed = 5
 		soft_attack = 12
@@ -288,15 +246,12 @@ equipments = {
 			tungsten = 2
 		}
 	}
-	
-	#ИИ - танки
+	#�?�? - танки
 	basic_ai_OPF_equipment = {
 		year = 2020
-	
 		archetype = pre_war_OPV_equipment_archetype
 		priority = 5
 		visual_level = 0
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 9
@@ -315,16 +270,13 @@ equipments = {
 			tungsten = 1
 		}
 	}
-
 	improved_ai_OPF_equipment = {
 		year = 2025
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = basic_ai_OPF_equipment
 		priority = 10
 		visual_level = 0
 		is_convertable = yes
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 10
@@ -343,16 +295,13 @@ equipments = {
 			tungsten = 2
 		}
 	}
-
 	advanced_ai_OPF_equipment = {
 		year = 2030
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_ai_OPF_equipment
 		priority = 10
 		visual_level = 0
 		is_convertable = yes
-
 		max_strength = 2
 		maximum_speed = 4
 		soft_attack = 11
@@ -371,16 +320,13 @@ equipments = {
 			tungsten = 2
 		}
 	}
-
 	ai_OPF_of_the_future_equipment = {
 		year = 2040
-		
 		archetype = pre_war_OPV_equipment_archetype
 		parent = improved_ai_OPF_equipment
 		priority = 10
 		visual_level = 0
 		is_convertable = yes
-
 		max_strength = 2
 		maximum_speed = 5
 		soft_attack = 13

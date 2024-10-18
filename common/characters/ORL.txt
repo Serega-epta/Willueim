@@ -3,10 +3,10 @@ characters = {
 		name = ORL_evgeniy_prihozhiy
 		portraits = {
 			civilian = {
-				large = GFX_portrait_ORL_evgeniy_prihozhiy
+				large = "GFX_portrait_ORL_evgeniy_prihozhiy"
 			}
 			army = {
-				large = GFX_portrait_ORL_evgeniy_prihozhiy
+				large = "GFX_portrait_ORL_evgeniy_prihozhiy"
 			}
 		}
 		country_leader = {
@@ -15,7 +15,7 @@ characters = {
 			id = -1
 			desc = ORL_evgeniy_prihozhiy_desc
 		}
-		field_marshal = { 
+		field_marshal = {
 			skill = 2
 			attack_skill = 3
 			defense_skill = 1
@@ -28,10 +28,10 @@ characters = {
 		name = ORL_Anton_Elizarev
 		portraits = {
 			civilian = {
-				large = GFX_portrait_ORL_Anton_Elizarin
+				large = "GFX_portrait_ORL_Anton_Elizarin"
 			}
 			army = {
-				large = GFX_portrait_ORL_Anton_Elizarin
+				large = "GFX_portrait_ORL_Anton_Elizarin"
 			}
 		}
 		country_leader = {
@@ -56,11 +56,12 @@ characters = {
 			id = -1
 		}
 	}
-	ORL_Dmitriy_Gusev = { #Злой брат близнец, чтобы можно было рекрутировать
+	#Злой брат близнец, чтобы можно было рекрутировать
+	ORL_Dmitriy_Gusev = {
 		name = ORL_Dmitriy_Gusev
 		portraits = {
 			army = {
-				large = GFX_portrait_SBT_Dmitriy_Gusev
+				large = "GFX_portrait_SBT_Dmitriy_Gusev"
 			}
 		}
 		corps_commander = {
@@ -72,11 +73,12 @@ characters = {
 			desc = ORL_Dmitriy_Gusev_desc
 		}
 	}
-	ORL_Sergey_Surovov = { #Злой брат близнец, чтобы можно было рекрутировать
+	#Злой брат близнец, чтобы можно было рекрутировать
+	ORL_Sergey_Surovov = {
 		name = ORL_Sergey_Surovov
-		portraits={
-			army={
-				large="gfx/leaders/ZAK/ZAK_Sergey_Surovov.dds"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ZAK/ZAK_Sergey_Surovov.dds"
 			}
 		}
 		corps_commander = {
@@ -92,7 +94,7 @@ characters = {
 		name = ORL_Michail_Mizinov
 		portraits = {
 			army = {
-				large = GFX_portrait_ORL_Michail_Mizinov
+				large = "GFX_portrait_ORL_Michail_Mizinov"
 			}
 		}
 		corps_commander = {
@@ -107,7 +109,7 @@ characters = {
 		name = ORL_Davor_Sadrich
 		portraits = {
 			army = {
-				large = GFX_portrait_ORL_Davor_Sadrich
+				large = "GFX_portrait_ORL_Davor_Sadrich"
 			}
 		}
 		corps_commander = {

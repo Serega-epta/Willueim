@@ -1,18 +1,14 @@
 capital = 200
-
 oob = AZB
-
-
 # Starting tech
 set_technology = {
-    infantry_weapons = 1
-   civilian_clothing = 1
-   tech_support = 1
-   pre_war_OPV = 1
-   gw_artillery = 1
-   instruments_of_any_era = 1
+	infantry_weapons = 1
+	civilian_clothing = 1
+	tech_support = 1
+	pre_war_OPV = 1
+	gw_artillery = 1
+	instruments_of_any_era = 1
 }
-
 set_research_slots = 2
 set_convoys = 0
 army_experience = 50
@@ -33,23 +29,19 @@ add_equipment_to_stockpile = {
 	producer = AZB
 }
 set_politics = {
-	ruling_party = militarists 
+	ruling_party = militarists
 	elections_allowed = no
 }
-
 set_popularities = {
 	militarists = 100
 }
- 
-
 create_country_leader = {
-    name = "aleksander_zonder"
-    desc = "POLITICS_aleksander_zonder_DESC"
-    picture = "gfx/leaders/AZB/aleksander_zonder.dds"
-    ideology = militarists_subideology
-    traits = {
-        #
-    }
+	name = "aleksander_zonder"
+	desc = "AZB_aleksander_zonder_desc"
+	picture = "gfx/leaders/AZB/aleksander_zonder.dds"
+	ideology = militarists_subideology
+	traits = {
+		#
+	}
 }
-
-add_ideas = free_merc
+add_ideas = AZB_Free_Mercenaries

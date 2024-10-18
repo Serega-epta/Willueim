@@ -2,41 +2,46 @@ focus_tree = {
 	id = ORL_phase_1
 	country = {
 		factor = 0
-        modifier = {
-            add = 10
-            tag = ORL
-        }		
+		modifier = {
+			add = 10
+			tag = ORL
+		}
 	}
 	default = no
-
 	focus = {
 		id = ORL_best_in_hell
 		icon = GFX_ORL_best_in_hell
 		cost = 5.00
 		x = 7
 		y = 0
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
-			country_event = ORL.1
+			country_event = ORL_phase_one.1
 			add_war_support = 0.05
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_first_among_equals
 		icon = GFX_ORL_first_among_equals
 		cost = 5.00
 		x = 5
 		y = 1
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		available = {
 			country_exists = SBT
 			SBT = {
 				has_war = no
 			}
 		}
-        prerequisite = { focus = ORL_best_in_hell }
+		prerequisite = {
+			focus = ORL_best_in_hell
+		}
 		completion_reward = {
-			country_event = ORL.5
+			country_event = ORL_phase_one.5
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 200
@@ -48,29 +53,33 @@ focus_tree = {
 			939 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-    				type = industrial_complex
-    				level = 1
-    				instant_build = yes
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
-			}	
+			}
 			940 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-    				type = industrial_complex
-    				level = 1
-    				instant_build = yes
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
 	}
-    focus = {
-		id = ORL_fortress_of_Tula 
+	focus = {
+		id = ORL_fortress_of_Tula
 		icon = GFX_ORL_fortress_of_Tula
 		cost = 5.00
 		x = 5
 		y = 3
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_first_among_equals }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_first_among_equals
+		}
 		available = {
 			country_exists = SBT
 			SBT = {
@@ -88,14 +97,18 @@ focus_tree = {
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_sectarians_and_traitors
 		icon = GFX_ORL_sectarians_and_traitors
 		cost = 5.00
 		x = 5
 		y = 5
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_fortress_of_Tula }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_fortress_of_Tula
+		}
 		available = {
 			country_exists = SBT
 			SBT = {
@@ -110,14 +123,18 @@ focus_tree = {
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_meet_your_fathers
 		icon = GFX_ORL_meet_your_fathers
 		cost = 5.00
 		x = 5
 		y = 7
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_sectarians_and_traitors }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_sectarians_and_traitors
+		}
 		available = {
 			country_exists = SBT
 			SBT = {
@@ -126,106 +143,152 @@ focus_tree = {
 		}
 		completion_reward = {
 			division_template = {
-            	name = "Первый Отряд"
-            	is_locked = no
-            	priority = 1
-            	regiments = {
-                	infantry = { x = 0 y = 0}
-                    infantry = { x = 0 y = 1}
-                    infantry = { x = 0 y = 2}
-                    infantry = { x = 1 y = 0}
-                    infantry = { x = 1 y = 1}
-                    infantry = { x = 1 y = 2}
-            	}
+				name = "Первый Отряд"
+				is_locked = no
+				priority = 1
+				regiments = {
+					infantry = {
+						x = 0
+						y = 0
+					}
+					infantry = {
+						x = 0
+						y = 1
+					}
+					infantry = {
+						x = 0
+						y = 2
+					}
+					infantry = {
+						x = 1
+						y = 0
+					}
+					infantry = {
+						x = 1
+						y = 1
+					}
+					infantry = {
+						x = 1
+						y = 2
+					}
+				}
 			}
 			capital_scope = {
-                create_unit = {
-                	division = "name = \"Первый Отряд\" division_template = \"Первый Отряд\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    owner = ROOT
+				create_unit = {
+					division = "name = \"Первый Отряд\" division_template = \"Первый Отряд\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
 				}
 			}
 		}
 	}
-    focus = {
-		id = ORL_veteran_squads 
+	focus = {
+		id = ORL_veteran_squads
 		icon = GFX_ORL_veteran_squads
 		cost = 5.00
 		x = 7
 		y = 2
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_best_in_hell }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_best_in_hell
+		}
 		completion_reward = {
-			country_event = ORL.2
-			capital_scope = { 
+			country_event = ORL_phase_one.2
+			capital_scope = {
 				create_unit = {
-                    	division = "name = \"Группа Глинки\" division_template = \"Группа Глинки\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = ROOT
-            	}
+					division = "name = \"Группа Глинки\" division_template = \"Группа Глинки\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
 				create_unit = {
-                    	division = "name = \"Группа Глинки\" division_template = \"Группа Глинки\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = ROOT
-            	}
+					division = "name = \"Группа Глинки\" division_template = \"Группа Глинки\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
-    focus = {
-		id = ORL_we_cant_forget 
+	focus = {
+		id = ORL_we_cant_forget
 		icon = GFX_ORL_we_cant_forget
 		cost = 5.00
 		x = 7
 		y = 4
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_veteran_squads }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_veteran_squads
+		}
 		completion_reward = {
-			country_event = ORL.3
+			country_event = ORL_phase_one.3
 			swap_ideas = {
 				remove_idea = ORL_corporative_ethics
 				add_idea = ORL_corporative_ethics_2
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_high_priest
 		icon = GFX_ORL_high_priest
 		cost = 5.00
 		x = 7
 		y = 6
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_we_cant_forget }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_we_cant_forget
+		}
 		completion_reward = {
-			country_event = ORL.4
+			country_event = ORL_phase_one.4
 			add_popularity = {
-    			ideology = sacraments
-    			popularity = 0.15
+				ideology = sacraments
+				popularity = 0.15
 			}
 			add_manpower = 1000
 			division_template = {
-            	name = "Русич"
-            	is_locked = no
-            	priority = 1
-            	regiments = {
-                	infantry = { x = 0 y = 0}
-                	infantry = { x = 0 y = 1}
-                	infantry = { x = 1 y = 0}
-                	infantry = { x = 1 y = 1}
-            	}
+				name = "Русич"
+				is_locked = no
+				priority = 1
+				regiments = {
+					infantry = {
+						x = 0
+						y = 0
+					}
+					infantry = {
+						x = 0
+						y = 1
+					}
+					infantry = {
+						x = 1
+						y = 0
+					}
+					infantry = {
+						x = 1
+						y = 1
+					}
+				}
 			}
 			capital_scope = {
-                create_unit = {
-                	division = "name = \"Русич\" division_template = \"Русич\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    owner = ROOT
+				create_unit = {
+					division = "name = \"Русич\" division_template = \"Русич\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
 				}
-        	}
+			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_young_blood
 		icon = GFX_ORL_young_blood
 		cost = 5.00
 		x = 9
 		y = 1
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_best_in_hell }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_best_in_hell
+		}
 		available = {
 			country_exists = ZAK
 			ZAK = {
@@ -233,7 +296,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			country_event = ORL.6
+			country_event = ORL_phase_one.6
 			add_manpower = 500
 			935 = {
 				add_extra_state_shared_building_slots = 1
@@ -261,14 +324,18 @@ focus_tree = {
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_threat_from_north
 		icon = GFX_ORL_threat_from_north
 		cost = 5.00
 		x = 9
 		y = 3
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_young_blood }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_young_blood
+		}
 		available = {
 			country_exists = ZAK
 			ZAK = {
@@ -300,26 +367,30 @@ focus_tree = {
 			}
 			ZAK = {
 				capital_scope = {
-                	create_unit = {
-                		division = "name = \"Новобранцы\" division_template = \"Новобранцы\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = ZAK
+					create_unit = {
+						division = "name = \"Новобранцы\" division_template = \"Новобранцы\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+						owner = ZAK
 					}
 					create_unit = {
-                		division = "name = \"Новобранцы\" division_template = \"Новобранцы\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1" 
-                    	owner = ZAK
+						division = "name = \"Новобранцы\" division_template = \"Новобранцы\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+						owner = ZAK
 					}
-        		}
+				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_idiots_and_idealists
 		icon = GFX_ORL_idiots_and_idealists
 		cost = 5.00
 		x = 9
 		y = 5
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_threat_from_north }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_threat_from_north
+		}
 		available = {
 			country_exists = ZAK
 			ZAK = {
@@ -334,14 +405,18 @@ focus_tree = {
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_meet_your_sons
 		icon = GFX_ORL_meet_your_sons
 		cost = 5.00
 		x = 9
 		y = 7
-		ai_will_do = { factor = 10 }
-        prerequisite = { focus = ORL_idiots_and_idealists }
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_idiots_and_idealists
+		}
 		available = {
 			country_exists = ZAK
 			ZAK = {
@@ -352,19 +427,23 @@ focus_tree = {
 			add_manpower = 4000
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_help_squad
 		icon = GFX_ORL_help_squad
 		cost = 5.00
 		x = 6
 		y = 8
-		ai_will_do = { factor = 10 }
-        prerequisite = {
-             focus = ORL_meet_your_fathers
-             focus = ORL_meet_your_sons
-        }
-        prerequisite = { focus = ORL_high_priest }
-        mutually_exclusive = {
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_meet_your_fathers
+			focus = ORL_meet_your_sons
+		}
+		prerequisite = {
+			focus = ORL_high_priest
+		}
+		mutually_exclusive = {
 			focus = ORL_help_front
 		}
 		will_lead_to_war_with = VLC
@@ -373,43 +452,47 @@ focus_tree = {
 			end_puppet = ZAK
 			MAZ = {
 				declare_war_on = {
-    				target = ZAK
-    				type = annex_everything
+					target = ZAK
+					type = annex_everything
 				}
 			}
 			TAB = {
 				declare_war_on = {
-    				target = ZAK
-    				type = annex_everything
+					target = ZAK
+					type = annex_everything
 				}
 			}
 			VLC = {
 				declare_war_on = {
-    				target = SBT
-    				type = annex_everything
+					target = SBT
+					type = annex_everything
 				}
 			}
 			SMX = {
 				declare_war_on = {
-    				target = SBT
-    				type = annex_everything
+					target = SBT
+					type = annex_everything
 				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_help_front
 		icon = GFX_ORL_help_front
 		cost = 5.00
 		x = 8
 		y = 8
-		ai_will_do = { factor = 10 }
-        prerequisite = {
-             focus = ORL_meet_your_fathers
-             focus = ORL_meet_your_sons
-        }
-        prerequisite = { focus = ORL_high_priest }
-        mutually_exclusive = {
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ORL_meet_your_fathers
+			focus = ORL_meet_your_sons
+		}
+		prerequisite = {
+			focus = ORL_high_priest
+		}
+		mutually_exclusive = {
 			focus = ORL_help_squad
 		}
 		will_lead_to_war_with = MAZ
@@ -418,37 +501,39 @@ focus_tree = {
 			end_puppet = SBT
 			MAZ = {
 				declare_war_on = {
-    				target = ZAK
-    				type = annex_everything
+					target = ZAK
+					type = annex_everything
 				}
 			}
 			TAB = {
 				declare_war_on = {
-    				target = ZAK
-    				type = annex_everything
+					target = ZAK
+					type = annex_everything
 				}
 			}
 			VLC = {
 				declare_war_on = {
-    				target = SBT
-    				type = annex_everything
+					target = SBT
+					type = annex_everything
 				}
 			}
 			SMX = {
 				declare_war_on = {
-    				target = SBT
-    				type = annex_everything
+					target = SBT
+					type = annex_everything
 				}
 			}
 		}
 	}
-    focus = {
+	focus = {
 		id = ORL_revenge_for_dead
 		icon = GFX_ORL_revenge_for_dead
 		cost = 5.00
 		x = 7
 		y = 9
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		available = {
 			ORL = {
 				has_war = no
@@ -468,10 +553,10 @@ focus_tree = {
 				}
 			}
 		}
-        prerequisite = {
-            focus = ORL_help_squad
-            focus = ORL_help_front
-        }
+		prerequisite = {
+			focus = ORL_help_squad
+			focus = ORL_help_front
+		}
 		will_lead_to_war_with = MAZ
 		will_lead_to_war_with = TAB
 		will_lead_to_war_with = VLC
@@ -491,7 +576,7 @@ focus_tree = {
 					add_core_of = ORL
 					remove_core_of = VLC
 				}
-				205= {
+				205 = {
 					add_core_of = ORL
 					remove_core_of = SMX
 				}
@@ -523,13 +608,13 @@ focus_tree = {
 				MAZ = {
 					every_core_state = {
 						add_core_of = ORL
-						remove_core_of = MAZ						
+						remove_core_of = MAZ
 					}
 				}
 				TAB = {
 					every_core_state = {
 						add_core_of = ORL
-						remove_core_of = TAB						
+						remove_core_of = TAB
 					}
 				}
 				ORL = {
@@ -549,10 +634,10 @@ focus_tree = {
 				}
 			}
 			# hidden_effect = {
-            #     load_focus_tree = {
-            #         tree = ORL_phase_2
-            #         keep_completed = no
-            #     }
+			#     load_focus_tree = {
+			#         tree = ORL_phase_2
+			#         keep_completed = no
+			#     }
 			# }
 		}
 	}
