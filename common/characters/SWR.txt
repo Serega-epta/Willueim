@@ -1,14 +1,80 @@
 characters = {
-	SWR_Velimudr_Aikanenko = {
+	SWR_Vladislav_Anisiforov = {
+		name = SWR_Vladislav_Anisiforov
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_SWR_Velimudr_Aikanenko"
+				large = GFX_portrait_ROH_generic_18
 			}
 		}
 		country_leader = {
 			ideology = free_people_subideology
+			traits = { careful_trait }
 			expire = "1965.1.1.1"
 			id = -1
+		}
+		field_marshal = {
+    		skill = 2
+    		attack_skill = 1
+    		defense_skill = 2
+    		planning_skill = 2
+    		logistics_skill = 3
+		}
+	}
+	SWR_Igor_Kadomsky = {
+		name = SWR_Igor_Kadomsky  
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ROH_generic_27
+			}
+		}
+		country_leader = {
+			ideology = bandits_subideology
+			traits = { polite_trait }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+    		skill = 2
+    		attack_skill = 2
+    		defense_skill = 2
+    		planning_skill = 3
+    		logistics_skill = 1
+		}
+	}
+	SWR_Evgeny_Velehov = {
+		name = SWR_Evgeny_Velehov
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ROH_generic_26
+			}
+		}
+		country_leader = {
+			ideology = humanists_subideology
+			traits = { reckless_trait }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+    		skill = 1
+    		attack_skill = 3
+    		defense_skill = 1
+    		planning_skill = 2
+    		logistics_skill = 1
+		}
+	}
+	SWR_Maxim_Uvin = {
+		name = SWR_Maxim_Uvin
+		portraits = {
+			army = {
+				large = GFX_portrait_ROH_generic_22
+			}
+		}
+		corps_commander = {
+    		skill = 2
+    		attack_skill = 1
+    		defense_skill = 1
+    		planning_skill = 2
+    		logistics_skill = 3
 			desc = SWR_Velimudr_Aikanenko_desc
 		}
 	}
