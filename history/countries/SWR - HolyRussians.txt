@@ -1,14 +1,17 @@
 capital = 73
+
 oob = SWR
+
 set_technology = {
    infantry_weapons = 1
    infantry_weapons1 = 1
    infantry_weapons2 = 1
    civilian_clothing = 1
-   old_worlds_uniform = 1
+   old_world_uniforms = 1
    gw_artillery = 1
    tech_support = 1
 }
+
 
 if = {
     limit = { has_dlc = "By Blood Alone" }
@@ -36,15 +39,16 @@ if = {
     }
 }
 
+set_research_slots = 1
+set_stability = 0.45
+set_war_support = 0.58
+set_convoys = 0
+
 load_focus_tree = {
     tree = SWR_phase_1_ep_1.1
     keep_completed = no
 }
 
-set_research_slots = 1
-set_stability = 0.45
-set_war_support = 0.58
-set_convoys = 0
 
 set_power_balance = {
   id = SWR_power_balance
@@ -72,6 +76,29 @@ set_popularities = {
 	bandits = 35
    free_people = 40
    humanists = 25
+}
+
+recruit_character = SWR_Vladislav_Anisiforov
+recruit_character = SWR_Igor_Kadomsky
+recruit_character = SWR_Evgeny_Velehov
+recruit_character = SWR_Maxim_Uvin
+
+add_ideas = {
+   SWR_divided_society
+   SWR_russian_orthodox_church
+   SWR_inquisition
+   limited_recruting
+   classic_faith
+   border_control
+   unstopble_work
+   slaves_labour
+   papers
+   liquidation_of_distortions
+   suppression_social
+}
+
+add_dynamic_modifier = {
+  modifier = SWR_huntsman_squads
 }
 
 set_variable = {
@@ -113,3 +140,4 @@ set_variable = {
   var = swr_acclimatization_hot_climate_gain_factor
   value = 0.05
 }
+
