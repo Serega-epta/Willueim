@@ -42,6 +42,132 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
+		name = "GFX_goal_step_to_unknown_shine"
+		texturefile = "gfx/interface/goals/Minor/step_to_unknown.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Minor/step_to_unknown.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Minor/step_to_unknown.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_enmity_with_neighbors_shine"
+		texturefile = "gfx/interface/goals/Minor/enmity_with_neighbors.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Minor/enmity_with_neighbors.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Minor/enmity_with_neighbors.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_throught_storm_eye_shine"
+		texturefile = "gfx/interface/goals/Minor/throught_storm_eye.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Minor/throught_storm_eye.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Minor/throught_storm_eye.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "GFX_goal_More_Meat_shine"
 		texturefile = "gfx/interface/goals/more_meat.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -169,10 +295,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_our_breadbasket_shine"
-		texturefile = "gfx/interface/goals/our_breadbasket.dds"
+		texturefile = "gfx/interface/goals/Minor/our_breadbasket.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/our_breadbasket.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/our_breadbasket.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -190,7 +316,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/our_breadbasket.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/our_breadbasket.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -211,10 +337,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_our_factories_shine"
-		texturefile = "gfx/interface/goals/our_factories.dds"
+		texturefile = "gfx/interface/goals/Minor/our_factories.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/our_factories.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/our_factories.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -232,7 +358,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/our_factories.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/our_factories.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -295,10 +421,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_unbending_bayonets_shine"
-		texturefile = "gfx/interface/goals/unbending_bayonets.dds"
+		texturefile = "gfx/interface/goals/Minor/unbending_bayonets.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/unbending_bayonets.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/unbending_bayonets.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -316,7 +442,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/unbending_bayonets.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/unbending_bayonets.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -337,10 +463,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_weapons_at_ready_shine"
-		texturefile = "gfx/interface/goals/weapons_at_ready.dds"
+		texturefile = "gfx/interface/goals/Minor/weapons_at_ready.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/weapons_at_ready.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/weapons_at_ready.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -358,7 +484,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/weapons_at_ready.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/weapons_at_ready.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -379,10 +505,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_rules_of_war_shine"
-		texturefile = "gfx/interface/goals/rules_of_war.dds"
+		texturefile = "gfx/interface/goals/Minor/rules_of_war.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/rules_of_war.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/rules_of_war.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -400,7 +526,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/rules_of_war.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/rules_of_war.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -421,10 +547,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_clearing_territory_shine"
-		texturefile = "gfx/interface/goals/clearing_territory.dds"
+		texturefile = "gfx/interface/goals/Minor/clearing_territory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/clearing_territory.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/clearing_territory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -442,7 +568,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/clearing_territory.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/clearing_territory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -463,10 +589,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_take_a_stance_shine"
-		texturefile = "gfx/interface/goals/take_a_stance.dds"
+		texturefile = "gfx/interface/goals/Minor/take_a_stance.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/take_a_stance.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/take_a_stance.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -484,7 +610,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/take_a_stance.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/take_a_stance.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -505,10 +631,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_tough_politics_shine"
-		texturefile = "gfx/interface/goals/tough_politics.dds"
+		texturefile = "gfx/interface/goals/Minor/tough_politics.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/tough_politics.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/tough_politics.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -526,7 +652,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/tough_politics.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/tough_politics.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -547,10 +673,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_realpolitics_shine"
-		texturefile = "gfx/interface/goals/realpolitics.dds"
+		texturefile = "gfx/interface/goals/Minor/realpolitics.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/realpolitics.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/realpolitics.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -568,7 +694,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/realpolitics.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/realpolitics.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -589,10 +715,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_death_from_skyes_shine"
-		texturefile = "gfx/interface/goals/death_from_skyes.dds"
+		texturefile = "gfx/interface/goals/Minor/death_from_skyes.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/death_from_skyes.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/death_from_skyes.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -610,7 +736,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/death_from_skyes.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/death_from_skyes.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -631,10 +757,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_shadow_hit_shine"
-		texturefile = "gfx/interface/goals/shadow_hit.dds"
+		texturefile = "gfx/interface/goals/Minor/shadow_hit.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/shadow_hit.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/shadow_hit.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -652,7 +778,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/shadow_hit.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/shadow_hit.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -673,10 +799,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_economy_for_politics_shine"
-		texturefile = "gfx/interface/goals/economy_for_politics.dds"
+		texturefile = "gfx/interface/goals/Minor/economy_for_politics.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/economy_for_politics.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/economy_for_politics.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -694,7 +820,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/economy_for_politics.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/economy_for_politics.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -715,10 +841,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_economy_for_country_shine"
-		texturefile = "gfx/interface/goals/economy_for_country.dds"
+		texturefile = "gfx/interface/goals/Minor/economy_for_country.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/economy_for_country.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/economy_for_country.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -736,7 +862,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/economy_for_country.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/economy_for_country.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1177,10 +1303,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_hell_on_wheels_shine"
-		texturefile = "gfx/interface/goals/hell_on_wheels.dds"
+		texturefile = "gfx/interface/goals/Minor/hell_on_wheels.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/hell_on_wheels.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/hell_on_wheels.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1198,7 +1324,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/hell_on_wheels.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/hell_on_wheels.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1219,10 +1345,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_take_a_stance_shine"
-		texturefile = "gfx/interface/goals/take_a_stance.dds"
+		texturefile = "gfx/interface/goals/Minor/take_a_stance.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/take_a_stance.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/take_a_stance.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1240,7 +1366,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/take_a_stance.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/take_a_stance.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1261,10 +1387,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_shirt_for_naked_shine"
-		texturefile = "gfx/interface/goals/shirt_for_naked.dds"
+		texturefile = "gfx/interface/goals/Minor/shirt_for_naked.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/shirt_for_naked.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/shirt_for_naked.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1282,7 +1408,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/shirt_for_naked.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/shirt_for_naked.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1303,10 +1429,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_lot_of_life_shine"
-		texturefile = "gfx/interface/goals/lot_of_life.dds"
+		texturefile = "gfx/interface/goals/Minor/lot_of_life.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/lot_of_life.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/lot_of_life.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1324,7 +1450,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/lot_of_life.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/lot_of_life.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1345,10 +1471,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_laws_and_order_shine"
-		texturefile = "gfx/interface/goals/laws_and_order.dds"
+		texturefile = "gfx/interface/goals/Minor/laws_and_order.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/laws_and_order.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/laws_and_order.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1366,7 +1492,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/laws_and_order.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/laws_and_order.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1387,10 +1513,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_industry_of_war_shine"
-		texturefile = "gfx/interface/goals/industry_of_war.dds"
+		texturefile = "gfx/interface/goals/Minor/industry_of_war.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/industry_of_war.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/industry_of_war.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1408,7 +1534,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/industry_of_war.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/industry_of_war.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1429,10 +1555,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_industry_of_peace_shine"
-		texturefile = "gfx/interface/goals/industry_of_peace.dds"
+		texturefile = "gfx/interface/goals/Minor/industry_of_peace.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/industry_of_peace.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/industry_of_peace.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1450,7 +1576,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/industry_of_peace.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/industry_of_peace.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1471,10 +1597,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_source_of_order_shine"
-		texturefile = "gfx/interface/goals/source_of_order.dds"
+		texturefile = "gfx/interface/goals/Minor/source_of_order.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/source_of_order.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/source_of_order.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1492,7 +1618,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/source_of_order.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/source_of_order.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1513,10 +1639,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_riffle_for_everyone_shine"
-		texturefile = "gfx/interface/goals/riffle_for_everyone.dds"
+		texturefile = "gfx/interface/goals/Minor/riffle_for_everyone.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/riffle_for_everyone.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/riffle_for_everyone.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1534,7 +1660,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/riffle_for_everyone.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/riffle_for_everyone.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1555,10 +1681,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_safety_and_protection_shine"
-		texturefile = "gfx/interface/goals/safety_and_protection.dds"
+		texturefile = "gfx/interface/goals/Minor/safety_and_protection.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/safety_and_protection.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/safety_and_protection.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1576,7 +1702,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/safety_and_protection.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/safety_and_protection.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1597,10 +1723,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_gods_of_war_shine"
-		texturefile = "gfx/interface/goals/gods_of_war.dds"
+		texturefile = "gfx/interface/goals/Minor/gods_of_war.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/gods_of_war.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/gods_of_war.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1618,7 +1744,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/gods_of_war.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/gods_of_war.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1639,10 +1765,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_scourge_of_god_shine"
-		texturefile = "gfx/interface/goals/scourge_of_god.dds"
+		texturefile = "gfx/interface/goals/Minor/scourge_of_god.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/scourge_of_god.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/scourge_of_god.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1660,7 +1786,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/scourge_of_god.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/scourge_of_god.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1787,48 +1913,6 @@ spriteTypes = {
 		}
 		animation = {
 			animationmaskfile = "gfx/interface/goals/jitnitsa_rodini.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_sokrovisha_pod_zemley_shine"
-		texturefile = "gfx/interface/goals/sokrovisha_pod_zemley.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/sokrovisha_pod_zemley.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/sokrovisha_pod_zemley.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4538,10 +4622,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_LWV_Commandment_shine"
-		texturefile = "gfx/interface/goals/LWV/LWV_LWV_Commandment.dds"
+		texturefile = "gfx/interface/goals/LWV/LWV_Commandment.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/LWV/LWV_LWV_Commandment.dds"
+			animationmaskfile = "gfx/interface/goals/LWV/LWV_Commandment.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4559,7 +4643,7 @@ spriteTypes = {
 			}
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/LWV/LWV_LWV_Commandment.dds"
+			animationmaskfile = "gfx/interface/goals/LWV/LWV_Commandment.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
