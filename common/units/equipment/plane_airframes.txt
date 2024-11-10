@@ -46,8 +46,6 @@ equipments = {
 			strategic_bomber
 			attack_logistics
 			cas
-			naval_bomber
-			port_strike
 		}
 		allow_mission_type = training
 		group_by = archetype
@@ -158,8 +156,6 @@ equipments = {
 			strategic_bomber
 			attack_logistics
 			cas
-			naval_bomber
-			port_strike
 		}
 		allow_mission_type = training
 		group_by = archetype
@@ -234,8 +230,6 @@ equipments = {
 			training
 			cas
 			recon
-			attack_logistics
-			air_superiority
 		}
 		can_be_produced = {
 			NOT = {
@@ -271,11 +265,9 @@ equipments = {
 		is_buildable = no
 		type = suicide
 		allow_mission_type = {
+			training
 			strategic_bomber
 			attack_logistics
-			cas
-			naval_bomber
-			port_strike
 		}
 		group_by = archetype
 		forbid_mission_type = training

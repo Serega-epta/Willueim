@@ -178,6 +178,10 @@ technologies = {
 		category_army = {
 			soft_attack = 0.05
 		}
+		pulse_jammers = {
+			soft_attack = 0.1
+			hard_attack = 0.15
+		}
 		path = {
 			leads_to_tech = portable_EMI_systems
 			research_cost_coeff = 1
@@ -199,8 +203,11 @@ technologies = {
 	}
 	portable_EMI_systems = {
 		start_year = 2036
-		enable_subunits = {
-			pulse_jammers
+		category_army = {
+			ap_attack = 0.15
+		}
+		pulse_jammers = {
+			defense = 0.2
 		}
 		research_cost = 1
 		folder = {
