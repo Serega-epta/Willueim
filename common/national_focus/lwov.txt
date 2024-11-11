@@ -1,5 +1,5 @@
 focus_tree = {
-	id = Lwov_focus
+	id = LWV_first_phase
 	country = {
 		factor = 0
 		modifier = {
@@ -13,10 +13,8 @@ focus_tree = {
 		icon = GFX_sen_gospodnya
 		x = 6
 		y = 0
-		available = {
-			is_subject = no
-		}
-		cost = 1.5
+
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -40,9 +38,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = LWV_Sen
-		available = {
-			is_subject = no
-		}
+
 		cost = 2
 		ai_will_do = {
 			factor = 1
@@ -67,10 +63,8 @@ focus_tree = {
 		x = -3
 		y = 3
 		relative_position_id = LWV_Sen
-		available = {
-			is_subject = no
-		}
-		cost = 2.2
+
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -97,9 +91,7 @@ focus_tree = {
 		x = 3
 		y = 3
 		relative_position_id = LWV_Sen
-		available = {
-			is_subject = no
-		}
+
 		cost = 2.2
 		ai_will_do = {
 			factor = 1
@@ -123,9 +115,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = LWV_Absol_svyatost
-		available = {
-			is_subject = no
-		}
+
 		cost = 2.9
 		ai_will_do = {
 			factor = 1
@@ -147,13 +137,11 @@ focus_tree = {
 		prerequisite = {
 			focus = LWV_Istinniy_god
 		}
-		x = -6
+		x = 0
 		y = 2
 		relative_position_id = LWV_Istinniy_god
-		available = {
-			is_subject = no
-		}
-		cost = 3
+
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -227,10 +215,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = LWV_Yk_svyatie_nadeli
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -283,10 +269,8 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = LWV_Yk_svyatie_nadeli
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -316,10 +300,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = LWV_LWV_Worker_Prayer
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -370,14 +352,12 @@ focus_tree = {
 		id = LWV_bozhiya_dlan
 		icon = GFX_ysilit_bozhiyu_dlan
 		prerequisite = {
-			focus = LWV_Istinniy_god
+			focus = LWV_Skrepit_veru_klinkom
 		}
-		x = 6
-		y = 2
+		x = 0
+		y = 5
 		relative_position_id = LWV_Istinniy_god
-		available = {
-			is_subject = no
-		}
+
 		cost = 3
 		ai_will_do = {
 			factor = 1
@@ -399,10 +379,8 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = LWV_bozhiya_dlan
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -477,10 +455,8 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = LWV_bozhiya_dlan
-		available = {
-			is_subject = no
-		}
-		cost = 1.8
+
+		cost = 2
 		ai_will_do = {
 			factor = 10
 		}
@@ -511,10 +487,8 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = LWV_Chernya_pastva
-		available = {
-			is_subject = no
-		}
-		cost = 1
+
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -541,11 +515,8 @@ focus_tree = {
 		prerequisite = {
 			focus = LWV_Net_yaz
 		}
-		prerequisite = {
-			focus = LWV_Skrepit_veru_klinkom
-		}
 		x = 0
-		y = 5
+		y = 10
 		relative_position_id = LWV_Istinniy_god
 		available = {
 			is_subject = no
@@ -580,7 +551,7 @@ focus_tree = {
 			#Фиг вам, а не война на два фронта
 			has_war = no
 		}
-		cost = 1
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
