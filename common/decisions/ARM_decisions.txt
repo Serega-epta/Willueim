@@ -38,7 +38,10 @@ ARM_middle_russian_war = {
 			add_to_variable = {
 				consulate_power = 20
 			}
-			custom_effect_tooltip = consulate_power_plus_tt
+			custom_effect_tooltip = {
+				localization_key = add_consulate_power_tt
+				consulate_power_amount = 20
+			}
 		}
 	}
 	ARM_start_infiltration = {
@@ -62,7 +65,10 @@ ARM_middle_russian_war = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = coalition_power_plus_10_tt
+			custom_effect_tooltip = {
+				localization_key = add_coalition_power_tt
+				coalition_power_amount = 10
+			}
 		}
 	}
 	ARM_construct_view_posts = {
@@ -86,7 +92,10 @@ ARM_middle_russian_war = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = coalition_power_plus_10_tt
+			custom_effect_tooltip = {
+				localization_key = add_coalition_power_tt
+				coalition_power_amount = 10
+			}
 		}
 	}
 	ARM_put_the_bombs = {
@@ -110,7 +119,10 @@ ARM_middle_russian_war = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = coalition_power_plus_10_tt
+			custom_effect_tooltip = {
+				localization_key = add_coalition_power_tt
+				coalition_power_amount = 10
+			}
 		}
 	}
 	###вторая фаза###
@@ -153,7 +165,10 @@ ARM_middle_russian_war = {
 			add_to_variable = {
 				consulate_power = 20
 			}
-			custom_effect_tooltip = consulate_power_plus_tt
+			custom_effect_tooltip = {
+				localization_key = add_consulate_power_tt
+				consulate_power_amount = 20
+			}
 		}
 	}
 	#Уничтожить патрули
@@ -181,7 +196,10 @@ ARM_middle_russian_war = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = coalition_power_plus_10_tt
+			custom_effect_tooltip = {
+				localization_key = add_coalition_power_tt
+				coalition_power_amount = 10
+			}
 		}
 	}
 	#Вмешаться в радиопереговоры
@@ -206,7 +224,10 @@ ARM_middle_russian_war = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = coalition_power_plus_10_tt
+			custom_effect_tooltip = {
+				localization_key = add_coalition_power_tt
+				coalition_power_amount = 10
+			}
 		}
 	}
 	#Перевести воинский контингент через границу
@@ -231,7 +252,10 @@ ARM_middle_russian_war = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = coalition_power_plus_10_tt
+			custom_effect_tooltip = {
+				localization_key = add_coalition_power_tt
+				coalition_power_amount = 10
+			}
 		}
 	}
 	#Направить группу Альфа
@@ -260,7 +284,14 @@ ARM_middle_russian_war = {
 			subtract_from_variable = {
 				consulate_power = 10
 			}
-			custom_effect_tooltip = send_alpha_tt
+			custom_effect_tooltip = {
+				localization_key = add_coalition_power_tt
+				coalition_power_amount = 10
+			}
+			custom_effect_tooltip = {
+				localization_key = add_consulate_power_tt
+				coalition_power_amount = -10
+			}
 		}
 	}
 	###третья фаза###

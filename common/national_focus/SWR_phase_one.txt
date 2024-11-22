@@ -240,10 +240,13 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			country_event = SWR_phase_one.39
+			custom_effect_tooltip = {
+				localization_key = add_readiness_tt
+				readiness_amount = 3
+			}
 			add_to_variable = {
                 var = readiness_var
                 value = 3
-                tooltip = 3_readiness_tt
             }
 		}
 	}
@@ -258,10 +261,13 @@ focus_tree = {
 		prerequisite = { focus = SWR_wreak_chaos }
 		completion_reward = {
 			add_political_power = 20
+			custom_effect_tooltip = {
+				localization_key = add_readiness_tt
+				readiness_amount = 2
+			}
 			add_to_variable = {
                 var = readiness_var
                 value = 5
-                tooltip = 5_readiness_tt
             }
 			custom_effect_tooltip = our_main_ally_tt
 		}
@@ -277,19 +283,22 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.01
 			add_political_power = 15
+			custom_effect_tooltip = change_huntsman_squads_tt
 			add_to_variable = {
        			var = swr_army_speed_factor 
         		value = -0.01
+				tooltip = army_speed_factor_tt
     		}
 			add_to_variable = {
         		var = swr_army_org_factor  
         		value = -0.02
+				tooltip = army_org_factor_tt
     		}
 			add_to_variable = {
        			var = swr_planning_speed 
         		value = -0.02
+				tooltip = planning_speed_factor_tt
     		}
-			custom_effect_tooltip = huntsman_squads_1_tt
 		}
 	}
 	focus = {
@@ -429,10 +438,13 @@ focus_tree = {
 			add_stability = 0.02
 			add_political_power = 15
 			country_event = SWR_phase_one.42
+			custom_effect_tooltip = {
+				localization_key = power_tt
+				power_amount = 1
+			}
 			add_to_variable = {
                 var = power_var
                 value = 1
-                tooltip = 1_power_tt
             }
 			power_calibrate = yes
 		}
@@ -451,10 +463,13 @@ focus_tree = {
 			add_war_support = 0.02
 			add_political_power = 15
 			country_event = SWR_phase_one.43
+			custom_effect_tooltip = {
+				localization_key = acceptance_tt
+				acceptance_amount = 2
+			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 2
-                tooltip = 2_acceptance_tt
             }
 			acceptance_calibrate = yes
 		}
@@ -509,10 +524,13 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = discrediting_the_enemy_tt
+			custom_effect_tooltip = {
+				localization_key = acceptance_tt
+				acceptance_amount = 3
+			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 3
-                tooltip = 3_acceptance_tt
             }
 			hidden_effect = {
 				add_ideas = SWR_agitation
@@ -1521,35 +1539,42 @@ focus_tree = {
 		prerequisite = { focus = SWR_move_troops }
 		prerequisite = { focus = SWR_give_guarantees }
 		completion_reward = {
+			custom_effect_tooltip = change_huntsman_squads_tt
 			add_to_variable = {
  		 		var = swr_army_attack_factor
   				value = 0.02
+				tooltip = army_attack_factor_tt
 			}
 			add_to_variable = {
   				var = swr_army_defence_factor
   				value = 0.02
+				tooltip = army_defence_factor_tt
 			}
 			add_to_variable = {
   				var = swr_army_speed_factor
   				value = -0.01
+				tooltip = army_speed_factor_tt
 			}
 			add_to_variable = {
   				var = swr_land_night_attack
   				value = 0.02
+				tooltip = land_night_attack_tt
 			}
 			add_to_variable = {
   				var = swr_planning_speed
   				value =  -0.05
+				tooltip = planning_speed_factor_tt
 			}
 			add_to_variable = {
   				var = swr_acclimatization_cold_climate_gain_factor
   				value = 0.03
+				tooltip = acclimatization_cold_climate_gain_factor_tt
 			}
 			add_to_variable = {
   				var = swr_acclimatization_hot_climate_gain_factor
   				value = 0.03
+				tooltip = acclimatization_hot_climate_gain_factor_tt
 			}
-			custom_effect_tooltip = huntsman_squads_7_tt
 		}
 	}
 	focus = {

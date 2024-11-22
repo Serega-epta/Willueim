@@ -160,10 +160,13 @@ country_event = {
 	option = {
 		name = SWR_phase_one.11.a
     	add_stability = 0.03
+		custom_effect_tooltip = {
+			localization_key = remove_readiness_tt
+			readiness_amount = 3
+		}
 		add_to_variable = {
        		var = readiness_var
         	value = -3
-        	tooltip = remove_3_readiness_tt
     	}
 		readiness_calibrate = yes
 	}
@@ -180,10 +183,13 @@ country_event = {
 	option = {
 		name = SWR_phase_one.12.a
     	add_stability = -0.03
+		custom_effect_tooltip = {
+			localization_key = remove_readiness_tt
+			readiness_amount = 5
+		}
 		add_to_variable = {
       		var = readiness_var
         	value = -5
-        	tooltip = remove_5_readiness_tt
     	}
 		readiness_calibrate = yes
 	}
@@ -216,68 +222,88 @@ country_event = {
 	}
     option = {
 		name = SWR_phase_one.14.b
+		add_political_power = 50
+		add_command_power = 20
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 3
+		}
 		add_to_variable = {
-			add_political_power = 50
-			add_command_power = 20
         	var = power_var
        		value = -3
-        	tooltip = remove_3_power_tt
     	}
 		power_calibrate = yes
+		custom_effect_tooltip = change_huntsman_squads_tt
 		add_to_variable = {
         	var = swr_army_speed_factor 
         	value = -0.01
+			tooltip = army_speed_factor_tt
     	}
 		add_to_variable = {
         	var = swr_army_org_factor  
         	value = -0.02
+			tooltip = army_org_factor_tt
     	}
 		add_to_variable = {
        		var = swr_planning_speed 
         	value = 0.03
+			tooltip = planning_speed_factor_tt
     	}
 		add_to_variable = {
        		var = swr_army_strength_factor 
     		value = 0.02
+			tooltip = army_strength_factor_tt
     	}
 		add_to_variable = {
         	var = swr_army_morale_factor 
         	value = 0.02
+			tooltip = army_morale_factor_tt
     	}
-		custom_effect_tooltip = huntsman_squads_2_tt
+		custom_effect_tooltip = {
+			localization_key = remove_acceptance_tt
+			acceptance_amount = 5
+		}
 		add_to_variable = {
     		var = acceptance_var
         	value = -5
-        	tooltip = remove_5_acceptance_tt
     	}
 		acceptance_calibrate = yes
 	}
     option = {
 		name = SWR_phase_one.14.c
 		add_political_power = 50
+				custom_effect_tooltip = change_huntsman_squads_tt
 		add_to_variable = {
        		var = swr_army_speed_factor 
         	value = 0.03
+			tooltip = army_speed_factor_tt
     	}
 		add_to_variable = {
         	var = swr_army_org_factor  
         	value = 0.05
+			tooltip = army_org_factor_tt
     	}
 		add_to_variable = {
        		var = swr_planning_speed 
         	value = 0.05
-    	}
-		custom_effect_tooltip = huntsman_squads_3_tt
+			tooltip = planning_speed_factor_tt
+		}
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 3
+		}
 		add_to_variable = {
         	var = power_var
         	value = -3
-        	tooltip = remove_3_power_tt
     	}
 		power_calibrate = yes
+		custom_effect_tooltip = {
+			localization_key = acceptance_tt
+			acceptance_amount = 3
+		}
 		add_to_variable = {
         	var = acceptance_var
         	value = 3
-        	tooltip = 3_acceptance_tt
     	}
 		acceptance_calibrate = yes
 	}
@@ -293,10 +319,13 @@ country_event = {
 
 	option = {
 		name = SWR_phase_one.15.a
+		custom_effect_tooltip = {
+			localization_key = power_tt
+			power_amount = 2
+		}
     	add_to_variable = {
         	var = power_var
         	value = 2
-        	tooltip = 2_power_tt
     	}
 		power_calibrate = yes
 		custom_effect_tooltip = terror_tt
@@ -317,10 +346,13 @@ country_event = {
 	option = {
 		name = SWR_phase_one.16.a
     	add_ideas = SWR_slowing_down_tree_felling
+		custom_effect_tooltip = {
+			localization_key = power_tt
+			power_amount = 4
+		}
 		add_to_variable = {
         	var = power_var
         	value = 4
-        	tooltip = 4_power_tt
     	}
 		power_calibrate = yes
 	}
@@ -340,10 +372,13 @@ country_event = {
         	remove_idea = SWR_inquisition
         	add_idea = SWR_paralyzed_inquisition
     	}
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 3
+		}
 		add_to_variable = {
         	var = power_var
         	value = -3
-        	tooltip = remove_3_power_tt
     	}
 		power_calibrate = yes
 	}
@@ -360,10 +395,13 @@ country_event = {
 	option = {
 		name = SWR_phase_one.18.a
     	add_political_power = -25
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 3
+		}
 		add_to_variable = {
         	var = power_var
         	value = -3
-        	tooltip = remove_3_power_tt
     	}
 		power_calibrate = yes
 	}
@@ -386,10 +424,13 @@ country_event = {
 				days = 180
 			}
 		}
+		custom_effect_tooltip = {
+			localization_key = remove_acceptance_tt
+			acceptance_amount = 7
+		}
 		add_to_variable = {
         	var = acceptance_var
         	value = -7
-        	tooltip = remove_7_acceptance_tt
     	}
 	}
 }
@@ -405,10 +446,13 @@ country_event = {
 	option = {
 		name = SWR_phase_one.20.a
     	add_ideas = SWR_slowing_down_tree_felling
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 3
+		}
 		add_to_variable = {
-       		var = power_var
+        	var = power_var
         	value = -3
-        	tooltip = remove_3_power_tt
     	}
 		power_calibrate = yes
 	}
@@ -428,10 +472,13 @@ country_event = {
        		remove_idea = SWR_inquisition
         	add_idea = SWR_paralyzed_inquisition
     	}
+		custom_effect_tooltip = {
+			localization_key = power_tt
+			power_amount = 4
+		}
 		add_to_variable = {
        		var = power_var
         	value = 4
-        	tooltip = 4_power_tt
     	}
 		power_calibrate = yes
 	}
@@ -477,10 +524,13 @@ country_event = {
 
 	option = {
 		name = SWR_phase_one.24.a
+		custom_effect_tooltip = {
+			localization_key = remove_readiness_tt
+			readiness_amount = 20
+		}
 		add_to_variable = {
         	var = readiness_var
         	value = -20
-        	tooltip = remove_20_readiness_tt
     	}
 		readiness_calibrate = yes
 		set_country_flag = revolution_fail_flag
@@ -594,10 +644,13 @@ country_event = {
 		add_stability = -0.1
 		add_manpower = -1
 		add_ideas = SWR_chaos_in_clothing_production
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 10
+		}
 		add_to_variable = {
         	var = readiness_var
         	value = 10
-        	tooltip = 10_readiness_tt
     	}
 		readiness_calibrate = yes
 	}
@@ -616,11 +669,14 @@ country_event = {
 		add_stability = -0.1
 		add_manpower = -1
 		add_ideas = SWR_slowing_down_tree_felling
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 10
+		}
 		add_to_variable = {
         	var = readiness_var
-        	value = 10
-        	tooltip = 10_readiness_tt
-    	}
+        	value = 10 	
+		}
 		readiness_calibrate = yes
 	}
 }
@@ -638,11 +694,14 @@ country_event = {
 		add_stability = -0.1
 		add_manpower = -1
 		add_ideas = SWR_chaos_in_clothing_production
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 10
+		}
 		add_to_variable = {
         	var = readiness_var
-        	value = 10
-        	tooltip = 10_readiness_tt
-    	}
+        	value = 10 	
+		}
 		readiness_calibrate = yes
 	}
 }
@@ -680,11 +739,14 @@ country_event = {
 	option = {
 		name = SWR_phase_one.33.a
 		add_stability = -0.1
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 10
+		}
 		add_to_variable = {
-       		var = readiness_var
-        	value = 10
-        	tooltip = 10_readiness_tt
-    	}
+        	var = readiness_var
+        	value = 10 	
+		}
 		readiness_calibrate = yes
 	}
 }
@@ -700,10 +762,13 @@ country_event = {
 	option = {
 		name = SWR_phase_one.34.a
 		add_stability = -0.05
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 5
+		}
 		add_to_variable = {
         	var = readiness_var
         	value = 5
-        	tooltip = 5_readiness_tt
     	}
 		readiness_calibrate = yes
 	}
@@ -720,10 +785,13 @@ country_event = {
 	option = {
 		name = SWR_phase_one.35.a
 		add_stability = -0.03
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 3
+		}
 		add_to_variable = {
         	var = readiness_var
         	value = 3
-        	tooltip = 3_readiness_tt
     	}
 		readiness_calibrate = yes
 	}
@@ -757,10 +825,13 @@ country_event = {
 		name = SWR_phase_one.37.a
 		add_stability = -0.05
 		add_manpower = -1
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 3
+		}
 		add_to_variable = {
         	var = readiness_var
         	value = 5
-        	tooltip = 5_readiness_tt
     	}
 		readiness_calibrate = yes
 	}
@@ -776,10 +847,13 @@ country_event = {
 
 	option = {
 		name = SWR_phase_one.38.a
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 15
+		}
 		add_to_variable = {
         	var = readiness_var
         	value = 15
-        	tooltip = 15_readiness_tt
     	}
 		readiness_calibrate = yes
 		add_stability = -0.04
@@ -801,10 +875,13 @@ country_event = {
 
 	option = {
 		name = SWR_phase_one.39.a
+		custom_effect_tooltip = {
+			localization_key = add_readiness_tt
+			readiness_amount = 7
+		}
 		add_to_variable = {
         	var = readiness_var
         	value = 7
-        	tooltip = 7_readiness_tt
     	}
 		readiness_calibrate = yes
 		add_manpower = -1
@@ -1002,16 +1079,22 @@ country_event = {
 
 	option = {
 		name = SWR_phase_one.50.a
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 5
+		}
 		add_to_variable = {
-       		var = power_var
+        	var = power_var
         	value = -5
-        	tooltip = remove_5_power_tt
     	}
 		power_calibrate = yes
+		custom_effect_tooltip = {
+			localization_key = acceptance_tt
+			acceptance_amount = 6
+		}
 		add_to_variable = {
         	var = acceptance_var
         	value = 6
-        	tooltip = 6_acceptance_tt
     	}
 		acceptance_calibrate = yes
 		custom_effect_tooltip = swr_50_tt
@@ -1029,32 +1112,44 @@ country_event = {
 	option = {
 		name = SWR_phase_one.51.a
 		add_political_power = -25
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 3
+		}
 		add_to_variable = {
         	var = power_var
         	value = -3
-        	tooltip = remove_3_power_tt
     	}
 		power_calibrate = yes
+		custom_effect_tooltip = {
+			localization_key = acceptance_tt
+			acceptance_amount = 8
+		}
 		add_to_variable = {
         	var = acceptance_var
         	value = 8
-        	tooltip = 8_acceptance_tt
     	}
 		acceptance_calibrate = yes
 	}
 	option = {
 		name = SWR_phase_one.51.b
 		add_political_power = 25
+		custom_effect_tooltip = {
+			localization_key = power_tt
+			power_amount = 3
+		}
 		add_to_variable = {
         	var = power_var
         	value = 3
-        	tooltip = 3_power_tt
     	}
 		power_calibrate = yes
+		custom_effect_tooltip = {
+			localization_key = remove_acceptance_tt
+			acceptance_amount = 8
+		}
 		add_to_variable = {
        		var = acceptance_var
         	value = -8
-        	tooltip = remove_8_acceptance_tt
     	}
 		acceptance_calibrate = yes
 	}
@@ -1071,16 +1166,22 @@ country_event = {
 	option = {
 		name = SWR_phase_one.52.a
 		add_political_power = -30
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 5
+		}
 		add_to_variable = {
         	var = power_var
         	value = -5
-        	tooltip = remove_5_power_tt
     	}
 		power_calibrate = yes
+		custom_effect_tooltip = {
+			localization_key = acceptance_tt
+			acceptance_amount = 10
+		}
 		add_to_variable = {
         	var = acceptance_var
         	value = 10
-        	tooltip = 10_acceptance_tt
     	}
 		acceptance_calibrate = yes
 	}
@@ -1104,29 +1205,38 @@ country_event = {
 	}
 	option = {
 		name = SWR_phase_one.53.c
+		custom_effect_tooltip = change_huntsman_squads_tt
 		add_to_variable = {
        		var = swr_army_speed_factor 
         		value = 0.01
+				tooltip = army_speed_factor_tt
     		}
 		add_to_variable = {
         	var = swr_army_org_factor  
         	value = 0.02
+			tooltip = army_org_factor_tt
     	}
 		add_to_variable = {
        		var = swr_planning_speed 
         	value = 0.02
+			tooltip planning_speed_factor_tt
     	}
-		custom_effect_tooltip = huntsman_squads_4_tt
+		custom_effect_tooltip = {
+			localization_key = remove_power_tt
+			power_amount = 1
+		}
 		add_to_variable = {
-       		var = power_var
+        	var = power_var
         	value = -1
-        	tooltip = remove_1_power_tt
     	}
 		power_calibrate = yes
+		custom_effect_tooltip = {
+			localization_key = acceptance_tt
+			acceptance_amount = 1
+		}
 		add_to_variable = {
         	var = acceptance_var
         	value = 1
-        	tooltip = 1_acceptance_tt
     	}
 		acceptance_calibrate = yes
 	}
@@ -1142,29 +1252,38 @@ country_event = {
 
 	option = {
 		name = SWR_phase_one.54.a
+		custom_effect_tooltip = change_huntsman_squads_tt
 		add_to_variable = {
        		var = swr_army_speed_factor 
         		value = 0.03
+				tooltip = army_speed_factor_tt
     		}
 		add_to_variable = {
         	var = swr_army_org_factor  
         	value = 0.06
+			tooltip = army_org_factor_tt
     	}
 		add_to_variable = {
        		var = swr_planning_speed 
         	value = 0.05
+			tooltip = planning_speed_factor_tt
     	}
-		custom_effect_tooltip = huntsman_squads_5_tt
+		custom_effect_tooltip = {
+			localization_key = power_tt
+			power_amount = 3
+		}
 		add_to_variable = {
         	var = power_var
         	value = 3
-        	tooltip = 3_power_tt
     	}
 		power_calibrate = yes
+		custom_effect_tooltip = {
+			localization_key = acceptance_tt
+			acceptance_amount = 1
+		}
 		add_to_variable = {
         	var = acceptance_var
         	value = 5
-        	tooltip = 5_acceptance_tt
     	}
 		acceptance_calibrate = yes
 	}
@@ -1332,46 +1451,54 @@ country_event = {
 
 	option = {
 		name = SWR_phase_one.64.a
+		custom_effect_tooltip = change_huntsman_squads_tt
 		add_to_variable = {
  			var = swr_army_attack_factor
   			value = -0.05
+			tooltip = army_attack_factor_tt
 		}
 
 		add_to_variable = {
   			var = swr_army_defence_factor
   			value = -0.05
+			tooltip = army_defence_factor_tt
 		}
 
 		add_to_variable = {
   			var = swr_army_speed_factor
   			value = -0.05
+			tooltip = army_speed_factor_tt
 		}
 
 		add_to_variable= {
   			var = swr_army_org_factor
  			value = -0.03
+			tooltip = army_org_factor_tt
 		}
 
 		add_to_variable = {
   			var = swr_land_night_attack
   			value = 0.03
+			tooltip = land_night_attack_tt
 		}
 
 		add_to_variable = {
   			var = swr_planning_speed
   			value =  -0.05
+			tooltip = planning_speed_factor_tt
 		}
 
 		add_to_variable = {
   			var = swr_acclimatization_cold_climate_gain_factor
   			value = 0.03
+			tooltip = acclimatization_cold_climate_gain_factor_tt
 		}
 
 		add_to_variable = {
   			var = swr_acclimatization_hot_climate_gain_factor
   			value = 0.03
+			tooltip = acclimatization_hot_climate_gain_factor_tt
 		}
-		custom_effect_tooltip = huntsman_squads_6_tt
 	}
 }
 
