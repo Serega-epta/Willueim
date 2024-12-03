@@ -36,7 +36,7 @@ focus_tree = {
 			set_variable = {
 				var = generic_production_speed_buildings_factor
 				value = 0.15
-				tooltip = production_speed_buildings_factor_tt
+				tooltip = lot_of_life_tt
 			}
 			random_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -69,7 +69,7 @@ focus_tree = {
 			set_variable = {
 				var = generic_production_factory_max_efficiency_factor
 				value = 0.10
-				tooltip = production_factory_max_efficiency_factor_tt
+				tooltip = safety_and_protection_tt
 			}
 		}
 	}
@@ -93,12 +93,12 @@ focus_tree = {
 			set_variable = {
 				var = generic_research_speed_factor
 				value = 0.05
-				tooltip = research_speed_factor_tt
+				tooltip = laws_and_order_tt
 			}
 			set_variable = {
 				var = generic_political_power_factor
 				value = 0.05
-				tooltip = political_power_factor_tt
+				tooltip = laws_and_order_2_tt
 			}
 		}
 	}
@@ -122,17 +122,16 @@ focus_tree = {
 			set_variable = {
 				var = generic_recruitable_population_factor
 				value = 0.05
-				tooltip = recruitable_population_factor_tt
+				tooltip = take_a_stance_tt
 			}
 			set_variable = {
 				var = generic_mobilization_speed
 				value = 0.15
-				tooltip = mobilization_speed_tt
+				tooltip = take_a_stance_2_tt
 			}
 			set_variable = {
 				var = generic_offence
 				value = 0.00
-				tooltip = offence_tt
 			}
 		}
 	}
@@ -156,12 +155,12 @@ focus_tree = {
 			set_variable = {
 				var = generic_offence
 				value = 0.05
-				tooltip = offence_tt
+				tooltip = weapons_at_ready_tt
 			}
 			set_variable = {
 				var = generic_recruitable_population_factor
 				value = 0.05
-				tooltip = recruitable_population_factor_tt
+				tooltip = weapons_at_ready_2_tt
 			}
 		}
 	}
@@ -291,17 +290,17 @@ focus_tree = {
 			set_variable = {
 				var = generic_army_speed_factor
 				value = 0.05
-				tooltip = army_speed_factor_tt
+				tooltip = shadow_hit_tt
 			}
 			set_variable = {
 				var = generic_army_org_regain
 				value = 0.20
-				tooltip = army_org_regain_tt
+				tooltip = shadow_hit_2_tt
 			}
 			set_variable = {
 				var = generic_initiative_factor
 				value = 0.02
-				tooltip = initiative_factor_tt
+				tooltip = shadow_hit_3_tt
 			}
 		}
 	}
@@ -326,17 +325,17 @@ focus_tree = {
 			set_variable = {
 				var = generic_army_core_attack_factor
 				value = 0.10
-				tooltip = army_core_attack_factor_tt
+				tooltip = throught_storm_eye_tt
 			}
 			set_variable = {
 				var = generic_command_power_gain
 				value = 0.20
-				tooltip = command_power_gain_tt
+				tooltip = throught_storm_eye_2_tt
 			}
 			set_variable = {
 				var = generic_supply_factor
 				value = 0.05
-				tooltip = supply_factor_tt
+				tooltip = throught_storm_eye_3_tt
 			}
 		}
 	}
@@ -361,17 +360,17 @@ focus_tree = {
 			set_variable = {
 				var = generic_army_org
 				value = 0.20
-				tooltip = army_org_tt
+				tooltip = scourge_of_god_tt
 			}
 			set_variable = {
 				var = generic_experience_loss_factor
 				value = -0.15
-				tooltip = experience_loss_factor_tt
+				tooltip = scourge_of_god_2_tt
 			}
 			add_to_variable = {
 				var = generic_offence
 				value = 0.05
-				tooltip = offence_tt
+				tooltip = scourge_of_god_3_tt
 			}
 		}
 	}
@@ -392,7 +391,7 @@ focus_tree = {
 			set_variable = {
 				var = generic_monthly_population
 				value = 0.30
-				tooltip = monthly_population_tt
+				tooltip = our_breadbasket_tt
 			}
 			random_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -416,7 +415,7 @@ focus_tree = {
 			set_variable = {
 				var = generic_production_factory_efficiency_gain_factor
 				value = 0.10
-				tooltip = production_factory_efficiency_gain_factor_tt
+				tooltip = our_factories_tt
 			}
 			random_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -443,14 +442,14 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = add_to_realism_tt
 			set_variable = {
-				var = generic_local_resources_factor
+				var = generic_local_resourses_factor
 				value = 0.12
-				tooltip = local_resources_factor_tt
+				tooltip = our_homes_tt
 			}
 			set_variable = {
 				var = generic_stability_weekly_factor
 				value = 0.002
-				tooltip = stability_weekly_factor_tt
+				tooltip = our_homes_2_tt
 			}
 		}
 	}
@@ -499,7 +498,7 @@ focus_tree = {
 			add_to_variable = {
 				var = generic_production_factory_efficiency_gain_factor
 				value = 0.10
-				tooltip = production_factory_efficiency_gain_factor_tt
+				tooltip = shirt_for_naked_tt
 			}
 		}
 	}
@@ -520,7 +519,7 @@ focus_tree = {
 			set_variable = {
 				var = generic_consumer_goods_factor
 				value = -0.20
-				tooltip = consumer_goods_factor_tt
+				tooltip = economy_for_country_tt
 			}
 		}
 	}
@@ -592,7 +591,7 @@ focus_tree = {
 			set_variable = {
 				var = generic_production_factory_max_efficiency_factor_2
 				value = 0.20
-				tooltip = production_factory_max_efficiency_factor_tt
+				tooltip = economy_for_politics_tt
 			}
 		}
 	}
@@ -614,12 +613,12 @@ focus_tree = {
 			set_variable = {
 				var = generic_base_fuel_gain
 				value = 0.25
-				tooltip = base_fuel_gain_tt
+				tooltip = clearing_territory_tt
 			}
 			add_to_variable = {
-				var = generic_local_resources_factor
+				var = generic_local_resourses_factor
 				value = 0.08
-				tooltip = local_resources_factor_tt
+				tooltip = clearing_territory_2_tt
 			}
 			random_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -646,17 +645,17 @@ focus_tree = {
 			set_variable = {
 				var = generic_generate_wargoal_tension
 				value = -0.75
-				tooltip = generate_wargoal_tension_tt
+				tooltip = tough_politics_tt
 			}
 			set_variable = {
 				var = generic_war_support_weekly
 				value = 0.005
-				tooltip = war_support_weekly_tt
+				tooltip = tough_politics_2_tt
 			}
 			add_to_variable = {
 				var = generic_political_power_factor
 				value = 0.25
-				tooltip = political_power_factor_tt
+				tooltip = tough_politics_3_tt
 			}
 		}
 	}
@@ -680,22 +679,21 @@ focus_tree = {
 			set_variable = {
 				var = generic_enemy_justify_war_goal_time
 				value = -0.75
-				tooltip = enemy_justify_war_goal_time_tt
+				tooltip = realpolitics_tt
 			}
 			set_variable = {
 				var = generic_defensive_war_stability_factor
 				value = 0.30
-				tooltip = defensive_war_stability_factor_tt
+				tooltip = realpolitics_2_tt
 			}
 			add_to_variable = {
 				var = generic_political_power_factor
 				value = 0.25
-				tooltip = political_power_factor_tt
+				tooltip = realpolitics_3_tt
 			}
 			set_variable = {
 				var = generic_war_support_weekly
 				value = 0.00
-				tooltip = war_support_weekly_tt
 			}
 		}
 	}
@@ -718,17 +716,17 @@ focus_tree = {
 			set_variable = {
 				var = generic_enemy_declare_war_tension
 				value = -0.75
-				tooltip = enemy_declare_war_tension_tt
+				tooltip = enmity_with_neighbors_tt
 			}
 			set_variable = {
 				var = generic_mobilization_speed_2
 				value = 0.15
-				tooltip = mobilization_speed_tt
+				tooltip = enmity_with_neighbors_2_tt
 			}
 			add_to_variable = {
 				var = generic_war_support_weekly
 				value = 0.005
-				tooltip = war_support_weekly_tt
+				tooltip = enmity_with_neighbors_3_tt
 			}
 		}
 	}

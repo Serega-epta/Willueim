@@ -163,13 +163,12 @@ focus_tree = {
 			add_dynamic_modifier = {
 				modifier = NERC_idea
 			}
+			custom_effect_tooltip = NERC1_tt
 			set_variable = {
 				research_NERC = 0.02
-				tooltip = research_speed_factor_tt
 			}
 			set_variable = {
 				pp_NERC = -0.05
-				tooltip = political_power_factor_tt
 			}
 			country_event = ODS_phase_three.2
 		}
@@ -220,9 +219,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = change_NERC_tt
+			custom_effect_tooltip = NERC2_tt
 			set_variable = {
 				production_factory_efficiency_NERC = 0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
 	}
@@ -272,17 +271,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = change_NERC_tt
+			custom_effect_tooltip = NERC3_tt
 			set_variable = {
 				resistance_NERC = -0.5
-				tooltip = resistance_decay_on_our_occupied_states_tt
 			}
 			set_variable = {
 				Resistance_activity_NERC = -0.5
-				tooltip = activity_factor_tt
 			}
 			set_variable = {
 				Required_garrison_factor_NERC = -0.5
-				tooltip = Required_garrison_factor_tt
 			}
 			country_event = ODS_phase_three.4
 		}
@@ -301,13 +298,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets1_tt
 			set_variable = {
 				army_defence_ODS_Black_Berets = 0.1
-				tooltip = defence_tt
 			}
 			set_variable = {
 				army_defence_against_minor_factor_ODS_Black_Berets = 0.2
-				tooltip = army_defence_against_minor_factor_tt
 			}
 		}
 	}
@@ -322,9 +318,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = change_ODS_Savagery_tt
+			custom_effect_tooltip = ODS_Savagery1_tt
 			set_variable = {
 				production_speed_infrastructure_factor_ODS_Savagery = 0.1
-				tooltip = production_speed_infrastructure_factor_tt
 			}
 			country_event = ODS_phase_three.11
 		}
@@ -354,9 +350,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = change_ODS_Savagery_tt
+			custom_effect_tooltip = ODS_Savagery2_tt
 			set_variable = {
 				attrition_ODS_Savagery = -0.05
-				tooltip = attrition_tt
 			}
 			country_event = ODS_phase_three.6
 		}
@@ -400,9 +396,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets2_tt
 			set_variable = {
 				max_command_power_ODS_Black_Berets = 30
-				tooltip = max_command_power_tt
 			}
 		}
 	}
@@ -423,9 +419,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets3_tt
 			set_variable = {
 				org_loss_when_moving_ODS_Black_Berets = -0.1
-				tooltip = org_loss_when_moving_tt
 			}
 		}
 	}
@@ -442,9 +438,9 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 30000
 			custom_effect_tooltip = change_ODS_Black_Berets_tt
+			custom_effect_tooltip = ODS_Black_Berets4_tt
 			set_variable = {
 				army_morale_factor_ODS_Black_Berets = 0.05
-				tooltip = army_morale_factor_tt
 			}
 		}
 	}

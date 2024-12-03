@@ -343,17 +343,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = change_hearts_tt
+			custom_effect_tooltip = change_hearts_1_tt
 			add_to_variable = {
 				offence_hearts = 0.02
-				tooltip = modifier_offence_tt
 			}
 			add_to_variable = {
 				defence_hearts = 0.02
-				tooltip = modifier_defence_tt
 			}
 			add_to_variable = {
 				army_org_factor_hearts = 0.1
-				tooltip = army_org_factor_tt
 			}
 		}
 	}
@@ -456,11 +454,11 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			custom_effect_tooltip = change_hearts_tt
 			add_to_variable = {
 				army_org_factor_hearts = 0.15
-				tooltip = army_org_factor_tt
-			}	
+			}
+			custom_effect_tooltip = change_hearts_tt
+			custom_effect_tooltip = change_hearts_2_tt
 		}
 	}
 	focus = {
@@ -617,10 +615,7 @@ focus_tree = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = {
-				localization_key = add_coalition_power_tt
-				coalition_power_amount = 10
-			}
+			custom_effect_tooltip = coalition_power_plus_10_tt
 		}
 	}
 	focus = {
@@ -646,10 +641,7 @@ focus_tree = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = {
-				localization_key = add_coalition_power_tt
-				coalition_power_amount = 10
-			}
+			custom_effect_tooltip = coalition_power_plus_10_tt
 		}
 	}
 	focus = {
@@ -718,10 +710,7 @@ focus_tree = {
 			add_to_variable = {
 				coalition_power = 10
 			}
-			custom_effect_tooltip = {
-				localization_key = add_coalition_power_tt
-				coalition_power_amount = 10
-			}
+			custom_effect_tooltip = coalition_power_plus_10_tt
 			add_political_power = -20
 			add_to_variable = {
 				black_rubles_budget = -3000

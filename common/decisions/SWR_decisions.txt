@@ -35,13 +35,10 @@ SWR_preparing_uprising = {
 			add_stability = -0.02
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = add_readiness_tt
-				readiness_amount = 2
-			}
 			add_to_variable = {
                 var = readiness_var
                 value = 2
+                tooltip = 2_readiness_tt
             }
 			readiness_calibrate = yes
 		}
@@ -59,13 +56,10 @@ SWR_preparing_uprising = {
 			add_stability = -0.03
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = add_readiness_tt
-				readiness_amount = 3
-			}
 			add_to_variable = {
                 var = readiness_var
                 value = 3
+                tooltip = 3_readiness_tt
             }
 			readiness_calibrate = yes
 		}
@@ -83,13 +77,10 @@ SWR_preparing_uprising = {
 			add_stability = 0.02
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_readiness_tt
-				readiness_amount = 2
-			}
 			add_to_variable = {
                 var = readiness_var
                 value = -2
+                tooltip = remove_2_readiness_tt
             }
 			readiness_calibrate = yes
 		}
@@ -107,13 +98,10 @@ SWR_preparing_uprising = {
 			add_stability = 0.03
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_readiness_tt
-				readiness_amount = 3
-			}
 			add_to_variable = {
                 var = readiness_var
                 value = -3
+                tooltip = remove_3_readiness_tt
             }
 			readiness_calibrate = yes
 		}
@@ -131,13 +119,10 @@ SWR_preparing_uprising = {
 			add_stability = -0.05
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = add_readiness_tt
-				readiness_amount = 2
-			}
 			add_to_variable = {
                 var = readiness_var
                 value = 5
+                tooltip = 5_readiness_tt
             }
 			readiness_calibrate = yes
 		}
@@ -155,13 +140,10 @@ SWR_preparing_uprising = {
 			add_stability = -0.06
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = add_readiness_tt
-				readiness_amount = 6
-			}
 			add_to_variable = {
                 var = readiness_var
                 value = 6
+                tooltip = 6_readiness_tt
             }
 			readiness_calibrate = yes
 		}
@@ -204,13 +186,10 @@ SWR_preparing_uprising = {
                 value = -0.1
                 tooltip_side = my_bop_side
             }
-			custom_effect_tooltip = {
-				localization_key = add_readiness_tt
-				readiness_amount = 6
-			}
             add_to_variable = {
                 var = readiness_var
                 value = 6
+                tooltip = 6_readiness_tt
             }
 			readiness_calibrate = yes
             add_stability = -0.06
@@ -243,13 +222,10 @@ SWR_preparing_uprising = {
             add_political_power = 30
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = add_readiness_tt
-				readiness_amount = 3
-			}
 			add_to_variable = {
                 var = readiness_var
                 value = 3
+                tooltip = 3_readiness_tt
             }
 			readiness_calibrate = yes
 		}
@@ -362,22 +338,16 @@ SWR_struggle_for_influence = {
 			}
 		}
     	timeout_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_power_tt
-				power_amount = 2
-			}
 			add_to_variable = {
                 var = power_var
                 value = -2
+                tooltip = remove_2_power_tt
             }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 2
-			}
         	add_to_variable = {
                 var = acceptance_var
                 value = -2
+                tooltip = remove_2_acceptance_tt
             }
 			acceptance_calibrate = yes
 			IF = {
@@ -444,13 +414,10 @@ SWR_struggle_for_influence = {
 			}
 		}
     	timeout_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 5
-			}
         	add_to_variable = {
                 var = acceptance_var
                 value = -5
+                tooltip = remove_5_acceptance_tt
             }
 			acceptance_calibrate = yes
 			random_list = {
@@ -494,13 +461,10 @@ SWR_struggle_for_influence = {
 			}
 		}
     	timeout_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 10
-			}
         	add_to_variable = {
                 var = acceptance_var
                 value = -10
+                tooltip = remove_10_acceptance_tt
             }
 			acceptance_calibrate = yes
 			random_list = {
@@ -544,13 +508,10 @@ SWR_struggle_for_influence = {
 			}
 		}
     	timeout_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 14
-			}
         	add_to_variable = {
                 var = acceptance_var
                 value = -14
+                tooltip = remove_15_acceptance_tt
             }
 			acceptance_calibrate = yes
 			random_list = {
@@ -595,13 +556,10 @@ SWR_struggle_for_influence = {
 			}
 		}
     	timeout_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 5
-			}
         	add_to_variable = {
                 var = acceptance_var
                 value = -5
+                tooltip = remove_5_acceptance_tt
             }
 			acceptance_calibrate = yes
 			random_list = {
@@ -646,13 +604,10 @@ SWR_struggle_for_influence = {
 			}
 		}
     	timeout_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 10
-			}
         	add_to_variable = {
                 var = acceptance_var
                 value = -10
+                tooltip = remove_10_acceptance_tt
             }
 			acceptance_calibrate = yes
 			random_list = {
@@ -697,13 +652,10 @@ SWR_struggle_for_influence = {
 			}
 		}
     	timeout_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 5
-			}
         	add_to_variable = {
                 var = acceptance_var
                 value = -5
+                tooltip = remove_5_acceptance_tt
             }
 			acceptance_calibrate = yes
 			random_list = {
@@ -736,37 +688,28 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 1
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 1
+                tooltip = 1_acceptance_tt
             }
 			acceptance_calibrate = yes
 			IF = {
 				limit = {
 					has_completed_focus = SWR_stay_the_course
 				}
-				custom_effect_tooltip = {
-					localization_key = power_tt
-					power_amount = 2
-				}
 				add_to_variable = {
                 	var = power_var
                 	value = 2
+                	tooltip = 2_power_tt
             	}
 				power_calibrate = yes
 			}
 			else = {
-				custom_effect_tooltip = {
-					localization_key = power_tt
-					power_amount = 1
-				}
 				add_to_variable = {
                 	var = power_var
                 	value = 1
+                	tooltip = 1_power_tt
             	}
 				power_calibrate = yes
 				add_political_power = 20
@@ -785,37 +728,28 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 1
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 1
+                tooltip = 1_acceptance_tt
             }
 			acceptance_calibrate = yes
 			IF = {
 				limit = {
 					has_completed_focus = SWR_right_rudder
 				}
-				custom_effect_tooltip = {
-					localization_key = power_tt
-					power_amount = 2
-				}
 				add_to_variable = {
                 	var = power_var
                 	value = 2
+                	tooltip = 2_power_tt
             	}
 				power_calibrate = yes
 			}
 			else = {
-				custom_effect_tooltip = {
-					localization_key = power_tt
-					power_amount = 1
-				}
 				add_to_variable = {
                 	var = power_var
                 	value = 1
+                	tooltip = 1_power_tt
             	}
 				power_calibrate = yes
 				add_political_power = 20
@@ -834,22 +768,16 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-					localization_key = power_tt
-					power_amount = 5
-				}
 			add_to_variable = {
                 var = power_var
                 value = 5
+                tooltip = 5_power_tt
             }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 3
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = -3
+                tooltip = remove_3_acceptance_tt
             }
 			acceptance_calibrate = yes
 		}
@@ -875,22 +803,16 @@ SWR_struggle_for_influence = {
 			}
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_power_tt
-				power_amount = 2
-			}
 			add_to_variable = {
                 var = power_var
                 value = -2
+                tooltip = remove_2_power_tt
             }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 1
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 3
+                tooltip = 3_acceptance_tt
             }
 			acceptance_calibrate = yes
 		}
@@ -912,22 +834,16 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_power_tt
-				power_amount = 7
-			}
 			add_to_variable = {
                 var = power_var
                 value = -7
+                tooltip = remove_7_power_tt
             }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 10
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 10
+                tooltip = 10_acceptance_tt
             }
 			acceptance_calibrate = yes
 		}
@@ -949,22 +865,16 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_power_tt
-				power_amount = 7
-			}
 			add_to_variable = {
                 var = power_var
                 value = -7
+                tooltip = remove_7_power_tt
             }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 14
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 14
+                tooltip = 14_acceptance_tt
             }
 			acceptance_calibrate = yes
 		}
@@ -1032,22 +942,16 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_power_tt
-				power_amount = 3
-			}
 			add_to_variable = {
                 var = power_var
                 value = -3
-			}
+                tooltip = remove_3_power_tt
+            }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 7
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 7
+                tooltip = 7_acceptance_tt
             }
 			acceptance_calibrate = yes
 			add_ideas = SWR_invest_in_Kulikovs_enterprises
@@ -1065,22 +969,16 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-					localization_key = power_tt
-					power_amount = 5
-				}
 			add_to_variable = {
                 var = power_var
                 value = 5
+                tooltip = 5_power_tt
             }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 3
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = -3
+                tooltip = remove_3_acceptance_tt
             }
 			acceptance_calibrate = yes
 		}
@@ -1106,13 +1004,10 @@ SWR_struggle_for_influence = {
 			}
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 5
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 5
+                tooltip = 5_acceptance_tt
             }
 			acceptance_calibrate = yes
 		}
@@ -1134,22 +1029,16 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = remove_power_tt
-				power_amount = 4
-			}
 			add_to_variable = {
                 var = power_var
                 value = -4
+                tooltip = remove_4_power_tt
             }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 10
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 10
+                tooltip = 10_acceptance_tt
             }
 			acceptance_calibrate = yes
 		}
@@ -1171,22 +1060,16 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-					localization_key = power_tt
-					power_amount = 5
-				}
 			add_to_variable = {
                 var = power_var
                 value = 5
+                tooltip = 5_power_tt
             }
 			power_calibrate = yes
-			custom_effect_tooltip = {
-				localization_key = remove_acceptance_tt
-				acceptance_amount = 5
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = -5
+                tooltip = remove_5_acceptance_tt
             }
 			acceptance_calibrate = yes
 			add_to_variable = {
@@ -1257,13 +1140,10 @@ SWR_struggle_for_influence = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = {
-				localization_key = acceptance_tt
-				acceptance_amount = 5
-			}
 			add_to_variable = {
                 var = acceptance_var
                 value = 5
+                tooltip = 5_acceptance_tt
             }
 			acceptance_calibrate = yes
 			custom_effect_tooltip = terror_tt
@@ -1348,26 +1228,22 @@ SWR_army_reform = {
 		complete_effect = {
 		}
 		remove_effect = {
-			custom_effect_tooltip = change_huntsman_squads_tt
+			custom_effect_tooltip = huntsman_squads_8_tt
 			add_to_variable = {
 				var = swr_army_attack_factor
   				value = 0.01
-				tooltip = army_attack_factor_tt
 			}
 			add_to_variable = {
   				var = swr_army_defence_factor
   				value = 0.01
-				tooltip = army_defence_factor_tt
 			}
 			add_to_variable = {
   				var = swr_army_speed_factor
   				value = 0.01
-				tooltip = army_speed_factor_tt
 			}
 			add_to_variable = {
  				var = swr_army_org_factor
   				value = 0.01
-				tooltip = army_org_factor_tt
 			}
 		}
 	}
