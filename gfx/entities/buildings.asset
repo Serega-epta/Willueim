@@ -253,6 +253,19 @@ entity = {
 }
 
 entity = {
+	name = "building_naval_base_spawn"
+	pdxmesh = "building_naval_base_1"
+	
+	locator = { name = "damage_locator_01"	position = { -0.8 0.4 -3.5 } }
+	locator = { name = "damage_locator_02"	position = { 0.0 0.7 -1.0 } }
+	locator = { name = "damage_locator_03"	position = { 1.8 0.4 -2.5 } }
+
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+}
+
+entity = {
 	name = "building_naval_base_1"
 	pdxmesh = "building_naval_base_1"
 	scale = 0.8
@@ -323,7 +336,123 @@ entity = {
 		event = { time = 10.9 node="damage_locator_06" particle = "explosion_m_particle" keep_particle = yes}
 		event = { time = 4.9 node="damage_locator_04" particle = "explosion_l_particle" keep_particle = yes}
 		event = { time = 12.9 node="damage_locator_05" particle = "explosion_l_particle" keep_particle = yes}
-		}
+	}
+}
+
+entity = {
+	name = "building_nuclear_facility"
+	pdxmesh = "building_nuclear_facility"
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.1 node="factorysmoke" particle = "factory_smoke_particle" }
+		event = { time = 0.1 node="lamp" particle = "lamp_yellow_particle" }
+	}
+}
+
+entity = {
+	name = "building_nuclear_facility_destroyed"
+	pdxmesh = "building_nuclear_facility_destroyed"
+	
+	default_state = "destroyed"
+	state = { name = "destroyed"
+		event = { time = 0.1 node="factorysmoke" particle = "bunker_smoke_effect" }
+		event = { time = 0.1 node="fire1" particle = "ship_damaged_smoke_particle" }
+		event = { time = 0.1 node="fire2" particle = "ship_damaged_smoke_particle" }
+	}
+}
+
+entity = {
+	name = "building_air_facility"
+	pdxmesh = "building_air_facility"
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.1 node="lamp" particle = "lamp_red_particle" }
+	}
+}
+
+entity = {
+	name = "building_air_facility_destroyed"
+	pdxmesh = "building_air_facility_destroyed"
+	
+	default_state = "destroyed"
+	state = { name = "destroyed" 
+		event = { time = 0.1 node="hangar_hole_back" particle = "bunker_smoke_effect" }
+		event = { time = 0.1 node="hangar_hole_big" particle = "bunker_smoke_effect" }
+		event = { time = 0.1 node="fire1" particle = "ship_damaged_smoke_particle" }
+		event = { time = 0.1 node="fire2" particle = "ship_damaged_smoke_particle" }
+	}
+}
+
+entity = {
+	name = "building_naval_facility"
+	pdxmesh = "building_naval_facility"
+
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.1 node="lamp" particle = "lamp_blue_particle" }
+	}
+}
+
+entity = {
+	name = "building_naval_facility_destroyed"
+	pdxmesh = "building_naval_facility_destroyed"
+
+	default_state = "destroyed"
+	state = { name = "destroyed"
+		event = { time = 0.1 node="fire1" particle = "ship_damaged_smoke_particle" }
+		event = { time = 0.1 node="fire2" particle = "ship_damaged_smoke_particle" }
+	}
+}
+
+entity = {
+	name = "building_land_facility"
+	pdxmesh = "building_land_facility"
+
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.1 node="lamp" particle = "lamp_green_particle" }
+	}
+}
+
+entity = {
+	name = "building_land_facility_destroyed"
+	pdxmesh = "building_land_facility_destroyed"
+
+	default_state = "destroyed"
+	state = { name = "destroyed"
+		event = { time = 0.1 node="smoke" particle = "bunker_smoke_effect" }
+		event = { time = 0.1 node="fire1" particle = "ship_damaged_smoke_particle" }
+		event = { time = 0.1 node="fire2" particle = "ship_damaged_smoke_particle" }
+	}
+}
+
+entity = {
+	name = "building_electronics_facility"
+	pdxmesh = "building_electronics_facility"
+
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+}
+
+entity = {
+	name = "building_rocket_facility"
+	pdxmesh = "building_rocket_facility"
+
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+}
+
+entity = {
+	name = "building_special_project_facility_spawn"
+	pdxmesh = "building_special_project_facility_spawn"
+	
+	default_state = "idle"
+	state = { name = "idle" 
+	}
 }
 
 entity = {
@@ -456,6 +585,32 @@ entity = {
 }
 
 entity = {
+	name = "building_special_project_facility_spawn"
+	pdxmesh = "building_special_project_facility_spawn"
+	
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+}
+
+entity = {
+	name = "building_landmark_spawn"
+	pdxmesh = "building_landmark_spawn"
+
+	default_state = "idle"
+	state = { name = "idle" }
+}
+
+entity = {
+	name = "building_locks_spawn"
+	pdxmesh = "building_locks_spawn"
+
+	default_state = "idle"
+	state = { name = "idle" }
+}
+
+
+entity = {
 	name = "building_nuclear_reactor"
 	pdxmesh = "building_nuclear_reactor"
 	
@@ -538,5 +693,12 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle"	animation = "idle" }
 	scale = 2
+}
+
+entity = {
+	name = "building_rocket_site_spawn"
+	pdxmesh = "building_rocket_site"
+	default_state = "idle"
+	state = { name = "idle" }
 }
 
