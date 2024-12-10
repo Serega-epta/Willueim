@@ -95,23 +95,6 @@ buildings = {
 		}
 	}
 	
-	naval_base = {
-		show_on_map = 1
-		show_on_map_meshes = 3
-		always_shown = yes
-		base_cost = 5000
-		per_level_extra_cost = 1000
-		spawn_point = naval_base_spawn 
-		only_costal = yes
-		is_port = yes
-		icon_frame = 6
-		value = 1
-		allied_build = yes
-		infrastructure_construction_effect = yes
-		level_cap = {
-			province_max = 10
-		}
-	}
 
 	bunker = {
 		show_on_map = 1
@@ -126,22 +109,6 @@ buildings = {
 		level_cap = {
 			province_max = 10
 		}		
-	}
-
-	coastal_bunker = {
-		show_on_map = 1
-		has_destroyed_mesh = yes
-		base_cost = 500
-		per_level_extra_cost = 500
-		disabled_in_dmz = yes
-		only_costal = yes
-		icon_frame = 8
-		naval_fort = 1
-		value = 1
-		infrastructure_construction_effect = yes
-		level_cap = {
-			province_max = 10
-		}
 	}
 
 	dockyard = {
