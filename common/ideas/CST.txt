@@ -1,7 +1,19 @@
 ideas = {
+
 	country = {
-		#Во имя выживших
-		CST_In_the_name_of_survivors = {
+		CST_In_the_name_of_survivors = {			#Во имя выживших
+		picture = GFX_idea_CST_In_the_name_of_survivors
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
 			modifier = {
 				army_core_defence_factor = 0.15
 				army_core_attack_factor = 0.15

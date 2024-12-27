@@ -1,7 +1,19 @@
 ideas = {
+
 	country = {
-		#Легион обреченных
-		LPC_legion_of_the_doomed = {
+		LPC_legion_of_the_doomed = {			#Легион обреченных
+		picture = GFX_idea_LPC_legion_of_the_doomed
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
 			modifier = {
 				surrender_limit = -0.05
 				attrition = 0.1

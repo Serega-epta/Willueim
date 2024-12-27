@@ -1,6 +1,19 @@
 ideas = {
+
 	country = {
-		POP_total_terror = {
+		POP_total_terror = {		#ТОТАЛЬНЫЙ террор
+		picture = GFX_idea_POP_total_terror
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
 			modifier = {
 				surrender_limit = 0.1
 				defensive_war_stability_factor = 0.35
