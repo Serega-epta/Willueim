@@ -188,18 +188,19 @@ guiTypes = {
 			OverlappingElementsBoxType = {
 				name = "state_owners"
 				position = { x = 35 y = 63 }
-				size = { x = 60 y = -40 }
+				size = { x = 60 y = 40 }
 				format = left
 				spacing = 1.0
 			}
+
 			positionType = {
 				name = "state_owners_size_when_owner_is_controller"
-				position = { x = 210 y = -140 }
+				position = { x = 110 y = 40 }
 			}
 
 			positionType = {
 				name = "state_owners_size_when_owner_is_not_controller"
-				position = { x = 60 y = -140 }
+				position = { x = 60 y = 40 }
 			}
 			buttonType = {
 				name = "controller_flag"
@@ -527,6 +528,14 @@ guiTypes = {
 				}
 			}
 			gridBoxType = {
+				name = "province_custom_icon_building_entries"
+				position = { x = 10 y = 5}
+				size = { width = 480 height = 40 }
+				format = "UPPER_LEFT"
+				slotsize = { width = 61 height = 84}
+				max_slots_vertical = 1
+			}
+			gridBoxType = {
 				name = "province_building_entries"
 				position = {
 					x = -5000
@@ -620,6 +629,41 @@ guiTypes = {
 				y = -1
 			}
 			alwaystransparent = yes
+		}
+	}
+	windowType = {
+		name = "state_stakeholder_entry"
+		position = { x = 0 y = 0}	
+		size = { x = 40 y = 26 }
+
+		guibuttonType = {
+			name = "stakeholder_country_flag"
+			quadTextureSprite ="GFX_flag_small2"
+			position = { x= 0 y = 1 }
+			#Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "flag_border_thin"
+			quadTextureSprite = "GFX_small_flag_frame_thin"
+			position = { x= -3 y = -1 }
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "flag_border_thick"
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+			position = { x= -5 y = -4 }
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "flag_exclamation_mark"
+			spriteType = "GFX_alerts_category"
+			position = {x = 0 y = 0}
+			frame = 2
+			alwaystransparent = yes
+			scale = 0.8
 		}
 	}
 	containerWindowType = {
@@ -781,6 +825,37 @@ guiTypes = {
 				y = 38
 			}
 			rotation = 1.5708
+		}
+	}
+	containerWindowType = {
+		name = "province_building_special_icon_entry"
+		position = { x=-8 y=18 }
+		size = { width=50 height= 43 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			spriteType ="GFX_province_landmark_bg"
+		}
+
+		# Since the province building and facility icons are not the same size.
+		# For now use the position type X value as a scale, where 1 = 0.1 scale.
+		positionType = {
+			name = "facility_building_button_scale"
+			position = { x = 4 y = 0}
+		}
+
+		buttonType = {
+			name = "building_button"
+			quadTextureSprite = "GFX_placeholder_bg"
+			position = { x = 14 y = 7 }
+			scale = 1.0
+		}
+		
+		iconType = {
+			name = "damage_bar"
+			spriteType = "GFX_province_landmark_damage_bar"
+			position = { x=6 y=8  }
 		}
 	}
 	containerWindowType = {
