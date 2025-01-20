@@ -1,0 +1,78 @@
+Creation_of_medical_infrastructure = {
+	icon = GFX_decision_category_Blessed_Chthon
+	picture = GFX_Creation_of_medical_infrastructure_picture
+	allowed = {
+		
+	}
+	visible = {
+		has_country_flag = vaccine_phase_1_flag
+	}
+
+	visible_when_empty = yes   
+	priority = {
+		base = 5
+	}
+}
+
+Collection_of_genetic_material = {
+	icon = GFX_decision_category_Blessed_Chthon
+	picture = GFX_Collection_of_genetic_material_picture
+	allowed = {
+		
+	}
+    visible = {
+		has_country_flag = vaccine_phase_2_flag  
+	}
+
+	visible_when_empty = yes   
+	priority = {
+		base = 5
+	}
+}
+
+Vaccine_development = {
+	icon = GFX_decision_category_Blessed_Chthon
+	picture = GFX_Vaccine_development_picture
+	allowed = {
+		
+	}
+    visible = {
+		has_country_flag = vaccine_phase_3_flag
+	}
+
+	visible_when_empty = yes   
+	priority = {
+		base = 5
+	}
+}
+
+Vaccine_trials = {
+	icon = GFX_decision_category_Blessed_Chthon
+	picture = GFX_Vaccine_trials_picture
+	allowed = {
+		
+	}
+    visible = {
+		has_country_flag = vaccine_phase_4_flag
+	}
+
+	visible_when_empty = yes   
+	priority = {
+		base = 5
+	}
+}
+
+Cutting_out_tumor = {
+	icon = GFX_decision_category_Cutting_out_tumor
+	allowed = {
+		
+	}
+    visible = {
+		has_war_with = BLS
+	}
+
+	visible_when_empty = yes   
+	priority = {
+		base = 5
+	}
+}

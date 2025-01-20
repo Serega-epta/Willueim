@@ -1,0 +1,17 @@
+defined_text = {
+    name = Cutting_out_tumor_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = vaccine_finished_flag
+            }
+        }
+        localization_key = Cutting_out_tumor_no_vaccine
+    }
+    text = {
+        trigger = {
+            has_country_flag = vaccine_finished_flag
+        }
+        localization_key = Cutting_out_tumor_vaccine
+    }
+}

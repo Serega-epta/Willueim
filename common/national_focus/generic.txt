@@ -750,6 +750,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = blood_bath
+			IF = {
+				limit = {
+					OR = {
+						original_tag = TTL
+						original_tag = ASR
+						original_tag = MOT
+						original_tag = EDM
+					}
+				}
+				set_country_flag = vaccine_phase_1_flag
+				set_variable = {
+    				var =vaccine_progress_var
+    				value = 0
+				}
+				set_variable = {
+    				var = monthly_vaccine_progress_var
+    				value = 0
+				}
+			}
 		}
 	}
 }

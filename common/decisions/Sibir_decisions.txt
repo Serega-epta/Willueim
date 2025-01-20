@@ -1,0 +1,635 @@
+Creation_of_medical_infrastructure = {
+    Build_new_hospitals = {
+		icon = GFX_decision_Build_new_hospitals
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 90
+		days_remove = 90
+		days_re_enable = 30
+        modifier = {
+			civilian_factory_use = 3
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = vaccine_progress_tt
+				vaccine_progress_amount = 10
+			}
+			add_to_variable = {
+                var = vaccine_progress_var
+                value = 10
+            }
+            random_owned_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+		}
+	}
+    Increase_investment_in_medicine = {
+		icon = GFX_decision_Increase_investment_in_medicine
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 45
+		days_remove = 45
+		days_re_enable = 15
+        modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = vaccine_progress_tt
+				vaccine_progress_amount = 15
+			}
+			custom_effect_tooltip = {
+				localization_key = monthly_vaccine_progress_tt
+				vaccine_progress_amount = 2.5
+			}
+			add_to_variable = {
+                var = vaccine_progress_var
+                value = 15
+            }
+			add_to_variable = {
+                var = monthly_vaccine_progress_var
+                value = 2.5
+            }
+		}
+	}
+    Expand_medical_faculties = {
+		icon = GFX_decision_Expand_medical_faculties
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 15
+        modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = monthly_vaccine_progress_tt
+				vaccine_progress_amount = 1.5
+			}
+			add_to_variable = {
+                var = monthly_vaccine_progress_var
+                value = 1.5
+            }
+		}
+	}
+    Establish_Academy_of_Medical_Sciences = {
+		icon = GFX_decision_Establish_Academy_of_Medical_Sciences
+		visible = {
+			
+		}
+		available = {
+			
+		}
+        fire_only_once = yes
+		cost = 125
+		days_remove = 180
+        modifier = {
+			civilian_factory_use = 5
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = vaccine_progress_tt
+				vaccine_progress_amount = 10
+			}
+			add_to_variable = {
+                var = vaccine_progress_var
+                value = 10
+            }
+            capital_scope = {
+                add_dynamic_modifier = {
+                    modifier = Presence_of_Academy_of_Medical_Sciences
+                }
+            }
+		}
+	}
+}
+
+Collection_of_genetic_material = {
+	Send_expedition_beyond_Urals = {
+		icon = GFX_decision_Send_expedition_beyond_Urals
+		visible = {
+			
+		}
+		available = {
+			has_equipment = {
+    			infantry_equipment_1 > 499
+			}
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 15
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = -500
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = vaccine_progress_tt
+				vaccine_progress_amount = 5
+			}
+			add_to_variable = {
+                var = vaccine_progress_var
+                value = 5
+            }
+			set_country_flag = Expedition_beyond_Urals_flag
+		}
+	}
+	Willuim_catching = {
+		icon = GFX_decision_Willuim_catching
+		visible = {
+			
+		}
+		available = {
+			has_equipment = {
+    			infantry_equipment_1 > 1499
+			}
+			has_equipment = {
+    			motorized_equipment > 74
+			}
+			has_equipment = {
+    			infantry_fighting_vehicle_equipment > 14
+			}
+		}
+		cost = 45
+		days_remove = 30
+		days_re_enable = 30
+		complete_effect = {
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = -1500
+			}
+			add_equipment_to_stockpile = {
+    			type = motorized_equipment
+    			amount = -75
+			}
+			add_equipment_to_stockpile = {
+    			type = infantry_fighting_vehicle_equipment
+    			amount = -15
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = monthly_vaccine_progress_tt
+				vaccine_progress_amount = 2.5
+			}
+			add_to_variable = {
+                var = monthly_vaccine_progress_var
+                value = 2.5
+            }
+			set_country_flag = Willuim_catching_flag
+		}
+	}
+	Allow_experiments_on_willuims = {
+		icon = GFX_decision_Allow_experiments_on_willuims
+		visible = {
+			
+		}
+		available = {
+			custom_trigger_tooltip ={
+				tooltip = Willuim_catching_tt
+				has_country_flag = Willuim_catching_flag
+			}
+		}
+		cost = 90
+		days_remove = 45
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = vaccine_progress_tt
+				vaccine_progress_amount = 5
+			}
+			add_to_variable = {
+                var = vaccine_progress_var
+                value = 5
+            }
+		}
+	}
+	Send_expedition_to_Red_Forests = {
+		icon = GFX_decision_Send_expedition_to_Red_Forests
+		visible = {
+			
+		}
+		available = {
+			custom_trigger_tooltip ={
+				tooltip = Expedition_beyond_Urals_tt
+				has_country_flag = Expedition_beyond_Urals_flag
+			}
+			has_equipment = {
+    			infantry_equipment_1 > 2499
+			}
+			has_equipment = {
+    			motorized_equipment > 149
+			}
+			has_equipment = {
+    			infantry_fighting_vehicle_equipment > 24
+			}
+		}
+		cost = 120
+		days_remove = 45
+		days_re_enable = 30
+		complete_effect = {
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = -2500
+			}
+			add_equipment_to_stockpile = {
+    			type = motorized_equipment
+    			amount = -150
+			}
+			add_equipment_to_stockpile = {
+    			type = infantry_fighting_vehicle_equipment
+    			amount = -25
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = monthly_vaccine_progress_tt
+				vaccine_progress_amount = 7.5
+			}
+			add_to_variable = {
+                var = monthly_vaccine_progress_var
+                value = 7.5
+            }
+		}
+	}
+}
+
+Vaccine_development = {
+	Allow_experiments_on_humans = {
+		icon = GFX_decision_Allow_experiments_on_humans
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 150
+		days_remove = 90
+		fire_only_once = yes
+        modifier = {
+			civilian_factory_use = 5
+		}
+		complete_effect = {
+			add_stability = -0.1
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = vaccine_progress_tt
+				vaccine_progress_amount = 15
+			}
+			add_to_variable = {
+                var = vaccine_progress_var
+                value = 15
+            }
+		}
+	}
+	Study_of_pathogen_mutagenic_resistance = {
+		icon = GFX_decision_Study_of_pathogen_mutagenic_resistance
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 45
+		days_remove = 45
+		days_re_enable = 30
+        modifier = {
+			civilian_factory_use = 4
+			research_speed_factor = -0.05
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = monthly_vaccine_progress_tt
+				vaccine_progress_amount = 2.5
+			}
+			add_to_variable = {
+                var = monthly_vaccine_progress_var
+                value = 2.5
+            }
+		}
+	}
+	Sequencing_of_pathogen_genetic_material = {
+		icon = GFX_decision_Sequencing_of_pathogen_genetic_material
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 90
+		days_remove = 90
+		fire_only_once = yes
+        modifier = {
+			civilian_factory_use = 7
+			research_speed_factor = -0.1
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = vaccine_progress_tt
+				vaccine_progress_amount = 15
+			}
+			add_to_variable = {
+                var = vaccine_progress_var
+                value = 15
+            }
+		}
+	}
+	Experimental_acceleration_of_antibody_response = {
+		icon = GFX_decision_Experimental_acceleration_of_antibody_response
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 125
+		days_remove = 45
+		days_re_enable = 30
+        modifier = {
+			civilian_factory_use = 10
+			research_speed_factor = -0.25
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = monthly_vaccine_progress_tt
+				vaccine_progress_amount = 7.5
+			}
+			add_to_variable = {
+                var = monthly_vaccine_progress_var
+                value = 7.5
+            }
+		}
+	}
+	Development_of_RNA_and_DNA_vaccines = {
+		icon = GFX_decision_Development_of_RNA_and_DNA_vaccines
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 250
+		days_remove = 45
+		fire_only_once = yes
+        modifier = {
+			civilian_factory_use = 15
+			research_speed_factor = -0.5
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = vaccine_progress_tt
+				vaccine_progress_amount = 25
+			}
+			add_to_variable = {
+                var = vaccine_progress_var
+                value = 25
+            }
+		}
+	}
+}
+
+Vaccine_trials = {
+	Conduct_tests = {
+		icon = GFX_decision_Conduct_tests
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 300
+		days_remove = 30
+		fire_only_once = yes
+        modifier = {
+			civilian_factory_use = 20
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			country_event = Sibir_events.4
+		}
+	}
+}
+
+Cutting_out_tumor = {
+	Destruction_of_spire = {
+		icon = GFX_decision_Destruction_of_spire
+		available = {
+			has_equipment = {
+    			infantry_equipment_1 > 2499
+			}
+			has_equipment = {
+    			motorized_equipment > 149
+			}
+			has_equipment = {
+    			infantry_fighting_vehicle_equipment > 24
+			}
+			has_equipment = {
+    			artillery_equipment > 24
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				has_dynamic_modifier = {
+					modifier = Resistance_of_Villiims_1
+				}
+				NOT = {
+					state = 570
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		cost = 0
+		days_remove = 14
+		fire_only_once = yes
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = Resistance_of_Villiims_1
+				}
+				add_dynamic_modifier = {
+					modifier = Resistance_of_Villiims_2
+				}
+			}
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = -2500
+			}
+			add_equipment_to_stockpile = {
+    			type = motorized_equipment
+    			amount = -150
+			}
+			add_equipment_to_stockpile = {
+    			type = infantry_fighting_vehicle_equipment
+    			amount = -25
+			}
+			add_equipment_to_stockpile = {
+    			type = artillery_equipment
+    			amount = -25
+			}
+		}
+	}
+	Spraying_aerosol_vaccine = {
+		icon = GFX_decision_Spraying_aerosol_vaccine
+		visible = {
+			has_country_flag = vaccine_finished_flag
+		}
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				has_dynamic_modifier = {
+					modifier = Resistance_of_Villiims_2
+				}
+				NOT = {
+					state = 570
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		cost = 0
+		days_remove = 14
+		fire_only_once = yes
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = Resistance_of_Villiims_2
+				}
+				set_state_flag = williums_destroyed_flag
+			}
+		}
+	}
+	Destroy_central_spire = {
+		icon = GFX_decision_Destroy_central_spire
+		available = {
+			has_equipment = {
+    			infantry_equipment_1 > 1499
+			}
+			has_equipment = {
+    			motorized_equipment > 1499
+			}
+			has_equipment = {
+    			infantry_fighting_vehicle_equipment > 249
+			}
+			has_equipment = {
+    			artillery_equipment > 249
+			}
+			has_equipment = {
+    			pre_war_OPV_equipment_archetype > 149
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				state = 570
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		cost = 0
+		days_remove = 7
+		fire_only_once = yes
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = -15000
+			}
+			add_equipment_to_stockpile = {
+    			type = motorized_equipment
+    			amount = -1500
+			}
+			add_equipment_to_stockpile = {
+    			type = infantry_fighting_vehicle_equipment
+    			amount = -250
+			}
+			add_equipment_to_stockpile = {
+    			type = artillery_equipment
+    			amount = -250
+			}
+			add_equipment_to_stockpile = {
+    			type = pre_war_OPV_equipment_archetype
+    			amount = -150
+			}
+			annex_country = {
+				target = BLS
+				transfer_troops = no
+			}
+			hidden_effect = {
+				BLS = {
+					every_core_state = {
+						remove_dynamic_modifier = {
+							modifier = Resistance_of_Villiims_1
+						}
+						remove_dynamic_modifier = {
+							modifier = Resistance_of_Villiims_2
+						}
+						set_state_flag = williums_destroyed_flag
+					}
+				}
+			}
+		}
+	}
+}
