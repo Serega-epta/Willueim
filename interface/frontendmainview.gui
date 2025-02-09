@@ -221,12 +221,17 @@ guiTypes = {
 		}
 		Orientation = CENTER
 		Origo = center
+		clipping = no
 		#iconType = {
 		#	name = "roh_main_menu" #Тут был main_menu_black_pencil_green_pencil_big_banana_pencil
 		#	spriteType ="GFX_main_menu"
 		#	position = { x=-13 y=-368 }
 		#	alwaystransparent = yes
 		#}	
+		positionType = {
+			name = "subscription_size"
+			position = { x = 1920 y = 1080 }
+		}
 		background = {
 			name = "Background"
 			spriteType = "GFX_bottom_bar"
@@ -234,7 +239,7 @@ guiTypes = {
 				x = 0
 				y = -368
 			}
-			alwaystransparent = yes
+			#alwaystransparent = yes
 		}
 		iconType = {
 			name = "alpha_version_bar"
