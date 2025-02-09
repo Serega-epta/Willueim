@@ -1,0 +1,129 @@
+add_namespace = Sibir_events
+
+#Завершение Первой фазы
+country_event = {
+	id = Sibir_events.1
+	title = Sibir_events.1.t
+	desc = Sibir_events.1.d
+	trigger = {
+        check_variable = {
+            vaccine_progress_var > 99
+        }
+		has_country_flag = vaccine_phase_1_flag
+    }
+	option = {
+		name = Sibir_events.1.a
+		clr_country_flag = vaccine_phase_1_flag
+        set_country_flag = vaccine_phase_2_flag
+        set_variable = {
+    		var = vaccine_progress_var
+    		value = 0
+		}
+		set_variable = {
+    		var = monthly_vaccine_progress_var
+    		value = 0
+		}
+		remove_decision = Build_new_hospitals
+		remove_decision = Increase_investment_in_medicine
+		remove_decision = Expand_medical_faculties
+	}
+}
+
+#Завершение Второй фазы
+country_event = {
+	id = Sibir_events.2
+	title = Sibir_events.2.t
+	desc = Sibir_events.2.d
+	trigger = {
+        has_country_flag = vaccine_phase_2_flag
+        check_variable = {
+            vaccine_progress_var > 99
+        }
+    }
+	option = {
+		name = Sibir_events.2.a
+        clr_country_flag = vaccine_phase_2_flag
+        set_country_flag = vaccine_phase_3_flag
+        set_variable = {
+    		var = vaccine_progress_var
+    		value = 0
+		}
+		set_variable = {
+    		var = monthly_vaccine_progress_var
+    		value = 0
+		}
+		remove_decision = Send_expedition_beyond_Urals
+		remove_decision = Willuim_catching
+		remove_decision = Allow_experiments_on_willuims
+		remove_decision = Send_expedition_to_Red_Forests
+	}
+}
+
+#Завершение Третьей фазы
+country_event = {
+	id = Sibir_events.3
+	title = Sibir_events.3.t
+	desc = Sibir_events.3.d
+	trigger = {
+        has_country_flag = vaccine_phase_3_flag
+        check_variable = {
+            vaccine_progress_var > 99
+        }
+    }
+	option = {
+		name = Sibir_events.3.a
+        clr_country_flag = vaccine_phase_3_flag
+        set_country_flag = vaccine_phase_4_flag
+        set_variable = {
+    		var =vaccine_progress_var
+    		value = 0
+		}
+		set_variable = {
+    		var = monthly_vaccine_progress_var
+    		value = 0
+		}
+		remove_decision = Allow_experiments_on_humans
+		remove_decision = Study_of_pathogen_mutagenic_resistance
+		remove_decision = Sequencing_of_pathogen_genetic_material
+		remove_decision = Experimental_acceleration_of_antibody_response
+		remove_decision = Development_of_RNA_and_DNA_vaccines
+	}
+}
+
+#Разработка завершена
+country_event = {
+	id = Sibir_events.4
+	title = Sibir_events.4.t
+	desc = Sibir_events.4.d
+	is_triggered_only = yes
+	option = {
+		name = Sibir_events.4.a
+		set_country_flag = vaccine_finished_flag
+		clr_country_flag = vaccine_phase_4_flag
+		capital_scope = {
+			set_state_flag = vaccine_finished_state_flag
+		}
+	}
+}
+
+#Захвачена вражеская академия наук
+country_event = {
+	id = Sibir_events.5
+	title = Sibir_events.5.t
+	desc = Sibir_events.5.d
+	trigger = {
+		NOT = {
+			has_country_flag = vaccine_finished_flag
+		}
+		any_controlled_state = {
+			has_state_flag = vaccine_finished_state_flag
+		}
+	}
+	option = {
+		name = Sibir_events.5.a
+		set_country_flag = vaccine_finished_flag
+		capital_scope = {
+			set_state_flag = vaccine_finished_state_flag
+		}
+	}
+}

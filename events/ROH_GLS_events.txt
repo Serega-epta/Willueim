@@ -222,6 +222,44 @@ country_event = {
 		name = GLS_phase_one.20.a
 	}
 }
+
+
+country_event = {
+	id = GLS_phase_one.21
+	title = GLS_phase_one.21.t
+	desc = GLS_phase_one.21.d
+	picture = GFX_ropot_razv
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		GLS_defeated_ASR = yes
+	}
+	option = {
+		name = GLS_phase_one.21.a
+		GLS = {
+			country_event = {
+				id = GLS_phase_one.22
+				hours = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = GLS_phase_one.22
+	title = GLS_phase_one.22.t
+	desc = GLS_phase_one.22.d
+	picture = GFX_ropot_razv
+	is_triggered_only = yes
+	option = {
+		name = GLS_phase_one.22.a
+		hidden_effect = {
+			GLS = {
+				load_focus_tree = state_liquidation_board_phase_two
+			}
+		}
+	}
+}
+
 #####################
 #S E C O N D F A Z A#
 #####################

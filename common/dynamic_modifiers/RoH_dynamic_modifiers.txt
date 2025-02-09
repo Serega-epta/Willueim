@@ -678,3 +678,37 @@ SWR_huntsman_squads = {
 	army_strength_factor = swr_army_strength_factor
 	army_morale_factor = swr_army_morale_factor 
 }
+
+
+#Механики Тишины#
+Presence_of_Academy_of_Medical_Sciences = {
+	icon = GFX_impassable_icon
+	Monthly_population  = 0.025
+	Research_speed_factor  = 0.015
+}
+
+Presence_of_Academy_of_Medical_Sciences = {
+	icon = GFX_impassable_icon
+	Monthly_population  = 0.025
+	Research_speed_factor  = 0.015
+}
+
+Resistance_of_Villiims_1 = {
+	icon = GFX_impassable_icon
+	supply_consumption_factor = 0.75
+	out_of_supply_factor = -0.5
+	army_speed_factor = -0.75
+	Offence = -0.50
+	Defence = -0.50
+	Resistance_tick_auto = 2
+}
+
+Resistance_of_Villiims_2 = {
+	icon = GFX_impassable_icon
+	supply_consumption_factor = 0.1
+	out_of_supply_factor = -0.1
+	army_speed_factor = -0.15
+	Offence = -0.10
+	Defence = -0.10
+	Resistance_tick_auto = 0.5
+}

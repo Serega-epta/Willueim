@@ -1,0 +1,33 @@
+on_actions = {
+    on_monthly = {
+        effect = {
+            IF = {
+                limit = {
+                    has_variable = monthly_vaccine_progress_var
+                }
+                add_to_variable = {
+                    var = vaccine_progress_var
+                    value = monthly_vaccine_progress_var
+                }
+            }
+        }
+    }
+    on_state_control_changed = {
+        effect = {
+            if = {
+				limit = {
+					FROM.FROM = { 
+                        is_controlled_by = ROOT
+						is_core_of = BLS
+                        NOT = {
+                            has_state_flag = williums_destroyed_flag
+                        }
+					}
+				}
+				FROM.FROM = {
+					add_dynamic_modifier = { modifier = Resistance_of_Villiims_1 }
+				}
+			}
+        }
+    }
+}

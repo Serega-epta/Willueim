@@ -513,6 +513,15 @@ focus_tree = {
 				target = ASR
 				type = annex_everything
 			}
+			set_country_flag = vaccine_phase_1_flag
+			set_variable = {
+    			var =vaccine_progress_var
+    			value = 0
+			}
+			set_variable = {
+    			var = monthly_vaccine_progress_var
+    			value = 0
+			}
 		}
 	}
 }
