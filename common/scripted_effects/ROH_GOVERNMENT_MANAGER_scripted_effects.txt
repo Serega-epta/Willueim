@@ -1598,6 +1598,693 @@ sweat_and_blood_effect = {
 	}
 	custom_effect_tooltip = sweat_and_blood_reform_tt
 }
+#naumov system
+select_naumov_system = {
+	if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 0
+			}
+		}
+		set_temp_variable = { 
+			var = reform_points_growth
+			value = 5
+			tooltip = reform_new_points_growth_tt
+		}
+		add_political_power = 100
+	}
+	else = {
+		remove_ideas_with_trait = menshikov_system_trait
+		remove_ideas_with_trait = naumov_system_trait
+	}
+	set_variable = {
+		var = selected_government_system
+		value = 3
+		tooltip = select_naumov_system_tt
+	}
+	subtract_from_variable = {
+		var = reform_points
+		value = 20
+		tooltip = goverment_system_upgrade_tt
+	}
+}
+common_duty_common_law_effect = {
+	if = {
+		limit = {
+			has_idea = common_duty_common_law_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = common_duty_common_law_idea
+			add_political_power = 150
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = common_duty_common_law_reform_tt
+	effect_tooltip = {
+		add_political_power = 150
+	}
+}
+existence_essence_effect = {
+	if = {
+		limit = {
+			has_idea = existence_essence_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = existence_essence_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = existence_essence_reform_tt
+}
+existence_horror_effect = {
+	if = {
+		limit = {
+			has_idea = existence_horror_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = existence_horror_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = existence_horror_reform_tt
+}
+caring_eye_effect = {
+	if = {
+		limit = {
+			has_idea = caring_eye_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = caring_eye_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 30
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 30
+		}
+	}
+	custom_effect_tooltip = caring_eye_reform_tt
+}
+interesting_observation_effect = {
+	if = {
+		limit = {
+			has_idea = interesting_observation_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = interesting_observation_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = interesting_observation_reform_tt
+}
+technological_revolution_effect = {
+	if = {
+		limit = {
+			has_idea = technological_revolution_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = technological_revolution_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 30
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 30
+		}
+	}
+	custom_effect_tooltip = technological_revolution_reform_tt
+}
+cultural_revolution_effect = {
+	if = {
+		limit = {
+			has_idea = cultural_revolution_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = cultural_revolution_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 30
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 30
+		}
+	}
+	custom_effect_tooltip = cultural_revolution_reform_tt
+}
+assured_survival_effect = {
+	if = {
+		limit = {
+			has_idea = assured_survival_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = assured_survival_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 30
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 30
+		}
+	}
+	custom_effect_tooltip = assured_survival_reform_tt
+}
+proportionate_fee_effect = {
+	if = {
+		limit = {
+			has_idea = proportionate_fee_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = proportionate_fee_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = proportionate_fee_reform_tt
+}
+flawless_soldier_effect = {
+	if = {
+		limit = {
+			has_idea = flawless_soldier_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = flawless_soldier_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = flawless_soldier_reform_tt
+}
+all_describing_formula_effect = {
+	if = {
+		limit = {
+			has_idea = all_describing_formula_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = all_describing_formula_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 45
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 45
+		}
+	}
+	custom_effect_tooltip = all_describing_formula_reform_tt
+}
+primary_broth_effect = {
+	if = {
+		limit = {
+			has_idea = primary_broth_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = primary_broth_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = primary_broth_reform_tt
+}
+flowers_of_life_effect = {
+	if = {
+		limit = {
+			has_idea = flowers_of_life_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = flowers_of_life_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = flowers_of_life_reform_tt
+}
+their_life_plans_effect = {
+	if = {
+		limit = {
+			has_idea = their_life_plans_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = their_life_plans_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 30
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 30
+		}
+	}
+	custom_effect_tooltip = their_life_plans_reform_tt
+}
+cast_aside_doubts_effect = {
+	if = {
+		limit = {
+			has_idea = cast_aside_doubts_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = cast_aside_doubts_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 30
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 30
+		}
+	}
+	custom_effect_tooltip = cast_aside_doubts_reform_tt
+}
+potential_realization_effect = {
+	if = {
+		limit = {
+			has_idea = potential_realization_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = potential_realization_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 30
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 30
+		}
+	}
+	custom_effect_tooltip = potential_realization_reform_tt
+}
+order_in_mind_effect = {
+	if = {
+		limit = {
+			has_idea = order_in_mind_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = order_in_mind_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 60
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 60
+		}
+	}
+	custom_effect_tooltip = order_in_mind_reform_tt
+}
+unity_by_blood_effect = {
+	if = {
+		limit = {
+			has_idea = unity_by_blood_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = unity_by_blood_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 15
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 15
+		}
+	}
+	custom_effect_tooltip = unity_by_blood_reform_tt
+}
+man_and_consciousness_effect = {
+	if = {
+		limit = {
+			has_idea = man_and_consciousness_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = man_and_consciousness_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 30
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 30
+		}
+	}
+	custom_effect_tooltip = man_and_consciousness_reform_tt
+}
+cognitive_warfare_effect = {
+	if = {
+		limit = {
+			has_idea = cognitive_warfare_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = cognitive_warfare_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 60
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 60
+		}
+	}
+	custom_effect_tooltip = cognitive_warfare_reform_tt
+}
+body_limits_effect = {
+	if = {
+		limit = {
+			has_idea = body_limits_idea
+		}
+		custom_effect_tooltip = reform_researched_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				selected_government_system = 3
+			}
+		}
+		hidden_effect = {
+			add_ideas = body_limits_idea
+		}
+		subtract_from_variable = {
+			var = reform_points
+			value = 90
+			tooltip = goverment_system_upgrade_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = model_is_not_selected_tt
+		custom_effect_tooltip = {
+			localization_key = goverment_system_upgrade_tt
+			RIGHT = 90
+		}
+	}
+	custom_effect_tooltip = body_limits_reform_tt
+}
+
+
 
 
 
