@@ -1642,7 +1642,7 @@ scripted_gui = {
 			}
 			select_model_button_click_enabled = {
 				set_temp_variable = {
-					reform_points_for_upgrade = 20
+					reform_points_for_upgrade = constant:government_upgrade_cost.paltry
 				}
 				goverment_system_can_be_upgraded = yes
 			}
@@ -1657,7 +1657,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 				}
@@ -1673,7 +1673,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 					NOT = {
@@ -1693,7 +1693,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 					NOT = {
@@ -1713,7 +1713,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 30
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_low
 					}
 					goverment_system_can_be_upgraded = yes
 					NOT = {
@@ -1733,7 +1733,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 					NOT = {
@@ -1753,7 +1753,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 30
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_low
 					}
 					goverment_system_can_be_upgraded = yes
 					NOT = {
@@ -1773,7 +1773,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 30
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_low
 					}
 					goverment_system_can_be_upgraded = yes
 					NOT = {
@@ -1793,7 +1793,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 30
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_low
 					}
 					goverment_system_can_be_upgraded = yes
 					OR = {
@@ -1813,7 +1813,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 					OR = {
@@ -1833,7 +1833,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 					OR = {
@@ -1853,7 +1853,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 45
+						reform_points_for_upgrade = constant:government_upgrade_cost.high
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = flawless_soldier_idea
@@ -1870,7 +1870,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = flawless_soldier_idea
@@ -1887,7 +1887,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = all_describing_formula_idea
@@ -1905,7 +1905,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 30
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_low
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = flowers_of_life_idea
@@ -1922,7 +1922,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 30
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_low
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = their_life_plans_idea
@@ -1939,7 +1939,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 30
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_low
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = their_life_plans_idea
@@ -1956,7 +1956,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 60
+						reform_points_for_upgrade = constant:government_upgrade_cost.huge
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = cast_aside_doubts_idea
@@ -1973,7 +1973,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 15
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_paltry
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = potential_realization_idea
@@ -1990,7 +1990,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 30
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_low
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = unity_by_blood_idea
@@ -2007,7 +2007,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 60
+						reform_points_for_upgrade = constant:government_upgrade_cost.huge
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = order_in_mind_idea
@@ -2024,7 +2024,7 @@ scripted_gui = {
 						}
 					}
 					set_temp_variable = {
-						reform_points_for_upgrade = 90
+						reform_points_for_upgrade = constant:government_upgrade_cost.very_huge
 					}
 					goverment_system_can_be_upgraded = yes
 					has_idea = cognitive_warfare_idea

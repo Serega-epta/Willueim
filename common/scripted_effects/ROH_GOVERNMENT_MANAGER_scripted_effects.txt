@@ -7,7 +7,7 @@ select_menshikov_system = {
 				selected_government_system = 0
 			}
 		}
-		add_to_variable = { 
+		set_temp_variable = { 
 			var = reform_points_growth
 			value = 1
 			tooltip = reform_new_points_growth_tt
@@ -25,8 +25,11 @@ select_menshikov_system = {
 	}
 	subtract_from_variable = {
 		var = reform_points
-		value = 20
+		value = constant:government_upgrade_cost.paltry
 		tooltip = goverment_system_upgrade_tt
+	}
+	hidden_effect = {
+		add_ideas = menshikov_system_idea
 	}
 }
 materials_science_effect = {
@@ -806,7 +809,7 @@ select_smoilov_system = {
 				selected_government_system = 0
 			}
 		}
-		add_to_variable = { 
+		set_temp_variable = { 
 			var = reform_points_growth
 			value = 1
 			tooltip = reform_new_points_growth_tt
@@ -824,8 +827,11 @@ select_smoilov_system = {
 	}
 	subtract_from_variable = {
 		var = reform_points
-		value = 20
+		value = constant:government_upgrade_cost.paltry
 		tooltip = goverment_system_upgrade_tt
+	}
+	hidden_effect = {
+		add_ideas = smoilov_system_idea
 	}
 }
 foundation_of_the_past_effect = {
@@ -1615,7 +1621,7 @@ select_naumov_system = {
 	}
 	else = {
 		remove_ideas_with_trait = menshikov_system_trait
-		remove_ideas_with_trait = naumov_system_trait
+		remove_ideas_with_trait = smoilov_system_trait
 	}
 	set_variable = {
 		var = selected_government_system
@@ -1624,8 +1630,11 @@ select_naumov_system = {
 	}
 	subtract_from_variable = {
 		var = reform_points
-		value = 20
+		value = constant:government_upgrade_cost.paltry
 		tooltip = goverment_system_upgrade_tt
+	}
+	hidden_effect = {
+		add_ideas = naumov_system_idea
 	}
 }
 common_duty_common_law_effect = {
@@ -1643,11 +1652,10 @@ common_duty_common_law_effect = {
 		}
 		hidden_effect = {
 			add_ideas = common_duty_common_law_idea
-			add_political_power = 150
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1655,7 +1663,7 @@ common_duty_common_law_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = common_duty_common_law_reform_tt
@@ -1681,7 +1689,7 @@ existence_essence_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1689,7 +1697,7 @@ existence_essence_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = existence_essence_reform_tt
@@ -1712,7 +1720,7 @@ existence_horror_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1720,7 +1728,7 @@ existence_horror_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = existence_horror_reform_tt
@@ -1743,7 +1751,7 @@ caring_eye_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 30
+			value = constant:government_upgrade_cost.very_low
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1751,7 +1759,7 @@ caring_eye_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 30
+			RIGHT = "[?constant:government_upgrade_cost.very_low]"
 		}
 	}
 	custom_effect_tooltip = caring_eye_reform_tt
@@ -1774,7 +1782,7 @@ interesting_observation_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1782,7 +1790,7 @@ interesting_observation_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = interesting_observation_reform_tt
@@ -1805,7 +1813,7 @@ technological_revolution_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 30
+			value = constant:government_upgrade_cost.very_low
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1813,7 +1821,7 @@ technological_revolution_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 30
+			RIGHT = "[?constant:government_upgrade_cost.very_low]"
 		}
 	}
 	custom_effect_tooltip = technological_revolution_reform_tt
@@ -1836,7 +1844,7 @@ cultural_revolution_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 30
+			value = constant:government_upgrade_cost.very_low
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1844,7 +1852,7 @@ cultural_revolution_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 30
+			RIGHT = "[?constant:government_upgrade_cost.very_low]"
 		}
 	}
 	custom_effect_tooltip = cultural_revolution_reform_tt
@@ -1867,7 +1875,7 @@ assured_survival_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 30
+			value = constant:government_upgrade_cost.very_low
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1875,7 +1883,7 @@ assured_survival_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 30
+			RIGHT = "[?constant:government_upgrade_cost.very_low"
 		}
 	}
 	custom_effect_tooltip = assured_survival_reform_tt
@@ -1898,7 +1906,7 @@ proportionate_fee_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1906,7 +1914,7 @@ proportionate_fee_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = proportionate_fee_reform_tt
@@ -1929,7 +1937,7 @@ flawless_soldier_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1937,7 +1945,7 @@ flawless_soldier_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = flawless_soldier_reform_tt
@@ -1960,7 +1968,7 @@ all_describing_formula_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 45
+			value = constant:government_upgrade_cost.high
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1968,7 +1976,7 @@ all_describing_formula_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 45
+			RIGHT = "[?constant:government_upgrade_cost.high]"
 		}
 	}
 	custom_effect_tooltip = all_describing_formula_reform_tt
@@ -1991,7 +1999,7 @@ primary_broth_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -1999,7 +2007,7 @@ primary_broth_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = primary_broth_reform_tt
@@ -2022,7 +2030,7 @@ flowers_of_life_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2030,7 +2038,7 @@ flowers_of_life_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = flowers_of_life_reform_tt
@@ -2053,7 +2061,7 @@ their_life_plans_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 30
+			value = constant:government_upgrade_cost.very_low
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2061,7 +2069,7 @@ their_life_plans_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 30
+			RIGHT = "[?constant:government_upgrade_cost.very_low]"
 		}
 	}
 	custom_effect_tooltip = their_life_plans_reform_tt
@@ -2084,7 +2092,7 @@ cast_aside_doubts_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 30
+			value = constant:government_upgrade_cost.very_low
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2092,7 +2100,7 @@ cast_aside_doubts_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 30
+			RIGHT = "[?constant:government_upgrade_cost.very_low]"
 		}
 	}
 	custom_effect_tooltip = cast_aside_doubts_reform_tt
@@ -2115,7 +2123,7 @@ potential_realization_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 30
+			value = constant:government_upgrade_cost.very_low
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2123,7 +2131,7 @@ potential_realization_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 30
+			RIGHT = "[?constant:government_upgrade_cost.very_low]"
 		}
 	}
 	custom_effect_tooltip = potential_realization_reform_tt
@@ -2146,7 +2154,7 @@ order_in_mind_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 60
+			value = constant:government_upgrade_cost.huge
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2154,7 +2162,7 @@ order_in_mind_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 60
+			RIGHT = "[?constant:government_upgrade_cost.huge]"
 		}
 	}
 	custom_effect_tooltip = order_in_mind_reform_tt
@@ -2177,7 +2185,7 @@ unity_by_blood_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 15
+			value = constant:government_upgrade_cost.very_paltry
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2185,7 +2193,7 @@ unity_by_blood_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 15
+			RIGHT = "[?constant:government_upgrade_cost.very_paltry]"
 		}
 	}
 	custom_effect_tooltip = unity_by_blood_reform_tt
@@ -2208,7 +2216,7 @@ man_and_consciousness_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 30
+			value = constant:government_upgrade_cost.very_low
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2216,7 +2224,7 @@ man_and_consciousness_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 30
+			RIGHT = "[?constant:government_upgrade_cost.very_low]"
 		}
 	}
 	custom_effect_tooltip = man_and_consciousness_reform_tt
@@ -2239,7 +2247,7 @@ cognitive_warfare_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 60
+			value = constant:government_upgrade_cost.huge
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2247,7 +2255,7 @@ cognitive_warfare_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 60
+			RIGHT = "[?constant:government_upgrade_cost.huge]"
 		}
 	}
 	custom_effect_tooltip = cognitive_warfare_reform_tt
@@ -2270,7 +2278,7 @@ body_limits_effect = {
 		}
 		subtract_from_variable = {
 			var = reform_points
-			value = 90
+			value = constant:government_upgrade_cost.very_huge
 			tooltip = goverment_system_upgrade_tt
 		}
 	}
@@ -2278,7 +2286,7 @@ body_limits_effect = {
 		custom_effect_tooltip = model_is_not_selected_tt
 		custom_effect_tooltip = {
 			localization_key = goverment_system_upgrade_tt
-			RIGHT = 90
+			RIGHT = "[?constant:government_upgrade_cost.very_huge]"
 		}
 	}
 	custom_effect_tooltip = body_limits_reform_tt
