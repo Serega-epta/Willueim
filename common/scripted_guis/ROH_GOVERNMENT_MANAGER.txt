@@ -1,36 +1,8 @@
 scripted_gui = {
-	government_manager_handler = {
-		context_type = player_context
-		parent_window_token = politics_tab
-		window_name = "government_manager_handler"
-		effects = {
-			government_manager_toggle_click = {
-				if = {
-					limit = {
-						NOT = { has_variable = gos_usroistvo }
-					} 
-					set_variable = {
-						gos_usroistvo = 0 
-					}
-				}
-			}
-			laws_toggle_click = {
-				if = {
-					limit = {
-						has_variable = gos_usroistvo
-					} 
-					clear_variable = gos_usroistvo
-				}
-			}
-		}
-	}
 	Okno_gosustroistva = {
 		context_type = player_context
 		parent_window_token = politics_tab
 		window_name = "government_manager_container"
-		visible = {
-			has_variable = gos_usroistvo
-		}	
 		triggers = {		
 			BUTTON_Open_okno_military_system_click_enabled = {
 				OR = {

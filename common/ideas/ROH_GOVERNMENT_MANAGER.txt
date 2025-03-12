@@ -331,6 +331,20 @@ ideas = {
 			modifier = {
 				production_speed_bunker_factor = 0.15
 			}
+			on_add = {
+				add_ai_strategy = {
+					type = building_target
+					id = bunker
+					value = 50
+				}
+			}
+			on_remove = {
+				add_ai_strategy = {
+					type = building_target
+					id = bunker
+					value = -50
+				}
+			}
 		}
 		rural_militia_idea = {
 			traits = {
