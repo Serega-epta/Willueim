@@ -1,10 +1,16 @@
 expansion_category = {
 	unite_motherland = {
 		available = {
-			all_other_country = {
-				OR = {
-					tag = BLS
-					is_subject_of = ROOT
+			custom_trigger_tooltip = {
+    			tooltip = Unification_over_tt		
+    			ROOT = {
+					has_idea = Garrisons
+					has_country_flag = Restore_communications_flag
+					has_country_flag = Distribute_production_flag
+					has_country_flag = Restoration_of_Moscow_flag
+					has_country_flag = Fresh_water_purification_flag
+					has_country_flag = Clear_the_red_forests_flag
+					has_country_flag = Operation_Nevsky_flag
 				}
 			}
 		}
@@ -118,10 +124,16 @@ expansion_category = {
 reunification_category = {
 	major_unite_motherland = {
 		available = {
-			all_other_country = {
-				OR = {
-					tag = BLS
-					is_subject_of = ROOT
+			custom_trigger_tooltip = {
+    			tooltip = Unification_over_tt		#Теперь доступно только после механик
+    			ROOT = {
+					has_idea = Garrisons
+					has_country_flag = Restore_communications_flag
+					has_country_flag = Distribute_production_flag
+					has_country_flag = Restoration_of_Moscow_flag
+					has_country_flag = Fresh_water_purification_flag
+					has_country_flag = Clear_the_red_forests_flag
+					has_country_flag = Operation_Nevsky_flag
 				}
 			}
 		}

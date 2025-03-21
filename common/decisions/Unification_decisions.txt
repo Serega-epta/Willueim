@@ -1,0 +1,966 @@
+Unification_campaign = {
+
+	Set_raid = {
+		visible = {
+		}
+		available = {
+			has_war = no
+			NOT = {
+				has_idea = Successful_raid
+			}
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				AND = {
+					is_neighbor_of = ROOT
+					has_war = no
+					NOT = {
+						tag = BLS
+						tag = ANR
+						tag = WTR
+						tag = WEC
+						tag = SAC
+						tag = SOC
+
+					}
+				}
+			}
+		}
+		highlight_states = {
+			highlight_states_trigger = {		
+				is_capital = yes
+				is_owned_by = FROM
+			}
+		}
+		cost = 50
+		days_remove = 15
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				random_owned_controlled_state = {
+					limit = {
+						any_neighbor_state = {
+							is_fully_controlled_by = ROOT
+						}
+					}
+					set_variable = { PREV.defender_state_vs_@ROOT = THIS }
+					set_state_flag = defender_state
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						is_fully_controlled_by = FROM
+						has_state_flag = defender_state
+					}
+				}
+				set_variable = { FROM.attacker_state_vs_@ROOT = THIS }
+				
+			}
+		}
+		remove_effect = {
+			start_border_war = {
+    			change_state_after_war = no
+    			attacker = {
+        			state = var:FROM.attacker_state_vs_@ROOT
+        			num_provinces = 1
+        			on_win = Unification_raid_event.1
+       				on_lose = Unification_raid_event.3
+        			on_cancel = Unification_raid_event.3
+    			}	
+    			defender = {
+        			state = var:FROM.defender_state_vs_@ROOT
+        			num_provinces = 1
+        			on_win = Unification_raid_event.2
+        			on_lose = Unification_raid_event.3
+        			on_cancel = Unification_raid_event.3
+    			}
+			}
+			set_border_war_data = {
+				attacker = var:FROM.defender_state_vs_@ROOT
+				defender = var:FROM.defender_state_vs_@ROOT
+				combat_width = 20
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Force_peace = {
+		visible = {
+		}
+		available = {
+			
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				AND = {
+					is_neighbor_of = ROOT
+					has_war_with = ROOT
+					fighting_army_strength_ratio = {
+    					tag = ROOT
+    					ratio < 0.5
+					}
+					NOT = {
+						tag = SIL
+						tag = LWV
+					}
+				}
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			IF = {
+				limit = {
+					has_government = ROOT
+				}
+				random_list = {
+					70 = {
+						annex_country = {
+    						target = FROM
+    						transfer_troops = yes
+						}
+					}
+					30 = {
+					}
+				}
+			}
+			else = {
+				random_list = {
+					40 = {
+						annex_country = {
+    						target = FROM
+    						transfer_troops = yes
+						}
+					}
+					60 = {
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Start_campaign = {
+		visible = {
+		}
+		available = {
+			
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				AND = {
+					is_neighbor_of = ROOT
+					NOT = {
+						tag = BLS
+						tag = ANR
+						tag = WTR
+					}
+				}
+			}
+		}
+		cost = 50
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			declare_war_on = {
+    			target = FROM
+    			type = annex_everything
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Strength_through_unity = {
+		visible = {
+			is_major = no
+		}
+		available = {
+			
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				AND = {
+					is_neighbor_of = ROOT
+					has_government = ROOT
+					NOT = {
+						tag = SIL
+						tag = BLS
+					}
+				}
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			random = {
+				chance = 90
+				annex_country = {
+    				target = FROM
+    				transfer_troops = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Infiltrate_the_brigade = {
+		visible = {
+		}
+		available = {
+			
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM =  {
+				has_government = bandits
+			}
+		}
+		cost = 50
+		days_remove = 20
+		fire_only_once = yes
+		remove_effect = {
+			FROM = {
+				add_opinion_modifier = {
+    				target = ROOT
+    				modifier = infiltration_opinion
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Contacts_with_leaders = {
+		visible = {
+		}
+		available = {
+			
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				has_government = bandits
+			}
+			FROM = {
+				has_opinion_modifier = infiltration_opinion
+			}
+		}
+		cost = 50
+		days_remove = 15
+		fire_only_once = yes
+		remove_effect = {
+			FROM = {
+				add_opinion_modifier = {
+    				target = ROOT
+					modifier = Contacts_with_leaders_opinion
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Authorities = {
+		visible = {
+		}
+		available = {
+			
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				has_government = bandits
+				has_opinion_modifier = Contacts_with_leaders_opinion
+			}
+		}
+		cost = 50
+		days_remove = 10
+		remove_effect = {
+			FROM = {
+				add_opinion_modifier = {
+    				target = ROOT
+    				modifier = Authorities_opinion
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Renegades_decision = {
+		visible = {
+		}
+		available = {
+			
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				has_government = bandits
+				has_opinion_modifier = Authorities_opinion
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			random_list = {
+				70 = {
+					ROOT = {
+						declare_war_on = {
+    						target = FROM
+    						type = annex_everything
+						}
+					}
+				}
+				30 = {
+					FROM = {
+						every_owned_state = {
+							transfer_state_to = ANR
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Soft_power = {
+		visible = {
+		}
+		available = {
+			has_manpower > 499
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ANR
+			}
+		}
+		cost = 50
+		days_remove = 30
+		complete_effect = {
+			add_manpower = -500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+		}
+		remove_effect = {
+			FROM = {
+				transfer_state_to = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+    Finnish_Unification_campaign = {
+		available = {
+			all_other_country = {
+				OR = {
+					tag = BLS
+					is_subject_of = ROOT
+				}
+			}
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = Unification_flag
+			remove_ideas = Time_goes_by
+			add_dynamic_modifier = {
+				modifier = Motherland_Then_now_henceforth
+			}
+			set_variable = {
+    			var = monthly_population_var
+    			value = -0.9
+			}
+			set_variable = {
+    			var = production_speed_industrial_complex_factor_var
+    			value = 0.5
+			}
+			set_variable = {
+    			var = production_speed_infrastructure_factor_var
+    			value = 0.5
+			}
+			set_variable = {
+    			var = required_garrison_factor_var
+    			value = -0.7
+			}
+			set_variable = {
+    			var = weekly_manpower_var
+    			value = -1000
+			}
+			set_variable = {
+    			var = compliance_growth_on_our_occupied_states_var
+    			value = 0.6
+			}
+			set_variable = {
+    			var = red_forest_expiditions
+    			value = 1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+Unification = {
+    Restore_communications = {
+		available = {
+			has_railway_connection = {
+				start_province = 6380
+				target_province = 1278
+			}
+			has_railway_connection = {
+				start_province = 6380
+				target_province = 11670
+			}
+			has_railway_connection = {
+				start_province = 6380
+				target_province = 13350
+			}
+			has_railway_connection = {
+				start_province = 6380
+				target_province = 3335
+			}
+			has_railway_connection = {
+				start_province = 6380
+				target_province = 9355
+			}
+			has_railway_connection = {
+				start_province = 6380
+				target_province = 9417
+			}
+			has_railway_connection = {
+				start_province = 6380
+				target_province = 9340
+			}
+			has_railway_connection = {
+				start_province = 6380
+				target_province = 3338
+			}
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = Restore_communications_tt
+			add_to_variable = {
+    			var = weekly_manpower_var
+    			value = 300
+			}
+			add_to_variable = {
+    			var = monthly_population_var
+    			value = 0.2
+			}
+			subtract_from_variable = {
+    			var = production_speed_infrastructure_factor_var
+    			value = 0.5
+			}
+			set_country_flag = Restore_communications_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    Distribute_production = {
+		available = {
+			
+		}
+		cost = 0
+		fire_only_once = yes
+		days_remove = 120
+		complete_effect = {
+			set_variable = {
+				var = num_of_industrial_complex_var
+				value = num_of_factories
+			}
+			multiply_variable = {
+    			var = num_of_industrial_complex_var
+    			value = 0.7
+			}
+			every_owned_state = {
+				limit = {
+					num_of_industrial_complex > 0
+				}
+				random_select_amount = num_of_industrial_complex_var
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				random_select_amount = num_of_industrial_complex_var
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = Distribute_production_tt
+			add_to_variable = {
+    			var = weekly_manpower_var
+    			value = 200
+			}
+			add_to_variable = {
+    			var = monthly_population_var
+    			value = 0.3
+			}
+			subtract_from_variable = {
+    			var = production_speed_industrial_complex_factor_var
+    			value = 0.5
+			}
+			set_country_flag = Distribute_production_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    Creation_of_garrisons = {
+		visible = {
+			NOT = {
+				has_idea = Garrisons
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = garrisons_tt
+				num_divisions_in_states = {
+					count > 60
+					states = { 1001 249 957 219 214 195 808 763 891 839 221 242}
+				}
+			}
+		}
+		cost = 100
+		complete_effect = {
+			add_ideas = Garrisons
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    Restoration_of_Moscow = {
+		available = {
+			
+		}
+		cost = 100
+		days_remove = 90
+		fire_only_once = yes
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			219 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = supply_node
+    				level = 1
+    				instant_build = yes
+					province = 6380
+				}
+				add_core_of = ROOT
+				add_dynamic_modifier = {
+    				modifier = Restoration_of_Moscow_modifier
+				}
+			}
+			set_capital = {state = 219}
+			set_country_flag = Restoration_of_Moscow_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    Fresh_water_purification = {
+		available = {
+			filtration_station > 9
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = Fresh_water_purification_tt
+			add_to_variable = {
+    			var = monthly_population_var
+    			value = 0.4
+				tooltip = 
+			}
+			set_country_flag = Fresh_water_purification_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    Clear_the_red_forests_north = {
+		available = {
+			has_manpower > 999
+			has_equipment = {
+				suit_equipment > 999
+			}
+			has_equipment = {
+				gardener_equipment > 19
+			}
+		}
+		cost = 100
+		days_remove = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = suit_equipment
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = gardener_equipment
+				amount = -20
+			}
+		}
+		remove_effect = {
+			add_stability = 0.1
+			custom_effect_tooltip = Clear_the_red_forests_tt
+			add_to_variable = {
+    			var = production_speed_buildings_factor_var
+    			value = 0.02
+			}
+			add_to_variable = {
+    			var = red_forest_expiditions
+    			value = 1
+			}		
+			IF = {
+				limit = {
+					check_variable = {
+						red_forest_expiditions = 5
+					}
+				}
+				add_to_variable = {
+    				var = weekly_manpower_var
+    				value = 2000
+				}
+				clr_country_flag = integration_block
+				set_country_flag = Clear_the_red_forests_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Clear_the_red_forests_south = {
+		available = {
+			has_manpower > 999
+			has_equipment = {
+				suit_equipment > 999
+			}
+			has_equipment = {
+				gardener_equipment > 19
+			}
+		}
+		cost = 100
+		days_remove = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = suit_equipment
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = gardener_equipment
+				amount = -20
+			}
+		}
+		remove_effect = {
+			add_stability = 0.1
+			custom_effect_tooltip = Clear_the_red_forests_tt
+			add_to_variable = {
+    			var = production_speed_buildings_factor_var
+    			value = 0.02
+			}
+			add_to_variable = {
+    			var = red_forest_expiditions
+    			value = 1
+			}			
+			IF = {
+				limit = {
+					check_variable = {
+						red_forest_expiditions = 5
+					}
+				}
+				add_to_variable = {
+    				var = weekly_manpower_var
+    				value = 2000
+				}
+				clr_country_flag = integration_block
+				set_country_flag = Clear_the_red_forests_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Clear_the_red_forests_west = {
+		available = {
+			has_manpower > 999
+			has_equipment = {
+				suit_equipment > 999
+			}
+			has_equipment = {
+				gardener_equipment > 19
+			}
+		}
+		cost = 100
+		days_remove = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = suit_equipment
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = gardener_equipment
+				amount = -20
+			}
+		}
+		remove_effect = {
+			add_stability = 0.1
+			custom_effect_tooltip = Clear_the_red_forests_tt
+			add_to_variable = {
+    			var = production_speed_buildings_factor_var
+    			value = 0.02
+			}
+			add_to_variable = {
+    			var = red_forest_expiditions
+    			value = 1
+			}			
+			IF = {
+				limit = {
+					check_variable = {
+						red_forest_expiditions = 5
+					}
+				}
+				add_to_variable = {
+    				var = weekly_manpower_var
+    				value = 2000
+				}
+				clr_country_flag = integration_block
+				set_country_flag = Clear_the_red_forests_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Clear_the_red_forests_east = {
+		available = {
+			has_manpower > 999
+			has_equipment = {
+				suit_equipment > 999
+			}
+			has_equipment = {
+				gardener_equipment > 19
+			}
+		}
+		cost = 100
+		days_remove = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = suit_equipment
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = gardener_equipment
+				amount = -20
+			}
+		}
+		remove_effect = {
+			add_stability = 0.1
+			custom_effect_tooltip = Clear_the_red_forests_tt
+			add_to_variable = {
+    			var = production_speed_buildings_factor_var
+    			value = 0.02
+			}
+			add_to_variable = {
+    			var = red_forest_expiditions
+    			value = 1
+			}			
+			IF = {
+				limit = {
+					check_variable = {
+						red_forest_expiditions = 5
+					}
+				}
+				add_to_variable = {
+    				var = weekly_manpower_var
+    				value = 2000
+				}
+				clr_country_flag = integration_block
+				set_country_flag = Clear_the_red_forests_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Clear_the_red_forests_center = {
+		available = {
+			has_manpower > 999
+			has_equipment = {
+				suit_equipment > 999
+			}
+			has_equipment = {
+				gardener_equipment > 19
+			}
+		}
+		cost = 100
+		days_remove = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = suit_equipment
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = gardener_equipment
+				amount = -20
+			}
+		}
+		remove_effect = {
+			add_stability = 0.1
+			custom_effect_tooltip = Clear_the_red_forests_tt
+			add_to_variable = {
+    			var = production_speed_buildings_factor_var
+    			value = 0.02
+			}
+			add_to_variable = {
+    			var = red_forest_expiditions
+    			value = 1
+			}			
+			IF = {
+				limit = {
+					check_variable = {
+						red_forest_expiditions = 5
+					}
+				}
+				add_to_variable = {
+    				var = weekly_manpower_var
+    				value = 2000
+				}
+				clr_country_flag = integration_block
+				set_country_flag = Clear_the_red_forests_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+
+    Operation_Nevsky = {
+		available = {
+			
+		}
+		cost = 100
+		days_remove = 120
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = Operation_Nevsky_tt
+			add_to_variable = {
+    			var = monthly_population_var
+    			value = 0.6
+				tooltip = 
+			}
+			add_to_variable = {
+    			var = production_speed_buildings_factor_var
+    			value = 0.2
+			}
+			set_country_flag = Operation_Nevsky_flag
+			195 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = supply_node
+    				level = 1
+    				instant_build = yes
+					province = 3151
+				}
+				add_manpower = 1000000
+			}
+			1001 = {
+				add_manpower = -100000
+			}
+			1002 = {
+				add_manpower = -100000
+			}
+			398 = {
+				add_manpower = -100000
+			}
+			399 = {
+				add_manpower = -100000
+			}
+			954 = {
+				add_manpower = -100000
+			}
+			996 = {
+				add_manpower = -100000
+			}
+			249 = {
+				add_manpower = -100000
+			}
+			251 = {
+				add_manpower = -100000
+			}
+			833 = {
+				add_manpower = -100000
+			}
+			729 = {
+				add_manpower = -50000
+			}
+			651 = {
+				add_manpower = -50000
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

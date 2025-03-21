@@ -1,0 +1,73 @@
+add_namespace = Unification_event
+add_namespace = Unification_raid_event
+
+
+#Умирающий мир.
+news_event = {
+	id = Unification_event.1
+	title = Unification_event.1.t
+	desc = Unification_event.1.d
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = Unification_event.1.a
+		every_possible_country = {
+			limit = {
+				NOT = {
+					tag = BLS
+				}
+			}
+			add_ideas = Time_goes_by
+			set_country_flag = Unification_campaign_flag
+			set_country_flag = integration_block
+		}
+	}
+}
+
+
+country_event = {
+	id = Unification_raid_event.1
+	title = Unification_raid_event.1.t
+	desc = Unification_raid_event.1.d
+	major = yes
+	is_triggered_only = yes
+	is_hidden = yes
+	option = {
+		name = Unification_raid_event.1.a
+		add_timed_idea = {
+    		idea = Successful_raid
+   			days = 60
+		}
+	}
+}
+
+
+country_event = {
+	id = Unification_raid_event.2
+	title = Unification_raid_event.2.t
+	desc = Unification_raid_event.2.d
+	major = yes
+	is_triggered_only = yes
+	is_hidden = yes
+	option = {
+		name = Unification_raid_event.2.a
+		add_timed_idea = {
+    		idea = Successful_defence
+   			days = 60
+		}
+	}
+}
+
+country_event = {
+	id = Unification_raid_event.3
+	title = Unification_raid_event.3.t
+	desc = Unification_raid_event.3.d
+	major = yes
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = Unification_raid_event.3.a
+	}
+}
+

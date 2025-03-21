@@ -1,5 +1,10 @@
 integration_category = {
 	intergrate_core_territory = {
+		visible = {
+			NOT = {
+				has_country_flag = integration_block
+			}
+		}
 		target_array = occupied_countries
 		target_non_existing = yes
 		target_trigger = {

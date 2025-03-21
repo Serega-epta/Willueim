@@ -13,5 +13,44 @@ ideas = {
 				army_core_defence_factor = 0.10
 			}
 		}
+
+
+		Time_goes_by = {
+			modifier = {
+				ai_focus_aggressive_factor = 0.75
+				offence = 0.15
+				defence = -0.1
+				monthly_population = -0.75
+				mobilization_speed = 0.7
+				army_morale_factor = 0.2
+				required_garrison_factor = -0.9
+			}
+		}
+
+		Garrisons = {
+			modifier = {
+				compliance_gain = 0.2
+			}
+			cancel = {
+    			NOT = {
+					num_divisions_in_states = {
+						count > 50
+						states = {1001 957 219 }
+					}
+				}
+			}
+		}
+
+		Successful_raid = {
+			modifier = {
+				offence = 0.1
+				defence = 0.1
+			}
+		}
+		Successful_defence = {
+			modifier = {
+				defence = 0.15
+			}
+		}
 	}
 }
