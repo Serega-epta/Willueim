@@ -29,7 +29,7 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "ROH_t72_mesh"
-		file = "gfx/models/units/tanks/ROHt95.mesh"
+		file = "gfx/models/units/tanks/ROHt72.mesh"
 
 		animation = { id = "attack"			type = "ROH_t72_attack_animation" }		
 		animation = { id = "idle"			type = "ROH_t72_idle_animation" }
@@ -48,7 +48,11 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "ROH_T14_mesh"
-		file = "gfx/models/units/tanks/ROH_T14.mesh"
+		file = "gfx/models/units/tanks/T14.mesh"
+
+		animation = { id = "attack"			type = "ROH_T14_attack_animation" }		
+		animation = { id = "idle"			type = "ROH_T14_idle_animation" }
+		animation = { id = "move"			type = "ROH_T14_move_animation" }
 
 	}
 
