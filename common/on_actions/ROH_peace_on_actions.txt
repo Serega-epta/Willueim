@@ -215,6 +215,7 @@ on_actions = {
 				limit = {
 					OR = {
 						ROOT = { is_in_faction = no }
+						ROOT = { is_faction_leader = yes }
 						ROOT = {
 							all_allied_country = {
 								if = {

@@ -31,18 +31,36 @@ objectTypes = {
 		name = "ROH_t72_mesh"
 		file = "gfx/models/units/tanks/ROHt72.mesh"
 
-		animation = { id = "attack"			type = "ROH_t72_attack_animation" }		
-		animation = { id = "idle"			type = "ROH_t72_idle_animation" }
-		animation = { id = "move"			type = "ROH_t72_move_animation" }
+		animation = { id = "attack"			type = "geo_t72_attack_animation" }		
+		animation = { id = "idle"			type = "geo_t72_idle_animation" }
+		animation = { id = "move"			type = "geo_t72_move_animation" }
+	}
+
+	pdxmesh = {
+		name = "ROH_T72A_mesh"
+		file = "gfx/models/units/tanks/ROH_T72A.mesh"
+
+		animation = { id = "attack"			type = "geo_t72_attack_animation" }		
+		animation = { id = "idle"			type = "geo_t72_idle_animation" }
+		animation = { id = "move"			type = "geo_t72_move_animation" }
+	}
+
+	pdxmesh = {
+		name = "ROH_T72B_mesh"
+		file = "gfx/models/units/tanks/ROH_T72B.mesh"
+
+		animation = { id = "attack"			type = "geo_t72_attack_animation" }		
+		animation = { id = "idle"			type = "geo_t72_idle_animation" }
+		animation = { id = "move"			type = "geo_t72_move_animation" }
 	}
 
 	pdxmesh = {
 		name = "ROH_T95_mesh"
 		file = "gfx/models/units/tanks/ROH_T95.mesh"
 
-		animation = { id = "attack"			type = "ROH_T95_attack_animation" }		
-		animation = { id = "idle"			type = "ROH_T95_idle_animation" }
-		animation = { id = "move"			type = "ROH_T95_move_animation" }
+		animation = { id = "attack"			type = "geo_t72_attack_animation" }		
+		animation = { id = "idle"			type = "geo_t72_idle_animation" }
+		animation = { id = "move"			type = "geo_t72_move_animation" }
 		
 	}
 
@@ -50,9 +68,9 @@ objectTypes = {
 		name = "ROH_T14_mesh"
 		file = "gfx/models/units/tanks/T14.mesh"
 
-		animation = { id = "attack"			type = "ROH_T14_attack_animation" }		
-		animation = { id = "idle"			type = "ROH_T14_idle_animation" }
-		animation = { id = "move"			type = "ROH_T14_move_animation" }
+		animation = { id = "attack"			type = "geo_t72_attack_animation" }		
+		animation = { id = "idle"			type = "geo_t72_idle_animation" }
+		animation = { id = "move"			type = "geo_t72_move_animation" }
 
 	}
 
@@ -60,9 +78,9 @@ objectTypes = {
 		name = "ROH_T80UD_mesh"
 		file = "gfx/models/units/tanks/T80UD.mesh"
 
-		animation = { id = "attack"			type = "ROH_T80UD_attack_animation" }		
-		animation = { id = "idle"			type = "ROH_T80UD_idle_animation" }
-		animation = { id = "move"			type = "ROH_T80UD_move_animation" }
+		animation = { id = "attack"			type = "geo_t72_attack_animation" }		
+		animation = { id = "idle"			type = "geo_t72_idle_animation" }
+		animation = { id = "move"			type = "geo_t72_move_animation" }
 	}
 	pdxmesh = {
 		name = "ROH_T80BV_mesh"
