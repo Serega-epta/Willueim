@@ -1,0 +1,70 @@
+garrison_generic = {
+	roles = {
+		garrison
+		suppression
+	}
+	upgrade_prio = {
+		base = 1
+		modifier = {
+			#don`t waste much xp
+			has_army_experience > 50
+			factor = 2.5
+		}
+	}
+	light_garrison_template = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				#if we lack manpower - let`s make smaller divisions
+				has_manpower < 15000
+				factor = 2.5
+			}
+			modifier = {
+				#if we lack equipment - let`s make smaller divisions
+				has_equipment = {
+					infantry_equipment < 7000
+				}
+				factor = 2
+			}
+		}
+		reinforce_prio = 0
+		#custom_icon =
+		#division_names_group =
+		target_template = {
+			support = {
+				engineer = 1
+			}
+			regiments = {
+				light_infantry = 4
+			}
+		}
+	}
+	heavy_garrison_template = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				#if we have manpower - let`s make normal divisions
+				has_manpower > 14999
+				factor = 2.5
+			}
+			modifier = {
+				#if we have equipment - let`s make normal divisions
+				has_equipment = {
+					infantry_equipment > 6999
+				}
+				factor = 2
+			}
+		}
+		reinforce_prio = 0
+		#custom_icon =
+		#division_names_group =
+		target_template = {
+			support = {
+				engineer = 1
+			}
+			regiments = {
+				infantry = 4
+			}
+		}
+	}
+}
