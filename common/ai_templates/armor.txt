@@ -32,9 +32,12 @@ armor_generic = {
 		#custom_icon =
 		#division_names_group =
 		target_template = {
-			support = {}
+			support = {
+				rhbz = 1
+			}
 			regiments = {
-				OPF = 4
+				OPF = 8
+				rcbd_troop = 2
 			}
 		}
 	}
@@ -50,9 +53,12 @@ armor_generic = {
 		#custom_icon =
 		#division_names_group =
 		target_template = {
-			support = {}
+			support = {
+				rhbz = 1
+			}
 			regiments = {
-				specialized_OPF = 4
+				specialized_OPF = 8
+				rcbd_troop = 2
 			}
 		}
 	}
@@ -68,9 +74,12 @@ armor_generic = {
 		#custom_icon =
 		#division_names_group =
 		target_template = {
-			support = {}
+			support = {
+				rhbz = 1
+			}
 			regiments = {
-				ai_OPF = 4
+				ai_OPF = 7
+				rcbd_troop = 3
 			}
 		}
 	}
