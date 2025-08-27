@@ -64,17 +64,24 @@ on_actions = {
 						}
 					}
 				}
-				
-				GLS = {
-					white_peace = ROOT
-					annex_country = {
-						target = ROOT
-						transfer_troops = no
+
+				ROOT = {
+					URC = {
+						dismantle_faction = yes
 					}
-					every_state = {
-						remove_core_of = ROOT
+				}
+				FROM = {
+					GLS = {
+						white_peace = ROOT
+						annex_country = {
+							target = ROOT
+							transfer_troops = no
+						}
+						every_state = {
+							remove_core_of = ROOT
+						}
+						clr_country_flag = GLS_negotiation_process_fail
 					}
-					clr_country_flag = GLS_negotiation_process_fail
 				}
 				set_global_flag = skip_default_capitulation
 			}
@@ -121,10 +128,15 @@ on_actions = {
 							long_name = GLS_humanists_party_MANDATE_long
 							name = GLS_humanists_party_MANDATE
 						}
+						set_political_party = {
+							ideology = humanists
+							popularity = 100
+						}
+						
 						set_rule = {
 							can_not_declare_war = yes
 						}
-						country_lock_all_division_template = yes
+						country_lock_all_division_template = yes 
 					}
 				}
 				
@@ -132,10 +144,15 @@ on_actions = {
 					white_peace = ROOT
 					WPK = {
 						transfer_state = 398
+						add_state_core = 398
 						transfer_state = 1003
+						add_state_core = 1003
 						transfer_state = 1000
+						add_state_core = 1000
 						transfer_state = 573
+						add_state_core = 573
 						transfer_state = 729
+						add_state_core = 729
 						set_capital = {
 							state = 398
 							remember_old_capital = no
@@ -143,32 +160,37 @@ on_actions = {
 					}
 					MOT = {
 						transfer_state = 251
+						add_state_core = 251
 						transfer_state = 652
+						add_state_core = 652
 						transfer_state = 582
+						add_state_core = 582
 					}
 					BL1 = {
 						transfer_state = 406
+						add_state_core = 406
 						transfer_state = 994
-					}		
+						add_state_core = 994
+					}
 					URA = {
 						transfer_state = 407
+						add_state_core = 407
 					}	
 					ISK = {
 						transfer_state = 999
+						add_state_core = 999
 					}
 					SI1 = {
 						transfer_state = 993
+						add_state_core = 993
 					}				
 					URC = {
+						transfer_state = 1004
+						add_state_core = 1004
+						dismantle_faction = yes
 						set_autonomy = {
 							target = GLS
 							autonomy_state = autonomy_puppet
-						}
-					}
-					GLS = {
-						set_political_party = {
-							ideology = humanists
-							popularity = 100
 						}
 					}	
 					every_state = {
@@ -197,14 +219,17 @@ on_actions = {
 					white_peace = ROOT
 					SDC = {
 						transfer_state = 262
+						add_state_core = 262
 					}
 					VOZ = {
 						transfer_state = 947
+						add_state_core = 947
 					}
 					every_state = {
 						remove_core_of = ROOT
 					}
 				}
+				set_global_flag = skip_default_capitulation
 			}
 
 			##########################

@@ -10,12 +10,20 @@ NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED_DISTANCE_MULT = 15.0
 ---------------------------
 --SELECTION STATE DEFINES--
 ---------------------------
-NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_R = 0.8 -- 0.3
-NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_G = 0.8 -- 0.5
-NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_B = 0.8
-NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_R = 1.0 -- 0.4
-NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_G = 1.0 -- 0.6
-NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_B = 1.0
+
+NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_R = 255
+NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_G = 255
+NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_B = 255
+NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_R = 1.58
+NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_G = 0.5
+NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_B = 0.5
+
+-- NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_R = 0.8 -- 0.3
+-- NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_G = 0.8 -- 0.5
+-- NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_B = 0.8
+-- NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_R = 1.0 -- 0.4
+-- NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_G = 1.0 -- 0.6
+-- NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_B = 1.0
 
 --NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_R = 0.6
 --NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_STATE_G = 0.3

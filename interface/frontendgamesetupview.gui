@@ -1169,7 +1169,7 @@ guiTypes = {
 		instantTextBoxType={
 			position = {x=30 y=51 }
 			name = "hotjoin_label"
-			font = "3270_24_outline"
+			font = "bender_24"
 			maxWidth = 220
 			maxHeight = 16
 			text = "FE_HOTJOIN_LABEL"
@@ -1187,7 +1187,7 @@ guiTypes = {
 		instantTextBoxType={
 			position = {x=30 y=19 }
 			name = "coop_label"
-			font = "3270_24_outline"
+			font = "bender_24"
 			maxWidth = 300
 			maxHeight = 16
 			text = "FE_COOP_LABEL"
@@ -1228,7 +1228,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "window_title"
 				position = { x = -250 y = -19 }
-				font = "3270_36_outline"
+				font = "bender_30"
 				text = "PICK_RANDOM_COUNTRY_TITLE"
 				maxWidth = 500
 				maxHeight = 36
@@ -1378,7 +1378,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "window_title"
 				position = { x = -262 y = -19 }
-				font = "3270_36_outline"
+				font = "bender_30"
 				text = "CUSTOM_GAME_RULES_TITLE"
 				maxWidth = 524
 				maxHeight = 24
@@ -1470,7 +1470,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "group_name"
 			position = { x = 42 y = 7 }
-			font = "3270_24_outline"
+			font = "bender_24"
 			maxWidth = 524
 			maxHeight = 24
 			format = left
@@ -1778,7 +1778,7 @@ guiTypes = {
 		instantTextBoxType={
 			position = {x = 123 y = 15 } #{x = 9 y = 15 }
 			name = "difficulty_text"
-			font = "3270_24_outline"
+			font = "bender_24"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 348
 			maxHeight = 16
@@ -1897,7 +1897,7 @@ guiTypes = {
 		instantTextBoxType={
 			position = {x = 30 y = 103 }
 			name = "ironman_text"
-			font = "3270_24_outline"
+			font = "bender_24"
 			maxWidth = 370
 			maxHeight = 16
 			text = "FE_IRONMAN"
@@ -1916,7 +1916,7 @@ guiTypes = {
 		instantTextBoxType={
 			position = {x = 30 y = 148 }
 			name = "historical_text"
-			font = "3270_24_outline"
+			font = "bender_24"
 			maxWidth = 370
 			maxHeight = 16
 			text = "FE_HISTORICAL"
@@ -1954,7 +1954,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "label"
 				position = { x = 0 y = 30 }
-				font = "3270_36_outline"
+				font = "bender_30"
 				text = "FE_LOADING_HISTORY"
 				maxWidth = 500
 				maxHeight = 30
@@ -2248,7 +2248,7 @@ guiTypes = {
 				position = { x = -300 y = -100 }
 				spriteType ="GFX_play_button_ready"
 				buttonText = "READY"
-				buttonFont = "3270_36_outline"
+				buttonFont = "bender_30"
 				Orientation = "LOWER_RIGHT"
 				#clicksound = start_game_01 # Don't add this here. I intentionally removed it because otherwise the sound is played when the client clicks on Ready/Unready button. The sound should only play when the host starts the game (or when it's SP) which is done in the code.
 				shortcut = "RETURN"
