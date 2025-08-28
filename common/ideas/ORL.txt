@@ -172,7 +172,242 @@ ideas = {
 				initiative_factor = 0.07
 				army_org_factor = 0.12
 				army_attack_factor = 0.12
+            }
+        }
+		ORL_memory_of_Mauthausen = {
+       		allowed = {
+				always = no
 			}
-		}
-	}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+                experience_loss_factor = -0.15
+				acclimatization_cold_climate_gain_factor = 0.1
+				acclimatization_hot_climate_gain_factor = 0.1
+				supply_factor = -0.15
+
+            }
+        }
+		ORL_stronger_than_steel = {
+       		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+                defence = 0.15
+				army_core_defence_factor = 0.1
+				offence = -0.15
+				army_speed_factor = -0.1
+
+            }
+        }
+		ORL_ritual_fortifications = {
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+                production_speed_buildings_factor = 0.05
+				production_speed_civil_factory_factor = 0.15
+				production_speed_bunker_factor = 0.2
+				production_speed_arms_factory_factor = -0.25
+
+            }
+        }
+		ORL_bloody_assault = {
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+            	experience_loss_factor = 0.2
+				acclimatization_cold_climate_gain_factor = -0.1
+				acclimatization_hot_climate_gain_factor = -0.1
+				supply_factor = 0.15
+            }
+        }
+		ORL_cult_of_speed = {
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+            	defence = -0.15
+				army_core_defence_factor = -0.1
+				offence = 0.15
+				army_speed_factor = 0.1
+
+            }
+        }
+		ORL_holy_atonement_camp = {
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+				custom_modifier_tooltip = holy_atonement_camp_tt
+            }
+        }
+		ORL_iron_discipline = {
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+            	army_org_factor = 0.2
+				army_org_regain = 0.1
+				conscription = 0.005
+				offence = -0.1
+				defence = -0.1
+            }
+        }
+		ORL_resilience_under_fire = {
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+           		initiative_factor = 0.05
+				max_planning = 0.3
+				planning_speed = 0.3
+				army_speed_factor = -0.05
+				acclimatization_cold_climate_gain_factor = -0.05
+				acclimatization_hot_climate_gain_factor = -0.05
+
+            }
+        }
+		ORL_sacred_industrial_complex = {
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+            	production_speed_buildings_factor = 0.05
+				production_speed_civil_factory_factor = -0.15
+				production_speed_bunker_factor = -0.2
+				production_speed_arms_factory_factor = 0.2
+            }
+        }
+
+		ORL_Father_Volodymyr = {
+			picture = GFX_idea_ORL_Father_Volodymyr
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+            	political_power_gain = 0.05
+            }
+        }
+
+		ORL_Mercenary_armies = {
+			picture = GFX_idea_ORL_Mercenary_armies
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+            	conscription = 0.01
+				offensive_war_stability_factor = 0.05
+				monthly_population = 0.01
+				consumer_goods_factor = -0.05
+            }
+        }
+
+		ORL_Retribution = {
+			picture = GFX_idea_ORL_Retribution
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            targeted_modifier = {
+    			tag = IMP
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+    			tag = COR
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+    			tag = BSO
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+    			tag = NOR
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+    			tag = PLR
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+        }
+
+		ORL_Integrated_trains = {
+			picture = GFX_idea_ORL_Integrated_trains
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+            	army_speed_factor = 0.02
+            }
+        }
+
+		ORL_General_Staff_Academy_idea = {
+			picture = GFX_idea_ORL_General_Staff_Academy_idea
+        	allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+            removal_cost = -1
+            modifier = {
+            	research_speed_factor = 0.05
+            }
+        }
+    }
 }

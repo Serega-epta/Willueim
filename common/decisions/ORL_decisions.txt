@@ -114,3 +114,898 @@ volga_war = {
 		}
 	}
 }
+
+ORL_panteon = {
+
+	ORL_build_altar_of_Div = {
+		cost = 15
+		days_remove = 3
+		fire_only_once = yes
+		visible = {
+			has_country_flag = focus_Altar_of_Div_flag
+		}
+		available = {
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			set_country_flag = altar_of_Div_flag
+			clr_country_flag = decision_block_flag
+			
+			add_to_variable = {
+				var = prayers_to_Yar_var
+				value = 50
+			}
+			add_to_variable = {
+				var = prayers_to_Kras_var
+				value = 50
+			}
+		}
+	}
+
+	ORL_offer_prayers_to_Div = {
+		cost = prayers_to_Div_var
+		days_remove = 30
+		available = {	
+			custom_trigger_tooltip = {
+				has_country_flag = altar_of_Div_flag
+				tooltip = altar_of_Div_tt
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = decision_block_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_to_variable = {
+				var = power_of_div_var
+				value = 10
+				tooltip = power_of_div_10_tt
+			}
+		}
+	}
+
+	ORL_honor_prisoners_of_Mauthausen = {
+		cost = 100
+		days_remove = 30
+		visible = {
+		has_country_flag = Think_about_homeland_flag
+			NOT = {
+				has_idea = ORL_memory_of_Mauthausen
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Div_tt
+				has_country_flag = altar_of_Div_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_div_30_tt
+				check_variable = {
+					power_of_div_var > 29
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_memory_of_Mauthausen
+			IF = {
+				limit = {
+					has_idea = ORL_bloody_assault
+				}
+				remove_ideas = ORL_bloody_assault
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_iron_discipline
+				}
+				remove_ideas = ORL_iron_discipline
+			}
+		}
+	}
+
+
+	ORL_arrange_flogging_for_thousands = {
+		cost = 120
+		days_remove = 30
+		visible = {
+			has_country_flag = Demonstrative_flagellation_flag
+			NOT = {
+				has_idea = ORL_stronger_than_steel
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Div_tt
+				has_country_flag = altar_of_Div_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_div_50_tt
+				check_variable = {
+					power_of_div_var > 49
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_yar_no_30_tt
+				check_variable = {
+					power_of_yar_var < 31
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_kras_no_30_tt
+				check_variable = {
+					power_of_kras_var < 31
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_stronger_than_steel
+			IF = {
+				limit = {
+					has_idea = ORL_cult_of_speed
+				}
+				remove_ideas = ORL_cult_of_speed
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_resilience_under_fire
+				}
+				remove_ideas = ORL_resilience_under_fire
+			}
+		}
+	}
+
+	ORL_build_ritual_fortifications = {
+		cost = 150
+		days_remove = 45
+		visible = {
+			has_country_flag = Fortification_lessons_flag
+			NOT = {
+				has_idea = ORL_ritual_fortifications
+			}
+		}
+		available = {	
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Div_tt
+				has_country_flag = altar_of_Div_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_div_70_tt
+				check_variable = {
+					power_of_div_var > 69
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_yar_no_50_tt
+				check_variable = {
+					power_of_yar_var < 51
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_kras_no_50_tt
+				check_variable = {
+					power_of_kras_var < 51
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_ritual_fortifications
+			IF = {
+				limit = {
+					has_idea = ORL_holy_atonement_camp
+				}
+				remove_ideas = ORL_holy_atonement_camp
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_sacred_industrial_complex
+				}
+				remove_ideas = ORL_sacred_industrial_complex
+			}
+		}
+	}
+
+	ORL_build_altar_of_Yar = {
+		cost = 15
+		days_remove = 3
+		fire_only_once = yes
+		visible = {
+			has_country_flag = focus_Altar_of_Yar_flag
+		}
+		available = {	
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			set_country_flag = altar_of_Yar_flag
+			add_to_variable = {
+				var = prayers_to_Div_var
+				value = 50
+			}
+			add_to_variable = {
+				var = prayers_to_Kras_var
+				value = 50
+			}
+		}
+	}
+
+	ORL_offer_prayers_to_Yar = {
+		cost = prayers_to_Yar_var
+		days_remove = 30
+		available = {
+			custom_trigger_tooltip = {
+				has_country_flag = altar_of_Yar_flag
+				tooltip = altar_of_Yar_tt
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = decision_block_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_to_variable = {
+				var = power_of_yar_var
+				value = 10
+				tooltip = power_of_yar_10_tt
+			}
+		}
+	}
+	ORL_dont_spare_soldiers = {
+		cost = 100
+		days_remove = 30
+		visible = {
+			has_country_flag = Spit_on_losses_flag
+			NOT = {
+				has_idea = ORL_bloody_assault
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Yar_tt
+				has_country_flag = altar_of_Yar_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_yar_30_tt
+				check_variable = {
+					power_of_yar_var > 29
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_bloody_assault
+			IF = {
+				limit = {
+					has_idea = ORL_memory_of_Mauthausen
+				}
+				remove_ideas = ORL_memory_of_Mauthausen
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_iron_discipline
+				}
+				remove_ideas = ORL_iron_discipline
+			}
+		}
+	}
+
+	ORL_take_city_to_holiday = {
+		cost = 120
+		days_remove = 30
+		visible = {
+			has_country_flag = Calendar_symbolism_flag
+			NOT = {
+				has_idea = ORL_cult_of_speed
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Yar_tt
+				has_country_flag = altar_of_Yar_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_yar_50_tt
+				check_variable = {
+					power_of_yar_var > 49
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_div_no_30_tt
+				check_variable = {
+					power_of_div_var < 31
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_kras_no_30_tt
+				check_variable = {
+					power_of_kras_var < 31
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_cult_of_speed
+			IF = {
+				limit = {
+					has_idea = ORL_stronger_than_steel
+				}
+				remove_ideas = ORL_stronger_than_steel
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_resilience_under_fire
+				}
+				remove_ideas = ORL_resilience_under_fire
+			}
+		}
+	}
+
+	ORL_build_holy_atonement_camp = {
+		cost = 150
+		days_remove = 45
+		visible = {
+			has_country_flag = Penal_battalions_flag
+			NOT = {
+				has_idea = ORL_holy_atonement_camp
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Yar_tt
+				has_country_flag = altar_of_Yar_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_yar_70_tt
+				check_variable = {
+					power_of_yar_var > 69
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_div_no_50_tt
+				check_variable = {
+					power_of_div_var < 51
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_kras_no_50_tt
+				check_variable = {
+					power_of_kras_var < 51
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_holy_atonement_camp
+			IF = {
+				limit = {
+					has_idea = ORL_ritual_fortifications
+				}
+				remove_ideas = ORL_ritual_fortifications
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_sacred_industrial_complex
+				}
+				remove_ideas = ORL_sacred_industrial_complex
+			}
+		}
+	}
+
+	ORL_drive_convicts_to_slaughter = {
+		cost = 120
+		days_remove = 35
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Yar_tt
+				has_country_flag = altar_of_Yar_flag
+			}
+			has_idea = ORL_holy_atonement_camp
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			capital_scope = {
+                create_unit = {
+                    division = "name = \"Штрафники\" division_template = \"Штрафники\" start_experience_factor = 0.1 start_equipment_factor = 0.1 start_manpower_factor = 1" 
+                    owner = ROOT
+					count = 4
+                }
+            }
+		}
+	}
+
+	ORL_build_altar_of_Kras = {
+		cost = 15
+		days_remove = 3
+		fire_only_once = yes
+		visible = {
+			has_country_flag = focus_Altar_of_Kras_flag
+		}
+		available = {
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			set_country_flag = altar_of_Kras_flag
+			add_to_variable = {
+				var = prayers_to_Yar_var
+				value = 50
+			}
+			add_to_variable = {
+				var = prayers_to_Div_var
+				value = 50
+			}
+		}
+	}
+
+	ORL_offer_prayers_to_Kras = {
+		cost = prayers_to_Kras_var
+		days_remove = 30
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Kras_tt
+				has_country_flag = altar_of_Kras_flag
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = decision_block_flag
+				}
+			}
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			custom_effect_tooltip = power_of_kras_10_tt
+			add_to_variable = {
+				var = power_of_kras_var
+				value = 10
+			}		
+		}
+	}
+
+	ORL_drill_personnel = {
+		cost = 100
+		days_remove = 30
+		visible = {
+			has_country_flag = Discipline_flag
+			NOT = {
+				has_idea = ORL_iron_discipline
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Kras_tt
+				has_country_flag = altar_of_Kras_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_kras_30_tt
+				check_variable = {
+					power_of_kras_var > 29
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_iron_discipline
+			IF = {
+				limit = {
+					has_idea = ORL_memory_of_Mauthausen
+				}
+				remove_ideas = ORL_memory_of_Mauthausen
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_iron_discipline
+				}
+				remove_ideas = ORL_iron_discipline
+			}
+		}
+	}
+
+	ORL_teach_resilience = {
+		cost = 120
+		days_remove = 30
+		visible = {
+			has_country_flag = Steel_endurance_flag
+			NOT = {
+				has_idea = ORL_resilience_under_fire
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Kras_tt
+				has_country_flag = altar_of_Kras_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_kras_50_tt
+				check_variable = {
+					power_of_kras_var > 49
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_div_no_30_tt
+				check_variable = {
+					power_of_div_var < 29
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_yar_no_30_tt
+				check_variable = {
+					power_of_yar_var < 29
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_resilience_under_fire
+			IF = {
+				limit = {
+					has_idea = ORL_cult_of_speed
+				}
+				remove_ideas = ORL_cult_of_speed
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_stronger_than_steel
+				}
+				remove_ideas = ORL_stronger_than_steel
+			}
+		}
+	}
+
+	ORL_build_sacred_industrial_complex = {
+		cost = 150
+		days_remove = 45
+		visible = {
+			has_country_flag = Everyones_duty_flag
+			NOT = {
+				has_idea = ORL_sacred_industrial_complex
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = altar_of_Kras_tt
+				has_country_flag = altar_of_Kras_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = check_power_of_kras_70_tt
+				check_variable = {
+					power_of_kras_var > 69
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_div_no_50_tt
+				check_variable = {
+					power_of_div_var < 49
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = power_of_kras_no_50_tt
+				check_variable = {
+					power_of_yar_var < 49
+				}
+			}
+		}
+		complete_effect = {		
+			set_country_flag = decision_block_flag
+		}
+		remove_effect = {
+			clr_country_flag = decision_block_flag
+			add_ideas = ORL_sacred_industrial_complex
+			IF = {
+				limit = {
+					has_idea = ORL_ritual_fortifications
+				}
+				remove_ideas = ORL_ritual_fortifications
+			}
+			IF = {
+				limit = {
+					has_idea = ORL_holy_atonement_camp
+				}
+				remove_ideas = ORL_holy_atonement_camp
+			}
+		}
+	}
+
+	ORL_stop_worshiping_Div = {
+		cost = 50
+		days_remove = 20
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = decision_block_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = stop_worshiping_flag
+		}
+		remove_effect = {
+			clr_country_flag = stop_worshiping_flag
+			custom_effect_tooltip = remove_power_of_div_10_tt
+			add_to_variable = {
+				var = power_of_div_var
+				value = -10
+			}
+		}
+	}
+
+	ORL_stop_worshiping_Yar = {
+		cost = 50
+		days_remove = 20 
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = decision_block_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = stop_worshiping_flag
+		}
+		remove_effect = {
+			clr_country_flag = stop_worshiping_flag
+			custom_effect_tooltip = remove_power_of_yar_10_tt
+			add_to_variable = {
+				var = power_of_yar_var
+				value = -10
+			}
+		}
+	}
+
+	ORL_stop_worshiping_Kras = {
+		cost = 50
+		days_remove = 20 
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = decision_block_flag
+				}
+			}	
+		}
+		complete_effect = {
+			set_country_flag = stop_worshiping_flag
+		}
+		remove_effect = {
+			clr_country_flag = stop_worshiping_flag
+			custom_effect_tooltip = remove_power_of_kras_10_tt
+			add_to_variable = {
+				var = power_of_kras_var
+				value = -10
+			}
+		}
+	}
+}
+
+ORL_balance_of_power_category = {
+	ORL_Say_a_prayer = {
+		cost = 25
+		days_re_enable = 30
+		visible = {
+			has_country_flag = Messiah_flag
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+    			id = ORL_power_balance
+    			value = -0.05
+    			tooltip_side = Messiah_side
+			}
+		}
+	}
+
+	ORL_Subject_oneself_to_flogging = {
+		cost = 100
+		days_re_enable = 45
+		visible = {
+			has_country_flag = I_do_it_fervently_flag
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_modifier = {
+    			id = ORL_power_balance
+    			modifier = ORL_bop_remove_1_modifier
+			}
+		}
+	}
+
+	ORL_Receive_revelation = {
+		cost = 150
+		days_re_enable = 55
+		visible = {
+			has_country_flag = talking_to_them_directly_flag
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_modifier = {
+    			id = ORL_power_balance
+    			modifier = ORL_bop_remove_1_modifier_1
+			}
+		}
+	}
+
+	ORL_Conduct_public_sermon = {
+		cost = 200
+		days_re_enable = 65
+		visible = {
+			has_country_flag = Kindling_First_Fire_flag
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+    			id = ORL_power_balance
+    			value = -0.15
+    			tooltip_side = Messiah_side
+			}
+			add_power_balance_modifier = {
+    			id = ORL_power_balance
+    			modifier = ORL_bop_remove_1_modifier_2
+			}
+		}
+	}
+
+	ORL_Forget_onerself_in_alcohol = {
+		cost = 25
+		days_re_enable = 30
+		visible = {
+			has_country_flag = Messiah_flag
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+    			id = ORL_power_balance
+    			value = 0.05
+    			tooltip_side = Hypocrite_side
+			}
+		}
+	}
+
+	ORL_Ridicule_Father_Volodimir = {
+		cost = 100
+		days_re_enable = 45
+		visible = {
+			has_country_flag = I_use_it_flag
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+    			id = ORL_power_balance
+    			value = 0.1
+    			tooltip_side = Hypocrite_side
+			}
+		}
+	}
+
+	ORL_Distance_from_fanaticism = {
+		cost = 150
+		days_re_enable = 55
+		visible = {
+			has_country_flag = talking_through_teacher_flag
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_modifier = {
+    			id = ORL_power_balance
+    			modifier = ORL_bop_1_modifier_1
+			}
+		}
+	}
+
+	ORL_Have_grand_drinking_party = {
+		cost = 200
+		days_re_enable = 65
+		visible = {
+			has_country_flag = Shining_but_not_burning_flag
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_power_balance_value = {
+    			id = ORL_power_balance
+    			value = 0.15
+    			tooltip_side = Hypocrite_side
+			}
+			add_power_balance_modifier = {
+    			id = ORL_power_balance
+    			modifier = ORL_bop_1_modifier_2
+			}
+		}
+	}
+}
+
+ORL_Reunion = {
+	ORL_annex_VOF = {
+		cost = 250
+		days_remove = 10
+		visible = {
+			has_subject = VOF
+		}
+		available = {
+			has_stability > 0.5
+			has_war = no
+			VOF = {
+				has_war = no
+			}
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			annex_country = {
+    			target = VOF
+    			transfer_troops = yes
+			}
+		}
+	}
+	ORL_annex_VDD = {
+		cost = 250
+		days_remove = 10
+		visible = {
+			has_subject = VDD
+		}
+		available = {
+			has_stability > 0.5
+			has_war = no
+			VDD = {
+				has_war = no
+			}
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			annex_country = {
+    			target = VDD
+    			transfer_troops = yes
+			}
+		}
+	}
+}

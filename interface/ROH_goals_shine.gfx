@@ -1,4 +1,5 @@
 spriteTypes = {
+
 	SpriteType = {
 		name = "GFX_goal_Take_all_you_can_shine"
 		texturefile = "gfx/interface/goals/take_all_you_can.dds"
@@ -335,6 +336,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_goal_our_factories_shine"
 		texturefile = "gfx/interface/goals/Minor/our_factories.dds"
@@ -1920,17 +1922,44 @@ spriteTypes = {
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
 	}
+
+	SpriteType = {
+		name = "GFX_sokrovisha_pod_zemley_shine"
+		texturefile = "gfx/interface/goals/sokrovisha_pod_zemley.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/sokrovisha_pod_zemley.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/sokrovisha_pod_zemley.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
 	SpriteType = {
 		name = "GFX_ojvit_teretory_shine"
 		texturefile = "gfx/interface/goals/ojvit_teretory.png"
@@ -2435,6 +2464,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_energy_arteries_shine"
 		texturefile = "gfx/interface/goals/ODS/energy_arteries.dds"
@@ -2448,15 +2478,10 @@ spriteTypes = {
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
+
 		animation = {
 			animationmaskfile = "gfx/interface/goals/ODS/energy_arteries.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
@@ -2466,17 +2491,12 @@ spriteTypes = {
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_ODS_Nenavist_shine"
 		texturefile = "gfx/interface/goals/Nenavist.dds"
@@ -4199,8 +4219,9 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	#2 фаза БНГВ
-	SpriteType = {
+
+#2 фаза БНГВ
+SpriteType = {
 		name = "GFX_cleaning_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_cleaning.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -4284,6 +4305,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_sword_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_sword.dds"
@@ -4326,6 +4348,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_nozhi_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_nozhi.dds"
@@ -4368,6 +4391,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_oralo_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_oralo.dds"
@@ -4410,6 +4434,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_hitrost_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_hitrost.dds"
@@ -4452,6 +4477,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_rostki_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_rostki.dds"
@@ -4494,6 +4520,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_plamya_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_plamya.dds"
@@ -4536,6 +4563,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_pryamo_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_pryamo.dds"
@@ -4578,6 +4606,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_slabost_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_slabost.dds"
@@ -4620,6 +4649,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_LWV_Commandment_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_Commandment.dds"
@@ -4662,6 +4692,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_spasenie_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_spasenie.dds"
@@ -4704,6 +4735,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_luboy_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_luboy.dds"
@@ -4746,6 +4778,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_otmshenie_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_otmshenie.dds"
@@ -4788,6 +4821,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_otkrovenie_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_otkrovenie.dds"
@@ -4830,6 +4864,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_vstar_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_vstar.dds"
@@ -4872,6 +4907,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_notexit_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_notexit.dds"
@@ -4914,6 +4950,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_shadow_warrior_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_shadow_warrior.dds"
@@ -4956,6 +4993,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_exkalation_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_exkalation.dds"
@@ -4998,6 +5036,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_fatum_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_fatum.dds"
@@ -5040,6 +5079,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_ochi_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_ochi.dds"
@@ -5082,6 +5122,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_ushi_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_ushi.dds"
@@ -5124,6 +5165,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_hearts_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_hearts.dds"
@@ -5166,6 +5208,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_ruki_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_ruki.dds"
@@ -5208,6 +5251,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_razum_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_razum.dds"
@@ -5250,6 +5294,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_vrag_shine"
 		texturefile = "gfx/interface/goals/LWV/LWV_vrag.dds"
@@ -5292,6 +5337,10 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
+
+	
+
 	SpriteType = {
 		name = "GFX_dog_clanging_shine"
 		texturefile = "gfx/interface/goals/dog_clanging.dds"
@@ -5305,15 +5354,10 @@ spriteTypes = {
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
+
 		animation = {
 			animationmaskfile = "gfx/interface/goals/dog_clanging.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
@@ -5323,17 +5367,12 @@ spriteTypes = {
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_osviatit_land_shine"
 		texturefile = "gfx/interface/goals/osviatit_land.dds"
@@ -16170,6 +16209,9 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
+	
+
 	SpriteType = {
 		name = "GFX_KUH_Our_way_shine"
 		texturefile = "gfx/interface/goals/KUH/Our_way.dds"
@@ -16590,6 +16632,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_brain_burner_shine"
 		texturefile = "gfx/interface/goals/ODS/brain_burner.dds"
@@ -19488,6 +19531,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
 		name = "GFX_STW_big_meeting_shine"
 		texturefile = "gfx/interface/goals/STW/STW_big_meeting.dds"
@@ -20329,48 +20373,6 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_Vizit_shine"
-		texturefile = "gfx/interface/goals/SDC/Vizit.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/SDC/Vizit.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/SDC/Vizit.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0.0
-				y = 0.0
-			}
-			animationtexturescale = {
-				x = 1.0
-				y = 1.0
-			}
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
 		name = "GFX_mobilisation_shine"
 		texturefile = "gfx/interface/goals/SDC/mobilisation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -20394,6 +20396,48 @@ spriteTypes = {
 		}
 		animation = {
 			animationmaskfile = "gfx/interface/goals/SDC/mobilisation.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_Vizit_shine"
+		texturefile = "gfx/interface/goals/SDC/Vizit.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SDC/Vizit.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0.0
+				y = 0.0
+			}
+			animationtexturescale = {
+				x = 1.0
+				y = 1.0
+			}
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SDC/Vizit.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -27373,11 +27417,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_SWR_give_garanties_FREE_shine"
-		texturefile = "gfx/interface/goals/SWR/SWR_give_garanties_FREE.dds"
+		name = "GFX_enmity_with_neighbors_shine"
+		texturefile = "gfx/interface/goals/Minor/enmity_with_neighbors.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SWR/SWR_give_garanties_FREE.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/enmity_with_neighbors.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -27390,7 +27434,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SWR/SWR_give_garanties_FREE.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/enmity_with_neighbors.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -27405,11 +27449,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_SWR_integrate_troops_FREE_shine"
-		texturefile = "gfx/interface/goals/SWR/SWR_integrate_troops_FREE.dds"
+		name = "GFX_step_to_unknown_shine"
+		texturefile = "gfx/interface/goals/Minor/step_to_unknown.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SWR/SWR_integrate_troops_FREE.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/step_to_unknown.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -27422,7 +27466,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SWR/SWR_integrate_troops_FREE.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/step_to_unknown.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -27437,11 +27481,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_SWR_perventive_strike_FREE_shine"
-		texturefile = "gfx/interface/goals/SWR/SWR_perventive_strike_FREE.dds"
+		name = "GFX_throught_storm_eye_shine"
+		texturefile = "gfx/interface/goals/Minor/throught_storm_eye.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SWR/SWR_perventive_strike_FREE.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/throught_storm_eye.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -27454,7 +27498,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SWR/SWR_perventive_strike_FREE.dds"
+			animationmaskfile = "gfx/interface/goals/Minor/throught_storm_eye.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

@@ -38,3 +38,44 @@ volga_war = {
 		base = 5
 	}
 }
+
+ORL_panteon = {
+	icon = saf_anti_colonialist_crusade
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = panteon_flag
+	}
+	allowed = {
+		original_tag = ORL
+	}
+	priority = {
+		base = 5
+	}
+}
+
+ORL_Reunion = {
+	icon = saf_anti_colonialist_crusade
+	visible_when_empty = no
+	visible = {
+	}
+	allowed = {
+		original_tag = ORL
+	}
+	priority = {
+		base = 5
+	}
+}
+
+ORL_balance_of_power_category = {
+	icon = saf_anti_colonialist_crusade
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = Messiah_flag
+	}
+	allowed = {
+		original_tag = ORL
+	}
+	priority = {
+		base = 5
+	}
+}

@@ -1,0 +1,53 @@
+defined_text = {
+    name = ORL_altar_of_Div
+    text = {
+        trigger = {
+            has_country_flag = altar_of_Div_flag
+        }
+        localization_key = has_altar_of_Div
+    }
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = altar_of_Div_flag
+            }
+        }
+        localization_key = no_altar_of_Div
+    }
+}
+
+defined_text = {
+    name = ORL_altar_of_Yar
+    text = {
+        trigger = {
+            has_country_flag = altar_of_Yar_flag
+        }
+        localization_key = has_altar_of_Yar
+    }
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = altar_of_Yar_flag
+            }
+        }
+        localization_key = no_altar_of_Yar
+    }
+}
+
+defined_text = {
+    name = ORL_altar_of_Kras
+    text = {
+        trigger = {
+            has_country_flag = altar_of_Kras_flag
+        }
+        localization_key = has_altar_of_Kras
+    }
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = altar_of_Kras_flag
+            }
+        }
+        localization_key = no_altar_of_Kras
+    }
+}

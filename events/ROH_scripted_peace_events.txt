@@ -90,3 +90,122 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = scripted_peace.7 #ARM напала первой
+	title = scripted_peace.7.t
+	desc = scripted_peace.7.d
+    fire_only_once = yes
+	trigger = {
+		IMP = {
+			has_capitulated = yes
+		}
+		NOT = {
+			ORL = {
+				has_country_flag = war_imp_flag
+			}
+		}
+	}
+    hidden = yes
+
+	option = {
+	name = scripted_peace.7.a
+        ARM = {
+			transfer_state = 898
+			transfer_state = 899
+			transfer_state = 834
+			transfer_state = 880
+			transfer_state = 893
+			transfer_state = 895
+			transfer_state = 224
+			transfer_state = 943
+			transfer_state = 243
+			transfer_state = 902
+			transfer_state = 241
+			transfer_state = 896
+		}
+	}
+}
+
+country_event = {
+	id = scripted_peace.8 #ORL напала первой
+	title = scripted_peace.8.t
+	desc = scripted_peace.8.d
+    fire_only_once = yes
+	trigger = {
+		IMP = {
+			has_capitulated = yes
+		}
+		has_country_flag = orl_war_imp_flag
+	}
+    hidden = yes
+
+	option = {
+	name = scripted_peace.8.a
+        ORL = {
+			transfer_state = 898
+			transfer_state = 899
+			transfer_state = 834
+			transfer_state = 880
+			transfer_state = 893
+			transfer_state = 895
+			transfer_state = 224
+			transfer_state = 943
+			transfer_state = 243
+			transfer_state = 902
+			transfer_state = 241
+			transfer_state = 896
+		}
+	}
+}
+
+country_event = {
+	id = scripted_peace.9 #В союзе с NAR
+	title = scripted_peace.9.t
+	desc = scripted_peace.9.d
+    fire_only_once = yes
+	trigger = {
+		SMK = {
+			has_capitulated = yes
+		}
+		is_in_faction_with = NAR
+	}
+    hidden = yes
+
+	option = {
+	name = scripted_peace.9.a
+        NAR = {
+			transfer_state = 931
+		}
+		ORL = {
+			transfer_state = 863
+			transfer_state = 242
+		}
+	}
+}
+
+country_event = {
+	id = scripted_peace.10 #Без союза с NAR
+	title = scripted_peace.10.t
+	desc = scripted_peace.10.d
+    fire_only_once = yes
+	trigger = {
+		SMK = {
+			has_capitulated = yes
+		}
+		original_tag = ORL
+		NOT = {
+			is_in_faction_with = NAR
+		}
+	}
+    hidden = yes
+
+	option = {
+	name = scripted_peace.10.a
+        ORL = {
+			transfer_state = 863
+			transfer_state = 242
+			transfer_state = 931
+		}
+	}
+}
