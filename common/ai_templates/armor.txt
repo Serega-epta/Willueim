@@ -1,0 +1,86 @@
+armor_generic = {
+	role = armor
+	upgrade_prio = {
+		base = 1
+		modifier = {
+			OR = {
+				has_tech = armor_1
+				has_tech = engine_1
+			}
+			factor = 2
+		}
+		modifier = {
+			OR = {
+				has_tech = armor_3
+				has_tech = engine_3
+			}
+			factor = 2
+		}
+	}
+	mass_OPF_template = {
+		upgrade_prio = {
+			base = 5
+			modifier = {
+				OR = {
+					has_tech = basic_specialized_OPF
+					has_tech = basic_ai_OPF
+				}
+				factor = 0
+			}
+		}
+		reinforce_prio = 2
+		#custom_icon =
+		#division_names_group =
+		target_template = {
+			support = {
+				rhbz = 1
+			}
+			regiments = {
+				OPF = 8
+				rcbd_troop = 2
+			}
+		}
+	}
+	specialized_OPF_template = {
+		upgrade_prio = {
+			base = 0
+			modifier = {
+				has_tech = basic_specialized_OPF
+				add = 5
+			}
+		}
+		reinforce_prio = 2
+		#custom_icon =
+		#division_names_group =
+		target_template = {
+			support = {
+				rhbz = 1
+			}
+			regiments = {
+				specialized_OPF = 8
+				rcbd_troop = 2
+			}
+		}
+	}
+	ai_OPF_template = {
+		upgrade_prio = {
+			base = 0
+			modifier = {
+				has_tech = basic_ai_OPF
+				add = 5
+			}
+		}
+		reinforce_prio = 2
+		#custom_icon =
+		#division_names_group =
+		target_template = {
+			support = {
+				rhbz = 1
+			}
+			regiments = {
+				ai_OPF = 7
+				rcbd_troop = 3
+			}
+		}
+	}
+}

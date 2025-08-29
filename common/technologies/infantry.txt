@@ -1,4 +1,5 @@
 technologies = {
+	@low_supply_ratio = 0.5
 	@2010 = -1
 	@2020 = 5
 	@2025 = 10
@@ -44,10 +45,20 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 50 #MUSTHAVE!!!
+			modifier = {
+				date > 2023.1.1
+				factor = 2
+			}
+			modifier = {
+				#WTF? Dude, get some weapons for frontline
+				date > 2024
+				factor = 10
+			}
 		}
 	}
 	infantry_weapons1 = {
@@ -68,10 +79,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_weapons
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2023.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2024.1.1
+				factor = 2
+			}
 		}
 	}
 	infantry_weapons2 = {
@@ -96,10 +116,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_weapons
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2026.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2027.1.1
+				factor = 2
+			}
 		}
 	}
 	extended_store = {
@@ -116,10 +145,28 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				#if low on supply
+				set_temp_variable = {
+					sup_ratio = num_of_supply_nodes
+				}
+				divide_temp_variable = {
+					sup_ratio = controlled_states^num
+				}
+				check_variable = {
+					sup_ratio < @low_supply_ratio
+				}
+				factor = 2
+			}
+			modifier = {
+				date > 2027.1.1
+				factor = 2
+			}
 		}
 	}
 	infantry_weapons3 = {
@@ -144,10 +191,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_weapons
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2031.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2032.1.1
+				factor = 2
+			}
 		}
 	}
 	vibronite_muzzle = {
@@ -164,10 +220,32 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				#if low on supply
+				set_temp_variable = {
+					sup_ratio = num_of_supply_nodes
+				}
+				divide_temp_variable = {
+					sup_ratio = controlled_states^num
+				}
+				check_variable = {
+					sup_ratio < @low_supply_ratio
+				}
+				factor = 2
+			}
+			modifier = {
+				date > 2031.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2032.1.1
+				factor = 2
+			}
 		}
 	}
 	infantry_weapons4 = {
@@ -192,10 +270,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_weapons
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2036.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2037.1.1
+				factor = 2
+			}
 		}
 	}
 	projectile_acceleration_system = {
@@ -214,10 +301,32 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 2
+			modifier = {
+				#if low on supply
+				set_temp_variable = {
+					sup_ratio = num_of_supply_nodes
+				}
+				divide_temp_variable = {
+					sup_ratio = controlled_states^num
+				}
+				check_variable = {
+					sup_ratio < @low_supply_ratio
+				}
+				factor = 2
+			}
+			modifier = {
+				date > 2037.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2038.1.1
+				factor = 2
+			}
 		}
 	}
 	infantry_weapons5 = {
@@ -246,10 +355,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_weapons
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2041.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2042.1.1
+				factor = 2
+			}
 		}
 	}
 	ebrihalc_forend = {
@@ -263,10 +381,32 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				#if low on supply
+				set_temp_variable = {
+					sup_ratio = num_of_supply_nodes
+				}
+				divide_temp_variable = {
+					sup_ratio = controlled_states^num
+				}
+				check_variable = {
+					sup_ratio < @low_supply_ratio
+				}
+				factor = 2
+			}
+			modifier = {
+				date > 2041.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2042.1.1
+				factor = 2
+			}
 		}
 	}
 	nanogel_stores = {
@@ -284,10 +424,32 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				#if low on supply
+				set_temp_variable = {
+					sup_ratio = num_of_supply_nodes
+				}
+				divide_temp_variable = {
+					sup_ratio = controlled_states^num
+				}
+				check_variable = {
+					sup_ratio < @low_supply_ratio
+				}
+				factor = 2
+			}
+			modifier = {
+				date > 2041.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2042.1.1
+				factor = 2
+			}
 		}
 	}
 	infantry_weapons6 = {
@@ -316,10 +478,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_weapons
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2046.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2047.1.1
+				factor = 2
+			}
 		}
 	}
 	curbing_the_Tulip_anomaly = {
@@ -336,10 +507,19 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2046.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2047.1.1
+				factor = 2
+			}
 		}
 	}
 	plasma_battery = {
@@ -356,10 +536,32 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				#if low on supply
+				set_temp_variable = {
+					sup_ratio = num_of_supply_nodes
+				}
+				divide_temp_variable = {
+					sup_ratio = controlled_states^num
+				}
+				check_variable = {
+					sup_ratio < @low_supply_ratio
+				}
+				factor = 2
+			}
+			modifier = {
+				date > 2046.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2047.1.1
+				factor = 2
+			}
 		}
 	}
 	infantry_weapons7 = {
@@ -384,10 +586,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_weapons
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2051.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2052.1.1
+				factor = 2
+			}
 		}
 	}
 	plasma_quantization = {
@@ -404,10 +615,32 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				#if low on supply
+				set_temp_variable = {
+					sup_ratio = num_of_supply_nodes
+				}
+				divide_temp_variable = {
+					sup_ratio = controlled_states^num
+				}
+				check_variable = {
+					sup_ratio < @low_supply_ratio
+				}
+				factor = 2
+			}
+			modifier = {
+				date > 2051.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2052.1.1
+				factor = 2
+			}
 		}
 	}
 	MSWU_Conquest = {
@@ -425,10 +658,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			infantry_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	civilian_clothing = {
@@ -449,10 +683,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_clothing
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2023.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2024.1.1
+				factor = 2
+			}
 		}
 	}
 	old_world_uniforms = {
@@ -473,10 +716,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_clothing
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 50
+			modifier = {
+				date > 2023.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2024.1.1
+				factor = 2
+			}
 		}
 	}
 	local_uniform = {
@@ -501,10 +753,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_clothing
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2026.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2027.1.1
+				factor = 2
+			}
 		}
 	}
 	anti_radin_cloaks = {
@@ -527,10 +788,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_clothing
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	modern_equipment = {
@@ -555,10 +817,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_clothing
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2031.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2032.1.1
+				factor = 2
+			}
 		}
 	}
 	life_support_systems = {
@@ -581,10 +852,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_clothing
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	modular_equipment = {
@@ -609,10 +881,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_clothing
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2036.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2037.1.1
+				factor = 2
+			}
 		}
 	}
 	integrated_communication_systems = {
@@ -635,10 +916,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_clothing
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	heavy_equipment = {
@@ -667,10 +949,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_clothing
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2041.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2042.1.1
+				factor = 2
+			}
 		}
 	}
 	psi_protectors = {
@@ -697,10 +988,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_clothing
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	chimerite_plates = {
@@ -727,10 +1019,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_clothing
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	universal_equipment = {
@@ -759,10 +1052,19 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_clothing
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				date > 2046.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2047.1.1
+				factor = 2
+			}
 		}
 	}
 	neural_stimulators = {
@@ -788,10 +1090,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_clothing
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	tafite_injectors = {
@@ -817,10 +1120,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_clothing
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	sacredness_class_outfit = {
@@ -845,6 +1149,7 @@ technologies = {
 			}
 		}
 		categories = {
+			infantry_tech
 			infantry_clothing
 		}
 		ai_will_do = {
@@ -874,10 +1179,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_weapons
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	fear_suppressors = {
@@ -903,10 +1209,11 @@ technologies = {
 			}
 		}
 		categories = {
-			infantry_clothing
+			infantry_tech
+			clothing_improvements
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10 #just nice bonuses
 		}
 	}
 	#Ветка грузовиков (самая нижняя)
@@ -931,8 +1238,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			infantry_tech
+			motorized_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -960,8 +1266,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			infantry_tech
+			motorized_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -985,8 +1290,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			infantry_tech
+			motorized_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -1010,8 +1314,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			infantry_tech
+			motorized_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -1031,8 +1334,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			infantry_tech
+			motorized_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -1059,9 +1361,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			armor
-			cat_armored_cars
+			mechanized_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -1085,9 +1385,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			armor
-			cat_armored_cars
+			mechanized_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -1111,9 +1409,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			armor
-			cat_armored_cars
+			mechanized_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -1133,9 +1429,7 @@ technologies = {
 			}
 		}
 		categories = {
-			motorized_equipment
-			armor
-			cat_armored_cars
+			mechanized_tech
 		}
 		ai_will_do = {
 			factor = 1

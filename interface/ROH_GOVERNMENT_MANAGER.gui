@@ -10,49 +10,14 @@
 #y is also constant - next layer is 200px lower
 guiTypes = {
 	containerWindowType = {
-		name = "government_manager_handler"
-		position = {
-			x = 0
-			y = 383
-		}
-		size = {
-			width = 550
-			height = 55
-		}
-		buttonType = {
-			name = "government_manager_toggle"
-			position = {
-				x = 285
-				y = 9
-			}
-			quadTextureSprite = "GFX_button_221x34"
-			buttonFont = "bender_20"
-			format = center
-			text = "government_manager_toggle_text"
-			clicksound = click_close
-		}
-		buttonType = {
-			name = "laws_toggle"
-			position = {
-				x = 40
-				y = 9
-			}
-			quadTextureSprite = "GFX_button_221x34"
-			buttonFont = "bender_20"
-			format = center
-			text = "laws_toggle_text"
-			clicksound = click_close
-		}
-	}
-	containerWindowType = {
 		name = "government_manager_container"
 		position = {
-			x = 0
-			y = 424
+			x = 10
+			y = 584
 		}
 		size = {
-			width = 550
-			height = 581
+			width = 518
+			height = 407
 		}
 		background = {
 			name = "background"
@@ -76,8 +41,8 @@ guiTypes = {
 			name = "choice_advise"
 			orientation = LOWER_LEFT
 			position = {
-				x = 25
-				y = -69
+				x = 9
+				y = -59
 			}
 			font = "bender_20"
 			text = "choice_advise_text"
@@ -89,7 +54,7 @@ guiTypes = {
 			name = "l44ya1"
 			position = {
 				x = 155
-				y = 120
+				y = 90
 			}
 			quadTextureSprite = "GFX_vzaimoiskuchenieX"
 		}
@@ -97,7 +62,7 @@ guiTypes = {
 			name = "samoylov_system_toggle_container"
 			position = {
 				x = 125
-				y = 80
+				y = 70
 			}
 			buttonType = {
 				name = "BUTTON_Open_okno_civil_system"
@@ -123,7 +88,7 @@ guiTypes = {
 			name = "menshikov_system_toggle_container"
 			position = {
 				x = 325
-				y = 80
+				y = 70
 			}
 			buttonType = {
 				name = "BUTTON_Open_okno_military_system"
@@ -149,7 +114,7 @@ guiTypes = {
 			name = "naumov_system_toggle_container"
 			position = {
 				x = 225
-				y = 253
+				y = 243
 			}
 			buttonType = {
 				name = "BUTTON_Open_okno_ststegos_system"

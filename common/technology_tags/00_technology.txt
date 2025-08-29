@@ -3,117 +3,77 @@
 
 technology_categories = {
 	#Категории RoH
+	#infantry folder
+	infantry_tech
+	infantry_improvements
 	infantry_weapons
 	infantry_clothing
-	#Ванильные категории
-	light_air
-	medium_air
-	heavy_air
-	armor
-	cat_light_armor
-	cat_medium_armor
-	cat_heavy_armor
-	artillery
-	cat_anti_tank
-	cat_anti_air
-	naval_air
-	infantry_weapons
-	motorized_equipment
-	cat_mechanized_equipment
-	naval_equipment
-	rocketry
-	nuclear
-	industry
+	clothing_improvements
+
+	motorized_tech
+	mechanized_tech
+	#support folder
+	support_tech
+	engineers_tech
+	field_hospital
+	gamekeepers_tech
+	ghounds_tech
+	pulse_jammers_tech
+	recon_tech
+	rhbz_tech
+	standart_bearer_tech
+
+	train_tech
+	#armor tech
+	armor_tech
+	mass_opf_tech
+	specialized_opf_tech
+	ai_opf_tech
+
+	armor_improvements
+	armor_engines
+	armor_armour
+	#atrillery folder
+	atrillery_tech
+	atrillery_rocket_tech
+	atrillery_aa_tech
+	atrillery_common_tech
+	#air folder
+	mass_fighter
+	mass_bomber
+	mass_heli
+
+	specialized_fighter
+	specialized_bomber
+	specialized_heli
+
+	bpla_tech
+	kamikadze_tech
+	#engineer folder
 	electronics
+
+	nuclear
+	peasefull_atom
+	armed_atom
+	#industry
+	industry_tech
+	production_lines
+	industry_organisation
+
+	resources_tech
+	synth_resources
+	common_resources
+	#land doc
 	land_doctrine
+	cat_mobile_warfare
+	cat_mass_assault
+	cat_superior_firepower
+	cat_grand_battle_plan
+	#air doc
 	air_doctrine
-	naval_doctrine
 	strategic_destruction_tree
 	battlefield_support_tree
 	operational_integrity_tree
-	jet_technology
-	trade_interdiction_tree
-	convoy_defense_tree
-	light_fighter
-	cat_heavy_fighter
-	tactical_bomber
-	cat_strategic_bomber
-	naval_bomber
-	cas_bomber
-	ship_modules_tech
-	dd_tech
-	cl_tech
-	ca_tech
-	cv_tech
-	bc_tech
-	bb_tech
-	shbb_tech
-	ss_tech
-	tp_tech
-	synth_resources
-	fleet_in_being_tree
-	encryption_tech
-	decryption_tech
-	computing_tech
-	radar_tech
-	infantry_tech
-	marine_tech
-	construction_tech
-	excavation_tech
-	submarine_doctrine
-	air_equipment
-	cat_mobile_warfare
-	cat_superior_firepower
-	cat_grand_battle_plan
-	cat_mass_assault
-	cat_base_strike
-	cat_trade_interdiction
-	cat_fleet_in_being
-	cat_strategic_destruction
-	cat_battlefield_support
-	cat_operational_integrity
-	night_vision
-	base_strike_main
-	mot_rockets
-	support_tech
-	para_tech
-	engineers_tech
-	recon_tech
-	mountaineers_tech
-	military_police_tech
-	hospital_tech
-	logistics_tech
-	signal_company_tech
-	maintenance_company_tech
-	naval_mines
-	concentrated_industry_category
-	dispersed_industry_category
-	asw_tech
-	naval_minesweeping
-	naval_minelaying
-	cat_scout_plane
-	train_tech
-	cat_production
-	cat_synth_rubber
-	cat_synth_oil
-	cat_armored_cars
-	cat_special_forces_generic
-	cat_torpedoes
-	cat_ship_light_battery
-	cat_ship_medium_battery
-	cat_ship_heavy_battery
-	air_equipment
-	plane_modules_tech
-	cat_air_guns
-	cat_air_engine
-	cat_air_bombs
-	special_forces_doctrine
-	cat_maritime_patrol
-	cat_mountaineers_doctrine
-	cat_marines_doctrine
-	cat_paratroopers_doctrine
-	radiolocationborba
-	rhbz
 }
 
 technology_folders = {
