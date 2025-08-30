@@ -3,6 +3,8 @@
 mandarin = {
 	specialization = specialization_land
 
+	icon = GFX_project_gardener_equipment
+
 	project_tags = sp_tag_purification
 
 	ai_will_do = {
@@ -15,7 +17,13 @@ mandarin = {
 	}
 
 	breakthrough_cost = {
-		specialization_land = 1
+		specialization_land = 0
+	}
+
+	resource_cost = {
+		resources = { 
+			rubber = 2
+		}
 	}
 	
 	prototype_time = sp_time.prototype.short
@@ -24,7 +32,7 @@ mandarin = {
 	
 	project_output = {
 		enable_equipments = {
-			suit_equipment_0
+			suit_equipment_1
 		}
 	}
 
@@ -60,7 +68,13 @@ gardener = {
 	}
 
 	breakthrough_cost = {
-		specialization_land = 1
+		specialization_land = 0
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 20
+		}
 	}
 	
 	prototype_time = sp_time.prototype.short
@@ -69,7 +83,7 @@ gardener = {
 	
 	project_output = {
 		enable_equipments = {
-			gardener_equipment_0
+			gardener_equipment_1
 		}
 	}
 
@@ -106,6 +120,12 @@ filtration = {
 
 	breakthrough_cost = {
 		specialization_land = 1
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 20
+		}
 	}
 	
 	prototype_time = sp_time.prototype.short

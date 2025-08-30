@@ -22,7 +22,6 @@ Unification_campaign = {
 						tag = WEC
 						tag = SAC
 						tag = SOC
-
 					}
 				}
 			}
@@ -96,6 +95,7 @@ Unification_campaign = {
 		target_array = neighbors_owned
 		target_trigger = {
 			FROM = {
+				is_ai = yes
 				AND = {
 					is_neighbor_of = ROOT
 					has_war_with = ROOT
@@ -106,6 +106,14 @@ Unification_campaign = {
 					NOT = {
 						tag = SIL
 						tag = LWV
+            			tag = SI1
+            			tag = LPC
+            			tag = WTR
+						tag = WEC
+						tag = SAC
+						tag = SOC
+            			tag = NMG
+            			tag = ANR
 					}
 				}
 			}
@@ -123,8 +131,19 @@ Unification_campaign = {
     						target = FROM
     						transfer_troops = yes
 						}
+						ROOT = {
+							country_event = {
+								id = Force_peace_event.1
+							}
+						}
 					}
 					30 = {
+						log = "[GetDateText]: [From.GetName]: Decision Start_campaign"
+						ROOT = {
+							country_event = {
+								id = Force_peace_event.2
+							}
+						}
 					}
 				}
 			}
@@ -165,8 +184,14 @@ Unification_campaign = {
 			}
 		}
 		cost = 50
-		complete_effect = {
-			
+		days_remove = 15
+		complete_effect = {	
+			log = "[GetDateText]: [Root.GetName]: Decision Start_campaign"
+			FROM = {
+				country_event = {
+					id = Unification_start_campaign_event.1
+				}
+			}
 		}
 		remove_effect = {
 			declare_war_on = {
@@ -188,12 +213,21 @@ Unification_campaign = {
 		target_array = neighbors_owned
 		target_trigger = {
 			FROM = {
+				is_ai = yes
 				AND = {
 					is_neighbor_of = ROOT
 					has_government = ROOT
 					NOT = {
 						tag = SIL
-						tag = BLS
+						tag = LWV
+            			tag = SI1
+            			tag = LPC
+            			tag = WTR
+						tag = WEC
+						tag = SAC
+						tag = SOC
+            			tag = NMG
+            			tag = ANR
 					}
 				}
 			}
@@ -201,11 +235,20 @@ Unification_campaign = {
 		cost = 50
 		fire_only_once = yes
 		complete_effect = {
-			random = {
-				chance = 90
-				annex_country = {
-    				target = FROM
-    				transfer_troops = yes
+			random_list = {
+				90 = {
+					annex_country = {
+    					target = FROM
+    					transfer_troops = yes
+					}
+					country_event = {
+						id = Force_peace_event.1
+					}
+				}
+				10 = {
+					country_event = {
+						id = Force_peace_event.2
+					}
 				}
 			}
 		}

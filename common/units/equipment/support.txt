@@ -25,4 +25,64 @@ equipments = {
 		archetype = support_equipment
 		priority = 20
 	}
+
+	gardener_equipment = {
+		year = 2010
+		is_archetype = yes
+		picture = archetype_support_equipment
+		is_buildable = no
+		type = {
+			infantry
+			motorized
+			support
+		}
+		group_by = archetype
+		interface_category = interface_category_land
+		reliability = 0.8
+		#Space taken in convoy
+		lend_lease_cost = 1
+		build_cost_ic = 2
+		resources = {
+		}
+	}
+	gardener_equipment_1 = {
+		year = 2000
+		archetype = gardener_equipment
+		priority = 05
+		resources = {
+			steel = 24
+			chromium = 1
+		}
+	}
+
+	suit_equipment = {
+		year = 2010
+		is_archetype = yes
+		picture = archetype_support_equipment
+		is_buildable = no
+		type = {
+			infantry
+			motorized
+			support
+		}
+		group_by = archetype
+		interface_category = interface_category_land
+		reliability = 0.8
+		#Space taken in convoy
+		lend_lease_cost = 1
+		build_cost_ic = 2
+		resources = {
+		}
+	}
+	suit_equipment_1 = {
+		year = 2010
+		archetype = suit_equipment
+		priority = 20
+		resources = {
+			steel = 2
+		}
+	}
+
+
+	
 }

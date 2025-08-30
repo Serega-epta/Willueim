@@ -1,5 +1,7 @@
 add_namespace = Unification_event
 add_namespace = Unification_raid_event
+add_namespace = Unification_start_campaign_event
+add_namespace = Force_peace_event
 
 
 #Умирающий мир.
@@ -16,6 +18,14 @@ news_event = {
 			limit = {
 				NOT = {
 					tag = BLS
+					tag = SOC
+					tag = SAC
+					tag = WEC
+					tag = BLT
+					tag = WTR
+					tag = SIL
+					tag = KRT
+					tag = DIS
 				}
 			}
 			add_ideas = Time_goes_by
@@ -65,6 +75,38 @@ country_event = {
 	hidden = yes
 	option = {
 		name = Unification_raid_event.3.a
+	}
+}
+
+country_event = {
+	id = Unification_start_campaign_event.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Unification_start_campaign_event.1" }
+	title = Unification_start_campaign_event.1.t
+	desc = Unification_start_campaign_event.1.d
+	is_triggered_only = yes
+	option = {
+		name = Unification_start_campaign_event.1.a
+	}
+}
+
+country_event = {
+	id = Force_peace_event.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Force_peace_event.1" }
+	title = Force_peace_event.1.t
+	desc = Force_peace_event.1.d
+	is_triggered_only = yes
+	option = {
+		name = Force_peace_event.1.a
+	}
+}
+
+country_event = {
+	id = Force_peace_event.2
+	title = Force_peace_event.2.t
+	desc = Force_peace_event.2.d
+	is_triggered_only = yes
+	option = {
+		name = Force_peace_event.2.a
 	}
 }
 

@@ -1505,9 +1505,13 @@ AGE_help_from_allies = {
 				type = infantry_odejda_0
 				amount = 150
 			}
+			set_country_flag = help_from_blz_1_flag
 		}
 	}
 	AGE_help_from_blz_2 = {
+		visible = {
+			has_country_flag = help_from_blz_1_flag
+		}
 		available = {
 			has_completed_focus = AGE_help_Zhukovsky
 		}
@@ -1525,9 +1529,14 @@ AGE_help_from_allies = {
 				uses = 1
 				category = hospital_tech
 			}
+			clr_country_flag = help_from_blz_1_flag
+			set_country_flag = help_from_blz_2_flag
 		}
 	}
 	AGE_help_from_blz_3 = {
+		visible = {
+			has_country_flag = help_from_blz_2_flag
+		}
 		available = {
 			has_completed_focus = AGE_our_haters
 		}
@@ -1545,6 +1554,7 @@ AGE_help_from_allies = {
 				uses = 1
 				category = hospital_tech
 			}
+			clr_country_flag = help_from_blz_2_flag
 		}
 	}
 	AGE_help_from_har_1 = {
@@ -1564,9 +1574,13 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 150
 			}
+			set_country_flag = help_from_har_1_flag
 		}
 	}
 	AGE_help_from_har_2 = {
+		visible = {
+			has_country_flag = help_from_har_1_flag
+		}
 		available = {
 			has_completed_focus = AGE_help_Paramonov
 		}
@@ -1583,9 +1597,14 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 180
 			}
+			clr_country_flag = help_from_har_1_flag
+			set_country_flag = help_from_har_2_flag
 		}
 	}
 	AGE_help_from_har_3 = {
+		visible = {
+			has_country_flag = help_from_har_2_flag
+		}
 		available = {
 			has_completed_focus = AGE_contain_nature
 		}
@@ -1602,6 +1621,7 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 210
 			}
+			clr_country_flag = help_from_har_2_flag
 		}
 	}
 	AGE_help_from_chu_1 = {
@@ -1624,9 +1644,13 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 50
 			}
+			set_country_flag = help_from_chu_1_flag
 		}
 	}
 	AGE_help_from_chu_2 = {
+		visible = {
+			has_country_flag = help_from_chu_1_flag
+		}
 		available = {
 			has_completed_focus = AGE_help_Shazer
 		}
@@ -1651,9 +1675,14 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 50
 			}
+			clr_country_flag = help_from_chu_1_flag
+			set_country_flag = help_from_chu_2_flag
 		}
 	}
 	AGE_help_from_chu_3 = {
+		visible = {
+			has_country_flag = help_from_chu_2_flag
+		}
 		available = {
 			has_completed_focus = AGE_calm_the_despairing
 		}
@@ -1678,6 +1707,7 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 50
 			}
+			clr_country_flag = help_from_chu_2_flag
 		}
 	}
 }
