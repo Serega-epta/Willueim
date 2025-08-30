@@ -139,7 +139,6 @@ sub_units = {
 			category_all_infantry
 			category_army
 		}
-		maximum_speed = 1
 		max_organisation = 60
 		# this is what moves us and sets speed
 		transport = motorized_equipment
@@ -206,13 +205,13 @@ sub_units = {
 			infantry_odejda
 		}
 		# this is what moves us and sets speed
-		transport = mechanized_equipment
+		transport = infantry_fighting_vehicle_equipment
 		need = {
-			infantry_fighting_vehicle_equipment = 2
-			infantry_equipment = 20
-			infantry_odejda = 30
+			infantry_fighting_vehicle_equipment = 6
+			infantry_equipment = 60
+			infantry_odejda = 90
 		}
-		manpower = 30
+		manpower = 90
 		max_organisation = 70
 		combat_width = 2
 		default_morale = 0.3

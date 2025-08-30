@@ -1,6 +1,17 @@
 ideas = {
 	hidden_ideas = {
 		#menshikov system
+		menshikov_system_idea = {
+			traits = {
+				menshikov_system_trait
+			}
+			allowed = {
+				always = no
+			}
+			modifier = {
+				reform_point_income = 1
+			}
+		}
 		materials_science_idea = {
 			traits = {
 				menshikov_system_trait
@@ -266,6 +277,17 @@ ideas = {
 			}
 		}
 		#smoilov system
+		smoilov_system_idea = {
+			traits = {
+				smoilov_system_trait
+			}
+			allowed = {
+				always = no
+			}
+			modifier = {
+				reform_point_income = 1
+			}
+		}
 		foundation_of_the_past_idea = {
 			traits = {
 				smoilov_system_trait
@@ -308,6 +330,20 @@ ideas = {
 			}
 			modifier = {
 				production_speed_bunker_factor = 0.15
+			}
+			on_add = {
+				add_ai_strategy = {
+					type = building_target
+					id = bunker
+					value = 50
+				}
+			}
+			on_remove = {
+				add_ai_strategy = {
+					type = building_target
+					id = bunker
+					value = -50
+				}
 			}
 		}
 		rural_militia_idea = {
@@ -500,6 +536,9 @@ ideas = {
 			}
 			allowed = {
 				always = no
+			}
+			on_add = {
+				add_political_power = 150
 			}
 		}
 		existence_essence_idea = {

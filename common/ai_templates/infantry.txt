@@ -1,0 +1,85 @@
+infantry_generic = {
+	role = infantry
+	upgrade_prio = {
+		base = 2
+		modifier = {
+			OR = {
+				has_tech = infantry_weapons2
+				has_tech = local_uniform
+			}
+			factor = 2
+		}
+		modifier = {
+			OR = {
+				has_tech = infantry_weapons4
+				has_tech = modular_equipment
+			}
+			factor = 2
+		}
+		modifier = {
+			OR = {
+				has_tech = infantry_weapons6
+				has_tech = universal_equipment
+			}
+			factor = 2
+		}
+	}
+	light_infantry_template = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				#if we lack manpower - let`s make smaller divisions
+				#but enough to cover fronts
+				has_manpower < 10000
+				factor = 2.5
+			}
+			modifier = {
+				#if we lack equipment - let`s make smaller divisions
+				#but enough to cover fronts
+				has_equipment = {
+					infantry_equipment < 5000
+				}
+				factor = 2
+			}
+		}
+		#custom_icon =
+		#division_names_group =
+		target_template = {
+			support = {
+				engineer = 1
+				gamekeepers = 1
+			}
+			regiments = {
+				light_infantry = 7
+			}
+		}
+	}
+	heavy_infantry_template = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				#if we have manpower - let`s make normal divisions
+				has_manpower > 9999
+				factor = 2.5
+			}
+			modifier = {
+				#if we have equipment - let`s make normal divisions
+				has_equipment = {
+					infantry_equipment > 4999
+				}
+				factor = 2
+			}
+		}
+		#custom_icon =
+		#division_names_group =
+		target_template = {
+			support = {
+				engineer = 1
+				mlrs_art_sup = 1
+			}
+			regiments = {
+				infantry = 9
+			}
+		}
+	}
+}

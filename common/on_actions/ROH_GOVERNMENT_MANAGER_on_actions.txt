@@ -4,6 +4,40 @@ on_actions = {
 			add_to_variable = {
 				reform_points = modifier@reform_point_income
 			}
+			if = {
+				limit = {
+					is_ai = no
+				}
+				#skip players
+			}
+			else_if = {
+				#smoilov system
+				limit = {
+					OR = {
+						has_government = statesmen
+						has_government = militarists
+					}
+				}
+				call_smoilov_system_ai = yes
+			}
+			else_if = {
+				#naumov system
+				limit = {
+					has_country_leader_ideology = conception_subideology
+				}
+				call_naumov_system_ai = yes
+			}
+			else_if = {
+				#menshikov system
+				limit = {
+					OR = {
+						has_government = free_people
+						has_government = humanists
+					}
+				}
+				call_menshikov_system_ai = yes
+			}
+			#others are undefined :(
 		}
 	}
 }

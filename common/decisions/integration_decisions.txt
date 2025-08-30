@@ -39,5 +39,14 @@ integration_category = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 1000
+				}
+				factor = 0
+			}
+		}
 	}
 }

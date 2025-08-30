@@ -19,6 +19,13 @@ ideas = {
 				land_doctrine_cost_factor = -0.05
 			}
 			cancel_if_invalid = yes
+			ai_will_do = {
+				base = 10
+				modifier = {
+					has_manpower < 10000
+					factor = 0
+				}
+			}
 		}
 		limited_recruting = {
 			allowed = {
@@ -35,6 +42,13 @@ ideas = {
 				command_power_gain_mult = 0.03
 			}
 			cancel_if_invalid = yes
+			ai_will_do = {
+				base = 10
+				modifier = {
+					has_manpower < 5000
+					factor = 2
+				}
+			}
 		}
 		mass_recruting = {
 			allowed = {
@@ -51,6 +65,13 @@ ideas = {
 				command_power_gain_mult = -0.02
 			}
 			cancel_if_invalid = yes
+			ai_will_do = {
+				base = 10
+				modifier = {
+					has_manpower < 1000
+					factor = 4
+				}
+			}
 		}
 		total_recruting = {
 			allowed = {
@@ -68,6 +89,13 @@ ideas = {
 				industrial_capacity_factory = -0.05
 			}
 			cancel_if_invalid = yes
+			ai_will_do = {
+				base = 10
+				modifier = {
+					has_manpower < 100
+					factor = 8
+				}
+			}
 		}
 		admiral_recruting = {
 			allowed = {
@@ -86,6 +114,9 @@ ideas = {
 				mobilization_speed = 0.05
 			}
 			cancel_if_invalid = yes
+			ai_will_do = {
+				base = 100
+			}
 		}
 	}
 	roh_labour = {
