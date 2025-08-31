@@ -36,3 +36,10 @@ recruit_character = ODS_Artem_Chigirov
 recruit_character = ODS_Vitalyi_Stoyanov
 
 recruit_character = ODS_Roman_Xan
+add_ideas = {
+	ODS_extra_black_rubles_income
+}
+#on_add of ODS_extra_black_rubles_income doesn`t work
+add_to_variable = {
+	ROOT.extra_income = 100
+}

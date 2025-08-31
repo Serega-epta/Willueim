@@ -1,0 +1,166 @@
+GLS_power_balance = {
+    left_side = victor_side
+    right_side = vladimir_side
+    decision_category = GLS_freedom_and_order
+    range = {
+        id = Confusion_in_soul
+        min = -0.15
+        max = 0.15
+        modifier = {
+        }
+    }
+    side = {
+        id = victor_side
+        range = {
+            id = victor_side_very_low
+            max = -0.15
+            min = -0.35
+            modifier = {
+                enemy_justify_war_goal_time = -0.15
+                recruitable_population = -0.05
+            }
+        }
+        range = {
+            id = victor_side_low
+            max = -0.35
+            min = -0.5
+            modifier = {
+                enemy_justify_war_goal_time = -0.15
+                recruitable_population = -0.05
+                mobilization_speed = 0.15
+                resistance_growth = 0.2
+            }
+        }
+        range = {
+            id = victor_side_high
+            max = -0.5
+            min = -0.75
+            modifier = {
+                enemy_justify_war_goal_time = -0.15
+                recruitable_population = -0.05
+                mobilization_speed = 0.15
+                resistance_growth = 0.2
+                command_power_gain = 0.05
+                experience_gain_army = 0.02
+                resistance_damage_to_garrison = -0.05
+            }
+        }
+        range = {
+            id = victor_side_very_high
+            max = -0.75
+            min = -0.9
+            modifier = {
+                enemy_justify_war_goal_time = -0.15
+                recruitable_population = -0.05
+                mobilization_speed = 0.15
+                resistance_growth = 0.2
+                command_power_gain = 0.05
+                experience_gain_army = 0.02
+                resistance_damage_to_garrison = -0.05
+                production_lack_of_resource_penalty_factor = -0.2
+                production_factory_efficiency_gain_factor = -0.2
+            }
+        }
+        range = {
+            id = victor_side_total
+            max = -0.9
+            min = -1
+            modifier = {
+                custom_modifier_tooltip = endgame_tt
+            }
+            on_activate = {
+                set_country_flag = GLS_freedom_and_order_endgame
+                load_focus_tree = anarchy_focus_tree			
+                country_event = {
+                    id = GLS_decisions.4
+                    days = 1
+                }					
+                kill_country_leader = yes
+                GLS_anarchy = {
+                    promote_character = statesmen_subideology
+                }
+                set_rule = {
+                    can_not_declare_war = yes
+                }
+                country_lock_all_division_template = yes
+            }
+        }
+    }
+    side = {
+        id = vladimir_side
+        range = {
+            id = vladimir_side_very_low
+            min = 0.15
+            max = 0.35
+            modifier = {
+                enemy_justify_war_goal_time = 0.15
+                recruitable_population = 0.05
+            }
+        }
+        range = {
+            id = vladimir_side_low
+            min = 0.35
+            max = 0.5
+            modifier = {
+                enemy_justify_war_goal_time = 0.15
+                recruitable_population = 0.05
+                mobilization_speed = -0.15
+                resistance_growth = -0.2
+            }
+        }
+        range = {
+            id = vladimir_side_high
+            min = 0.5
+            max = 0.75
+            modifier = {
+                enemy_justify_war_goal_time = 0.15
+                recruitable_population = 0.05
+                mobilization_speed = -0.15
+                resistance_growth = -0.2
+                command_power_gain = -0.05
+                experience_gain_army = -0.02
+                resistance_damage_to_garrison = 0.05
+            }
+        }
+        range = {
+            id = vladimir_side_very_high
+            min = 0.75
+            max = 0.9
+            modifier = {
+                enemy_justify_war_goal_time = 0.15
+                recruitable_population = 0.05
+                mobilization_speed = -0.15
+                resistance_growth = -0.2
+                command_power_gain = -0.05
+                experience_gain_army = -0.02
+                resistance_damage_to_garrison = 0.05
+                production_lack_of_resource_penalty_factor = 0.2
+                production_factory_efficiency_gain_factor = 0.2
+            }
+        }
+        range = {
+            id = vladimir_side_total
+            min = 0.9
+            max = 1
+            modifier = {
+                custom_modifier_tooltip = endgame_tt
+            }
+            on_activate = {
+                set_country_flag = GLS_freedom_and_order_endgame
+                load_focus_tree = anarchy_focus_tree			
+                country_event = {
+                    id = GLS_decisions.3
+                    days = 1
+                }					
+                kill_country_leader = yes
+                GLS_anarchy = {
+                    promote_character = statesmen_subideology
+                }
+                set_rule = {
+                    can_not_declare_war = yes
+                }
+                country_lock_all_division_template = yes
+            }
+        }
+    }
+}

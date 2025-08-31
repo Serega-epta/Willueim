@@ -26,7 +26,7 @@ expansion_category = {
 				}
 				set_cosmetic_tag = motherland_statesmen
 			}
-			if = {
+			else_if = {
 				limit = {
 					OR = {
 						has_government = humanists
@@ -37,13 +37,13 @@ expansion_category = {
 				}
 				set_cosmetic_tag = motherland_humanists
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_government = sacraments
 				}
 				set_cosmetic_tag = motherland_sacraments
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_government = chthonism
 				}
@@ -51,7 +51,7 @@ expansion_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 100
+			base = 100
 		}
 	}
 	start_expansion = {
@@ -80,7 +80,8 @@ expansion_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			#bots will follow the scenario
+			base = 0
 		}
 	}
 	annex_anarchy = {
@@ -117,7 +118,8 @@ expansion_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			#bots will follow the scenario
+			base = 0
 		}
 	}
 }
@@ -148,7 +150,7 @@ reunification_category = {
 				add_political_power = 10
 				add_stability = 0.03
 			}
-			if = {
+			else_if = {
 				limit = {
 					tag = ODS
 				}
@@ -160,7 +162,7 @@ reunification_category = {
 					popularity = 0.05
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					tag = ARM
 				}
@@ -172,7 +174,7 @@ reunification_category = {
 					popularity = 0.05
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					tag = LWV
 				}
@@ -186,7 +188,7 @@ reunification_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 100
+			base = 100
 		}
 	}
 	major_annex_anarchy = {
@@ -223,7 +225,8 @@ reunification_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			#majors will annex them (unification & scenario)
+			base = 100
 		}
 	}
 }

@@ -25,6 +25,13 @@ expedition_category = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				has_war = yes
+				factor = 0.1
+			}
+		}
 	}
 	form_combat_squad = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -50,6 +57,13 @@ expedition_category = {
 						combat_squad_var = 1
 					}
 				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				has_war = yes
+				factor = 10
 			}
 		}
 	}
@@ -102,6 +116,25 @@ expedition_category = {
 					}
 					#Empty shelves
 				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 1000
+				}
+				factor = 2
+			}
+			modifier = {
+				has_equipment = {
+					support_equipment < 1000
+				}
+				factor = 2
 			}
 		}
 	}
@@ -159,6 +192,9 @@ expedition_category = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 10
+		}
 	}
 	check_refinery = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -207,6 +243,9 @@ expedition_category = {
 					#Absolute zero
 				}
 			}
+		}
+		ai_will_do = {
+			base = 10
 		}
 	}
 	explore_industrial_zone = {
@@ -262,6 +301,9 @@ expedition_category = {
 					#Mechanism of war
 				}
 			}
+		}
+		ai_will_do = {
+			base = 10
 		}
 	}
 	#################################

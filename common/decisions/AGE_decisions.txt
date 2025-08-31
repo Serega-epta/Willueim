@@ -51,6 +51,9 @@ AGE_their_freedoms = {
 				tooltip = var_preventing_terrorist_attack_plus_10_tt
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	AGE_finish_the_survivors_1_phase = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -74,6 +77,9 @@ AGE_their_freedoms = {
 				}
 			}
 			has_country_flag = not_their_land_anymore_flag
+		}
+		ai_will_do = {
+			base = 100
 		}
 		target_array = AGE.owned_states
 		state_target = yes
@@ -218,6 +224,9 @@ AGE_their_freedoms = {
 				tooltip = var_preventing_terrorist_attack_plus_10_tt
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	AGE_finish_the_survivors_2_phase = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -290,6 +299,9 @@ AGE_their_freedoms = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	AGE_red_sabres_equip_guns = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -319,6 +331,15 @@ AGE_their_freedoms = {
 				tooltip = var_preventing_terrorist_attack_plus_10_tt
 			}
 		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 1000
+				}
+				factor = 0
+			}
+		}
 	}
 	AGE_red_sabres_specialization_1_phase = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -330,6 +351,9 @@ AGE_their_freedoms = {
 			has_focus_tree = AGE_phase_1
 		}
 		cost = 50
+		ai_will_do = {
+			base = 100
+		}
 		complete_effect = {
 			if = {
 				limit = {
@@ -376,6 +400,9 @@ AGE_their_freedoms = {
 					add_idea = AGE_red_sabres
 				}
 			}
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 	AGE_baltic_terror = {
@@ -762,6 +789,7 @@ AGE_their_freedoms = {
 		}
 	}
 	AGE_war_with_baltosphere = {
+		fire_only_once = yes
 		icon = GFX_decision_eng_trade_unions_support
 		activation = {
 			has_country_flag = war_with_baltosphere_flag
@@ -1506,6 +1534,9 @@ AGE_help_from_allies = {
 				amount = 150
 			}
 		}
+		ai_will_do = {
+			base = 50
+		}
 	}
 	AGE_help_from_blz_2 = {
 		available = {
@@ -1525,6 +1556,9 @@ AGE_help_from_allies = {
 				uses = 1
 				category = hospital_tech
 			}
+		}
+		ai_will_do = {
+			base = 50
 		}
 	}
 	AGE_help_from_blz_3 = {
@@ -1546,6 +1580,9 @@ AGE_help_from_allies = {
 				category = hospital_tech
 			}
 		}
+		ai_will_do = {
+			base = 50
+		}
 	}
 	AGE_help_from_har_1 = {
 		available = {
@@ -1564,6 +1601,9 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 150
 			}
+		}
+		ai_will_do = {
+			base = 50
 		}
 	}
 	AGE_help_from_har_2 = {
@@ -1584,6 +1624,9 @@ AGE_help_from_allies = {
 				amount = 180
 			}
 		}
+		ai_will_do = {
+			base = 50
+		}
 	}
 	AGE_help_from_har_3 = {
 		available = {
@@ -1602,6 +1645,9 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 210
 			}
+		}
+		ai_will_do = {
+			base = 50
 		}
 	}
 	AGE_help_from_chu_1 = {
@@ -1624,6 +1670,9 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 50
 			}
+		}
+		ai_will_do = {
+			base = 50
 		}
 	}
 	AGE_help_from_chu_2 = {
@@ -1652,6 +1701,9 @@ AGE_help_from_allies = {
 				amount = 50
 			}
 		}
+		ai_will_do = {
+			base = 50
+		}
 	}
 	AGE_help_from_chu_3 = {
 		available = {
@@ -1678,6 +1730,9 @@ AGE_help_from_allies = {
 				type = support_equipment
 				amount = 50
 			}
+		}
+		ai_will_do = {
+			base = 50
 		}
 	}
 }

@@ -182,6 +182,9 @@ economy_tick_effects = {
 	calc_economic_expenses = yes
 	calc_economy_modifier = yes
 	add_to_variable = {
+		economic_income = extra_income
+	}
+	add_to_variable = {
 		black_rubles_budget = economic_income
 	}
 	subtract_from_variable = {
