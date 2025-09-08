@@ -468,6 +468,38 @@ Unification_campaign = {
 			factor = 0
 		}
 	}
+	Unification_deadline = {
+		allowed = {
+			is_ai = no
+		}
+		activation = {
+			has_country_flag = Unification_campaign_flag
+		}
+		available = {
+			filtration_station > 9
+		}
+		days_mission_timeout = 1825
+		is_good = no
+		selectable_mission = no
+		complete_effect = {
+			country_event = Unification_event.2
+		}
+		timeout_effect = {
+			IF = {
+				limit = {
+					filtration_station < 1
+				}
+				ROOT = {
+					country_event = Unification_event.3
+				}
+			}
+			else = {
+				ROOT = {
+					country_event = Unification_event.4
+				}
+			}
+		}
+	}
 }
 
 Unification = {
@@ -655,7 +687,6 @@ Unification = {
 			add_to_variable = {
     			var = monthly_population_var
     			value = 0.4
-				tooltip = 
 			}
 			set_country_flag = Fresh_water_purification_flag
 		}
