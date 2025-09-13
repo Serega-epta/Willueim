@@ -1,6 +1,89 @@
+@unification_start_date = 2200.1.1 #2027.1.1
 Unification_campaign = {
+	peaceful_unification_campaign = {
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT
+					tag = SIL
+					tag = LWV
+					has_country_flag = anschluss_denied_@ROOT
+				}
+			}
+		}
+		cost = 50
+		days_remove = 30
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = unification_negotiations.1
+				}
+			}
+		}
+		ai_will_do = {
+			#bots will follow the scenario
+			base = 1000
+		}
+	}
+	ultimatum_campaign = {
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT
+					tag = SIL
+					tag = LWV
+				}
+				has_country_flag = anschluss_denied_@ROOT
+			}
+		}
+		cost = 75
+		war_with_on_remove = FROM
+		days_remove = 20
+		complete_effect = {
+			#prepare for war
+			hidden_effect = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = FROM
+					value = 200
+				}
+				FROM = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 200
+					}
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			#bots will follow the scenario
+			base = 1000
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+	}
+
+
+
+
+
 
 	Set_raid = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 		}
 		available = {
@@ -97,54 +180,45 @@ Unification_campaign = {
 		target_array = neighbors_owned
 		target_trigger = {
 			FROM = {
-				AND = {
-					is_neighbor_of = ROOT
-					has_war_with = ROOT
-					fighting_army_strength_ratio = {
-    					tag = ROOT
-    					ratio < 0.5
-					}
-					NOT = {
-						tag = SIL
-						tag = LWV
-					}
+				has_war_with = ROOT
+				fighting_army_strength_ratio = {
+					tag = ROOT
+					ratio < 0.5
+				}
+				NOT = {
+					tag = SIL
+					tag = LWV
 				}
 			}
 		}
 		cost = 50
 		fire_only_once = yes
 		complete_effect = {
-			IF = {
-				limit = {
-					has_government = ROOT
-				}
-				random_list = {
-					70 = {
-						annex_country = {
-    						target = FROM
-    						transfer_troops = yes
+			#TODO
+			random_list = {
+				50 = {
+					modifier = {
+						FROM = {
+							has_government = ROOT
 						}
+						add = 20
 					}
-					30 = {
-					}
-				}
-			}
-			else = {
-				random_list = {
-					40 = {
-						annex_country = {
-    						target = FROM
-    						transfer_troops = yes
-						}
-					}
-					60 = {
+					annex_country = {
+    					target = FROM
+    					transfer_troops = yes
 					}
 				}
+				50 = {}
 			}
 		}
 		ai_will_do = {
 			#bots will follow the scenario
 			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
 		}
 	}
 	Start_campaign = {
@@ -156,13 +230,10 @@ Unification_campaign = {
 		target_array = neighbors_owned
 		target_trigger = {
 			FROM = {
-				AND = {
-					is_neighbor_of = ROOT
-					NOT = {
-						tag = BLS
-						tag = ANR
-						tag = WTR
-					}
+				NOT = {
+					tag = BLS
+					tag = ANR
+					tag = WTR
 				}
 			}
 		}
@@ -179,6 +250,15 @@ Unification_campaign = {
 		ai_will_do = {
 			#bots will follow the scenario
 			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
+			modifier = {
+				has_war = yes
+				factor = no
+			}
 		}
 	}
 	Strength_through_unity = {
@@ -191,19 +271,17 @@ Unification_campaign = {
 		target_array = neighbors_owned
 		target_trigger = {
 			FROM = {
-				AND = {
-					is_neighbor_of = ROOT
-					has_government = ROOT
-					NOT = {
-						tag = SIL
-						tag = BLS
-					}
+				has_government = ROOT
+				NOT = {
+					tag = SIL
+					tag = BLS
 				}
 			}
 		}
 		cost = 50
 		fire_only_once = yes
 		complete_effect = {
+			#TODO
 			random = {
 				chance = 90
 				annex_country = {
@@ -244,6 +322,11 @@ Unification_campaign = {
 		ai_will_do = {
 			#bots will follow the scenario
 			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
 		}
 	}
 
@@ -257,8 +340,6 @@ Unification_campaign = {
 		target_trigger = {
 			FROM = {
 				has_government = bandits
-			}
-			FROM = {
 				has_opinion_modifier = infiltration_opinion
 			}
 		}
@@ -276,6 +357,11 @@ Unification_campaign = {
 		ai_will_do = {
 			#bots will follow the scenario
 			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
 		}
 	}
 
@@ -305,6 +391,11 @@ Unification_campaign = {
 		ai_will_do = {
 			#bots will follow the scenario
 			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
 		}
 	}
 
@@ -324,20 +415,18 @@ Unification_campaign = {
 		cost = 50
 		fire_only_once = yes
 		complete_effect = {
+			#TODO
 			random_list = {
 				70 = {
-					ROOT = {
-						declare_war_on = {
-    						target = FROM
-    						type = annex_everything
-						}
+					declare_war_on = {
+    					target = FROM
+    					type = annex_everything
 					}
 				}
 				30 = {
-					FROM = {
-						every_owned_state = {
-							transfer_state_to = ANR
-						}
+					annex_country = {
+    					target = FROM
+    					transfer_troops = yes
 					}
 				}
 			}
@@ -345,6 +434,15 @@ Unification_campaign = {
 		ai_will_do = {
 			#bots will follow the scenario
 			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
 		}
 	}
 
@@ -381,6 +479,11 @@ Unification_campaign = {
 		ai_will_do = {
 			#bots will follow the scenario
 			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
 		}
 	}
 	
@@ -433,6 +536,11 @@ Unification_campaign = {
 		ai_will_do = {
 			#bots will follow the scenario
 			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
 		}
 	}
 }
@@ -626,7 +734,6 @@ Unification = {
 			add_to_variable = {
     			var = monthly_population_var
     			value = 0.4
-				tooltip = 
 			}
 			set_country_flag = Fresh_water_purification_flag
 		}
@@ -924,7 +1031,6 @@ Unification = {
 			add_to_variable = {
     			var = monthly_population_var
     			value = 0.6
-				tooltip = 
 			}
 			add_to_variable = {
     			var = production_speed_buildings_factor_var

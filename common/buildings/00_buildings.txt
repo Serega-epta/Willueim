@@ -596,6 +596,18 @@ buildings = {
 			state_resources_factor = 0.1
 		}
 	}
+
+	aggression_suppressor = {
+		value = 5
+		icon_frame = 1
+		infrastructure_construction_effect = yes
+		hide_if_missing_tech = yes
+		base_cost = 1000
+		level_cap = {
+			shares_slots = yes
+			state_max = 3
+		}
+	}
 }
 
 spawn_points = {

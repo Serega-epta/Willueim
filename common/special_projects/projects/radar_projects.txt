@@ -1,5 +1,5 @@
-#T-9
-t_virus = {
+#Rainbow
+aggression_suppressor = {
 	specialization = specialization_land
 	project_tags = sp_tag_bio_weapon
 	complexity = sp_complexity.insane
@@ -9,7 +9,12 @@ t_virus = {
 	}
 	project_output = {
 		country_effects = {
-			#tooltip
+			#custom_override_tooltip = {
+			#	set_technology = {
+			#		sp_tech_aggression_suppressor = 1
+			#		popup = no
+			#	}
+			#}
 		}
 	}
 	generic_prototype_rewards = {
@@ -17,17 +22,8 @@ t_virus = {
 	resource_cost = {
 		resources = {
 			steel = 5
-			rubber = 10 #to be hermetic
+			tungsten = 2
+			chromium = 2
 		}
-	}
-}
-#BTR-60 Shaytan
-APC_60 = {
-	specialization = specialization_land
-	project_tags = sp_tag_vehicle
-	complexity = sp_complexity.small
-	prototype_time = sp_time.prototype.medium
-	breakthrough_cost = {
-		specialization_land = 1
 	}
 }
