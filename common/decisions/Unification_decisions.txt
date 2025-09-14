@@ -34,7 +34,7 @@ Unification_campaign = {
 		}
 		ai_will_do = {
 			#bots will follow the scenario
-			base = 1000
+			base = 50
 		}
 	}
 	ultimatum_campaign = {
@@ -92,9 +92,18 @@ Unification_campaign = {
 		}
 		ai_will_do = {
 			#bots will follow the scenario
-			base = 1000
+			base = 10
+			modifier = {
+				FROM = {
+					has_war = yes
+				}
+				factor = 2
+			}
 			modifier = {
 				OR = {
+					check_variable = {
+						random < 0.996
+					}
 					has_war = yes
 					has_decision = ultimatum_campaign
 				}
