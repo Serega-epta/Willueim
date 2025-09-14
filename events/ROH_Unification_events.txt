@@ -23,7 +23,7 @@ country_event = {
 		set_country_flag = anschluss_denied_@FROM
 	}
 	option = {
-		#Нет смысла бессмысленому сопроьивлению
+		#Нет смысла бессмысленому сопротивлению
 		name = unification_negotiations.1.b
 		custom_override_tooltip = {
 			tooltip = you_will_be_annexed_tt
@@ -37,19 +37,12 @@ country_event = {
 		ai_chance = {
 			base = 100
 			modifier = {
-				fighting_army_strength_ratio = {
-					tag = FROM
-					ratio > 0.5
-				}
-				add = 50
-			}
-			modifier = {
-				has_government = FROM
-				factor = 1.5
-			}
-			modifier = {
 				is_subject_of = FROM
 				factor = 1.5
+			}
+			modifier = {
+				is_major = yes
+				factor = 0.5
 			}
 		}
 	}

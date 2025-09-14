@@ -1,6 +1,12 @@
 @unification_start_date = 2200.1.1 #2027.1.1
 Unification_campaign = {
 	peaceful_unification_campaign = {
+		target_root_trigger = {
+			#visible doesn`t disable available trigger
+			#hidden_trigger = {
+			#	has_country_flag = Unification_campaign_flag
+			#}
+		}
 		target_array = neighbors_owned
 		target_trigger = {
 			FROM = {
@@ -9,6 +15,11 @@ Unification_campaign = {
 					tag = SIL
 					tag = LWV
 					has_country_flag = anschluss_denied_@ROOT
+				}
+				has_government = ROOT
+				fighting_army_strength_ratio = {
+					tag = ROOT
+					ratio < 0.5
 				}
 			}
 		}
@@ -27,15 +38,30 @@ Unification_campaign = {
 		}
 	}
 	ultimatum_campaign = {
+		target_root_trigger = {
+			#visible doesn`t disable available trigger
+			#hidden_trigger = {
+			#	has_country_flag = Unification_campaign_flag
+			#}
+		}
 		target_array = neighbors_owned
 		target_trigger = {
 			FROM = {
+				fighting_army_strength_ratio = {
+					tag = ROOT
+					ratio < 0.5
+				}
 				NOT = {
 					has_war_with = ROOT
 					tag = SIL
 					tag = LWV
 				}
-				has_country_flag = anschluss_denied_@ROOT
+				OR = {
+					NOT = {
+						has_government = ROOT
+					}
+					has_country_flag = anschluss_denied_@ROOT
+				}
 			}
 		}
 		cost = 75
@@ -68,7 +94,10 @@ Unification_campaign = {
 			#bots will follow the scenario
 			base = 1000
 			modifier = {
-				has_war = yes
+				OR = {
+					has_war = yes
+					has_decision = ultimatum_campaign
+				}
 				factor = 0
 			}
 		}
@@ -172,6 +201,10 @@ Unification_campaign = {
 		}
 	}
 	Force_peace = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 		}
 		available = {
@@ -222,6 +255,10 @@ Unification_campaign = {
 		}
 	}
 	Start_campaign = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 		}
 		available = {
@@ -262,6 +299,10 @@ Unification_campaign = {
 		}
 	}
 	Strength_through_unity = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 			is_major = no
 		}
@@ -297,6 +338,10 @@ Unification_campaign = {
 	}
 
 	Infiltrate_the_brigade = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 		}
 		available = {
@@ -331,6 +376,10 @@ Unification_campaign = {
 	}
 
 	Contacts_with_leaders = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 		}
 		available = {
@@ -366,6 +415,10 @@ Unification_campaign = {
 	}
 
 	Authorities = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 		}
 		available = {
@@ -400,6 +453,10 @@ Unification_campaign = {
 	}
 
 	Renegades_decision = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 		}
 		available = {
@@ -447,6 +504,10 @@ Unification_campaign = {
 	}
 
 	Soft_power = {
+		allowed = {
+			#for debugging
+			always = no
+		}
 		visible = {
 		}
 		available = {
