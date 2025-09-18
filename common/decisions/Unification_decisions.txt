@@ -12,8 +12,8 @@ Unification_campaign = {
 			FROM = {
 				NOT = {
 					has_war_with = ROOT
-					tag = SIL
-					tag = LWV
+					tag = SIL #TODO
+					tag = LWV #TODO
 					has_country_flag = anschluss_denied_@ROOT
 				}
 				has_government = ROOT
@@ -21,6 +21,7 @@ Unification_campaign = {
 					tag = ROOT
 					ratio < 0.5
 				}
+				unification_campaign_allowed = yes
 			}
 		}
 		cost = 50
@@ -53,8 +54,8 @@ Unification_campaign = {
 				}
 				NOT = {
 					has_war_with = ROOT
-					tag = SIL
-					tag = LWV
+					tag = SIL #TODO
+					tag = LWV #TODO
 				}
 				OR = {
 					NOT = {
@@ -62,6 +63,7 @@ Unification_campaign = {
 					}
 					has_country_flag = anschluss_denied_@ROOT
 				}
+				unification_campaign_allowed = yes
 			}
 		}
 		cost = 75
@@ -102,6 +104,7 @@ Unification_campaign = {
 			modifier = {
 				OR = {
 					check_variable = {
+						#just prevent batle royal
 						random < 0.996
 					}
 					has_war = yes
