@@ -1,0 +1,9 @@
+t_virus = {
+	enable = { always = yes } #optional, the modifier won't apply if not enabled
+	army_attack_factor = -0.7
+	army_defence_factor = -0.7
+	attrition_for_controller = 0.3
+
+	#slow building buildings (TODO)
+	#state_production_speed_<building>_factor
+}

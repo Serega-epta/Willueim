@@ -1,7 +1,7 @@
 #T-9
 t_virus = {
 	specialization = specialization_land
-	project_tags = sp_tag_bio_weapon
+	project_tags = sp_tag_mass_destruction_weapon
 	complexity = sp_complexity.insane
 	prototype_time = sp_time.prototype.very_long
 	breakthrough_cost = {
@@ -9,10 +9,26 @@ t_virus = {
 	}
 	project_output = {
 		country_effects = {
-			#tooltip
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SP_UNLOCK_RAID
+					RAID_TYPE = {
+						localization_key = t_virus_raid
+					}
+				}
+			}
 		}
 	}
 	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
 	}
 	resource_cost = {
 		resources = {
@@ -29,5 +45,79 @@ APC_60 = {
 	prototype_time = sp_time.prototype.medium
 	breakthrough_cost = {
 		specialization_land = 1
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+	}
+}
+#T-62 Myasorubka
+T_62 = {
+	specialization = specialization_land
+	project_tags = sp_tag_vehicle
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+	}
+}
+#KPZ-4
+KPZ_4 = {
+	specialization = specialization_land
+	project_tags = sp_tag_vehicle
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+	}
+}
+#bobyk/sharik/blohastik
+dog_mine = {
+	specialization = specialization_land
+	project_tags = sp_tag_vehicle
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
 	}
 }
