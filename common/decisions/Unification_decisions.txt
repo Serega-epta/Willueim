@@ -3,9 +3,9 @@ Unification_campaign = {
 	peaceful_unification_campaign = {
 		target_root_trigger = {
 			#visible doesn`t disable available trigger
-			#hidden_trigger = {
-			#	has_country_flag = Unification_campaign_flag
-			#}
+			hidden_trigger = {
+				has_country_flag = Unification_campaign_flag
+			}
 		}
 		target_array = neighbors_owned
 		target_trigger = {
@@ -41,9 +41,9 @@ Unification_campaign = {
 	ultimatum_campaign = {
 		target_root_trigger = {
 			#visible doesn`t disable available trigger
-			#hidden_trigger = {
-			#	has_country_flag = Unification_campaign_flag
-			#}
+			hidden_trigger = {
+				has_country_flag = Unification_campaign_flag
+			}
 		}
 		target_array = neighbors_owned
 		target_trigger = {
