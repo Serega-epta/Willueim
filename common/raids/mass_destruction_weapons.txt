@@ -170,9 +170,22 @@ types = {
 			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
-						add_dynamic_modifier = {
-							modifier = t_virus
-							days = 90
+						if = {
+							limit = {
+								var:actor_country = {
+									has_country_flag = t_virus_more_lethal
+								}
+							}
+							add_dynamic_modifier = {
+								modifier = super_t_virus
+								days = 100
+							}
+						}
+						else = {
+							add_dynamic_modifier = {
+								modifier = t_virus
+								days = 90
+							}
 						}
 					}
 			    }
@@ -195,9 +208,22 @@ types = {
 			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
-						add_dynamic_modifier = {
-							modifier = t_virus
-							days = 180
+						if = {
+							limit = {
+								var:actor_country = {
+									has_country_flag = t_virus_more_lethal
+								}
+							}
+							add_dynamic_modifier = {
+								modifier = super_t_virus
+								days = 200
+							}
+						}
+						else = {
+							add_dynamic_modifier = {
+								modifier = t_virus
+								days = 180
+							}
 						}
 					}
 			    }
@@ -224,9 +250,22 @@ types = {
 			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
-						add_dynamic_modifier = {
-							modifier = t_virus
-							days = 360
+						if = {
+							limit = {
+								var:actor_country = {
+									has_country_flag = t_virus_more_lethal
+								}
+							}
+							add_dynamic_modifier = {
+								modifier = super_t_virus
+								days = 400
+							}
+						}
+						else = {
+							add_dynamic_modifier = {
+								modifier = t_virus
+								days = 360
+							}
 						}
 					}
 			    }

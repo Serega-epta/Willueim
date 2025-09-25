@@ -1,11 +1,15 @@
 #Rainbow
 aggression_suppressor = {
+	icon = GFX_SP_aggression_suppressor
 	specialization = specialization_land
 	project_tags = sp_tag_buildings
 	complexity = sp_complexity.insane
 	prototype_time = sp_time.prototype.very_long
 	breakthrough_cost = {
 		specialization_land = 1
+	}
+	project_tags = {
+		sp_tag_buildings
 	}
 	project_output = {
 		country_effects = {
@@ -30,10 +34,10 @@ aggression_suppressor = {
 		sp_land_generic_reward_test_failure_3
 	}
 	resource_cost = {
-		resources = {
-			steel = 5
-			tungsten = 2
-			chromium = 2
+		resources = { 
+			steel = 6 
+			tungsten = 3 
+			chromium = 6 
 		}
 	}
 }
