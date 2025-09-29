@@ -23,3 +23,175 @@ rail_gun_test = {
 RoH_dismantle_faction = {
 	dismantle_faction = yes
 }
+#State scope (i don`t whant to use meta - it is slower, and cycle won`t create tooltip)
+fix_all_shared_building = {
+	#arms_factory
+	set_temp_variable = {
+		lvl = building_level@arms_factory
+	}
+	remove_building = {
+		type = arms_factory
+		level = lvl
+	}
+	set_building_level = {
+		type = arms_factory
+		level = lvl
+		instant_build = yes
+	}
+	#industrial_complex
+	set_temp_variable = {
+		lvl = building_level@industrial_complex
+	}
+	remove_building = {
+		type = industrial_complex
+		level = lvl
+	}
+	set_building_level = {
+		type = industrial_complex
+		level = lvl
+		instant_build = yes
+	}
+	#stronghold_network
+	set_temp_variable = {
+		lvl = building_level@stronghold_network
+	}
+	remove_building = {
+		type = stronghold_network
+		level = lvl
+	}
+	set_building_level = {
+		type = stronghold_network
+		level = lvl
+		instant_build = yes
+	}
+	#dockyard
+	set_temp_variable = {
+		lvl = building_level@dockyard
+	}
+	remove_building = {
+		type = dockyard
+		level = lvl
+	}
+	set_building_level = {
+		type = dockyard
+		level = lvl
+		instant_build = yes
+	}
+	#synthetic_refinery
+	set_temp_variable = {
+		lvl = building_level@synthetic_refinery
+	}
+	remove_building = {
+		type = synthetic_refinery
+		level = lvl
+	}
+	set_building_level = {
+		type = synthetic_refinery
+		level = lvl
+		instant_build = yes
+	}
+	#fuel_silo
+	set_temp_variable = {
+		lvl = building_level@fuel_silo
+	}
+	remove_building = {
+		type = fuel_silo
+		level = lvl
+	}
+	set_building_level = {
+		type = fuel_silo
+		level = lvl
+		instant_build = yes
+	}
+	#mega_gun_emplacement
+	set_temp_variable = {
+		lvl = building_level@mega_gun_emplacement
+	}
+	remove_building = {
+		type = mega_gun_emplacement
+		level = lvl
+	}
+	set_building_level = {
+		type = mega_gun_emplacement
+		level = lvl
+		instant_build = yes
+	}
+	#rocket_site
+	set_temp_variable = {
+		lvl = building_level@rocket_site
+	}
+	remove_building = {
+		type = rocket_site
+		level = lvl
+	}
+	set_building_level = {
+		type = rocket_site
+		level = lvl
+		instant_build = yes
+	}
+	#nuclear_reactor
+	set_temp_variable = {
+		lvl = building_level@nuclear_reactor
+	}
+	remove_building = {
+		type = nuclear_reactor
+		level = lvl
+	}
+	set_building_level = {
+		type = nuclear_reactor
+		level = lvl
+		instant_build = yes
+	}
+	#filtration_station
+	set_temp_variable = {
+		lvl = building_level@filtration_station
+	}
+	remove_building = {
+		type = filtration_station
+		level = lvl
+	}
+	set_building_level = {
+		type = filtration_station
+		level = lvl
+		instant_build = yes
+	}
+	#nuclear_reactor_heavy_water
+	set_temp_variable = {
+		lvl = building_level@nuclear_reactor_heavy_water
+	}
+	remove_building = {
+		type = nuclear_reactor_heavy_water
+		level = lvl
+	}
+	set_building_level = {
+		type = nuclear_reactor_heavy_water
+		level = lvl
+		instant_build = yes
+	}
+	#commercial_nuclear_reactor
+	set_temp_variable = {
+		lvl = building_level@commercial_nuclear_reactor
+	}
+	remove_building = {
+		type = commercial_nuclear_reactor
+		level = lvl
+	}
+	set_building_level = {
+		type = commercial_nuclear_reactor
+		level = lvl
+		instant_build = yes
+	}
+	#aggression_suppressor
+	set_temp_variable = {
+		lvl = building_level@aggression_suppressor
+	}
+	remove_building = {
+		type = aggression_suppressor
+		level = lvl
+	}
+	set_building_level = {
+		type = aggression_suppressor
+		level = lvl
+		instant_build = yes
+	}
+}

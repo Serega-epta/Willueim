@@ -156,35 +156,6 @@ T_62 = {
 		}
 	}
 }
-#KPZ-4
-KPZ_4 = {
-	specialization = specialization_land
-	project_tags = sp_tag_vehicle
-	complexity = sp_complexity.small
-	prototype_time = sp_time.prototype.medium
-	breakthrough_cost = {
-		specialization_land = 1
-	}
-	special_project_parent = {
-		t_virus
-	}
-	generic_prototype_rewards = {
-		sp_land_generic_reward_scientist_xp_1
-		sp_land_generic_reward_scientist_xp_2
-		sp_land_generic_reward_scientist_xp_3
-		sp_land_generic_reward_major_progress_1
-		sp_land_generic_reward_major_progress_2
-		sp_land_generic_reward_major_progress_3
-		sp_land_generic_reward_test_failure_1
-		sp_land_generic_reward_test_failure_2
-		sp_land_generic_reward_test_failure_3
-	}
-	resource_cost = {
-		resources = {
-			rubber = 10
-		}
-	}
-}
 #bobyk/sharik/blohastik
 dog_mine = {
 	icon = GFX_SP_dog_mine

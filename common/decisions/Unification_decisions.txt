@@ -117,449 +117,6 @@ Unification_campaign = {
 
 
 
-
-
-
-	Set_raid = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-		}
-		available = {
-			has_war = no
-			NOT = {
-				has_idea = Successful_raid
-			}
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				AND = {
-					is_neighbor_of = ROOT
-					has_war = no
-					NOT = {
-						tag = BLS
-						tag = ANR
-						tag = WTR
-						tag = WEC
-						tag = SAC
-						tag = SOC
-
-					}
-				}
-			}
-		}
-		highlight_states = {
-			highlight_states_trigger = {		
-				is_capital = yes
-				is_owned_by = FROM
-			}
-		}
-		cost = 50
-		days_remove = 15
-		fire_only_once = yes
-		complete_effect = {
-			FROM = {
-				random_owned_controlled_state = {
-					limit = {
-						any_neighbor_state = {
-							is_fully_controlled_by = ROOT
-						}
-					}
-					set_variable = { PREV.defender_state_vs_@ROOT = THIS }
-					set_state_flag = defender_state
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					any_neighbor_state = {
-						is_fully_controlled_by = FROM
-						has_state_flag = defender_state
-					}
-				}
-				set_variable = { FROM.attacker_state_vs_@ROOT = THIS }
-				
-			}
-		}
-		remove_effect = {
-			start_border_war = {
-    			change_state_after_war = no
-    			attacker = {
-        			state = var:FROM.attacker_state_vs_@ROOT
-        			num_provinces = 1
-        			on_win = Unification_raid_event.1
-       				on_lose = Unification_raid_event.3
-        			on_cancel = Unification_raid_event.3
-    			}	
-    			defender = {
-        			state = var:FROM.defender_state_vs_@ROOT
-        			num_provinces = 1
-        			on_win = Unification_raid_event.2
-        			on_lose = Unification_raid_event.3
-        			on_cancel = Unification_raid_event.3
-    			}
-			}
-			set_border_war_data = {
-				attacker = var:FROM.defender_state_vs_@ROOT
-				defender = var:FROM.defender_state_vs_@ROOT
-				combat_width = 20
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-		}
-	}
-	Force_peace = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				has_war_with = ROOT
-				fighting_army_strength_ratio = {
-					tag = ROOT
-					ratio < 0.5
-				}
-				NOT = {
-					tag = SIL
-					tag = LWV
-				}
-			}
-		}
-		cost = 50
-		fire_only_once = yes
-		complete_effect = {
-			#TODO
-			random_list = {
-				50 = {
-					modifier = {
-						FROM = {
-							has_government = ROOT
-						}
-						add = 20
-					}
-					annex_country = {
-    					target = FROM
-    					transfer_troops = yes
-					}
-				}
-				50 = {}
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-			#but... if there is 2027 - we should hurry (unification)
-			modifier = {
-				date > @unification_start_date
-				add = 1000
-			}
-		}
-	}
-	Start_campaign = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				NOT = {
-					tag = BLS
-					tag = ANR
-					tag = WTR
-				}
-			}
-		}
-		cost = 50
-		complete_effect = {
-			
-		}
-		remove_effect = {
-			declare_war_on = {
-    			target = FROM
-    			type = annex_everything
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-			#but... if there is 2027 - we should hurry (unification)
-			modifier = {
-				date > @unification_start_date
-				add = 1000
-			}
-			modifier = {
-				has_war = yes
-				factor = no
-			}
-		}
-	}
-	Strength_through_unity = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-			is_major = no
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				has_government = ROOT
-				NOT = {
-					tag = SIL
-					tag = BLS
-				}
-			}
-		}
-		cost = 50
-		fire_only_once = yes
-		complete_effect = {
-			#TODO
-			random = {
-				chance = 90
-				annex_country = {
-    				target = FROM
-    				transfer_troops = yes
-				}
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-		}
-	}
-
-	Infiltrate_the_brigade = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM =  {
-				has_government = bandits
-			}
-		}
-		cost = 50
-		days_remove = 20
-		fire_only_once = yes
-		remove_effect = {
-			FROM = {
-				add_opinion_modifier = {
-    				target = ROOT
-    				modifier = infiltration_opinion
-				}
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-			#but... if there is 2027 - we should hurry (unification)
-			modifier = {
-				date > @unification_start_date
-				add = 1000
-			}
-		}
-	}
-
-	Contacts_with_leaders = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				has_government = bandits
-				has_opinion_modifier = infiltration_opinion
-			}
-		}
-		cost = 50
-		days_remove = 15
-		fire_only_once = yes
-		remove_effect = {
-			FROM = {
-				add_opinion_modifier = {
-    				target = ROOT
-					modifier = Contacts_with_leaders_opinion
-				}
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-			#but... if there is 2027 - we should hurry (unification)
-			modifier = {
-				date > @unification_start_date
-				add = 1000
-			}
-		}
-	}
-
-	Authorities = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				has_government = bandits
-				has_opinion_modifier = Contacts_with_leaders_opinion
-			}
-		}
-		cost = 50
-		days_remove = 10
-		remove_effect = {
-			FROM = {
-				add_opinion_modifier = {
-    				target = ROOT
-    				modifier = Authorities_opinion
-				}
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-			#but... if there is 2027 - we should hurry (unification)
-			modifier = {
-				date > @unification_start_date
-				add = 1000
-			}
-		}
-	}
-
-	Renegades_decision = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				has_government = bandits
-				has_opinion_modifier = Authorities_opinion
-			}
-		}
-		cost = 50
-		fire_only_once = yes
-		complete_effect = {
-			#TODO
-			random_list = {
-				70 = {
-					declare_war_on = {
-    					target = FROM
-    					type = annex_everything
-					}
-				}
-				30 = {
-					annex_country = {
-    					target = FROM
-    					transfer_troops = yes
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-			#but... if there is 2027 - we should hurry (unification)
-			modifier = {
-				date > @unification_start_date
-				add = 1000
-			}
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-	}
-
-	Soft_power = {
-		allowed = {
-			#for debugging
-			always = no
-		}
-		visible = {
-		}
-		available = {
-			has_manpower > 499
-			has_equipment = {
-				infantry_equipment > 499
-			}
-			
-		}
-		state_target = yes
-		target_trigger = {
-			FROM = {
-				is_owned_by = ANR
-			}
-		}
-		cost = 50
-		days_remove = 30
-		complete_effect = {
-			add_manpower = -500
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -500
-			}
-		}
-		remove_effect = {
-			FROM = {
-				transfer_state_to = ROOT
-			}
-		}
-		ai_will_do = {
-			#bots will follow the scenario
-			base = 0
-			#but... if there is 2027 - we should hurry (unification)
-			modifier = {
-				date > @unification_start_date
-				add = 1000
-			}
-		}
-	}
-	
     Finnish_Unification_campaign = {
 		available = {
 			all_other_country = {
@@ -619,6 +176,142 @@ Unification_campaign = {
 }
 
 Unification = {
+	city_restoration = {
+		targets = {
+			219
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 20
+			controls_state = FROM
+			FROM = {
+				filtration_station > 0
+			}
+		}
+		target_root_trigger = {
+			#has_country_flag = Unification_flag
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = city_restored
+				}
+			}
+		}
+		state_target = yes
+		cost = 120
+		days_remove = 120
+		modifier = {
+			civilian_factory_use = 20
+		}
+		remove_effect = {
+			FROM = {
+				#if for tooltip
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					set_building_level = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = unlock_all_building_slots_tt
+					add_extra_state_shared_building_slots = 25
+				}
+				custom_override_tooltip = {
+					tooltip = repair_all_shared_buildings_tt
+					fix_all_shared_building = yes
+				}
+				add_dynamic_modifier = {
+					modifier = city_restored
+					days = 180
+				}
+				set_state_flag = city_restored
+			}
+			add_to_variable = {
+				cities_restored_num = 1
+			}
+		}
+	}
+	communication_restoration = {
+		targets = {
+			219
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+			controls_state = FROM
+			radar_station > 0
+		}
+		target_root_trigger = {
+			#has_country_flag = Unification_flag
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = communication_restored
+				}
+			}
+		}
+		state_target = yes
+		cost = 25
+		days_remove = 20
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			FROM = {
+				set_state_flag = communication_restored
+				add_building_construction = {
+					type = radar_station
+    				level = 3
+    				instant_build = yes
+				}
+			}
+			add_to_variable = {
+				communication_restored_num = 1
+			}
+		}
+	}
+	city_garrison = {
+		targets = {
+			219
+		}
+		state_target = yes
+		available = {
+			controls_state = FROM
+			FROM = {
+				set_temp_variable = {
+					div_num = state_population_k
+				}
+				multiply_temp_variable = {
+					div_num = 0.025
+				}
+				num_divisions > div_num
+			}
+		}
+		target_root_trigger = {
+			#has_country_flag = Unification_flag
+		}
+		target_trigger = {
+			FROM = {
+				#no need for guarding ruins
+				#has_state_flag = city_restored
+			}
+		}
+		cost = 25
+		days_remove = 20
+		remove_effect = {
+			FROM = {
+
+			}
+		}
+	}
+
+
+
+
     Restore_communications = {
 		available = {
 			has_railway_connection = {

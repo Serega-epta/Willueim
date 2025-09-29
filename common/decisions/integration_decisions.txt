@@ -20,15 +20,22 @@ integration_category = {
 		}
 		custom_cost_trigger = {
 			has_equipment = {
-				infantry_equipment > 399
+				infantry_equipment > 2999
+			}
+			has_equipment = {
+				infantry_odejda > 599
 			}
 		}
-		custom_cost_text = decision_cost_400_ie_tt
+		custom_cost_text = decision_intergrate_core_territory_cost_tt
 		days_remove = 70
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -400
+				amount = -3000
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = -600
 			}
 		}
 		remove_effect = {
