@@ -5,24 +5,25 @@ state=
 	
 	state_category = town
 	
-	manpower = 294748
+	manpower = 1500000
 	resources={
 		steel=5 # was: 8
 	}
 
-	history=
-	{
+	history= {
 		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-			industrial_complex = 3
+			infrastructure = 5
+			arms_factory = 10
+			industrial_complex = 10
 		}
 		victory_points = { 6583 5 }
+		owner = GER
+		add_core_of = GER
 	}
 
-	provinces=
-	{
-6583 	}
+	provinces= {
+		6583 	
+	}
 
 	local_supplies=0.0 
 }

@@ -20,15 +20,29 @@ integration_category = {
 		}
 		custom_cost_trigger = {
 			has_equipment = {
-				infantry_equipment > 399
+				infantry_equipment > 2999
+			}
+			has_equipment = {
+				infantry_odejda > 599
+			}
+			has_equipment = {
+				motorized_equipment > 9
 			}
 		}
-		custom_cost_text = decision_cost_400_ie_tt
+		custom_cost_text = decision_cost_3000_ie_tt
 		days_remove = 70
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -400
+				amount = -3000
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = -600
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = -10
 			}
 		}
 		remove_effect = {
@@ -43,7 +57,13 @@ integration_category = {
 			base = 100
 			modifier = {
 				has_equipment = {
-					infantry_equipment < 1000
+					infantry_equipment < 5000
+				}
+				has_equipment = {
+					infantry_odejda < 1000
+				}
+				has_equipment = {
+					motorized_equipment < 20
 				}
 				factor = 0
 			}

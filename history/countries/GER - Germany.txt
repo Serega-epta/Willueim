@@ -1,0 +1,103 @@
+capital = 55
+oob = generic
+add_ideas = BLT_lost_world
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	extended_store = 1
+	infantry_weapons3 = 1
+	civilian_clothing = 1
+	old_world_uniforms = 1
+	local_uniform = 1
+	anti_radin_cloaks = 1
+	modern_equipment = 1
+	motorised_infantry = 1
+	motorised_infantry2 = 1
+	motorised_infantry3 = 1
+	motorised_infantry4 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_engineers2 = 1
+	tech_drg = 1
+	tech_drg2 = 1
+	tech_ghounds = 1 
+	tech_ghounds1 = 1
+	tech_standard_bearer = 1
+	tech_standard_bearer1 = 1
+	tech_rhbz = 1
+	tech_rhbz1 = 1
+	tech_gamekeepers = 1
+	tech_gamekeepers1 = 1
+	gw_artillery = 1
+	basic_towed_artillery = 1
+	gerantium_complex = 1
+	advanced_towed_artillery = 1
+	towed_artillery_of_the_future = 1
+	IVD_UMMS_Mfifty = 1
+	basic_air_defense = 1
+	basic_MLRS = 1
+	ARBF_shells = 1
+	complex_oko = 1
+	advanced_MLRS = 1
+	chain_project = 1
+	instruments_of_any_era = 1
+	converted_workshops = 1
+	workshop_mechanization = 1
+	basic_automation = 1
+	factories_in_ruins = 1
+	industrial_hearths = 1
+	concentration_industry_1 = 1
+	abandoned_mines = 1
+	resource_development_1 = 1
+	resource_development_2 = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		pre_war_OPV = 1
+		basic_specialized_OPF = 1
+		improved_specialized_OPF = 1
+		advanced_specialized_OPF = 1
+		armor_1 = 1
+		armor_2 = 1
+		armor_3 = 1
+		armor_4 = 1
+		engine_1 = 1
+		engine_2 = 1
+		engine_3 = 1
+		engine_4 = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		nsb_pre_war_OPV = 1
+		nsb_basic_nsb_specialized_OPF = 1
+		nsb_improved_nsb_specialized_OPF = 1
+		nsb_advanced_nsb_specialized_OPF = 1
+		nsb_armor_1 = 1
+		nsb_armor_2 = 1
+		nsb_armor_3 = 1
+		nsb_armor_4 = 1
+		nsb_engine_1 = 1
+		nsb_engine_2 = 1
+		nsb_engine_3 = 1
+		nsb_engine_4 = 1
+	}
+}
+set_research_slots = 0
+set_convoys = 0
+set_politics = {
+	ruling_party = humanists
+	elections_allowed = no
+}
+set_popularities = {
+	humanists = 100
+}
+

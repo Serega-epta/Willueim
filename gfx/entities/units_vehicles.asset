@@ -3,8 +3,8 @@
 	###########
 	
 	entity = {
-		name = "motorized_entity"
-		pdxmesh = "motorized_frame_mesh"
+		name = "motorized_0_entity"
+		pdxmesh = "ural_motorized_frame_mesh"
 		
 		state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
 		state = { name = "retreat"			animation = "move" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
@@ -16,26 +16,42 @@
 		state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
 		scale = 1.0
 		
-		attach = { 	name = "vehicle"			vehicle = "generic_buhanka_vehicle_entity" }
-		attach = { 	name = "infantry"			infantry = "infantry_entity" }
+		attach = { 	name = "vehicle"			vehicle = "generic_URAL_vehicle_entity" }
+		attach = { 	name = "infantry"			infantry = "infantry_0_entity" }
 	}
 	entity = {
-		clone = "motorized_entity"
-		name = "motorized_2_entity"
+		clone = "motorized_0_entity"
+		name = "motorized_1_entity"
+		pdxmesh = "ural_motorized_frame_mesh"
 
 		scale = 1.0
 		
 		attach = { 	name = "vehicle"			vehicle = "generic_URAL_vehicle_entity" }
-		attach = { 	name = "infantry"			infantry = "infantry_2_entity" }
+		attach = { 	name = "infantry"			infantry = "infantry_1_entity" }
 	}
 	entity = {
-		clone = "motorized_entity"
-		name = "motorized_3_entity"
+		clone = "motorized_0_entity"
+		name = "motorized_2_entity"
+		pdxmesh = "kamaz_motorized_frame_mesh"
 
 		scale = 1.0
 		
 		attach = { 	name = "vehicle"			vehicle = "generic_KAMAZ_vehicle_entity" }
-		attach = { 	name = "infantry"			infantry = "infantry_3_entity" }
+		attach = { 	name = "infantry"			infantry = "infantry_2_entity" }
+	}
+
+	entity = {
+		clone = "motorized_2_entity"
+		name = "motorized_3_entity"
+		pdxmesh = "kamaz_motorized_frame_mesh"
+
+	}
+
+	entity = {
+		clone = "motorized_2_entity"
+		name = "motorized_4_entity"
+		pdxmesh = "kamaz_motorized_frame_mesh"
+
 	}
 
 	entity = {

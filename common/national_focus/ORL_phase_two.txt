@@ -17,7 +17,7 @@ focus_tree = {
 		y = 0
 		ai_will_do = { factor = 10 }
 		completion_reward = {
-			country_event = ORL.20
+			country_event = ORL_phase_two.10
 		}
 	}
 
@@ -30,7 +30,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_And_first_fire_will_flare_up }
 		completion_reward = {
-			country_event = ORL.21
+			country_event = ORL_phase_two.11
 		}
 	}
 
@@ -43,7 +43,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Fire_of_Faith }
 		completion_reward = {
-			country_event = ORL.22
+			country_event = ORL_phase_two.12
 		}
 	}
 
@@ -135,7 +135,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Think_about_homeland }
 		completion_reward = {
-			country_event = ORL.23
+			country_event = ORL_phase_two.13
 		}
 	}
 
@@ -197,7 +197,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Spit_on_losses }
 		completion_reward = {
-			country_event = ORL.24
+			country_event = ORL_phase_two.14
 		}
 	}
 
@@ -258,7 +258,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Discipline }
 		completion_reward = {
-			country_event = ORL.25
+			country_event = ORL_phase_two.15
 		}
 	}
 
@@ -287,7 +287,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_To_my_gods }
 		completion_reward = {
-			country_event = ORL.26
+			country_event = ORL_phase_two.16
 		}
 	}
 
@@ -513,6 +513,22 @@ focus_tree = {
     			target = IMP
     			type = annex_everything
 			}
+			declare_war_on = {
+    			target = NOR
+    			type = annex_everything
+			}
+			declare_war_on = {
+    			target = COR
+    			type = annex_everything
+			}
+			declare_war_on = {
+    			target = BSO
+    			type = annex_everything
+			}
+			declare_war_on = {
+    			target = PLR
+    			type = annex_everything
+			}
 			hidden_effect = {
 				IF = {
 					limit = {
@@ -543,7 +559,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		prerequisite = { focus = ORL_Kursk_Bulge }
 		completion_reward = {
-			country_event = ORL.27
+			country_event = ORL_phase_two.17
 		}
 	}
 
@@ -558,7 +574,7 @@ focus_tree = {
 		completion_reward = {
 			create_faction = Red_front
 			NAR = {
-				country_event = ORL.12
+				country_event = ORL_phase_two.2
 			}
 		}
 	}
@@ -686,7 +702,7 @@ focus_tree = {
 		prerequisite = { focus = ORL_Enemy_of_Science }
 		completion_reward = {
 			VOF = {
-				country_event = ORL.15
+				country_event = ORL_phase_two.5
 			}
 		}
 	}
