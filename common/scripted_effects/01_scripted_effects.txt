@@ -195,3 +195,19 @@ fix_all_shared_building = {
 		instant_build = yes
 	}
 }
+#чтобы получить регионы с населением более 500k
+d_lc = {
+	log = "------------------------"
+	every_state = {
+		limit = {
+			check_variable = {
+				state_population_k > 500
+			}
+			owner = {
+				tag = PREV.owner
+			}
+		}
+		log = "[?THIS.GetID]:[?THIS.GetName]"
+	}
+	log = "------------------------"
+}
