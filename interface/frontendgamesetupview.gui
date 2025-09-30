@@ -2236,6 +2236,8 @@ guiTypes = {
 			ButtonType = {
 				name = "play_button"
 				position = { x = -300 y = -100 }
+				buttonText = "FE_START"
+				buttonFont = "bender_20"
 				quadTextureSprite ="GFX_play_button"
 				Orientation = "LOWER_RIGHT"
 				#clicksound = start_game_01 # Don't add this here. I intentionally removed it because otherwise the sound is played when the client clicks on Ready/Unready button. The sound should only play when the host starts the game (or when it's SP) which is done in the code.
