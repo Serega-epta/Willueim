@@ -246,6 +246,7 @@ Unification = {
 			add_to_array = {
 				city_restored_array = FROM
 			}
+			unite_motherland = yes
 		}
 	}
 	communication_restoration = {
@@ -285,6 +286,7 @@ Unification = {
 			add_to_array = {
 				communication_restored_array = FROM
 			}
+			unite_motherland = yes
 		}
 	}
 	city_garrison = {
@@ -335,6 +337,7 @@ Unification = {
 			add_to_array = {
 				city_garrison_array = FROM
 			}
+			unite_motherland = yes
 		}
 	}
 	#Special for Leningrade
@@ -351,6 +354,7 @@ Unification = {
 			#		city_restored_array^num > 2
 			#	}
 			#}
+			#num_of_civilian_factories_available_for_projects > 49
 		}
 		target_root_trigger = {
 			#has_country_flag = Unification_flag
@@ -400,6 +404,7 @@ Unification = {
 			add_to_array = {
 				city_restored_array = FROM
 			}
+			unite_motherland = yes
 		}
 	}
 	reanimate_civil_industry = {
@@ -408,7 +413,7 @@ Unification = {
 		days_remove = 360
 		available = {
 			#has_country_flag = Unification_flag
-			#num_of_civilian_factories_available_for_projects > 50
+			#num_of_civilian_factories_available_for_projects > 49
 		}
 		modifier = {
 			civilian_factory_use = 50
@@ -437,13 +442,72 @@ Unification = {
 					}
 				}
 			}
+			set_country_flag = civil_industry_reanimate
+			unite_motherland = yes
 		}
 	}
 	water_purification = {
-
+		fire_only_once = yes
+		cost = 500
+		days_remove = 360
+		available = {
+			#has_country_flag = Unification_flag
+			#num_of_civilian_factories_available_for_projects > 49
+		}
+		modifier = {
+			civilian_factory_use = 50
+		}
+		remove_effect = {
+			set_country_flag = water_purification
+			unite_motherland = yes
+		}
+	}
+	new_railways = {
+		fire_only_once = yes
+		cost = 500
+		days_remove = 360
+		available = {
+			#has_country_flag = Unification_flag
+			#num_of_civilian_factories_available_for_projects > 49
+			custom_trigger_tooltip = {
+				tooltip = city_restored_at_least_2_tt
+				check_variable = {
+					city_restored_array^num > 1
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 50
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					195 = {
+						has_state_flag = city_restored
+					}
+					219 = {
+						has_state_flag = city_restored
+					}
+					can_build_railway = {
+						start_state = 195
+    					target_state = 219
+					}
+				}
+				build_railway = {
+					level = 1
+					start_state = 195
+    				target_state = 219
+				}
+			}
+			set_country_flag = new_railways
+			unite_motherland = yes
+		}
 	}
 
 
+
+}
+reunification_category = {
 
     Restore_communications = {
 		available = {

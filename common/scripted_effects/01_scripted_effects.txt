@@ -195,6 +195,105 @@ fix_all_shared_building = {
 		instant_build = yes
 	}
 }
+unite_motherland = {
+	if = {
+		limit = {
+			check_variable = {
+				city_restored_array^num > 3
+			}
+			check_variable = {
+				communication_restored_array^num > 3
+			}
+			check_variable = {
+				city_garrison_array^num > 3
+			}
+			check_variable = {
+				total_constructed_filtration_station > 10
+			}
+			has_country_flag = civil_industry_reanimate
+			has_country_flag = water_purification
+			has_country_flag = new_railways
+		}
+		#cosmetic
+		if = {
+			limit = {
+				OR = {
+					has_government = statesmen
+					has_government = militarists
+				}
+			}
+			set_cosmetic_tag = motherland_statesmen
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_government = humanists
+					has_government = technocracy
+					has_government = free_people
+					has_government = bandits
+				}
+			}
+			set_cosmetic_tag = motherland_humanists
+		}
+		else_if = {
+			limit = {
+				has_government = sacraments
+			}
+			set_cosmetic_tag = motherland_sacraments
+		}
+		else_if = {
+			limit = {
+				has_government = chthonism
+			}
+			set_cosmetic_tag = motherland_chthonism
+		}
+		#super event (major)
+		if = {
+			limit = {
+				tag = GLS
+			}
+			news_event = super.5
+			add_political_power = 10
+			add_stability = 0.03
+		}
+		else_if = {
+			limit = {
+				tag = ODS
+			}
+			news_event = super.6
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = sacraments
+				popularity = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				tag = ARM
+			}
+			news_event = super.7
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = statesmen
+				popularity = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				tag = LWV
+			}
+			news_event = super.8
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = sacraments
+				popularity = 0.05
+			}
+		}
+	}
+}
 #чтобы получить регионы с населением более 500k
 d_lc = {
 	log = "------------------------"
