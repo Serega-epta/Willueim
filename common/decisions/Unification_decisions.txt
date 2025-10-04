@@ -249,8 +249,7 @@ Unification = {
 			add_to_array = {
 				global.city_restored_array = FROM
 			}
-			#must be at the end of decisions!
-			finish_unification = yes
+			unite_motherland = yes
 		}
 	}
 	communication_restoration = {
@@ -305,8 +304,7 @@ Unification = {
 			add_to_array = {
 				global.communication_restored_array = FROM
 			}
-			#must be at the end of decisions!
-			finish_unification = yes
+			unite_motherland = yes
 		}
 	}
 	city_garrison = {
@@ -364,8 +362,7 @@ Unification = {
 			add_to_array = {
 				global.city_garrison_array = FROM
 			}
-			#must be at the end of decisions!
-			finish_unification = yes
+			unite_motherland = yes
 		}
 	}
 	#Special for Leningrade
@@ -432,6 +429,7 @@ Unification = {
 			add_to_array = {
 				global.city_restored_array = FROM
 			}
+			unite_motherland = yes
 		}
 		#must be at the end of decisions!
 		finish_unification = yes
@@ -472,8 +470,7 @@ Unification = {
 				}
 			}
 			set_global_flag = civil_industry_reanimated
-			#must be at the end of decisions!
-			finish_unification = yes
+			unite_motherland = yes
 		}
 	}
 	new_railway_system_moscow = {
@@ -502,13 +499,13 @@ Unification = {
 			add_to_variable = {
 				global.railway_system_num = 1
 			}
-			#must be at the end of decisions!
-			finish_unification = yes
+			unite_motherland = yes
 		}
 	}
 	water_purification = {
 		fire_only_once = yes
 		cost = 500
+		days_remove = 90
 		available = {
 			hidden_trigger = {
 				#has_country_flag = Unification_flag
@@ -523,11 +520,14 @@ Unification = {
 				type = filtration_station
 				value > 10
 			}
+			num_of_civilian_factories_available_for_projects > 49
+		}
+		modifier = {
+			civilian_factory_use = 50
 		}
 		remove_effect = {
 			set_global_flag = water_purified
-			#must be at the end of decisions!
-			finish_unification = yes
+			unite_motherland = yes
 		}
 	}
 }
