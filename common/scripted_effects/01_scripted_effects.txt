@@ -195,17 +195,93 @@ fix_all_shared_building = {
 		instant_build = yes
 	}
 }
+finish_unification = {
+	if = {
+		limit = {
+			check_variable = {
+				global.city_restored_array^num > 5
+			}
+			check_variable = {
+				global.communication_restored_array^num > 12
+			}
+			check_variable = {
+				global.city_garrison_array^num > 5
+			}
+			check_variable = {
+				global.railway_system_num > 0
+			}
+			has_global_flag = water_purified
+			has_global_flag = civil_industry_reanimated
+		}
+		if = {
+			limit = {
+				tag = GLS
+			}
+			news_event = super.5
+			add_political_power = 10
+			add_stability = 0.03
+		}
+		else_if = {
+			limit = {
+				tag = ODS
+			}
+			news_event = super.6
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = sacraments
+				popularity = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				tag = ARM
+			}
+			news_event = super.7
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = statesmen
+				popularity = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				tag = LWV
+			}
+			news_event = super.8
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = sacraments
+				popularity = 0.05
+			}
+		}
+	}
+}
 #чтобы получить регионы с населением более 500k
 d_lc = {
 	log = "------------------------"
 	every_state = {
 		limit = {
 			check_variable = {
-				state_population_k > 500
+				state_population_k < 350
 			}
-			owner = {
-				tag = PREV.owner
+			check_variable = {
+				state_population_k > 300
 			}
+			meta_trigger = {
+				text = {
+					owner = {
+						tag = [T]
+						NOT = {
+							tag = BLS
+						}
+					}
+				}
+				T = "[?owner.GetTag]"
+			}
+			
 		}
 		log = "[?THIS.GetID]:[?THIS.GetName]"
 	}
