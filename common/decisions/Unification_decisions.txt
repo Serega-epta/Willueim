@@ -209,6 +209,11 @@ Unification = {
 			civilian_factory_use = 20
 		}
 		remove_effect = {
+			custom_effect_tooltip = change_Motherland_tt
+			add_to_variable = {
+				global.monthly_population_var = 0.24
+				tooltip = monthly_population_tt
+			}
 			FROM = {
 				#if for tooltip
 				if = {
@@ -356,6 +361,11 @@ Unification = {
 			production_factory_max_efficiency_factor = -0.1
 		}
 		remove_effect = {
+			custom_effect_tooltip = change_Motherland_tt
+			add_to_variable = {
+				global.weekly_manpower_var = 500
+				tooltip = weekly_manpower_tt
+			}
 			FROM = {
 				set_state_flag = city_garrison_set
 			}
@@ -388,6 +398,11 @@ Unification = {
 			civilian_factory_use = 50
 		}
 		remove_effect = {
+			custom_effect_tooltip = change_Motherland_tt
+			add_to_variable = {
+				global.monthly_population_var = 0.24
+				tooltip = monthly_population_tt
+			}
 			FROM = {
 				custom_override_tooltip = {
 					tooltip = {

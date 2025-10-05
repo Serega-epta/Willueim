@@ -2,7 +2,15 @@ on_actions = {
 	on_startup = {
 		#we need initial scope to operate
 		1 = {
-			
+			set_variable = {
+				global.monthly_population_var = -0.9
+			}
+			set_variable = {
+				global.production_speed_industry_factor_var = -0.5
+			}
+			set_variable = {
+				global.production_speed_buildings_factor_var = -0.25
+			}
 		}
 	}
 }

@@ -19,17 +19,20 @@ city_restored = {
 }
 Motherland_Then_now_henceforth = {
 	icon = GFX_impassable_icon
-	monthly_population = global.monthly_population_var
-	weekly_manpower = global.weekly_manpower_var
+	enable = { always = yes }
+	monthly_population = global.monthly_population_var	#initial value -0.9
+	weekly_manpower = global.weekly_manpower_var		#initial value 0
 
-	production_speed_industrial_complex_factor = global.production_speed_industrial_complex_factor_var
-	production_speed_infrastructure_factor = global.production_speed_infrastructure_factor_var
-	production_speed_arms_factory_factor = global.production_speed_arms_factory_factor_var
-	production_speed_synthetic_refinery_factor = global.production_speed_synthetic_refinery_factor_var
-	production_speed_fuel_silo_factor = global.production_speed_fuel_silo_factor_var
+	#initial value -0.5
+	production_speed_industrial_complex_factor = global.production_speed_industry_factor_var
+	production_speed_infrastructure_factor = global.production_speed_industry_factor_var
+	production_speed_arms_factory_factor = global.production_speed_industry_factor_var
+	production_speed_synthetic_refinery_factor = global.production_speed_industry_factor_var
+	production_speed_fuel_silo_factor = global.production_speed_industry_factor_var
 
+	#initial value -0.25
 	production_speed_buildings_factor = global.production_speed_buildings_factor_var
 
-	required_garrison_factor = global.required_garrison_factor_var
+	required_garrison_factor = global.required_garrison_factor_var	#initial value 0.5
 	compliance_growth_on_our_occupied_states = global.compliance_growth_on_our_occupied_states_var
 }
