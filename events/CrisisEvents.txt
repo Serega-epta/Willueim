@@ -1,5 +1,5 @@
-add_namespace = roh_crisis
-
+add_namespace = roh_crisis #начитают кризисы
+add_namespace = roh_crisis_info #не начинают кризисы, но посвяшены им
 
 country_event = {
 	
@@ -119,6 +119,10 @@ country_event = {
 	option = {
 		name = roh_crisis.3.a 
 		hidden_effect = {
+			goto_state = 219
+			launch_nuke = {
+    			province = 6380
+			}
 			POL = {
 				transfer_state = 85
 				transfer_state = 807
@@ -474,6 +478,21 @@ country_event = {
     				}
 				}
 				division_template = {
+					name = "Panzergrenadiere"
+					division_names_group = PEKHOTNAYA_GRUPPA_01
+					regiments = {
+						motopechotanagruzovikah = { x = 0 y = 0 }
+						motopechotanagruzovikah = { x = 0 y = 1 }
+						motopechotanabtr = { x = 1 y = 1 }
+						motopechotanabtr = { x = 1 y = 1 }
+					}
+					priority = 1
+   					support = {
+        				stvol_art_sup = { x = 0 y = 0 }
+        				engineer = { x = 0 y = 1 }
+    				}
+				}
+				division_template = {
 					name = "ABC-Abwehrtruppe"
 					division_names_group = PEKHOTNAYA_GRUPPA_01
 					regiments = {
@@ -495,12 +514,19 @@ country_event = {
 					create_unit = {
 						division = "name = \"Infantry brigade\" division_template = \"Infantry brigade\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
 						owner = GER
-						count = 200
+						count = 180
 					}
 				}
 				capital_scope = {
 					create_unit = {
 						division = "name = \"Cavalry Division\" division_template = \"Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+						owner = GER
+						count = 20
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Panzergrenadiere\" division_template = \"Panzergrenadiere\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
 						owner = GER
 						count = 20
 					}
@@ -553,6 +579,91 @@ country_event = {
 					type = annex_everything
 				}
 			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = roh_crisis_info.1 
+	title = roh_crisis_info.1.t 
+	desc = roh_crisis_info.1.d 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = roh_crisis_info.1.a 
+		
+		hidden_effect = {
+			country_event = {
+    			id = roh_crisis_info.2
+    			days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = roh_crisis_info.2 
+	title = roh_crisis_info.2.t 
+	desc = roh_crisis_info.2.d 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = roh_crisis_info.2.a 
+		
+		hidden_effect = {
+			country_event = {
+    			id = roh_crisis_info.3
+    			days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = roh_crisis_info.3 
+	title = roh_crisis_info.3.t 
+	desc = roh_crisis_info.3.d 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = roh_crisis_info.3.a 
+		
+		hidden_effect = {
+			country_event = {
+    			id = roh_crisis_info.4
+    			days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = roh_crisis_info.4 
+	title = roh_crisis_info.4.t 
+	desc = roh_crisis_info.4.d 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = roh_crisis_info.4.a 
+		
+		hidden_effect = {
+			country_event = roh_crisis.3
 		}
 	}
 }
