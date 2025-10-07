@@ -1,3 +1,4 @@
+@select_model_min_population_k = 100
 scripted_gui = {
 	Okno_gosustroistva = {
 		context_type = player_context
@@ -77,6 +78,23 @@ scripted_gui = {
 			}				
 		}
 	}
+	government_manager_selection_possible_alert = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "government_manager_selection_possible_alert"
+		visible = {
+			set_temp_variable = {
+				reform_points_for_upgrade = 20
+			}
+			goverment_system_can_be_upgraded = yes
+			check_variable = {
+				max_manpower_k > @select_model_min_population_k
+			}
+			check_variable = {
+				selected_government_system = 0
+			}
+		}
+	}
 	#vars: reform_points
 	menshikov_system_tree = {
 		context_type = player_context
@@ -100,6 +118,17 @@ scripted_gui = {
 					reform_points_for_upgrade = 20
 				}
 				goverment_system_can_be_upgraded = yes
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = population_k_required_tt
+						NUM = {
+							localization_key = @select_model_min_population_k
+						}
+					}
+					check_variable = {
+						max_manpower_k > @select_model_min_population_k
+					}
+				}
 			}
 			materials_science_button_click_enabled = {
 				if = {
@@ -927,6 +956,17 @@ scripted_gui = {
 					reform_points_for_upgrade = 20
 				}
 				goverment_system_can_be_upgraded = yes
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = population_k_required_tt
+						NUM = {
+							localization_key = @select_model_min_population_k
+						}
+					}
+					check_variable = {
+						max_manpower_k > @select_model_min_population_k
+					}
+				}
 			}
 			foundation_of_the_past_button_click_enabled = {
 				if = {
@@ -1617,6 +1657,17 @@ scripted_gui = {
 					reform_points_for_upgrade = constant:government_upgrade_cost.paltry
 				}
 				goverment_system_can_be_upgraded = yes
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = population_k_required_tt
+						NUM = {
+							localization_key = @select_model_min_population_k
+						}
+					}
+					check_variable = {
+						max_manpower_k > @select_model_min_population_k
+					}
+				}
 			}
 			common_duty_common_law_button_click_enabled = {
 				if = {

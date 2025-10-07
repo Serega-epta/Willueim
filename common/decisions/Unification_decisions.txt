@@ -214,6 +214,10 @@ Unification = {
 				global.monthly_population_var = 0.24
 				tooltip = monthly_population_tt
 			}
+			add_to_variable = {
+				global.weekly_manpower_var = FROM.state_population_k
+				tooltip = weekly_manpower_tt
+			}
 			FROM = {
 				#if for tooltip
 				if = {
@@ -363,8 +367,16 @@ Unification = {
 		remove_effect = {
 			custom_effect_tooltip = change_Motherland_tt
 			add_to_variable = {
-				global.weekly_manpower_var = 500
+				global.weekly_manpower_var = -50
 				tooltip = weekly_manpower_tt
+			}
+			add_to_variable = {
+				global.required_garrison_factor_var = -0.2
+				tooltip = required_garrison_factor_tt
+			}
+			add_to_variable = {
+				global.resistance_target_var = -0.2
+				tooltip = resistance_target_tt
 			}
 			FROM = {
 				set_state_flag = city_garrison_set
