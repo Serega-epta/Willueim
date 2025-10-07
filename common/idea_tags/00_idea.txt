@@ -24,16 +24,17 @@ idea_categories = {
 		cost = 1000
 		removal_cost = 0
 	}
-	military_staff = {
-		#character_slot = army_chief 
-		#character_slot = navy_chief 
-		#character_slot = air_chief
-		#character_slot = high_command
-		#character_slot = high_command
-		#character_slot = high_command
-		# must be overridden
-		ledger = invalid
-		cost = 150
+	advisors = {
+		character_slot = advisor
+		character_slot = advisor
+		character_slot = advisor
+		character_slot = advisor
+		character_slot = army_chief 
+		character_slot = navy_chief
+		character_slot = air_chief
+		character_slot = high_command
+		ledger = civilian
+		cost = 100
 		removal_cost = 0
 	}
 	academy_spirit = {
@@ -59,25 +60,31 @@ idea_categories = {
 	}
 	naval_academy_spirit = {
 		type = navy_spirit
-		cost = 25
-		politics_tab = no
+		cost = 20
+		removal_cost = -1	
+		politics_tab = no	
 		ledger = hidden
 		slot = naval_academy_spirit
 	}
+
 	navy_spirit = {
 		type = navy_spirit
-		cost = 50
-		politics_tab = no
+		cost = 35
+		removal_cost = -1	
+		politics_tab = no		
 		ledger = hidden
 		slot = navy_spirit
 	}
+
 	naval_command_spirit = {
-		type = navy_spirit
-		cost = 75
-		politics_tab = no
+		type = navy_spirit	
+		cost = 50
+		removal_cost = -1		
+		politics_tab = no	
 		ledger = hidden
 		slot = naval_command_spirit
 	}
+
 	air_force_academy_spirit = {
 		type = air_spirit
 		cost = 25
@@ -101,15 +108,7 @@ idea_categories = {
 	}
 }
 slot_ledgers = {
-	Chief_of_Army = army
-	Chief_of_Navy = navy
-	Chief_of_Airforce = air
-	armoured_contractor = army
-	military_contractor = army
-	naval_contractor = navy
-	air_contractor = air
-	industrial_contractor = civilian
-	# must be overridden
-	Chief_of_Staff = invalid
-	mobilization_laws = civilian
+	army_chief = army
+	navy_chief = navy
+	air_chief = air
 }
