@@ -77,6 +77,76 @@ scripted_gui = {
 				}	
 			}				
 		}
+		ai_enabled = {
+			always = yes
+		}
+		ai_test_interval = 168
+		ai_test_variance = 0
+		ai_max_weight_taken_per_test = 1
+		ai_weights = {
+			BUTTON_Open_okno_military_system_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						#open desired ideology menu
+						OR = {
+							has_government = free_people
+							has_government = technocracy
+							has_government = humanists
+						}
+						add = 100
+					}
+					modifier = {
+						#don`t close menu if already selected
+						check_variable = { 
+							gos_usroistvo > 0
+						}
+						factor = 0
+					}
+				}
+			}
+			BUTTON_Open_okno_civil_system_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						#open desired ideology menu
+						OR = {
+							has_government = statesmen
+							has_government = militarists
+							has_government = bandits
+						}
+						add = 100
+					}
+					modifier = {
+						#don`t close menu if already selected
+						check_variable = { 
+							gos_usroistvo > 0
+						}
+						factor = 0
+					}
+				}
+			}
+			BUTTON_Open_okno_ststegos_system_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						#open desired ideology menu
+						OR = {
+							has_government = chthonism
+							has_government = sacraments
+						}
+						add = 100
+					}
+					modifier = {
+						#don`t close menu if already selected
+						check_variable = { 
+							gos_usroistvo > 0
+						}
+						factor = 0
+					}
+				}
+			}
+		}
 	}
 	government_manager_selection_possible_alert = {
 		context_type = player_context
@@ -115,7 +185,7 @@ scripted_gui = {
 			}
 			select_model_button_click_enabled = {
 				set_temp_variable = {
-					reform_points_for_upgrade = 20
+					reform_points_for_upgrade = 0
 				}
 				goverment_system_can_be_upgraded = yes
 				custom_override_tooltip = {
@@ -931,6 +1001,224 @@ scripted_gui = {
 			}
 			humanism_stronghold_button_click = {
 				humanism_stronghold_effect = yes
+			}
+		}
+		ai_enabled = {
+			always = yes
+		}
+		ai_test_interval = 168
+		ai_test_variance = 0
+		ai_max_weight_taken_per_test = 1
+		ai_weights = {
+			select_model_button_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						#select desired ideology
+						OR = {
+							has_government = free_people
+							has_government = technocracy
+							has_government = humanists
+						}
+						add = 100
+					}
+				}
+			}
+			materials_science_button_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						steel < 5
+						add = 25
+					}
+					modifier = {
+						steel < 10
+						add = 50
+					}
+					modifier = {
+						steel < 15
+						add = 75
+					}
+					modifier = {
+						OR = {
+							aluminium < 0
+							tungsten < 0
+							chromium < 0
+							rubber < 0
+						}
+						add = 10
+					}
+					modifier = {
+						OR = {
+							aluminium < 5
+							tungsten < 5
+							chromium < 5
+							rubber < 5
+						}
+						add = 10
+					}
+				}
+			}
+			dense_layout_button_click = {
+				ai_will_do = {
+					base = 100
+				}
+			}
+			lower_streams_button_click = {
+				ai_will_do = {
+					base = 100
+				}
+			}
+			upper_streams_button_click = {
+				ai_will_do = {
+					base = 100
+				}
+			}
+			our_future_button_click = {
+				ai_will_do = {
+					base = 100
+				}
+			}
+			vocational_technical_schools_button_click = {
+				ai_will_do = {
+					base = 100
+				}
+			}
+			working_faculties_button_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						steel < 5
+						add = 25
+					}
+					modifier = {
+						steel < 10
+						add = 50
+					}
+					modifier = {
+						steel < 15
+						add = 75
+					}
+					modifier = {
+						OR = {
+							aluminium < 0
+							tungsten < 0
+							chromium < 0
+							rubber < 0
+						}
+						add = 10
+					}
+					modifier = {
+						OR = {
+							aluminium < 5
+							tungsten < 5
+							chromium < 5
+							rubber < 5
+						}
+						add = 10
+					}
+				}
+			}
+			labor_veterans_button_click = {
+				ai_will_do = {
+					base = 100
+				}
+			}
+			labor_heros_button_click = {
+				ai_will_do = {
+					base = 100
+				}
+			}
+			industrial_cooperation_button_click = {
+				ai_will_do = {
+					base = 100
+				}
+			}
+			constructed_for_life_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			love_thy_neighbour_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			local_wing_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			strict_regulations_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			flexible_regulations_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			gardening_partnerships_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			rural_units_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			adversarial_law_button_click = {
+				base = 0
+				modifier = {
+					add = num_subjects
+				}
+				modifier = {
+					factor = 75
+				}
+			}
+			fair_competition_codex_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			outsourcing_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			trade_initiative_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			GOST_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			fullstack_consumtion_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+				}
+			}
+			humanism_stronghold_button_click = {
+				ai_will_do = {
+					base = 100
+				}
 			}
 		}
 	}
