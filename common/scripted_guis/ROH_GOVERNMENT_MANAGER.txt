@@ -1,3 +1,4 @@
+#By Pasha-2033
 @select_model_min_population_k = 100
 scripted_gui = {
 	Okno_gosustroistva = {
@@ -99,7 +100,7 @@ scripted_gui = {
 					modifier = {
 						#don`t close menu if already selected
 						check_variable = { 
-							gos_usroistvo > 0
+							gos_usroistvo = 1
 						}
 						factor = 0
 					}
@@ -120,7 +121,7 @@ scripted_gui = {
 					modifier = {
 						#don`t close menu if already selected
 						check_variable = { 
-							gos_usroistvo > 0
+							gos_usroistvo = 2
 						}
 						factor = 0
 					}
@@ -140,7 +141,7 @@ scripted_gui = {
 					modifier = {
 						#don`t close menu if already selected
 						check_variable = { 
-							gos_usroistvo > 0
+							gos_usroistvo = 3
 						}
 						factor = 0
 					}
@@ -152,16 +153,21 @@ scripted_gui = {
 		context_type = player_context
 		parent_window_token = top_bar
 		window_name = "government_manager_selection_possible_alert"
-		visible = {
-			set_temp_variable = {
-				reform_points_for_upgrade = 20
+		triggers = {
+			select_model_alert_visible = {
+				set_temp_variable = {
+					reform_points_for_upgrade = 20
+				}
+				goverment_system_can_be_upgraded = yes
+				check_variable = {
+					max_manpower_k > @select_model_min_population_k
+				}
+				check_variable = {
+					selected_government_system = 0
+				}
 			}
-			goverment_system_can_be_upgraded = yes
-			check_variable = {
-				max_manpower_k > @select_model_min_population_k
-			}
-			check_variable = {
-				selected_government_system = 0
+			upgrade_model_alert_visible = {
+				always = no	#TODO
 			}
 		}
 	}
@@ -185,7 +191,7 @@ scripted_gui = {
 			}
 			select_model_button_click_enabled = {
 				set_temp_variable = {
-					reform_points_for_upgrade = 0
+					reform_points_for_upgrade = 20
 				}
 				goverment_system_can_be_upgraded = yes
 				custom_override_tooltip = {
@@ -1022,6 +1028,12 @@ scripted_gui = {
 						}
 						add = 100
 					}
+					modifier = {
+						check_variable = {
+							selected_government_system > 0
+						}
+						factor = 0
+					}
 				}
 			}
 			materials_science_button_click = {
@@ -1057,31 +1069,86 @@ scripted_gui = {
 						}
 						add = 10
 					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = materials_science_idea
+						}
+						factor = 0
+					}
 				}
+				
 			}
 			dense_layout_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = dense_layout_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			lower_streams_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = lower_streams_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			upper_streams_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = upper_streams_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			our_future_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = our_future_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			vocational_technical_schools_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = vocational_technical_schools_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			working_faculties_button_click = {
@@ -1117,107 +1184,271 @@ scripted_gui = {
 						}
 						add = 10
 					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = working_faculties_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			labor_veterans_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = labor_veterans_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			labor_heros_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = labor_heros_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			industrial_cooperation_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = industrial_cooperation_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			constructed_for_life_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = constructed_for_life_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			love_thy_neighbour_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = love_thy_neighbour_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			local_wing_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = local_wing_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			strict_regulations_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = strict_regulations_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			flexible_regulations_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = flexible_regulations_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			gardening_partnerships_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = gardening_partnerships_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			rural_units_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = rural_units_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			adversarial_law_button_click = {
-				base = 0
-				modifier = {
-					add = num_subjects
-				}
-				modifier = {
-					factor = 75
+				ai_will_do = {
+					base = 0
+					modifier = {
+						add = num_subjects
+					}
+					modifier = {
+						factor = 75
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = adversarial_law_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			fair_competition_codex_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = fair_competition_codex_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			outsourcing_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = outsourcing_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			trade_initiative_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = trade_initiative_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			GOST_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = GOST_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			fullstack_consumtion_button_click = {
 				#TODO: May have more complicated logic, but development is linear
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = fullstack_consumtion_idea
+						}
+						factor = 0
+					}
 				}
 			}
 			humanism_stronghold_button_click = {
 				ai_will_do = {
 					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = humanism_stronghold_idea
+						}
+						factor = 0
+					}
 				}
 			}
 		}
@@ -1922,6 +2153,391 @@ scripted_gui = {
 				sweat_and_blood_effect = yes
 			}
 		}
+		ai_enabled = {
+			always = yes
+		}
+		ai_test_interval = 168
+		ai_test_variance = 0
+		ai_max_weight_taken_per_test = 1
+		ai_weights = {
+			select_model_button_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						#select desired ideology
+						OR = {
+							has_government = statesmen
+							has_government = militarists
+							has_government = bandits
+						}
+						add = 100
+					}
+					modifier = {
+						check_variable = {
+							selected_government_system > 0
+						}
+						factor = 0
+					}
+				}
+			}
+			foundation_of_the_past_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = foundation_of_the_past_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			behind_the_scenes_button_click = {
+				ai_will_do = {
+					base = 50
+					modifier = {
+						has_idea = without_any_hassle_idea
+						add = 100
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = behind_the_scenes_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			without_any_hassle_button_click = {
+				#we need reform_points go brrrrrrrr!
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = without_any_hassle_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			our_home_is_our_fortress_button_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						has_idea = without_any_hassle_idea
+						add = 100
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = our_home_is_our_fortress_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			rural_militia_button_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						add = ai_wants_divisions
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = rural_militia_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			industrial_militia_button_click = {
+				ai_will_do = {
+					base = 50
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = industrial_militia_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			land_river_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = land_river_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			scraping_down_the_bottom_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = scraping_down_the_bottom_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			in_a_blink_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = in_a_blink_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			oprichnina_hand_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						check_variable = {
+							surrender_progress > 0.5
+						}
+						factor = 1.5
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = oprichnina_hand_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			peripheral_cleansing_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						add = ai_wants_divisions
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = peripheral_cleansing_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			destroy_anomalies_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = destroy_anomalies_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			fighting_for_families_button_click = {
+				ai_will_do = {
+					base = 50
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = fighting_for_families_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			military_loans_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						has_war = yes
+						factor = 1.5
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = military_loans_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			from_stones_and_sticks_button_click = {
+				ai_will_do = {
+					base = 10
+					modifier = {
+						steel < 5
+						add = 25
+					}
+					modifier = {
+						steel < 10
+						add = 50
+					}
+					modifier = {
+						steel < 15
+						add = 75
+					}
+					modifier = {
+						OR = {
+							aluminium < 0
+							tungsten < 0
+							chromium < 0
+							rubber < 0
+						}
+						add = 10
+					}
+					modifier = {
+						OR = {
+							aluminium < 5
+							tungsten < 5
+							chromium < 5
+							rubber < 5
+						}
+						add = 10
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = from_stones_and_sticks_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			autonomius_bataries_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = autonomius_bataries_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			controlled_bataries_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						has_defensive_war = yes
+						factor = 3
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = controlled_bataries_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			firstborn_of_sparta_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = firstborn_of_sparta_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			nerves_to_the_limit_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = nerves_to_the_limit_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			steel_grip_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						has_war = yes
+						factor = 2
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = steel_grip_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			sweat_and_blood_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = sweat_and_blood_idea
+						}
+						factor = 0
+					}
+				}
+			}
+		}
 	}
 	naumov_system_tree = {
 		context_type = player_context
@@ -2619,6 +3235,389 @@ scripted_gui = {
 			}
 			body_limits_button_click = {
 				body_limits_effect = yes
+			}
+		}
+		ai_enabled = {
+			always = yes
+		}
+		ai_test_interval = 168
+		ai_test_variance = 0
+		ai_max_weight_taken_per_test = 1
+		ai_weights = {
+			select_model_button_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						#select desired ideology
+						OR = {
+							has_government = chthonism
+							has_government = sacraments
+						}
+						add = 100
+					}
+					modifier = {
+						check_variable = {
+							selected_government_system > 0
+						}
+						factor = 0
+					}
+				}
+			}
+			common_duty_common_law_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = common_duty_common_law_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			existence_essence_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						#this branch will grand a lot of stability
+						has_stability < 0.3
+						factor = 4
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = existence_essence_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			existence_horror_button_click = {
+				ai_will_do = {
+					base = 200
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = existence_horror_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			caring_eye_button_click = {
+				ai_will_do = {
+					base = 200
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = caring_eye_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			interesting_observation_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = interesting_observation_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			technological_revolution_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = technological_revolution_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			cultural_revolution_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						#this will grand a stability & war support
+						OR = {
+							has_stability < 0.3
+							has_war_support < 0.3
+						}
+						factor = 4
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = cultural_revolution_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			assured_survival_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = assured_survival_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			proportionate_fee_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = proportionate_fee_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			flawless_soldier_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = flawless_soldier_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			all_describing_formula_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = all_describing_formula_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			primary_broth_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						steel < 5
+						add = 25
+					}
+					modifier = {
+						steel < 10
+						add = 50
+					}
+					modifier = {
+						steel < 15
+						add = 75
+					}
+					modifier = {
+						OR = {
+							aluminium < 0
+							tungsten < 0
+							chromium < 0
+							rubber < 0
+						}
+						add = 10
+					}
+					modifier = {
+						OR = {
+							aluminium < 5
+							tungsten < 5
+							chromium < 5
+							rubber < 5
+						}
+						add = 10
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = primary_broth_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			flowers_of_life_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = flowers_of_life_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			their_life_plans_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = their_life_plans_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			cast_aside_doubts_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						#this will grand a stability & war support
+						OR = {
+							has_stability < 0.3
+							has_war_support < 0.3
+						}
+						factor = 4
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = cast_aside_doubts_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			potential_realization_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = potential_realization_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			order_in_mind_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						has_war = yes
+						factor = 4
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = order_in_mind_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			unity_by_blood_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = unity_by_blood_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			man_and_consciousness_button_click = {
+				#TODO: May have more complicated logic, but development is linear
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = man_and_consciousness_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			cognitive_warfare_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						has_war = yes
+						factor = 4
+					}
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = cognitive_warfare_idea
+						}
+						factor = 0
+					}
+				}
+			}
+			body_limits_button_click = {
+				ai_will_do = {
+					base = 100
+					modifier = {
+						OR = {
+							check_variable = {
+								selected_government_system = 0
+							}
+							has_idea = body_limits_idea
+						}
+						factor = 0
+					}
+				}
 			}
 		}
 	}
