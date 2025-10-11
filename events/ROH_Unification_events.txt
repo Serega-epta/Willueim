@@ -1,8 +1,64 @@
+add_namespace = unification_negotiations
 add_namespace = Unification_event
 add_namespace = Unification_raid_event
 add_namespace = Unification_start_campaign_event
 add_namespace = Force_peace_event
 
+
+#Мирное присоединение/аншлюз
+country_event = {
+	id = unification_negotiations.1
+	title = unification_negotiations.1.t
+	desc = unification_negotiations.1.d
+	is_triggered_only = yes
+	option = {
+		#мы не согласны
+		name = unification_negotiations.1.a
+		ai_chance = {
+			base = 500
+		}
+		FROM = {
+			country_event = {
+				id = unification_negotiations.2
+			}
+		}
+		set_country_flag = anschluss_denied_@FROM
+	}
+	option = {
+		#Нет смысла бессмысленому сопротивлению
+		name = unification_negotiations.1.b
+		custom_override_tooltip = {
+			tooltip = you_will_be_annexed_tt
+			FROM = {
+				annex_country = {
+    				target = ROOT
+    				transfer_troops = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				is_subject_of = FROM
+				factor = 1.5
+			}
+			modifier = {
+				is_major = yes
+				factor = 0.5
+			}
+		}
+	}
+}
+#Мирное присоединение/аншлюз - отказ
+country_event = {
+	id = unification_negotiations.2
+	title = unification_negotiations.2.t
+	desc = unification_negotiations.2.d
+	is_triggered_only = yes
+	option = {
+		name = unification_negotiations.2.a
+	}
+}
 
 #Умирающий мир.
 news_event = {
@@ -31,7 +87,6 @@ news_event = {
 			}
 			add_ideas = Time_goes_by
 			set_country_flag = Unification_campaign_flag
-			set_country_flag = integration_block
 		}
 	}
 }

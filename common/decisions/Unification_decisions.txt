@@ -1,423 +1,122 @@
+@unification_start_date = 2200.1.1 #2027.1.1
 Unification_campaign = {
-
-	Set_raid = {
-		visible = {
-		}
-		available = {
-			has_war = no
-			NOT = {
-				has_idea = Successful_raid
+	peaceful_unification_campaign = {
+		target_root_trigger = {
+			#visible doesn`t disable available trigger
+			hidden_trigger = {
+				has_country_flag = Unification_campaign_flag
 			}
 		}
 		target_array = neighbors_owned
 		target_trigger = {
 			FROM = {
-				AND = {
-					is_neighbor_of = ROOT
-					has_war = no
-					NOT = {
-						tag = BLS
-						tag = ANR
-						tag = WTR
-						tag = WEC
-						tag = SAC
-						tag = SOC
-					}
-				}
-			}
-		}
-		highlight_states = {
-			highlight_states_trigger = {		
-				is_capital = yes
-				is_owned_by = FROM
-			}
-		}
-		cost = 50
-		days_remove = 15
-		fire_only_once = yes
-		complete_effect = {
-			FROM = {
-				random_owned_controlled_state = {
-					limit = {
-						any_neighbor_state = {
-							is_fully_controlled_by = ROOT
-						}
-					}
-					set_variable = { PREV.defender_state_vs_@ROOT = THIS }
-					set_state_flag = defender_state
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					any_neighbor_state = {
-						is_fully_controlled_by = FROM
-						has_state_flag = defender_state
-					}
-				}
-				set_variable = { FROM.attacker_state_vs_@ROOT = THIS }
-				
-			}
-		}
-		remove_effect = {
-			start_border_war = {
-    			change_state_after_war = no
-    			attacker = {
-        			state = var:FROM.attacker_state_vs_@ROOT
-        			num_provinces = 1
-        			on_win = Unification_raid_event.1
-       				on_lose = Unification_raid_event.3
-        			on_cancel = Unification_raid_event.3
-    			}	
-    			defender = {
-        			state = var:FROM.defender_state_vs_@ROOT
-        			num_provinces = 1
-        			on_win = Unification_raid_event.2
-        			on_lose = Unification_raid_event.3
-        			on_cancel = Unification_raid_event.3
-    			}
-			}
-			set_border_war_data = {
-				attacker = var:FROM.defender_state_vs_@ROOT
-				defender = var:FROM.defender_state_vs_@ROOT
-				combat_width = 20
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	Force_peace = {
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				is_ai = yes
-				AND = {
-					is_neighbor_of = ROOT
+				NOT = {
 					has_war_with = ROOT
-					fighting_army_strength_ratio = {
-    					tag = ROOT
-    					ratio < 0.5
-					}
-					NOT = {
-						tag = SIL
-						tag = LWV
-            			tag = SI1
-            			tag = LPC
-            			tag = WTR
-						tag = WEC
-						tag = SAC
-						tag = SOC
-            			tag = NMG
-            			tag = ANR
-					}
+					tag = SIL #TODO
+					tag = LWV #TODO
+					has_country_flag = anschluss_denied_@ROOT
 				}
+				has_government = ROOT
+				fighting_army_strength_ratio = {
+					tag = ROOT
+					ratio < 0.5
+				}
+				unification_campaign_allowed = yes
 			}
 		}
 		cost = 50
-		fire_only_once = yes
-		complete_effect = {
-			IF = {
-				limit = {
-					has_government = ROOT
-				}
-				random_list = {
-					70 = {
-						annex_country = {
-    						target = FROM
-    						transfer_troops = yes
-						}
-						ROOT = {
-							country_event = {
-								id = Force_peace_event.1
-							}
-						}
-					}
-					30 = {
-						log = "[GetDateText]: [From.GetName]: Decision Start_campaign"
-						ROOT = {
-							country_event = {
-								id = Force_peace_event.2
-							}
-						}
-					}
-				}
-			}
-			else = {
-				random_list = {
-					40 = {
-						annex_country = {
-    						target = FROM
-    						transfer_troops = yes
-						}
-					}
-					60 = {
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	Start_campaign = {
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				AND = {
-					is_neighbor_of = ROOT
-					NOT = {
-						tag = BLS
-						tag = ANR
-						tag = WTR
-					}
-				}
-			}
-		}
-		cost = 50
-		days_remove = 15
-		complete_effect = {	
-			log = "[GetDateText]: [Root.GetName]: Decision Start_campaign"
+		days_remove = 30
+		remove_effect = {
 			FROM = {
 				country_event = {
-					id = Unification_start_campaign_event.1
+					id = unification_negotiations.1
+				}
+			}
+		}
+		ai_will_do = {
+			#bots will follow the scenario
+			base = 50
+		}
+	}
+	ultimatum_campaign = {
+		target_root_trigger = {
+			#visible doesn`t disable available trigger
+			hidden_trigger = {
+				has_country_flag = Unification_campaign_flag
+			}
+		}
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				fighting_army_strength_ratio = {
+					tag = ROOT
+					ratio < 0.5
+				}
+				NOT = {
+					has_war_with = ROOT
+					tag = SIL #TODO
+					tag = LWV #TODO
+				}
+				OR = {
+					NOT = {
+						has_government = ROOT
+					}
+					has_country_flag = anschluss_denied_@ROOT
+				}
+				unification_campaign_allowed = yes
+			}
+		}
+		cost = 75
+		war_with_on_remove = FROM
+		days_remove = 20
+		complete_effect = {
+			#prepare for war
+			hidden_effect = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = FROM
+					value = 200
+				}
+				FROM = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 200
+					}
 				}
 			}
 		}
 		remove_effect = {
 			declare_war_on = {
-    			target = FROM
-    			type = annex_everything
+				target = FROM
+				type = annex_everything
 			}
 		}
 		ai_will_do = {
-			factor = 0
-		}
-	}
-	Strength_through_unity = {
-		visible = {
-			is_major = no
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				is_ai = yes
-				AND = {
-					is_neighbor_of = ROOT
-					has_government = ROOT
-					NOT = {
-						tag = SIL
-						tag = LWV
-            			tag = SI1
-            			tag = LPC
-            			tag = WTR
-						tag = WEC
-						tag = SAC
-						tag = SOC
-            			tag = NMG
-            			tag = ANR
-					}
+			#bots will follow the scenario
+			base = 10
+			modifier = {
+				FROM = {
+					has_war = yes
 				}
+				factor = 2
 			}
-		}
-		cost = 50
-		fire_only_once = yes
-		complete_effect = {
-			random_list = {
-				90 = {
-					annex_country = {
-    					target = FROM
-    					transfer_troops = yes
+			modifier = {
+				OR = {
+					check_variable = {
+						#just prevent batle royal
+						random < 0.996
 					}
-					country_event = {
-						id = Force_peace_event.1
-					}
+					has_war = yes
+					has_decision = ultimatum_campaign
 				}
-				10 = {
-					country_event = {
-						id = Force_peace_event.2
-					}
-				}
+				factor = 0
 			}
-		}
-		ai_will_do = {
-			factor = 0
 		}
 	}
 
-	Infiltrate_the_brigade = {
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM =  {
-				has_government = bandits
-			}
-		}
-		cost = 50
-		days_remove = 20
-		fire_only_once = yes
-		remove_effect = {
-			FROM = {
-				add_opinion_modifier = {
-    				target = ROOT
-    				modifier = infiltration_opinion
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
 
-	Contacts_with_leaders = {
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				has_government = bandits
-			}
-			FROM = {
-				has_opinion_modifier = infiltration_opinion
-			}
-		}
-		cost = 50
-		days_remove = 15
-		fire_only_once = yes
-		remove_effect = {
-			FROM = {
-				add_opinion_modifier = {
-    				target = ROOT
-					modifier = Contacts_with_leaders_opinion
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
 
-	Authorities = {
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				has_government = bandits
-				has_opinion_modifier = Contacts_with_leaders_opinion
-			}
-		}
-		cost = 50
-		days_remove = 10
-		remove_effect = {
-			FROM = {
-				add_opinion_modifier = {
-    				target = ROOT
-    				modifier = Authorities_opinion
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-	Renegades_decision = {
-		visible = {
-		}
-		available = {
-			
-		}
-		target_array = neighbors_owned
-		target_trigger = {
-			FROM = {
-				has_government = bandits
-				has_opinion_modifier = Authorities_opinion
-			}
-		}
-		cost = 50
-		fire_only_once = yes
-		complete_effect = {
-			random_list = {
-				70 = {
-					ROOT = {
-						declare_war_on = {
-    						target = FROM
-    						type = annex_everything
-						}
-					}
-				}
-				30 = {
-					FROM = {
-						every_owned_state = {
-							transfer_state_to = ANR
-						}
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-	Soft_power = {
-		visible = {
-		}
-		available = {
-			has_manpower > 499
-			has_equipment = {
-				infantry_equipment > 499
-			}
-			
-		}
-		state_target = yes
-		target_trigger = {
-			FROM = {
-				is_owned_by = ANR
-			}
-		}
-		cost = 50
-		days_remove = 30
-		complete_effect = {
-			add_manpower = -500
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -500
-			}
-		}
-		remove_effect = {
-			FROM = {
-				transfer_state_to = ROOT
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
     Finnish_Unification_campaign = {
 		available = {
 			all_other_country = {
@@ -465,7 +164,13 @@ Unification_campaign = {
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			#bots will follow the scenario
+			base = 0
+			#but... if there is 2027 - we should hurry (unification)
+			modifier = {
+				date > @unification_start_date
+				add = 1000
+			}
 		}
 	}
 	Unification_deadline = {
@@ -503,575 +208,391 @@ Unification_campaign = {
 }
 
 Unification = {
-    Restore_communications = {
+	city_restoration = {
+		priority = 1000
+		targets = {
+			12		#Vidzeme
+			219		#Moscow
+			249		#Kazan
+			260		#Voronez
+			1001	#Ufa
+		}
 		available = {
-			has_railway_connection = {
-				start_province = 6380
-				target_province = 1278
-			}
-			has_railway_connection = {
-				start_province = 6380
-				target_province = 11670
-			}
-			has_railway_connection = {
-				start_province = 6380
-				target_province = 13350
-			}
-			has_railway_connection = {
-				start_province = 6380
-				target_province = 3335
-			}
-			has_railway_connection = {
-				start_province = 6380
-				target_province = 9355
-			}
-			has_railway_connection = {
-				start_province = 6380
-				target_province = 9417
-			}
-			has_railway_connection = {
-				start_province = 6380
-				target_province = 9340
-			}
-			has_railway_connection = {
-				start_province = 6380
-				target_province = 3338
+			num_of_civilian_factories_available_for_projects > 19
+			controls_state = FROM
+			FROM = {
+				filtration_station > 0
 			}
 		}
-		cost = 100
-		fire_only_once = yes
-		complete_effect = {
-			custom_effect_tooltip = Restore_communications_tt
-			add_to_variable = {
-    			var = weekly_manpower_var
-    			value = 300
-			}
-			add_to_variable = {
-    			var = monthly_population_var
-    			value = 0.2
-			}
-			subtract_from_variable = {
-    			var = production_speed_infrastructure_factor_var
-    			value = 0.5
-			}
-			set_country_flag = Restore_communications_flag
+		target_root_trigger = {
+			has_country_flag = Unification_flag
 		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-    Distribute_production = {
-		available = {
-			
-		}
-		cost = 0
-		fire_only_once = yes
-		days_remove = 120
-		complete_effect = {
-			set_variable = {
-				var = num_of_industrial_complex_var
-				value = num_of_factories
-			}
-			multiply_variable = {
-    			var = num_of_industrial_complex_var
-    			value = 0.7
-			}
-			every_owned_state = {
-				limit = {
-					num_of_industrial_complex > 0
-				}
-				random_select_amount = num_of_industrial_complex_var
-				remove_building = {
-					type = industrial_complex
-					level = 1
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = city_restored
 				}
 			}
+		}
+		state_target = yes
+		cost = 120
+		days_remove = 1
+		modifier = {
+			civilian_factory_use = 20
 		}
 		remove_effect = {
-			every_owned_state = {
-				random_select_amount = num_of_industrial_complex_var
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			custom_effect_tooltip = Distribute_production_tt
+			custom_effect_tooltip = change_Motherland_tt
 			add_to_variable = {
-    			var = weekly_manpower_var
-    			value = 200
+				global.monthly_population_var = 0.24
+				tooltip = monthly_population_tt
 			}
 			add_to_variable = {
-    			var = monthly_population_var
-    			value = 0.3
+				global.weekly_manpower_var = FROM.state_population_k
+				tooltip = weekly_manpower_tt
 			}
-			subtract_from_variable = {
-    			var = production_speed_industrial_complex_factor_var
-    			value = 0.5
-			}
-			set_country_flag = Distribute_production_flag
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-    Creation_of_garrisons = {
-		visible = {
-			NOT = {
-				has_idea = Garrisons
-			}
-		}
-		available = {
-			num_divisions_in_states = {
-				count > 4
-				states = { 1001 }
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {249 }
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {957}
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {219}
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = 214}
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {195}
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {808}
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {763}
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {891}
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {221}
-			}
-			num_divisions_in_states = {
-				count > 4
-				states = {242}
-			}
-		}
-		cost = 100
-		complete_effect = {
-			add_ideas = Garrisons
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-    Restoration_of_Moscow = {
-		available = {
-			
-		}
-		cost = 100
-		days_remove = 90
-		fire_only_once = yes
-		complete_effect = {
-			
-		}
-		remove_effect = {
-			219 = {
-				add_building_construction = {
-    				type = infrastructure
-    				level = 1
-    				instant_build = yes
+			FROM = {
+				#if for tooltip
+				if = {
+					limit = {
+						state = 219 #Москва
+						is_capital = no
+					}
+					ROOT = {
+						set_capital = {
+							state = PREV
+						}
+					}
 				}
-				add_building_construction = {
-    				type = supply_node
-    				level = 1
-    				instant_build = yes
-					province = 6380
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					set_building_level = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
 				}
-				add_core_of = ROOT
+				custom_override_tooltip = {
+					tooltip = unlock_all_building_slots_tt
+					add_extra_state_shared_building_slots = 25
+				}
+				custom_override_tooltip = {
+					tooltip = repair_all_shared_buildings_tt
+					fix_all_shared_building = yes
+				}
 				add_dynamic_modifier = {
-    				modifier = Restoration_of_Moscow_modifier
+					modifier = city_restored
+					days = 180
 				}
+				set_state_flag = city_restored
 			}
-			set_capital = {state = 219}
-			set_country_flag = Restoration_of_Moscow_flag
-		}
-		ai_will_do = {
-			factor = 0
+			add_to_array = {
+				global.city_restored_array = FROM
+			}
+			unite_motherland = yes
 		}
 	}
-
-    Fresh_water_purification = {
-		available = {
-			filtration_station > 9
+	communication_restoration = {
+		priority = 800
+		targets = {
+			12		#Vidzeme
+			219		#Moscow
+			249		#Kazan
+			260		#Voronez
+			1001	#Ufa
+			#special
+			195		#Leningrade
+			#non-strategic restoration
+			202		#Kyiv
+			206		#Minsk
+			252		#Gorky
+			398		#Perm
+			833		#Yoshkar-Ola
+			843		#Sevastopol
+			997		#Vyatka
 		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 9
+			controls_state = FROM
+			radar_station > 0
+		}
+		target_root_trigger = {
+			has_country_flag = Unification_flag
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = communication_restored
+				}
+			}
+		}
+		state_target = yes
+		cost = 25
+		days_remove = 20
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			FROM = {
+				set_state_flag = communication_restored
+				add_building_construction = {
+					type = radar_station
+    				level = 3
+    				instant_build = yes
+				}
+			}
+			add_to_array = {
+				global.communication_restored_array = FROM
+			}
+			unite_motherland = yes
+		}
+	}
+	city_garrison = {
+		priority = 900
+		targets = {
+			12		#Vidzeme
+			219		#Moscow
+			249		#Kazan
+			260		#Voronez
+			1001	#Ufa
+			#special
+			195		#Leningrade
+		}
+		state_target = yes
+		available = {
+			controls_state = FROM
+			set_temp_variable = {
+				div_num = FROM.state_population_k
+			}
+			multiply_temp_variable = {
+				div_num = 0.025
+			}
+			#divisions_in_state can`t accept temp variable in size
+			meta_trigger = {
+				text = {
+					divisions_in_state = {
+						size > [N]
+						state = FROM
+					}
+				}
+				N = "[?div_num]"
+			}
+		}
+		target_root_trigger = {
+			has_country_flag = Unification_flag
+		}
+		target_trigger = {
+			FROM = {
+				#no need for guarding ruins
+				has_state_flag = city_restored
+				NOT = {
+					has_state_flag = city_garrison_set
+				}
+			}
+		}
+		cost = 25
+		days_remove = 20
+		modifier = {
+			production_factory_max_efficiency_factor = -0.1
+		}
+		remove_effect = {
+			custom_effect_tooltip = change_Motherland_tt
+			add_to_variable = {
+				global.weekly_manpower_var = -50
+				tooltip = weekly_manpower_tt
+			}
+			add_to_variable = {
+				global.required_garrison_factor_var = -0.2
+				tooltip = required_garrison_factor_tt
+			}
+			add_to_variable = {
+				global.resistance_target_var = -0.2
+				tooltip = resistance_target_tt
+			}
+			FROM = {
+				set_state_flag = city_garrison_set
+			}
+			add_to_array = {
+				global.city_garrison_array = FROM
+			}
+			unite_motherland = yes
+		}
+	}
+	#Special for Leningrade
+	operation_nevsky = {
+		priority = 999
+		targets = { 195 }
+		state_target = yes
+		fire_only_once = yes
+		cost = 250
+		days_remove = 2
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = cities_restored_num_3_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 2
+				}
+			}
+		}
+		target_root_trigger = {
+			has_country_flag = Unification_flag
+		}
+		modifier = {
+			civilian_factory_use = 50
+		}
+		remove_effect = {
+			custom_effect_tooltip = change_Motherland_tt
+			add_to_variable = {
+				global.monthly_population_var = 0.24
+				tooltip = monthly_population_tt
+			}
+			FROM = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = city_resettlement_tt
+						NUM = 50000
+					}
+					for_each_scope_loop = {
+						array = ROOT.city_restored_array
+						add_manpower = -50000
+						PREV = {
+							add_manpower = 50000
+						}
+					}
+				}
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					set_building_level = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = unlock_all_building_slots_tt
+					add_extra_state_shared_building_slots = 25
+				}
+				custom_override_tooltip = {
+					tooltip = repair_all_shared_buildings_tt
+					fix_all_shared_building = yes
+				}
+				add_dynamic_modifier = {
+					modifier = city_restored
+					days = 180
+				}
+				set_state_flag = city_restored
+			}
+			add_to_array = {
+				global.city_restored_array = FROM
+			}
+			unite_motherland = yes
+		}
+		#must be at the end of decisions!
+		finish_unification = yes
+	}
+	reanimate_civil_industry = {
+		fire_only_once = yes
+		cost = 500
+		days_remove = 360
+		available = {
+			hidden_trigger = {
+				has_country_flag = Unification_flag
+			}
+			num_of_civilian_factories_available_for_projects > 49
+		}
+		modifier = {
+			civilian_factory_use = 50
+		}
+		remove_effect = {
+			every_controlled_state = {
+				limit = {
+					industrial_complex < 1
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				if = {
+					limit = {			
+						infrastructure < 1
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			set_global_flag = civil_industry_reanimated
+			unite_motherland = yes
+		}
+	}
+	new_railway_system_moscow = {
+		fire_only_once = yes
 		cost = 50
-		fire_only_once = yes
-		complete_effect = {
-			custom_effect_tooltip = Fresh_water_purification_tt
-			add_to_variable = {
-    			var = monthly_population_var
-    			value = 0.4
-			}
-			set_country_flag = Fresh_water_purification_flag
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-    Clear_the_red_forests_north = {
+		days_remove = 30
 		available = {
-			has_manpower > 999
-			has_equipment = {
-				suit_equipment > 999
+			hidden_trigger = {
+				has_country_flag = Unification_flag
 			}
-			has_equipment = {
-				gardener_equipment > 19
-			}
+			num_of_civilian_factories_available_for_projects > 4
+			has_full_control_of_state = 219
 		}
-		cost = 100
-		days_remove = 50
-		fire_only_once = yes
-		complete_effect = {
-			add_manpower = -1000
-			add_equipment_to_stockpile = {
-				type = suit_equipment
-				amount = -1000
-			}
-			add_equipment_to_stockpile = {
-				type = gardener_equipment
-				amount = -20
-			}
+		modifier = {
+			civilian_factory_use = 5
 		}
 		remove_effect = {
-			add_stability = 0.1
-			custom_effect_tooltip = Clear_the_red_forests_tt
-			add_to_variable = {
-    			var = production_speed_buildings_factor_var
-    			value = 0.02
+			build_railway = {
+				level = 5
+				path = { 3259 6380 6414 9348 }
+			}
+			build_railway = {
+				level = 5
+				path = { 6380 3391 3327 3263 382 }
 			}
 			add_to_variable = {
-    			var = red_forest_expiditions
-    			value = 1
-			}		
-			IF = {
-				limit = {
-					check_variable = {
-						red_forest_expiditions = 5
-					}
-				}
-				add_to_variable = {
-    				var = weekly_manpower_var
-    				value = 2000
-				}
-				clr_country_flag = integration_block
-				set_country_flag = Clear_the_red_forests_flag
+				global.railway_system_num = 1
 			}
-		}
-		ai_will_do = {
-			factor = 0
+			unite_motherland = yes
 		}
 	}
-
-	Clear_the_red_forests_south = {
-		available = {
-			has_manpower > 999
-			has_equipment = {
-				suit_equipment > 999
-			}
-			has_equipment = {
-				gardener_equipment > 19
-			}
-		}
-		cost = 100
-		days_remove = 50
+	water_purification = {
 		fire_only_once = yes
-		complete_effect = {
-			add_manpower = -1000
-			add_equipment_to_stockpile = {
-				type = suit_equipment
-				amount = -1000
+		cost = 500
+		days_remove = 90
+		available = {
+			hidden_trigger = {
+				has_country_flag = Unification_flag
 			}
-			add_equipment_to_stockpile = {
-				type = gardener_equipment
-				amount = -20
+			custom_trigger_tooltip = {
+				tooltip = no_red_forest_allowed_tt
+				check_variable = {
+					global.red_forest_corruption^num = 0
+				}
 			}
+			has_built = {
+				type = filtration_station
+				value > 10
+			}
+			num_of_civilian_factories_available_for_projects > 49
+		}
+		modifier = {
+			civilian_factory_use = 50
 		}
 		remove_effect = {
-			add_stability = 0.1
-			custom_effect_tooltip = Clear_the_red_forests_tt
-			add_to_variable = {
-    			var = production_speed_buildings_factor_var
-    			value = 0.02
-			}
-			add_to_variable = {
-    			var = red_forest_expiditions
-    			value = 1
-			}			
-			IF = {
-				limit = {
-					check_variable = {
-						red_forest_expiditions = 5
-					}
-				}
-				add_to_variable = {
-    				var = weekly_manpower_var
-    				value = 2000
-				}
-				clr_country_flag = integration_block
-				set_country_flag = Clear_the_red_forests_flag
-			}
-		}
-		ai_will_do = {
-			factor = 0
+			set_global_flag = water_purified
+			unite_motherland = yes
 		}
 	}
-
-	Clear_the_red_forests_west = {
-		available = {
-			has_manpower > 999
-			has_equipment = {
-				suit_equipment > 999
-			}
-			has_equipment = {
-				gardener_equipment > 19
-			}
-		}
-		cost = 100
-		days_remove = 50
-		fire_only_once = yes
-		complete_effect = {
-			add_manpower = -1000
-			add_equipment_to_stockpile = {
-				type = suit_equipment
-				amount = -1000
-			}
-			add_equipment_to_stockpile = {
-				type = gardener_equipment
-				amount = -20
-			}
-		}
-		remove_effect = {
-			add_stability = 0.1
-			custom_effect_tooltip = Clear_the_red_forests_tt
-			add_to_variable = {
-    			var = production_speed_buildings_factor_var
-    			value = 0.02
-			}
-			add_to_variable = {
-    			var = red_forest_expiditions
-    			value = 1
-			}			
-			IF = {
-				limit = {
-					check_variable = {
-						red_forest_expiditions = 5
-					}
-				}
-				add_to_variable = {
-    				var = weekly_manpower_var
-    				value = 2000
-				}
-				clr_country_flag = integration_block
-				set_country_flag = Clear_the_red_forests_flag
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-	Clear_the_red_forests_east = {
-		available = {
-			has_manpower > 999
-			has_equipment = {
-				suit_equipment > 999
-			}
-			has_equipment = {
-				gardener_equipment > 19
-			}
-		}
-		cost = 100
-		days_remove = 50
-		fire_only_once = yes
-		complete_effect = {
-			add_manpower = -1000
-			add_equipment_to_stockpile = {
-				type = suit_equipment
-				amount = -1000
-			}
-			add_equipment_to_stockpile = {
-				type = gardener_equipment
-				amount = -20
-			}
-		}
-		remove_effect = {
-			add_stability = 0.1
-			custom_effect_tooltip = Clear_the_red_forests_tt
-			add_to_variable = {
-    			var = production_speed_buildings_factor_var
-    			value = 0.02
-			}
-			add_to_variable = {
-    			var = red_forest_expiditions
-    			value = 1
-			}			
-			IF = {
-				limit = {
-					check_variable = {
-						red_forest_expiditions = 5
-					}
-				}
-				add_to_variable = {
-    				var = weekly_manpower_var
-    				value = 2000
-				}
-				clr_country_flag = integration_block
-				set_country_flag = Clear_the_red_forests_flag
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-	Clear_the_red_forests_center = {
-		available = {
-			has_manpower > 999
-			has_equipment = {
-				suit_equipment > 999
-			}
-			has_equipment = {
-				gardener_equipment > 19
-			}
-		}
-		cost = 100
-		days_remove = 50
-		fire_only_once = yes
-		complete_effect = {
-			add_manpower = -1000
-			add_equipment_to_stockpile = {
-				type = suit_equipment
-				amount = -1000
-			}
-			add_equipment_to_stockpile = {
-				type = gardener_equipment
-				amount = -20
-			}
-		}
-		remove_effect = {
-			add_stability = 0.1
-			custom_effect_tooltip = Clear_the_red_forests_tt
-			add_to_variable = {
-    			var = production_speed_buildings_factor_var
-    			value = 0.02
-			}
-			add_to_variable = {
-    			var = red_forest_expiditions
-    			value = 1
-			}			
-			IF = {
-				limit = {
-					check_variable = {
-						red_forest_expiditions = 5
-					}
-				}
-				add_to_variable = {
-    				var = weekly_manpower_var
-    				value = 2000
-				}
-				clr_country_flag = integration_block
-				set_country_flag = Clear_the_red_forests_flag
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-
-    Operation_Nevsky = {
-		available = {
-			
-		}
-		cost = 100
-		days_remove = 120
-		fire_only_once = yes
-		remove_effect = {
-			custom_effect_tooltip = Operation_Nevsky_tt
-			add_to_variable = {
-    			var = monthly_population_var
-    			value = 0.6
-				tooltip = 
-			}
-			add_to_variable = {
-    			var = production_speed_buildings_factor_var
-    			value = 0.2
-			}
-			set_country_flag = Operation_Nevsky_flag
-			195 = {
-				add_building_construction = {
-    				type = infrastructure
-    				level = 1
-    				instant_build = yes
-				}
-				add_building_construction = {
-    				type = supply_node
-    				level = 1
-    				instant_build = yes
-					province = 3151
-				}
-				add_manpower = 1000000
-			}
-			1001 = {
-				add_manpower = -100000
-			}
-			1002 = {
-				add_manpower = -100000
-			}
-			398 = {
-				add_manpower = -100000
-			}
-			399 = {
-				add_manpower = -100000
-			}
-			954 = {
-				add_manpower = -100000
-			}
-			996 = {
-				add_manpower = -100000
-			}
-			249 = {
-				add_manpower = -100000
-			}
-			251 = {
-				add_manpower = -100000
-			}
-			833 = {
-				add_manpower = -100000
-			}
-			729 = {
-				add_manpower = -50000
-			}
-			651 = {
-				add_manpower = -50000
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
+}
+red_forest_category = {
+	clear_red_forest = {
+		target_array = global.red_forest_corruption
+		state_target = yes
 	}
 }

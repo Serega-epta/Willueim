@@ -512,8 +512,9 @@ focus_tree = {
 				id = GLS_phase_three.6
 				days = 1
 			}
-			add_to_variable = {
-				freedom = 5
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
 			}
 			add_ideas = GLS_general_staff
 			set_country_flag = access_to_justifications_of_war
@@ -580,11 +581,9 @@ focus_tree = {
 				days = 1
 			}
 			custom_effect_tooltip = GLS_ignore_astafev_tooltip
-			add_to_variable = {
-				freedom = 10
-			}
-			add_to_variable = {
-				order = -10
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
 			}
 			if = {
 				limit = {
@@ -642,11 +641,9 @@ focus_tree = {
 				days = 1
 			}
 			custom_effect_tooltip = GLS_ignore_ryaznov_tooltip
-			add_to_variable = {
-				freedom = -10
-			}
-			add_to_variable = {
-				order = 10
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
 			}
 			if = {
 				limit = {
@@ -1383,8 +1380,9 @@ focus_tree = {
 				days = 1
 			}
 			custom_effect_tooltip = GLS_move_capital_to_Yamantau
-			add_to_variable = {
-				order = 5
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
 			}
 			set_capital = {
 				state = 1002
@@ -1418,9 +1416,6 @@ focus_tree = {
 				days = 1
 			}
 			custom_effect_tooltip = GLS_Keep_Capital_in_Ufa
-			add_to_variable = {
-				freedom = 5
-			}
 			if = {
 				limit = {
 					has_idea = GLS_Boilers_1
@@ -1513,11 +1508,9 @@ focus_tree = {
 					add_idea = radio
 				}
 			}
-			add_to_variable = {
-				order = 5
-			}
-			add_to_variable = {
-				freedom = -5
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -1569,11 +1562,9 @@ focus_tree = {
 					add_idea = television
 				}
 			}
-			add_to_variable = {
-				order = -5
-			}
-			add_to_variable = {
-				freedom = 5
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2

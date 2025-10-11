@@ -1,0 +1,38 @@
+city_restored = {
+	icon = GFX_impassable_icon
+	enable = { always = yes }
+	state_repair_speed_infrastructure_factor = 1
+	state_repair_speed_air_base_factor = 1
+	state_repair_speed_supply_node_factor = 1
+	state_repair_speed_rail_way_factor = 1
+	state_repair_speed_naval_facility_factor = 1
+	state_repair_speed_naval_base_factor = 1
+	state_repair_speed_bunker_factor = 1
+	state_repair_speed_coastal_bunker_factor = 1
+	state_repair_speed_anti_air_building_factor = 1
+	state_repair_speed_radar_station_factor = 1
+	state_repair_speed_nuclear_facility_factor = 1
+	state_repair_speed_air_facility_factor = 1
+	state_repair_speed_land_facility_factor = 1
+	state_repair_speed_dam_factor = 1
+	state_repair_speed_dam_mountain_factor = 1
+}
+Motherland_Then_now_henceforth = {
+	icon = GFX_idea_Motherland_Then_now_henceforth
+	enable = { always = yes }
+	monthly_population = global.monthly_population_var	#initial value -0.9
+	weekly_manpower = global.weekly_manpower_var		#initial value 0
+
+	#initial value -0.5
+	production_speed_industrial_complex_factor = global.production_speed_industry_factor_var
+	production_speed_infrastructure_factor = global.production_speed_industry_factor_var
+	production_speed_arms_factory_factor = global.production_speed_industry_factor_var
+	production_speed_synthetic_refinery_factor = global.production_speed_industry_factor_var
+	production_speed_fuel_silo_factor = global.production_speed_industry_factor_var
+
+	#initial value -0.25
+	production_speed_buildings_factor = global.production_speed_buildings_factor_var
+
+	required_garrison_factor = global.required_garrison_factor_var	#initial value 1
+	resistance_target = global.resistance_target_var				#initial value 1
+}

@@ -1,10 +1,5 @@
 integration_category = {
 	intergrate_core_territory = {
-		visible = {
-			NOT = {
-				has_country_flag = integration_block
-			}
-		}
 		target_array = occupied_countries
 		target_non_existing = yes
 		target_trigger = {
@@ -25,11 +20,8 @@ integration_category = {
 			has_equipment = {
 				infantry_odejda > 599
 			}
-			has_equipment = {
-				motorized_equipment > 9
-			}
 		}
-		custom_cost_text = decision_cost_3000_ie_tt
+		custom_cost_text = decision_intergrate_core_territory_cost_tt
 		days_remove = 70
 		complete_effect = {
 			add_equipment_to_stockpile = {
@@ -39,10 +31,6 @@ integration_category = {
 			add_equipment_to_stockpile = {
 				type = infantry_odejda
 				amount = -600
-			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = -10
 			}
 		}
 		remove_effect = {

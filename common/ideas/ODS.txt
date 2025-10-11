@@ -1,5 +1,15 @@
 ideas = {
 	country = {
+		ODS_extra_black_rubles_income = {
+			modifier = {
+				custom_modifier_tooltip = add_100_rubles_weekly_tt
+			}
+			on_remove = {
+				subtract_from_variable = {
+					extra_income = 100
+				}
+			}
+		}
 		ODS_Savagery = {
 			picture = ODS_Savagery
 			modifier = {

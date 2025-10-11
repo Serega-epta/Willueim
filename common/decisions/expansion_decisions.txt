@@ -4,13 +4,8 @@ expansion_category = {
 			custom_trigger_tooltip = {
     			tooltip = Unification_over_tt		
     			ROOT = {
+					#TODO: will never be acheved - remove this idea and decision
 					has_idea = Garrisons
-					has_country_flag = Restore_communications_flag
-					has_country_flag = Distribute_production_flag
-					has_country_flag = Restoration_of_Moscow_flag
-					has_country_flag = Fresh_water_purification_flag
-					has_country_flag = Clear_the_red_forests_flag
-					has_country_flag = Operation_Nevsky_flag
 				}
 			}
 		}
@@ -26,7 +21,7 @@ expansion_category = {
 				}
 				set_cosmetic_tag = motherland_statesmen
 			}
-			if = {
+			else_if = {
 				limit = {
 					OR = {
 						has_government = humanists
@@ -37,13 +32,13 @@ expansion_category = {
 				}
 				set_cosmetic_tag = motherland_humanists
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_government = sacraments
 				}
 				set_cosmetic_tag = motherland_sacraments
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_government = chthonism
 				}
@@ -51,7 +46,7 @@ expansion_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 100
+			base = 100
 		}
 	}
 	start_expansion = {
@@ -80,7 +75,8 @@ expansion_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			#bots will follow the scenario
+			base = 0
 		}
 	}
 	annex_anarchy = {
@@ -117,7 +113,8 @@ expansion_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			#bots will follow the scenario
+			base = 0
 		}
 	}
 }
@@ -127,13 +124,8 @@ reunification_category = {
 			custom_trigger_tooltip = {
     			tooltip = Unification_over_tt		#Теперь доступно только после механик
     			ROOT = {
+					#TODO: will never be acheved - remove this idea and decision
 					has_idea = Garrisons
-					has_country_flag = Restore_communications_flag
-					has_country_flag = Distribute_production_flag
-					has_country_flag = Restoration_of_Moscow_flag
-					has_country_flag = Fresh_water_purification_flag
-					has_country_flag = Clear_the_red_forests_flag
-					has_country_flag = Operation_Nevsky_flag
 				}
 			}
 		}
@@ -148,7 +140,7 @@ reunification_category = {
 				add_political_power = 10
 				add_stability = 0.03
 			}
-			if = {
+			else_if = {
 				limit = {
 					tag = ODS
 				}
@@ -160,7 +152,7 @@ reunification_category = {
 					popularity = 0.05
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					tag = ARM
 				}
@@ -172,7 +164,7 @@ reunification_category = {
 					popularity = 0.05
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					tag = LWV
 				}
@@ -186,7 +178,7 @@ reunification_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 100
+			base = 100
 		}
 	}
 	major_annex_anarchy = {
@@ -223,7 +215,8 @@ reunification_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			#majors will annex them (unification & scenario)
+			base = 100
 		}
 	}
 }

@@ -51,6 +51,11 @@ focus_tree = {
 			add_stability = 0.05
 			set_country_flag = GLS_freedom_and_order_start
 			custom_effect_tooltip = unlock_freedom_and_order
+			set_power_balance = {
+				id = GLS_power_balance
+				left_side = victor_side
+				right_side = vladimir_side
+			}
 		}
 	}
 	focus = {
@@ -172,7 +177,7 @@ focus_tree = {
 		#relative_position_id = GLS_south
 		cost = 5
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 		prerequisite = {
 			focus = GLS_pereputie
@@ -200,7 +205,7 @@ focus_tree = {
 		relative_position_id = GLS_south
 		cost = 5
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 		prerequisite = {
 			focus = GLS_south
@@ -229,7 +234,7 @@ focus_tree = {
 		relative_position_id = GLS_south
 		cost = 5
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 		prerequisite = {
 			focus = GLS_chess
@@ -253,7 +258,7 @@ focus_tree = {
 		relative_position_id = GLS_south
 		cost = 5
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 		prerequisite = {
 			focus = GLS_madness
@@ -277,7 +282,7 @@ focus_tree = {
 		relative_position_id = GLS_south
 		cost = 5
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 		prerequisite = {
 			focus = GLS_the_weakest_sex
@@ -301,7 +306,7 @@ focus_tree = {
 		relative_position_id = GLS_south
 		cost = 5
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 		prerequisite = {
 			focus = GLS_sufferers
@@ -329,7 +334,7 @@ focus_tree = {
 		relative_position_id = GLS_south
 		cost = 5
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 		prerequisite = {
 			focus = GLS_The_Thing
@@ -427,8 +432,9 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			add_stability = -0.05
-			add_to_variable = {
-				freedom = 10
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
 			}
 			custom_effect_tooltip = get_ten_percent_of_freedom
 		}
@@ -459,8 +465,9 @@ focus_tree = {
 				uses = 1
 				category = military_police_tech
 			}
-			add_to_variable = {
-				order = 10
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
 			}
 			custom_effect_tooltip = get_ten_percent_of_order
 		}
@@ -489,8 +496,9 @@ focus_tree = {
 				id = GLS_phase_two.8
 				days = 1
 			}
-			add_to_variable = {
-				order = 10
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
 			}
 			custom_effect_tooltip = get_ten_percent_of_order
 			if = {
@@ -555,8 +563,9 @@ focus_tree = {
 				id = GLS_phase_two.9
 				days = 1
 			}
-			add_to_variable = {
-				freedom = 10
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
 			}
 			custom_effect_tooltip = get_ten_percent_of_freedom
 			if = {
@@ -657,8 +666,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = -0.15
-			add_to_variable = {
-				order = 10
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
 			}
 			custom_effect_tooltip = get_ten_percent_of_order
 			custom_effect_tooltip = get_one_percent_of_ready_charge_weekly
@@ -684,8 +694,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.1
-			add_to_variable = {
-				freedom = 10
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
 			}
 			custom_effect_tooltip = get_ten_percent_of_freedom
 			if = {

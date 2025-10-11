@@ -1,18 +1,17 @@
 GLS_freedom_and_order = {
 	icon = saf_anti_colonialist_crusade
 	picture = GFX_freedom_and_order_picture
-	scripted_gui = gls_freedom_and_order
 	allowed = {
 		original_tag = GLS
 	}
 	visible = {
-		has_country_flag = GLS_freedom_and_order_start
-		NOT = {
-			has_country_flag = GLS_freedom_and_order_endgame
-		}
-		NOT = {
-			is_subject = yes
-		}
+		#has_country_flag = GLS_freedom_and_order_start
+		#NOT = {
+		#	has_country_flag = GLS_freedom_and_order_endgame
+		#}
+		#NOT = {
+		#	is_subject = yes
+		#}
 	}
 	visible_when_empty = yes
 	priority = {

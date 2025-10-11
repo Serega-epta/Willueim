@@ -23,3 +23,304 @@ rail_gun_test = {
 RoH_dismantle_faction = {
 	dismantle_faction = yes
 }
+#State scope (i don`t whant to use meta - it is slower, and cycle won`t create tooltip)
+fix_all_shared_building = {
+	#arms_factory
+	set_temp_variable = {
+		lvl = building_level@arms_factory
+	}
+	remove_building = {
+		type = arms_factory
+		level = lvl
+	}
+	set_building_level = {
+		type = arms_factory
+		level = lvl
+		instant_build = yes
+	}
+	#industrial_complex
+	set_temp_variable = {
+		lvl = building_level@industrial_complex
+	}
+	remove_building = {
+		type = industrial_complex
+		level = lvl
+	}
+	set_building_level = {
+		type = industrial_complex
+		level = lvl
+		instant_build = yes
+	}
+	#stronghold_network
+	set_temp_variable = {
+		lvl = building_level@stronghold_network
+	}
+	remove_building = {
+		type = stronghold_network
+		level = lvl
+	}
+	set_building_level = {
+		type = stronghold_network
+		level = lvl
+		instant_build = yes
+	}
+	#dockyard
+	set_temp_variable = {
+		lvl = building_level@dockyard
+	}
+	remove_building = {
+		type = dockyard
+		level = lvl
+	}
+	set_building_level = {
+		type = dockyard
+		level = lvl
+		instant_build = yes
+	}
+	#synthetic_refinery
+	set_temp_variable = {
+		lvl = building_level@synthetic_refinery
+	}
+	remove_building = {
+		type = synthetic_refinery
+		level = lvl
+	}
+	set_building_level = {
+		type = synthetic_refinery
+		level = lvl
+		instant_build = yes
+	}
+	#fuel_silo
+	set_temp_variable = {
+		lvl = building_level@fuel_silo
+	}
+	remove_building = {
+		type = fuel_silo
+		level = lvl
+	}
+	set_building_level = {
+		type = fuel_silo
+		level = lvl
+		instant_build = yes
+	}
+	#mega_gun_emplacement
+	set_temp_variable = {
+		lvl = building_level@mega_gun_emplacement
+	}
+	remove_building = {
+		type = mega_gun_emplacement
+		level = lvl
+	}
+	set_building_level = {
+		type = mega_gun_emplacement
+		level = lvl
+		instant_build = yes
+	}
+	#rocket_site
+	set_temp_variable = {
+		lvl = building_level@rocket_site
+	}
+	remove_building = {
+		type = rocket_site
+		level = lvl
+	}
+	set_building_level = {
+		type = rocket_site
+		level = lvl
+		instant_build = yes
+	}
+	#nuclear_reactor
+	set_temp_variable = {
+		lvl = building_level@nuclear_reactor
+	}
+	remove_building = {
+		type = nuclear_reactor
+		level = lvl
+	}
+	set_building_level = {
+		type = nuclear_reactor
+		level = lvl
+		instant_build = yes
+	}
+	#filtration_station
+	set_temp_variable = {
+		lvl = building_level@filtration_station
+	}
+	remove_building = {
+		type = filtration_station
+		level = lvl
+	}
+	set_building_level = {
+		type = filtration_station
+		level = lvl
+		instant_build = yes
+	}
+	#nuclear_reactor_heavy_water
+	set_temp_variable = {
+		lvl = building_level@nuclear_reactor_heavy_water
+	}
+	remove_building = {
+		type = nuclear_reactor_heavy_water
+		level = lvl
+	}
+	set_building_level = {
+		type = nuclear_reactor_heavy_water
+		level = lvl
+		instant_build = yes
+	}
+	#commercial_nuclear_reactor
+	set_temp_variable = {
+		lvl = building_level@commercial_nuclear_reactor
+	}
+	remove_building = {
+		type = commercial_nuclear_reactor
+		level = lvl
+	}
+	set_building_level = {
+		type = commercial_nuclear_reactor
+		level = lvl
+		instant_build = yes
+	}
+	#aggression_suppressor
+	set_temp_variable = {
+		lvl = building_level@aggression_suppressor
+	}
+	remove_building = {
+		type = aggression_suppressor
+		level = lvl
+	}
+	set_building_level = {
+		type = aggression_suppressor
+		level = lvl
+		instant_build = yes
+	}
+}
+unite_motherland = {
+	if = {
+		limit = {
+			check_variable = {
+				global.city_restored_array^num > 5
+			}
+			check_variable = {
+				global.communication_restored_array^num > 12
+			}
+			check_variable = {
+				global.city_garrison_array^num > 5
+			}
+			check_variable = {
+				global.railway_system_num > 0
+			}
+			check_variable = {
+				total_constructed_filtration_station > 10
+			}
+			has_global_flag = civil_industry_reanimated
+			has_global_flag = water_purified
+		}
+		#cosmetic
+		if = {
+			limit = {
+				OR = {
+					has_government = statesmen
+					has_government = militarists
+				}
+			}
+			set_cosmetic_tag = motherland_statesmen
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_government = humanists
+					has_government = technocracy
+					has_government = free_people
+					has_government = bandits
+				}
+			}
+			set_cosmetic_tag = motherland_humanists
+		}
+		else_if = {
+			limit = {
+				has_government = sacraments
+			}
+			set_cosmetic_tag = motherland_sacraments
+		}
+		else_if = {
+			limit = {
+				has_government = chthonism
+			}
+			set_cosmetic_tag = motherland_chthonism
+		}
+		#super event (major)
+		if = {
+			limit = {
+				tag = GLS
+			}
+			news_event = super.5
+			add_political_power = 10
+			add_stability = 0.03
+		}
+		else_if = {
+			limit = {
+				tag = ODS
+			}
+			news_event = super.6
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = sacraments
+				popularity = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				tag = ARM
+			}
+			news_event = super.7
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = statesmen
+				popularity = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				tag = LWV
+			}
+			news_event = super.8
+			add_political_power = 25
+			add_stability = 0.03
+			add_popularity = {
+				ideology = sacraments
+				popularity = 0.05
+			}
+		}
+	}
+}
+#чтобы получить регионы с населением более 500k
+d_lc = {
+	log = "------------------------"
+	every_state = {
+		limit = {
+			check_variable = {
+				state_population_k < 350
+			}
+			check_variable = {
+				state_population_k > 300
+			}
+			meta_trigger = {
+				text = {
+					owner = {
+						tag = [T]
+						NOT = {
+							tag = BLS
+						}
+					}
+				}
+				T = "[?owner.GetTag]"
+			}
+			
+		}
+		log = "[?THIS.GetID]:[?THIS.GetName]"
+	}
+	log = "------------------------"
+}

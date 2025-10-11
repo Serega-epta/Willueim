@@ -120,6 +120,15 @@ LWV_holiness = {
 				unity_in_holiness = 1
 			}
 		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+				factor = 2
+			}
+		}
 	}
 	stage_2 = {
 		icon = GFX_decision_holiness_integration_two
@@ -147,6 +156,15 @@ LWV_holiness = {
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
+		ai_will_do = {
+			base = 25
+			modifier = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+				factor = 2
+			}
+		}
 	}
 	stage_3 = {
 		icon = GFX_decision_holiness_integration_three
@@ -174,6 +192,15 @@ LWV_holiness = {
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
+		ai_will_do = {
+			base = 30
+			modifier = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+				factor = 2
+			}
+		}
 	}
 	stage_4 = {
 		icon = GFX_decision_holiness_integration_three
@@ -255,6 +282,15 @@ LWV_holiness = {
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
+		ai_will_do = {
+			base = 40
+			modifier = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+				factor = 2
+			}
+		}
 	}
 	stage_5 = {
 		icon = GFX_decision_holiness_integration_three
@@ -325,6 +361,15 @@ LWV_holiness = {
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
+		ai_will_do = {
+			base = 50
+			modifier = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+				factor = 2
+			}
+		}
 	}
 	stage_6 = {
 		icon = GFX_decision_holiness_integration_three
@@ -391,6 +436,15 @@ LWV_holiness = {
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
+		ai_will_do = {
+			base = 60
+			modifier = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+				factor = 2
+			}
+		}
 	}
 	stage_7 = {
 		icon = GFX_decision_holiness_integration_three
@@ -451,6 +505,15 @@ LWV_holiness = {
 		state_target = yes
 		target_array = global.states
 		on_map_mode = map_only
+		ai_will_do = {
+			base = 70
+			modifier = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+				factor = 2
+			}
+		}
 	}
 }
 #####   #####   #   #  #   #  #####  #####  ####   #####

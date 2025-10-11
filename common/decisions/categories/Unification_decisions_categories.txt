@@ -1,25 +1,22 @@
 Unification_campaign = {
+    allowed = {
+        unification_campaign_allowed = yes
+    }
     visible = {
         has_country_flag = Unification_campaign_flag
-        NOT = {
-            tag = SI1
-            tag = LPC
-            tag = WTR
-			tag = WEC
-			tag = SAC
-			tag = SOC
-            tag = NMG
-            tag = ANR
-            tag = GER
-            tag = POL
-			tag = FRA
-			tag = ITA
-			tag = IBR
-        }
     }
+    visible_when_empty = yes
+    priority = 900
 }
 
 Unification = {
+    visible = {
+       has_country_flag = Unification_flag
+    }
+    priority = 1000
+}
+red_forest_category = {
+    priority = 950
     visible = {
        has_country_flag = Unification_flag
     }

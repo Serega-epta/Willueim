@@ -1,21 +1,9 @@
-
-
-mandarin = {
+#T-9
+t_virus = {
 	specialization = specialization_land
-
-	icon = GFX_project_gardener_equipment
-
-	project_tags = sp_tag_purification
-
-	ai_will_do = {
-		base = 1
-	}
-
-	
-	available = {
-		
-	}
-
+	project_tags = sp_tag_mass_destruction_weapon
+	complexity = sp_complexity.insane
+	prototype_time = sp_time.prototype.very_long
 	breakthrough_cost = {
 		specialization_land = 0
 	}
@@ -25,135 +13,190 @@ mandarin = {
 			rubber = 2
 		}
 	}
-	
-	prototype_time = sp_time.prototype.short
-
-	complexity = sp_complexity.small
-	
-	project_output = {
-		enable_equipments = {
-			suit_equipment_1
-		}
+	project_tags = {
+		sp_tag_mass_destruction_weapon
 	}
-
-	generic_prototype_rewards = {
-		sp_land_generic_reward_scientist_xp_1
-		sp_land_generic_reward_scientist_xp_2
-		sp_land_generic_reward_scientist_xp_3
-		sp_land_generic_reward_army_xp_1
-		sp_land_generic_reward_army_xp_2
-		sp_land_generic_reward_army_xp_3
-		sp_land_generic_reward_major_progress_1
-		sp_land_generic_reward_major_progress_2
-		sp_land_generic_reward_major_progress_3
-		sp_land_generic_reward_test_failure_1
-		sp_land_generic_reward_test_failure_2
-		sp_land_generic_reward_test_failure_3
-		sp_land_generic_reward_resource_scarcity
-	}
-}
-
-gardener = {
-	specialization = specialization_land
-
-	project_tags = sp_tag_purification
-
-	ai_will_do = {
-		base = 1
-	}
-
-	
-	available = {
-		
-	}
-
-	breakthrough_cost = {
-		specialization_land = 0
-	}
-
-	resource_cost = {
-		resources = { 
-			steel = 20
-		}
-	}
-	
-	prototype_time = sp_time.prototype.short
-
-	complexity = sp_complexity.small
-	
-	project_output = {
-		enable_equipments = {
-			gardener_equipment_1
-		}
-	}
-
-	generic_prototype_rewards = {
-		sp_land_generic_reward_scientist_xp_1
-		sp_land_generic_reward_scientist_xp_2
-		sp_land_generic_reward_scientist_xp_3
-		sp_land_generic_reward_army_xp_1
-		sp_land_generic_reward_army_xp_2
-		sp_land_generic_reward_army_xp_3
-		sp_land_generic_reward_major_progress_1
-		sp_land_generic_reward_major_progress_2
-		sp_land_generic_reward_major_progress_3
-		sp_land_generic_reward_test_failure_1
-		sp_land_generic_reward_test_failure_2
-		sp_land_generic_reward_test_failure_3
-		sp_land_generic_reward_resource_scarcity
-	}
-}
-
-filtration = {
-	specialization = specialization_land
-
-	project_tags = sp_tag_purification
-
-	ai_will_do = {
-		base = 1
-	}
-
-	
-	available = {
-		
-	}
-
-	breakthrough_cost = {
-		specialization_land = 0
-	}
-
-	resource_cost = {
-		resources = { 
-			steel = 20
-		}
-	}
-	
-	prototype_time = sp_time.prototype.short
-
-	complexity = sp_complexity.small
-	
 	project_output = {
 		country_effects = {
-			set_technology = {
-				filtration_station_tech = 1
-				popup = no
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SP_UNLOCK_RAID
+					RAID_TYPE = {
+						localization_key = t_virus_raid
+					}
+				}
 			}
 		}
 	}
-
 	generic_prototype_rewards = {
 		sp_land_generic_reward_scientist_xp_1
 		sp_land_generic_reward_scientist_xp_2
 		sp_land_generic_reward_scientist_xp_3
-		sp_land_generic_reward_army_xp_1
-		sp_land_generic_reward_army_xp_2
-		sp_land_generic_reward_army_xp_3
 		sp_land_generic_reward_major_progress_1
 		sp_land_generic_reward_major_progress_2
 		sp_land_generic_reward_major_progress_3
 		sp_land_generic_reward_test_failure_1
 		sp_land_generic_reward_test_failure_2
 		sp_land_generic_reward_test_failure_3
-		sp_land_generic_reward_resource_scarcity
+	}
+	unique_prototype_rewards = {
+		sp_t_virus_testing = {
+			fire_only_once = yes
+			threshold = { 
+				min = 25
+				max = 45
+			}
+			weight = {
+				base = 1000
+			}
+			#experiments on humans (make more lethal, but loose stability)
+			option = {
+				token = sp_t_virus_conduct_the_experiment
+				iteration_output = {
+					country_effects = {
+						add_stability = -0.2
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = t_virus_more_lethal
+							}
+							set_country_flag = t_virus_more_lethal
+						}
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.medium
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_t_virus_no_experiments
+				iteration_output = {
+					country_effects = {
+						add_stability = 0.05
+						add_war_support = 0.05
+						add_political_power = 50
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.loss.medium
+						}
+					}
+				}
+			}
+		}
+	}
+	resource_cost = {
+		resources = {
+			steel = 5
+			rubber = 10 #to be hermetic
+		}
+	}
+}
+#BTR-60 Shaytan
+APC_60 = {
+	icon = GFX_SP_APC_60
+	specialization = specialization_land
+	project_tags = sp_tag_vehicle
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	project_tags = {
+		sp_tag_vehicle
+	}
+	project_output = {
+		enable_equipments = {
+			APC_60
+		}
+		enable_subunits = {
+			light_flame_tank
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+	}
+	resource_cost = {
+		resources = {
+			steel = 6
+			chromium = 2
+		}
+	}
+}
+#T-62 Myasorubka
+T_62 = {
+	icon = GFX_SP_T_62
+	specialization = specialization_land
+	project_tags = sp_tag_vehicle
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	project_tags = {
+		sp_tag_vehicle
+	}
+	project_output = {
+		enable_equipments = {
+			T_62
+		}
+		enable_subunits = {
+			medium_flame_tank
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+	}
+	resource_cost = {
+		resources = {
+			steel = 9
+			chromium = 3
+			tungsten = 1
+		}
+	}
+}
+#bobyk/sharik/blohastik
+dog_mine = {
+	icon = GFX_SP_dog_mine
+	specialization = specialization_land
+	project_tags = sp_tag_vehicle
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	resource_cost = {
+		resources = {
+			steel = 1
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+	}
+	project_output = {
+		enable_subunits = {
+			dogies
+		}
 	}
 }

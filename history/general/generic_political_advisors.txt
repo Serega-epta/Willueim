@@ -1,0 +1,239 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+every_possible_country = {
+	#statesmen
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_statesmen_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = clerc
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_statesmen_reformer
+			name = generic_statesmen_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					clerc
+				}
+				available = {
+					statesmen > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	#chthonism
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_chthonism_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = pagan
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_chthonism_reformer
+			name = generic_chthonism_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					pagan
+				}
+				available = {
+					chthonism > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	#sacraments
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_sacraments_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = priest
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_sacraments_reformer
+			name = generic_sacraments_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					priest
+				}
+				available = {
+					sacraments > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+		generic_fascist_demagogue = {
+			generate_portrait = yes
+		}
+	}
+	#militarists
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_militarists_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = warrior
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_militarists_reformer
+			name = generic_militarists_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					warrior
+				}
+				available = {
+					militarists > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	#free_people
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_free_people_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = anarchist
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_free_people_reformer
+			name = generic_free_people_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					anarchist
+				}
+				available = {
+					free_people > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	#technocracy
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_technocracy_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = young_scientist
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_technocracy_reformer
+			name = generic_technocracy_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					young_scientist
+				}
+				available = {
+					technocracy > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	#humanists
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_humanists_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = liberal
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_humanists_reformer
+			name = generic_humanists_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					liberal
+				}
+				available = {
+					humanists > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	#bandits
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_bandits_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = authority
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_bandits_reformer
+			name = generic_bandits_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					authority
+				}
+				available = {
+					bandits > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+}
