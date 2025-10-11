@@ -49,14 +49,13 @@ types = {
 
 		# Can launch a raid
 		launchable = {
-			#has_war_with = FROM
+			has_war_with = FROM
 		}
 
 		target_type = {
 			state = {
-				owner = {
-					#hide emptry states
-					tag = FROM
+				NOT = {
+					is_owned_by = "---"
 				}
 			}
 		}
