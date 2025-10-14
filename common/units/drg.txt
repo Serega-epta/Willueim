@@ -37,12 +37,16 @@ sub_units = {
 		armor_value = 0
 		hardness = 0
 		essential = {
+			infantry_equipment
+			infantry_odejda
 			motorized_equipment
 			support_equipment
 		}
 		need = {
-			motorized_equipment = 5
-			support_equipment = 35
+			infantry_equipment = 100
+			infantry_odejda = 250
+			motorized_equipment = 10
+			support_equipment = 25
 		}
 		same_support_type = drg
 	}

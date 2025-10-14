@@ -31,11 +31,14 @@ sub_units = {
 		maximum_speed = 0.05
 		manpower = 700
 		essential = {
+			infantry_equipment
 			support_equipment
+			infantry_odejda
 		}
 		need = {
-			infantry_equipment = 200
-			support_equipment = 30
+			infantry_equipment = 500
+			support_equipment = 100
+			infantry_odejda = 700
 		}
 		forest = {
 			movement = 0.03

@@ -29,7 +29,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 20
 		default_morale = 0.3
-		manpower = 300
+		manpower = 60
 		training_time = 120
 
 		#Misc Abilities
@@ -48,9 +48,15 @@ sub_units = {
 		hard_attack = -0.75
 		defense = -0.75
 		armor_value = -0.75
-
+		essential = {
+			APC_60
+			infantry_odejda
+			infantry_equipment
+		}
 		need = {
 			APC_60 = 15
+			infantry_odejda = 60
+			infantry_equipment = 20
 		}
 
 		forest = {
@@ -120,7 +126,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 20
 		default_morale = 0.3
-		manpower = 300
+		manpower = 60
 		training_time = 120
 
 		#Misc Abilities
@@ -134,9 +140,15 @@ sub_units = {
 		hard_attack = -0.7
 		defense = -0.7
 		armor_value = -0.7
-
+		essential = {
+			T_62
+			infantry_odejda
+			infantry_equipment
+		}
 		need = {
 			T_62 = 15
+			infantry_odejda = 60
+			infantry_equipment = 20
 		}
 
 		forest = {

@@ -26,11 +26,14 @@ sub_units = {
 		experience_loss_factor = -0.10
 		# no fuel use
 		own_equipment_fuel_consumption_mult = 0.0
+		manpower = 100
 		essential = {
 			support_equipment
+			infantry_odejda
 		}
 		need = {
-			support_equipment = 25
+			support_equipment = 50
+			infantry_odejda = 100
 		}
 	}
 }
