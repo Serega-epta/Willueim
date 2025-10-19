@@ -2,9 +2,6 @@ SDC_Chess_game = {
 	take_posisions_SDI = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 10
-		allowed = {
-			original_tag = SDC
-		}
 		available = {
 			country_exists = SDI
 			has_completed_focus = SDC_hybrid_war
@@ -30,13 +27,13 @@ SDC_Chess_game = {
 			}
 			set_country_flag = take_posisions_SDI_flag
 		}
+		ai_will_do = {
+			base = 1000
+		}
 	}
 	take_posisions_REN = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 10
-		allowed = {
-			original_tag = SDC
-		}
 		available = {
 			country_exists = REN
 			has_completed_focus = SDC_national_traitors
@@ -65,6 +62,13 @@ SDC_Chess_game = {
 			annex_country = {
 				target = REN
 				transfer_troops = no
+			}
+		}
+		ai_will_do = {
+			base = 250
+			modifier = {
+				has_decision = attack_REN
+				factor = 0
 			}
 		}
 	}
@@ -102,6 +106,13 @@ SDC_Chess_game = {
 			}
 			hidden_effect = {
 				complete_national_focus = SDC_special_military_operation
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				has_decision = take_posisions_REN
+				factor = 0
 			}
 		}
 	}
@@ -152,6 +163,13 @@ SDC_Chess_game = {
 			}
 			set_country_flag = take_posisions_ODJ_flag
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_border_war_with = ODJ
+				add = 100
+			}
+		}
 	}
 	attack_ODJ = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -194,6 +212,9 @@ SDC_Chess_game = {
 			hidden_effect = {
 				complete_national_focus = SDC_special_military_operation
 			}
+		}
+		ai_will_do = {
+			base = 50
 		}
 	}
 }
@@ -320,6 +341,10 @@ SDC_payment = {
 					owner = ROOT
 				}
 			}
+		}
+		ai_will_do = {
+			#we need divisions
+			base = 1000
 		}
 	}
 	ask_delay = {
