@@ -194,3 +194,43 @@ dog_mine = {
 		}
 	}
 }
+#filtration station
+filtration_station = {
+	icon = GFX_sp_land_flamethrower_tank	#TODO
+	specialization = specialization_land
+	project_tags = sp_tag_buildings
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	resource_cost = {
+		resources = {
+			steel = 6 
+			tungsten = 3 
+			chromium = 6 
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+	}
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_filtration_station
+				set_technology = {
+					sp_tech_filtration_station = 1
+					popup = no
+				}	
+			}
+		}
+	}
+}
