@@ -233,4 +233,14 @@ filtration_station = {
 			}
 		}
 	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			#if we need to restore water sources - research new filters
+			FROM = {
+				has_country_flag = Unification_flag
+			}
+			add = 1000
+		}
+	}
 }
