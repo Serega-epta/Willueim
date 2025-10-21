@@ -175,13 +175,13 @@ Unification_campaign = {
 	}
 	Unification_deadline = {
 		allowed = {
-			is_ai = no
-		}
-		activation = {
-			has_country_flag = Unification_campaign_flag
+			always = no
 		}
 		available = {
-			filtration_station > 9
+			OR = {
+				filtration_station > 9
+				is_ai = yes
+			}
 		}
 		days_mission_timeout = 1825
 		is_good = no
