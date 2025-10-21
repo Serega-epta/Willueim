@@ -7,12 +7,6 @@ t_virus = {
 	breakthrough_cost = {
 		specialization_land = 0
 	}
-
-	resource_cost = {
-		resources = { 
-			rubber = 2
-		}
-	}
 	project_tags = {
 		sp_tag_mass_destruction_weapon
 	}
@@ -237,6 +231,16 @@ filtration_station = {
 					popup = no
 				}	
 			}
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			#if we need to restore water sources - research new filters
+			FROM = {
+				has_country_flag = Unification_flag
+			}
+			add = 1000
 		}
 	}
 }

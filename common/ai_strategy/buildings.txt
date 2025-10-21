@@ -1,0 +1,13 @@
+#Written by Pasha-2033
+build_filtration_stations = {
+    enable = {
+        always = yes
+		filtration_station < 10
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+		type = building_target
+		id = filtration_station
+		value = 1000
+	}
+}
