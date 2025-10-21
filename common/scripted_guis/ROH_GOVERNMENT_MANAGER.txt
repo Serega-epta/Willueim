@@ -149,6 +149,7 @@ scripted_gui = {
 			}
 		}
 	}
+	#vars: min_reform_points_required
 	government_manager_selection_possible_alert = {
 		context_type = player_context
 		parent_window_token = top_bar
@@ -167,7 +168,11 @@ scripted_gui = {
 				}
 			}
 			upgrade_model_alert_visible = {
-				always = no	#TODO
+				check_variable = {
+					var = reform_points
+					value = min_reform_points_required
+					compare = greater_than_or_equals
+				}
 			}
 		}
 	}
@@ -929,7 +934,11 @@ scripted_gui = {
 		}
 		effects = {		
 			select_model_button_click = {
-				select_menshikov_system = yes 
+				select_menshikov_system = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			close_button_click = {
 				set_variable = {
@@ -938,75 +947,231 @@ scripted_gui = {
 			}
 			materials_science_button_click = {
 				materials_science_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 20
+				}
 			}
 			dense_layout_button_click = {
 				dense_layout_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 20
+				}
 			}
 			lower_streams_button_click = {
 				lower_streams_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 20
+				}
 			}
 			upper_streams_button_click = {
 				upper_streams_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 20
+				}
 			}
 			our_future_button_click = {
 				our_future_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 20
+				}
 			}
 			vocational_technical_schools_button_click = {
 				vocational_technical_schools_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 20
+				}
 			}
 			working_faculties_button_click = {
 				working_faculties_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 20
+				}
 			}
 			labor_veterans_button_click = {
 				labor_veterans_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			labor_heros_button_click = {
 				labor_heros_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			industrial_cooperation_button_click = {
 				industrial_cooperation_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			constructed_for_life_button_click = {
 				constructed_for_life_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			love_thy_neighbour_button_click = {
 				love_thy_neighbour_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			local_wing_button_click = {
 				local_wing_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			strict_regulations_button_click = {
 				strict_regulations_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			flexible_regulations_button_click = {
 				flexible_regulations_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			gardening_partnerships_button_click = {
 				gardening_partnerships_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			rural_units_button_click = {
 				rural_units_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			adversarial_law_button_click = {
 				adversarial_law_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			fair_competition_codex_button_click = {
 				fair_competition_codex_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			outsourcing_button_click = {
 				outsourcing_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 45
+				}
 			}
 			trade_initiative_button_click = {
 				trade_initiative_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 60
+				}
 			}
 			GOST_button_click = {
 				GOST_effect = yes
+				#for alert
+				if = {
+					limit = {
+						has_idea = fullstack_consumtion_idea
+					}
+					if = {
+						limit = {
+							has_idea = trade_initiative_idea
+						}
+						set_variable = {
+							min_reform_points_required = 90
+						}
+					}
+					else = {
+						set_variable = {
+							min_reform_points_required = 45
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_idea = trade_initiative_idea
+						}
+						set_variable = {
+							min_reform_points_required = 60
+						}
+					}
+					else = {
+						set_variable = {
+							min_reform_points_required = 45
+						}
+					}
+				}
 			}
 			fullstack_consumtion_button_click = {
 				fullstack_consumtion_effect = yes
+				#for alert
+				if = {
+					limit = {
+						has_idea = GOST_idea
+					}
+					if = {
+						limit = {
+							has_idea = trade_initiative_idea
+						}
+						set_variable = {
+							min_reform_points_required = 90
+						}
+					}
+					else = {
+						set_variable = {
+							min_reform_points_required = 45
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_idea = trade_initiative_idea
+						}
+						set_variable = {
+							min_reform_points_required = 60
+						}
+					}
+					else = {
+						set_variable = {
+							min_reform_points_required = 45
+						}
+					}
+				}
 			}
 			humanism_stronghold_button_click = {
 				humanism_stronghold_effect = yes
+				set_variable = {
+					#turn off alert
+					min_reform_points_required = 2147483 #2^31/1000 (.xxx removed)
+				}
 			}
 		}
 		ai_enabled = {
