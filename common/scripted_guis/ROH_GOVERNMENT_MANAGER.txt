@@ -154,6 +154,9 @@ scripted_gui = {
 		context_type = player_context
 		parent_window_token = top_bar
 		window_name = "government_manager_selection_possible_alert"
+		visible = {
+			is_ai = no
+		}
 		triggers = {
 			select_model_alert_visible = {
 				set_temp_variable = {
@@ -3511,6 +3514,10 @@ scripted_gui = {
 		effects = {		
 			select_model_button_click = {
 				select_naumov_system = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			close_button_click = {
 				set_variable = {
@@ -3519,66 +3526,264 @@ scripted_gui = {
 			}
 			common_duty_common_law_button_click = {
 				common_duty_common_law_effect = yes
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			existence_essence_button_click = {
 				existence_essence_effect = yes
+				#inherit 15 points alert
 			}
 			existence_horror_button_click = {
 				existence_horror_effect = yes
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			caring_eye_button_click = {
 				caring_eye_effect = yes
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			interesting_observation_button_click = {
 				interesting_observation_effect = yes
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			technological_revolution_button_click = {
 				technological_revolution_effect = yes
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			cultural_revolution_button_click = {
 				cultural_revolution_effect = yes
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			assured_survival_button_click = {
 				assured_survival_effect = yes
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			proportionate_fee_button_click = {
 				proportionate_fee_effect = yes
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			flawless_soldier_button_click = {
 				flawless_soldier_effect = yes
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			all_describing_formula_button_click = {
 				all_describing_formula_effect = yes
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			primary_broth_button_click = {
 				primary_broth_effect = yes
+				#for alert
+				if = {
+					limit = {
+						has_idea = all_describing_formula_idea
+					}
+					set_variable = {
+						min_reform_points_required = 15
+					}
+				}
+				else = {
+					set_variable = {
+						min_reform_points_required = 45
+					}
+				}
 			}
 			flowers_of_life_button_click = {
 				flowers_of_life_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			their_life_plans_button_click = {
 				their_life_plans_effect = yes
+				#for alert
+				#inherit 30 points alert
 			}
 			cast_aside_doubts_button_click = {
 				cast_aside_doubts_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 60
+				}
+				if = {
+					limit = {
+						has_idea = potential_realization_idea
+					}
+					if = {
+						limit = {
+							has_idea = unity_by_blood_idea
+						}
+						if = {
+							limit = {
+								has_idea = man_and_consciousness_idea
+							}
+							set_variable = {
+								min_reform_points_required = 60
+							}
+						}
+						else = {
+							set_variable = {
+								min_reform_points_required = 30
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							min_reform_points_required = 15
+						}
+					}
+				}
+				#else: inherit 30 points alert
 			}
 			potential_realization_button_click = {
 				potential_realization_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 15
+				}
 			}
 			order_in_mind_button_click = {
 				order_in_mind_effect = yes
+				#for alert
+				if = {
+					limit = {
+						has_idea = potential_realization_idea
+					}
+					if = {
+						limit = {
+							has_idea = unity_by_blood_idea
+						}
+						if = {
+							limit = {
+								has_idea = man_and_consciousness_idea
+							}
+							set_variable = {
+								min_reform_points_required = 60
+							}
+						}
+						else = {
+							set_variable = {
+								min_reform_points_required = 30
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							min_reform_points_required = 15
+						}
+					}
+				}
+				else = {
+					set_variable = {
+						min_reform_points_required = 30
+					}
+				}
 			}
 			unity_by_blood_button_click = {
 				unity_by_blood_effect = yes
+				#for alert
+				set_variable = {
+					min_reform_points_required = 30
+				}
 			}
 			man_and_consciousness_button_click = {
 				man_and_consciousness_effect = yes
+				#for alert
+				if = {
+					limit = {
+						has_idea = cast_aside_doubts_idea
+					}
+					if = {
+						limit = {
+							has_idea = order_in_mind_idea
+						}
+						if = {
+							limit = {
+								has_idea = cognitive_warfare_idea
+							}
+							set_variable = {
+								min_reform_points_required = 90
+							}
+						}
+						else = {
+							set_variable = {
+								min_reform_points_required = 60
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							min_reform_points_required = 60
+						}
+					}
+				}
+				else = {
+					set_variable = {
+						min_reform_points_required = 30
+					}
+				}
 			}
 			cognitive_warfare_button_click = {
 				cognitive_warfare_effect = yes
+				#for alert
+				if = {
+					limit = {
+						has_idea = potential_realization_idea
+					}
+					if = {
+						limit = {
+							has_idea = unity_by_blood_idea
+						}
+						if = {
+							limit = {
+								has_idea = man_and_consciousness_idea
+							}
+							set_variable = {
+								min_reform_points_required = 90
+							}
+						}
+						else = {
+							set_variable = {
+								min_reform_points_required = 30
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							min_reform_points_required = 15
+						}
+					}
+				}
+				else = {
+					set_variable = {
+							min_reform_points_required = 30
+						}
+				}
 			}
 			body_limits_button_click = {
 				body_limits_effect = yes
+				set_variable = {
+					#turn off alert
+					min_reform_points_required = 2147483 #2^31/1000 (.xxx removed)
+				}
 			}
 		}
 		ai_enabled = {
