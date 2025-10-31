@@ -4,12 +4,17 @@ on_actions = {
 			set_global_flag = { 
 				flag = ELI_not_appears_yet
 				value = 1
-				days = 1850
+				days = 800
 			}
 			set_global_flag = { 
 				flag = BMB_not_appears_yet
 				value = 1
-				days = 1460
+				days = 860
+			}
+			set_global_flag = { 
+				flag = SIL_not_appears_yet
+				value = 1
+				days = 426
 			}
 			
 			clear_array = ELI.elimination_targets 
