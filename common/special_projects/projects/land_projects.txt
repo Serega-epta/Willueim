@@ -1,17 +1,12 @@
 #T-9
 t_virus = {
+	icon = GFX_SP_T_VIRUS
 	specialization = specialization_land
 	project_tags = sp_tag_mass_destruction_weapon
 	complexity = sp_complexity.insane
 	prototype_time = sp_time.prototype.very_long
 	breakthrough_cost = {
-		specialization_land = 0
-	}
-
-	resource_cost = {
-		resources = { 
-			rubber = 2
-		}
+		specialization_land = 1
 	}
 	project_tags = {
 		sp_tag_mass_destruction_weapon
@@ -197,6 +192,56 @@ dog_mine = {
 	project_output = {
 		enable_subunits = {
 			dogies
+		}
+	}
+}
+#filtration station
+filtration_station = {
+	icon = GFX_SP_FILTER
+	specialization = specialization_land
+	project_tags = sp_tag_buildings
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	resource_cost = {
+		resources = {
+			steel = 6 
+			tungsten = 3 
+			chromium = 6 
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+	}
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_filtration_station
+				set_technology = {
+					sp_tech_filtration_station = 1
+					popup = no
+				}	
+			}
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			#if we need to restore water sources - research new filters
+			FROM = {
+				has_country_flag = Unification_flag
+			}
+			add = 1000
 		}
 	}
 }
