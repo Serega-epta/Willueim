@@ -20,12 +20,14 @@ sub_units = {
 		essential = {
 			artillery_equipment
 			infantry_equipment
+			infantry_odejda
 		}
 		need = {
-			artillery_equipment = 6
-			infantry_equipment = 42
+			artillery_equipment = 20
+			infantry_equipment = 50
+			infantry_odejda = 200
 		}
-		manpower = 42
+		manpower = 200
 		combat_width = 3
 	}
 	towed_art_sup = {
@@ -50,13 +52,15 @@ sub_units = {
 			artillery_equipment
 			motorized_equipment
 			infantry_equipment
+			infantry_odejda
 		}
 		need = {
-			artillery_equipment = 6
-			motorized_equipment = 6
-			infantry_equipment = 154
+			artillery_equipment = 10
+			motorized_equipment = 10
+			infantry_equipment = 20
+			infantry_odejda = 100
 		}
-		manpower = 144
+		manpower = 100
 		combat_width = 3
 	}
 	anti_air_art_sup = {
@@ -79,13 +83,17 @@ sub_units = {
 		}
 		essential = {
 			anti_air_equipment
+			motorized_equipment
 			infantry_equipment
+			infantry_odejda
 		}
 		need = {
-			anti_air_equipment = 6
-			infantry_equipment = 24
+			anti_air_equipment = 10
+			motorized_equipment = 10
+			infantry_equipment = 20
+			infantry_odejda = 100
 		}
-		manpower = 24
+		manpower = 100
 		combat_width = 3
 	}
 	mlrs_art_sup = {
@@ -108,13 +116,17 @@ sub_units = {
 		}
 		essential = {
 			anti_tank_equipment
+			motorized_equipment
 			infantry_equipment
+			infantry_odejda
 		}
 		need = {
-			anti_tank_equipment = 6
-			infantry_equipment = 24
+			anti_tank_equipment = 10
+			motorized_equipment = 10
+			infantry_equipment = 20
+			infantry_odejda = 100
 		}
-		manpower = 24
+		manpower = 100
 		combat_width = 3
 	}
 }
