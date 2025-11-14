@@ -437,6 +437,11 @@ country_event = {
 			GER = {
 				set_cosmetic_tag = GER_crisis
 				remove_ideas = BLT_lost_world
+				set_politics = {
+    				ruling_party = humanists
+    				elections_allowed = no
+    				last_election = "1935.12.17"
+				}
 				create_faction = IOPK
 				add_to_faction = POL
 				add_to_faction = FRA
