@@ -9,26 +9,8 @@ set_technology = {
 	basic_air_defense = 1
 	instruments_of_any_era = 1
 	motorised_infantry = 1
-}
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_technology = {
-		pre_war_OPV = 1
+	pre_war_OPV = 1
 		basic_mass_OPF = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		nsb_pre_war_OPV = 1
-		nsb_basic_mass_OPF = 1
-	}
 }
 if = {
 	limit = {
@@ -64,6 +46,10 @@ set_popularities = {
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment
+	amount = 60000
+}
+add_equipment_to_stockpile = {
+	type = infantry_odejda
 	amount = 60000
 }
 add_equipment_to_stockpile = {
