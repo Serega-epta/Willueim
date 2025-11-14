@@ -448,6 +448,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = VLC
 		will_lead_to_war_with = SMX
+
 		completion_reward = {
 			end_puppet = ZAK
 			MAZ = {
@@ -497,6 +498,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = MAZ
 		will_lead_to_war_with = TAB
+
 		completion_reward = {
 			end_puppet = SBT
 			MAZ = {
@@ -535,24 +537,23 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			#was removed because of invalid conditions (may be broken)
-			#ORL = {
-			#	has_war = no
-			#}
-			#OR = {
-			#	AND = {
-			#		has_completed_focus = ORL_help_squad
-			#		NOT = {
-			#			country_exists = ZAK
-			#		}
-			#	}
-			#	AND = {
-			#		has_completed_focus = ORL_help_front
-			#		NOT = {
-			#			country_exists = SBT
-			#		}
-			#	}
-			#}
+			ORL = {
+				has_war = no
+			}
+			OR = {
+				AND = {
+					country_exists = ZAK
+					ZAK = { has_war = no }
+				}
+				AND = {
+					country_exists = SBT
+					SBT = { has_war = no }
+				}
+				OR = {
+					NOT = { country_exists = ZAK }
+					NOT = { country_exists = SBT }
+				}
+			}
 		}
 		prerequisite = {
 			focus = ORL_help_squad
@@ -562,48 +563,17 @@ focus_tree = {
 		will_lead_to_war_with = TAB
 		will_lead_to_war_with = VLC
 		will_lead_to_war_with = SMX
+
 		completion_reward = {
-			if = {
-				limit = {
-					has_completed_focus = ORL_help_squad
-				}
-				SBT = {
-					every_owned_state = {
-						add_core_of = ORL
-						remove_core_of = SBT
-					}
-				}
-				223 = {
-					add_core_of = ORL
-					remove_core_of = VLC
-				}
-				205 = {
-					add_core_of = ORL
-					remove_core_of = SMX
-				}
-				ORL = {
-					annex_country = {
-						target = SBT
-						transfer_troops = yes
-					}
-					declare_war_on = {
-						target = MAZ
-						type = annex_everything
-					}
-					declare_war_on = {
-						target = TAB
-						type = annex_everything
-					}
-					recruit_character = ORL_Dmitriy_Gusev
-				}
-			}
-			else_if = {
+			if = { # Squad lost their war
 				limit = {
 					has_completed_focus = ORL_help_front
+					NOT = { country_exists = SBT }
 				}
 				ZAK = {
 					every_owned_state = {
 						add_core_of = ORL
+						remove_core_of = ZAK
 					}
 				}
 				MAZ = {
@@ -634,8 +604,73 @@ focus_tree = {
 					recruit_character = ORL_Sergey_Surovov
 				}
 			}
+			else_if = { # Front lost their war
+				limit = {
+					has_completed_focus = ORL_help_squad
+					NOT = { country_exists = ZAK }
+				}
+				SBT = {
+					every_owned_state = {
+						add_core_of = ORL
+						remove_core_of = SBT
+					}
+				}
+				VLC = {
+					every_core_state = {
+						add_core_of = ORL
+						remove_core_of = VLC
+					}
+				}
+				SMX = {
+					every_core_state = {
+						add_core_of = ORL
+						remove_core_of = SMX
+					}
+				}
+				ORL = {
+					annex_country = {
+						target = SBT
+						transfer_troops = yes
+					}
+					declare_war_on = {
+						target = MAZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = TAB
+						type = annex_everything
+					}
+					recruit_character = ORL_Dmitriy_Gusev
+				}
+			}
+			else_if = { # Someone is win their war
+				limit = {
+					OR = {
+						AND = {
+							has_completed_focus = ORL_help_squad
+							country_exists = ZAK
+						}
+						AND = {
+							has_completed_focus = ORL_help_front
+							country_exists = SBT
+						}
+					}
+				}
+				ORL = {
+					annex_country = {
+						target = SBT
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = ZAK
+						transfer_troops = yes
+					}
+					recruit_character = ORL_Sergey_Surovov
+					recruit_character = ORL_Dmitriy_Gusev
+				}				
+			}
 			hidden_effect = {
-            	load_focus_tree = {
+            			load_focus_tree = {
 					tree = ORL_phase_2
 					keep_completed = no
 				}
