@@ -88,12 +88,13 @@ ODS_subordination = {
 		priority = 100
 		available = {
 			has_manpower > 299
-			custom_trigger_tooltip = {
-				tooltip = has_more_than_three_hundred_black_rubles_tt
-				check_variable = {
-					black_rubles_budget > 299
-				}
-			}
+			#TODO - need fix economy first
+			#custom_trigger_tooltip = {
+			#	tooltip = has_more_than_three_hundred_black_rubles_tt
+			#	check_variable = {
+			#		black_rubles_budget > 299
+			#	}
+			#}
 			has_political_power > 9
 			FROM = {
 				has_dynamic_modifier = {
@@ -138,10 +139,11 @@ ODS_subordination = {
 			}
 			add_manpower = -300
 			add_political_power = -10
-			subtract_from_variable = {
-				var = black_rubles_budget
-				value = 300
-			}
+			#TODO - need fix economy first
+			#subtract_from_variable = {
+			#	var = black_rubles_budget
+			#	value = 300
+			#}
 		}
 		ai_will_do = {
 			base = 50
@@ -157,12 +159,13 @@ ODS_subordination = {
 					state_population > 9999
 				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = has_more_than_two_hundred_black_rubles_tt
-				check_variable = {
-					black_rubles_budget > 199
-				}
-			}
+			#TODO - need fix economy first
+			#custom_trigger_tooltip = {
+			#	tooltip = has_more_than_two_hundred_black_rubles_tt
+			#	check_variable = {
+			#		black_rubles_budget > 199
+			#	}
+			#}
 			has_political_power > 9
 		}
 		visible = {
@@ -195,19 +198,16 @@ ODS_subordination = {
 				var = Conception_var
 				value = 1
 			}
-			subtract_from_variable = {
-				var = black_rubles_budget
-				value = 200
-			}
+			#TODO - need fix economy first
+			#subtract_from_variable = {
+			#	var = black_rubles_budget
+			#	value = 200
+			#}
 			839 = {
 				add_manpower = -50
 			}
 			add_manpower = 500
 			add_political_power = -2
-			subtract_from_variable = {
-				var = black_rubles_budget
-				value = 200
-			}
 		}
 		ai_will_do = {
 			base = 75
@@ -217,12 +217,13 @@ ODS_subordination = {
 		icon = GFX_decision_diplo_kuban
 		priority = 100
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = has_more_than_three_hundred_black_rubles_tt
-				check_variable = {
-					black_rubles_budget > 299
-				}
-			}
+			#TODO - need fix economy first
+			#custom_trigger_tooltip = {
+			#	tooltip = has_more_than_three_hundred_black_rubles_tt
+			#	check_variable = {
+			#		black_rubles_budget > 299
+			#	}
+			#}
 			has_political_power > 9
 		}
 		visible = {
@@ -255,10 +256,11 @@ ODS_subordination = {
 			}
 			add_state_core = FROM
 			add_political_power = -10
-			subtract_from_variable = {
-				var = black_rubles_budget
-				value = 300
-			}
+			#TODO - need fix economy first
+			#subtract_from_variable = {
+			#	var = black_rubles_budget
+			#	value = 300
+			#}
 		}
 		ai_will_do = {
 			base = 100
@@ -603,22 +605,24 @@ ODS_consciousness = {
 			has_no_points_consciousness = yes
 		}
 		custom_cost_trigger = {
-			custom_trigger_tooltip = {
-				tooltip = has_3000_black_rubles_budget_tt
-				check_variable = {
-					black_rubles_budget > 2999
-				}
-			}
+			#TODO - need fix economy first
+			#custom_trigger_tooltip = {
+			#	tooltip = has_3000_black_rubles_budget_tt
+			#	check_variable = {
+			#		black_rubles_budget > 2999
+			#	}
+			#}
 			has_political_power > 39
 		}
 		custom_cost_text = consciousness_central_propaganda_cost_tt
 		complete_effect = {
 			add_political_power = -40
-			subtract_from_variable = {
-				var = black_rubles_budget
-				value = 3000
-				tooltip = sub_black_rubles_budget_3000_tt
-			}
+			#TODO - need fix economy first
+			#subtract_from_variable = {
+			#	var = black_rubles_budget
+			#	value = 3000
+			#	tooltip = sub_black_rubles_budget_3000_tt
+			#}
 		}
 		remove_effect = {
 			add_to_variable = {
@@ -644,22 +648,24 @@ ODS_consciousness = {
 			has_no_points_consciousness = yes
 		}
 		custom_cost_trigger = {
-			custom_trigger_tooltip = {
-				tooltip = has_2000_black_rubles_budget_tt
-				check_variable = {
-					black_rubles_budget > 1999
-				}
-			}
+			#TODO - need fix economy first
+			#custom_trigger_tooltip = {
+			#	tooltip = has_2000_black_rubles_budget_tt
+			#	check_variable = {
+			#		black_rubles_budget > 1999
+			#	}
+			#}
 			has_political_power > 59
 		}
 		custom_cost_text = consciousness_state_propaganda_cost_tt
 		complete_effect = {
 			add_political_power = -60
-			subtract_from_variable = {
-				var = black_rubles_budget
-				value = 2000
-				tooltip = sub_black_rubles_budget_2000_tt
-			}
+			#TODO - need fix economy first
+			#subtract_from_variable = {
+			#	var = black_rubles_budget
+			#	value = 2000
+			#	tooltip = sub_black_rubles_budget_2000_tt
+			#}
 		}
 		remove_effect = {
 			add_to_variable = {

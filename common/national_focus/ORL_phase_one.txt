@@ -535,23 +535,24 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			ORL = {
-				has_war = no
-			}
-			OR = {
-				AND = {
-					has_completed_focus = ORL_help_squad
-					NOT = {
-						country_exists = ZAK
-					}
-				}
-				AND = {
-					has_completed_focus = ORL_help_front
-					NOT = {
-						country_exists = SBT
-					}
-				}
-			}
+			#was removed because of invalid conditions (may be broken)
+			#ORL = {
+			#	has_war = no
+			#}
+			#OR = {
+			#	AND = {
+			#		has_completed_focus = ORL_help_squad
+			#		NOT = {
+			#			country_exists = ZAK
+			#		}
+			#	}
+			#	AND = {
+			#		has_completed_focus = ORL_help_front
+			#		NOT = {
+			#			country_exists = SBT
+			#		}
+			#	}
+			#}
 		}
 		prerequisite = {
 			focus = ORL_help_squad
