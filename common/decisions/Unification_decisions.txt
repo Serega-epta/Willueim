@@ -48,10 +48,6 @@ Unification_campaign = {
 		target_array = neighbors
 		target_trigger = {
 			FROM = {
-				fighting_army_strength_ratio = {
-					tag = ROOT
-					ratio < 0.5
-				}
 				NOT = {
 					has_war_with = ROOT
 					tag = SIL #TODO
