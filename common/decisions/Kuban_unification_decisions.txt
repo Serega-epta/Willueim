@@ -1,10 +1,9 @@
 Kuban_unification = {
 	STW_unification = {
-		visible = {
+		allowed = {
 			original_tag = STW
 		}
 		available = {
-			original_tag = STW
 			has_completed_focus = STW_rostov_father
 		}
 		cost = 0
@@ -19,13 +18,15 @@ Kuban_unification = {
 				remember_old_capital = no
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	KUH_unification = {
-		visible = {
+		allowed = {
 			original_tag = KUH
 		}
 		available = {
-			original_tag = KUH
 			has_completed_focus = KUH_new_parish
 		}
 		cost = 0
@@ -40,13 +41,15 @@ Kuban_unification = {
 				remember_old_capital = no
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	FSR_unification = {
-		visible = {
+		allowed = {
 			original_tag = FSR
 		}
 		available = {
-			original_tag = FSR
 			has_completed_focus = FSR_kuban_problem
 		}
 		cost = 0
@@ -60,6 +63,9 @@ Kuban_unification = {
 				state = 218
 				remember_old_capital = no
 			}
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 }

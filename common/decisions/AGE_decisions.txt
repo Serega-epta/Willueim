@@ -939,7 +939,10 @@ AGE_red_forest = {
 	AGE_burn_the_forest = {
 		available = {
 			has_equipment = {
-				basic_MLRS_equipment > 29
+				infantry_equipment > 499
+			}
+			has_equipment = {
+				infantry_odejda > 499
 			}
 		}
 		target_trigger = {
@@ -971,8 +974,12 @@ AGE_red_forest = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = basic_MLRS_equipment
-				amount = -5
+				type = infantry_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = -500
 			}
 			FROM = {
 				transfer_state_to = AGE
@@ -984,11 +991,17 @@ AGE_red_forest = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1000
+		}
 	}
 	AGE_burn_the_forest_glubohoje = {
 		available = {
 			has_equipment = {
-				basic_MLRS_equipment > 49
+				infantry_equipment > 499
+			}
+			has_equipment = {
+				infantry_odejda > 499
 			}
 		}
 		target_trigger = {
@@ -1026,7 +1039,16 @@ AGE_red_forest = {
 		on_map_mode = map_and_decisions_view
 		cost = 0
 		days_remove = 40
-		complete_effect = {}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = -500
+			}
+		}
 		cancel_effect = {
 			clr_country_flag = red_forest_flag
 		}
@@ -1056,11 +1078,17 @@ AGE_red_forest = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1000
+		}
 	}
 	AGE_burn_the_forest_Minsk = {
 		available = {
 			has_equipment = {
-				basic_MLRS_equipment > 149
+				infantry_equipment > 499
+			}
+			has_equipment = {
+				infantry_odejda > 499
 			}
 		}
 		target_trigger = {
@@ -1098,7 +1126,16 @@ AGE_red_forest = {
 		on_map_mode = map_and_decisions_view
 		cost = 0
 		days_remove = 60
-		complete_effect = {}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = -500
+			}
+		}
 		cancel_effect = {
 			clr_country_flag = red_forest_flag
 		}
@@ -1128,6 +1165,9 @@ AGE_red_forest = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1000
+		}
 	}
 	AGE_burn_the_forest_sim = {
 		visible = {
@@ -1135,7 +1175,10 @@ AGE_red_forest = {
 		}
 		available = {
 			has_equipment = {
-				basic_MLRS_equipment > 199
+				infantry_equipment > 499
+			}
+			has_equipment = {
+				infantry_odejda > 499
 			}
 			hidden_trigger = {
 				command_power > 39
@@ -1151,6 +1194,14 @@ AGE_red_forest = {
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -40
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_odejda
+				amount = -500
 			}
 		}
 		remove_effect = {
