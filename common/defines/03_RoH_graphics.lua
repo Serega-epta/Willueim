@@ -45,8 +45,9 @@ NDefines_Graphics.NGraphics.BORDER_COLOR_SELECTION_PROVINCE_B = 0.5
 --------------------
 NDefines_Graphics.NGraphics.SUN_LATITUDE = 0
 
-NDefines_Graphics.NGraphics.MOON_HEIGHT = 10000 -- higher means softer shadows and more intense light
-NDefines_Graphics.NGraphics.MOON_HEIGHT_WATER = 10000   -- higher means softer shadows and more intense light
+NDefines_Graphics.NGraphics.MOON_HEIGHT = 5000 -- higher means softer shadows and more intense light
+NDefines_Graphics.NGraphics.MOON_HEIGHT_WATER = 5000   -- higher means softer shadows and more intense light
+NDefines_Graphics.NGraphics.SUN_HEIGHT_WATER  = 5000  -- higher means softer shadows and more intense light
 
 NDefines_Graphics.NGraphics.COUNTRY_COLOR_SATURATION_MODIFIER = 1.0
 NDefines_Graphics.NGraphics.COUNTRY_COLOR_BRIGHTNESS_MODIFIER = 0.95
@@ -61,11 +62,14 @@ NDefines_Graphics.NGraphics.COUNTRY_FLAG_STRIPE_TEX_MAX_HEIGHT = 8196
 NDefines_Graphics.NGraphics.COUNTRY_FLAG_LARGE_STRIPE_MAX_WIDTH = 41
 NDefines_Graphics.NGraphics.COUNTRY_FLAG_LARGE_STRIPE_MAX_HEIGHT = 24000
 
-NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF = {225, 375, 750}
+NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800.0
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_AFTER = {0, 9, 20}
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_CAPITAL_CUTOFF_MAX = 600.0
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF = {225, 375, 525}
 NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF_MIN = 300.0
-NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF_MAX = 900.0
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF_MAX = 600.0
 NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_DOT_CUTOFF_MIN = 300.0
-NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_DOT_CUTOFF_MAX = 1200.0
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_DOT_CUTOFF_MAX = 600.0
 
 NDefines_Graphics.NGraphics.MINIMUM_PROVINCE_SIZE_IN_PIXELS = 1
 

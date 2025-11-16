@@ -294,6 +294,32 @@ entity = {
 }
 
 entity = {
+	name = "LWV_light_infantry_entity"
+	pdxmesh = "LWV_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "LWV_rcbd_troop_entity"
+	pdxmesh = "LWV_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
 	name = "WAC_infantry_0_entity"
 	pdxmesh = "WAC_infantry_mg_mesh"
 	clone = infantry_0_entity
@@ -369,6 +395,32 @@ entity = {
 	attach = { 	name = "rifle2"	Left_Hand_node = "roh_avm_left_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "roh_avm_right_entity" }
 	attach = { 	name = "rifle3"	mid_back_node = "roh_avm_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "WAC_light_infantry_entity"
+	pdxmesh = "WAC_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "WAC_rcbd_troop_entity"
+	pdxmesh = "WAC_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
 
 	scale = 0.8
 }
@@ -454,6 +506,32 @@ entity = {
 }
 
 entity = {
+	name = "BRI_light_infantry_entity"
+	pdxmesh = "BRI_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "BRI_rcbd_troop_entity"
+	pdxmesh = "BRI_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
 	name = "BRD_infantry_0_entity"
 	pdxmesh = "WAC_infantry_mg_mesh"
 	clone = infantry_0_entity
@@ -529,6 +607,32 @@ entity = {
 	attach = { 	name = "rifle2"	Left_Hand_node = "roh_avm_left_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "roh_avm_right_entity" }
 	attach = { 	name = "rifle3"	mid_back_node = "roh_avm_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "BRD_light_infantry_entity"
+	pdxmesh = "BRD_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "BRD_rcbd_troop_entity"
+	pdxmesh = "BRD_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
 
 	scale = 0.8
 }
@@ -614,6 +718,32 @@ entity = {
 }
 
 entity = {
+	name = "HAN_light_infantry_entity"
+	pdxmesh = "HAN_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "HAN_rcbd_troop_entity"
+	pdxmesh = "HAN_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
 	name = "ODS_infantry_0_entity"
 	pdxmesh = "ODS_infantry_mg_mesh"
 	clone = infantry_0_entity
@@ -689,6 +819,32 @@ entity = {
 	attach = { 	name = "rifle2"	Left_Hand_node = "roh_avm_left_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "roh_avm_right_entity" }
 	attach = { 	name = "rifle3"	mid_back_node = "roh_avm_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "ODS_light_infantry_entity"
+	pdxmesh = "ODS_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "ODS_rcbd_troop_entity"
+	pdxmesh = "ODS_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
 
 	scale = 0.8
 }
@@ -774,6 +930,32 @@ entity = {
 }
 
 entity = {
+	name = "ARM_light_infantry_entity"
+	pdxmesh = "ARM_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "ARM_rcbd_troop_entity"
+	pdxmesh = "ARM_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
 	name = "GLS_infantry_0_entity"
 	pdxmesh = "GLS_infantry_mg_mesh"
 	clone = infantry_0_entity
@@ -849,6 +1031,32 @@ entity = {
 	attach = { 	name = "rifle2"	Left_Hand_node = "roh_avm_left_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "roh_avm_right_entity" }
 	attach = { 	name = "rifle3"	mid_back_node = "roh_avm_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "GLS_light_infantry_entity"
+	pdxmesh = "GLS_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "GLS_rcbd_troop_entity"
+	pdxmesh = "GLS_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
 
 	scale = 0.8
 }
@@ -932,6 +1140,33 @@ entity = {
 
 	scale = 0.8
 }
+
+entity = {
+	name = "ASR_light_infantry_entity"
+	pdxmesh = "ASR_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "ASR_rcbd_troop_entity"
+	pdxmesh = "ASR_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
 entity = {
 	name = "ORL_infantry_0_entity"
 	pdxmesh = "ORL_infantry_mg_mesh"
@@ -1008,6 +1243,32 @@ entity = {
 	attach = { 	name = "rifle2"	Left_Hand_node = "roh_avm_left_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "roh_avm_right_entity" }
 	attach = { 	name = "rifle3"	mid_back_node = "roh_avm_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "ORL_light_infantry_entity"
+	pdxmesh = "ORL_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "ORL_rcbd_troop_entity"
+	pdxmesh = "ORL_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
 
 	scale = 0.8
 }
@@ -1093,6 +1354,32 @@ entity = {
 }
 
 entity = {
+	name = "ZAK_light_infantry_entity"
+	pdxmesh = "ZAK_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "ZAK_rcbd_troop_entity"
+	pdxmesh = "ZAK_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
 	name = "SBT_infantry_0_entity"
 	pdxmesh = "SBT_infantry_mg_mesh"
 	clone = infantry_0_entity
@@ -1171,6 +1458,33 @@ entity = {
 
 	scale = 0.8
 }
+
+entity = {
+	name = "SBT_light_infantry_entity"
+	pdxmesh = "SBT_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "SBT_rcbd_troop_entity"
+	pdxmesh = "SBT_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
 entity = {
 	name = "AGE_infantry_0_entity"
 	pdxmesh = "AGE_infantry_mg_mesh"
@@ -1247,6 +1561,32 @@ entity = {
 	attach = { 	name = "rifle2"	Left_Hand_node = "roh_avm_left_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "roh_avm_right_entity" }
 	attach = { 	name = "rifle3"	mid_back_node = "roh_avm_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "AGE_light_infantry_entity"
+	pdxmesh = "AGE_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "AGE_rcbd_troop_entity"
+	pdxmesh = "AGE_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
 
 	scale = 0.8
 }
@@ -1330,6 +1670,33 @@ entity = {
 
 	scale = 0.8
 }
+
+entity = {
+	name = "FUD_light_infantry_entity"
+	pdxmesh = "FUD_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "FUD_rcbd_troop_entity"
+	pdxmesh = FUD"_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
 entity = {
 	name = "IMP_infantry_0_entity"
 	pdxmesh = "IMP_infantry_mg_mesh"
@@ -1410,6 +1777,31 @@ entity = {
 	scale = 0.8
 }
 
+entity = {
+	name = "IMP_light_infantry_entity"
+	pdxmesh = "IMP_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "IMP_rcbd_troop_entity"
+	pdxmesh = "IMP_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
 
 entity = {
 	name = "BSO_infantry_0_entity"
@@ -1810,6 +2202,33 @@ entity = {
 
 	scale = 0.8
 }
+
+entity = {
+	name = "SDC_light_infantry_entity"
+	pdxmesh = "SDC_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "SDC_rcbd_troop_entity"
+	pdxmesh = "SDC_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
 entity = {
 	name = "UKR_infantry_0_entity"
 	pdxmesh = "UKR_infantry_mg_mesh"
@@ -1969,6 +2388,33 @@ entity = {
 
 	scale = 0.8
 }
+
+entity = {
+	name = "SWR_light_infantry_entity"
+	pdxmesh = "SWR_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "SWR_rcbd_troop_entity"
+	pdxmesh = "SWR_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
 entity = {
 	name = "VOZ_infantry_0_entity"
 	pdxmesh = "VOZ_infantry_mg_mesh"
@@ -2048,6 +2494,33 @@ entity = {
 
 	scale = 0.8
 }
+
+entity = {
+	name = "VOZ_light_infantry_entity"
+	pdxmesh = "VOZ_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "VOZ_rcbd_troop_entity"
+	pdxmesh = "VOZ_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
 entity = {
 	name = "YJY_infantry_0_entity"
 	pdxmesh = "YJY_infantry_mg_mesh"
@@ -2127,6 +2600,33 @@ entity = {
 
 	scale = 0.8
 }
+
+entity = {
+	name = "YJY_light_infantry_entity"
+	pdxmesh = "YJY_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "YJY_rcbd_troop_entity"
+	pdxmesh = "YJY_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
 entity = {
 	name = "BL1_infantry_0_entity"
 	pdxmesh = "BL1_infantry_mg_mesh"
@@ -2206,6 +2706,33 @@ entity = {
 
 	scale = 0.8
 }
+
+entity = {
+	name = "BL1_light_infantry_entity"
+	pdxmesh = "BL1_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "BL1_rcbd_troop_entity"
+	pdxmesh = "BL1_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
 entity = {
 	name = "FHS_infantry_0_entity"
 	pdxmesh = "FHS_infantry_mg_mesh"
@@ -2287,81 +2814,67 @@ entity = {
 }
 
 entity = {
+	name = "FHS_light_infantry_entity"
+	pdxmesh = "FHS_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "FHS_rcbd_troop_entity"
+	pdxmesh = "FHS_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
 	name = "LPC_infantry_0_entity"
 	pdxmesh = "LPC_infantry_mg_mesh"
 	clone = infantry_0_entity
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
-
-	scale = 0.8
-}
-
-entity = {
-	name = "LPC_infantry_1_entity"
-	pdxmesh = "LPC_infantry_mg_mesh"
-	clone = infantry_0_entity
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
 
 	scale = 0.8
 }
 
 
 entity = {
-	name = "LPC_infantry_2_entity"
+	name = "LPC_light_infantry_entity"
 	pdxmesh = "LPC_infantry_mg_mesh"
 	clone = infantry_0_entity
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "roh_ak74_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "roh_ak74_left_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "roh_ak74_right_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "roh_ak74_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
 
 	scale = 0.8
 }
 
 entity = {
-	name = "LPC_infantry_3_entity"
+	name = "LPC_rcbd_troop_entity"
 	pdxmesh = "LPC_infantry_mg_mesh"
 	clone = infantry_0_entity
 
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "roh_ak74m_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "roh_ak74m_left_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "roh_ak74m_right_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "roh_ak74m_long_idle_entity" }
-
-	scale = 0.8
-}
-
-entity = {
-	name = "LPC_infantry_4_entity"
-	pdxmesh = "LPC_infantry_mg_mesh"
-	clone = infantry_0_entity
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "roh_av_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "roh_av_left_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "roh_av_right_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "roh_av_long_idle_entity" }
-
-	scale = 0.8
-}
-
-entity = {
-	name = "LPC_infantry_5_entity"
-	pdxmesh = "LPC_infantry_mg_mesh"
-	clone = infantry_0_entity
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "roh_avm_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "roh_avm_left_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "roh_avm_right_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "roh_avm_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
 
 	scale = 0.8
 }
@@ -2447,6 +2960,32 @@ entity = {
 }
 
 entity = {
+	name = "ELI_light_infantry_entity"
+	pdxmesh = "ELI_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "ELI_rcbd_troop_entity"
+	pdxmesh = "ELI_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
 	name = "BMB_infantry_0_entity"
 	pdxmesh = "BMB_infantry_mg_mesh"
 	clone = infantry_0_entity
@@ -2522,6 +3061,201 @@ entity = {
 	attach = { 	name = "rifle2"	Left_Hand_node = "roh_avm_left_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "roh_avm_right_entity" }
 	attach = { 	name = "rifle3"	mid_back_node = "roh_avm_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "BMB_light_infantry_entity"
+	pdxmesh = "BMB_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "BMB_rcbd_troop_entity"
+	pdxmesh = "IBR_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "roh_aks74_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "roh_aks74_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "roh_aks74_long_idle_entity" }
+
+	scale = 0.8
+}
+
+
+entity = {
+	name = "IBR_infantry_3_entity"
+	pdxmesh = "IBR_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+
+entity = {
+	name = "IBR_light_infantry_entity"
+	pdxmesh = "IBR_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "IBR_rcbd_troop_entity"
+	pdxmesh = "IBR_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "NMG_infantry_0_entity"
+	pdxmesh = "NMG_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+
+entity = {
+	name = "NMG_light_infantry_entity"
+	pdxmesh = "NMG_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "NMG_rcbd_troop_entity"
+	pdxmesh = "NMG_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "GER_infantry_0_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "GER_infantry_3_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+	clone = GER_infantry_0_entity
+
+	scale = 0.8
+}
+
+
+entity = {
+	name = "GER_light_infantry_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "GER_rcbd_troop_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "POL_infantry_3_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+
+entity = {
+	name = "POL_light_infantry_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "POL_rcbd_troop_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+	clone = infantry_0_entity
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ROH_XM8_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ROH_XM8_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ROH_XM8_rifle_long_idle_entity" }
 
 	scale = 0.8
 }

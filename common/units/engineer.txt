@@ -30,10 +30,14 @@ sub_units = {
 		supply_consumption = 0.02
 		max_strength = 2
 		essential = {
+			infantry_equipment
 			support_equipment
+			infantry_odejda
 		}
 		need = {
-			infantry_equipment = 25
+			infantry_equipment = 150
+			support_equipment = 150
+			infantry_odejda = 300
 		}
 		can_be_parachuted = no
 		forest = {

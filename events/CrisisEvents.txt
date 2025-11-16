@@ -1,5 +1,6 @@
 add_namespace = roh_crisis #начитают кризисы
 add_namespace = roh_crisis_info #не начинают кризисы, но посвяшены им
+add_namespace = roh_city_captured
 
 country_event = {
 	
@@ -123,6 +124,7 @@ country_event = {
 			launch_nuke = {
     			province = 6380
 			}
+			set_global_flag = IOPK_crisis
 			POL = {
 				transfer_state = 85
 				transfer_state = 807
@@ -435,6 +437,11 @@ country_event = {
 			GER = {
 				set_cosmetic_tag = GER_crisis
 				remove_ideas = BLT_lost_world
+				set_politics = {
+    				ruling_party = humanists
+    				elections_allowed = no
+    				last_election = "1935.12.17"
+				}
 				create_faction = IOPK
 				add_to_faction = POL
 				add_to_faction = FRA
@@ -664,6 +671,306 @@ country_event = {
 		
 		hidden_effect = {
 			country_event = roh_crisis.3
+		}
+	}
+}
+
+news_event = {
+	
+	id = roh_city_captured.1
+	title = roh_city_captured.1.t 
+	desc = roh_city_captured.1.d 
+	
+	is_triggered_only = yes
+	major = yes
+
+	
+	option = {
+		name = roh_city_captured.1.a
+		IF = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+					tag = POL
+					tag = IBR
+					tag = ITA
+					tag = IMP
+					tag = LPC
+					tag = NMG
+				}
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+		else = {
+			add_political_power = -50
+			add_war_support = -0.05
+		}
+	}
+}
+
+news_event = {
+	
+	id = roh_city_captured.2
+	title = roh_city_captured.2.t 
+	desc = roh_city_captured.2.d 
+	
+	is_triggered_only = yes
+	major = yes
+	
+	
+	option = {
+		name = roh_city_captured.2.a
+		set_global_flag = kyiv_captured
+		IF = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+					tag = POL
+					tag = IBR
+					tag = ITA
+					tag = IMP
+					tag = LPC
+					tag = NMG
+				}
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+		else = {
+			add_political_power = -50
+			add_war_support = -0.05
+			202 = {
+				add_manpower = -7000
+			}
+		}
+	}
+}
+
+news_event = {
+	
+	id = roh_city_captured.3
+	title = roh_city_captured.3.t 
+	desc = roh_city_captured.3.d 
+	
+	is_triggered_only = yes
+	major = yes
+	
+	
+	option = {
+		name = roh_city_captured.3.a
+		IF = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+					tag = POL
+					tag = IBR
+					tag = ITA
+					tag = IMP
+					tag = LPC
+					tag = NMG
+				}
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+		else = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+}
+
+news_event = {
+	
+	id = roh_city_captured.4
+	title = roh_city_captured.4.t 
+	desc = roh_city_captured.4.d 
+	
+	is_triggered_only = yes
+	major = yes
+	
+	
+	option = {
+		name = roh_city_captured.4.a
+		IF = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+					tag = POL
+					tag = IBR
+					tag = ITA
+					tag = IMP
+					tag = LPC
+					tag = NMG
+				}
+			}
+			add_political_power = -50
+			add_war_support = -0.05
+		}
+		else = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+}
+
+news_event = {
+	
+	id = roh_city_captured.5
+	title = roh_city_captured.5.t 
+	desc = roh_city_captured.5.d 
+	
+	is_triggered_only = yes
+	major = yes
+	
+	
+	option = {
+		name = roh_city_captured.5.a
+		IF = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+					tag = POL
+					tag = IBR
+					tag = ITA
+					tag = IMP
+					tag = LPC
+					tag = NMG
+				}
+			}
+			add_political_power = -100
+			add_war_support = -0.1
+		}
+		else = {
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+}
+
+news_event = {
+	
+	id = roh_city_captured.6
+	title = roh_city_captured.6.t 
+	desc = roh_city_captured.6.d 
+	
+	is_triggered_only = yes
+	major = yes
+	
+	
+	option = {
+		name = roh_city_captured.6.a
+		IF = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+					tag = POL
+					tag = IBR
+					tag = ITA
+					tag = IMP
+					tag = LPC
+					tag = NMG
+				}
+			}
+			add_political_power = 100
+			add_war_support = 0.1
+			add_manpower = 9000
+		}
+		else = {
+			add_political_power = -100
+			add_war_support = -0.1
+			random_unit_leader = {
+				retire_character = PREV
+			}
+			64 = {
+				set_building_level = {
+    				type = industrial_complex
+    				level = 0
+				}
+				set_building_level = {
+    				type = arms_factory
+    				level = 0
+				}
+				add_manpower = -1200000
+			}
+		}
+		
+	}
+}
+
+news_event = {
+	
+	id = roh_city_captured.7
+	title = roh_city_captured.7.t 
+	desc = roh_city_captured.7.d 
+	
+	is_triggered_only = yes
+	major = yes
+	
+	
+	option = {
+		name = roh_city_captured.7.a
+		IF = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+					tag = POL
+					tag = IBR
+					tag = ITA
+					tag = IMP
+					tag = LPC
+					tag = NMG
+				}
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+		else = {
+			add_political_power = 50
+			add_war_support = 0.05
+		} 
+	}
+}
+
+news_event = {
+	
+	id = roh_city_captured.8
+	title = roh_city_captured.8.t 
+	desc = roh_city_captured.8.d 
+	
+	is_triggered_only = yes
+	major = yes
+	
+	
+	option = {
+		name = roh_city_captured.8.a
+		IF = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+					tag = POL
+					tag = IBR
+					tag = ITA
+					tag = IMP
+					tag = LPC
+					tag = NMG
+				}
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+		else = {
+			add_political_power = 50
+			add_war_support = 0.05
 		}
 	}
 }

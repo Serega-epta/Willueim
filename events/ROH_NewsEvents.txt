@@ -268,12 +268,12 @@ news_event = {
 		name = worldnews.21.a
 	}
 }
-#Восстановление Москвы!
+#Найден “Черный принц”!
 news_event = {
 	id = worldnews.22
 	title = worldnews.22.t
 	desc = worldnews.22.d
-	picture = GFX_news_event_moscow_rebuilt
+	picture = GFX_news_event_black_prince
 	major = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -281,6 +281,7 @@ news_event = {
 		name = worldnews.22.a
 	}
 }
+
 #Падение метеорита!
 news_event = {
 	id = worldnews.23
@@ -305,45 +306,6 @@ news_event = {
 	fire_only_once = yes
 	option = {
 		name = worldnews.24.a
-	}
-}
-#Найден “Черный принц”!
-news_event = {
-	id = worldnews.25
-	title = worldnews.25.t
-	desc = worldnews.25.d
-	picture = GFX_news_event_black_prince
-	major = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = worldnews.25.a
-	}
-}
-#Конец близко?
-news_event = {
-	id = worldnews.26
-	title = worldnews.26.t
-	desc = worldnews.26.d
-	picture = GFX_news_event_end_is_near
-	major = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = worldnews.26.a
-	}
-}
-#Бесславный финал.
-news_event = {
-	id = worldnews.27
-	title = worldnews.27.t
-	desc = worldnews.27.d
-	picture = GFX_news_event_end
-	major = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = worldnews.27.a
 	}
 }
 

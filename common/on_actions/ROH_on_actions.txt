@@ -80,6 +80,165 @@ on_actions = {
 				limit = { original_tag = ODS }
 				FROM = { add_dynamic_modifier = { modifier = ODS_new_land } }
 			}
+
+			if = {
+
+				limit = {
+					has_global_flag = IOPK_crisis
+					FROM.FROM = { state = 219 }
+					ROOT = {
+						OR = {
+							tag = GER
+							tag = POL
+							tag = FRA
+							tag = ITA
+							tag = IBR
+							tag = LPC
+							tag = NMG
+							tag = IMP
+						}
+					}
+				}
+
+				ROOT = { news_event = { id = roh_city_captured.1 days = 1 } }
+			}
+			IF = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					FROM.FROM = { state = 202 }
+					ROOT = {
+						OR = {
+							tag = GER
+							tag = POL
+							tag = FRA
+							tag = ITA
+							tag = IBR
+							tag = LPC
+							tag = NMG
+							tag = IMP
+						}
+					}
+				}
+				ROOT = { news_event = { id = roh_city_captured.2 days = 1 } }
+			}
+			IF = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					FROM.FROM = { state = 10 }
+					ROOT = {
+						NOT = {
+							tag = GER
+							tag = POL
+							tag = FRA
+							tag = ITA
+							tag = IBR
+							tag = LPC
+							tag = NMG
+							tag = IMP
+						}
+					}
+				}
+				ROOT = { news_event = { id = roh_city_captured.3 days = 1 } }
+			}
+			IF = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					FROM.FROM = { state = 16 }
+					ROOT = {
+						NOT = {
+							tag = GER
+							tag = POL
+							tag = FRA
+							tag = ITA
+							tag = IBR
+							tag = LPC
+							tag = NMG
+							tag = IMP
+						}
+					}
+				}
+				ROOT = { news_event = { id = roh_city_captured.4 days = 1 } }
+			}
+			IF = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					NOT = {
+						has_global_flag = kyiv_captured
+					}
+					FROM.FROM = { state = 64 }
+					ROOT = {
+						NOT = {
+							tag = GER
+							tag = POL
+							tag = FRA
+							tag = ITA
+							tag = IBR
+							tag = LPC
+							tag = NMG
+							tag = IMP
+						}
+					}
+				}
+				ROOT = { news_event = { id = roh_city_captured.5 days = 1 } }
+			}
+			IF = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					has_global_flag = kyiv_captured
+					FROM.FROM = { state = 64}
+					ROOT = {
+						NOT = {
+							tag = GER
+							tag = POL
+							tag = FRA
+							tag = ITA
+							tag = IBR
+							tag = LPC
+							tag = NMG
+							tag = IMP
+						}
+					}
+				}
+				ROOT = { news_event = { id = roh_city_captured.6 days = 1 } }
+			}
+			IF = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					FROM.FROM = { state = 2 }
+					ROOT = {
+						NOT = {
+							tag = GER
+							tag = POL
+							tag = FRA
+							tag = ITA
+							tag = IBR
+							tag = LPC
+							tag = NMG
+							tag = IMP
+						}
+					}
+				}
+				ROOT = { news_event = { id = roh_city_captured.7 days = 1 } }
+			}
+			IF = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					FROM.FROM = { state = 41}
+					ROOT = {
+						NOT = {
+							tag = GER
+							tag = POL
+							tag = FRA
+							tag = ITA
+							tag = IBR
+							tag = LPC
+							tag = NMG
+							tag = IMP
+						}
+					}
+				}
+				ROOT = { news_event = { id = roh_city_captured.8 days = 1 } }
+			}
 		}
 	}
 	#THIS(ROOT) - country-nukker, FROM - is nuked state

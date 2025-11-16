@@ -826,6 +826,13 @@ focus_tree = {
 		cost = 2.14
 		x = 18
 		y = 4
+		available = {
+			MSH = {
+				NOT = {
+					has_war_with = BGR 
+				}
+			}
+		}
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Soft_underbelly }
 		mutually_exclusive = { focus = ORL_Rusty_Revolution }
