@@ -389,6 +389,33 @@ focus_tree = {
 					id = ARM_phase_one.12
 					days = 2
 				}
+				#a little help for AI
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					197 = {
+						add_dynamic_modifier = {
+							modifier = dnepr_offensive
+							scope = ROOT
+							days = 180
+						}
+					}
+					203 = {
+						add_dynamic_modifier = {
+							modifier = dnepr_offensive
+							scope = ROOT
+							days = 180
+						}
+					}
+					259 = {
+						add_dynamic_modifier = {
+							modifier = dnepr_offensive
+							scope = ROOT
+							days = 180
+						}
+					}
+				}
 			}
 			declare_war_on = {
 				type = annex_everything
