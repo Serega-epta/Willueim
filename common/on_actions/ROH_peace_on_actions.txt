@@ -232,6 +232,79 @@ on_actions = {
 				set_global_flag = skip_default_capitulation
 			}
 
+			else_if = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					ROOT = {
+						NOT = {
+							original_tag = GER
+							original_tag = FRA
+							original_tag = ITA
+							original_tag = IBR
+							original_tag = NMG
+							original_tag = LPC
+							original_tag = POL
+							original_tag = IMP
+						}
+					}
+					FROM = {
+						OR = {
+							original_tag = GER
+							original_tag = FRA
+							original_tag = ITA
+							original_tag = IBR
+							original_tag = NMG
+							original_tag = LPC
+							original_tag = POL
+							original_tag = IMP
+						}
+					}
+				}
+				
+				ROOT = {
+					every_core_state = {
+						transfer_state_to = IMP 
+					}
+				}
+				set_global_flag = skip_default_capitulation
+			}
+
+			else_if = {
+				limit = {
+					has_global_flag = IOPK_crisis
+					ROOT = {
+						OR = {
+							original_tag = GER
+							original_tag = FRA
+							original_tag = ITA
+							original_tag = IBR
+							original_tag = NMG
+							original_tag = POL
+						}
+					}
+					FROM = {
+						OR = {
+							has_government = statesmen
+							has_government = free_people
+							has_government = humanists
+							has_government = technocracy
+						}
+					}
+				}
+				FROM = {
+					puppet = ROOT
+				}
+				ROOT = {
+					every_core_state = {
+						transfer_state_to = PREV
+					}
+				}
+				
+				set_global_flag = skip_default_capitulation
+			}
+
+			
+
 			##########################
 			###Default Capitulation###
 			##########################
