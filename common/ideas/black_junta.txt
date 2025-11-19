@@ -1,6 +1,14 @@
 ideas = {
 	country = {
 		dog_clanging = {
+			picture = GFX_idea_WAC_dog_clanging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
 			modifier = {
 				enemy_justify_war_goal_time = 2
 				production_factory_efficiency_gain_factor = 0.1

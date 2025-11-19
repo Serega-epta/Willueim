@@ -9,25 +9,41 @@
  PEACE_POPUP_FLAG1_TT: "§GПобедитель:§! [winning_country.GetFlag] §Y[winning_country.GetName]§!"
  PEACE_POPUP_FLAG2_TT: "§RПроигравший:§! [losing_country.GetFlag] §Y[losing_country.GetName]§!"
 
- PEACE_POPUP_COUNTRY_PLURAL:0 " и их союзники "
+ PEACE_POPUP_COUNTRY_PLURAL:0 " и его союзники "
  PEACE_POPUP_COUNTRY_SINGULAR:0 " "
 
- PEACE_POPUP_COUNTRY_PLURAL_HAS:0 " и их союзники "
+ PEACE_POPUP_COUNTRY_PLURAL_HAS:0 " и его союзники "
  PEACE_POPUP_COUNTRY_SINGULAR_HAS:0 " "
 
  #Peace event/war loc
  PEACE_POPUP_WAR_CONCLUSION:0 "[GetWarConclusionLoc]"
+ PEACE_POPUP_WAR_CONTINUING:0 "[GetWarContinuationLoc]"
 
  PEACE_POPUP_WAR_CONCLUSION_DEFAULT:0 "[winning_country.GetFlag] §Y[winning_country.GetNameDef]§![GetWinnerAlliesWithHas]побеждает [losing_country.GetFlag] §Y[losing_country.GetNameDef]§![GetLoserAllies]в войне."
+ PEACE_POPUP_WAR_CONTINUING_DEFAULT:0 "[winning_country.GetFlag] §Y[winning_country.GetNameDef]§! побеждает [losing_country.GetFlag] §Y[losing_country.GetNameDef]§! в продолжающемся конфликте."
 
+ #Wars that have finished
  PEACE_POPUP_WAR_CONCLUSION_SMK_WIN:0 "§Y[winning_country.GetNameWithFlag]§! победила §Y[losing_country.GetNameWithFlag]§! в §YСмоленской гражданской войне§!"
- PEACE_POPUP_WAR_CONCLUSION_NAR_WIN:0 "§Y[winning_country.GetNameWithFlag]§! освободила §Y[losing_country.GetNameWithFlag]§! в §YСмоленской гражданской войне§!"
+ PEACE_POPUP_WAR_CONCLUSION_NAR_WIN:0 "§Y[winning_country.GetNameWithFlag]§! освободил §Y[losing_country.GetNameWithFlag]§! в §YСмоленской гражданской войне§!"
  
  #Flavor loc
- 
  PEACE_POPUP_FLAVOR_DEFAULT:0 "Очередная кровь была пролита на землю некогда Великой Родины."
  
  PEACE_POPUP_FLAVOR_SMK:0 "Жизнь творит порядок, но порядок не творит жизни."
  PEACE_POPUP_FLAVOR_NAR:0 "Хаос всегда побеждает порядок, поскольку лучше организован."
- 
+ PEACE_POPUP_FLAVOR_LPC:0 "Бери шинель, пошли домой."
  PEACE_POPUP_FLAVOR_AGE:0 "Мечта сербов о своей Родине на Балканах навсегда так и останется мечтой, погребённой вместе с ними."
+ PEACE_POPUP_FLAVOR_ODS:0 "Безумный фанатик похоронен вместе со своим идеальным миром."
+ PEACE_POPUP_FLAVOR_GLS:0 "Такая уж судьба у отцов — разочаровывать детей." #Не так страшен чёрт, как его малютки.
+ PEACE_POPUP_FLAVOR_ORL:0 "Огонь погас, так и не разгоревшись."
+ PEACE_POPUP_FLAVOR_IMP:0 "Предатели не расскажут историю со своей точки зрения."
+ PEACE_POPUP_FLAVOR_SDC:0 "Быть рядом с ней — это всё, что было ему нужно."
+ PEACE_POPUP_FLAVOR_MGL:0 "Учёные настрадались, машина выключена, всё теперь спокойно на Кольском полуострове."
+ PEACE_POPUP_FLAVOR_LWV:0 "Нет хуже безумия, чем религиозный фанатизм."
+ PEACE_POPUP_FLAVOR_ARM:0 "Месть хороша, пока ты её не совершил."
+ PEACE_POPUP_FLAVOR_FSR:0 "Последний лучик надежды погас."
+ PEACE_POPUP_FLAVOR_KUH:0 "Его рай оказался пылью." #Его бог отвернулся первым.
+ PEACE_POPUP_FLAVOR_STW:0 "Стая уважает силу, а не логические аргументы."
+ PEACE_POPUP_FLAVOR_DOG_CLANGING:0 "Грызня пережила причину."
+ #PEACE_POPUP_FLAVOR_:0 "Умирать тоже надо человеком."
+ #PEACE_POPUP_FLAVOR_:0 "У судьбы своя логика."

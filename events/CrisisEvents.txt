@@ -40,6 +40,8 @@ country_event = {
 			}
 			ELI = {
 				load_oob = ELI 
+
+				load_focus_tree = anarchy_focus_tree
 				
 				for_each_scope_loop = {
 					array = ELI.elimination_targets
@@ -92,6 +94,8 @@ country_event = {
 			BMB = {
 				load_oob = BMB 
 				
+				load_focus_tree = anarchy_focus_tree
+
 				for_each_scope_loop = {
 					array = BMB.elimination_targets
 					
@@ -158,6 +162,8 @@ country_event = {
 				add_state_core = 72
 				add_state_core = 74
 				add_state_core = 75
+
+				load_focus_tree = anarchy_focus_tree
 
 				division_template = {
 					name = "Infantry brigade"
@@ -227,6 +233,8 @@ country_event = {
 				add_state_core = 33
 				add_state_core = 785
 				add_state_core = 735
+
+				load_focus_tree = anarchy_focus_tree
 
 				division_template = {
 					name = "Infantry brigade"
@@ -303,6 +311,8 @@ country_event = {
 				add_state_core = 162
 				add_state_core = 735
 				add_state_core = 736
+
+				load_focus_tree = anarchy_focus_tree
 
 				division_template = {
 					name = "Infantry brigade"
@@ -391,6 +401,8 @@ country_event = {
 				add_state_core = 793
 				add_state_core = 794
 
+				load_focus_tree = anarchy_focus_tree
+
 				division_template = {
 					name = "Infantry brigade"
 					division_names_group = PEKHOTNAYA_GRUPPA_01
@@ -456,6 +468,8 @@ country_event = {
 				add_to_faction = LPC
 				add_to_faction = IMP
 				puppet = IMP
+
+				load_focus_tree = anarchy_focus_tree
 
 				division_template = {
 					name = "Infantry brigade"

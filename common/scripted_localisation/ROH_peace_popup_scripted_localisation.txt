@@ -79,6 +79,9 @@ defined_text = {
 			event_target:losing_country = {
 				original_tag = SMK
 			}
+			event_target:winning_country = {
+				original_tag = NAR
+			}
 		}
 		localization_key = PEACE_POPUP_WAR_CONCLUSION_NAR_WIN
 	}
@@ -86,6 +89,9 @@ defined_text = {
 		trigger = {
 			event_target:losing_country = {
 				original_tag = NAR
+			}
+			event_target:winning_country = {
+				original_tag = SMK
 			}
 		}
 		localization_key = PEACE_POPUP_WAR_CONCLUSION_SMK_WIN
@@ -117,10 +123,125 @@ defined_text = {
 	text = {
 		trigger = {
 			event_target:losing_country = {
+				original_tag = LPC
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_LPC
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
 				original_tag = AGE
 			}
 		}
 		localization_key = PEACE_POPUP_FLAVOR_AGE
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = ODS
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_ODS
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = GLS
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_GLS
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = ORL
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_ORL
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = IMP
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_IMP
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = SDC
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_SDC
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = MGL
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_MGL
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = LWV
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_LWV
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = ARM
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_ARM
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = FSR
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_FSR
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = KUH
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_KUH
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				original_tag = STW
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_STW
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
+				OR = {
+					original_tag = WAC
+					original_tag = BRD
+					original_tag = HAN
+					original_tag = BRI
+				}
+			}
+			OR = {
+				WAC = { has_idea = dog_clanging }
+				BRD = { has_idea = dog_clanging }
+				HAN = { has_idea = dog_clanging }
+				BRI = { has_idea = dog_clanging }
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_DOG_CLANGING
 	}
 	##
 	text = {

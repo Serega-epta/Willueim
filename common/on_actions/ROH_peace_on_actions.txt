@@ -1,16 +1,17 @@
+#TODO: Реализовать скрипт для капитуляции Консульства - постоянно ломается мирный договор из-за марионеток
 on_actions = {
 	on_capitulation = {
 		effect = {
 			#log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
 			
 			set_global_flag = show_peace_popup_alert
-
 			FROM = {
 				save_global_event_target_as = winning_country
 			}
 			ROOT = {
 				save_global_event_target_as = losing_country
 			}
+
 			if = {
 				limit = {
 					event_target:losing_country = {
@@ -32,288 +33,16 @@ on_actions = {
 				}
 				set_global_flag = winning_country_multiple
 			}
+			add_to_variable = { global.peace_popup_dirty = 1 }
 
 			#log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
-			
-			#add_to_variable = { global.peace_popup_dirty = 1 }
 
 			################################
 
 			if = {
 				limit = {
-					ROOT = {
-						OR = {
-							original_tag = MOT
-							original_tag = URA
-							original_tag = EDM
-							original_tag = URC
-							original_tag = WPK
-							original_tag = ZAN
-							original_tag = OCH
-							original_tag = TAR
-						}
-						AND = {
-							is_in_faction = yes
-							is_in_faction_with = URC
-						}
-					}
-					FROM = {
-						OR = {
-							original_tag = GLS
-							has_country_flag = GLS_negotiation_process_fail
-						}
-					}
-				}
-
-				ROOT = {
-					URC = {
-						dismantle_faction = yes
-					}
-				}
-				FROM = {
-					GLS = {
-						white_peace = ROOT
-						annex_country = {
-							target = ROOT
-							transfer_troops = no
-						}
-						every_state = {
-							remove_core_of = ROOT
-						}
-						clr_country_flag = GLS_negotiation_process_fail
-					}
-				}
-				set_global_flag = skip_default_capitulation
-			}
-
-			else_if = {
-				limit = {
-					ROOT = {
-						OR = {
-							original_tag = GLS
-							has_country_flag = GLS_negotiation_process_fail
-						}
-					}
-					FROM = {
-						OR = {
-							original_tag = MOT
-							original_tag = URA
-							original_tag = EDM
-							original_tag = URC
-							original_tag = WPK
-							original_tag = ZAN
-							original_tag = OCH
-							original_tag = TAR
-						}
-						AND = {
-							is_in_faction = yes
-							is_in_faction_with = URC
-						}						
-					}
-				}
-
-				ROOT = {
-					GLS = {
-						clr_country_flag = GLS_negotiation_process_fail
-						set_cosmetic_tag = GLS_URAL_MANDATE
-						load_focus_tree = anarchy_focus_tree
-						kill_country_leader = yes
-						set_party_name = {
-							ideology = statesmen
-							long_name = GLS_statesmen_party_MANDATE_long
-							name = GLS_statesmen_party_MANDATE
-						}
-						set_party_name = {
-							ideology = humanists
-							long_name = GLS_humanists_party_MANDATE_long
-							name = GLS_humanists_party_MANDATE
-						}
-						set_political_party = {
-							ideology = humanists
-							popularity = 100
-						}
-						
-						set_rule = {
-							can_not_declare_war = yes
-						}
-						country_lock_all_division_template = yes 
-					}
-				}
-				
-				FROM = {
-					white_peace = ROOT
-					WPK = {
-						transfer_state = 398
-						add_state_core = 398
-						transfer_state = 1003
-						add_state_core = 1003
-						transfer_state = 1000
-						add_state_core = 1000
-						transfer_state = 573
-						add_state_core = 573
-						transfer_state = 729
-						add_state_core = 729
-						set_capital = {
-							state = 398
-							remember_old_capital = no
-						}
-					}
-					MOT = {
-						transfer_state = 251
-						add_state_core = 251
-						transfer_state = 652
-						add_state_core = 652
-						transfer_state = 582
-						add_state_core = 582
-					}
-					BL1 = {
-						transfer_state = 406
-						add_state_core = 406
-						transfer_state = 994
-						add_state_core = 994
-					}
-					URA = {
-						transfer_state = 407
-						add_state_core = 407
-					}	
-					ISK = {
-						transfer_state = 999
-						add_state_core = 999
-					}
-					SI1 = {
-						transfer_state = 993
-						add_state_core = 993
-					}				
-					URC = {
-						transfer_state = 1004
-						add_state_core = 1004
-						dismantle_faction = yes
-						set_autonomy = {
-							target = GLS
-							autonomy_state = autonomy_puppet
-						}
-					}	
-					every_state = {
-						remove_core_of = ROOT
-					}
-				}
-				set_global_flag = skip_default_capitulation
-			}
-
-			else_if = {
-				limit = {
-					ROOT = {
-						OR = {
-							original_tag = UFV
-						}
-					}
-					FROM = {
-						OR = {
-							original_tag = SDC
-							original_tag = VOZ
-						}
-					}
-				}
-				
-				FROM = {
-					white_peace = ROOT
-					SDC = {
-						transfer_state = 262
-						add_state_core = 262
-					}
-					VOZ = {
-						transfer_state = 947
-						add_state_core = 947
-					}
-					every_state = {
-						remove_core_of = ROOT
-					}
-				}
-				set_global_flag = skip_default_capitulation
-			}
-
-			else_if = {
-				limit = {
-					has_global_flag = IOPK_crisis
-					ROOT = {
-						NOT = {
-							original_tag = GER
-							original_tag = FRA
-							original_tag = ITA
-							original_tag = IBR
-							original_tag = NMG
-							original_tag = LPC
-							original_tag = POL
-							original_tag = IMP
-						}
-					}
-					FROM = {
-						OR = {
-							original_tag = GER
-							original_tag = FRA
-							original_tag = ITA
-							original_tag = IBR
-							original_tag = NMG
-							original_tag = LPC
-							original_tag = POL
-							original_tag = IMP
-						}
-					}
-				}
-				
-				ROOT = {
-					every_core_state = {
-						transfer_state_to = IMP 
-					}
-				}
-				set_global_flag = skip_default_capitulation
-			}
-
-			else_if = {
-				limit = {
-					has_global_flag = IOPK_crisis
-					ROOT = {
-						OR = {
-							original_tag = GER
-							original_tag = FRA
-							original_tag = ITA
-							original_tag = IBR
-							original_tag = NMG
-							original_tag = POL
-						}
-					}
-					FROM = {
-						OR = {
-							has_government = statesmen
-							has_government = free_people
-							has_government = humanists
-							has_government = technocracy
-						}
-					}
-				}
-				FROM = {
-					puppet = ROOT
-				}
-				ROOT = {
-					every_core_state = {
-						transfer_state_to = PREV
-					}
-				}
-				
-				set_global_flag = skip_default_capitulation
-			}
-
-			
-
-			##########################
-			###Default Capitulation###
-			##########################
-
-			else_if = {
-				limit = {
 					OR = {
 						ROOT = { is_in_faction = no }
-						ROOT = { is_faction_leader = yes }
 						ROOT = {
 							all_allied_country = {
 								if = {
@@ -329,7 +58,370 @@ on_actions = {
 				}
 				#log = "war_won"
 				set_global_flag = war_won
-				
+
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = MOT
+								original_tag = URA
+								original_tag = EDM
+								original_tag = URC
+								original_tag = WPK
+								original_tag = ZAN
+								original_tag = OCH
+								original_tag = TAR
+							}
+							AND = {
+								is_in_faction = yes
+								is_in_faction_with = URC
+							}
+						}
+						FROM = {
+							OR = {
+								original_tag = GLS
+								has_country_flag = GLS_negotiation_process_fail
+							}
+						}
+					}
+
+					ROOT = {
+						URC = {
+							dismantle_faction = yes
+						}
+					}
+					FROM = {
+						white_peace = ROOT
+						annex_country = {
+							target = ROOT
+							transfer_troops = no
+						}
+						every_state = {
+							remove_core_of = ROOT
+						}
+						clr_country_flag = GLS_negotiation_process_fail
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = GLS
+								has_country_flag = GLS_negotiation_process_fail
+							}
+						}
+						FROM = {
+							OR = {
+								original_tag = MOT
+								original_tag = URA
+								original_tag = EDM
+								original_tag = URC
+								original_tag = WPK
+								original_tag = ZAN
+								original_tag = OCH
+								original_tag = TAR
+							}
+							AND = {
+								is_in_faction = yes
+								is_in_faction_with = URC
+							}						
+						}
+					}
+
+					ROOT = {
+						GLS = {
+							clr_country_flag = GLS_negotiation_process_fail
+							set_cosmetic_tag = GLS_URAL_MANDATE
+							load_focus_tree = anarchy_focus_tree
+							kill_country_leader = yes
+							set_party_name = {
+								ideology = statesmen
+								long_name = GLS_statesmen_party_MANDATE_long
+								name = GLS_statesmen_party_MANDATE
+							}
+							set_party_name = {
+								ideology = humanists
+								long_name = GLS_humanists_party_MANDATE_long
+								name = GLS_humanists_party_MANDATE
+							}
+							set_political_party = {
+								ideology = humanists
+								popularity = 100
+							}
+							
+							set_rule = {
+								can_not_declare_war = yes
+							}
+							country_lock_all_division_template = yes 
+						}
+					}
+					
+					FROM = {
+						white_peace = ROOT
+						WPK = {
+							transfer_state = 398
+							add_state_core = 398
+							transfer_state = 1003
+							add_state_core = 1003
+							transfer_state = 1000
+							add_state_core = 1000
+							transfer_state = 573
+							add_state_core = 573
+							transfer_state = 729
+							add_state_core = 729
+							set_capital = {
+								state = 398
+								remember_old_capital = no
+							}
+						}
+						MOT = {
+							transfer_state = 251
+							add_state_core = 251
+							transfer_state = 652
+							add_state_core = 652
+							transfer_state = 582
+							add_state_core = 582
+						}
+						BL1 = {
+							transfer_state = 406
+							add_state_core = 406
+							transfer_state = 994
+							add_state_core = 994
+						}
+						URA = {
+							transfer_state = 407
+							add_state_core = 407
+						}	
+						ISK = {
+							transfer_state = 999
+							add_state_core = 999
+						}
+						SI1 = {
+							transfer_state = 993
+							add_state_core = 993
+						}				
+						URC = {
+							transfer_state = 1004
+							add_state_core = 1004
+							dismantle_faction = yes
+							set_autonomy = {
+								target = GLS
+								autonomy_state = autonomy_puppet
+							}
+						}	
+						every_state = {
+							remove_core_of = ROOT
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = {
+					limit = {
+						ROOT = {
+							original_tag = UFV
+						}
+						FROM = {
+							OR = {
+								original_tag = SDC
+								original_tag = VOZ
+							}
+						}
+					}
+					
+					FROM = {
+						white_peace = ROOT
+						SDC = {
+							transfer_state = 262
+							add_state_core = 262
+						}
+						VOZ = {
+							transfer_state = 947
+							add_state_core = 947
+						}
+						every_state = {
+							remove_core_of = ROOT
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = {
+					limit = {
+						has_global_flag = IOPK_crisis
+						ROOT = {
+							NOT = {
+								original_tag = GER
+								original_tag = FRA
+								original_tag = ITA
+								original_tag = IBR
+								original_tag = NMG
+								original_tag = LPC
+								original_tag = POL
+								original_tag = IMP
+							}
+						}
+						FROM = {
+							OR = {
+								original_tag = GER
+								original_tag = FRA
+								original_tag = ITA
+								original_tag = IBR
+								original_tag = NMG
+								original_tag = LPC
+								original_tag = POL
+								original_tag = IMP
+							}
+						}
+					}
+					
+					ROOT = {
+						white_peace = PREV
+						every_core_state = {
+							transfer_state_to = IMP 
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = {
+					limit = {
+						has_global_flag = IOPK_crisis
+						ROOT = {
+							OR = {
+								original_tag = GER
+								original_tag = FRA
+								original_tag = ITA
+								original_tag = IBR
+								original_tag = NMG
+								original_tag = POL
+							}
+						}
+						FROM = {
+							OR = {
+								has_government = statesmen
+								has_government = free_people
+								has_government = humanists
+								has_government = technocracy
+							}
+						}
+					}
+					FROM = {
+						puppet = ROOT
+					}
+					ROOT = {
+						white_peace = PREV
+						every_core_state = {
+							transfer_state_to = PREV
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = {
+					limit = {
+						ROOT = {
+							original_tag = MAD
+						}
+						FROM = {
+							OR = {
+								original_tag = IMP
+								original_tag = BSO
+								original_tag = COR
+								original_tag = NOR
+								original_tag = PLR
+							}
+						}
+					}
+					FROM = {
+						white_peace = ROOT
+						BSO = {
+							annex_country = {
+								target = MAD
+								transfer_troops = no
+							}
+						}
+						880 = {
+							add_core_of = BSO
+							remove_core_of = MAD
+
+							add_building_construction = {
+								type = bunker
+								province = 3568
+								level = 10
+							}
+							add_building_construction = {
+								type = bunker
+								province = 546
+								level = 10
+							}
+							add_building_construction = {
+								type = bunker
+								province = 9506
+								level = 10
+							}
+							add_building_construction = {
+								type = bunker
+								province = 3542
+								level = 10
+							}
+						}
+						834 = {
+							add_building_construction = {
+								type = bunker
+								province = 9566
+								level = 10
+							}
+							add_building_construction = {
+								type = bunker
+								province = 6565
+								level = 10
+							}
+							add_building_construction = {
+								type = bunker
+								province = 9328
+								level = 10
+							}
+							add_building_construction = {
+								type = bunker
+								province = 6304
+								level = 10
+							}
+							add_building_construction = {
+								type = bunker
+								province = 6254
+								level = 10
+							}
+							add_building_construction = {
+								type = bunker
+								province = 9260
+								level = 10
+							}
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}			
+
+				if = { # Fixing all wars vs puppets
+					limit = {
+						ROOT = {
+							is_puppet = yes
+							if = {
+								limit = { is_puppet = yes }
+								OVERLORD = { has_capitulated = no }
+							}
+						}
+					}
+					#log = "endded puppet"
+					ROOT = { OVERLORD = { end_puppet = PREV } }
+				}
+
+				##########################
+				###Default Capitulation###
+				##########################
+					
 				if = {
 					limit = { NOT = { has_global_flag = skip_default_capitulation } }
 					#log = "Default Capitulation"
@@ -351,10 +443,9 @@ on_actions = {
 							}
 						}
 					}
-					set_global_flag = skip_default_capitulation
-				}				
+				}
+				clr_global_flag = skip_default_capitulation
 			}
-			clr_global_flag = skip_default_capitulation
 		}
 	}
 }
