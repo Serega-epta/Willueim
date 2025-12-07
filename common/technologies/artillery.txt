@@ -70,19 +70,16 @@ technologies = {
 	}
 	gerantium_complex = {
 		start_year = 2023
-		artillery = {
+		category_artillery = {
 			hard_attack = 0.05
 			soft_attack = 0.05
+			ap_attack = 0.05
 		}
 		path = {
 			leads_to_tech = advanced_towed_artillery
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		artillery = {
-			hard_attack = 0.05
-			ap_attack = 0.05
-		}
 		folder = {
 			name = artillery_folder
 			position = {
@@ -123,7 +120,7 @@ technologies = {
 	}
 	IVD_UMMS_Mfifty = {
 		start_year = 2027
-		artillery = {
+		category_artillery = {
 			hard_attack = 0.05
 			soft_attack = 0.05
 		}
@@ -172,7 +169,7 @@ technologies = {
 	}
 	courtesan_project = {
 		start_year = 2035
-		artillery = {
+		category_artillery = {
 			hard_attack = 0.05
 			soft_attack = 0.05
 		}
@@ -223,7 +220,7 @@ technologies = {
 		}
 	}
 	complex_stukach = {
-		artillery = {
+		category_artillery = {
 			hard_attack = 0.05
 			soft_attack = 0.05
 		}
