@@ -572,10 +572,7 @@ Unification = {
 					global.red_forest_corruption^num = 0
 				}
 			}
-			has_built = {
-				type = filtration_station
-				value > 10
-			}
+			filtration_station > 9
 			num_of_civilian_factories_available_for_projects > 49
 		}
 		modifier = {
