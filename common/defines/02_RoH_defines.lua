@@ -138,3 +138,6 @@ NDefines.NAI.AGGRESSIVENESS_CHECK_FULLY_FORTIFIED_POCKET						= 3		--how agressi
 
 NDefines.NAI.AREA_DEFENSE_SETTING_PORTS						= false	--no naval invasion will be (no ships), no need to guard it
 NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES				= false	--no naval invasion will be (no ships), no need to guard it
+
+NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.02 --was 0.1
+NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.02 --was 0.1
