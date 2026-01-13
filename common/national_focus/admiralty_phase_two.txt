@@ -726,12 +726,17 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.75
 				uses = 1
-				category = light_air
+				category = mass_fighter
 			}
 			add_tech_bonus = {
 				bonus = 0.75
 				uses = 1
-				category = medium_air
+				category = mass_bomber
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = mass_heli
 			}
 			army_experience = 100
 			air_experience = 100
@@ -976,7 +981,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1
 				uses = 4
-				category = armor
+				category = armor_tech
 			}
 		}
 	}
