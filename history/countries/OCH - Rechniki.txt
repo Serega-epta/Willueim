@@ -1,14 +1,31 @@
 capital = 252
 oob = OCH
-add_ideas = OCH_not_of_this_world
+add_dynamic_modifier = {modifier = OCH_not_of_this_world}
+add_ideas = OCH_Awareness_1
+add_ideas = mass_recruting
+add_ideas = mixed_labour
+add_ideas = free_faith
+add_ideas = opend_borders
+add_ideas = limited_research_of_distortions
+add_ideas = long_shift
+add_ideas = suppression_social
 set_technology = {
 	infantry_weapons = 1
 	civilian_clothing = 1
 	tech_support = 1
+	tech_engineers = 1
+	tech_field_hospital = 1
+	tech_gamekeepers = 1
 	gw_artillery = 1
 	instruments_of_any_era = 1
+	converted_workshops = 1
+	abandoned_mines = 1
+	resource_development_1 = 1
 }
+set_research_slots = 1
 set_convoys = 0
+set_stability = 0.85
+set_war_support = 0.85
 add_equipment_to_stockpile = {
 	type = infantry_equipment_0
 	amount = 1000
@@ -24,3 +41,26 @@ set_popularities = {
 	free_people = 100
 }
 recruit_character = OCH_Okhva
+recruit_character = OCH_Bear
+
+set_variable = {
+    var = och_research_speed_factor_var
+    value = -0.1
+}
+set_variable = {
+    var = och_production_factory_max_efficiency_factor_var
+    value = -0.1
+}
+set_variable = {
+    var = och_production_factory_efficiency_gain_factor_var
+    value = -0.05
+}
+set_variable = {
+    var = och_production_lack_of_resource_penalty_factor_var
+    value = -0.15
+}
+set_variable = {
+    var = och_conscription_factor_var
+    value = 0.2
+}
+

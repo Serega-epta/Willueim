@@ -1,15 +1,27 @@
 ideas = {
 	country = {
-		OCH_not_of_this_world = {
-			picture = OCH_not_of_this_world
+		OCH_Awareness_1 = {
+			picture = GFX_idea_OCH_Awareness_1
 			modifier = {
-				recruitable_population_factor = 0.15
-				research_speed_factor = -0.25
-				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = -0.15
-				production_lack_of_resource_penalty_factor = -0.16
-				production_speed_buildings_factor = -0.15
-				research_speed_factor = -0.15
+				planning_speed = -0.1
+				army_attack_factor = 0.1
+				army_speed_factor = 0.15
+			}
+		}
+		OCH_Awareness_2 = {
+			picture = GFX_idea_OCH_Awareness_2
+			modifier = {
+				planning_speed = 0.05
+				army_attack_factor = 0.05
+				army_speed_factor = 0.10
+
+			}
+		}
+		OCH_The_Fury_of_Volga = {
+			picture = GFX_idea_OCH_The_Fury_of_Volga
+			targeted_modifier = {
+				tag = EDM
+				attack_bonus_against = 0.25
 			}
 		}
 	}

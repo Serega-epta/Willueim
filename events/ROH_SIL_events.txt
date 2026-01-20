@@ -64,6 +64,11 @@ country_event = {
 	option = {
 		name = SIL.2.a
 		every_neighbor_country = {
+			limit = {
+				NOT = {
+					tag = GER
+				}
+			}
 			declare_war_on = {
 				target = SIL
 				type = annex_everything
