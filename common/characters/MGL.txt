@@ -1,21 +1,28 @@
 characters = {
-	MGL_Machine = {
+	MGL_super_computer = {
+		name = MGL_super_computer
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_MGL_Omissia"
+				large = "GFX_portrait_MGL_super_computer"
 			}
 		}
 		country_leader = {
 			ideology = technocracy_subideology
 			expire = "1965.1.1.1"
-			id = -1
-			desc = MGL_Machine_DESC
+			desc = MGL_super_computer_desc
+			traits = {
+				digital_soul
+			}
 		}
 	}
-	MGL_Exclusion_zone = {
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_MGL_Omissia"
+	MGL_eduard_evgenievich = {
+		name = MGL_eduard_evgenievich
+		country_leader = {
+			ideology = statesmen_subideology
+			expire = "1965.1.1.1"
+			desc = MGL_super_computer_desc
+			traits = {
+				
 			}
 		}
 	}

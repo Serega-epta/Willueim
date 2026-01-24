@@ -2,10 +2,7 @@ capital = 975
 #"ODS_1936"
 oob = base
 add_ideas = {
-	MGL_Critical_arrhythmia
-	MGL_Cybernetic_soul
-	MGL_Rusted_mechanism_1
-	MGL_Toothless_monolith
+	MGL_exhausted_RTG_4
 }
 load_focus_tree = {
 	tree = MGL_phase_one
@@ -31,6 +28,8 @@ set_popularities = {
 	bandits = 1
 	sacraments = 1
 }
-recruit_character = MGL_Machine
-
-recruit_character = MGL_Exclusion_zone
+recruit_character = MGL_super_computer
+set_power_balance = {
+	id = MGL_machine_vs_human
+	set_value = -0.25
+}

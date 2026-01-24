@@ -135,20 +135,18 @@ leader_traits = {
 	###################################
 	#### Черты Мгла ###
 	###################################
-	exclusion_zone_trait = {
+	digital_soul = {
 		random = no
-		monthly_population = -1.0
-		research_speed_factor = -1.0
-		consumer_goods_factor = 1.0
-		army_org = -1.0
-		ai_will_do = {
-			factor = 1
-		}
+		research_speed_factor = 0.05
+		political_power_factor = 0.15
+		stability_factor = -0.1
+		war_support_factor = -0.1
 	}
 
 
 
-		###################################
+
+	###################################
 	#### Черты Святорусы ###
 	###################################
 	careful_trait = {

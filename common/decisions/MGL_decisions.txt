@@ -1,31 +1,105 @@
-MGL_decisions = {
-	MGL_reactor_mission = {
-		icon = GFX_decision_eng_trade_unions_support
-		activation = {
-			original_tag = MGL
-		}
-		available = {
-			has_completed_focus = MGL_plutonium_cardiology
-		}
+MGL_reactor_decision = {
+	MGL_RTG_exhaustion = {
 		is_good = no
 		selectable_mission = no
-		fire_only_once = yes
-		days_mission_timeout = 100
+		activation = {
+			OR = {
+				has_idea = MGL_exhausted_RTG_4
+				has_idea = MGL_exhausted_RTG_3
+				has_idea = MGL_exhausted_RTG_2
+				has_idea = MGL_exhausted_RTG_1
+				has_idea = MGL_exhausted_RTG_0
+			}
+		}
+		available = {
+			has_country_flag = power_grid_restored
+		}
+		days_mission_timeout = 30
 		timeout_effect = {
-			hidden_effect = {
-				complete_national_focus = MGL_intensive_therapy
-				complete_national_focus = MGL_fatal_allowance
-				add_country_leader_role = {
-					character = MGL_Exclusion_zone
-					promote_leader = yes
-					country_leader = {
-						ideology = technocracy_subideology
-						expire = "1965.1.1.1"
-						traits = {
-							exclusion_zone_trait
-						}
-					}
+			if = {
+				limit = {
+					has_idea = MGL_exhausted_RTG_0
 				}
+				#TODO
+			}
+			else = {
+				dec_RTG_exhaustion = yes
+			}
+		}
+	}
+	MGL_increase_normal_range = {
+		fire_only_once = yes
+		available = {
+			NOT = {
+				has_idea = MGL_exhausted_RTG_4
+				has_country_flag = power_grid_restored
+			}
+			#TODO
+		}
+		visible = {
+			#TODO
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = MGL_exhausted_RTG_4
+				}
+				custom_effect_tooltip = power_grid_stable_tt
+			}
+			else = {
+				inc_RTG_exhaustion = yes
+			}
+		}
+	}
+	MGL_raise_the_pressure = {
+		fire_only_once = yes
+		available = {
+			NOT = {
+				has_idea = MGL_exhausted_RTG_4
+				has_country_flag = power_grid_restored_tt
+			}
+			#TODO
+		}
+		visible = {
+			#TODO
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = MGL_exhausted_RTG_4
+				}
+				custom_effect_tooltip = power_grid_stable_tt
+			}
+			else = {
+				inc_RTG_exhaustion = yes
+			}
+		}
+	}
+	MGL_use_disel_generators = {
+		fire_only_once = yes
+		available = {
+			NOT = {
+				has_idea = MGL_exhausted_RTG_4
+				has_country_flag = power_grid_restored
+			}
+			#TODO
+		}
+		visible = {
+			#TODO
+		}
+		days_remove = 30
+		modifier = {
+			fuel_gain_factor = -1
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = MGL_exhausted_RTG_4
+				}
+				custom_effect_tooltip = power_grid_stable_tt
+			}
+			else = {
+				inc_RTG_exhaustion = yes
 			}
 		}
 	}

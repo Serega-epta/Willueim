@@ -1,80 +1,93 @@
 ideas = {
 	country = {
-		MGL_Critical_arrhythmia = {
-			picture = MGL_Critical_arrhythmia_idea
+		MGL_exhausted_RTG_4 = {
 			modifier = {
-				stability_factor = -0.5
-				war_support_factor = -0.5
-				nuclear_production_factor = -0.2
+				#production
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				production_lack_of_resource_penalty_factor = 0.05
+				#fuel
+				fuel_gain_factor = -0.05
+				#construction
+				production_speed_buildings_factor = -0.05
+				conversion_cost_civ_to_mil_factor = 0.05
+				conversion_cost_mil_to_civ_factor = 0.05
+				#repair
+				industry_free_repair_factor = -0.1
+				industry_repair_factor = -0.05
 			}
 		}
-		MGL_Rusted_mechanism_1 = {
-			picture = MGL_Rusted_mechanism_idea
+		MGL_exhausted_RTG_3 = {
 			modifier = {
-				production_speed_buildings_factor = -0.5
-				consumer_goods_factor = 0.5
-				global_building_slots_factor = -0.4
-				base_fuel_gain_factor = -0.5
+				#production
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_lack_of_resource_penalty_factor = 0.1
+				#fuel
+				fuel_gain_factor = -0.1
+				#construction
+				production_speed_buildings_factor = -0.1
+				conversion_cost_civ_to_mil_factor = 0.1
+				conversion_cost_mil_to_civ_factor = 0.1
+				#repair
+				industry_free_repair_factor = -0.2
+				industry_repair_factor = -0.1
 			}
 		}
-		MGL_Rusted_mechanism_2 = {
-			picture = MGL_Rusted_mechanism_idea
+		MGL_exhausted_RTG_2 = {
 			modifier = {
-				production_speed_buildings_factor = -0.35
-				consumer_goods_factor = 0.4
-				global_building_slots_factor = -0.4
-				base_fuel_gain_factor = -0.5
-			}
-		}
-		MGL_Rusted_mechanism_3 = {
-			picture = MGL_Rusted_mechanism_idea
-			modifier = {
+				#production
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_start_efficiency_factor = -0.15
+				production_lack_of_resource_penalty_factor = 0.15
+				#fuel
+				fuel_gain_factor = -0.15
+				#construction
 				production_speed_buildings_factor = -0.15
-				consumer_goods_factor = 0.15
-				global_building_slots_factor = -0.4
-				base_fuel_gain_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.15
+				conversion_cost_mil_to_civ_factor = 0.15
+				#repair
+				industry_free_repair_factor = -0.3
+				industry_repair_factor = -0.15
 			}
 		}
-		MGL_Rusted_mechanism_4 = {
-			picture = MGL_Rusted_mechanism_idea
+		MGL_exhausted_RTG_1 = {
 			modifier = {
-				production_speed_buildings_factor = -0.15
-				consumer_goods_factor = 0.15
-				global_building_slots_factor = -0.4
+				#production
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				production_factory_start_efficiency_factor = -0.2
+				production_lack_of_resource_penalty_factor = 0.2
+				#fuel
+				fuel_gain_factor = -0.2
+				#construction
+				production_speed_buildings_factor = -0.2
+				conversion_cost_civ_to_mil_factor = 0.2
+				conversion_cost_mil_to_civ_factor = 0.2
+				#repair
+				industry_free_repair_factor = -0.4
+				industry_repair_factor = -0.2
 			}
 		}
-		MGL_Cybernetic_soul = {
-			picture = MGL_Cybernetic_soul_idea
+		MGL_exhausted_RTG_0 = {
 			modifier = {
-				stability_factor = -0.1
-				war_support_factor = 0.3
-				political_power_factor = 0.15
-			}
-		}
-		MGL_Toothless_monolith = {
-			picture = MGL_Toothless_monolith_idea
-			modifier = {
-				army_attack_factor = -1.0
-				army_defence_factor = 0.5
-				army_speed_factor = -0.5
-				recruitable_population_factor = -1.0
-				experience_gain_factor = -0.5
-			}
-		}
-		MGL_Guard_of_progress = {
-			picture = MGL_Guard_of_progress_idea
-			modifier = {
-				army_attack_factor = -0.15
-				army_speed_factor = -0.05
-				experience_gain_factor = -0.25
-			}
-		}
-		MGL_Grasping_for_life = {
-			picture = MGL_Grasping_for_life_idea
-			modifier = {
-				research_speed_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.1
-				production_factory_max_efficiency_factor = 0.1
+				#production
+				production_factory_efficiency_gain_factor = -0.25
+				production_factory_max_efficiency_factor = -0.25
+				production_factory_start_efficiency_factor = -0.25
+				production_lack_of_resource_penalty_factor = 0.25
+				#fuel
+				fuel_gain_factor = -0.25
+				#construction
+				production_speed_buildings_factor = -0.25
+				conversion_cost_civ_to_mil_factor = 0.25
+				conversion_cost_mil_to_civ_factor = 0.25
+				#repair
+				industry_free_repair_factor = -0.5
+				industry_repair_factor = -0.25
 			}
 		}
 	}

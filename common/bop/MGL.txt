@@ -1,0 +1,99 @@
+MGL_machine_vs_human = {
+    left_side = MGL_super_computer
+    right_side = MGL_human_side
+    decision_category = ORL_balance_of_power_category
+    range = {
+        id = Confusion_in_soul
+        min = -0.1
+        max = 0.1
+        modifier = {}
+    }
+    side = {
+        id = MGL_super_computer
+        range = {
+            id = low_ai_intervention
+            max = -0.1
+            min = -0.3
+            modifier = {
+                
+            }
+        }
+        range = {
+            id = normal_ai_intervention
+            max = -0.3
+            min = -0.5
+            modifier = {
+                
+            }
+        }
+		range = {
+            id = high_ai_intervention
+            max = -0.5
+            min = -0.7
+            modifier = {
+                
+            }
+        }
+		range = {
+            id = mass_instruction_overload
+            max = -0.7
+            min = -0.9
+            modifier = {
+                
+            }
+        }
+		range = {
+            id = total_instruction_virtualisation
+            max = -0.9
+            min = -1
+            modifier = {
+                
+            }
+			on_activate = {}
+			on_deactivate = {}
+        }
+	}
+	side = {
+        id = MGL_human_side
+        range = {
+            id = low_human_intervention
+            max = 0.3
+            min = 0.1
+            modifier = {
+                
+            }
+        }
+        range = {
+            id = normal_human_intervention
+            max = 0.5
+            min = 0.3
+            modifier = {
+               
+            }
+        }
+		range = {
+            id = high_human_intervention
+            max = 0.7
+            min = 0.5
+            modifier = {
+               
+            }
+        }
+		range = {
+            id = order_over_protocol
+            max = 0.9
+            min = 0.7
+            modifier = {
+               
+            }
+        }
+		range = {
+            id = man_over_machine
+            max = 1
+            min = 0.9
+            modifier = {
+               
+            }
+        }
+	}
+}
