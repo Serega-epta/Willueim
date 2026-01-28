@@ -641,7 +641,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "army_header"
 			position = { x = 0 y = 5 }
-			size = { width = 98% height = 246 }
+			size = { width = 98% height = 200 }
 			margin = { top = 0 left = 0 bottom = 0 right = 0}
 			
 			background = {
@@ -651,7 +651,8 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "modifiers_grid"
-				position = { x = 4 y = 174 }
+				position = { x = 4 y = -68 }
+				orientation = lower_left
 				size = { width = 500 height = 35 }
 				slotsize = { width = 72 height = 33 }
 				max_slots_horizontal = 7
@@ -688,7 +689,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "army_chief"
-				position = { x=90 y=-30 }
+				position = { x=90 y=-26 }
 				size = { width=100%% height=100%% }
 				clipping = no
 
@@ -704,52 +705,50 @@ guiTypes = {
 			}
 
 			containerWindowType = {
-				name = "army_doctrine_button"
-				position = { x=274 y=-14 }
+				name = "land_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
+				position = { x=260 y=-11 }
 				size = {width=20 height=20}
 				clipping = no
 
 				buttonType = {
+					#Subdoctrine background
 					name = "button"
-					quadTextureSprite = "GFX_technology_land_doctrine_folder_available_item_bg"
-					position = { x=34 y=47 }
-					#buttonText = "Doctrines"
-					font = "hoi_24header"
+					quadTextureSprite = "GFX_doctrines_officer_corps_button_land"
+					position = { x=28 y=45 }
 				}
 
 				iconType = {
+					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen. 
 					name = "icon"
-					position = { x=58 y=72 }
+					position = { x=61 y=69 }
 					Orientation = CENTER
-					spriteType = "GFX_placeholder_bordered"
+					spriteType = "GFX_land_doctrine_medium" # Default icon when no grand doctrine is active
 					alwaystransparent = yes
 					centerposition = yes
 				}
 
 				iconType = {
-					name = "nb_doctrine_unlocked_bg"
-					spriteType = "GFX_topbar_alert_bg"
-					position = { x=36 y=97 }
+					name = "number_container"
+					position = { x=62 y=95 }
+					Orientation = CENTER
+					spriteType = "GFX_bronze_number_container"
 					alwaystransparent = yes
-					frame = 1
+					centerposition = yes
 				}
 
-				instantTextBoxType = {
-					name ="nb_doctrine_unlocked"
-					position = { x=34 y=97 }
-					font = "hoi_16mbs"
-					text = "0"
-					format = center
-					maxWidth = 20
-					maxHeight = 24
-					fixedsize = yes
+				gridBoxType = {
+					#Container for numbers
+					name = track_status_grid
+					position = { x=48 y=98 }
+					slotsize = { width = 16 height = 16 }
+					max_slots_vertical = 1
 				}
 			}
 			
 			buttonType = {
 				name = "commander_roster_army"
 				quadTextureSprite = "GFX_diplo_filter_entry"
-				position = { x=382 y=32 }
+				position = { x=382 y=36 }
 				buttonText = "Placeholder"
 				font = "hoi_16mbs"
 				frame = 2
@@ -760,7 +759,7 @@ guiTypes = {
 			buttonType = {
 				name = "commander_roster_division"
 				quadTextureSprite = "GFX_diplo_filter_entry"
-				position = { x=382 y=66 }
+				position = { x=382 y=70 }
 				buttonText = "Placeholder"
 				font = "hoi_16mbs"
 				frame = 2
@@ -774,8 +773,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "air_header"
-			position = { x = 0 y = 255 }
-			size = { width = 98% height = 252 }
+			position = { x = 0 y = 414 }
+			size = { width = 98% height = 200 }
 			margin = { top = 0 left = 0 bottom = 0 right = 0}
 
 			background = {
@@ -812,7 +811,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "air_chief"
-				position = { x=94 y=-30 }
+				position = { x=94 y=-26 }
 				size = { width=100%% height=100%% }
 				clipping = no
 
@@ -829,7 +828,8 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "modifiers_grid"
-				position = { x = 6 y = 180 }
+				position = { x = 7 y = -68 }
+				orientation = lower_left
 				size = { width = 500 height = 35 }
 				slotsize = { width = 71 height = 33 }
 				max_slots_horizontal = 7
@@ -838,45 +838,43 @@ guiTypes = {
 			}
 
 			containerWindowType = {
-				name = "air_doctrine_button"
-				position = { x=274 y=-14 }
+				name = "air_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
+				position = { x=260 y=-10 }
 				size = {width=20 height=20}
 				clipping = no
 
 				buttonType = {
+					#Subdoctrine background
 					name = "button"
-					quadTextureSprite = "GFX_technology_land_doctrine_folder_available_item_bg"
-					position = { x=34 y=47 }
-					#buttonText = "Doctrines"
-					font = "hoi_24header"
+					quadTextureSprite = "GFX_doctrines_officer_corps_button_air"
+					position = { x=28 y=45 }
 				}
 
 				iconType = {
+					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen. 
 					name = "icon"
-					position = { x=59 y=71 }
-					spriteType = "GFX_placeholder_bordered"
+					position = { x=61 y=68 }
+					spriteType = "GFX_air_doctrine_medium" # Default icon when no grand doctrine is active
 					Orientation = CENTER
 					alwaystransparent = yes
 					centerposition = yes
 				}
 
 				iconType = {
-					name = "nb_doctrine_unlocked_bg"
-					spriteType = "GFX_topbar_alert_bg"
-					position = { x=36 y=97 }
+					name = "number_container"
+					position = { x=62 y=95 }
+					Orientation = CENTER
+					spriteType = "GFX_bronze_number_container"
 					alwaystransparent = yes
-					frame = 1
+					centerposition = yes
 				}
 
-				instantTextBoxType = {
-					name ="nb_doctrine_unlocked"
-					position = { x=34 y=97 }
-					font = "hoi_16mbs"
-					text = "0"
-					format = center
-					maxWidth = 20
-					maxHeight = 24
-					fixedsize = yes
+				gridBoxType = {
+					#Container for numbers
+					name = track_status_grid
+					position = { x=48 y=98 }
+					slotsize = { width = 16 height = 16 }
+					max_slots_vertical = 1
 				}
 			}
 		}
