@@ -898,6 +898,17 @@ focus_tree = {
 	focus = {
 		id = GLS_chasing_a_dream
 		icon = GFX_chasing_a_dream
+		available = {
+			NOT = {
+				country_exists = MOT
+			}
+			NOT = {
+				country_exists = URA
+			}
+			NOT = {
+				country_exists = BL1
+			}
+		}
 		x = 6
 		y = 15
 		cost = 5

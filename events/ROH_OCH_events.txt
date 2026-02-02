@@ -1,0 +1,664 @@
+add_namespace = OCH_first_phase
+#Живая вода
+country_event = {
+	id = OCH_first_phase.1
+	title = OCH_first_phase.1.t
+	desc = OCH_first_phase.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.1.a
+		add_research_slot = 1
+	}
+}
+#Южный караван I
+country_event = {
+	id = OCH_first_phase.2
+	title = OCH_first_phase.2.t
+	desc = OCH_first_phase.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.2.a
+		country_event = {
+			id = OCH_first_phase.3
+			days = 2
+		}
+	}
+}
+#Южный караван II
+country_event = {
+	id = OCH_first_phase.3
+	title = OCH_first_phase.3.t
+	desc = OCH_first_phase.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.3.a
+		country_event = {
+			id = OCH_first_phase.4
+			days = 1
+		}
+	}
+}
+#Южный караван III
+country_event = {
+	id = OCH_first_phase.4
+	title = OCH_first_phase.4.t
+	desc = OCH_first_phase.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.4.a
+		add_political_power = 100
+	}
+}
+#Прибившийся I
+country_event = {
+	id = OCH_first_phase.5
+	title = OCH_first_phase.5.t
+	desc = OCH_first_phase.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.5.a
+		country_event = {
+			id = OCH_first_phase.6
+			days = 1
+		}
+	}
+}
+#Прибившийся II
+country_event = {
+	id = OCH_first_phase.6
+	title = OCH_first_phase.6.t
+	desc = OCH_first_phase.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.6.a
+		add_equipment_to_stockpile = {
+    		type = infantry_equipment
+    		amount = -250
+		}
+		add_equipment_to_stockpile = {
+    		type = infantry_odejda
+			amount = -300
+		}
+		add_equipment_to_stockpile = {
+    		type = support_equipment
+			amount = -25			
+		}
+		add_manpower = -5
+	}
+}
+#Жажда
+country_event = {
+	id = OCH_first_phase.7
+	title = OCH_first_phase.7.t
+	desc = OCH_first_phase.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.7.a
+		add_to_variable = {
+    		var = och_production_factory_efficiency_gain_factor_var
+    		value = 0.05
+    		tooltip = I_think_tt
+		}
+	}
+}
+#Следопыт I
+country_event = {
+	id = OCH_first_phase.8
+	title = OCH_first_phase.8.t
+	desc = OCH_first_phase.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.8.a
+		country_event = {
+			id = OCH_first_phase.9
+			days = 2
+		}
+	}
+}
+#Следопыт II
+country_event = {
+	id = OCH_first_phase.9
+	title = OCH_first_phase.9.t
+	desc = OCH_first_phase.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.9.a
+		country_event = OCH_first_phase.10
+	}
+}
+
+#Следопыт III
+country_event = {
+	id = OCH_first_phase.10
+	title = OCH_first_phase.10.t
+	desc = OCH_first_phase.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.10.a
+		add_equipment_to_stockpile = {
+    		type = infantry_equipment
+    		amount = -35
+		}
+		add_equipment_to_stockpile = {
+    		type = infantry_odejda
+    		amount = -50
+		}
+		add_equipment_to_stockpile = {
+    		type = support_equipment
+    		amount = -25
+		}
+	}
+}
+#Приоритеты
+country_event = {
+	id = OCH_first_phase.11
+	title = OCH_first_phase.11.t
+	desc = OCH_first_phase.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.11.a
+		add_to_variable = {
+    		var =  och_research_speed_factor_var
+    		value = -0.1
+		}
+		add_to_variable = {
+    		var =  och_production_factory_efficiency_gain_factor_var
+    		value = 0.1
+    		tooltip = control_tt
+		}
+		set_country_flag = control_flag
+	}
+	option = {
+		name = OCH_first_phase.11.b
+		add_manpower = -70
+		add_to_variable = {
+    		var =  och_research_speed_factor_var
+    		value = 0.15
+    		tooltip = freedom_tt
+		}
+		set_country_flag = freedom_flag
+	}
+}
+#Контроль
+country_event = {
+	id = OCH_first_phase.12
+	title = OCH_first_phase.12.t
+	desc = OCH_first_phase.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.12.a
+		add_to_variable = {
+    		var =  och_research_speed_factor_var
+    		value = -0.05
+		}
+		add_to_variable = {
+    		var =  och_production_factory_max_efficiency_factor_var
+    		value = 0.15
+		}
+		add_to_variable = {
+    		var =  och_production_factory_efficiency_gain_factor_var
+    		value = 0.05
+    		tooltip = control_2_tt
+		}
+	}
+}
+#Ограниченная свобода
+country_event = {
+	id = OCH_first_phase.13
+	title = OCH_first_phase.13.t
+	desc = OCH_first_phase.13.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.13.a
+		add_to_variable = {
+    		var =  och_research_speed_factor_var
+    		value = 0.1
+		}
+		add_to_variable = {
+    		var = och_conscription_factor_var
+    		value = -0.1
+		}
+		add_to_variable = {
+    		var =  och_production_factory_max_efficiency_factor_var
+    		value = 0.11
+    		tooltip = freedom_2_tt
+		}
+	}
+}
+#Статья УК СР 100 I
+country_event = {
+	id = OCH_first_phase.14
+	title = OCH_first_phase.14.t
+	desc = OCH_first_phase.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.14.a
+		country_event = {
+			id = OCH_first_phase.15
+			days = 1
+		}
+	}
+}
+#Статья УК СР 100 II
+country_event = {
+	id = OCH_first_phase.15
+	title = OCH_first_phase.15.t
+	desc = OCH_first_phase.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.15.a
+		country_event = {
+			id = OCH_first_phase.16
+			days = 1
+		}
+	}
+}
+#Статья УК СР 100 III
+country_event = {
+	id = OCH_first_phase.16
+	title = OCH_first_phase.16.t
+	desc = OCH_first_phase.16.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.16.a
+		add_equipment_to_stockpile = {
+    		type = infantry_equipment
+    		amount = -35
+		}
+		add_equipment_to_stockpile = {
+    		type = infantry_odejda
+			amount = -70
+		}
+		add_equipment_to_stockpile = {
+    		type = support_equipment
+    		amount = -35
+		}
+		add_manpower = -3
+	}
+}
+
+#Осколки памяти I
+country_event = {
+	id = OCH_first_phase.17
+	title = OCH_first_phase.17.t
+	desc = OCH_first_phase.17.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.17.a
+		country_event = OCH_first_phase.18
+	}
+}
+
+#Осколки памяти II
+country_event = {
+	id = OCH_first_phase.18
+	title = OCH_first_phase.18.t
+	desc = OCH_first_phase.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.18.a
+		swap_ideas = {
+    		remove_idea = OCH_Awareness_1
+    		add_idea = OCH_Awareness_2
+		}
+	}
+}
+
+#Тропинка к правде I
+country_event = {
+	id = OCH_first_phase.19
+	title = OCH_first_phase.19.t
+	desc = OCH_first_phase.19.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.19.a
+		country_event = OCH_first_phase.20
+	}
+}
+
+#Тропинка к правде II
+country_event = {
+	id = OCH_first_phase.20
+	title = OCH_first_phase.20.t
+	desc = OCH_first_phase.20.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.20.a
+	}
+}
+
+#Лабораторный комплекс I
+country_event = {
+	id = OCH_first_phase.21
+	title = OCH_first_phase.21.t
+	desc = OCH_first_phase.21.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.21.a
+		country_event = OCH_first_phase.22
+	}
+}
+
+#Лабораторный комплекс II
+country_event = {
+	id = OCH_first_phase.22
+	title = OCH_first_phase.22.t
+	desc = OCH_first_phase.22.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.22.a
+	}
+}
+
+#Ярость I
+country_event = {
+	id = OCH_first_phase.23
+	title = OCH_first_phase.23.t
+	desc = OCH_first_phase.23.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.23.a
+		country_event = OCH_first_phase.24
+	}
+}
+
+#Ярость II
+country_event = {
+	id = OCH_first_phase.24
+	title = OCH_first_phase.24.t
+	desc = OCH_first_phase.24.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.24.a
+		add_timed_idea = {
+    		idea = OCH_The_Fury_of_Volga
+    		days = 180
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Rechnaya Gvardiya\" division_template = \"Rechnaya Gvardiya\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Rechnaya Gvardiya\" division_template = \"Rechnaya Gvardiya\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+			}
+		}
+		add_manpower = -12500
+		hidden_effect = {
+			create_corps_commander = {
+				name = OCH_Bear
+				desc = OCH_Bear_desc
+				skill = 5
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
+	}
+}
+
+#Допрос I
+country_event = {
+	id = OCH_first_phase.25
+	title = OCH_first_phase.25.t
+	desc = OCH_first_phase.25.d
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			country_exists = EDM
+		}
+		tag = OCH
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = {
+		name = OCH_first_phase.25.a
+		country_event = OCH_first_phase.26
+	}
+}
+
+#Допрос II
+country_event = {
+	id = OCH_first_phase.26
+	title = OCH_first_phase.26.t
+	desc = OCH_first_phase.26.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.26.a
+		add_manpower = -1
+		country_event = {
+			id = OCH_first_phase.27
+			days = 3
+		}
+	}
+}
+
+#Итоги I
+country_event = {
+	id = OCH_first_phase.27
+	title = OCH_first_phase.27.t
+	desc = OCH_first_phase.27.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.27.a
+		country_event = OCH_first_phase.28
+	}
+}
+
+#Итоги II
+country_event = {
+	id = OCH_first_phase.28
+	title = OCH_first_phase.28.t
+	desc = OCH_first_phase.28.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.28.a
+		add_political_power = 300
+	}
+}
+
+#Местные порядки
+country_event = {
+	id = OCH_first_phase.29
+	title = OCH_first_phase.29.t
+	desc = OCH_first_phase.29.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.29.a
+		add_equipment_to_stockpile = {
+    		type = infantry_equipment
+    		amount = 12
+		}
+		add_equipment_to_stockpile = {
+    		type = infantry_odejda
+			amount = 20
+		}
+		add_equipment_to_stockpile = {
+    		type = support_equipment
+    		amount = 3
+		}
+		add_manpower = -10
+	}
+}
+
+#Функциональные отражения
+country_event = {
+	id = OCH_first_phase.30
+	title = OCH_first_phase.30.t
+	desc = OCH_first_phase.30.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.30.a
+		add_political_power = 10
+	}
+}
+
+#Янтарная скверна
+country_event = {
+	id = OCH_first_phase.31
+	title = OCH_first_phase.31.t
+	desc = OCH_first_phase.31.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.31.a
+	}
+}
+
+#Безветренное место I
+country_event = {
+	id = OCH_first_phase.32
+	title = OCH_first_phase.32.t
+	desc = OCH_first_phase.32.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.32.a
+		country_event = OCH_first_phase.33
+	}
+}
+
+#Безветренное место II
+country_event = {
+	id = OCH_first_phase.33
+	title = OCH_first_phase.33.t
+	desc = OCH_first_phase.33.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.33.a
+		252 = {
+			add_manpower = 4
+		}
+	}
+}
+
+#Обычный день
+country_event = {
+	id = OCH_first_phase.34
+	title = OCH_first_phase.34.t
+	desc = OCH_first_phase.34.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.34.a
+		add_political_power = 5
+	}
+}
+
+#Воспоминания
+country_event = {
+	id = OCH_first_phase.35
+	title = OCH_first_phase.35.t
+	desc = OCH_first_phase.35.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.35.a
+	}
+}
+
+#Хребет тишины
+country_event = {
+	id = OCH_first_phase.36
+	title = OCH_first_phase.36.t
+	desc = OCH_first_phase.36.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.36.a
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Rechnaya Gvardiya\" division_template = \"Rechnaya Gvardiya\" start_experience_factor = 0.5 start_equipment_factor = 0.97 start_manpower_factor = 0.93"
+				owner = ROOT
+			}
+		}
+	}
+}
+
+#Нарушенная тишина
+country_event = {
+	id = OCH_first_phase.37
+	title = OCH_first_phase.37.t
+	desc = OCH_first_phase.37.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.37.a
+	}
+}
+
+#Тихий отсчёт I
+country_event = {
+	id = OCH_first_phase.38
+	title = OCH_first_phase.38.t
+	desc = OCH_first_phase.38.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.38.a
+		country_event = OCH_first_phase.39
+	}
+}
+
+#Тихий отсчёт II
+country_event = {
+	id = OCH_first_phase.39
+	title = OCH_first_phase.39.t
+	desc = OCH_first_phase.39.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = OCH_first_phase.39.a
+	}
+}
+
+#Обрыв
+country_event = {
+	id = OCH_first_phase.40
+	title = OCH_first_phase.40.t
+	desc = OCH_first_phase.40.d
+	fire_only_once = yes
+	trigger = {
+		tag = OCH
+		surrender_progress > 0.34
+	}
+	option = {
+		name = OCH_first_phase.40.a
+		add_stability = -0.15
+		add_war_support = -0.25
+	}
+}
+

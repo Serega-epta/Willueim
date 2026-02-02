@@ -1,6 +1,59 @@
 on_actions = {
 	on_startup = {	
 		effect = {
+			add_to_array = { bgd.targets = ODS }
+			add_to_array = { bgd.targets = IMP }
+			add_to_array = { bgd.targets = AGE }
+			add_to_array = { bgd.targets = WOD }
+			add_to_array = { bgd.targets = MOD }
+			add_to_array = { bgd.targets = SOD }
+			add_to_array = { bgd.targets = YWD }
+			add_to_array = { bgd.targets = BOD }
+			add_to_array = { bgd.targets = ODS }
+			add_to_array = { bgd.targets = AZB }
+			add_to_array = { bgd.targets = CRW }
+			add_to_array = { bgd.targets = FUD }
+			add_to_array = { bgd.targets = VDS }
+			add_to_array = { bgd.targets = DIB }
+			add_to_array = { bgd.targets = BAG }
+			add_to_array = { bgd.targets = BIH }
+			add_to_array = { bgd.targets = CST }
+			add_to_array = { bgd.targets = MAP }
+			add_to_array = { bgd.targets = POP }
+			add_to_array = { bgd.targets = IMP }
+			add_to_array = { bgd.targets = VOS }
+			add_to_array = { bgd.targets = BAL }
+			add_to_array = { bgd.targets = LPC }
+			add_to_array = { bgd.targets = BTC }
+			add_to_array = { bgd.targets = BLZ }
+			add_to_array = { bgd.targets = SIM }
+			add_to_array = { bgd.targets = TIP }
+			add_to_array = { bgd.targets = BAI }
+			add_to_array = { bgd.targets = HAR }
+			add_to_array = { bgd.targets = AGE }
+			add_to_array = { bgd.targets = CHU }
+			add_to_array = { bgd.targets = CAV }
+			add_to_array = { bgd.targets = OBJ }
+			add_to_array = { bgd.targets = TWD }
+			add_to_array = { bgd.targets = HOT }
+			add_to_array = { bgd.targets = HOH }
+			add_to_array = { bgd.targets = KOC }
+			add_to_array = { bgd.targets = OZE }
+			add_to_array = { bgd.targets = NVC }
+			add_to_array = { bgd.targets = OLD }
+			add_to_array = { bgd.targets = OKS }
+			add_to_array = { bgd.targets = SMK }
+			add_to_array = { bgd.targets = NAR }
+			add_to_array = { bgd.targets = ECD }
+			add_to_array = { bgd.targets = KUH }
+			add_to_array = { bgd.targets = STW }
+			add_to_array = { bgd.targets = FSR }
+			add_to_array = { bgd.targets = LUG }
+			add_to_array = { bgd.targets = DOM }
+			add_to_array = { bgd.targets = HAN }
+			add_to_array = { bgd.targets = BRI }
+			add_to_array = { bgd.targets = WAC }
+			add_to_array = { bgd.targets = BRD }
 			every_country = {
 				if = {
 					limit = { is_ai = no }
@@ -27,6 +80,17 @@ on_actions = {
 					news_event = { id = worldnews.26 days = 2960 } # Конец близко?
 					news_event = { id = worldnews.27 days = 3203 } # Бесславный финал
 				}
+			}
+			OCH = {
+				country_event = { id = OCH_first_phase.29 days = 12 } #Местные порядки
+				country_event = { id = OCH_first_phase.30 days = 31 } #Функциональные отражения
+				country_event = { id = OCH_first_phase.31 days = 78 } #Янтарная скверна
+				country_event = { id = OCH_first_phase.32 days = 111 } #Безветренное место
+				country_event = { id = OCH_first_phase.34 days = 151 } #Обычный день
+				country_event = { id = OCH_first_phase.35 days = 206 } #Воспоминания
+				country_event = { id = OCH_first_phase.36 days = 217 } #Хребет тишины
+				country_event = { id = OCH_first_phase.37 days = 254 } #Нарушенная тишина
+				country_event = { id = OCH_first_phase.38 days = 364 } #Тихий отсчёт
 			}
 		}
 	}

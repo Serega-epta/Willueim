@@ -1,0 +1,206 @@
+focus_tree = {
+	id = OCH_phase_1
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = OCH
+		}
+	}
+	default = no
+	focus = {
+		id = OCH_I_bechold
+		icon = GFX_OCH_I_bechold
+		cost = 1.00
+		x = 4
+		y = 0
+		completion_reward = {
+			country_event = OCH_first_phase.1
+		}
+	}
+	focus = {
+		id = OCH_I_listen
+		icon = GFX_OCH_I_listen
+		cost = 2.00
+		x = 4
+		y = 2
+		prerequisite = {
+			focus = OCH_I_bechold
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.2
+		}
+	}
+	focus = {
+		id = OCH_Echo_of_the_era
+		icon = GFX_OCH_Echo_of_the_era
+		cost = 3.00
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = OCH_I_bechold
+		}
+		completion_reward = {
+			add_political_power = 100
+			country_event = OCH_first_phase.5
+		}
+	}
+	focus = {
+		id = OCH_I_think
+		icon = GFX_OCH_I_think
+		cost = 2.00
+		x = 4
+		y = 4
+		prerequisite = {
+			focus = OCH_I_listen
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.7
+		}
+	}
+	focus = {
+		id = OCH_Language_of_ruins
+		icon = GFX_OCH_Language_of_ruins
+		cost = 5.00
+		x = 6
+		y = 4
+		prerequisite = {
+			focus = OCH_Echo_of_the_era
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.8
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = OCH_I_speak
+		icon = GFX_OCH_I_speak
+		cost = 5.00
+		x = 4
+		y = 6
+		prerequisite = {
+			focus = OCH_I_think
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.11
+		}
+	}
+	focus = {
+		id = OCH_I_seek
+		icon = GFX_OCH_I_seek
+		cost = 5.00
+		x = 4
+		y = 8
+		prerequisite = {
+			focus = OCH_I_speak
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_country_flag = control_flag
+				}
+				country_event = OCH_first_phase.12
+			}
+			else_if = {
+				limit = {
+					has_country_flag = freedom_flag
+				}
+				country_event = OCH_first_phase.13
+			}		
+		}
+	}
+	focus = {
+		id = OCH_Ashes_of_ancestors
+		icon = GFX_OCH_Ashes_of_ancestors
+		cost = 3.00
+		x = 6
+		y = 8
+		prerequisite = {
+			focus = OCH_Language_of_ruins
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.14
+		}
+	}
+	focus = {
+		id = OCH_I_ask
+		icon = GFX_OCH_I_ask
+		cost = 2.00
+		x = 4
+		y = 10
+		prerequisite = {
+			focus = OCH_I_seek
+		}
+		prerequisite = {
+			focus = OCH_Ashes_of_ancestors
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.17
+		}
+	}
+	focus = {
+		id = OCH_I_wisper
+		icon = GFX_OCH_I_wisper
+		cost = 1.00
+		x = 4
+		y = 12
+		prerequisite = {
+			focus = OCH_I_ask
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.19
+		}
+	}
+	focus = {
+		id = OCH_I_demand
+		icon = GFX_OCH_I_demand
+		cost = 5.00
+		x = 4
+		y = 14
+		available = {
+			manpowr > 12499
+		}
+		prerequisite = {
+			focus = OCH_I_wisper
+		}
+		prerequisite = {
+			focus = OCH_Memory_of_Earth
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.23
+		}
+	}
+	focus = {
+		id = OCH_Memory_of_Earth
+		icon = GFX_OCH_Memory_of_Earth
+		cost = 3.00
+		x = 6
+		y = 13
+		prerequisite = {
+			focus = OCH_Ashes_of_ancestors
+		}
+		prerequisite = {
+			focus = OCH_I_wisper
+		}
+		completion_reward = {
+			country_event = OCH_first_phase.21
+		}
+	}
+	focus = {
+		id = OCH_I_declare
+		icon = GFX_OCH_I_declare
+		cost = 2.00
+		x = 4
+		y = 16
+		prerequisite = {
+			focus = OCH_I_demand
+		}
+		completion_reward = {
+			declare_war_on = {
+    			target = EDM
+    			type = annex_everything
+			}
+		}
+	}
+
+}

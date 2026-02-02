@@ -56,14 +56,19 @@ country_event = {
 	trigger = {
 		NOT = {
 			country_exists = LWV
+			has_global_flag = SIL_not_appears_yet
 		}
 		original_tag = SIL
 		country_exists = SIL
-		has_global_flag = SIL_not_appears_yet
 	}
 	option = {
 		name = SIL.2.a
 		every_neighbor_country = {
+			limit = {
+				NOT = {
+					tag = GER
+				}
+			}
 			declare_war_on = {
 				target = SIL
 				type = annex_everything

@@ -1,0 +1,311 @@
+focus_tree = {
+	id = BGD_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = BGD
+		}
+	}
+	default = no
+	focus = {
+		id = BGD_But_they_came
+		icon = GFX_BGD_But_they_came
+		cost = 5.0
+		x = 4
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = BGD_Bukovina_bleeds_idea
+		}
+	}
+	focus = {
+		id = BGD_Eternal_vigil
+		icon = GFX_BGD_Eternal_vigil
+		cost = 10.0
+		x = 4
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_But_they_came
+		}
+		completion_reward = {
+			add_manpower = 500
+		}
+	}
+
+	focus = {
+		id = BGD_Motheland_has_left_us
+		icon = GFX_BGD_Motheland_has_left_us
+		cost = 5.0
+		x = 4
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_Eternal_vigil
+		}
+		completion_reward = {
+			add_war_support = -0.2
+		}
+	}
+
+	focus = {
+		id = BGD_No_step_back
+		icon = GFX_BGD_No_step_back
+		cost = 5.0
+		x = 4
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_Motheland_has_left_us
+		}
+		completion_reward = {
+			add_ideas = BGD_No_step_back_idea
+		}
+	}
+
+	focus = {
+		id = BGD_Nobody_knows
+		icon = GFX_BGD_Nobody_knows
+		cost = 5.0
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_No_step_back
+		}
+		completion_reward = {
+			declare_war_on = {
+    			target = LWV
+    			type = annex_everything
+			}
+			declare_war_on = {
+    			target = SWR
+    			type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = BGD_Bukovina_bleeds
+		icon = GFX_BGD_Bukovina_bleeds
+		cost = 8.0
+		x = 6
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_completed_focus = BGD_Nobody_knows
+		}
+		prerequisite = {
+			focus = BGD_No_step_back
+		}
+		completion_reward = {
+			declare_war_on = {
+    			target = COA
+    			type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = BGD_Serve_the_remnants 
+		icon = GFX_BGD_Serve_the_remnants
+		cost = 10.0
+		x = 4
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_Nobody_knows
+			focus = BGD_Bukovina_bleeds
+		}
+		completion_reward = {
+			remove_ideas = BGD_Eternal_Vigil_idea
+			add_ideas = BGD_Serve_the_remnants_idea
+			division_template = {
+    			name = "Bukovinskaja Gvardija"
+    			regiments = {
+        			infantry = { x = 0 y = 0 }
+        			infantry = { x = 1 y = 0 }
+        			rcbd_troop = { x = 0 y = 1 }
+        			rcbd_troop = { x = 1 y = 1 }
+    			}
+    			support = {
+        			stvol_art_sup = { x = 0 y = 0 }
+					rhbz = { x = 0 y = 1 }
+    			}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Bukovinskaja Gvardija\" division_template = \"Bukovinskaja Gvardija\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Bukovinskaja Gvardija\" division_template = \"Bukovinskaja Gvardija\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BGD_Get_in_touch
+		icon = GFX_BGD_Get_in_touch
+		cost = 15.0
+		x = 4
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_Serve_the_remnants
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BGD_Motherland_has_come
+		icon = GFX_BGD_Motherland_has_come
+		cost = 1.0
+		x = 2
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			ARM = {
+				exists = yes
+			}
+		}
+		prerequisite = {
+			focus = BGD_Get_in_touch
+		}
+		mutually_exclusive = {
+			focus = BGD_We_are_the_Motherland
+		}
+		completion_reward = {
+			ARM = {
+				change_tag_from = BGD
+			}
+			ARM = {
+				annex_country = {
+    				target = BGD
+    				transfer_troops = yes
+				}
+			}
+			BGD = {
+				every_core_state = {
+					add_core_of = ARM 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BGD_We_are_the_Motherland
+		icon = GFX_BGD_We_are_the_Motherland
+		cost = 10.0
+		x = 6
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			ARM = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = BGD_Get_in_touch
+		}
+		mutually_exclusive = {
+			focus = BGD_Motherland_has_come
+		}
+		completion_reward = {
+			set_cosmetic_tag = BGD_patriots
+		}
+	}
+
+	focus = {
+		id = BGD_Vultures
+		icon = GFX_BGD_Vultures
+		cost = 10.0
+		x = 8
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_We_are_the_Motherland
+		}
+		completion_reward = {
+				
+			for_each_scope_loop = {
+				array = bgd.targets
+				BGD = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BGD_Comrades_here_we_go
+		icon = GFX_BGD_Comrades_here_we_go
+		cost = 4.0
+		x = 4
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_We_are_the_Motherland
+		}
+		completion_reward = {
+			custom_effect_tooltip = Comrades_here_we_go_tt
+		}
+	}
+
+	focus = {
+		id = BGD_Glory_to_the_Motherland
+		icon = GFX_BGD_Glory_to_the_Motherland
+		cost = 5.0
+		x = 6
+		y = 9
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = BGD_Vultures
+			focus = BGD_Comrades_here_we_go
+		}
+		completion_reward = {
+			set_cosmetic_tag = motherland_statesmen
+			set_party_rule = {
+    			ideology = statesmen
+			}
+			set_popularities = {
+				statesmen = 100
+			}
+		}
+	}
+	
+}

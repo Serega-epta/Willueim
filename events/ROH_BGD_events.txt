@@ -1,0 +1,53 @@
+add_namespace = BGD_union
+#Предложение
+country_event = {
+	id = BGD_union.1
+	title = BGD_union.1.t
+	desc = BGD_union.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_union.1.a
+		ai_chance = {
+            base = 60
+        }
+		BGD = {
+			country_event = BGD_union.2
+			annex_country = {
+    			target = ROOT
+    			transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = BGD_union.2.a
+		ai_chance = {
+            base = 40
+        }
+		BGD = {
+			country_event = BGD_union.3
+		}
+	}
+}
+#Согласие
+country_event = {
+	id = BGD_union.2
+	title = BGD_union.2.t
+	desc = BGD_union.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_union.2.a
+	}
+}
+#Отказ
+country_event = {
+	id = BGD_union.3
+	title = BGD_union.3.t
+	desc = BGD_union.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_union.3.a
+	}
+}

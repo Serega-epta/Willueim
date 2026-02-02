@@ -1,0 +1,19 @@
+BGD_We_are_the_Motherland_decisions = {
+	BGD_offer_union = {
+		target_array = neighbors
+		target_trigger = {
+			FROM = {
+				has_government = statesmen
+			}
+		}
+		cost = 50
+		days_remove = 1
+		complete_effect = {
+			FROM = {
+				country_event = BGD_union.1
+			}
+		}
+		remove_effect = {
+		}
+	}
+}
