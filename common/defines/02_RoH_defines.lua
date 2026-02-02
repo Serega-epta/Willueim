@@ -141,3 +141,5 @@ NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES				= false	--no naval invasion will
 
 NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.02 --was 0.1
 NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.02 --was 0.1
+
+NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 3200 -- was 800
