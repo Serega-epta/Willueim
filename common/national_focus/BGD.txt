@@ -18,7 +18,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = BGD_Bukovina_bleeds_idea
+			country_event = BGD_event.2
 		}
 	}
 	focus = {
@@ -34,7 +34,7 @@ focus_tree = {
 			focus = BGD_But_they_came
 		}
 		completion_reward = {
-			add_manpower = 500
+			country_event = BGD_event.3
 		}
 	}
 
@@ -51,7 +51,7 @@ focus_tree = {
 			focus = BGD_Eternal_vigil
 		}
 		completion_reward = {
-			add_war_support = -0.2
+			country_event = BGD_event.4
 		}
 	}
 
@@ -68,7 +68,7 @@ focus_tree = {
 			focus = BGD_Motheland_has_left_us
 		}
 		completion_reward = {
-			add_ideas = BGD_No_step_back_idea
+			country_event = BGD_event.5
 		}
 	}
 
@@ -85,6 +85,7 @@ focus_tree = {
 			focus = BGD_No_step_back
 		}
 		completion_reward = {
+			country_event = BGD_event.7
 			declare_war_on = {
     			target = LWV
     			type = annex_everything
@@ -112,6 +113,7 @@ focus_tree = {
 			focus = BGD_No_step_back
 		}
 		completion_reward = {
+			country_event = BGD_event.8
 			declare_war_on = {
     			target = COA
     			type = annex_everything
@@ -133,6 +135,7 @@ focus_tree = {
 			focus = BGD_Bukovina_bleeds
 		}
 		completion_reward = {
+			country_event = BGD_event.9
 			remove_ideas = BGD_Eternal_Vigil_idea
 			add_ideas = BGD_Serve_the_remnants_idea
 			division_template = {
@@ -174,7 +177,7 @@ focus_tree = {
 			focus = BGD_Serve_the_remnants
 		}
 		completion_reward = {
-			
+			country_event = BGD_event.10
 		}
 	}
 
@@ -199,19 +202,9 @@ focus_tree = {
 			focus = BGD_We_are_the_Motherland
 		}
 		completion_reward = {
+			country_event = BGD_event.11
 			ARM = {
-				change_tag_from = BGD
-			}
-			ARM = {
-				annex_country = {
-    				target = BGD
-    				transfer_troops = yes
-				}
-			}
-			BGD = {
-				every_core_state = {
-					add_core_of = ARM 
-				}
+				country_event = BGD_event.12
 			}
 		}
 	}
@@ -238,6 +231,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = BGD_patriots
+			country_event = BGD_event.13
 		}
 	}
 
@@ -293,11 +287,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			controls_state = 219
+		}
 		prerequisite = {
 			focus = BGD_Vultures
 			focus = BGD_Comrades_here_we_go
 		}
 		completion_reward = {
+			country_event = BGD_event.14
+			news_event = worldnews.25
 			set_cosmetic_tag = motherland_statesmen
 			set_party_rule = {
     			ideology = statesmen

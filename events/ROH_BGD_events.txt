@@ -1,9 +1,11 @@
 add_namespace = BGD_union
+add_namespace = BGD_event
 #Предложение
 country_event = {
 	id = BGD_union.1
 	title = BGD_union.1.t
 	desc = BGD_union.1.d
+	picture = GFX_BGD_event_picture_template
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -34,6 +36,7 @@ country_event = {
 	id = BGD_union.2
 	title = BGD_union.2.t
 	desc = BGD_union.2.d
+	picture = GFX_BGD_event_picture_template
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -45,9 +48,282 @@ country_event = {
 	id = BGD_union.3
 	title = BGD_union.3.t
 	desc = BGD_union.3.d
+	picture = GFX_BGD_event_picture_template
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = BGD_union.3.a
 	}
 }
+
+#Вступление
+country_event = {
+	id = BGD_event.1
+	title = BGD_event.1.t
+	desc = BGD_event.1.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.1.a
+		add_war_support = 0.01
+		add_political_power = 10
+	}
+}
+
+#БРИГАДА, БАТАЛЬОН, РОТА, ВЗВОД
+country_event = {
+	id = BGD_event.2
+	title = BGD_event.2.t
+	desc = BGD_event.2.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.2.a
+		add_manpower = -20
+		add_war_support = -0.01
+		add_ideas = BGD_Bukovina_bleeds_idea
+	}
+}
+#ШКОЛА, ПАРТА, АВТОМАТ
+country_event = {
+	id = BGD_event.3
+	title = BGD_event.3.t
+	desc = BGD_event.3.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.3.a
+		add_manpower = 500
+		add_war_support = 0.05
+	}
+}
+#СИГНАЛА НЕТ... И НЕ БУДЕТ
+country_event = {
+	id = BGD_event.4
+	title = BGD_event.4.t
+	desc = BGD_event.4.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.4.a
+		add_war_support = -0.2
+		add_political_power = -30
+	}
+}
+#НИ ШАГУ НАЗАД
+country_event = {
+	id = BGD_event.5
+	title = BGD_event.5.t
+	desc = BGD_event.5.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.5.a
+		add_ideas = BGD_No_step_back_idea
+		country_event = {
+			id = BGD_event.6
+			days = 10
+		}
+	}
+}
+#ОНИ УЖЕ НАЧАЛИ ГРЫЗТЬ ДРУГ ДРУГА
+country_event = {
+	id = BGD_event.6
+	title = BGD_event.6.t
+	desc = BGD_event.6.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.6.a
+	}
+}
+#НИКТО НЕ ЗНАЕТ, КОГДА КОНЕЦ
+country_event = {
+	id = BGD_event.7
+	title = BGD_event.7.t
+	desc = BGD_event.7.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.7.a
+		add_war_support = 0.1
+		add_stability = 0.1
+		add_political_power = 50ё
+	}
+}
+#ПОСЛЕДНИЙ СЕКТАНТ
+country_event = {
+	id = BGD_event.8
+	title = BGD_event.8.t
+	desc = BGD_event.8.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.8.a
+		add_timed_idea = {
+    		idea = BGD_operation
+    		days = 90
+		}
+	}
+}
+#ТИШИНА?
+country_event = {
+	id = BGD_event.9
+	title = BGD_event.9.t
+	desc = BGD_event.9.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.9.a
+		add_stability = 0.1
+	}
+}
+#ОТПРАВЛЕНИЕ В ПУТЬ
+country_event = {
+	id = BGD_event.10
+	title = BGD_event.10.t
+	desc = BGD_event.10.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.10.a
+		add_manpower = -1500
+	}
+}
+#РОДИНА ПРИШЛА ЗА НАМИ
+country_event = {
+	id = BGD_event.11
+	title = BGD_event.11.t
+	desc = BGD_event.11.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.11.a
+		ARM = {
+		change_tag_from = BGD
+		}
+		ARM = {
+			annex_country = {
+    			target = BGD
+    			transfer_troops = yes
+			}
+		}
+		BGD = {
+			every_core_state = {
+				add_core_of = ARM 
+			}
+		}
+	}
+}
+#СВЕТЛОЕ БУДУЩЕЕ
+country_event = {
+	id = BGD_event.12
+	title = BGD_event.12.t
+	desc = BGD_event.12.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.12.a
+	}
+}
+#МЫ И ЕСТЬ РОДИНА
+country_event = {
+	id = BGD_event.13
+	title = BGD_event.13.t
+	desc = BGD_event.13.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.13.a
+	}
+}
+#МЫ СМОГЛИ!
+country_event = {
+	id = BGD_event.14
+	title = BGD_event.14.t
+	desc = BGD_event.14.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.14.a
+	}
+}
+#БЛОКПОСТ
+country_event = {
+	id = BGD_event.15
+	title = BGD_event.15.t
+	desc = BGD_event.15.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.15.a
+		add_manpower = -10
+	}
+}
+#ПАМЯТЬ
+country_event = {
+	id = BGD_event.16
+	title = BGD_event.16.t
+	desc = BGD_event.16.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.16.a
+		add_war_support = 0.1
+		add_political_power = 10
+	}
+}
+#КОТ
+country_event = {
+	id = BGD_event.17
+	title = BGD_event.17.t
+	desc = BGD_event.17.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.17.a
+	}
+}
+#СПАСЕНИЕ РЯДОВОГО ВАСЬКИ, ЧАСТЬ 1
+country_event = {
+	id = BGD_event.18
+	title = BGD_event.18.t
+	desc = BGD_event.18.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.18.a
+	}
+}
+#СПАСЕНИЕ РЯДОВОГО ВАСЬКИ, ЧАСТЬ 2
+country_event = {
+	id = BGD_event.19
+	title = BGD_event.19.t
+	desc = BGD_event.19.d
+	picture = GFX_BGD_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BGD_event.19.a
+		add_war_support
+	}
+}
+

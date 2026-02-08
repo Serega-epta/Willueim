@@ -17,9 +17,23 @@ ideas = {
 			}
 		}
 		BGD_No_step_back_idea = {
-			picture = GFX_idea_BGD_No_step_back_idea
+			picture = GFX_idea_BGD_operation
 			modifier = {
 				production_speed_bunker_factor = 0.2
+			}
+		}
+		BGD_operation = {
+			picture = GFX_idea_BGD_operation
+			modifier = {
+				supply_consumption_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = COA
+				attack_bonus_against = 0.5
+			}
+			targeted_modifier = {
+				tag = COA
+				breakthrough_bonus_against = 0.5
 			}
 		}
 		BGD_Serve_the_remnants_idea= {
