@@ -125,6 +125,16 @@ technology_folders = {
 		ledger = air
 		doctrine = yes
 	}
+	special_forces_doctrine_folder = {
+		available = {
+			OR = {
+				has_dlc = "Arms Against Tyranny"
+				has_dlc = "No Compromise, No Surrender"
+			}
+		}
+		ledger = hidden #For now
+		doctrine = yes
+	}
 	electronics_folder = {
 		ledger = civilian
 	}
