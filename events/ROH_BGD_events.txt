@@ -83,7 +83,14 @@ country_event = {
 		name = BGD_event.2.a
 		add_manpower = -20
 		add_war_support = -0.01
-		add_ideas = BGD_Bukovina_bleeds_idea
+		if = {
+			limit = {
+				COA = {
+					exists = yes
+				}
+			}
+			add_ideas = BGD_Bukovina_bleeds_idea
+		}
 	}
 }
 #ШКОЛА, ПАРТА, АВТОМАТ

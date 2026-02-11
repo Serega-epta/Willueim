@@ -108,6 +108,12 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = BGD_Nobody_knows
+			LWV = {
+				exists = no
+			}
+			SWR = {
+				exists = no
+			}
 		}
 		prerequisite = {
 			focus = BGD_No_step_back
@@ -129,6 +135,19 @@ focus_tree = {
 		y = 5
 		ai_will_do = {
 			factor = 10
+		}
+		available = {
+			OR = {
+				LWV = {
+					exists = no
+				}
+				SWR = {
+					exists = no
+				}
+				COA = {
+					exists = no
+				}
+			}
 		}
 		prerequisite = {
 			focus = BGD_Nobody_knows
@@ -248,13 +267,15 @@ focus_tree = {
 			focus = BGD_We_are_the_Motherland
 		}
 		completion_reward = {
-				
-			for_each_scope_loop = {
-				array = bgd.targets
-				BGD = {
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
+			custom_override_tooltip = {
+				tooltip = BGD_Vultures_tt
+				for_each_scope_loop = {
+					array = bgd.targets
+					BGD = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
 					}
 				}
 			}

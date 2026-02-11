@@ -14,6 +14,22 @@ BANDIT_INF_01 = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
 	#}
 }
+#Militia
+MILITIA_INF_01 = {
+	name = "Opolchenie"
+	for_countries = {}
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%d Opolchenie"
+	#TODO: add ordered names if want something special
+	#ordered = {
+	#	1 = { "1 Aussa Yekilili Sefari" }
+	#}
+}
 #Bagrovie divisions
 BAGROVIE_INF_01 = {
 	name = "Bagrovie luchi"
