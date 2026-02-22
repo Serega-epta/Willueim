@@ -844,6 +844,11 @@ focus_tree = {
 		prerequisite = {
 			focus = ARM_sea_monsters
 		}
+		available = {
+			NOT = {
+				country_exists = ODS
+			}
+		}
 		icon = GFX_Admiralty_technologies
 		x = 15
 		y = 8
@@ -1190,6 +1195,17 @@ focus_tree = {
 		id = ARM_strengthening_Western
 		prerequisite = {
 			focus = ARM_radar_patrol
+		}
+		available = {
+			controls_state = 890
+			controls_state = 889
+			controls_state = 73
+			controls_state = 875
+			controls_state = 80
+			controls_state = 78
+			controls_state = 859
+			controls_state = 776
+			controls_state = 855
 		}
 		icon = GFX_Strengthening_Western_Border
 		x = 8
