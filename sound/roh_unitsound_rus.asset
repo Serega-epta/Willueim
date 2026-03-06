@@ -21,6 +21,18 @@ category = {
 		AGE_infantry_neutral_combat
 		AGE_infantry_positive_combat
 		AGE_infantry_retreat
+		SDC_infantry_idle
+		SDC_infantry_neutral_combat
+		SDC_infantry_positive_combat
+		SDC_infantry_retreat
+		ORL_infantry_idle
+		ORL_infantry_neutral_combat
+		ORL_infantry_positive_combat
+		ORL_infantry_retreat
+		IMP_infantry_idle
+		IMP_infantry_neutral_combat
+		IMP_infantry_positive_combat
+		IMP_infantry_retreat
 	}
 	compressor = {
 		enabled = yes
@@ -38,10 +50,12 @@ category = {
 soundeffect = {
 	name = "ARM_infantry_idle"
 	sounds = {
-		sound = ru_Idle_001
-		sound = ru_Idle_002
-		sound = ru_Idle_003
-		sound = ru_Idle_004
+		sound = ARM_Idle_001
+		sound = ARM_Idle_002
+		sound = ARM_Idle_003
+		sound = ARM_Idle_004
+		sound = ARM_Idle_005
+		sound = ARM_Idle_006
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -146,10 +160,12 @@ soundeffect = {
 soundeffect = {
 	name = "LWV_infantry_idle"
 	sounds = {
-		sound = ru_Idle_001
-		sound = ru_Idle_002
-		sound = ru_Idle_003
-		sound = ru_Idle_004
+		sound = LWV_Idle_001
+		sound = LWV_Idle_002
+		sound = LWV_Idle_003
+		sound = LWV_Idle_004
+		sound = LWV_Idle_005
+		sound = LWV_Idle_006
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -200,10 +216,12 @@ soundeffect = {
 soundeffect = {
 	name = "GLS_infantry_idle"
 	sounds = {
-		sound = ru_Idle_001
-		sound = ru_Idle_002
-		sound = ru_Idle_003
-		sound = ru_Idle_004
+		sound = GLS_Idle_001
+		sound = GLS_Idle_002
+		sound = GLS_Idle_003
+		sound = GLS_Idle_004
+		sound = GLS_Idle_005
+		sound = GLS_Idle_006
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -254,10 +272,11 @@ soundeffect = {
 soundeffect = {
 	name = "AGE_infantry_idle"
 	sounds = {
-		sound = ru_Idle_001
-		sound = ru_Idle_002
-		sound = ru_Idle_003
-		sound = ru_Idle_004
+		sound = AGE_Idle_001
+		sound = AGE_Idle_002
+		sound = AGE_Idle_003
+		sound = AGE_Idle_004
+		sound = AGE_Idle_005
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -303,6 +322,174 @@ soundeffect = {
 	volume = 1
 }
 
+
+#=== Pautov ===#
+
+soundeffect = {
+	name = "SDC_infantry_idle"
+	sounds = {
+		sound = SDC_Idle_001
+		sound = SDC_Idle_002
+		sound = SDC_Idle_003
+		sound = SDC_Idle_004
+		sound = SDC_Idle_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "SDC_infantry_neutral_combat"
+	sounds = {
+		sound = ru_Neutral_001
+		sound = ru_Neutral_002
+		sound = ru_Neutral_003
+		sound = ru_Neutral_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "SDC_infantry_positive_combat"
+	sounds = {
+		sound = ru_Positive_001
+		sound = ru_Positive_002
+		sound = ru_Positive_003
+		sound = ru_Positive_004	
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "SDC_infantry_retreat"
+	sounds = {
+		sound = ru_Retreat_001
+		sound = ru_Retreat_002
+		sound = ru_Retreat_003
+		sound = ru_Retreat_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+#=== Glinka ===#
+
+soundeffect = {
+	name = "ORL_infantry_idle"
+	sounds = {
+		sound = ORL_Idle_001
+		sound = ORL_Idle_002
+		sound = ORL_Idle_003
+		sound = ORL_Idle_004
+		sound = ORL_Idle_005
+		sound = ORL_Idle_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ORL_infantry_neutral_combat"
+	sounds = {
+		sound = ru_Neutral_001
+		sound = ru_Neutral_002
+		sound = ru_Neutral_003
+		sound = ru_Neutral_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ORL_infantry_positive_combat"
+	sounds = {
+		sound = ru_Positive_001
+		sound = ru_Positive_002
+		sound = ru_Positive_003
+		sound = ru_Positive_004	
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ORL_infantry_retreat"
+	sounds = {
+		sound = ru_Retreat_001
+		sound = ru_Retreat_002
+		sound = ru_Retreat_003
+		sound = ru_Retreat_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+
+#=== Consulate ===#
+
+soundeffect = {
+	name = "IMP_infantry_idle"
+	sounds = {
+		sound = IMP_Idle_001
+		sound = IMP_Idle_002
+		sound = IMP_Idle_003
+		sound = IMP_Idle_004
+		sound = IMP_Idle_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "IMP_infantry_neutral_combat"
+	sounds = {
+		sound = ru_Neutral_001
+		sound = ru_Neutral_002
+		sound = ru_Neutral_003
+		sound = ru_Neutral_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "IMP_infantry_positive_combat"
+	sounds = {
+		sound = ru_Positive_001
+		sound = ru_Positive_002
+		sound = ru_Positive_003
+		sound = ru_Positive_004	
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "IMP_infantry_retreat"
+	sounds = {
+		sound = ru_Retreat_001
+		sound = ru_Retreat_002
+		sound = ru_Retreat_003
+		sound = ru_Retreat_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
 #=== PATHS ===#
 
 sound = {
@@ -320,6 +507,169 @@ sound = {
 sound = {
 	name = "ru_Idle_004"
 	file = "rus/ru_Idle_004.wav"
+}
+
+sound = {
+	name = "SDC_Idle_001"
+	file = "rus/SDC/SDC_Idle_001.wav"
+}
+sound = {
+	name = "SDC_Idle_002"
+	file = "rus/SDC/SDC_Idle_002.wav"
+}
+sound = {
+	name = "SDC_Idle_003"
+	file = "rus/SDC/SDC_Idle_003.wav"
+}
+sound = {
+	name = "SDC_Idle_004"
+	file = "rus/SDC/SDC_Idle_004.wav"
+}
+sound = {
+	name = "SDC_Idle_005"
+	file = "rus/SDC/SDC_Idle_005.wav"
+}
+
+sound = {
+	name = "LWV_Idle_001"
+	file = "rus/LWV/LWV_Idle_001.wav"
+}
+sound = {
+	name = "LWV_Idle_002"
+	file = "rus/LWV/LWV_Idle_002.wav"
+}
+sound = {
+	name = "LWV_Idle_003"
+	file = "rus/LWV/LWV_Idle_003.wav"
+}
+sound = {
+	name = "LWV_Idle_004"
+	file = "rus/LWV/LWV_Idle_004.wav"
+}
+sound = {
+	name = "LWV_Idle_005"
+	file = "rus/LWV/LWV_Idle_005.wav"
+}
+sound = {
+	name = "LWV_Idle_006"
+	file = "rus/LWV/LWV_Idle_006.wav"
+}
+
+sound = {
+	name = "ORL_Idle_001"
+	file = "rus/ORL/ORL_Idle_001.wav"
+}
+sound = {
+	name = "ORL_Idle_002"
+	file = "rus/ORL/ORL_Idle_002.wav"
+}
+sound = {
+	name = "ORL_Idle_003"
+	file = "rus/ORL/ORL_Idle_003.wav"
+}
+sound = {
+	name = "ORL_Idle_004"
+	file = "rus/ORL/ORL_Idle_004.wav"
+}
+sound = {
+	name = "ORL_Idle_005"
+	file = "rus/ORL/ORL_Idle_005.wav"
+}
+sound = {
+	name = "ORL_Idle_006"
+	file = "rus/ORL/ORL_Idle_006.wav"
+}
+
+sound = {
+	name = "IMP_Idle_001"
+	file = "rus/IMP/IMP_Idle_001.wav"
+}
+sound = {
+	name = "IMP_Idle_002"
+	file = "rus/IMP/IMP_Idle_002.wav"
+}
+sound = {
+	name = "IMP_Idle_003"
+	file = "rus/IMP/IMP_Idle_003.wav"
+}
+sound = {
+	name = "IMP_Idle_004"
+	file = "rus/IMP/IMP_Idle_004.wav"
+}
+sound = {
+	name = "IMP_Idle_005"
+	file = "rus/IMP/IMP_Idle_005.wav"
+}
+
+sound = {
+	name = "AGE_Idle_001"
+	file = "rus/AGE/AGE_Idle_001.wav"
+}
+sound = {
+	name = "AGE_Idle_002"
+	file = "rus/AGE/AGE_Idle_002.wav"
+}
+sound = {
+	name = "AGE_Idle_003"
+	file = "rus/AGE/AGE_Idle_003.wav"
+}
+sound = {
+	name = "AGE_Idle_004"
+	file = "rus/AGE/AGE_Idle_004.wav"
+}
+sound = {
+	name = "AGE_Idle_005"
+	file = "rus/AGE/AGE_Idle_005.wav"
+}
+
+sound = {
+	name = "GLS_Idle_001"
+	file = "rus/GLS/GLS_Idle_001.wav"
+}
+sound = {
+	name = "GLS_Idle_002"
+	file = "rus/GLS/GLS_Idle_002.wav"
+}
+sound = {
+	name = "GLS_Idle_003"
+	file = "rus/GLS/GLS_Idle_003.wav"
+}
+sound = {
+	name = "GLS_Idle_004"
+	file = "rus/GLS/GLS_Idle_004.wav"
+}
+sound = {
+	name = "GLS_Idle_005"
+	file = "rus/GLS/GLS_Idle_005.wav"
+}
+sound = {
+	name = "GLS_Idle_006"
+	file = "rus/GLS/GLS_Idle_006.wav"
+}
+
+sound = {
+	name = "ARM_Idle_001"
+	file = "rus/ARM/ARM_Idle_001.wav"
+}
+sound = {
+	name = "ARM_Idle_002"
+	file = "rus/ARM/ARM_Idle_002.wav"
+}
+sound = {
+	name = "ARM_Idle_003"
+	file = "rus/ARM/ARM_Idle_003.wav"
+}
+sound = {
+	name = "ARM_Idle_004"
+	file = "rus/ARM/ARM_Idle_004.wav"
+}
+sound = {
+	name = "ARM_Idle_005"
+	file = "rus/ARM/ARM_Idle_005.wav"
+}
+sound = {
+	name = "ARM_Idle_006"
+	file = "rus/ARM/ARM_Idle_006.wav"
 }
 
 sound = {
