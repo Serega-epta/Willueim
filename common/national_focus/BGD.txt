@@ -137,16 +137,11 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			OR = {
-				LWV = {
-					exists = no
-				}
-				SWR = {
-					exists = no
-				}
-				COA = {
-					exists = no
-				}
+			LWV = {
+				exists = no
+			}
+			SWR = {
+				exists = no
 			}
 		}
 		prerequisite = {
@@ -191,6 +186,11 @@ focus_tree = {
 		y = 6
 		ai_will_do = {
 			factor = 10
+		}
+		available = {
+			COA = {
+				exists = no
+			}
 		}
 		prerequisite = {
 			focus = BGD_Serve_the_remnants
