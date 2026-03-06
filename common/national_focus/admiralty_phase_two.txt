@@ -791,60 +791,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_tech = infantry_weapons
+					has_tech = infantry_weapons7
 				}
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons1
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons2
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_2
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons3
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_3
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons4
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_4
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons5
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_5
+					type = infantry_equipment_7
 					amount = 2000
 					producer = ODS
 				}
@@ -861,14 +811,55 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					has_tech = infantry_weapons7
+					has_tech = infantry_weapons5
 				}
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_7
+					type = infantry_equipment_5
 					amount = 2000
 					producer = ODS
 				}
 			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons4
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_4
+					amount = 2000
+					producer = ODS
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons3
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 2000
+					producer = ODS
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons2
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 2000
+					producer = ODS
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = infantry_weapons1
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2000
+					producer = ODS
+				}
+			}	
+			
 			add_equipment_to_stockpile = {
 				type = support_equipment_1
 				amount = 500
