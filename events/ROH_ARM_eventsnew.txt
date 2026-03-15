@@ -230,6 +230,7 @@ country_event = {
 		name = ARM_phase_one.16.b
 		ai_chance = {
 			base = 95
+			modifier = { has_global_flag = arm_fail_flag factor = 0 }
 		}
 		add_political_power = 50
 	}

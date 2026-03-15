@@ -38,7 +38,38 @@ on_actions = {
 			#log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
 
 			################################
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							original_tag = MOT
+							original_tag = URA
+							original_tag = TAR
+						}
+					}
+					FROM = {
+						OR = {
+							original_tag = GLS
+							has_country_flag = GLS_negotiation_process_fail
+						}
+					}
+				}
 
+				ROOT = {
+					leave_faction = yes
+				}
+				FROM = {
+					white_peace = ROOT
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					every_state = {
+						remove_core_of = ROOT
+					}
+				}
+				set_global_flag = skip_default_capitulation
+			}
 			if = {
 				limit = {
 					OR = {
@@ -59,22 +90,11 @@ on_actions = {
 				#log = "war_won"
 				set_global_flag = war_won
 
-				if = {
+				else_if = {
 					limit = {
 						ROOT = {
 							OR = {
-								original_tag = MOT
-								original_tag = URA
-								original_tag = EDM
 								original_tag = URC
-								original_tag = WPK
-								original_tag = ZAN
-								original_tag = OCH
-								original_tag = TAR
-							}
-							AND = {
-								is_in_faction = yes
-								is_in_faction_with = URC
 							}
 						}
 						FROM = {
@@ -85,10 +105,8 @@ on_actions = {
 						}
 					}
 
-					ROOT = {
-						URC = {
-							dismantle_faction = yes
-						}
+					URC = {
+						dismantle_faction = yes
 					}
 					FROM = {
 						white_peace = ROOT
@@ -96,10 +114,19 @@ on_actions = {
 							target = ROOT
 							transfer_troops = no
 						}
+						annex_country = {
+							target = WPK
+							transfer_troops = no
+						}
+						annex_country = {
+							target = ZAN
+							transfer_troops = no
+						}
 						every_state = {
 							remove_core_of = ROOT
+							remove_core_of = WPK
+							remove_core_of = ZAN
 						}
-						clr_country_flag = GLS_negotiation_process_fail
 					}
 					set_global_flag = skip_default_capitulation
 				}
@@ -116,11 +143,9 @@ on_actions = {
 							OR = {
 								original_tag = MOT
 								original_tag = URA
-								original_tag = EDM
 								original_tag = URC
 								original_tag = WPK
 								original_tag = ZAN
-								original_tag = OCH
 								original_tag = TAR
 							}
 							AND = {
