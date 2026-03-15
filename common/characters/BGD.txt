@@ -2,7 +2,7 @@ characters = {
 	BGD_stepan_tolmutov = {
 		name = BGD_stepan_tolmutov
 		portraits = {
-			civilian = {
+			civilian = { #also for army
 				large = "GFX_portrait_BGD_Stepan_Tolmutov"
 			}
 		}
@@ -12,6 +12,99 @@ characters = {
 			traits = {}
 			expire = "2050.1.1.1"
 			id = -1
+		}
+		field_marshal = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 5
+			traits = {
+				trait_mountaineer
+				skilled_staffer
+				expert_delegator
+				logistics_wizard
+				organizer
+			}
+		}
+	}
+	BGD_nikolay_georgesku = {
+		name = BGD_nikolay_georgesku
+		portraits = {
+			army = {
+				#TODO
+				large = "GFX_portrait_"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 5
+			planning_skill = 1
+			logistics_skill = 3
+			traits = {
+				trait_engineer
+				trickster
+			}
+		}
+	}
+	BGD_mihail_shuganov = {
+		name = BGD_mihail_shuganov
+		portraits = {
+			army = {
+				#TODO
+				large = "GFX_portrait_"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 2
+			traits = {
+				skilled_staffer
+				trait_mountaineer
+				politically_connected
+			}
+		}
+	}
+	BGD_svyatoslav_shuganov = {
+		name = BGD_svyatoslav_shuganov
+		portraits = {
+			army = {
+				#TODO
+				large = "GFX_portrait_"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				politically_connected
+			}
+		}
+	}
+	BGD_sergey_maniev = {
+		name = BGD_sergey_maniev
+		portraits = {
+			army = {
+				#TODO
+				large = "GFX_portrait_"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+			traits = {
+				trait_mountaineer
+			}
 		}
 	}
 }

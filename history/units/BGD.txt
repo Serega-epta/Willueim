@@ -1,7 +1,7 @@
 division_template = {
 	name = "Militia"
 
-	division_names_group = MILITIA_INF_01
+	division_names_group = BGD_MILITIA
 
 	regiments = {
 		light_infantry = { x = 0 y = 0 }
@@ -14,7 +14,6 @@ division_template = {
 
 units = {
 	division = {
-		name = "Opolchenie"
 		location = 11534
 		division_template = "Militia"
 		start_experience_factor = 0.1
@@ -22,7 +21,6 @@ units = {
 		start_manpower_factor = 1.0
 	}
 	division = {
-		name = "Opolchenie"
 		location = 577
 		division_template = "Militia"
 		start_experience_factor = 0.1
