@@ -68,12 +68,9 @@ ORL_Reunion = {
 
 ORL_balance_of_power_category = {
 	icon = saf_anti_colonialist_crusade
-	visible_when_empty = yes
-	visible = {
-		has_country_flag = Messiah_flag
-	}
 	allowed = {
 		original_tag = ORL
+		has_country_flag = Messiah_flag
 	}
 	priority = {
 		base = 5

@@ -3,6 +3,49 @@ guiTypes = {
 		name = "special_project_tech_icon_offset"
 		position = { x = -10 y = -10 }
 	}
+	scrollbarType = {
+		name = "right_vertical_slider_tech_desc"
+		slider = "listboxSliderButton"
+		track= "listboxTrackButton"
+		leftbutton = "downButton"
+		rightbutton = "upButton"
+		size = {x = 12 y = 12 }
+		position = {x = -1 y = 0}
+		priority = 100
+		borderSize = {x = 12 y = 12}
+		maxValue = 1
+		minValue = 0
+		stepSize = 4
+		startValue = 0
+		horizontal = 0
+
+		guiButtonType = {
+			name = "listboxSliderButton"
+			quadTextureSprite = "GFX_scroll_drager"
+			position = { x=0 y =0}
+		}
+
+		guiButtonType = {
+			name = "listboxTrackButton"
+			quadTextureSprite = "GFX_scroll_track"
+			position = { x=12 y =12}
+
+		}
+
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "upButton"
+			quadTextureSprite = "GFX_scroll_up"
+			position = { x=0 y =0}
+		}
+
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "downButton"
+			quadTextureSprite = "GFX_scroll_down"
+			position = { x=0 y =120}
+		}
+	}
 
 	containerWindowType = {
 		name = "subunit_icon_entry"
@@ -2687,6 +2730,7 @@ guiTypes = {
 			maxHeight = 70
 			format = left
 			vertical_alignment = center
+			scrollbarType = right_vertical_slider_tech_desc
 		}
 		buttonType = {
 			name = "unlock_with_xp"

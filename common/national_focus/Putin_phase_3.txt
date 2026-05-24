@@ -1,0 +1,499 @@
+focus_tree = {
+	id = SDC_phase_three
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = SDC
+		}
+	}
+	default = no
+	focus = {
+		id = SDC_Indocrination
+		icon = GFX_Indocrination
+		cost = 5
+		x = 4
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_two.13
+			custom_effect_tooltip = SDC_Indocrination_tt
+			set_country_flag = end_of_phase_two
+			country_event = SDC_phase_three.1
+		}
+	}
+	focus = {
+		id = SDC_Whispers_from_KS3
+		prerequisite = {
+			focus = SDC_Indocrination
+		}
+		cost = 5
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_three.2
+		}
+	}
+
+	focus = {
+		id = SDC_First_gift
+		prerequisite = {
+			focus = SDC_Whispers_from_KS3
+		}
+		cost = 7.14
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = SDC_Willuem_infanrty
+			add_stability = -0.15
+			hidden_effect = {
+				country_event = {
+					id = SDC_phase_three.18
+					days = 13
+				}
+			}
+		}
+	}
+	focus = {
+		id = SDC_Voice_of_blood
+		prerequisite = {
+			focus = SDC_First_gift
+		}
+		cost = 10
+		x = 2
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SDC_Wheat_from_chaff
+		prerequisite = {
+			focus = SDC_Voice_of_blood
+		}
+		cost = 10
+		x = 2
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_three.3
+		}
+	}
+	focus = {
+		id = SDC_Union_with_cult
+		prerequisite = {
+			focus = SDC_Wheat_from_chaff
+		}
+		cost = 10
+		x = 2
+		y = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = SDC_Pain_as_memory
+				}
+				hidden_effect = {
+					load_focus_tree = {
+						tree = SDC_phase_three
+						keep_completed = no
+					}
+					complete_national_focus = SDC_Suicide
+				}
+				country_event = SDC_phase_three.5
+			}
+			else = {
+				country_event = SDC_phase_three.4
+			}
+		}
+	}
+	focus = {
+		id = SDC_Ritual_of_renunciation
+		
+		prerequisite = {
+			focus = SDC_Union_with_cult
+		}
+		cost = 21.42
+		x = 2
+		y = 12
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_three.6
+		}
+	}
+	focus = {
+		id = SDC_Last_thread
+		
+		prerequisite = {
+			focus = SDC_Ritual_of_renunciation
+		}
+		mutually_exclusive = { focus = SDC_Live_is_to_fight }
+		cost = 2.14
+		x = 2
+		y = 14
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_three.9
+		}
+	}
+	focus = {
+		id = SDC_Refusal
+		
+		prerequisite = {
+			focus = SDC_Indocrination
+		}
+		cost = 6.42
+		x = 4
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_three.10
+		}
+	}
+	focus = {
+		id = SDC_Silence
+		
+		prerequisite = {
+			focus = SDC_Refusal
+		}
+		cost = 7.14
+		x = 4
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SDC_Pain_as_memory
+		
+		prerequisite = {
+			focus = SDC_Silence
+		}
+		cost = 10
+		x = 4
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_three.11
+			hidden_effect = {
+				country_event = {
+					id = SDC_phase_three.19
+					days = 19
+				}
+			}
+		}
+	}
+	focus = {
+		id = SDC_Heart_to_heart_talk
+		
+		prerequisite = {
+			focus = SDC_Pain_as_memory
+		}
+		cost = 10
+		x = 4
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = SDC_First_gift
+				}
+				hidden_effect = {
+					load_focus_tree = {
+						tree = SDC_phase_three
+						keep_completed = no
+					}
+					complete_national_focus = SDC_Suicide
+				}
+				country_event = SDC_phase_three.13
+			}
+			else = {
+				country_event = SDC_phase_three.12
+			}
+		}
+	}
+	focus = {
+		id = SDC_Funeral_of_Illusions
+		
+		prerequisite = {
+			focus = SDC_Heart_to_heart_talk
+		}
+		cost = 2.14
+		x = 4
+		y = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_three.14
+		}
+	}
+	focus = {
+		id = SDC_Request_for_help
+		
+		prerequisite = {
+			focus = SDC_Funeral_of_Illusions
+		}
+		cost = 2.14
+		x = 4
+		y = 12
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = SDC_Martin_integration_eastern_idea
+				}
+				country_event = SDC_phase_three.15
+			}
+			else = {
+				country_event = SDC_phase_three.16
+			}
+		}
+	}
+	focus = {
+		id = SDC_Live_is_to_fight
+		
+		prerequisite = {
+			focus = SDC_Request_for_help
+		}
+		mutually_exclusive = { focus = SDC_Last_thread }
+		cost = 1
+		x = 4
+		y = 14
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = SDC_phase_three.17
+		}
+	}
+	focus = {
+		id = SDC_Restoration_of_workshops
+		
+		prerequisite = {
+			focus = SDC_Indocrination
+		}
+		cost = 12.85
+		x = 6
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = SDC_Reactivation_of_Scientific_Department
+				}
+				hidden_effect = {
+					country_event = {
+						id = SDC_phase_three.19
+						days = 7
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SDC_Northern_deposits
+		
+		prerequisite = {
+			focus = SDC_Restoration_of_workshops
+		}
+		cost = 10
+		x = 6
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SDC_Mobilization_of_production
+		
+		prerequisite = {
+			focus = SDC_Northern_deposits
+		}
+		cost = 7.14
+		x = 6
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SDC_Arkhangelsk_hub
+		
+		prerequisite = {
+			focus = SDC_Mobilization_of_production
+		}
+		cost = 5
+		x = 6
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = SDC_Polar_Guardian_Project
+				}
+				hidden_effect = {
+					country_event = {
+						id = SDC_phase_three.21
+						days = 12
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SDC_Reactivation_of_Scientific_Department
+		
+		prerequisite = {
+			focus = SDC_Indocrination
+		}
+		cost = 21.42
+		x = 8
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = SDC_Restoration_of_workshops
+				}
+				hidden_effect = {
+					country_event = {
+						id = SDC_phase_three.20
+						days = 7
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SDC_Cordon_Surveys
+		
+		prerequisite = {
+			focus = SDC_Reactivation_of_Scientific_Department
+		}
+		cost = 17.14
+		x = 8
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SDC_Northern_Adaptation
+		
+		prerequisite = {
+			focus = SDC_Cordon_Surveys
+		}
+		cost = 12.85
+		x = 8
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SDC_Polar_Guardian_Project
+		
+		prerequisite = {
+			focus = SDC_Northern_Adaptation
+		}
+		cost = 10
+		x = 8
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = SDC_Arkhangelsk_hub
+				}
+				hidden_effect = {
+					country_event = {
+						id = SDC_phase_three.21
+						days = 12
+					}
+				}
+			}
+		}
+	}
+}
+
+focus_tree = {
+	id = SDC_phase_three_failed
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = SDC
+		}
+	}
+	focus = {
+		id = SDC_Suicide
+		
+		cost = 10
+		x = 8
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			
+		}
+	}
+}
