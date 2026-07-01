@@ -533,4 +533,24 @@ spriteTypes = {
 		name = "GFX_AGE_third_rebelion"
 		textureFile = "gfx/interface/AGE_third_rebelion.dds"
 	}
+
+	spriteType = {
+		name = "GFX_province_landmark_bg"
+		textureFile = "gfx/interface/stateview/province_landmark_bg.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	progressbartype = {
+		name = "GFX_province_landmark_damage_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/stateview/province_landmark_damage_bar.dds"
+		textureFile2 = "gfx/interface/stateview/province_landmark_damage_bar_bg.dds"
+		size = { x = 5 y = 27 }
+		effectFile = "gfx/FX/progress_startend.lua"
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_energy"
+		textureFile = "gfx/interface/modifiers/modifiers_energy.dds"
+	}
 }
