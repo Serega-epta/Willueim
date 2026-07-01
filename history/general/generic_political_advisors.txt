@@ -236,4 +236,230 @@ every_possible_country = {
 			}
 		}
 	}
+	#ministers
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_health_minister_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = health_minister
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_health_minister
+			name = generic_health_minister
+			advisor = {
+				slot = advisor
+				traits = {
+					health_minister
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_communications_minister_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = communications_minister
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_communications_minister
+			name = generic_communications_minister
+			advisor = {
+				slot = advisor
+				traits = {
+					communications_minister
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_propagandist_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = propagandist
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_propagandist
+			name = generic_propagandist
+			advisor = {
+				slot = advisor
+				traits = {
+					propagandist
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_economy_minister_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = economy_minister
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_economy_minister
+			name = generic_economy_minister
+			advisor = {
+				slot = advisor
+				traits = {
+					economy_minister
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_defense_minister_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = defense_minister
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_defense_minister
+			name = generic_defense_minister
+			advisor = {
+				slot = advisor
+				traits = {
+					defense_minister
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_militia_head_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = militia_head
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_militia_head
+			name = generic_militia_head
+			advisor = {
+				slot = advisor
+				traits = {
+					militia_head
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_state_security_head_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = state_security_head
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_state_security_head
+			name = generic_state_security_head
+			advisor = {
+				slot = advisor
+				traits = {
+					state_security_head
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_scientific_council_head_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = scientific_council_head
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_scientific_council_head
+			name = generic_scientific_council_head
+			advisor = {
+				slot = advisor
+				traits = {
+					scientific_council_head
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_finance_minister_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = finance_minister
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_finance_minister
+			name = generic_finance_minister
+			advisor = {
+				slot = advisor
+				traits = {
+					finance_minister
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+		}
+	}
 }
