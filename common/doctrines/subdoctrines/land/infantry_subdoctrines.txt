@@ -1,0 +1,422 @@
+mobile_infantry = {
+    track = infantry
+    name = SUBDOCTRINE_MOBILE_INFANTRY
+    description = SUBDOCTRINE_MOBILE_INFANTRY_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+
+    
+    }
+
+    # EFFECTS
+    effect = {
+
+    }
+
+    rewards = {
+        cavalry_charge = {
+
+        }
+        combined_arms_planning = {
+           
+        }
+        decisive_operations = {
+
+        }
+        delegated_authority = {
+
+        }
+        maneuver_warfare = {
+            
+            
+        }
+
+    }
+}
+
+defensive_postures = {
+    track = infantry
+    name = SUBDOCTRINE_DEFENSIVE_POSTURES
+    description = SUBDOCTRINE_DEFENSIVE_POSTURES_DESC
+    icon = GFX_doctrine_defensive_postures_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    #OTHER BASE REWARDS
+
+
+    rewards = {
+        improvised_fighting_position = {
+           
+        }
+        elastic_operations = {
+            
+        }
+        developed_trench_networking = {
+            
+        }
+        field_emplacements = {
+            
+        }
+        field_construction_training = {
+            
+        }
+
+    }
+}
+
+large_unit_tactics = {
+    track = infantry
+    name = SUBDOCTRINE_LARGE_UNIT_TACTICS
+    description = SUBDOCTRINE_LARGE_UNIT_TACTICS_DESC
+    icon = GFX_doctrine_human_infantry_offensive_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    # EFFECTS
+    effect = {
+
+    }
+   
+    #OTHER BASE REWARDS
+    
+
+
+    rewards = {
+        wide_trench_networks = {
+           
+        }
+        flexible_division_structures = {
+
+           
+        }
+        unit_knowledge_sharing = {
+        
+        }
+        large_front_offensive = {
+
+            
+        }
+        motorization_initiative = {
+        
+        }
+
+    }
+}
+
+assault_infantry = {
+    track = infantry
+    name = SUBDOCTRINE_ASSAULT_INFANTRY
+    description = SUBDOCTRINE_ASSAULT_INFANTRY_DESC
+    icon = GFX_doctrine_assault_infantry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+
+        base = 1
+    }
+
+    # EFFECTS
+
+    #OTHER BASE REWARDS
+
+
+    rewards = {
+        low_echelon_fire_support = {
+        
+        }
+        organic_battalion_fire_support = {
+       
+
+        }
+
+        integrated_support_batteries = {
+       
+        }
+        breakthrough_fireteams = {
+       
+
+
+        }
+        assault_detachments = {
+        
+
+        }
+    }
+}
+
+mounted_infantry = {
+    track = infantry
+    name = SUBDOCTRINE_MOUNTED_INFANTRY
+    description = SUBDOCTRINE_MOUNTED_INFANTRY_DESC
+    icon = GFX_doctrine_mounted_infantry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+
+    
+    available = {
+        always = yes
+    }
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+    }
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 0.5
+            is_major = yes
+        }
+    }
+
+
+   
+
+    # EFFECTS
+
+    rewards = {
+        dragoon_traditions = {
+            
+        }
+        mounted_skirmish_groups = {
+            
+        }
+        anti_mechanized_cavalry_groups = {
+            
+        }
+        beasts_of_war = {
+            
+        }
+        limbered_combat_support = {
+            
+        }
+
+    }
+}
+
+commandos = {
+    track = infantry
+    name = SUBDOCTRINE_COMMANDOS
+    description = SUBDOCTRINE_COMMANDOS_DESC
+    icon = GFX_doctrine_commandos_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+       
+    }
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+    }
+
+
+    ai_will_do = { base = 0 }
+ 
+    
+    
+
+    # EFFECTS
+
+    rewards = {
+        isolated_combat_elements = { 
+                  
+
+        }
+        security_zone_operations = {
+
+            
+            
+        }
+        rigorous_training_regimen = {
+            
+        }
+
+        field_intel_retrieval = {
+            
+        }
+
+        integrated_assaults = {
+           
+
+        }
+    }
+}
+
+irregulars = {
+    track = infantry
+    name = SUBDOCTRINE_IRREGULARS
+    description = SUBDOCTRINE_IRREGULARS_DESC
+    icon = GFX_doctrine_irregulars_medium
+
+    xp_cost = 50
+    xp_type = army
+
+    available = {
+        
+    }
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+    }
+
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 2
+            is_major = no
+        }
+    }
+    
+
+    # EFFECTS
+
+    rewards = {
+        service_by_lot = { 
+           
+        }
+        partisan_regiments = {
+            
+        }
+
+        
+        improvised_officer_groups = {
+            
+        }
+        levee_en_masse = {
+            
+
+        }
+        standardization_efforts = {
+            
+        }
+
+    }
+}
+
+peoples_war = {
+    track = infantry
+    name = SUBDOCTRINE_PEOPLES_WAR
+    description = SUBDOCTRINE_PEOPLES_WAR_DESC
+    icon = GFX_doctrine_peoples_war_medium
+   
+    xp_cost = 50
+    xp_type = army
+
+    available = {
+        
+    }
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+    }
+    ai_will_do = {
+
+        base = 1
+
+
+        modifier = {
+            factor = 2
+            is_major = no
+        }
+
+    }
+
+    # EFFECTS
+ 
+
+    rewards = {
+        revolutionary_base_area = {
+        
+
+        }
+        destruction_over_land_gains = {
+       
+        }
+        quick_decision_offensive_warfare = {
+       
+
+
+        }
+        people_not_things = {
+        
+        }
+    }
+}
+
+great_war_infantry = {
+    track = infantry
+    name = SUBDOCTRINE_GREAT_WAR_INFANTRY
+    description = SUBDOCTRINE_GREAT_WAR_INFANTRY_DESC
+    icon = GFX_doctrine_great_war_infantry_medium
+
+    xp_cost = 50
+    xp_type = army
+
+    available = {
+        always = yes
+
+    }
+
+    ai_will_do = {
+        base = 1
+
+    }
+     # EFFECTS
+    #OTHER BASE REWARDS
+    
+
+    rewards = {
+        traverse_digging = {
+           
+            
+        }
+        sapping_operations = {
+            
+        }
+        centralized_artillery_control = {
+            
+        }
+        field_fortification_emphasis = {
+            
+        }
+        redoubt_networks = {
+           
+        }
+
+    }
+}

@@ -1,0 +1,372 @@
+armored_spearhead = {
+    track = armor
+    name = SUBDOCTRINE_ARMORED_SPEARHEAD
+    description = SUBDOCTRINE_ARMORED_SPEARHEAD_DESC
+    icon = GFX_doctrine_armored_spearhead_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+    visible = {
+        has_dlc = "La Resistance"
+    }
+
+    ai_will_do = {
+
+        base = 1
+        modifier = {
+            factor = 0.5
+            is_major = no
+        }
+    }
+
+    # EFFECTS
+  
+
+    rewards = {
+        force_concentration = {
+        
+        }
+        armored_breakthrough_exploits = {
+        
+        }
+        local_reserves = {
+        
+        }
+        tactical_reconnaissance = {
+       
+        }
+        assault_detachments = {
+        
+        }
+    }
+}
+
+armored_spearhead_no_lar = {
+    track = armor
+    name = SUBDOCTRINE_ARMORED_SPEARHEAD
+    description = SUBDOCTRINE_ARMORED_SPEARHEAD_DESC
+    icon = GFX_doctrine_armored_spearhead_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+    visible = {
+        NOT = {
+            has_dlc = "La Resistance"
+        }
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+        modifier = {
+            factor = 0.5
+            is_major = no
+        }
+    }
+
+    # EFFECTS
+
+
+    rewards = {
+        force_concentration = {
+        
+        }
+        armored_breakthrough_exploits = {
+        
+        }
+        local_reserves = {
+        
+        }
+        tactical_reconnaissance = {
+        
+        }
+        assault_detachments = {
+
+        }
+    }
+}
+armored_infantry_support = {
+    track = armor
+    name = SUBDOCTRINE_ARMORED_INFANTRY_SUPPORT
+    description = SUBDOCTRINE_ARMORED_INFANTRY_SUPPORT_DESC
+    icon = GFX_doctrine_armored_infantry_support_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+    }
+
+    # EFFECTS
+
+    effect = {
+
+    }
+
+    #TODO jack look if you can make a script effect for production bonuses
+
+    rewards = {
+        mobile_reserves = {
+
+        }
+        armored_cohorts = {
+ 
+        }
+        maintenance_routines = {
+
+        }
+        fuel_rationing = {
+
+        }
+        mobile_armored_strongpoints = {
+
+        }
+    }
+}
+
+streamlined_deployment = {
+    track = armor
+    name = SUBDOCTRINE_STREAMLINED_DEPLOYMENT
+    description = SUBDOCTRINE_STREAMLINED_DEPLOYMENT_DESC
+    icon = GFX_doctrine_streamlined_deployment_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+        ai_will_do = {
+
+        base = 1
+
+
+    }
+
+
+
+
+    rewards = {
+        flexible_armored_battalions = {
+
+  
+
+
+
+        }
+        mechanized_wave = {
+
+        }
+        tank_desant = {
+
+        }
+        full_front_deployment = {
+
+
+        }
+        continuous_offensives = {
+
+        }
+    }
+
+
+}
+
+mobile_defense = {
+    track = armor
+    name = SUBDOCTRINE_MOBILE_DEFENSE
+    description = SUBDOCTRINE_MOBILE_DEFENSE_DESC
+    icon = GFX_doctrine_mobile_defense_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+
+    }
+
+
+
+    rewards = {
+
+        mechanized_offensive = {
+            
+        }
+        advance_under_fire = {
+            
+        }
+        attached_support = {
+           
+
+        }
+        combined_anti_armor = {
+            
+
+        }
+        tank_on_tank_engagement = {
+            
+        }    
+    }
+}
+
+armored_cavalry = {
+    track = armor
+    name = SUBDOCTRINE_ARMORED_CAVALRY
+    description = SUBDOCTRINE_ARMORED_CAVALRY_DESC
+    icon = GFX_doctrine_armored_cavalry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+    visible = {
+        AND = {
+            has_dlc = "No Compromise, No Surrender"
+            has_dlc = "La Resistance"
+        }
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+    }
+
+    
+    # EFFECTS
+    rewards = {
+        cruiser_tanks = {
+           
+        }
+        quick_response_force = {
+            
+        }
+        speed_as_armour = {
+           
+
+        }
+        fighting_reconnaissance = {
+    
+        }
+        sustained_deployments = {
+            
+        }
+    }
+}
+
+armored_cavalry_no_lar = {
+    track = armor
+    name = SUBDOCTRINE_ARMORED_CAVALRY
+    description = SUBDOCTRINE_ARMORED_CAVALRY_DESC
+    icon = GFX_doctrine_armored_cavalry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+        NOT = {
+            has_dlc = "La Resistance"
+        }
+    }
+
+    ai_will_do = {
+
+        base = 1
+    }
+
+
+    # EFFECTS
+    rewards = {
+        cruiser_tanks = {
+            
+        }
+        quick_response_force = {
+
+            
+        }
+        speed_as_armour = {
+           
+        }
+        fighting_reconnaissance = {
+           
+        }
+        sustained_deployments = {
+           
+        }
+    }
+}
+
+tank_destroyer_force = {
+     track = armor
+    name = SUBDOCTRINE_TANK_DESTROYER_FORCE
+    description = SUBDOCTRINE_TANK_DESTROYER_FORCE_DESC
+    icon = GFX_doctrine_tank_destroyer_force_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+    }
+
+    ai_will_do = {
+
+        base = 0
+
+    }  
+
+ 
+
+    rewards = {
+
+        mobile_anti_tank = {
+            
+
+        }
+        committed_operational_units = {
+
+        }
+        redeployment_priority = {
+
+        }
+
+        independent_counterattacks = {
+   
+        }
+
+        selfsufficient_battalion = {
+
+        }
+
+
+
+    }
+}

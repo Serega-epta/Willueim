@@ -1,0 +1,420 @@
+mission_type_tactics = {
+    track = operations
+    name = SUBDOCTRINE_MISSION_TYPE_TACTICS
+    description = SUBDOCTRINE_MISSION_TYPE_TACTICS_DESC
+    icon = GFX_doctrine_mission_type_tactics_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+
+        base = 1
+
+
+    }
+
+    available = {
+        always = yes
+    }
+    # EFFECTS
+
+
+    
+
+     rewards = {
+        low_level_delegation ={
+  
+        }
+        flexible_command = {
+
+        }
+        maneouver_drills = {
+
+            
+        }
+        flexible_combat_formations = {
+
+        }
+        control_zone_responsibilities = {
+
+
+        }
+    }
+}
+
+last_stand = {
+    track = operations
+    name = SUBDOCTRINE_LAST_STAND
+    description = SUBDOCTRINE_LAST_STAND_DESC
+    icon = GFX_doctrine_last_stand_medium
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        has_defensive_war = yes
+    }
+
+    ai_will_do = {
+
+        base = 0
+
+    }
+
+    rewards = {
+        werwolf_groups = {
+
+        }
+
+        pocket_consolidation = {
+
+        }
+        digging_in = {
+
+        }
+        stocking_up = {
+ 
+        }
+        breaking_out = {
+
+        }
+    }
+}
+
+infiltration_tactics = {
+    track = operations
+    name = SUBDOCTRINE_INFILTRATION_TACTICS
+    description = SUBDOCTRINE_INFILTRATION_TACTICS_DESC
+    icon = GFX_doctrine_infiltration_assault_medium
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+
+        base = 1
+    }
+
+    # EFFECTS
+
+
+
+     rewards = {
+        infiltration_assault = {
+
+
+        }
+        nightly_assaults = {
+
+        }
+        self_sustaining_infiltration_units = {
+
+        }
+        terrain_and_situation_assessment = {
+
+
+        }
+        infiltration_in_depth = {
+
+            
+        }
+    }
+}
+
+grand_assault = {
+    track = operations
+    name = SUBDOCTRINE_GRAND_ASSAULT
+    description = SUBDOCTRINE_GRAND_ASSAULT_DESC
+    icon = GFX_doctrine_grand_assault_medium
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+    }
+
+    # EFFECTS
+
+
+
+
+    rewards = {
+        central_planning = {
+
+        }
+        multiple_attack_directions = {
+
+        }
+        combined_arms_integration = {
+
+        }
+        forward_command_posts = {
+
+        }
+        c3i_theory = {
+
+       }
+    }
+}
+
+deep_battle = {
+    track = operations
+    name = SUBDOCTRINE_DEEP_BATTLE
+    description = SUBDOCTRINE_DEEP_BATTLE_DESC
+    icon = GFX_doctrine_deep_battle_medium
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    visible = {
+            has_dlc = "La Resistance"
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+    }
+
+    # EFFECTS
+
+
+
+    rewards = {
+        bounding_overwatch = {
+
+
+        }
+        operational_concentration = {
+
+        }
+        maskirovka = {
+
+
+
+        }
+        breakthrough_priority = {
+
+
+        }
+        operational_depth_control = {
+  
+        }
+    }
+}
+
+deep_battle_no_lar = {
+    track = operations
+    name = SUBDOCTRINE_DEEP_BATTLE
+    description = SUBDOCTRINE_DEEP_BATTLE_DESC
+    icon = GFX_doctrine_deep_battle_medium
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+    visible = {
+        NOT = {
+            has_dlc = "La Resistance"
+        }
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+
+
+    }
+
+    # EFFECTS
+
+
+    rewards = {
+        bounding_overwatch = {
+
+
+        }
+        operational_concentration = {
+
+        }
+        maskirovka = {
+
+
+
+        }
+        breakthrough_priority = {
+
+
+        }
+        operational_depth_control = {
+
+        }
+    }
+}
+guerilla_war = {
+    track = operations
+    name = SUBDOCTRINE_GUERILLA_WAR
+    description = SUBDOCTRINE_GUERILLA_WAR_DESC
+    icon = GFX_doctrine_guerilla_warfare_medium
+    
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+
+    # EFFECTS
+
+
+    rewards = {
+        catch_and_seize = {
+ 
+
+
+        }
+        galvanize_support = {
+  
+
+        }
+        scorched_earth = {
+
+        }
+
+        
+        urban_assaults = {
+
+
+  
+        }
+        defense_of_gained_power = {
+
+
+            
+        }
+    }
+}
+
+#shock & awe or airland battle
+rapid_domination = {
+    track = operations
+    name = SUBDOCTRINE_RAPID_DOMINATION
+    description = SUBDOCTRINE_RAPID_DOMINATION_DESC
+    icon = GFX_doctrine_shock_and_awe_medium
+    
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+
+    }
+
+    # EFFECTS
+
+
+
+
+
+    rewards = {
+        forward_observers = {
+
+
+
+        }
+        advanced_firebases = {
+
+
+        }
+        centralized_fire_control = {
+
+
+
+        }
+        regimental_combat_teams = {
+
+        }
+        shock_and_awe = {
+
+           
+            
+        }
+    }
+}
+
+expeditionary_warfare = {
+    track = operations
+    name = SUBDOCTRINE_EXPEDITIONARY_WARFARE
+    description = SUBDOCTRINE_EXPEDITIONARY_WARFARE_DESC
+    icon = GFX_doctrine_expeditionary_warfare_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+    
+    }
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+    }
+
+    ai_will_do = {
+
+        base = 0
+
+    }
+
+    # EFFECTS
+    
+
+
+
+
+    rewards = {
+        staging_area_security = {
+
+        }
+        landing_operations = {
+
+            
+        }
+        shore_fire_control_parties = {
+
+        }
+        breakout_emphasis = {
+
+
+        }
+        withdrawal_protocols = {
+
+        }
+    }
+}

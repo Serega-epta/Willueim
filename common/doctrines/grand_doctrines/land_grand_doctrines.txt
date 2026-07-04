@@ -1,0 +1,246 @@
+new_mobile_warfare = {
+    folder = land
+
+    name = GRAND_DOCTRINE_MOBILE_WARFARE
+    description = GRAND_DOCTRINE_MOBILE_WARFARE_DESC
+    icon = GFX_doctrine_mobile_warfare_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+    }
+
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+
+    # EFFECTS
+	
+
+    milestones = {
+        {
+           
+
+            effect = {
+                
+            }
+        }
+        {
+            
+            effect = {
+                
+            }
+        }
+        {
+            
+
+            effect = {
+               
+            }
+        }
+        {
+  
+
+            effect = {
+                
+            }
+        }
+    }
+}
+superior_firepower = {
+    folder = land
+
+    name = GRAND_DOCTRINE_SUPERIOR_FIREPOWER
+    description = GRAND_DOCTRINE_SUPERIOR_FIREPOWER_DESC
+    icon = GFX_doctrine_superior_firepower_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+    }
+
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+
+    # EFFECTS
+ 
+
+
+    milestones = {
+        {
+            
+
+            effect = {
+               
+            }
+        }
+        {
+
+
+            effect = {
+                
+            }
+
+        }
+        {
+
+
+            effect = {
+                
+            }
+        }
+        {
+
+            effect = {
+                
+            }
+        }
+
+    }
+}
+
+grand_battleplan = {
+    folder = land
+
+    name = GRAND_DOCTRINE_GRAND_BATTLEPLAN
+    description = GRAND_DOCTRINE_GRAND_BATTLEPLAN_DESC
+    icon = GFX_doctrine_grand_battleplan_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 2
+    }
+
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+
+    # EFFECTS
+
+    milestones = {
+        {
+            
+            
+
+            effect = {
+                
+            }
+        }
+        {
+            
+
+            effect = {
+                
+            }
+        }
+        {
+           
+            effect = {
+                
+            }
+            
+        }
+        {
+           
+
+            effect = {
+                
+            }
+        }
+    }
+}
+
+mass_assault = {
+    folder = land
+
+    name = GRAND_DOCTRINE_MASS_ASSAULT
+    description = GRAND_DOCTRINE_MASS_ASSAULT_DESC
+    icon = GFX_doctrine_mass_assault_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+    }
+
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+
+    # EFFECTS
+   
+    
+
+    milestones = {
+        {
+            
+
+            effect = {
+                
+            }
+        }
+        {
+            
+
+            effect = {
+                
+            }
+        }
+        {
+            
+
+            effect = {
+                
+            }
+        }
+        {
+            
+
+            effect = {
+                
+            }
+        }
+    }
+}
