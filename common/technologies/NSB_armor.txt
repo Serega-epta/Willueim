@@ -28,7 +28,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			mass_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -60,7 +61,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			specialized_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -84,7 +86,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			specialized_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -108,7 +111,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			specialized_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -128,7 +132,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			specialized_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -157,7 +162,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			mass_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -181,7 +187,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			mass_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -205,7 +212,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			mass_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -225,7 +233,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			mass_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -257,7 +266,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			ai_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -281,7 +291,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			ai_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -305,7 +316,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			ai_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -325,7 +337,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			ai_opf_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -351,10 +364,15 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_improvements
 		}
 		ai_will_do = {
-			factor = 2
+			base = 0
+			modifier = {
+				has_tech = nsb_pre_war_OPV
+				add = 2
+			}
 		}
 	}
 	nsb_armor_2 = {
@@ -376,7 +394,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_improvements
 		}
 		ai_will_do = {
 			factor = 2
@@ -401,7 +420,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_improvements
 		}
 		ai_will_do = {
 			factor = 2
@@ -426,7 +446,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_improvements
 		}
 		ai_will_do = {
 			factor = 2
@@ -447,7 +468,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_improvements
 		}
 		ai_will_do = {
 			factor = 2
@@ -473,10 +495,15 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_engines
 		}
 		ai_will_do = {
-			factor = 2
+			base = 0
+			modifier = {
+				has_tech = nsb_pre_war_OPV
+				add = 2
+			}
 		}
 	}
 	nsb_engine_2 = {
@@ -498,7 +525,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_engines
 		}
 		ai_will_do = {
 			factor = 2
@@ -523,7 +551,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_engines
 		}
 		ai_will_do = {
 			factor = 2
@@ -548,7 +577,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_engines
 		}
 		ai_will_do = {
 			factor = 2
@@ -569,7 +599,8 @@ technologies = {
 			}
 		}
 		categories = {
-			armor
+			armor_tech
+			armor_engines
 		}
 		ai_will_do = {
 			factor = 2
