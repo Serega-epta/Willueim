@@ -96,3 +96,119 @@ faction_goal_resource_control = {
 		base = 1
 	}
 }
+faction_goal_rebuild_motherland = {
+	name = rebuild_motherland_goal_name
+	description = rebuild_motherland_goal_desc
+	category = long_term
+	group = resources_to_market_icon
+	visible = {
+		OR = {
+			has_government = statesmen
+			has_government =  militarists
+			has_government = humanists
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		collection_size = {
+			input = {
+				input = collection:mother_russia
+				operators = {
+					limit = {
+						NOT = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+					}
+				}
+				name = COLLECTION_NON_MOTHER_LAND
+			}
+			value < 1
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_stability = 0.05
+			add_war_support = 0.15
+		}
+	}
+}
+faction_goal_destroy_heresy = {
+	name = destroy_heresy_goal_name
+	description = destroy_heresy_goal_desc
+	category = long_term
+	group = resources_to_market_icon
+	visible = {
+		NOT = {
+			has_government = chthonism
+			has_government = sacraments
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		all_country = {
+			NOT = {
+				has_government = chthonism
+				has_government = sacraments
+			}
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_stability = 0.1
+		}
+	}
+}
+faction_goal_restore_nuclear_shield = {
+	name = restore_nuclear_shield_goal_name
+	description = restore_nuclear_shield_goal_desc
+	category = long_term
+	group = resources_to_market_icon
+	visible = {
+		
+	}
+	available = {
+		
+	}
+	completed = {
+		collection_size = {
+			input = {
+				input = game:all_states
+				operators = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes 
+						nuclear_reactor > 0
+					}
+				}
+				name = COLLECTION_FACTION_NUCLEAR_REACTOR
+			}
+			value > 9
+		}
+		collection_size = {
+			input = {
+				input = game:all_states
+				operators = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes 
+						nuclear_reactor_heavy_water > 0
+					}
+				}
+				name = COLLECTION_FACTION_NUCLEAR_REACTOR_HEAVY_WATER
+			}
+			value > 9
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_popularity = {
+				ideology = THIS
+				popularity = 0.1
+			}
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+}

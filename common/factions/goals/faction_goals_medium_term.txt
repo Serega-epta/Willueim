@@ -1,9 +1,9 @@
 #category = short_term medium_term or long_term
 # ROOT is faction leader, FROM is faction member who opens UI and views goals, completed/cancel/complete_effect do not have FROM scopes
 
-faction_goal_the_red_tide = {
-	name = the_red_tide_goal_name
-	description = the_red_tide_goal_desc
+faction_goal_the_russian_tide = {
+	name = the_russian_tide_goal_name
+	description = the_russian_tide_goal_desc
 	category = medium_term
 	group = FOCUS_FILTER_ARMY_XP
 	allowed = {
@@ -20,7 +20,7 @@ faction_goal_the_red_tide = {
 				name = FACTION_NAME
 			}
 			manpower = yes
-			size > 3000000
+			size > 500000
 		}
 	}
 	complete_effect = {
@@ -42,6 +42,195 @@ faction_goal_the_red_tide = {
 			add_faction_influence_ratio = 0.05
 			army_experience = 50 
 		}	
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+faction_goal_destroy_GLS = {
+	name = destroy_GLS_goal_name
+	description = destroy_GLS_goal_desc
+	category = medium_term
+	group = UNIFICATION_FILTER
+	allowed = {
+		original_tag = URC
+		original_tag = WPK
+		original_tag = ZAN
+	}
+	visible = {
+
+	}
+	completed = {
+		GLS = {
+			exists = no
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_popularity = {
+				ideology = THIS
+				popularity = 0.1
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+faction_goal_new_trade_routs = {
+	name = new_trade_routs_goal_name
+	description = new_trade_routs_goal_desc
+	category = medium_term
+	group = UNIFICATION_FILTER
+	allowed = {
+	}
+	visible = {
+		OR = {
+			is_in_faction_with = MSH
+			is_in_faction_with = KMN
+		}
+	}
+	completed = {
+		239 = {
+			infrastructure > 4
+		}
+		255 = {
+			infrastructure > 4
+		}
+		952 = {
+			infrastructure > 4
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+faction_goal_central_russia_control = {
+	name = central_russia_control_goal_name
+	description = central_russia_control_goal_desc
+	category = medium_term
+	group = UNIFICATION_FILTER
+	allowed = {
+		OR = {
+			original_tag = ORL
+			original_tag = ARM
+		}
+	}
+	visible = {
+		OR = {
+			IMP = {
+				exists = yes
+			}
+			BSO = {
+				exists = yes
+			}
+			COR = {
+				exists = yes
+			}
+			PLR = {
+				exists = yes
+			}
+			NOR = {
+				exists = yes
+			}
+		}
+	}
+	completed = {
+		IMP = {
+			exists = no
+		}
+		BSO = {
+			exists = no
+		}
+		COR = {
+			exists = no
+		}
+		PLR = {
+			exists = no
+		}
+		NOR = {
+			exists = no
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+faction_goal_crush_ARM = {
+	name = crush_ARM_goal_name
+	description = crush_ARM_goal_desc
+	category = medium_term
+	group = UNIFICATION_FILTER
+	allowed = {
+		OR = {
+			original_tag = IMP
+			original_tag = PLR
+			original_tag = NOR
+			original_tag = COR
+			original_tag = BSO
+		}
+	}
+	visible = {
+		ARM = {
+			exists = yes
+		}
+	}
+	completed = {
+		ARM = {
+			exists = no
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_stability = 0.1
+			army_experience = 20
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+faction_goal_water_purification = {
+	name = water_purification_name
+	description = water_purification_desc
+	category = medium_term
+	group = UNIFICATION_FILTER
+	allowed = {
+		
+	}
+	visible = {
+		
+	}
+	completed = {
+		collection_size = {
+			input = {
+				input = game:all_states
+				operators = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes 
+						filtration_station > 0
+					}
+				}
+				name = COLLECTION_FACTION_FILTRATION_STATION
+			}
+			value > 34
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_stability = 0.1
+			army_experience = 20
+		}
 	}
 	ai_will_do = {
 		base = 1
