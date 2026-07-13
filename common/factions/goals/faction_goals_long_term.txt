@@ -171,34 +171,74 @@ faction_goal_restore_nuclear_shield = {
 		
 	}
 	available = {
-		
+		#TODO: should be in visible?
+		custom_trigger_tooltip = {
+			tooltip = fuck_pdx_log
+			always = no
+			OR = {
+				collection_size = {
+					input = {
+						input = game:all_states
+						operators = {
+							limit = {
+								#TODO: spam in error.log, but works correctly
+								#is_controlled_by_ROOT_or_ally = yes 
+								nuclear_reactor > 0
+							}
+						}
+						name = COLLECTION_FACTION_NUCLEAR_REACTOR
+					}
+					value < 10
+				}
+				collection_size = {
+					input = {
+						input = game:all_states
+						operators = {
+							limit = {
+								#TODO: spam in error.log, but works correctly
+								#is_controlled_by_ROOT_or_ally = yes 
+								nuclear_reactor_heavy_water > 0
+							}
+						}
+						name = COLLECTION_FACTION_NUCLEAR_REACTOR_HEAVY_WATER
+					}
+					value < 10
+				}
+			}
+		}
 	}
 	completed = {
-		collection_size = {
-			input = {
-				input = game:all_states
-				operators = {
-					limit = {
-						is_controlled_by_ROOT_or_ally = yes 
-						nuclear_reactor > 0
+		custom_trigger_tooltip = {
+			tooltip = fuck_pdx_log
+			always = no
+			collection_size = {
+				input = {
+					input = game:all_states
+					operators = {
+						limit = {
+							#TODO: spam in error.log, but works correctly
+							#is_controlled_by_ROOT_or_ally = yes 
+							nuclear_reactor > 0
+						}
 					}
+					name = COLLECTION_FACTION_NUCLEAR_REACTOR
 				}
-				name = COLLECTION_FACTION_NUCLEAR_REACTOR
+				value > 9
 			}
-			value > 9
-		}
-		collection_size = {
-			input = {
-				input = game:all_states
-				operators = {
-					limit = {
-						is_controlled_by_ROOT_or_ally = yes 
-						nuclear_reactor_heavy_water > 0
+			collection_size = {
+				input = {
+					input = game:all_states
+					operators = {
+						limit = {
+							#TODO: spam in error.log, but works correctly
+							#is_controlled_by_ROOT_or_ally = yes 
+							nuclear_reactor_heavy_water > 0
+						}
 					}
+					name = COLLECTION_FACTION_NUCLEAR_REACTOR_HEAVY_WATER
 				}
-				name = COLLECTION_FACTION_NUCLEAR_REACTOR_HEAVY_WATER
+				value > 9
 			}
-			value > 9
 		}
 	}
 	complete_effect = {

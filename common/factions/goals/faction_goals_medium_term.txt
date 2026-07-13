@@ -211,19 +211,30 @@ faction_goal_water_purification = {
 	visible = {
 		
 	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = fuck_pdx_log
+			always = no
+		}
+	}
 	completed = {
-		collection_size = {
-			input = {
-				input = game:all_states
-				operators = {
-					limit = {
-						is_controlled_by_ROOT_or_ally = yes 
-						filtration_station > 0
+		custom_trigger_tooltip = {
+			tooltip = fuck_pdx_log
+			always = no
+			collection_size = {
+				input = {
+					input = game:all_states
+					operators = {
+						limit = {
+							#TODO: spam in error.log, but works correctly
+							#is_controlled_by_ROOT_or_ally = yes 
+							filtration_station > 0
+						}
 					}
+					name = COLLECTION_FACTION_FILTRATION_STATION
 				}
-				name = COLLECTION_FACTION_FILTRATION_STATION
+				value > 34
 			}
-			value > 34
 		}
 	}
 	complete_effect = {
