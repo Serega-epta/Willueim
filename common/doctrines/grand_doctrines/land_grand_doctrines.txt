@@ -28,32 +28,44 @@ new_mobile_warfare = {
     }
 
     # EFFECTS
-	
+	planning_speed = 0.20
+	army_speed_factor = 0.10
+	enable_tactic = tactic_unexpected_thrust
 
     milestones = {
         {
-           
+            #Infantry
+	        org_loss_when_moving = -0.15
+            land_reinforce_rate = 0.02
+            enable_tactic = tactic_delay
 
             effect = {
                 
             }
         }
         {
-            
+            #Artillery/Support
+	        planning_speed = 0.1
+            org_loss_at_low_org_factor = -0.1
+            enable_tactic = tactic_overwhelming_fire
             effect = {
                 
             }
         }
         {
             
-
+            #Armor
+	        additional_brigade_column_size = 1
+            enable_tactic = tactic_blitz
             effect = {
                
             }
         }
         {
   
-
+            #Operations
+	        planning_speed = 0.2
+            enable_tactic = tactic_backhand_blow  
             effect = {
                 
             }
@@ -91,11 +103,19 @@ superior_firepower = {
 
     # EFFECTS
  
-
+    enable_tactic = tactic_overwhelming_fire
+    category_line_artillery = {
+        soft_attack = 0.1
+    }
+    category_artillery = {
+        soft_attack = 0.15
+    }
 
     milestones = {
         {
-            
+            #Infantry
+            enable_tactic = tactic_elastic_defense
+            supply_consumption_factor = -0.1
 
             effect = {
                
@@ -103,21 +123,36 @@ superior_firepower = {
         }
         {
 
-
+            #Artillery/Support
+            additional_brigade_column_size = 1
+            category_support_battalions = {
+                max_organisation = 10
+            }
+            planning_decay_rate_factor = -0.1
+            enable_tactic = tactic_barrage
             effect = {
                 
             }
 
         }
         {
-
+            #Armor
+            enable_tactic = tactic_delay
+            category_army = {
+                default_morale = 0.1
+            }
 
             effect = {
                 
             }
         }
         {
-
+            #Operations
+            enable_tactic = tactic_tactical_withdrawal
+            category_army = {
+                default_morale = 0.2
+            }
+            planning_decay_rate_factor = -0.1
             effect = {
                 
             }
@@ -126,121 +161,3 @@ superior_firepower = {
     }
 }
 
-grand_battleplan = {
-    folder = land
-
-    name = GRAND_DOCTRINE_GRAND_BATTLEPLAN
-    description = GRAND_DOCTRINE_GRAND_BATTLEPLAN_DESC
-    icon = GFX_doctrine_grand_battleplan_medium
-    available = {
-        always = yes
-    }
-
-    xp_cost = 100
-    xp_type = army
-
-    ai_will_do = {
-        base = 2
-    }
-
-    tracks = {
-        infantry
-        combat_support
-        armor
-        operations
-    }
-
-    # EFFECTS
-
-    milestones = {
-        {
-            
-            
-
-            effect = {
-                
-            }
-        }
-        {
-            
-
-            effect = {
-                
-            }
-        }
-        {
-           
-            effect = {
-                
-            }
-            
-        }
-        {
-           
-
-            effect = {
-                
-            }
-        }
-    }
-}
-
-mass_assault = {
-    folder = land
-
-    name = GRAND_DOCTRINE_MASS_ASSAULT
-    description = GRAND_DOCTRINE_MASS_ASSAULT_DESC
-    icon = GFX_doctrine_mass_assault_medium
-    available = {
-        always = yes
-    }
-
-    xp_cost = 100
-    xp_type = army
-
-    ai_will_do = {
-        base = 1
-    }
-
-    tracks = {
-        infantry
-        combat_support
-        armor
-        operations
-    }
-
-    # EFFECTS
-   
-    
-
-    milestones = {
-        {
-            
-
-            effect = {
-                
-            }
-        }
-        {
-            
-
-            effect = {
-                
-            }
-        }
-        {
-            
-
-            effect = {
-                
-            }
-        }
-        {
-            
-
-            effect = {
-                
-            }
-        }
-    }
-}

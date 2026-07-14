@@ -223,3 +223,20 @@ d_gls = {
 		}
 	}
 }
+#change filters if u need
+d_doc = {
+	ROOT = {
+		add_daily_mastery = {
+			amount = 5                        # Amount of mastery to add per day
+			days = 90                           # Number of days to apply the daily mastery gain for
+			name = [loc]                        # Loc key - will be used in descriptions to show the source of the mastery gain
+
+			# FILTERS:
+			folder = land                       # Optional - will filter by tracks in the specified folder
+			grand_doctrine = mobile_warfare     # Optional - will filter by tracks in folders with the specified grand doctrine
+			sub_doctrine = mobile_infantry      # Optional - will filter by tracks with the specified subdoctrine
+			track = infantry                    # Optional - will filter by tracks of the specified type
+			index = 1                           # Optional - will filter by the track index within the folder (0-indexed).
+		}
+	}
+}
