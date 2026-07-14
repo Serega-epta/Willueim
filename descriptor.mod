@@ -87,5 +87,5 @@ tags={
 	"Technologies"
 }
 name="The Requiem of Humankind: Open Alpha "
-supported_version="1.16.*"
+supported_version="1.19.*"
 path="mod/RoH/"

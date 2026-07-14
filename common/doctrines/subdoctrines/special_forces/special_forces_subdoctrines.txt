@@ -1,0 +1,53 @@
+mountaineers_1 = {
+    track = { special_forces_first special_forces_second }
+    name = SUBDOCTRINE_MOUNTAINEERS_1
+    description = SUBDOCTRINE_MOUNTAINEERS_1_DESC
+    icon = GFX_ski_troops_medium
+
+    xp_cost = 60
+    xp_type = army
+
+    
+
+    mastery = {
+        multiplier = 6
+        categories = {
+            category_mountaineers
+        }
+    }
+
+    available = {
+    	always = no
+    }
+
+    visible = {
+    	
+    }
+
+    ai_will_do = {
+        base = 1
+
+    }
+
+    # EFFECTS
+	effect = {
+	}
+    
+    rewards = {
+		reward_1 = {
+			
+		}
+		reward_2 = {
+			
+		}
+		reward_3 = {
+			  		
+		}
+		reward_4 = {
+			   	
+		}
+		reward_5 = {
+			
+		}
+    }
+}
