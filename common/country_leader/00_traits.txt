@@ -878,6 +878,39 @@ leader_traits = {
 	}
 	### Military Minister Traits
 	# 1 is worst, 3 is best
+	# +5 speed
+	army_chief_speed_1 = {
+		sprite = 9
+		experience_gain_army = 0.05
+		army_speed_factor = 0.05
+		army_attack_speed_factor = 0.05
+		command_cap_increase = @tier1_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	# +7.5 speed
+	army_chief_speed_2 = {
+		sprite = 9
+		experience_gain_army = 0.06
+		army_speed_factor = 0.075
+		army_attack_speed_factor = 0.075
+		command_cap_increase = @tier2_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	# +10 speed
+	army_chief_speed_3 = {
+		sprite = 9
+		experience_gain_army = 0.07
+		army_speed_factor = 0.1
+		army_attack_speed_factor = 0.1
+		command_cap_increase = @tier3_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	# +5 Defensive efficiency
 	army_chief_defensive_1 = {
 		sprite = 9
