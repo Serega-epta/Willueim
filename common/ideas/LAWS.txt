@@ -333,7 +333,7 @@ ideas = {
 				political_power_factor = 0.02
 				stability_factor = 0.03
 			}
-			cancel_if_invalid = yes
+			cancel_if_invalid = no
 		}
 		radio = {
 			allowed = {
@@ -350,7 +350,7 @@ ideas = {
 				stability_factor = 0.03
 				war_support_weekly = 0.01
 			}
-			cancel_if_invalid = yes
+			cancel_if_invalid = no
 		}
 		television = {
 			allowed = {
@@ -367,7 +367,7 @@ ideas = {
 				stability_factor = 0.05
 				war_support_weekly = 0.02
 			}
-			cancel_if_invalid = yes
+			cancel_if_invalid = no
 		}
 		internet_law = {
 			allowed = {
@@ -383,7 +383,7 @@ ideas = {
 				research_speed_factor = 0.02
 				stability_factor = -0.05
 			}
-			cancel_if_invalid = yes
+			cancel_if_invalid = no
 		}
 	}
 	roh_migration = {
@@ -460,7 +460,11 @@ ideas = {
 				always = yes
 			}
 			available = {
-				always = yes
+				OR = {
+					original_tag = IMP
+					is_puppet_of = IMP
+					has_completed_menshikov_system = yes
+				}
 			}
 			cost = 100
 			removal_cost = -1
@@ -628,7 +632,7 @@ ideas = {
 				always = yes
 			}
 			available = {
-				always = yes
+				has_completed_smoilov_system = yes
 			}
 			cost = 100
 			removal_cost = -1
