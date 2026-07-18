@@ -35,7 +35,7 @@ NDefines.NSupply.TRUCK_ATTRITION_FACTOR = 0.2 --a scale on total truck attrition
 NDefines.NSupply.SUPPLY_THRESHOLD_FOR_ARMY_ATTRITION = 0.2
 NDefines.NMilitary.ATTRITION_DAMAGE_ORG = 0.01					   -- damage from attrition to Organisation
 NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.001	   -- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
-NDefines.NMilitary.ATTRITION_WHILE_MOVING_FACTOR = 1
+NDefines.NMilitary.ATTRITION_WHILE_MOVING_FACTOR = 0.25
 NDefines.NMilitary.OUT_OF_SUPPLY_ATTRITION = 0.1                 -- max attrition when out of supply
 
 NDefines.NCountry.MIN_STABILITY = -1.0
