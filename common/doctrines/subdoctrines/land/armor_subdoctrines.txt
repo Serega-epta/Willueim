@@ -1,99 +1,3 @@
-armored_spearhead = {
-    track = armor
-    name = SUBDOCTRINE_ARMORED_SPEARHEAD
-    description = SUBDOCTRINE_ARMORED_SPEARHEAD_DESC
-    icon = GFX_doctrine_armored_spearhead_medium
-
-    xp_cost = 100
-    xp_type = army
-
-    available = {
-        always = yes
-    }
-    visible = {
-        has_dlc = "La Resistance"
-    }
-
-    ai_will_do = {
-
-        base = 1
-        modifier = {
-            factor = 0.5
-            is_major = no
-        }
-    }
-
-    # EFFECTS
-  
-
-    rewards = {
-        force_concentration = {
-        
-        }
-        armored_breakthrough_exploits = {
-        
-        }
-        local_reserves = {
-        
-        }
-        tactical_reconnaissance = {
-       
-        }
-        assault_detachments = {
-        
-        }
-    }
-}
-
-armored_spearhead_no_lar = {
-    track = armor
-    name = SUBDOCTRINE_ARMORED_SPEARHEAD
-    description = SUBDOCTRINE_ARMORED_SPEARHEAD_DESC
-    icon = GFX_doctrine_armored_spearhead_medium
-
-    xp_cost = 100
-    xp_type = army
-
-    available = {
-        always = yes
-    }
-    visible = {
-        NOT = {
-            has_dlc = "La Resistance"
-        }
-    }
-
-    ai_will_do = {
-
-        base = 1
-
-        modifier = {
-            factor = 0.5
-            is_major = no
-        }
-    }
-
-    # EFFECTS
-
-
-    rewards = {
-        force_concentration = {
-        
-        }
-        armored_breakthrough_exploits = {
-        
-        }
-        local_reserves = {
-        
-        }
-        tactical_reconnaissance = {
-        
-        }
-        assault_detachments = {
-
-        }
-    }
-}
 armored_infantry_support = {
     track = armor
     name = SUBDOCTRINE_ARMORED_INFANTRY_SUPPORT
@@ -114,80 +18,49 @@ armored_infantry_support = {
     }
 
     # EFFECTS
-
+    enable_tactic = tactic_blitz
     effect = {
-
+        add_tech_bonus = {
+            bonus = 1
+            uses = 1
+            category = armor_tech
+            name = SUBDOCTRINE_ARMORED_INFANTRY_SUPPORT
+        }
     }
 
     #TODO jack look if you can make a script effect for production bonuses
 
     rewards = {
         mobile_reserves = {
-
+            category_tanks = {
+                breakthrough = 0.05
+                soft_attack = 0.1
+            }
         }
         armored_cohorts = {
- 
+            category_tanks = {
+                max_organisation = 5
+            }
         }
         maintenance_routines = {
-
+            category_all_armor = {
+                default_morale = 0.15
+            }
         }
         fuel_rationing = {
-
+            category_tanks = {
+                supply_consumption = -0.08
+            }
         }
         mobile_armored_strongpoints = {
-
+            category_tanks = {
+                breakthrough = 0.1
+            }
         }
     }
 }
 
-streamlined_deployment = {
-    track = armor
-    name = SUBDOCTRINE_STREAMLINED_DEPLOYMENT
-    description = SUBDOCTRINE_STREAMLINED_DEPLOYMENT_DESC
-    icon = GFX_doctrine_streamlined_deployment_medium
 
-    xp_cost = 100
-    xp_type = army
-
-    available = {
-        always = yes
-    }
-
-        ai_will_do = {
-
-        base = 1
-
-
-    }
-
-
-
-
-    rewards = {
-        flexible_armored_battalions = {
-
-  
-
-
-
-        }
-        mechanized_wave = {
-
-        }
-        tank_desant = {
-
-        }
-        full_front_deployment = {
-
-
-        }
-        continuous_offensives = {
-
-        }
-    }
-
-
-}
 
 mobile_defense = {
     track = armor
@@ -207,26 +80,47 @@ mobile_defense = {
 
     }
 
-
+    category_all_armor = {
+        defense = 0.1
+    }
 
     rewards = {
-
         mechanized_offensive = {
-            
+            motopechotanagruzovikah = {}
+            motopechotanabtr = {
+                defense = 0.1
+                soft_attack = 0.1
+            }
         }
         advance_under_fire = {
-            
+            category_all_armor = {
+                breakthrough = 0.1
+                default_morale = 0.2
+            }
         }
         attached_support = {
-           
-
+            motopechotanagruzovikah = {
+                max_organisation = 5
+            }
+            motopechotanabtr = {
+                max_organisation = 5
+            }
         }
         combined_anti_armor = {
-            
-
+            category_all_armor = {
+                hard_attack = 0.1
+                breakthrough = 0.05
+            }
+            category_artillery = {
+                hard_attack = 0.05
+            }
         }
         tank_on_tank_engagement = {
-            
+            category_all_armor = {
+                hard_attack = 0.1
+                soft_attack = 0.1
+                ap_attack = 0.05
+            }
         }    
     }
 }
@@ -244,10 +138,7 @@ armored_cavalry = {
         always = yes
     }
     visible = {
-        AND = {
-            has_dlc = "No Compromise, No Surrender"
-            has_dlc = "La Resistance"
-        }
+
     }
 
     ai_will_do = {
@@ -258,115 +149,69 @@ armored_cavalry = {
 
     
     # EFFECTS
+    motopechotanagruzovikah = {
+        max_organisation = 5
+        defense = 0.1
+    }
+    motopechotanabtr = {
+        max_organisation = 5
+        defense = 0.15
+    }
     rewards = {
         cruiser_tanks = {
-           
+            OPF = { #mass tanks
+                maximum_speed = 0.1
+                max_organisation = 5
+                breakthrough = 0.05
+            }
+            specialized_OPF = {
+                maximum_speed = 0.05
+                max_organisation = 10
+            }
+            ai_OPF = {
+                maximum_speed = -0.05
+                max_organisation = 3
+                breakthrough = 0.15
+            }
         }
         quick_response_force = {
-            
+            motopechotanabtr = {
+                suppression_factor = 0.2
+                maximum_speed = 0.05
+            }
         }
         speed_as_armour = {
-           
-
+            OPF = { #mass tanks
+                maximum_speed = 0.125
+                breakthrough = 0.05
+            }
+            specialized_OPF = {
+                maximum_speed = 0.1
+            }
+            ai_OPF = {
+                maximum_speed = 0.1
+            }
         }
         fighting_reconnaissance = {
-    
+            drg = {
+                max_organisation = 5
+                soft_attack = 0.05
+            }
         }
         sustained_deployments = {
-            
+            OPF = { #mass tanks
+                soft_attack = 0.05
+                max_organisation = 3
+                default_morale = 0.15
+            }
+            motopechotanagruzovikah = {
+                max_organisation = 5
+                default_morale = 0.15
+            }
+            motopechotanabtr = {
+                max_organisation = 10
+                default_morale = 0.15
+            }
         }
-    }
-}
-
-armored_cavalry_no_lar = {
-    track = armor
-    name = SUBDOCTRINE_ARMORED_CAVALRY
-    description = SUBDOCTRINE_ARMORED_CAVALRY_DESC
-    icon = GFX_doctrine_armored_cavalry_medium
-
-    xp_cost = 100
-    xp_type = army
-
-    available = {
-        always = yes
-    }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-        NOT = {
-            has_dlc = "La Resistance"
-        }
-    }
-
-    ai_will_do = {
-
-        base = 1
-    }
-
-
-    # EFFECTS
-    rewards = {
-        cruiser_tanks = {
-            
-        }
-        quick_response_force = {
-
-            
-        }
-        speed_as_armour = {
-           
-        }
-        fighting_reconnaissance = {
-           
-        }
-        sustained_deployments = {
-           
-        }
-    }
-}
-
-tank_destroyer_force = {
-     track = armor
-    name = SUBDOCTRINE_TANK_DESTROYER_FORCE
-    description = SUBDOCTRINE_TANK_DESTROYER_FORCE_DESC
-    icon = GFX_doctrine_tank_destroyer_force_medium
-
-    xp_cost = 100
-    xp_type = army
-
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
-
-    ai_will_do = {
-
-        base = 0
-
-    }  
-
- 
-
-    rewards = {
-
-        mobile_anti_tank = {
-            
-
-        }
-        committed_operational_units = {
-
-        }
-        redeployment_priority = {
-
-        }
-
-        independent_counterattacks = {
-   
-        }
-
-        selfsufficient_battalion = {
-
-        }
-
-
-
     }
 }

@@ -83,7 +83,6 @@ Unification_campaign = {
 				}
 			}
 		}
-		war_with_on_remove = FROM
 		remove_effect = {
 			declare_war_on = {
 				target = FROM
@@ -107,6 +106,36 @@ Unification_campaign = {
 					}
 					has_war = yes
 					has_decision = ultimatum_campaign
+				}
+				factor = 0
+			}
+		}
+	}
+	puppet_integration = {
+		target_root_trigger = {
+			#visible doesn`t disable available trigger
+			hidden_trigger = {
+				has_country_flag = Unification_campaign_flag
+			}
+		}
+		target_array = neighbors
+		target_trigger = {
+			FROM = {
+				is_puppet_of = ROOT
+				unification_campaign_allowed = yes
+			}
+		}
+		cost = 75
+		days_remove = 60
+		remove_effect = {
+			annex_country = FROM
+		}
+		ai_will_do = {
+			#bots will follow the scenario
+			base = 10
+			modifier = {
+				FROM = {
+					has_war = yes
 				}
 				factor = 0
 			}
@@ -452,7 +481,7 @@ Unification = {
 						NUM = 50000
 					}
 					for_each_scope_loop = {
-						array = ROOT.city_restored_array
+						array = global.city_restored_array
 						add_manpower = -50000
 						PREV = {
 							add_manpower = 50000

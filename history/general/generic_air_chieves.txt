@@ -21,9 +21,11 @@ every_possible_country = {
 			}
 			cost = 100
 		}
-	}
-	generic_air_close_air_sup = {
-		generate_portrait = yes
+		portraits = { 
+			army = { 
+				small = GFX_idea_generic_air_close_air_sup
+			}
+		}
 	}
 }
 every_possible_country = {
@@ -47,8 +49,10 @@ every_possible_country = {
 			}
 			cost = 100
 		}
-	}
-	generic_air_chief_all_weather = {
-		generate_portrait = yes
+		portraits = { 
+			army = { 
+				small = GFX_idea_generic_air_chief_all_weather
+			}
+		}
 	}
 }

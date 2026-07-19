@@ -3,6 +3,7 @@ capital = 979
 oob = base
 add_ideas = {
 	SDI_Blood_Oath
+	SDC_hunger1
 }
 # Starting tech
 set_technology = {
@@ -15,10 +16,18 @@ set_technology = {
 set_research_slots = 2
 set_convoys = 0
 set_politics = {
-	ruling_party = technocracy
+	ruling_party = statesmen
 	elections_allowed = no
 }
 set_popularities = {
-	technocracy = 100
+	statesmen = 100
 }
 recruit_character = SDI_Segey_Karov
+add_opinion_modifier = {
+	target = LPC
+	modifier = endless_hatred
+}
+add_opinion_modifier = {
+	target = NMG
+	modifier = endless_hatred
+}

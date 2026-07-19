@@ -253,7 +253,7 @@ outsourcing_reform_tt: "$reform_effects$:\n$MODIFIER_PRODUCTION_FACTORY_START_EF
 trade_initiative_reform_tt: "$reform_effects$:\n$MODIFIER_TRADE_OPINION_FACTOR$: §Y+15.00%§!"
 GOST_reform_tt: "$reform_effects$:\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: §G+10.00%§!"
 fullstack_consumtion_reform_tt: "$reform_effects$:\n$MODIFIER_TRADE_OPINION_FACTOR$: §Y+25.00%§!"
-humanism_stronghold_reform_tt: "$reform_effects$:\n$MODIFIER_SURRENDER_LIMIT$: §G+3.00%§!\n$MODIFIERS_ARMY_CORE_DEFENCE_FACTOR$: §G+15.0%§!"
+humanism_stronghold_reform_tt: "$reform_effects$:\n$MODIFIER_SURRENDER_LIMIT$: §G+3.00%§!\n$MODIFIERS_ARMY_CORE_DEFENCE_FACTOR$: §G+15.0%§!\n\n§1Открывает закон $migration_selection$§!\n$MODIFIER_POLITICAL_POWER_FACTOR$: §R-5%§!\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+3.00%§!\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+5.00%§!"
 #button custom tooltips (smoilov system)
 foundation_of_the_past_reform_tt: "$reform_effects$:\n$MODIFIER_STABILITY_FACTOR$: §G+5.0%§!"
 behind_the_scenes_reform_tt: "$reform_effects$:\n$MODIFIER_DRIFT_DEFENCE_FACTOR$: §G+10.0%§!"
@@ -275,7 +275,7 @@ controlled_bataries_reform_tt: "$reform_effects$:\n$MODIFIERS_ARMY_ATTACK_FACTOR
 firstborn_of_sparta_reform_tt: "$reform_effects$:\n$MODIFIER_INITIATIVE_FACTOR$: §G+7.5%§!\n\n§YTHIS IS SPARTA!!!§!"
 nerves_to_the_limit_reform_tt: "$reform_effects$:\n$MODIFIER_STABILITY_FACTOR$: §G+10.0%§!\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+10.0%§!"
 steel_grip_reform_tt: "$reform_effects$:\n  Случайный подконтрольный регион во владении:\n    Будет добавлено ячеек для строительства: §G2§!\n    Будет получено §G1§! ед. сооружения §Y$industrial_complex$§!\n    Будет получено §G1§! ед. сооружения §Y$arms_factory$§!"
-sweat_and_blood_reform_tt: "$reform_effects$:\n$MODIFIER_JUSTIFY_WAR_GOAL_TIME$: §G-30.0%§!"
+sweat_and_blood_reform_tt: "$reform_effects$:\n$MODIFIER_JUSTIFY_WAR_GOAL_TIME$: §G-30.0%§!\n\n§1Открывает закон $blood_and_sweat$§!:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+10.00%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.00%§!\n$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$: §G-10.00%§!"
 #naumov system
 common_duty_common_law_reform_tt: "$reform_effects$:"
 existence_essence_reform_tt: "$reform_effects$:\n$MODIFIER_STABILITY_FACTOR$: §R-5.0%§!\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+2.0%§!"
@@ -302,3 +302,6 @@ body_limits_reform_tt: "$reform_effects$:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+5.0%�
 population_k_required_tt: "Необходимо $NUM|Y$+ тысяч населения страны (сейчас [?max_manpower_k|Y]к)"
 government_manager_selection_possible_tt: "§YМожно выбрать государственную модель§!"
 government_manager_upgrade_possible_tt: "§YМожно улучшить государственную модель§!"
+humanism_stronghold_idea_tt: "Завершил систему Меньшикова"
+has_sweat_and_blood_idea_tt: "Завершил систему Самойлова"
+has_body_limits_idea_tt: "Завершил систему Наумова"

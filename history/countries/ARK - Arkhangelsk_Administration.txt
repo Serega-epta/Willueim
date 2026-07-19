@@ -3,6 +3,7 @@ oob = ARK
 add_manpower = 7000
 add_ideas = {
 	ARK_Polar_silence
+	SDC_hunger1
 }
 # Starting tech
 set_technology = {
@@ -27,3 +28,7 @@ set_popularities = {
 recruit_character = ARK_admin
 
 recruit_character = ARC_generic_general
+add_opinion_modifier = {
+	target = SDC
+	modifier = crazy_millitarists
+}

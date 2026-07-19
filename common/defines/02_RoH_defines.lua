@@ -143,3 +143,8 @@ NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.02 --was 0.1
 NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.02 --was 0.1
 
 NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 3200 -- was 800
+
+NDefines.NProject.BREAKTHROUGH_DAILY_TECHNOLOGY_GAIN = 10		-- Amount in 1/100th percentage. E.g. 25 = 0.25% (was 12)
+NDefines.NProject.BREAKTHROUGH_DAILY_SCIENTIST_SKILL_GAIN = 7	-- Amount in 1/100th percentage gained per skill when doing basic research. E.g. 5 = 0.05% per skill level. (was 5)
+NDefines.NProject.BREAKTHROUGH_DAILY_ROCKET_SITE_GAIN = 3		-- Amount in 1/100th percentage gained per rocket site level. E.g. 1 = 0.01% per rocket site level. (was 1)
+NDefines.NProject.BREAKTHROUGH_DAILY_NUCLEAR_REACTOR_GAIN = 5	-- Amount in 1/100th percentage gained per nuclear reactor. E.g. 2 = 0.02% per nuclear reactor. (was 1)
