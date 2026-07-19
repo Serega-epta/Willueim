@@ -244,5 +244,72 @@ ideas = {
 				army_speed_factor = 0.05
 			}
 		}
+		SDC_silence_idea = {
+			modifier = {
+				planning_speed = -0.2
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+			}
+		}
+		SDC_forges_of_north_1 = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		SDC_forges_of_north_2 = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.25
+				production_lack_of_resource_penalty_factor =-0.1
+			}
+		}
+		SDC_forges_of_north_3 = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.23
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.25
+				production_lack_of_resource_penalty_factor =-0.1
+				conversion_cost_civ_to_mil_factor = -0.25
+			}
+		}
+		SDC_forges_of_north_4 = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.23
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.25
+				production_lack_of_resource_penalty_factor =-0.1
+				conversion_cost_civ_to_mil_factor = -0.25
+				production_speed_arms_factory_factor = 0.2
+				global_building_slots = 1
+			}
+		}
+		SDC_beacon_of_north_1 = {
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		SDC_beacon_of_north_2 = {
+			modifier = {
+				research_speed_factor = 0.2
+			}
+		}
+		SDC_beacon_of_north_3 = {
+			modifier = {
+				research_speed_factor = 0.2
+				acclimatization_cold_climate_gain_factor = 0.35
+				winter_attrition = -0.15
+			}
+		}
+		SDC_beacon_of_north_4 = {
+			modifier = {
+				research_speed_factor = 0.25
+				acclimatization_cold_climate_gain_factor = 0.35
+				winter_attrition = -0.15
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+
 	}
 }

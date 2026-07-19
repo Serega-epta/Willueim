@@ -397,6 +397,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.1.a
+		set_power_balance = {
+    		id = SDC_power_balance
+    		left_side = human_side
+    		right_side = willuem_side
+		}
 	}
 }
 
@@ -411,6 +416,11 @@ country_event = {
 	option = {
 		name = SDC_phase_three.2.a
 		add_idea = SDC_Whisper_1
+		add_power_balance_value = {
+    		id = SDC_power_balance
+    		value = 0.2
+    		tooltip_side = get_20_willuem
+		}
 	}
 }
 
@@ -427,6 +437,11 @@ country_event = {
 		swap_ideas = {
 			remove_idea = SDC_Whisper_1
 			add_idea = SDC_Whisper_2
+		}
+		add_power_balance_value = {
+    		id = SDC_power_balance
+    		value = 0.2
+    		tooltip_side = get_20_willuem
 		}
 	}
 }
@@ -564,6 +579,11 @@ country_event = {
 		name = SDC_phase_three.10.a
 		add_stability = -0.01
 		add_war_support = -0.01
+		add_power_balance_value = {
+    		id = SDC_power_balance
+    		value = -0.1
+    		tooltip_side = get_10_human
+		}
 	}
 }
 
@@ -580,6 +600,11 @@ country_event = {
 		add_trait = {
      		character = SDC_Putin
      		trait = mutilated
+		}
+		add_power_balance_value = {
+    		id = SDC_power_balance
+    		value = -0.1
+    		tooltip_side = get_10_human
 		}
 	}
 }
@@ -598,19 +623,24 @@ country_event = {
      		character = SDC_Putin
      		trait = mutilated
 		}
+		add_power_balance_value = {
+    		id = SDC_power_balance
+    		value = -0.2
+    		tooltip_side = get_20_human
+		}
 	}
 }
 
 #Непринятие
 country_event = {
-	id = SDC_phase_three.12
-	title = SDC_phase_three.12.t
-	desc = SDC_phase_three.12.d
+	id = SDC_phase_three.13
+	title = SDC_phase_three.13.t
+	desc = SDC_phase_three.13.d
 	picture = GFX_SDC_event_picture_template
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = SDC_phase_three.12.a
+		name = SDC_phase_three.13.a
 		ANR = {#Пока будет так, потом писатели придумают норм гражданску. войну
 			annex_country = {
     			target = SDC
@@ -622,19 +652,6 @@ country_event = {
 
 #Честность
 country_event = {
-	id = SDC_phase_three.13
-	title = SDC_phase_three.13.t
-	desc = SDC_phase_three.13.d
-	picture = GFX_SDC_event_picture_template
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = SDC_phase_three.13.a
-	}
-}
-
-#Просьба о помощи
-country_event = {
 	id = SDC_phase_three.14
 	title = SDC_phase_three.14.t
 	desc = SDC_phase_three.14.d
@@ -643,10 +660,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.14.a
+		add_power_balance_value = {
+    		id = SDC_power_balance
+    		value = -0.3
+    		tooltip_side = get_30_human
+		}
 	}
 }
 
-#Едкость
+#Просьба о помощи
 country_event = {
 	id = SDC_phase_three.15
 	title = SDC_phase_three.15.t
@@ -656,11 +678,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.15.a
-		add_war_support = -0.04
+		add_power_balance_value = {
+    		id = SDC_power_balance
+    		value = -0.15
+    		tooltip_side = get_15_human
+		}
 	}
 }
 
-#Новая концепция I
+#Едкость
 country_event = {
 	id = SDC_phase_three.16
 	title = SDC_phase_three.16.t
@@ -670,11 +696,16 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.16.a
-		country_event = SDC_phase_three.18
+		add_war_support = -0.04
+		add_power_balance_value = {
+    		id = SDC_power_balance
+    		value = -0.1
+    		tooltip_side = get_10_human
+		}
 	}
 }
 
-#Новая концепция II
+#Новая концепция I
 country_event = {
 	id = SDC_phase_three.17
 	title = SDC_phase_three.17.t
@@ -684,12 +715,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.17.a
-		add_stability = 0.3
-		add_war_support = 0.05
+		country_event = SDC_phase_three.18
 	}
 }
 
-#Новый метод
+#Новая концепция II
 country_event = {
 	id = SDC_phase_three.18
 	title = SDC_phase_three.18.t
@@ -699,12 +729,12 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.18.a
-		add_stability = -0.08
-		add_war_support = -0.06
+		add_stability = 0.3
+		add_war_support = 0.05
 	}
 }
 
-#Раны
+#Новый метод
 country_event = {
 	id = SDC_phase_three.19
 	title = SDC_phase_three.19.t
@@ -714,12 +744,12 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.19.a
-		add_stability = -0.13
-		add_war_support = -0.11
+		add_stability = -0.08
+		add_war_support = -0.06
 	}
 }
 
-#Искра
+#Раны
 country_event = {
 	id = SDC_phase_three.20
 	title = SDC_phase_three.20.t
@@ -729,12 +759,12 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.20.a
-		add_stability = 0.03
-		add_war_support = 0.01
+		add_stability = -0.13
+		add_war_support = -0.11
 	}
 }
 
-#Искра II
+#Искра
 country_event = {
 	id = SDC_phase_three.21
 	title = SDC_phase_three.21.t
@@ -744,6 +774,21 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.21.a
+		add_stability = 0.03
+		add_war_support = 0.01
+	}
+}
+
+#Искра II
+country_event = {
+	id = SDC_phase_three.22
+	title = SDC_phase_three.22.t
+	desc = SDC_phase_three.22.d
+	picture = GFX_SDC_event_picture_template
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = SDC_phase_three.22.a
 		add_stability = 0.1
 		add_war_support = 0.05
 	}

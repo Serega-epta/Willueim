@@ -22,6 +22,11 @@ focus_tree = {
 			custom_effect_tooltip = SDC_Indocrination_tt
 			set_country_flag = end_of_phase_two
 			country_event = SDC_phase_three.1
+			set_power_balance = {
+    			id = SDC_power_balance
+    			left_side = human_side
+    			right_side = willuem_side
+			}
 		}
 	}
 	focus = {
@@ -60,6 +65,11 @@ focus_tree = {
 					days = 13
 				}
 			}
+			add_power_balance_value = {
+    			id = SDC_power_balance
+    			value = 0.15
+    			tooltip_side = get_15_willuem
+			}
 		}
 	}
 	focus = {
@@ -74,7 +84,11 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			
+			add_power_balance_value = {
+    			id = SDC_power_balance
+    			value = 0.2
+    			tooltip_side = get_20_willuem
+			}
 		}
 	}
 	focus = {
@@ -104,6 +118,11 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			add_power_balance_value = {
+    			id = SDC_power_balance
+    			value = 0.2
+    			tooltip_side = get_20_willuem
+			}
 			IF = {
 				limit = {
 					has_completed_focus = SDC_Pain_as_memory
@@ -184,7 +203,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			
+			add_ideas = SDC_silence_idea
 		}
 	}
 	focus = {
@@ -321,6 +340,7 @@ focus_tree = {
 					}
 				}
 			}
+			add_ideas = SDC_forges_of_north_1
 		}
 	}
 
@@ -337,7 +357,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+    			remove_idea = SDC_forges_of_north_1
+    			add_idea = SDC_forges_of_north_2
+			}
 		}
 	}
 
@@ -354,7 +377,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+    			remove_idea = SDC_forges_of_north_2
+    			add_idea = SDC_forges_of_north_3
+			}
 		}
 	}
 
@@ -371,6 +397,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SDC_forges_of_north_3
+    			add_idea = SDC_forges_of_north_4
+			}
 			IF = {
 				limit = {
 					has_completed_focus = SDC_Polar_Guardian_Project
@@ -398,6 +428,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			add_ideas = SDC_beacon_of_north_1
 			IF = {
 				limit = {
 					has_completed_focus = SDC_Restoration_of_workshops
@@ -425,7 +456,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+    			remove_idea = SDC_beacon_of_north_1
+    			add_idea = SDC_beacon_of_north_2
+			}
 		}
 	}
 
@@ -442,7 +476,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+    			remove_idea = SDC_beacon_of_north_2
+    			add_idea = SDC_beacon_of_north_3
+			}
 		}
 	}
 
@@ -459,6 +496,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SDC_beacon_of_north_3
+    			add_idea = SDC_beacon_of_north_4
+			}
 			IF = {
 				limit = {
 					has_completed_focus = SDC_Arkhangelsk_hub

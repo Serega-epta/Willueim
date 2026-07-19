@@ -1,0 +1,47 @@
+SDC_power_balance = {
+    left_side = human_side
+    right_side = willuem_side
+    range = {
+        id = balance
+        min = -0.15
+        max = 0.15
+        modifier = {
+        }
+    }
+    side = {
+        id = human_side
+        range = {
+            id = human_side_low
+            max = -0.15
+            min = -0.40
+        }
+        range = {
+            id = human_side_mid
+            max = -0.40
+            min = -0.80
+        }
+        range = {
+            id = human_side_full
+            max = -0.80
+            min = -1
+        }
+    }
+    side = {
+        id = willuem_side
+        range = {
+            id = willuem_side_low
+            min = 0.15
+            max = 0.4
+        }
+        range = {
+            id = willuem_side_mid
+            min = 0.4
+            max = 0.8
+        }
+        range = {
+            id = willuem_side_full
+            min = 0.8
+            max = 1
+        }
+    }
+}
