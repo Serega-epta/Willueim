@@ -836,10 +836,10 @@ LWV_war_in_the_shadows = {
 		}
 		custom_cost_text = decision_cost_army_xp_1_pp_10
 		visible = {
-			has_completed_focus = LWV_shadow_warrior
+			has_active_mission = markovtsi_seize_weapons_warehouses
 		}
 		available = {
-			has_active_mission = markovtsi_seize_weapons_warehouses
+			has_completed_focus = LWV_shadow_warrior
 		}
 		complete_effect = {
 			hidden_effect = {

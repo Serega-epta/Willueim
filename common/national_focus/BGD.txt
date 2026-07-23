@@ -322,11 +322,12 @@ focus_tree = {
 			country_event = BGD_event.14
 			news_event = worldnews.25
 			set_cosmetic_tag = motherland_statesmen
-			set_party_rule = {
-    			ideology = statesmen
-			}
 			set_popularities = {
 				statesmen = 100
+			}
+			set_politics = {
+				ruling_party = statesmen
+				elections_allowed = no
 			}
 		}
 	}
