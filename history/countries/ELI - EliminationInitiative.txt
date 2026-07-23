@@ -37,12 +37,23 @@ IF = {
 }
 set_research_slots = 2
 set_convoys = 0
-set_politics = {
-	ruling_party = militarists
-	elections_allowed = no
-}
 set_popularities = {
-	militarists = 100
+	militarists = 50
+	statesmen = 50
+}
+random_list = {
+	50 = {
+		set_politics = {
+			ruling_party = militarists
+			elections_allowed = no
+		}
+	}
+	50 = {
+		set_politics = {
+			ruling_party = statesmen
+			elections_allowed = no
+		}
+	}
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment
