@@ -824,6 +824,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ARM_sea_monsters
 		}
+		available = {
+			controls_state = 837
+		}
 		x = 12
 		y = 8
 		cost = 5.7
@@ -848,6 +851,7 @@ focus_tree = {
 			NOT = {
 				country_exists = ODS
 			}
+			controls_state = 839
 		}
 		icon = GFX_Admiralty_technologies
 		x = 15
@@ -1087,6 +1091,17 @@ focus_tree = {
 		prerequisite = {
 			focus = ARM_eliminate_danger
 			focus = ARM_touch_unknown
+		}
+		available = {
+			controls_state = 890
+			controls_state = 889
+			controls_state = 73
+			controls_state = 875
+			controls_state = 80
+			controls_state = 78
+			controls_state = 859
+			controls_state = 766
+			controls_state = 855
 		}
 		icon = GFX_Radar_watch
 		x = 8
@@ -1664,6 +1679,12 @@ focus_tree = {
 		prerequisite = {
 			focus = ARM_go_east
 		}
+		available = {
+			controls_state = 221
+			controls_state = 856
+			controls_state = 228
+			controls_state = 240
+		}
 		icon = GFX_Restoration_of_industrial_base
 		x = 12
 		y = 15
@@ -1711,6 +1732,9 @@ focus_tree = {
 		id = ARM_extraction_Donbass
 		prerequisite = {
 			focus = ARM_go_east
+		}
+		available = {
+			controls_state = 866
 		}
 		icon = GFX_Expand_resource_extraction_in_Donbass
 		x = 14

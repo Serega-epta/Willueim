@@ -808,11 +808,11 @@ focus_tree = {
 		prerequisite = { focus = ORL_Eliminate_ledge }
 		mutually_exclusive = { focus = ORL_Soldiers_of_Fortune }
 		completion_reward = {
-			send_volunteer_size = 1
 			add_relation_rule_override = {
     			target = MKS
    				can_send_volunteers = yes
 			}
+			set_country_flag = may_send_volunteers_to_MKS
 		}
 	}
 
@@ -826,11 +826,11 @@ focus_tree = {
 		prerequisite = { focus = ORL_Eliminate_ledge }
 		mutually_exclusive = { focus = ORL_Military_specialists }
 		completion_reward = {
-			send_volunteer_size = 1
 			add_relation_rule_override = {
     			target = MSH
    				can_send_volunteers = yes
 			}
+			set_country_flag = may_send_volunteers_to_MSH
 		}
 	}
 
