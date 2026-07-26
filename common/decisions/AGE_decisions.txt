@@ -1240,6 +1240,13 @@ AGE_red_forest = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				has_war = no
+				factor = 1000
+			}
+		}
 	}
 	AGE_protect_scientistst = {
 		visible = {
@@ -1303,6 +1310,9 @@ AGE_red_forest = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	AGE_contain_the_forest = {
 		visible = {
@@ -1330,6 +1340,9 @@ AGE_red_forest = {
 				mission = AGE_red_forest_mission
 				days = 60
 			}
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 }
@@ -1447,6 +1460,9 @@ AGE_south_intervention = {
 				remove_core_of = BLZ
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	AGE_recapture_Kaunas = {
 		visible = {
@@ -1509,6 +1525,9 @@ AGE_south_intervention = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	AGE_recapture_Panevezis = {
 		visible = {
@@ -1567,6 +1586,9 @@ AGE_south_intervention = {
 					num_provinces = 4
 				}
 			}
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 }

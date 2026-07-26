@@ -144,7 +144,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { original_tag = ODS }
-				FROM = { add_dynamic_modifier = { modifier = ODS_new_land } }
+				FROM.FROM = { add_dynamic_modifier = { modifier = ODS_new_land } }
 			}
 
 			if = {

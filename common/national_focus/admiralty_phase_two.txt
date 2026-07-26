@@ -789,79 +789,13 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_tech = infantry_weapons7
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_7
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons6
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_6
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons5
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_5
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons4
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_4
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons3
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_3
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons2
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_2
-					amount = 2000
-					producer = ODS
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = infantry_weapons1
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 2000
-					producer = ODS
-				}
-			}	
-			
 			add_equipment_to_stockpile = {
-				type = support_equipment_1
+				type = infantry_equipment
+				amount = 2000
+				producer = ODS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
 				amount = 500
 				producer = ODS
 			}

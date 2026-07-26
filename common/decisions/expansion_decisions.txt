@@ -118,68 +118,6 @@ expansion_category = {
 	}
 }
 reunification_category = {
-	major_unite_motherland = {
-		available = {
-			custom_trigger_tooltip = {
-    			tooltip = Unification_over_tt		#Теперь доступно только после механик
-    			ROOT = {
-					#TODO: will never be acheved - remove this idea and decision
-					has_idea = Garrisons
-				}
-			}
-		}
-		priority = 200
-		fire_only_once = yes
-		complete_effect = {
-			if = {
-				limit = {
-					tag = GLS
-				}
-				news_event = super.5
-				add_political_power = 10
-				add_stability = 0.03
-			}
-			else_if = {
-				limit = {
-					tag = ODS
-				}
-				news_event = super.6
-				add_political_power = 25
-				add_stability = 0.03
-				add_popularity = {
-					ideology = sacraments
-					popularity = 0.05
-				}
-			}
-			else_if = {
-				limit = {
-					tag = ARM
-				}
-				news_event = super.7
-				add_political_power = 25
-				add_stability = 0.03
-				add_popularity = {
-					ideology = statesmen
-					popularity = 0.05
-				}
-			}
-			else_if = {
-				limit = {
-					tag = LWV
-				}
-				news_event = super.8
-				add_political_power = 25
-				add_stability = 0.03
-				add_popularity = {
-					ideology = sacraments
-					popularity = 0.05
-				}
-			}
-		}
-		ai_will_do = {
-			base = 100
-		}
-	}
 	major_annex_anarchy = {
 		priority = 100
 		targets = {

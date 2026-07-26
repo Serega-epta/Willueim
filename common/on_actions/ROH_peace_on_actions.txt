@@ -277,44 +277,44 @@ on_actions = {
 					}
 					set_global_flag = skip_default_capitulation
 				}
-
-				else_if = {
-					limit = {
-						has_global_flag = IOPK_crisis
-						ROOT = {
-							NOT = {
-								original_tag = GER
-								original_tag = FRA
-								original_tag = ITA
-								original_tag = IBR
-								original_tag = NMG
-								original_tag = LPC
-								original_tag = POL
-								original_tag = IMP
-							}
-						}
-						FROM = {
-							OR = {
-								original_tag = GER
-								original_tag = FRA
-								original_tag = ITA
-								original_tag = IBR
-								original_tag = NMG
-								original_tag = LPC
-								original_tag = POL
-								original_tag = IMP
-							}
-						}
-					}
-					
-					ROOT = {
-						white_peace = PREV
-						every_core_state = {
-							transfer_state_to = IMP 
-						}
-					}
-					set_global_flag = skip_default_capitulation
-				}
+				#TODO: Реализовать скрипт для капитуляции Консульства - постоянно ломается мирный договор из-за марионеток
+				#else_if = {
+				#	limit = {
+				#		has_global_flag = IOPK_crisis
+				#		ROOT = {
+				#			NOT = {
+				#				original_tag = GER
+				#				original_tag = FRA
+				#				original_tag = ITA
+				#				original_tag = IBR
+				#				original_tag = NMG
+				#				original_tag = LPC
+				#				original_tag = POL
+				#				original_tag = IMP
+				#			}
+				#		}
+				#		FROM = {
+				#			OR = {
+				#				original_tag = GER
+				#				original_tag = FRA
+				#				original_tag = ITA
+				#				original_tag = IBR
+				#				original_tag = NMG
+				#				original_tag = LPC
+				#				original_tag = POL
+				#				original_tag = IMP
+				#			}
+				#		}
+				#	}
+				#	
+				#	ROOT = {
+				#		white_peace = PREV
+				#		every_core_state = {
+				#			transfer_state_to = IMP 
+				#		}
+				#	}
+				#	set_global_flag = skip_default_capitulation
+				#}
 
 				else_if = {
 					limit = {
