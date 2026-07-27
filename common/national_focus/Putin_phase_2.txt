@@ -144,15 +144,25 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+			UFV = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			declare_war_on = {
 				target = UFV
 				type = annex_everything
 			}
-			VOZ = {
-				declare_war_on = {
-					target = UFV
-					type = annex_everything
+			if = {
+				limit = {
+					country_exists = VOZ
+				}
+				VOZ = {
+					declare_war_on = {
+						target = UFV
+						type = annex_everything
+					}
 				}
 			}
 			country_event = SDC_phase_two.2

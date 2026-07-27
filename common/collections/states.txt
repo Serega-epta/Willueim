@@ -1,3 +1,8 @@
+#NOTE: if we use game:all_states on state with no owner in history - CONTROLLER & OWNER will become invalid in trigger and it will spam in log!
+all_existing_states = {
+	input = constant:state_groups.all_desc_states
+	name = COLLECTION_FACTION_ALLEXISTING__STATES
+}
 mother_russia = {
 	input = constant:state_groups.mother_russia
 	name = COLLECTION_FACTION_MOTHER_RUSSIA_STATES

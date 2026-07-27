@@ -179,11 +179,29 @@ focus_tree = {
 			factor = 10
 		}
 		will_lead_to_war_with = TAG
+		bypass = {
+			TAG = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			declare_war_on = {
 				target = TAG
 				type = annex_everything
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						is_ai = yes
+					}
+					country_event = {
+						id = scripted_peace.5
+						days = 90
+					}
+				}
+			}
+		}
+		bypass_effect = {
 			hidden_effect = {
 				IF = {
 					limit = {
@@ -310,12 +328,30 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+			ARK = {
+				exists = no
+			}
+		}
 		will_lead_to_war_with = ARK
 		completion_reward = {
 			declare_war_on = {
 				target = ARK
 				type = annex_everything
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						is_ai = yes
+					}
+					country_event = {
+						id = scripted_peace.6
+						days = 150
+					}
+				}
+			}
+		}
+		bypass_effect = {
 			hidden_effect = {
 				IF = {
 					limit = {

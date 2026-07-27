@@ -435,7 +435,7 @@ faction_goal_ensure_military_r_d = {
 			always = yes
 			collection_size = {
 				input = {
-					input = game:all_states
+					input = collection:all_existing_states
 					operators = {
 						limit = {
 							#TODO: spam in error.log, but works correctly
@@ -449,7 +449,7 @@ faction_goal_ensure_military_r_d = {
 			}
 			collection_size = {
 				input = {
-					input = game:all_states
+					input = collection:all_existing_states
 					operators = {
 						limit = {
 							#TODO: spam in error.log, but works correctly
@@ -463,7 +463,7 @@ faction_goal_ensure_military_r_d = {
 			}
 			collection_size = {
 				input = {
-					input = game:all_states
+					input = collection:all_existing_states
 					operators = {
 						limit = {
 							#TODO: spam in error.log, but works correctly
@@ -478,51 +478,44 @@ faction_goal_ensure_military_r_d = {
 		}
 	}
 	completed = {
-		custom_trigger_tooltip = {
-			tooltip = fuck_pdx_log
-			always = no
-			collection_size = {
-				input = {
-					input = game:all_states
-					operators = {
-						limit = {
-							#TODO: spam in error.log, but works correctly
-							#is_controlled_by_ROOT_or_ally = yes 
-							land_facility > 0
-						}
+		collection_size = {
+			input = {
+				input = collection:all_existing_states
+				operators = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes 
+						land_facility > 0
 					}
-					name = COLLECTION_FACTION_LAND_FACILITY
 				}
-				value > 0
+				name = COLLECTION_FACTION_LAND_FACILITY
 			}
-			collection_size = {
-				input = {
-					input = game:all_states
-					operators = {
-						limit = {
-							#TODO: spam in error.log, but works correctly
-							#is_controlled_by_ROOT_or_ally = yes 
-							naval_facility > 0
-						}
+			value > 0
+		}
+		collection_size = {
+			input = {
+				input = collection:all_existing_states
+				operators = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes 
+						naval_facility > 0
 					}
-					name = COLLECTION_FACTION_NAVAL_FACILITY
 				}
-				value > 0
+				name = COLLECTION_FACTION_NAVAL_FACILITY
 			}
-			collection_size = {
-				input = {
-					input = game:all_states
-					operators = {
-						limit = {
-							#TODO: spam in error.log, but works correctly
-							#is_controlled_by_ROOT_or_ally = yes 
-							air_facility > 0
-						}
+			value > 0
+		}
+		collection_size = {
+			input = {
+				input = collection:all_existing_states
+				operators = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes 
+						air_facility > 0
 					}
-					name = COLLECTION_FACTION_AIR_FACILITY
 				}
-				value > 0
+				name = COLLECTION_FACTION_AIR_FACILITY
 			}
+			value > 0
 		}
 	}
 	complete_effect = {

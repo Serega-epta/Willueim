@@ -934,44 +934,124 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		will_lead_to_war_with = BOD
+		will_lead_to_war_with = FUD
+		will_lead_to_war_with = WOD
+		will_lead_to_war_with = ECD
+		will_lead_to_war_with = KUH
+		will_lead_to_war_with = CRW
+		bypass = {
+			CRI = {
+				exists = no
+			}
+			HER = {
+				exists = no
+			}
+			KUB = {
+				exists = no
+			}
+			BOD = {
+				exists = no
+			}
+			FUD = {
+				exists = no
+			}
+			WOD = {
+				exists = no
+			}
+			ECD = {
+				exists = no
+			}
+			KUH = {
+				exists = no
+			}
+			CRW = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			#Аннекс ебучих маринеток
-			annex_country = {
-				target = CRI
-				transfer_troops = yes
+			if = {
+				limit = {
+					country_exists = CRI
+				}
+				annex_country = {
+					target = CRI
+					transfer_troops = yes
+				}
 			}
-			annex_country = {
-				target = HER
-				transfer_troops = yes
+			if = {
+				limit = {
+					country_exists = HER
+				}
+				annex_country = {
+					target = HER
+					transfer_troops = yes
+				}
 			}
-			annex_country = {
-				target = KUB
-				transfer_troops = yes
+			if = {
+				limit = {
+					country_exists = KUB
+				}
+				annex_country = {
+					target = KUB
+					transfer_troops = yes
+				}
 			}
 			#ЗАХВАТ УКРА�?НЫ (ой, я имел ввиду Южных Окраин)
-			create_wargoal = {
-				type = annex_everything
-				target = BOD
+			if = {
+				limit = {
+					country_exists = BOD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BOD
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = FUD
+			if = {
+				limit = {
+					country_exists = FUD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FUD
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = WOD
+			if = {
+				limit = {
+					country_exists = WOD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = WOD
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = ECD
+			if = {
+				limit = {
+					country_exists = ECD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ECD
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = KUH
+			if = {
+				limit = {
+					country_exists = KUH
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KUH
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = CRW
+			if = {
+				limit = {
+					country_exists = CRW
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CRW
+				}
 			}
 		}
 	}
