@@ -388,6 +388,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+			VDS = {
+				exists = no
+			}
+		}
+		will_lead_to_war_with = VDS
 		completion_reward = {
 			hidden_effect = {
 				country_event = {
@@ -582,22 +588,48 @@ focus_tree = {
 		will_lead_to_war_with = BIH
 		will_lead_to_war_with = DIB
 		will_lead_to_war_with = BAG
+		bypass = {
+			BIH = {
+				exists = no
+			}
+			DIB = {
+				exists = no
+			}
+			BAG = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			country_event = {
 				id = ARM_phase_one.15
 				days = 1
 			}
-			declare_war_on = {
-				target = BIH
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = BIH
+				}
+				declare_war_on = {
+					target = BIH
+					type = annex_everything
+				}
 			}
-			declare_war_on = {
-				target = DIB
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = DIB
+				}
+				declare_war_on = {
+					target = DIB
+					type = annex_everything
+				}
 			}
-			declare_war_on = {
-				target = BAG
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = BAG
+				}
+				declare_war_on = {
+					target = BAG
+					type = annex_everything
+				}
 			}
 			hidden_effect = {
 				load_focus_tree = {
@@ -607,6 +639,14 @@ focus_tree = {
 				country_event = {
 					id = ARM_phase_two.14
 					days = 10
+				}
+			}
+		}
+		bypass_effect = {
+			hidden_effect = {
+				load_focus_tree = {
+					tree = ARM_phase_two
+					keep_completed = no
 				}
 			}
 		}
