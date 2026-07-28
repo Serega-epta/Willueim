@@ -11,19 +11,42 @@ division_template = {
 	}
 	priority = 1
 }
+division_template = {
+	name = "Gornostrelkoviy Polk"
+
+	division_names_group = BGD_MOUNTAINEER
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		stvol_art_sup = { x = 0 y = 0 }
+	}
+	priority = 1
+}
 
 units = {
 	division = {
 		location = 11534
-		division_template = "Militia"
-		start_experience_factor = 0.1
+		division_template = "Gornostrelkoviy Polk"
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 		start_manpower_factor = 1.0
 	}
 	division = {
-		location = 577
-		division_template = "Militia"
-		start_experience_factor = 0.1
+		location = 6584
+		division_template = "Gornostrelkoviy Polk"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+	division = {
+		location = 9548
+		division_template = "Gornostrelkoviy Polk"
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 		start_manpower_factor = 1.0
 	}

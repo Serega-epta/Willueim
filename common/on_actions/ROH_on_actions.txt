@@ -54,6 +54,10 @@ on_actions = {
 			add_to_array = { bgd.targets = BRI }
 			add_to_array = { bgd.targets = WAC }
 			add_to_array = { bgd.targets = BRD }
+			add_to_array = { bgd.targets = SUM }
+			add_to_array = { bgd.targets = ORL }
+			add_to_array = { bgd.targets = VLC }
+			add_to_array = { bgd.targets = SMX }
 			every_country = {
 				if = {
 					limit = { is_ai = no }
@@ -92,9 +96,9 @@ on_actions = {
 				country_event = { id = OCH_first_phase.38 days = 364 } #Тихий отсчёт
 			}
 			BGD = {
+				country_event = { id = BGD_event.1 days = 5 } #Вступление
 				country_event = { id = BGD_event.20 days = 10 } #Судьба Армии возрождения
-			}
-		}
+				country_event = { id = BGD_event.16 days = 175 } #ПАМЯТЬ (Можно, конечно, поставить на on_actions, но это какое-то уже издевательство для игрока)
 	}
 	on_weekly = {
 		effect = {
