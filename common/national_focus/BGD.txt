@@ -156,25 +156,33 @@ focus_tree = {
 			remove_ideas = BGD_Eternal_Vigil_idea
 			add_ideas = BGD_Serve_the_remnants_idea
 			division_template = {
-    			name = "Bukovinskaja Gvardija"
-    			regiments = {
-        			infantry = { x = 0 y = 0 }
-        			infantry = { x = 1 y = 0 }
-        			rcbd_troop = { x = 0 y = 1 }
-        			rcbd_troop = { x = 1 y = 1 }
-    			}
-    			support = {
-        			stvol_art_sup = { x = 0 y = 0 }
-					rhbz = { x = 0 y = 1 }
-    			}
+				name = "Brigada Bystrogo Reagirovania"
+
+				division_names_group = BGD_FAST_BRIGADES
+
+				regiments = {
+					rcbd_troop = { x = 0 y = 0 }
+					rcbd_troop = { x = 1 y = 0 }
+					rcbd_troop = { x = 2 y = 0 }
+					rcbd_troop = { x = 0 y = 1 }
+					rcbd_troop = { x = 1 y = 1 }
+					rcbd_troop = { x = 2 y = 1 }
+					rcbd_troop = { x = 0 y = 2 }
+					rcbd_troop = { x = 1 y = 2 }
+					rcbd_troop = { x = 2 y = 2 }
+				}
+				support = {
+					stvol_art_sup = { x = 0 y = 0 }
+				}
+				priority = 1
 			}
 			capital_scope = {
 				create_unit = {
-					division = "name = \"Bukovinskaja Gvardija\" division_template = \"Bukovinskaja Gvardija\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"Brigada Bystrogo Reagirovania\" division_template = \"Brigada Bystrogo Reagirovania\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"Bukovinskaja Gvardija\" division_template = \"Bukovinskaja Gvardija\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"Brigada Bystrogo Reagirovania\" division_template = \"Brigada Bystrogo Reagirovania\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
 				}
 			}
@@ -313,6 +321,15 @@ focus_tree = {
 		}
 		available = {
 			controls_state = 219
+			controls_state = 843
+			controls_state = 202
+			controls_state = 808
+			controls_state = 213
+			controls_state = 214
+			controls_state = 1001
+			controls_state = 217
+			controls_state = 218
+			controls_state = 252
 		}
 		prerequisite = {
 			focus = BGD_Vultures
@@ -320,14 +337,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = BGD_event.14
-			news_event = worldnews.25
 			set_cosmetic_tag = motherland_statesmen
-			set_popularities = {
-				statesmen = 100
+			set_capital = {
+				state = 219
 			}
-			set_politics = {
-				ruling_party = statesmen
-				elections_allowed = no
+			hidden_effect = {
+				news_event = worldnews.25
+				set_popularities = {
+					statesmen = 100
+				}
+				set_politics = {
+					ruling_party = statesmen
+					elections_allowed = no
+				}
+				add_research_slot = 1
 			}
 		}
 	}
