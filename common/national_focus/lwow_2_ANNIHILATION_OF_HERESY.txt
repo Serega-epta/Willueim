@@ -399,7 +399,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = LWV_Commandment
+		id = LWV_Commandment_focus
 		icon = GFX_LWV_Commandment
 		relative_position_id = LWV_slabost
 		x = 0
@@ -642,6 +642,12 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = crush_markov_decision_done_tt
+				always = no
+			}
 		}
 		completion_reward = {
 			country_event = {

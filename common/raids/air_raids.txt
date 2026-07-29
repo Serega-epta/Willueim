@@ -542,10 +542,6 @@ types = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 3
-				original_tag = ENG # Just for historical reasons
-			}
 		}
 
 		allowed = {
@@ -564,7 +560,6 @@ types = {
 
 		# Can prepare
 		available = {
-			is_special_project_completed = sp:sp_air_bouncing_bomb
 
 		}
 
@@ -895,16 +890,15 @@ types = {
 				oil > 24
 				# If the site has been hit recently you can't target it again
 				NOT = {
-					OR = {
-						has_dynamic_modifier = {
-							modifier = refinery_damaged_modifier
-						}
-						has_dynamic_modifier = {
-							modifier = refinery_critically_damaged_modifier
-						}
-						has_dynamic_modifier = {
-							modifier = refinery_lightly_damaged_modifier
-						}
+					is_owned_by = "---"
+					has_dynamic_modifier = {
+						modifier = refinery_damaged_modifier
+					}
+					has_dynamic_modifier = {
+						modifier = refinery_critically_damaged_modifier
+					}
+					has_dynamic_modifier = {
+						modifier = refinery_lightly_damaged_modifier
 					}
 				}
 			}

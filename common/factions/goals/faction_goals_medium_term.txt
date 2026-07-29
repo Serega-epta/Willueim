@@ -26,10 +26,10 @@ faction_goal_the_russian_tide = {
 	complete_effect = {
 		add_faction_power_projection = 250
 		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = HAS_DEPLOYED_AT_LEAST_5M_MANPOWER
+		custom_effect_tooltip = HAS_DEPLOYED_AT_LEAST_100K_MANPOWER
 		every_faction_member = {
 			limit = {	
-				check_variable = { deployed_army_manpower_k	> 500 }		
+				check_variable = { deployed_army_manpower_k	> 100 }		
 			}
 			hidden_effect = {
 				add_faction_initiative = 1

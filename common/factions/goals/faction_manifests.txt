@@ -63,7 +63,7 @@ faction_manifest_containment_of_communism = {
 	description = containment_of_communism_goal_desc
 	is_manifest = yes
 	ratio_progress = {
-		total_amount_collection = game:all_states
+		total_amount_collection = collection:all_existing_states
 		completed_amount_collection = collection:world_non_communist_states
 		
 		scale = {
