@@ -421,12 +421,12 @@ focus_tree = {
 	focus = {
 		id = LWV_spasenie
 		icon = GFX_spasenie
-		relative_position_id = LWV_Commandment
+		relative_position_id = LWV_luboy
 		x = 0
 		y = 1
 		cost = 3
 		prerequisite = {
-			focus = LWV_Commandment
+			focus = LWV_luboy
 		}
 		ai_will_do = {
 			factor = 10
@@ -445,12 +445,12 @@ focus_tree = {
 	focus = {
 		id = LWV_luboy
 		icon = GFX_luboy
-		relative_position_id = LWV_spasenie
+		relative_position_id = LWV_Commandment_focus
 		x = 0
 		y = 1
 		cost = 3
 		prerequisite = {
-			focus = LWV_spasenie
+			focus = LWV_Commandment_focus
 		}
 		ai_will_do = {
 			factor = 10
@@ -473,7 +473,7 @@ focus_tree = {
 			has_war = no
 		}
 		prerequisite = {
-			focus = LWV_luboy
+			focus = LWV_spasenie
 			focus = LWV_pryamo
 		}
 		ai_will_do = {
