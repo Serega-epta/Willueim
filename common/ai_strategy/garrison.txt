@@ -9,3 +9,41 @@ no_garrisons = {
 		value = -1000
 	}
 }
+#Written by Denzzerr
+build_no_units_if_have_equipment_deficite = {
+	enable = {
+		OR = {
+			has_equipment = { anti_air_equipment < 0 }
+			has_equipment = { anti_tank_equipment < 0 }
+			has_equipment = { artillery_equipment < 0 }
+			has_equipment = { infantry_fighting_vehicle_equipment < 0 }
+			has_equipment = { infantry_equipment < 0 }
+			has_equipment = { mechanized_equipment < 0 }
+			has_equipment = { motorized_equipment < 0 }
+			has_equipment = { flame_tanks < 0 }
+			has_equipment = { support_equipment < 0 }
+			has_equipment = { gardener_equipment < 0 }
+			has_equipment = { suit_equipment < 0 }
+			has_equipment = { pre_war_mass_tank_chassis < 0 }
+			has_equipment = { pre_war_spec_tank_chassis < 0 }
+			has_equipment = { pre_war_ai_tank_chassis < 0 }
+			has_equipment = { pre_war_early_tank_chassis < 0 }
+			has_equipment = { pre_war_OPV_equipment_archetype < 0 }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = build_army id = OPF value = -1000 }
+	ai_strategy = { type = build_army id = specialized_OPF value = -1000 }
+	ai_strategy = { type = build_army id = ai_OPF value = -1000 }
+	ai_strategy = { type = build_army id = stvol_art value = -1000 }
+	ai_strategy = { type = build_army id = towed_art value = -1000 }
+	ai_strategy = { type = build_army id = antiair_art value = -1000 }
+	ai_strategy = { type = build_army id = mlrs_art value = -1000 }
+	ai_strategy = { type = build_army id = infantry value = -1000 }
+	ai_strategy = { type = build_army id = light_infantry value = -1000 }
+	ai_strategy = { type = build_army id = rcbd_troop value = -1000 }
+	ai_strategy = { type = build_army id = motopechotanagruzovikah value = -1000 }
+	ai_strategy = { type = build_army id = motopechotanabtr value = -1000 }
+}
