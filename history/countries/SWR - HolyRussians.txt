@@ -17,18 +17,8 @@ set_technology = {
    tech_support = 1
 }
 
-
-if = {
-    limit = { has_dlc = "By Blood Alone" }
-    set_technology = {
-      bba_pre_war_fighter = 1
-    }
-}
-if = {
-    limit = { NOT = { has_dlc = "By Blood Alone" } }
-    set_technology = {
-      pre_war_fighter = 1
-    }
+set_technology = {
+  pre_war_fighter = 1
 }
 
 if = {
