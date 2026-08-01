@@ -149,3 +149,5 @@ NDefines.NProject.BREAKTHROUGH_DAILY_TECHNOLOGY_GAIN = 10		-- Amount in 1/100th 
 NDefines.NProject.BREAKTHROUGH_DAILY_SCIENTIST_SKILL_GAIN = 7	-- Amount in 1/100th percentage gained per skill when doing basic research. E.g. 5 = 0.05% per skill level. (was 5)
 NDefines.NProject.BREAKTHROUGH_DAILY_ROCKET_SITE_GAIN = 3		-- Amount in 1/100th percentage gained per rocket site level. E.g. 1 = 0.01% per rocket site level. (was 1)
 NDefines.NProject.BREAKTHROUGH_DAILY_NUCLEAR_REACTOR_GAIN = 5	-- Amount in 1/100th percentage gained per nuclear reactor. E.g. 2 = 0.02% per nuclear reactor. (was 1)
+
+NDefines.NDiplomacy.EMBARGO_THREAT_THRESHOLD = 0				-- Target-generated threat threshold to allow embargo (affected by modifiers, was 30)
