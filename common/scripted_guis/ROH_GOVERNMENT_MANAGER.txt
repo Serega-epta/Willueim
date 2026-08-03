@@ -198,6 +198,14 @@ scripted_gui = {
 				}
 			}
 			select_model_button_click_enabled = {
+				#GER is IOPK handler, other countries doesn`t exists
+				if = {
+					limit = {
+						tag = GER
+					}
+					has_global_flag = IOPK_crisis
+				}
+				#standart requirements
 				set_temp_variable = {
 					reform_points_for_upgrade = 20
 				}
@@ -1639,6 +1647,14 @@ scripted_gui = {
 				}
 			}
 			select_model_button_click_enabled = {
+				#GER is IOPK handler, other countries doesn`t exists
+				if = {
+					limit = {
+						tag = GER
+					}
+					has_global_flag = IOPK_crisis
+				}
+				#standart requirements
 				set_temp_variable = {
 					reform_points_for_upgrade = 20
 				}
@@ -2904,6 +2920,14 @@ scripted_gui = {
 				}
 			}
 			select_model_button_click_enabled = {
+				#GER is IOPK handler, other countries doesn`t exists
+				if = {
+					limit = {
+						tag = GER
+					}
+					has_global_flag = IOPK_crisis
+				}
+				#standart requirements
 				set_temp_variable = {
 					reform_points_for_upgrade = constant:government_upgrade_cost.paltry
 				}
