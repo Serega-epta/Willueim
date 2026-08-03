@@ -471,7 +471,9 @@ country_event = {
 				add_to_faction = NMG
 				add_to_faction = LPC
 				add_to_faction = IMP
+				add_to_faction = NMG
 				puppet = IMP
+				puppet = NMG
 
 				load_focus_tree = anarchy_focus_tree
 
@@ -592,6 +594,9 @@ country_event = {
    					transfer_troops = yes
 				}
 			}
+			NMG = {
+				set_major = yes
+			}
 			every_country = {
 				limit = {
 					NOT = {
@@ -603,6 +608,7 @@ country_event = {
 						tag = LPC
 						tag = IMP
 						tag = BLS
+						tag = NMG
 					}
 				}
 				declare_war_on = {
@@ -635,6 +641,10 @@ country_event = {
 				}
 				declare_war_on = {
 					target = ITA
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = NMG
 					type = annex_everything
 				}
 			}

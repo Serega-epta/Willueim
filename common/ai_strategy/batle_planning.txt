@@ -183,3 +183,20 @@ ignore_non_existing_crisises = {
 		value = -1000
 	}
 }
+ignore_cordons = {
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		country_trigger = {
+			OR = {
+				original_tag = SAC
+				original_tag = SOC
+				original_tag = WEC
+			}
+		}
+		value = -1000
+	}
+}
