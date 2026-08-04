@@ -551,6 +551,9 @@ AGE_their_freedoms = {
 		icon = GFX_decision_eng_trade_unions_support
 		activation = {
 			has_country_flag = still_their_land_flag
+			check_variable = {
+				var_terrorist_attack < 0
+			}
 		}
 		available = {
 			any_owned_state = {
@@ -868,7 +871,7 @@ AGE_red_forest = {
 	AGE_red_forest_mission = {
 		activation = {
 			AGE = {
-				has_completed_focus = AGE_visit_our_comrades
+				has_completed_focus = AGE_visit_our_comrades_slavic
 			}
 			country_exists = TIP
 		}
