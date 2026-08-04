@@ -253,6 +253,29 @@ on_actions = {
 					}
 				}
 			}
+			#MAD vs (IMP + NOR + PLR + COR + BSO): MAD defeat
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = MAD
+					}
+					FROM = {
+						OR = {
+							tag = IMP
+							tag = NOR
+							tag = PLR
+							tag = COR
+							tag = BSO
+						}
+					}
+				}
+				BSO = {
+					annex_country = {
+						target = MAD
+						transfer_troops = no
+					}
+				}
+			}
 			#IMP vs ARM: IMP defeat
 			else_if = {
 				limit = {
@@ -266,13 +289,169 @@ on_actions = {
 						tag = ARM
 					}
 				}
+				#transfer MAD
+				880 = {
+					if = {
+						limit = {
+							is_controlled_by = ARM
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				#transfer BSO
+				834 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = BSO
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				899 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = BSO
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				#transfer PLR
+				896 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = PLR
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				241 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = PLR
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				902 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = PLR
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				#transfer NOR
+				243 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = NOR
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				943 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = NOR
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				#transfer COR
+				898 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = COR
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				903 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = COR
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				#transfer IMP
+				224 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = IMP
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				893 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = IMP
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				895 = {
+					if = {
+						limit = {
+							OR = {
+								is_controlled_by = ARM
+								is_controlled_by = IMP
+							}
+						}
+						transfer_state_to = CAR
+						add_core_of = CAR
+					}
+				}
+				#eat the remains
 				CAR = {
 					annex_country = {
-						target = NOR
-						transfer_troops = no
-					}
-					annex_country = {
-						target = PLR
+						target = IMP
 						transfer_troops = no
 					}
 					annex_country = {
@@ -280,14 +459,19 @@ on_actions = {
 						transfer_troops = no
 					}
 					annex_country = {
+						target = NOR
+						transfer_troops = no
+					}
+					annex_country = {
 						target = BSO
 						transfer_troops = no
 					}
 					annex_country = {
-						target = IMP
+						target = PLR
 						transfer_troops = no
 					}
 				}
+				#puppet CAR
 				ARM = {
 					puppet = CAR
 				}
