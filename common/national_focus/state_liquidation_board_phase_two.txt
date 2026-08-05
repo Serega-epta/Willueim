@@ -222,7 +222,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
-				category = motorized_equipment
+				category = motorized_tech
 			}
 		}
 	}
@@ -452,7 +452,6 @@ focus_tree = {
 				id = GLS_power_balance
 				value = 0.1
 			}
-			custom_effect_tooltip = get_ten_percent_of_freedom
 		}
 	}
 	focus = {
@@ -485,7 +484,6 @@ focus_tree = {
 				id = GLS_power_balance
 				value = 0.05
 			}
-			custom_effect_tooltip = get_ten_percent_of_order
 		}
 	}
 	focus = {
@@ -516,7 +514,6 @@ focus_tree = {
 				id = GLS_power_balance
 				value = 0.05
 			}
-			custom_effect_tooltip = get_ten_percent_of_order
 			if = {
 				limit = {
 					has_idea = GLS_fathers_and_child_3
@@ -583,7 +580,6 @@ focus_tree = {
 				id = GLS_power_balance
 				value = 0.1
 			}
-			custom_effect_tooltip = get_ten_percent_of_freedom
 			if = {
 				limit = {
 					has_idea = GLS_fathers_and_child_3
@@ -686,8 +682,6 @@ focus_tree = {
 				id = GLS_power_balance
 				value = 0.05
 			}
-			custom_effect_tooltip = get_ten_percent_of_order
-			custom_effect_tooltip = get_one_percent_of_ready_charge_weekly
 		}
 	}
 	focus = {
@@ -714,7 +708,6 @@ focus_tree = {
 				id = GLS_power_balance
 				value = 0.1
 			}
-			custom_effect_tooltip = get_ten_percent_of_freedom
 			if = {
 				limit = {
 					has_idea = GLS_memories_of_rodina_2

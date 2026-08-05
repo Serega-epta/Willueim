@@ -760,7 +760,34 @@ focus_tree = {
 		prerequisite = { focus = ORL_For_our_own_benefit }
 		prerequisite = { focus = ORL_General_Staff_Academy }
 		completion_reward = {
-			
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						controller = {
+							OR = {
+								original_tag = MOS
+								original_tag = ELI
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						limit_to_border_country = MOS
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						limit_to_border_country = ELI
+					}
+				}
+			}
 		}
 	}
 
