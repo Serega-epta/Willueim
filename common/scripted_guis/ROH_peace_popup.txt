@@ -17,8 +17,8 @@ scripted_gui = {
 		effects = {
 			close_button_click = {
 				clr_country_flag = show_peace_popup_alert
-				clr_global_flag = war_continuing #TODO: this flag doesn`t exists
-				clr_global_flag = war_won #TODO: this flag doesn`t exists
+				clr_global_flag = war_continuing
+				clr_global_flag = war_won
 				add_to_variable = { global.peace_popup_dirty = 1 }
 			}
 		}

@@ -6,6 +6,20 @@ on_actions = {
 			#save scopes for gui
 			FROM = {
 				save_global_event_target_as = winning_country
+				if = {
+					limit = {
+						any_enemy_country = {
+							NOT = {
+								tag = ROOT
+							}
+							has_war_with = FROM
+						}
+					}
+					set_global_flag = war_continuing
+				}
+				else = {
+					clr_global_flag = war_continuing
+				}
 			}
 			ROOT = {
 				save_global_event_target_as = losing_country

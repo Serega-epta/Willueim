@@ -276,6 +276,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		enable_building = {
+			building = nuclear_reactor
+			level = 1
+		}
 		start_year = 2020
 		folder = {
 			name = electronics_folder
@@ -293,6 +297,10 @@ technologies = {
 	}
 	peaceful_applications_of_nuclear_technology = {
 		research_speed_factor = 0.1
+		enable_building = {
+			building = commercial_nuclear_reactor
+			level = 1
+		}
 		path = {
 			leads_to_tech = nuclear_fusion
 			research_cost_coeff = 1
@@ -357,6 +365,10 @@ technologies = {
 		}
 	}
 	nuclear_weapon = {
+		enable_building = {
+			building = nuclear_reactor_heavy_water
+			level = 1
+		}
 		category_tanks = {
 			defense = 0.05
 		}
