@@ -901,19 +901,32 @@ focus_tree = {
 		prerequisite = { focus = ORL_Soft_underbelly }
 		mutually_exclusive = { focus = ORL_From_Don_to_Volga }
 		completion_reward = {
-			VDD = {
-				transfer_state = 255
-				transfer_state = 952
-				transfer_state = 991
-				transfer_state = 938
-				transfer_state = 250
-				transfer_state = 992
-				transfer_state = 239
-				transfer_state = 265
-				transfer_state = 950
-				transfer_state = 245
-			}
-			puppet = VDD
+			#hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = MSH
+							tag = BGR
+							tag = KMN
+							tag = MKS
+						}
+						exists = yes
+					}
+					
+					every_core_state = {
+						add_core_of = VDD
+					}
+					
+					VDD = {
+						annex_country = {
+							target = PREV
+							transfer_troops = yes
+						}
+					}
+				}
+				puppet = VDD
+			#}
+			#custom_effect_tooltip = ORL_Rusty_Revolution_tt
 		}
 	}
 }
