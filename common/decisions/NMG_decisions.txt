@@ -1,0 +1,96 @@
+NMG_elections_decisions = {
+	hold_press_conference = {
+		priority = 0
+		#available = {  }
+		cost = 50
+		days_remove = 35
+		days_re_enable = 35
+		remove_effect = {
+			add_to_variable = {
+    			var = Suspicion_var
+    			value = -15
+    			tooltip = remove_15_from_Suspicion_tt
+			}
+		}
+	}
+	withdraw_resources = {
+		priority = 0
+		#available = {  }
+		days_remove = 35
+		days_re_enable = 35
+		remove_effect = {
+			add_political_power = 50
+			add_to_variable = {
+    			var = Suspicion_var
+    			value = 15
+    			tooltip = add_15_to_Suspicion_tt
+			}
+		}
+	}
+	launch_propaganda_campaign = {
+		priority = 0
+		#available = {  }
+		cost = 200
+		days_remove = 70
+		days_re_enable = 35
+		complete_effect = {
+			add_to_variable = {
+    			var = Suspicion_growth_var
+    			value = -2
+    			tooltip = remove_2_from_Suspicion_growth_tt
+			}
+		}
+		remove_effect = {
+			add_to_variable = {
+    			var = Suspicion_growth_var
+    			value = 2
+    			tooltip = add_2_to_Suspicion_growth_tt
+			}
+		}
+	}
+	eliminate_disloyal_politician = {
+		priority = 0
+		#available = {  }
+		cost = 50
+		days_remove = 35
+		days_re_enable = 35
+		remove_effect = {
+			random_list = {
+				50 = {
+					add_to_variable = {
+    					var = Suspicion_var
+    					value = -20
+    					tooltip = remove_20_from_Suspicion_tt
+					}
+				}
+				50 = {
+					add_to_variable = {
+    					var = Suspicion_var
+    					value = 20
+    					tooltip = add_20_to_Suspicion_tt
+					}
+				}
+			}
+		}
+	}
+	Suspicion_is_growing = {
+		allowed = {
+			original_tag = NMG
+		}
+		available = {
+			has_completed_focus = NMG_facade_of_democracy
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 7
+		timeout_effect = {
+			add_to_variable = {
+    			var = Suspicion_var
+    			value = Suspicion_growth_var
+			}
+			activate_mission = Suspicion_is_growing
+		}
+	}
+
+}
