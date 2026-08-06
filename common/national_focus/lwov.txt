@@ -520,7 +520,7 @@ focus_tree = {
 		relative_position_id = LWV_Istinniy_god
 		available = {
 			is_subject = no
-			has_war = no
+			#has_war = no
 		}
 		cost = 2
 		ai_will_do = {
@@ -559,6 +559,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		will_lead_to_war_with = BGD
+		bypass = {
+			NOT = {
+				country_exists = BGD
+			}
+		}
 		completion_reward = {
 			declare_war_on = {
 				target = BGD

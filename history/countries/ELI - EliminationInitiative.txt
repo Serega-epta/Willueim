@@ -12,37 +12,32 @@ set_technology = {
 	pre_war_OPV = 1
 		basic_mass_OPF = 1
 }
-if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-	set_technology = {
-		bba_pre_war_fighter = 1
-		bba_basic_specialized_fighter = 1
-		bba_basic_specialized_helicopter = 1
-	}
-}
-IF = {
-	limit = {
-		NOT = {
-			has_dlc = "By Blood Alone"
-		}
-	}
-	set_technology = {
-		pre_war_fighter = 1
-		basic_specialized_aircraft = 1
-		basic_specialized_fighter = 1
-		basic_specialized_helicopter = 1
-	}
+set_technology = {
+	pre_war_fighter = 1
+	basic_specialized_aircraft = 1
+	basic_specialized_fighter = 1
+	basic_specialized_helicopter = 1
 }
 set_research_slots = 2
 set_convoys = 0
-set_politics = {
-	ruling_party = militarists
-	elections_allowed = no
-}
 set_popularities = {
-	militarists = 100
+	militarists = 50
+	statesmen = 50
+}
+random_list = {
+	seed = random
+	50 = {
+		set_politics = {
+			ruling_party = militarists
+			elections_allowed = no
+		}
+	}
+	50 = {
+		set_politics = {
+			ruling_party = statesmen
+			elections_allowed = no
+		}
+	}
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment

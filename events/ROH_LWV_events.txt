@@ -594,10 +594,10 @@ country_event = {
 	option = {
 		name = LWV_decisions.2.a
 		clr_country_flag = LWV_war_in_the_shadows_flag
-		kill_country_leader = yes
 		LWV_andrey_markov = {
 			set_nationality = WOW
 		}
+		kill_country_leader = yes
 		WOW = {
 			add_country_leader_role = {
 				character = LWV_andrey_markov
@@ -609,9 +609,20 @@ country_event = {
 				}
 			}
 		}
+		#set player to WOW
+		hidden_effect = {
+			random_owned_state = {
+				add_core_of = WOW
+				transfer_state_to = WOW
+			}
+			WOW = {
+				change_tag_from = LWV
+			}
+		}
+		#transfer other states
 		every_controlled_state = {
 			add_core_of = WOW
-			set_state_owner_to = WOW
+			transfer_state_to = WOW
 		}
 	}
 }
@@ -650,6 +661,7 @@ country_event = {
 					is_controlled_by = ROOT
 				}
 				transfer_state_to = WOW
+				add_core_of = WOW
 			}
 		}
 		custom_effect_tooltip = WOW_gets_states_in_civ_war
@@ -663,6 +675,7 @@ country_event = {
 					traits = {}
 				}
 			}
+			load_oob = "WOW"
 			for_loop_effect = {
 				end = 10
 				random_controlled_state = {

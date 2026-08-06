@@ -520,7 +520,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = AGE_phase_two.17.a
-		country_event = AGE_phase_two.18
+		country_event = {
+			id = AGE_phase_two.18
+		}
 	}
 }
 #Бывшие товарищи ч.2
@@ -634,30 +636,18 @@ country_event = {
 			add_core_of = AGE
 			remove_core_of = TWD
 			set_state_name = STATE_812_age
-			set_province_name = {
-				id = 3152
-				name = VICTORY_POINTS_3152_age
-			}
 		}
 		811 = {
 			transfer_state_to = AGE
 			add_core_of = AGE
 			remove_core_of = TWD
 			set_state_name = STATE_811_age
-			set_province_name = {
-				id = 185
-				name = VICTORY_POINTS_185_age
-			}
 		}
 		927 = {
 			transfer_state_to = CHU
 			add_core_of = CHU
 			remove_core_of = TWD
 			set_state_name = STATE_927_age
-			set_province_name = {
-				id = 11127
-				name = VICTORY_POINTS_11127_age
-			}
 		}
 	}
 }
@@ -680,18 +670,10 @@ country_event = {
 		189 = {
 			transfer_state_to = AGE
 			set_state_name = STATE_189_age
-			set_province_name = {
-				id = 6314
-				name = VICTORY_POINTS_6314_age
-			}
 		}
 		190 = {
 			transfer_state_to = AGE
 			set_state_name = STATE_190_age
-			set_province_name = {
-				id = 9262
-				name = VICTORY_POINTS_9262_age
-			}
 		}
 	}
 }
@@ -748,18 +730,10 @@ country_event = {
 		763 = {
 			transfer_state_to = AGE
 			set_state_name = STATE_763_age
-			set_province_name = {
-				id = 6332
-				name = VICTORY_POINTS_9262_age
-			}
 		}
 		188 = {
 			transfer_state_to = AGE
 			set_state_name = STATE_188_age
-			set_province_name = {
-				id = 3288
-				name = VICTORY_POINTS_9262_age
-			}
 		}
 		5 = {
 			transfer_state_to = AGE
@@ -770,18 +744,6 @@ country_event = {
 		814 = {
 			transfer_state_to = AGE
 			set_state_name = STATE_814_age
-			set_province_name = {
-				id = 3254
-				name = VICTORY_POINTS_3254_age
-			}
-			set_province_name = {
-				id = 11312
-				name = VICTORY_POINTS_11312_age
-			}
-			set_province_name = {
-				id = 3272
-				name = VICTORY_POINTS_3272_age
-			}
 		}
 	}
 }

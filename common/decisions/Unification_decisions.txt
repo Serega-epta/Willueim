@@ -11,6 +11,7 @@ Unification_campaign = {
 		target_trigger = {
 			FROM = {
 				NOT = {
+					is_puppet_of = ROOT
 					has_war_with = ROOT
 					tag = SIL #TODO
 					tag = LWV #TODO
@@ -50,6 +51,7 @@ Unification_campaign = {
 		target_trigger = {
 			FROM = {
 				NOT = {
+					is_puppet_of = ROOT
 					has_war_with = ROOT
 					tag = SIL #TODO
 					tag = LWV #TODO
@@ -125,10 +127,14 @@ Unification_campaign = {
 				unification_campaign_allowed = yes
 			}
 		}
-		cost = 75
-		days_remove = 60
+		cost = 100
+		days_remove = 90
 		remove_effect = {
-			annex_country = FROM
+			log = "decision \"puppet_integration\": [?ROOT.GetName] annexed [?FROM.GetName]"
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
 		}
 		ai_will_do = {
 			#bots will follow the scenario

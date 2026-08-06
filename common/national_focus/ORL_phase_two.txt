@@ -760,7 +760,34 @@ focus_tree = {
 		prerequisite = { focus = ORL_For_our_own_benefit }
 		prerequisite = { focus = ORL_General_Staff_Academy }
 		completion_reward = {
-			
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						controller = {
+							OR = {
+								original_tag = MOS
+								original_tag = ELI
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						limit_to_border_country = MOS
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						limit_to_border_country = ELI
+					}
+				}
+			}
 		}
 	}
 
@@ -808,11 +835,11 @@ focus_tree = {
 		prerequisite = { focus = ORL_Eliminate_ledge }
 		mutually_exclusive = { focus = ORL_Soldiers_of_Fortune }
 		completion_reward = {
-			send_volunteer_size = 1
 			add_relation_rule_override = {
     			target = MKS
    				can_send_volunteers = yes
 			}
+			set_country_flag = may_send_volunteers_to_MKS
 		}
 	}
 
@@ -826,11 +853,11 @@ focus_tree = {
 		prerequisite = { focus = ORL_Eliminate_ledge }
 		mutually_exclusive = { focus = ORL_Military_specialists }
 		completion_reward = {
-			send_volunteer_size = 1
 			add_relation_rule_override = {
     			target = MSH
    				can_send_volunteers = yes
 			}
+			set_country_flag = may_send_volunteers_to_MSH
 		}
 	}
 
@@ -901,19 +928,32 @@ focus_tree = {
 		prerequisite = { focus = ORL_Soft_underbelly }
 		mutually_exclusive = { focus = ORL_From_Don_to_Volga }
 		completion_reward = {
-			VDD = {
-				transfer_state = 255
-				transfer_state = 952
-				transfer_state = 991
-				transfer_state = 938
-				transfer_state = 250
-				transfer_state = 992
-				transfer_state = 239
-				transfer_state = 265
-				transfer_state = 950
-				transfer_state = 245
-			}
-			puppet = VDD
+			#hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = MSH
+							tag = BGR
+							tag = KMN
+							tag = MKS
+						}
+						exists = yes
+					}
+					
+					every_core_state = {
+						add_core_of = VDD
+					}
+					
+					VDD = {
+						annex_country = {
+							target = PREV
+							transfer_troops = yes
+						}
+					}
+				}
+				puppet = VDD
+			#}
+			#custom_effect_tooltip = ORL_Rusty_Revolution_tt
 		}
 	}
 }

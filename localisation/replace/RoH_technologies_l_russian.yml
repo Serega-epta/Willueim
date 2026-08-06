@@ -1,4 +1,12 @@
 ﻿l_russian:
+ atrillery_tech: "Артиллерия"
+ armor_tech: "Бронетанковые технологии"
+ mass_fighter: "Массовые истребители"
+ mass_bomber: "Массовые бомбардировщики"
+ gamekeepers_tech: "Егеря"
+ motorized_tech: "Моторизированная пехота"
+ specialized_fighter: "Специализированный истребитель"
+ specialized_bomber: "Специализированный бомбардировщик"
  ################################
  ## Содержание:                 ##
  ## Пехотка                     ##
@@ -238,8 +246,10 @@
  chain_project_desc:0 ""
 
  #Танки
-nsb_pre_war_OPV: "Довоенный ОБТ"
-nsb_basic_mass_OPF: "Базовый массовый ОБТ"
+basic_mass_OPF: "$basic_mass_OPF_equipment$"
+basic_ai_OPF: "$basic_ai_OPF_equipment$"
+basic_specialized_OPF: "$basic_specialized_OPF_equipment$"
+
 
 
  #Ветка двигателей без NSB
@@ -263,28 +273,6 @@ nsb_basic_mass_OPF: "Базовый массовый ОБТ"
  engine_5:0 "Двигатель 5"
  engine_5_short:0 "Двигатель 5"
  engine_5_desc:0 ""
-
- #Ветка двигателей с NSB
-
- nsb_engine_1:0 "Двигатель 1"
- nsb_engine_1_short:0 "Двигатель 1"
- nsb_engine_1_desc:0 ""
-
- nsb_engine_2:0 "Двигатель 2"
- nsb_engine_2_short:0 "Двигатель 2"
- nsb_engine_2_desc:0 ""
-
- nsb_engine_3:0 "Двигатель 3"
- nsb_engine_3_short:0 "Двигатель 3"
- nsb_engine_3_desc:0 ""
-
- nsb_engine_4:0 "Двигатель 4"
- nsb_engine_4_short:0 "Двигатель 4"
- nsb_engine_4_desc:0 ""
-
- nsb_engine_5:0 "Двигатель 5"
- nsb_engine_5_short:0 "Двигатель 5"
- nsb_engine_5_desc:0 ""
  
  #Ветка брони без NSB
 
@@ -307,28 +295,6 @@ nsb_basic_mass_OPF: "Базовый массовый ОБТ"
  armor_5:0 "Броня 5"
  armor_5_short:0 "Броня 5"
  armor_5_desc:0 ""
-
- #Ветка брони с NSB
-
- nsb_armor_1:0 "Броня 1"
- nsb_armor_1_short:0 "Броня 1"
- nsb_armor_1_desc:0 ""
-
- nsb_armor_2:0 "Броня 2"
- nsb_armor_2_short:0 "Броня 2"
- nsb_armor_2_desc:0 ""
-
- nsb_armor_3:0 "Броня 3"
- nsb_armor_3_short:0 "Броня 3"
- nsb_armor_3_desc:0 ""
-
- nsb_armor_4:0 "Броня 4"
- nsb_armor_4_short:0 "Броня 4"
- nsb_armor_4_desc:0 ""
-
- nsb_armor_5:0 "Броня 5"
- nsb_armor_5_short:0 "Броня 5"
- nsb_armor_5_desc:0 ""
 
  #Электроника и машиностроение
 
@@ -568,9 +534,9 @@ nsb_basic_mass_OPF: "Базовый массовый ОБТ"
  increasing_use_efficiency_4_short:0 "Повышение эффективности использования 4"
  increasing_use_efficiency_4_desc:0 "Рациональное использование доступных нам жалких капель нефти - залог нашего благополучия."
  #Авиация
- bba_basic_specialized_aircraft: "$basic_specialized_airplane_equipment$"
- bba_basic_mass_airplane: "$basic_mass_airplane_equipment$"
- bba_prewar_drone: "$prewar_drone_equipment$"
+ prewar_drone: "$prewar_drone_equipment$"
+ basic_specialized_aircraft: "$basic_specialized_airplane_equipment$"
+ basic_mass_airplane: "$basic_mass_airplane_equipment$"
  #Техи спецпроектов
 
  sp_tech_filtration_station:0 "Очистка воды"

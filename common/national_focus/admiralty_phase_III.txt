@@ -475,18 +475,48 @@ focus_tree = {
 		x = 9
 		y = 11
 		cost = 5
+		will_lead_to_war_with = LWV
+		will_lead_to_war_with = SWR
 		prerequisite = {
 			focus = ODS_even_if_motherland_is_destined_to_fall
 		}
+		bypass = {
+			LWV = {
+				exists = no
+			}
+			SWR = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			add_command_power = 30
-			create_wargoal = {
-				target = LWV
-				type = take_state_focus
-				generator = {
-					123
+			if = {
+				limit = {
+					country_exists = LWV
+				}
+				create_wargoal = {
+					target = LWV
+					type = take_state_focus
+					generator = {
+						891
+					}
 				}
 			}
+			if = {
+				limit = {
+					country_exists = SWR
+				}
+				create_wargoal = {
+					target = SWR
+					type = take_state_focus
+					generator = {
+						73
+					}
+				}
+			}
+		}
+		bypass_effect = {
+			add_command_power = 15
 		}
 	}
 	focus = {
@@ -498,22 +528,45 @@ focus_tree = {
 		prerequisite = {
 			focus = ODS_even_if_motherland_is_destined_to_fall
 		}
+		will_lead_to_war_with = ARM
+		will_lead_to_war_with = GLS
+		bypass = {
+			ARM = {
+				exists = no
+			}
+			GLS = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			add_command_power = 30
-			create_wargoal = {
-				target = ARM
-				type = take_state_focus
-				generator = {
-					123
+			if = {
+				limit = {
+					country_exists = ARM
+				}
+				create_wargoal = {
+					target = ARM
+					type = take_state_focus
+					generator = {
+						193
+					}
 				}
 			}
-			create_wargoal = {
-				target = GLS
-				type = take_state_focus
-				generator = {
-					123
+			if = {
+				limit = {
+					country_exists = GLS
+				}
+				create_wargoal = {
+					target = GLS
+					type = take_state_focus
+					generator = {
+						1001
+					}
 				}
 			}
+		}
+		bypass_effect = {
+			add_command_power = 15
 		}
 	}
 	focus = {

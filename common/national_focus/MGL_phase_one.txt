@@ -325,18 +325,44 @@ focus_tree = {
 			focus = MGL_positive_dynamics
 			focus = MGL_delegate
 		}
+		bypass = {
+			SFR = {
+				exists = no
+			}
+			DRG = {
+				exists = no
+			}
+			ZLG = {
+				exists = no
+			}
+		}
 		completion_reward = {
-			declare_war_on = {
-				target = SFR
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = SFR
+				}
+				declare_war_on = {
+					target = SFR
+					type = annex_everything
+				}
 			}
-			declare_war_on = {
-				target = DRG
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = DRG
+				}
+				declare_war_on = {
+					target = DRG
+					type = annex_everything
+				}
 			}
-			declare_war_on = {
-				target = ZLG
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = ZLG
+				}
+				declare_war_on = {
+					target = ZLG
+					type = annex_everything
+				}
 			}
 		}
 	}

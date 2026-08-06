@@ -11,6 +11,13 @@ on_actions = {
 	}
 	on_weekly = {
 		effect = {
+			if = { # А что насчёт стран, появляющихся в ходе игры?
+                limit = {
+                    NOT = { has_variable = min_reform_points_required }
+                }
+                set_variable = { min_reform_points_required = 2147483 }
+            }
+
 			add_to_variable = {
 				reform_points = modifier@reform_point_income
 			}

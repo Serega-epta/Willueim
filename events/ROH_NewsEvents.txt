@@ -120,9 +120,19 @@ news_event = {
 	picture = GFX_news_event_comet
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = {
+		trigger = {
+			original_tag = GLS
+		}
 		name = worldnews.10.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				original_tag = GLS
+			}
+		}
+		name = worldnews.10.b
 	}
 }
 #Неизвестный радиосигнал!
@@ -316,7 +326,6 @@ news_event = {
 	desc = worldnews.25.d
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = {
 		name = worldnews.25.a
 	}

@@ -358,7 +358,13 @@ country_event = {
 			has_capitulated = yes
 		}
 		225 = {
-			is_controlled_by = IMP
+			OR = {
+				is_controlled_by = IMP
+				is_controlled_by = BSO
+				is_controlled_by = COR
+				is_controlled_by = NOR
+				is_controlled_by = PLR
+			}
 		}
 	}
 	option = {

@@ -11,7 +11,10 @@ Unification_campaign = {
 
 Unification = {
     visible = {
-       has_country_flag = Unification_flag
+        OR = {
+            has_country_flag = Unification_flag
+            has_global_flag = Unification_debug_flag
+        }
     }
     priority = 1000
 }

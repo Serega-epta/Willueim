@@ -26,10 +26,10 @@ faction_goal_the_russian_tide = {
 	complete_effect = {
 		add_faction_power_projection = 250
 		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = HAS_DEPLOYED_AT_LEAST_5M_MANPOWER
+		custom_effect_tooltip = HAS_DEPLOYED_AT_LEAST_100K_MANPOWER
 		every_faction_member = {
 			limit = {	
-				check_variable = { deployed_army_manpower_k	> 500 }		
+				check_variable = { deployed_army_manpower_k	> 100 }		
 			}
 			hidden_effect = {
 				add_faction_initiative = 1
@@ -108,6 +108,21 @@ faction_goal_new_trade_routs = {
 	}
 	ai_will_do = {
 		base = 1
+		modifier = {
+			#we won`t choose goal we can`t achieve
+			OR = {
+				NOT = {
+					controls_state = 239
+				}
+				NOT = {
+					controls_state = 255
+				}
+				NOT = {
+					controls_state = 952
+				}
+			}
+			factor = 0
+		}
 	}
 }
 faction_goal_central_russia_control = {
@@ -212,29 +227,33 @@ faction_goal_water_purification = {
 		
 	}
 	available = {
-		custom_trigger_tooltip = {
-			tooltip = fuck_pdx_log
-			always = no
+		collection_size = {
+			input = {
+				input = collection:all_existing_states
+				operators = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes 
+						filtration_station > 0
+					}
+				}
+				name = COLLECTION_FACTION_FILTRATION_STATION
+			}
+			value < 34
 		}
 	}
 	completed = {
-		custom_trigger_tooltip = {
-			tooltip = fuck_pdx_log
-			always = no
-			collection_size = {
-				input = {
-					input = game:all_states
-					operators = {
-						limit = {
-							#TODO: spam in error.log, but works correctly
-							#is_controlled_by_ROOT_or_ally = yes 
-							filtration_station > 0
-						}
+		collection_size = {
+			input = {
+				input = collection:all_existing_states
+				operators = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes 
+						filtration_station > 0
 					}
-					name = COLLECTION_FACTION_FILTRATION_STATION
 				}
-				value > 34
+				name = COLLECTION_FACTION_FILTRATION_STATION
 			}
+			value > 34
 		}
 	}
 	complete_effect = {

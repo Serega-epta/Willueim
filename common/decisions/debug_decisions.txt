@@ -1,0 +1,490 @@
+debug_decisions = {
+	#Unification
+	unlock_unification = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_global_flag = Unification_debug_flag
+			}
+		}
+		complete_effect = {
+			set_global_flag = Unification_debug_flag
+		}
+	}
+	lock_unification = {
+		visible = {
+			is_debug = yes
+			has_global_flag = Unification_debug_flag
+		}
+		complete_effect = {
+			clr_global_flag = Unification_debug_flag
+		}
+	}
+	#ORL
+	ORL_load_phase_1 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = ORL_phase_1
+			}
+		}
+		allowed = {
+			tag = ORL
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = ORL_phase_1
+				keep_completed = yes
+			}
+		}
+	}
+	ORL_load_phase_2 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = ORL_phase_2
+			}
+		}
+		allowed = {
+			tag = ORL
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = ORL_phase_2
+				keep_completed = yes
+			}
+		}
+	}
+	#ODS
+	ODS_load_phase_1 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = admiralty_phase_one
+			}
+		}
+		allowed = {
+			tag = ODS
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = admiralty_phase_one
+				keep_completed = yes
+			}
+		}
+	}
+	ODS_load_phase_2 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = admiralty_phase_two
+			}
+		}
+		allowed = {
+			tag = ODS
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = admiralty_phase_two
+				keep_completed = yes
+			}
+		}
+	}
+	ODS_load_phase_3 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = admiralty_phase_three
+			}
+		}
+		allowed = {
+			tag = ODS
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = admiralty_phase_three
+				keep_completed = yes
+			}
+		}
+	}
+	#GLS
+	GLS_load_phase_1 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = state_liquidation_board_phase_one
+			}
+		}
+		allowed = {
+			tag = GLS
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = state_liquidation_board_phase_one
+				keep_completed = yes
+			}
+		}
+	}
+	GLS_load_phase_2 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = state_liquidation_board_phase_two
+			}
+		}
+		allowed = {
+			tag = GLS
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = state_liquidation_board_phase_two
+				keep_completed = yes
+			}
+		}
+	}
+	GLS_load_phase_3 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = state_liquidation_board_phase_three
+			}
+		}
+		allowed = {
+			tag = GLS
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = state_liquidation_board_phase_three
+				keep_completed = yes
+			}
+		}
+	}
+	#SDC
+	SDC_load_phase_1 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = SDC_phase_one
+			}
+		}
+		allowed = {
+			tag = SDC
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = SDC_phase_one
+				keep_completed = yes
+			}
+		}
+	}
+	SDC_load_phase_2 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = SDC_phase_two
+			}
+		}
+		allowed = {
+			tag = SDC
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = SDC_phase_two
+				keep_completed = yes
+			}
+		}
+	}
+	SDC_load_phase_3 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = SDC_phase_three
+			}
+		}
+		allowed = {
+			tag = SDC
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = SDC_phase_three
+				keep_completed = yes
+			}
+		}
+	}
+	SDC_load_phase_3_failed = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = SDC_phase_three_failed
+			}
+		}
+		allowed = {
+			tag = SDC
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = SDC_phase_three_failed
+				keep_completed = yes
+			}
+		}
+	}
+	#LWV
+	LWV_load_phase_1 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = LWV_first_phase
+			}
+		}
+		allowed = {
+			tag = LWV
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = LWV_first_phase
+				keep_completed = yes
+			}
+		}
+	}
+	LWV_load_phase_2 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = lwow_unite_focus
+			}
+		}
+		allowed = {
+			tag = LWV
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = lwow_unite_focus
+				keep_completed = yes
+			}
+		}
+	}
+	LWV_load_phase_3 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = Lwov_focus_tretia_faza
+			}
+		}
+		allowed = {
+			tag = LWV
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = Lwov_focus_tretia_faza
+				keep_completed = yes
+			}
+		}
+	}
+	#AGE
+	AGE_load_phase_1 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = AGE_phase_1
+			}
+		}
+		allowed = {
+			tag = AGE
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = AGE_phase_1
+				keep_completed = yes
+			}
+		}
+	}
+	AGE_load_phase_2_reconciliation = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = AGE_phase_2_reconciliation
+			}
+		}
+		allowed = {
+			tag = AGE
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = AGE_phase_2_reconciliation
+				keep_completed = yes
+			}
+		}
+	}
+	AGE_load_phase_2_slavicization = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = AGE_phase_2_slavicization
+			}
+		}
+		allowed = {
+			tag = AGE
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = AGE_phase_2_slavicization
+				keep_completed = yes
+			}
+		}
+	}
+	#ARM
+	ARM_load_phase_1 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = ARM_phase_one_tree
+			}
+		}
+		allowed = {
+			tag = ARM
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = ARM_phase_one_tree
+				keep_completed = yes
+			}
+		}
+	}
+	ARM_load_phase_2 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = ARM_phase_two
+			}
+		}
+		allowed = {
+			tag = ARM
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = ARM_phase_two
+				keep_completed = yes
+			}
+		}
+	}
+	ARM_load_phase_3 = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = ARM_phase_three
+			}
+		}
+		allowed = {
+			tag = ARM
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = ARM_phase_three
+				keep_completed = yes
+			}
+		}
+	}
+	ARM_load_phase_onufrenko = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = ARM_Onufrenko_tree
+			}
+		}
+		allowed = {
+			tag = ARM
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = ARM_Onufrenko_tree
+				keep_completed = yes
+			}
+		}
+	}
+	ARM_load_phase_without_tree = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_focus_tree = ARM_without_tree
+			}
+		}
+		allowed = {
+			tag = ARM
+		}
+		complete_effect = {
+			load_focus_tree = {
+				tree = ARM_without_tree
+				keep_completed = yes
+			}
+		}
+	}
+	#ELI spawn (MOSCOW)
+	ELI_spawn = {
+		fire_only_once = yes
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			clr_global_flag = ELI_not_appears_yet
+		}
+	}
+	#START IOPK WAR
+	IOPK_WAR = {
+		fire_only_once = yes
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			every_collection_element = {
+				input = {
+					input = collection:mother_russia
+					operators = {
+						limit = {
+							owner = {
+								is_controlled_by_ROOT_or_ally = no
+							}
+						}
+					}
+				}
+				ROOT = {
+					meta_effect = {
+						text = {
+							#fuck pdx! effect doesn`t support variables!
+							annex_country = { 
+								target = [T]
+							}
+						}
+						T = "[PREV.owner.GetTag]"
+					}
+				}
+			}
+			country_event = {
+				id = roh_crisis.3
+			}
+		}
+	}
+	#SIL WAR
+	SIL_WAR = {
+		fire_only_once = yes
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			SIL = {
+				country_event = {
+					id = SIL.1
+				}
+			}
+		}
+	}
+	#BMB WAR
+	BMP_WAR = {
+		fire_only_once = yes
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			clr_global_flag = BMB_not_appears_yet
+		}
+	}
+}

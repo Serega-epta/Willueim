@@ -436,6 +436,17 @@
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			MOD = {
+				exists = no
+			}
+			SOD = {
+				exists = no
+			}
+			YWD = {
+				exists = no
+			}
+		}
 		will_lead_to_war_with = MOD
 		will_lead_to_war_with = SOD
 		will_lead_to_war_with = YWD
@@ -443,18 +454,39 @@
 			country_event = {
 				id = ODS_phase_one.14
 			}
-			create_wargoal = {
-				target = MOD
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = MOD
+				}
+				create_wargoal = {
+					target = MOD
+					type = annex_everything
+				}
 			}
-			create_wargoal = {
-				target = SOD
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = SOD
+				}
+				create_wargoal = {
+					target = SOD
+					type = annex_everything
+				}
 			}
-			create_wargoal = {
-				target = YWD
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = YWD
+				}
+				create_wargoal = {
+					target = YWD
+					type = annex_everything
+				}
 			}
+			load_focus_tree = {
+				tree = admiralty_phase_two
+				keep_completed = no
+			}
+		}
+		bypass_effect = {
 			load_focus_tree = {
 				tree = admiralty_phase_two
 				keep_completed = no
