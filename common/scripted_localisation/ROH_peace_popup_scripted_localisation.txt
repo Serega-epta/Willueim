@@ -54,15 +54,12 @@ defined_text = {
 	name = GetWarStatus
 	text = {
 		trigger = {
-			has_global_flag = war_won
-		}
-		localization_key = PEACE_POPUP_WAR_CONCLUSION
-	}
-	text = {
-		trigger = {
 			has_global_flag = war_continuing
 		}
 		localization_key = PEACE_POPUP_WAR_CONTINUING
+	}
+	text = {
+		localization_key = PEACE_POPUP_WAR_CONCLUSION
 	}
 }
 
@@ -99,6 +96,13 @@ defined_text = {
 	##
 	text = {
 		localization_key = PEACE_POPUP_WAR_CONCLUSION_DEFAULT
+	}
+}
+defined_text = {
+	name = GetWarContinuationLoc
+	#I think we can customise popup gui desc
+	text = {
+		localization_key = PEACE_POPUP_WAR_CONTINUING_DEFAULT
 	}
 }
 

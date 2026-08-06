@@ -170,7 +170,7 @@ units = {
 	}
 
 	division = {
-		name = "prosperity"
+		name = "Процветание"
 		location = 13356
 		division_template = "prosperity"
 		start_experience_factor = 1.0
@@ -194,5 +194,12 @@ units = {
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
+	}
+}
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_fighting_vehicle_1_equipment
+		amount = 200
+		producer = ODS
 	}
 }

@@ -99,6 +99,11 @@ on_actions = {
 				country_event = { id = BGD_event.1 days = 5 } #Вступление
 				country_event = { id = BGD_event.20 days = 10 } #Судьба Армии возрождения
 				country_event = { id = BGD_event.16 days = 175 } #ПАМЯТЬ (Можно, конечно, поставить на on_actions, но это какое-то уже издевательство для игрока)
+			}
+			NMG = {
+				country_event = { id = NMG_phase_one.1 days = 1 } #Вступление
+			}
+		}
 	}
 	on_weekly = {
 		effect = {

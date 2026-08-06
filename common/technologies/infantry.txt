@@ -1,30 +1,14 @@
 technologies = {
 	@low_supply_ratio = 0.5
-	@2010 = -1
-	@2020 = 5
-	@2025 = 10
-	@2030 = 15
-	@2035 = 20
-	@2040 = 25
-	@2045 = 30
-	@2050 = 35
 	infantry_weapons = {
 		enable_equipments = {
 			infantry_equipment_0
 		}
 		enable_subunits = {
 			light_infantry
-		}
-		enable_subunits = {
 			rhbz
-		}
-		enable_subunits = {
 			infantry
-		}
-		enable_subunits = {
 			light_infantry
-		}
-		enable_subunits = {
 			rcbd_troop
 		}
 		path = {
@@ -41,7 +25,7 @@ technologies = {
 			name = infantry_folder
 			position = {
 				x = -2
-				y = @2010
+				y = -1
 			}
 		}
 		categories = {
@@ -78,7 +62,7 @@ technologies = {
 			name = infantry_folder
 			position = {
 				x = -2
-				y = @2020
+				y = 5
 			}
 		}
 		categories = {
@@ -113,12 +97,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2025
+		start_year = 2023
 		folder = {
 			name = infantry_folder
 			position = {
 				x = -2
-				y = @2025
+				y = 10
 			}
 		}
 		categories = {
@@ -145,12 +129,12 @@ technologies = {
 			supply_consumption = -0.05
 		}
 		research_cost = 1.5
-		start_year = 2025
+		start_year = 2023
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 0
-				y = @2025
+				y = 10
 			}
 		}
 		categories = {
@@ -191,12 +175,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = infantry_folder
 			position = {
 				x = -2
-				y = @2030
+				y = 15
 			}
 		}
 		categories = {
@@ -223,12 +207,12 @@ technologies = {
 			supply_consumption = -0.05
 		}
 		research_cost = 1.5
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 0
-				y = @2030
+				y = 15
 			}
 		}
 		categories = {
@@ -273,12 +257,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2035
+		start_year = 2029
 		folder = {
 			name = infantry_folder
 			position = {
 				x = -2
-				y = @2035
+				y = 20
 			}
 		}
 		categories = {
@@ -307,12 +291,12 @@ technologies = {
 			ap_attack = 0.05
 		}
 		research_cost = 1.5
-		start_year = 2035
+		start_year = 2029
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 0
-				y = @2035
+				y = 20
 			}
 		}
 		categories = {
@@ -361,12 +345,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2040
+		start_year = 2032
 		folder = {
 			name = infantry_folder
 			position = {
 				x = -2
-				y = @2040
+				y = 25
 			}
 		}
 		categories = {
@@ -390,7 +374,7 @@ technologies = {
 	}
 	ebrihalc_forend = {
 		research_cost = 1.5
-		start_year = 2040
+		start_year = 2032
 		folder = {
 			name = infantry_folder
 			position = {
@@ -433,7 +417,7 @@ technologies = {
 			ap_attack = 0.05
 		}
 		research_cost = 1.5
-		start_year = 2040
+		start_year = 2032
 		folder = {
 			name = infantry_folder
 			position = {
@@ -487,12 +471,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2045
+		start_year = 2035
 		folder = {
 			name = infantry_folder
 			position = {
 				x = -2
-				y = @2045
+				y = 30
 			}
 		}
 		categories = {
@@ -519,7 +503,7 @@ technologies = {
 			soft_attack = 0.1
 		}
 		research_cost = 1.5
-		start_year = 2045
+		start_year = 2035
 		folder = {
 			name = infantry_folder
 			position = {
@@ -548,7 +532,7 @@ technologies = {
 			supply_consumption = -0.01
 		}
 		research_cost = 1.5
-		start_year = 2045
+		start_year = 2035
 		folder = {
 			name = infantry_folder
 			position = {
@@ -598,12 +582,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2050
+		start_year = 2038
 		folder = {
 			name = infantry_folder
 			position = {
 				x = -2
-				y = @2050
+				y = 35
 			}
 		}
 		categories = {
@@ -630,7 +614,7 @@ technologies = {
 			supply_consumption = -0.01
 		}
 		research_cost = 1.5
-		start_year = 2050
+		start_year = 2038
 		folder = {
 			name = infantry_folder
 			position = {
@@ -673,7 +657,7 @@ technologies = {
 			hard_attack = 0.15
 		}
 		research_cost = 1.5
-		start_year = 2050
+		start_year = 2038
 		folder = {
 			name = infantry_folder
 			position = {
@@ -703,7 +687,7 @@ technologies = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2010
+				y = -1
 			}
 		}
 		categories = {
@@ -739,7 +723,7 @@ technologies = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2020
+				y = 5
 			}
 		}
 		categories = {
@@ -774,12 +758,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2025
+		start_year = 2023
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2025
+				y = 10
 			}
 		}
 		categories = {
@@ -812,12 +796,12 @@ technologies = {
 			soft_attack = 0.05
 		}
 		research_cost = 1.5
-		start_year = 2025
+		start_year = 2023
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 4
-				y = @2025
+				y = 10
 			}
 		}
 		categories = {
@@ -841,12 +825,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2030
+				y = 15
 			}
 		}
 		categories = {
@@ -879,12 +863,12 @@ technologies = {
 			soft_attack = 0.05
 		}
 		research_cost = 1.5
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 4
-				y = @2030
+				y = 15
 			}
 		}
 		categories = {
@@ -908,12 +892,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2035
+		start_year = 2029
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2035
+				y = 20
 			}
 		}
 		categories = {
@@ -946,12 +930,12 @@ technologies = {
 			soft_attack = 0.1
 		}
 		research_cost = 1.5
-		start_year = 2035
+		start_year = 2029
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 4
-				y = @2035
+				y = 20
 			}
 		}
 		categories = {
@@ -979,12 +963,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2040
+		start_year = 2032
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2040
+				y = 25
 			}
 		}
 		categories = {
@@ -1021,7 +1005,7 @@ technologies = {
 		}
 		land_night_attack = 0.15
 		research_cost = 1.5
-		start_year = 2040
+		start_year = 2032
 		folder = {
 			name = infantry_folder
 			position = {
@@ -1052,7 +1036,7 @@ technologies = {
 		}
 		land_night_attack = 0.15
 		research_cost = 1.5
-		start_year = 2040
+		start_year = 2032
 		folder = {
 			name = infantry_folder
 			position = {
@@ -1085,12 +1069,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2045
+		start_year = 2035
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2045
+				y = 30
 			}
 		}
 		categories = {
@@ -1126,7 +1110,7 @@ technologies = {
 			breakthrough = 0.05
 		}
 		research_cost = 1.5
-		start_year = 2045
+		start_year = 2035
 		folder = {
 			name = infantry_folder
 			position = {
@@ -1156,7 +1140,7 @@ technologies = {
 			breakthrough = 0.05
 		}
 		research_cost = 1.5
-		start_year = 2045
+		start_year = 2035
 		folder = {
 			name = infantry_folder
 			position = {
@@ -1185,12 +1169,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2050
+		start_year = 2038
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2050
+				y = 35
 			}
 		}
 		categories = {
@@ -1218,7 +1202,7 @@ technologies = {
 			breakthrough = 0.05
 		}
 		research_cost = 1.5
-		start_year = 2050
+		start_year = 2038
 		folder = {
 			name = infantry_folder
 			position = {
@@ -1248,7 +1232,7 @@ technologies = {
 			breakthrough = 0.05
 		}
 		research_cost = 1.5
-		start_year = 2050
+		start_year = 2038
 		folder = {
 			name = infantry_folder
 			position = {
@@ -1282,7 +1266,7 @@ technologies = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2010
+				y = -1
 			}
 		}
 		categories = {
@@ -1313,7 +1297,7 @@ technologies = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2020
+				y = 5
 			}
 		}
 		categories = {
@@ -1335,12 +1319,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2025
+		start_year = 2023
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2025
+				y = 10
 			}
 		}
 		categories = {
@@ -1362,12 +1346,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2030
+				y = 15
 			}
 		}
 		categories = {
@@ -1385,12 +1369,12 @@ technologies = {
 			motorized_equipment_5
 		}
 		research_cost = 1.5
-		start_year = 2040
+		start_year = 2032
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 2
-				y = @2040
+				y = 25
 			}
 		}
 		categories = {
@@ -1415,12 +1399,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2025
+		start_year = 2023
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 6
-				y = @2025
+				y = 10
 			}
 		}
 		categories = {
@@ -1442,12 +1426,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2030
+		start_year = 2026
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 6
-				y = @2030
+				y = 15
 			}
 		}
 		categories = {
@@ -1469,12 +1453,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 2035
+		start_year = 2029
 		folder = {
 			name = infantry_folder
 			position = {
 				x = 6
-				y = @2035
+				y = 20
 			}
 		}
 		categories = {
@@ -1492,7 +1476,7 @@ technologies = {
 			infantry_fighting_vehicle_4_equipment
 		}
 		research_cost = 1.5
-		start_year = 2030
+		start_year = 2032
 		folder = {
 			name = infantry_folder
 			position = {

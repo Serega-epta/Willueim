@@ -17,31 +17,9 @@ set_technology = {
    tech_support = 1
 }
 
-
-if = {
-    limit = { has_dlc = "By Blood Alone" }
-    set_technology = {
-      bba_pre_war_fighter = 1
-    }
-}
-if = {
-    limit = { NOT = { has_dlc = "By Blood Alone" } }
-    set_technology = {
-      pre_war_fighter = 1
-    }
-}
-
-if = {
-    limit = { has_dlc = "No Step Back" }
-    set_technology = {
-      nsb_pre_war_OPV = 1
-    }
-}
-if = {
-    limit = { NOT = { has_dlc = "No Step Back" } }
-    set_technology = {
-      pre_war_OPV = 1
-    }
+set_technology = {
+  pre_war_fighter = 1
+  pre_war_OPV = 1
 }
 
 set_research_slots = 1

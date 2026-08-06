@@ -1,0 +1,789 @@
+focus_tree = {
+	id = NMG
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = NMG
+		}
+	}
+	default = no
+	focus = {
+		id = NMG_briefing
+		cost = 4
+		x = 3
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		will_lead_to_war_with = TRO
+		completion_reward = {
+			add_political_power = 50
+			country_event = NMG_phase_one.2
+		}
+	}
+	focus = {
+		id = NMG_resolution_of_civil_matter
+		prerequisite = {
+			focus = NMG_briefing
+		}
+		cost = 10
+		x = 3
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = NMG_operation_suppression 
+		prerequisite = {
+			focus = NMG_resolution_of_civil_matter
+		}
+		mutually_exclusive = { focus = NMG_masquerade }
+		cost = 5
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_county_flag = NMG_mil_flag
+			country_event = NMG.3
+			remove_idea = NMG_Norwegian_protests
+			remove_idea = NMG_activity_of_ULF
+			add_dynamic_modifier = NMG_increased_activity_of_ULF
+			set_variable = {
+    			var = army_core_attack_factor_var
+    			value = -0.3
+			}
+			set_variable = {
+    			var = army_core_defence_factor_var
+    			value = -0.3
+			}
+			set_variable = {
+    			var = weekly_manpower_var
+    			value = -16
+			}
+			set_variable = {
+    			var = surrender_limit_var
+    			value = -0.25
+			}
+			set_variable = {
+    			var = supply_consumption_factor_var
+    			value = 0.2
+			}
+			add_political_power = -200
+			add_stability = -0.2
+			add_war_support = -0.2
+			add_manpower = -271
+		}
+	}
+	focus = {
+		id = NMG_counter_terrorism_operation
+		prerequisite = {
+			focus = NMG_operation_suppression
+		}
+		cost = 5
+		x = 2
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			1008 = {
+				add_dynamic_modifier = {
+    				modifier = counter_terrorism_operations
+				}
+			}
+			666 = {
+				add_dynamic_modifier = {
+    				modifier = counter_terrorism_operations
+				}
+			}
+			913 = {
+				add_dynamic_modifier = {
+    				modifier = counter_terrorism_operations
+				}
+			}
+		}
+	}
+	focus = {
+		id = NMG_remove_borders
+		prerequisite = {
+			focus = NMG_counter_terrorism_operation
+		}
+		cost = 4
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_to_variable = {
+    			var = army_core_attack_factor_var
+    			value = 0.1
+			}
+			add_to_variable = {
+    			var = army_core_defence_factor_var
+    			value = 0.1
+			}
+			custom_effect_tooltip = remove_borders_tt
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+	}
+	focus = {
+		id = NMG_operation_vortex
+		prerequisite = {
+			focus = NMG_remove_borders
+		}
+		cost = 4
+		x = 0
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_to_variable = {
+    			var = army_core_attack_factor_var
+    			value = 0.1
+			}
+			add_to_variable = {
+    			var = army_core_defence_factor_var
+    			value = 0.1
+			}
+			custom_effect_tooltip = vortex_tt
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = NMG_operation_highway
+		prerequisite = {
+			focus = NMG_counter_terrorism_operation
+		}
+		cost = 4
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_to_variable = {
+    			var = supply_consumption_factor_var
+    			value = -0.2
+			}
+			custom_effect_tooltip = highway_tt
+			1008 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			666 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			add_manpower = -1500
+		}
+	}
+	focus = {
+		id = NMG_operation_debauch
+		prerequisite = {
+			focus = NMG_operation_highway
+		}
+		cost = 4
+		x = 2
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_to_variable = {
+    			var = weekly_manpower_var
+    			value = 16
+			}
+			custom_effect_tooltip = debauch_tt
+			add_war_support = 0.1
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NMG_operation_lambda
+		prerequisite = {
+			focus = NMG_operation_vortex
+		}
+		prerequisite = {
+			focus = NMG_operation_debauch
+		}
+		cost = 4
+		x = 2
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_dynamic_modifier = { modifier = NMG_increased_activity_of_ULF }
+		}
+	}
+	focus = {
+		id = NMG_masquerade
+		prerequisite = {
+			focus = NMG_resolution_of_civil_matter
+		}
+		mutually_exclusive = { focus = NMG_operation_suppression }
+		cost = 5
+		x = 4
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_county_flag = NMG_dem_flag
+			country_event = NMG.4
+			swap_ideas = {
+				remove_idea = NMG_activity_of_ULF
+				add_idea = NMG_decreased_activity_of_ULF
+			}
+			remove_idea = NMG_Norwegian_protests
+		}
+	}
+	focus = {
+		id = NMG_elections
+		prerequisite = {
+			focus = NMG_masquerade
+		}
+		cost = 5
+		x = 4
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_country_flag = NMG_elections_flag
+			add_political_power = 50
+			set_variable = {
+    			var = Suspicion_var
+    			value = 50
+			}
+			set_variable = {
+    			var = Suspicion_growth_var
+    			value = 5
+			}
+			set_variable = {
+    			var = election_progress_var
+    			value = 0
+			}
+		}
+	}
+	focus = {
+		id = NMG_candidate_selection
+		prerequisite = {
+			focus = NMG_elections
+		}
+		cost = 4
+		x = 4
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_to_variable = {
+    			var = Suspicion_var
+    			value = -10
+    			tooltip = remove_10_from_Suspicion_tt
+			}
+			add_to_variable = {
+    			var = election_progress_var
+    			value = 15
+    			tooltip = add_15_to_election_progress_tt
+			}
+		}
+	}
+	focus = {
+		id = NMG_Camera_action
+		prerequisite = {
+			focus = NMG_candidate_selection
+		}
+		cost = 4
+		x = 4
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_to_variable = {
+    			var = Suspicion_var
+    			value = -20
+    			tooltip = remove_20_from_Suspicion_tt
+			}
+			add_to_variable = {
+    			var = Suspicion_growth_var
+    			value = -1
+    			tooltip = remove_1_from_Suspicion_growth_tt
+			}
+		}
+	}
+	focus = {
+		id = NMG_shut_their_mouths
+		prerequisite = {
+			focus = NMG_elections
+		}
+		cost = 4
+		x = 6
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_to_variable = {
+    			var = election_progress_var
+    			value = 15
+    			tooltip = add_15_to_election_progress_tt
+			}
+			add_to_variable = {
+    			var = Suspicion_growth_var
+    			value = -1
+    			tooltip = remove_1_from_Suspicion_growth_tt
+			}
+		}
+	}
+	focus = {
+		id = NMG_Act_on_Ministries
+		prerequisite = {
+			focus = NMG_shut_their_mouths
+		}
+		cost = 4
+		x = 6
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_to_variable = {
+    			var = Suspicion_var
+    			value = -10
+    			tooltip = remove_10_from_Suspicion_tt
+			}
+			add_to_variable = {
+    			var = election_progress_var
+    			value = 30
+    			tooltip = add_30_to_election_progress_tt
+			}
+		}
+	}
+	focus = {
+		id = NMG_facade_of_democracy
+		prerequisite = {
+			focus = NMG_Camera_action
+		}
+		prerequisite = {
+			focus = NMG_Act_on_Ministries
+		}
+		cost = 4
+		x = 4
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			clr_country_flag = NMG_elections_flag
+			country_event = NMG.6
+			remove_idea = NMG_decreased_activity_of_ULF
+			add_political_power = 200
+			add_stability = 0.2
+			set_popularities = {
+				statesmen = 30
+				militarists = 40
+				humanists = 30
+			}
+			set_party_name = {
+    			ideology = statesmen
+    			name = NMG_dem_statesmen_party
+			}
+			set_party_name = {
+    			ideology = militarists
+    			name = NMG_dem_militarists_party
+			}
+			set_party_name = {
+    			ideology = humanists
+    			name = NMG_dem_humanists_party
+			}
+			set_cosmetic_tag = NMG_dem
+		}
+	}
+	focus = {
+		id = NMG_stability
+		prerequisite = {
+			focus = NMG_facade_of_democracy
+			focus = NMG_operation_lambda
+		}
+		cost = 10
+		x = 3
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+}
+focus_tree = {
+	id = NMG_war
+	country = {
+		factor = 0
+	}
+	default = no
+
+	focus = {
+		id = NMG_democracy_protocol
+		cost = 2
+		x = 2
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = NMG.7
+			remove_idea = NMG_Preparation_for_war
+			add_war_support = 0.05
+			add_offsite_building = { type = arms_factory level = 4 }
+		}
+	}
+	focus = {
+		id = NMG_fire_of_patriotism
+		prerequisite = {
+			focus = NMG_democracy_protocol
+		}
+		cost = 2
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_country_flag = NMG_mil_flag
+				}
+				add_ideas = NMG_soldiers_support
+			}
+			IF = {
+				limit = {
+					has_country_flag = NMG_dem_flag
+				}
+				add_ideas = NMG_people_support
+			}
+		}
+	}
+	focus = {
+		id = NMG_understand_their_tactics
+		prerequisite = {
+			focus = NMG_fire_of_patriotism
+		}
+		cost = 4
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+    			idea = NMG_countermeasures
+    			days = 90
+			}
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = NMG_Polar_Waltz
+		prerequisite = {
+			focus = NMG_understand_their_tactics
+		}
+		cost = 5
+		x = 2
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+    			idea = NMG_spirit_of_revanchism
+    			days = 35
+			}
+			add_war_support = 0.2
+		}
+	}
+	focus = {
+		id = NMG_Calm_population_down
+		prerequisite = {
+			focus = NMG_Polar_Waltz
+		}
+		available = {
+    		has_war = no
+		}
+		cost = 8
+		x = 1
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			98 = {
+				add_resistance = -10
+			}
+			148 = {
+				add_resistance = -10
+			}
+			722 = {
+				add_resistance = -10
+			}
+			842 = {
+				add_resistance = -10
+			}
+		}
+	}
+	focus = {
+		id = NMG_reconstruct_infrastructure
+		prerequisite = {
+			focus = NMG_Polar_Waltz
+		}
+		available = {
+    		has_war = no
+		}
+		cost = 8
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			98 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			148 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			722 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			842 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NMG_round_up_collaborators
+		prerequisite = {
+			focus = NMG_Polar_Waltz
+		}
+		available = {
+    		has_war = no
+		}
+		cost = 8
+		x = 3
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_manpower = 1500
+			98 = {
+				add_compliance = 10
+			}
+			148 = {
+				add_compliance = 10
+			}
+			722 = {
+				add_compliance = 10
+			}
+			842 = {
+				add_compliance = 10
+			}
+		}
+	}
+	focus = {
+		id = NMG_Alps
+		prerequisite = {
+			focus = NMG_Calm_population_down
+		}
+		prerequisite = {
+			focus = NMG_reconstruct_infrastructure
+		}
+		prerequisite = {
+			focus = NMG_round_up_collaborators
+		}
+		cost = 10
+		x = 2
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_all
+    			target = PLD
+			}
+			create_wargoal = {
+    			type = annex_all
+    			target = ZLG
+			}
+			create_wargoal = {
+    			type = annex_all
+    			target = SFL
+			}
+			create_wargoal = {
+    			type = annex_all
+    			target = DRG
+			}
+			create_wargoal = {
+    			type = annex_all
+    			target = MGL
+			}
+		}
+	}
+	focus = {
+		id = NMG_population_census
+		prerequisite = {
+			focus = NMG_Alps
+		}
+		available = {
+    		has_war = no
+		}
+		cost = 8
+		x = 1
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+			add_manpower = 4571
+		}
+	}
+	focus = {
+		id = NMG_relocate_defense_industry
+		prerequisite = {
+			focus = NMG_Alps
+		}
+		available = {
+    		has_war = no
+		}
+		cost = 8
+		x = 2
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 5 }
+		}
+	}
+	focus = {
+		id = NMG_establish_occupation_administrations
+		prerequisite = {
+			focus = NMG_Alps
+		}
+		available = {
+    		has_war = no
+		}
+		cost = 8
+		x = 3
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_state_core = 98
+			add_state_core = 148
+			add_state_core = 722
+			add_state_core = 842
+			add_state_core = 973
+			add_state_core = 213
+			add_state_core = 974
+			add_state_core = 976
+			add_state_core = 975
+
+		}
+	}
+	focus = {
+		id = NMG_Mannerheim
+		prerequisite = {
+			focus = NMG_population_census
+		}
+		prerequisite = {
+			focus = NMG_relocate_defense_industry
+		}
+		prerequisite = {
+			focus = NMG_establish_occupation_administrations
+		}
+		cost = 10
+		x = 2
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_all
+    			target = KSK
+			}
+			create_wargoal = {
+    			type = annex_all
+    			target = TTS
+			}
+			create_wargoal = {
+    			type = annex_all
+    			target = LKV
+			}
+			create_wargoal = {
+    			type = annex_all
+    			target = BSL
+			}
+		}
+	}
+	focus = {
+		id = NMG_Wait_for_orders
+		prerequisite = {
+			focus = NMG_Mannerheim
+		}
+		available = {
+    		has_war = no
+		}
+		cost = 2
+		x = 2
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {}
+	}
+
+}

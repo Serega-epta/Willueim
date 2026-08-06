@@ -1,0 +1,21 @@
+
+
+defined_text = {
+    name = nmg_event_7
+    text = {
+        trigger = {
+            NMG = {
+                has_country_flag = NMG_mil_flag
+            }
+        }
+        localization_key = nmg_event_7_mil 
+    }
+    text = {
+        trigger = {
+            NMG = {
+                has_country_flag = NMG_dem_flag
+            }
+        }
+        localization_key = nmg_event_7_dem
+    }
+}

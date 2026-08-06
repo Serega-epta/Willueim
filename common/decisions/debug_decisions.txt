@@ -1,4 +1,25 @@
 debug_decisions = {
+	#Unification
+	unlock_unification = {
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_global_flag = Unification_debug_flag
+			}
+		}
+		complete_effect = {
+			set_global_flag = Unification_debug_flag
+		}
+	}
+	lock_unification = {
+		visible = {
+			is_debug = yes
+			has_global_flag = Unification_debug_flag
+		}
+		complete_effect = {
+			clr_global_flag = Unification_debug_flag
+		}
+	}
 	#ORL
 	ORL_load_phase_1 = {
 		visible = {
