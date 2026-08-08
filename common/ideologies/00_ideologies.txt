@@ -59,9 +59,6 @@ ideologies = {
 	sacraments = {
 		types = {
 			sacraments_subideology = {}
-			conception_subideology = {
-				color = { 0 0 0 }
-			}
 			truefighters = {
 				color = { 78 28 94 }
 			}
@@ -84,6 +81,33 @@ ideologies = {
 		modifiers = {
 			puppet_cost_factor = -0.3
 			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = {
+				join_faction_tension = -0.1
+			}
+			reform_point_income = 2
+		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	conception = {
+		types = {
+			conception_subideology = {}
+		}
+		dynamic_faction_names = {}
+		color = { 0 0 0 }
+		rules = {
+			can_create_collaboration_government = no
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = no	
+		}
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 7.5
 			army_intel_to_others = 7.5
 			navy_intel_to_others = 12.5
 			airforce_intel_to_others = 7.5
