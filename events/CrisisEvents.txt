@@ -129,8 +129,6 @@ country_event = {
 					set_demilitarized_zone = no
 				}
 			}
-			goto_state = 219
-
 			set_global_flag = IOPK_crisis
 			POL = {
 				set_major = yes
@@ -723,6 +721,14 @@ country_event = {
 					target = NMG
 					type = annex_everything
 				}
+			}
+			goto_state = 219
+			GER = {
+				launch_nuke = { 
+					province = 6380
+					use_nuke = no
+					nuke_type = thermonuclear_bomb
+				} 
 			}
 		}
 	}
