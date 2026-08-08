@@ -121,6 +121,16 @@ on_actions = {
 						ruling_party = humanists
 						elections_allowed = no
 					}
+					#fix capital movement
+					if = {
+						limit = {
+							owns_state = 1001
+						}
+						set_capital = {
+							state = 1001
+							remember_old_capital = no
+						}
+					}
 					if = {
 						limit = {
 							OR = {

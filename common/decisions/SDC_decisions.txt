@@ -6,10 +6,16 @@ SDC_Chess_game = {
 			country_exists = SDI
 			has_completed_focus = SDC_hybrid_war
 			has_war = no
+			set_temp_variable = {
+				sdi_division_ratio = {
+					value = SDI.num_divisions
+					multiply = 1.2
+				}
+			}
 			custom_trigger_tooltip = {
 				tooltip = take_posisions_SDI_tt
 				check_variable = {
-					SDC_divisions_var > 19
+					num_divisions > sdi_division_ratio
 				}
 			}
 		}
@@ -34,24 +40,38 @@ SDC_Chess_game = {
 	take_posisions_REN = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 10
-		available = {
+		visible = {
 			country_exists = REN
+		}
+		available = {
 			has_completed_focus = SDC_national_traitors
-			has_war = no
+			NOT = {
+				has_war_with = REN
+			}
+			if = {
+				limit = {
+					has_completed_focus = SDC_archangelsk_sever
+				}
+				set_temp_variable = {
+					REN_factor = 0.7
+				}
+			}
+			else = {
+				set_temp_variable = {
+					REN_factor = 0.8
+				}
+			}
+			set_temp_variable = {
+				ren_division_ratio = {
+					value = 1
+					add = REN_factor
+					multiply = REN.num_divisions
+				}
+			}
 			custom_trigger_tooltip = {
 				tooltip = take_posisions_REN_tt
-				if = {
-					limit = {
-						has_completed_focus = SDC_archangelsk_sever
-					}
-					check_variable = {
-						SDC_divisions_var > 69
-					}
-				}
-				else = {
-					check_variable = {
-						SDC_divisions_var > 79
-					}
+				check_variable = {
+					num_divisions > ren_division_ratio
 				}
 			}
 		}
@@ -78,14 +98,24 @@ SDC_Chess_game = {
 		allowed = {
 			original_tag = SDC
 		}
-		available = {
+		visible = {
 			country_exists = REN
+		}
+		available = {
 			has_completed_focus = SDC_force_methods
-			has_war = no
+			NOT = {
+				has_war_with = REN
+			}
+			set_temp_variable = {
+				ren_division_ratio = {
+					value = REN.num_divisions
+					multiply = 1.65
+				}
+			}
 			custom_trigger_tooltip = {
 				tooltip = attack_REN_tt
 				check_variable = {
-					SDC_divisions_var > 64
+					num_divisions > ren_division_ratio
 				}
 			}
 		}
@@ -122,28 +152,42 @@ SDC_Chess_game = {
 		allowed = {
 			original_tag = SDC
 		}
-		available = {
+		visible = {
 			country_exists = ODJ
+		}
+		available = {
 			has_completed_focus = SDC_science_academy
-			has_war = no
+			NOT = {
+				has_war_with = ODJ
+			}
 			NOT = {
 				country_exists = SDI
 				country_exists = REN
 			}
+			if = {
+				limit = {
+					has_completed_focus = SDC_Martins_comunications
+				}
+				set_temp_variable = {
+					ODJ_factor = 0.4
+				}
+			}
+			else = {
+				set_temp_variable = {
+					ODJ_factor = 0.6
+				}
+			}
+			set_temp_variable = {
+				odj_division_ratio = {
+					value = 1
+					add = ODJ_factor
+					multiply = ODJ.num_divisions
+				}
+			}
 			custom_trigger_tooltip = {
 				tooltip = take_posisions_ODJ_tt
-				if = {
-					limit = {
-						has_completed_focus = SDC_Martins_comunications
-					}
-					check_variable = {
-						SDC_divisions_var > 49
-					}
-				}
-				else = {
-					check_variable = {
-						SDC_divisions_var > 59
-					}
+				check_variable = {
+					num_divisions > odj_division_ratio
 				}
 			}
 		}
@@ -177,9 +221,13 @@ SDC_Chess_game = {
 		allowed = {
 			original_tag = SDC
 		}
-		available = {
+		visible = {
 			country_exists = ODJ
-			has_war = no
+		}
+		available = {
+			NOT = {
+				has_war_with = ODJ
+			}
 			OR = {
 				AND = {
 					country_exists = VOZ

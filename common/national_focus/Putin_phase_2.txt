@@ -430,6 +430,9 @@ focus_tree = {
 			focus = SDC_archangelsk_sever
 			focus = SDC_force_methods
 		}
+		bypass = {
+			has_war_with = VOZ
+		}
 		available = {
 			has_war = no
 			country_exists = VOZ
@@ -454,6 +457,46 @@ focus_tree = {
 				type = annex_everything
 			}
 			country_event = SDC_phase_two.6
+			hidden_effect = {
+				if = {
+					limit = {
+						country_exists = GLS
+					}
+					country_event = {
+						id = SDC_phase_two.7
+						days = 10
+					}
+				}
+				if = {
+					limit = {
+						country_exists = PMD
+					}
+					country_event = {
+						id = SDC_phase_two.8
+						days = 20
+					}
+				}
+				if = {
+					limit = {
+						country_exists = ARM
+					}
+					country_event = {
+						id = SDC_phase_two.9
+						days = 30
+					}
+				}
+				if = {
+					limit = {
+						country_exists = AGE
+					}
+					country_event = {
+						id = SDC_phase_two.10
+						days = 40
+					}
+				}
+			}
+		}
+		bypass_effect = {
 			hidden_effect = {
 				if = {
 					limit = {
