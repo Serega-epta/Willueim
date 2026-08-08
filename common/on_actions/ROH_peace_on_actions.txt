@@ -621,6 +621,73 @@ on_actions = {
 					puppet = UKR
 				}
 			}
+			#NAR vs SMK: SMK defeat (NAR with alliance)
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = SMK
+					}
+					FROM = {
+						tag = ORL
+						is_ally_with = NAR
+					}
+				}
+				NAR = {
+					transfer_state = 931
+				}
+				ORL = {
+					transfer_state = 242
+					transfer_state = 863
+				}
+				SMK = {
+					every_owned_state = {
+						transfer_state_to = controller
+					}
+					if = {
+						limit = {
+							exists = yes
+						}
+						FROM = {
+							annex_country = {
+								target = SMK
+								transfer_troops = no
+							}
+						}
+					}
+				}
+			}
+			#NAR vs SMK: SMK defeat (NAR without alliance)
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = SMK
+					}
+					FROM = {
+						tag = ORL
+					}
+				}
+				ORL = {
+					transfer_state = 242
+					transfer_state = 863
+					transfer_state = 931
+				}
+				SMK = {
+					every_owned_state = {
+						transfer_state_to = controller
+					}
+					if = {
+						limit = {
+							exists = yes
+						}
+						FROM = {
+							annex_country = {
+								target = SMK
+								transfer_troops = no
+							}
+						}
+					}
+				}
+			}
 			#default capitulation
 			else = {
 				FROM = {
@@ -646,6 +713,48 @@ on_actions = {
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+	#events
+	on_capitulation = {
+		effect = {
+			#NAR vs SMK: SMK defeat
+			if = {
+				limit = {
+					ROOT = {
+						tag = SMK
+					}
+					FROM = {
+						OR = {
+							tag = ORL
+							tag = NAR
+						}
+					}
+				}
+				FROM = {
+					news_event = {
+						id = super.3
+						days = 1
+					}
+				}
+			}
+			#NAR vs SMK: NAR defeat
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = NAR
+					}
+					FROM = {
+						tag = SMK
+					}
+				}
+				FROM = {
+					news_event = {
+						id = super.4
+						days = 1
 					}
 				}
 			}
