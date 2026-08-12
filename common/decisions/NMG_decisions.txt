@@ -80,10 +80,15 @@ NMG_elections_decisions = {
 		available = {
 			has_completed_focus = NMG_facade_of_democracy
 		}
+		cancel_trigger = {
+        	has_completed_focus = NMG_facade_of_democracy
+    	}
 		activation = {
 			always = no
 		}
 		days_mission_timeout = 7
+		complete_effect = {
+    	}
 		timeout_effect = {
 			add_to_variable = {
     			var = Suspicion_var
