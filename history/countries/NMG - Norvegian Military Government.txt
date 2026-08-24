@@ -1,4 +1,4 @@
-capital = 110
+capital = 666
 set_stability = 1
 set_war_support = 1
 army_experience = 50
@@ -27,6 +27,10 @@ set_popularities = {
 	statesmen = 3
 }
 recruit_character = NMG_Yens_Stoltenberg
+add_opinion_modifier = {
+	target = LPC
+	modifier = battle_brothers
+}
 add_opinion_modifier = {
 	target = BAL
 	modifier = endless_hatred

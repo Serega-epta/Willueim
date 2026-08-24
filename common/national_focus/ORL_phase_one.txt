@@ -11,7 +11,7 @@ focus_tree = {
 	focus = {
 		id = ORL_best_in_hell
 		icon = GFX_ORL_best_in_hell
-		cost = 5.00
+		cost = 9
 		x = 7
 		y = 0
 		ai_will_do = {
@@ -430,7 +430,7 @@ focus_tree = {
 	focus = {
 		id = ORL_help_squad
 		icon = GFX_ORL_help_squad
-		cost = 5.00
+		cost = 1
 		x = 6
 		y = 8
 		ai_will_do = {
@@ -443,26 +443,13 @@ focus_tree = {
 		prerequisite = {
 			focus = ORL_high_priest
 		}
-		mutually_exclusive = {
-			focus = ORL_help_front
-		}
 		will_lead_to_war_with = VLC
 		will_lead_to_war_with = SMX
-
+		available = {
+			has_war = no
+		}
 		completion_reward = {
-			end_puppet = ZAK
-			MAZ = {
-				declare_war_on = {
-					target = ZAK
-					type = annex_everything
-				}
-			}
-			TAB = {
-				declare_war_on = {
-					target = ZAK
-					type = annex_everything
-				}
-			}
+			end_puppet = ZAK #are u sure?
 			VLC = {
 				declare_war_on = {
 					target = SBT
@@ -480,7 +467,7 @@ focus_tree = {
 	focus = {
 		id = ORL_help_front
 		icon = GFX_ORL_help_front
-		cost = 5.00
+		cost = 1
 		x = 8
 		y = 8
 		ai_will_do = {
@@ -493,8 +480,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ORL_high_priest
 		}
-		mutually_exclusive = {
-			focus = ORL_help_squad
+		available = {
+			has_war = no
 		}
 		will_lead_to_war_with = MAZ
 		will_lead_to_war_with = TAB
@@ -510,18 +497,6 @@ focus_tree = {
 			TAB = {
 				declare_war_on = {
 					target = ZAK
-					type = annex_everything
-				}
-			}
-			VLC = {
-				declare_war_on = {
-					target = SBT
-					type = annex_everything
-				}
-			}
-			SMX = {
-				declare_war_on = {
-					target = SBT
 					type = annex_everything
 				}
 			}
@@ -589,36 +564,35 @@ focus_tree = {
 						remove_core_of = TAB
 					}
 				}
-				ORL = {
-					if = {
-						limit = {
-							SBT = { has_war = yes }
-						}
-						annex_country = {
-							target = SBT
-							transfer_troops = yes
-						}
-						SBT = {
-							every_owned_state = {
-								add_core_of = ORL
-								remove_core_of = SBT
-							}
-						}
+				if = {
+					limit = {
+						SBT = { has_war = yes }
 					}
 					annex_country = {
-						target = ZAK
+						target = SBT
 						transfer_troops = yes
 					}
-					declare_war_on = {
-						target = VLC
-						type = annex_everything
+					SBT = {
+						every_owned_state = {
+							add_core_of = ORL
+							remove_core_of = SBT
+						}
 					}
-					declare_war_on = {
-						target = SMX
-						type = annex_everything
-					}
-					recruit_character = ORL_Sergey_Surovov
 				}
+				annex_country = {
+					target = ZAK
+					transfer_troops = yes
+				}
+				declare_war_on = {
+					target = VLC
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SMX
+					type = annex_everything
+				}
+				recruit_character = ORL_Sergey_Surovov #WTF?!
+
 			}
 			else_if = { # Front didn't finish or lost their war 
 				limit = {
@@ -738,6 +712,16 @@ focus_tree = {
 					recruit_character = ORL_Sergey_Surovov
 					recruit_character = ORL_Dmitriy_Gusev
 				}				
+			}
+			SBT = {
+				SBT_Dmitriy_Gusev = {
+					set_nationality = ROOT
+				}
+			}
+			ZAK = {
+				ZAK_Sergey_Surovov = {
+					set_nationality = ROOT
+				}
 			}
 			hidden_effect = {
             	load_focus_tree = {

@@ -8,6 +8,16 @@ load_focus_tree = {
 	tree = LPC_placeholder
 	keep_completed = no
 }
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 5000
+	producer = LPC
+}
+add_equipment_to_stockpile = {
+	type = infantry_odejda_0
+	amount = 3000
+	producer = LPC
+}
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -19,7 +29,7 @@ set_technology = {
 	engine_1 = 1
 	pre_war_OPV = 1
 	armor_1 = 1
-	support_equipment = 1
+	tech_support = 1
 	tech_engineers = 1
 	basic_train = 1
 	motorised_infantry = 1
@@ -40,6 +50,10 @@ add_opinion_modifier = {
 	modifier = archenemy
 }
 recruit_character = LPC_James_branz
+add_opinion_modifier = {
+	target = NMG
+	modifier = battle_brothers
+}
 add_opinion_modifier = {
 	target = BAL
 	modifier = endless_hatred

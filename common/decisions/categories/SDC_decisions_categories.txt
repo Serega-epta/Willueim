@@ -4,7 +4,10 @@ SDC_Chess_game = {
 	}
 	visible = {
 		has_country_flag = chess_game_flag
-		country_exists = VOZ
+		OR = {
+			country_exists = VOZ
+			country_exists = REN
+		}
 	}
 	visible_when_empty = yes
 	priority = {

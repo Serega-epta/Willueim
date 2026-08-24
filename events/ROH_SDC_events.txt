@@ -415,7 +415,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.2.a
-		add_idea = SDC_Whisper_1
+		add_ideas = SDC_Whisper_1
 		add_power_balance_value = {
     		id = SDC_power_balance
     		value = 0.2
@@ -436,7 +436,7 @@ country_event = {
 		name =  SDC_phase_three.3.a
 		swap_ideas = {
 			remove_idea = SDC_Whisper_1
-			add_idea = SDC_Whisper_2
+			add_ideas = SDC_Whisper_2
 		}
 		add_power_balance_value = {
     		id = SDC_power_balance
@@ -469,7 +469,7 @@ country_event = {
 					x = 1
 					y = 0
 				}
-				infantlight_infantryry = {
+				light_infantry = {
 					x = 2
 					y = 0
 				}
