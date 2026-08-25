@@ -44,8 +44,8 @@ NDefines.NMilitary.OUT_OF_SUPPLY_SPEED = -0.6	-- -0.8
 NDefines.NMilitary.NON_CORE_SUPPLY_SPEED = -0.20 -- -0.5
 NDefines.NMilitary.NON_CORE_SUPPLY_AIR_SPEED = -0.10 -- -0.25
 NDefines.NMilitary.ATTRITION_DAMAGE_ORG = 0.01                                           -- damage from attrition to Organisation
-NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.01           -- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
-NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.01
+NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.001           -- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
+NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.001
 NDefines.NMilitary.ATTRITION_WHILE_MOVING_FACTOR = 0.25
 NDefines.NMilitary.OUT_OF_SUPPLY_ATTRITION = 0.1                 -- max attrition when out of supply
 
@@ -157,7 +157,6 @@ NDefines.NAI.AGGRESSIVENESS_CHECK_FULLY_FORTIFIED_POCKET						= 3		--how agressi
 NDefines.NAI.AREA_DEFENSE_SETTING_PORTS						= false	--no naval invasion will be (no ships), no need to guard it
 NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES				= false	--no naval invasion will be (no ships), no need to guard it
 
-NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.02 --was 0.1
 NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.02 --was 0.1
 NDefines.NMilitary.TRAINING_ATTRITION = 0.01
 
