@@ -1,7 +1,7 @@
 # This scripted effect calculates starting utility equipment for nations to help support the new upcoming changes.
 calculate_starting_trains_and_trucks = {
 	# Calcualte Starting Trains
-	set_temp_variable = { base = 25 }
+	set_temp_variable = { base = 5 }
 	set_temp_variable = { factory = num_of_factories }
 	add_to_temp_variable = { factory = base }
 
@@ -12,7 +12,7 @@ calculate_starting_trains_and_trucks = {
 
 	set_temp_variable = { base = 100 }
 	set_temp_variable = { factory = num_of_factories }
-	multiply_temp_variable = { factory = 3 } # Alter this if you wish to change the value of the starting factory distrubtion
+	multiply_temp_variable = { factory = 2 }
 	add_to_temp_variable = { factory = base }
 
 	add_equipment_to_stockpile = {
