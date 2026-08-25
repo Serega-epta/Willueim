@@ -440,39 +440,104 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
+		bypass = {
+			PVS = {
+				exists = no
+			}
+			PLC = {
+				exists = no
+			}
+			DRW = {
+				exists = no
+			}
+			FHS = {
+				exists = no
+			}
+			ADT = {
+				exists = no
+			}
+			OBS = {
+				exists = no
+			}
+			YJY = {
+				exists = no
+			}
+		}
+		bypass_effect = {
+			hidden_effect = {
+				remove_ideas = GLS_our_starvation_idea_Astafev4
+				remove_ideas = GLS_our_starvation_idea_Ryaznov4
+			}
+			custom_effect_tooltip = GLS_starvation_ended
+		}
 		completion_reward = {
 			hidden_effect = {
 				remove_ideas = GLS_our_starvation_idea_Astafev4
 				remove_ideas = GLS_our_starvation_idea_Ryaznov4
 			}
 			custom_effect_tooltip = GLS_starvation_ended
-			create_wargoal = {
-				type = annex_everything
-				target = PVS
+			if = {
+				limit = {
+					country_exists = PVS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PVS
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = PLC
+			if = {
+				limit = {
+					country_exists = PLC
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PLC
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = DRW
+			if = {
+				limit = {
+					country_exists = DRW
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = DRW
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = FHS
+			if = {
+				limit = {
+					country_exists = FHS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FHS
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = ADT
+			if = {
+				limit = {
+					country_exists = ADT
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ADT
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = OBS
+			if = {
+				limit = {
+					country_exists = OBS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = OBS
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = YJY
+			if = {
+				limit = {
+					country_exists = YJY
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YJY
+				}
 			}
 		}
 	}
