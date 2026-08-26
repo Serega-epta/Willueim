@@ -9,7 +9,7 @@ NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 36
 NDefines.NGame.GAME_SPEED_SECONDS = { 0.35, 0.15, 0.1, 0.035, 0.0 }
 
-NDefines.NDiplomacy.ENSION_TIME_SCALE_START_DATE = "2022.1.1.12"
+NDefines.NDiplomacy.TENSION_TIME_SCALE_START_DATE = "2022.1.1.12"
 NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 10
 
 NDefines.NAir.ACCIDENT_CHANCE_BALANCE_MULT = 0.10
@@ -31,6 +31,23 @@ NDefines.NCountry.NUCLEAR_BOMB_DROP_WAR_SUPPORT_EFFECT_MAX_VP = 1
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 12
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 12
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 3
+NDefines.NSupply.TRUCK_ATTRITION = 0.001 -- base truck attrition
+NDefines.NSupply.TRUCK_ATTRITION_FACTOR = 0.2 --a scale on total truck attrition
+NDefines.NSupply.SUPPLY_THRESHOLD_FOR_ARMY_ATTRITION = 0.1
+NDefines.NSupply.STORED_SUPPLY_CONSUMPTION_RATE_FACTOR = 0.5 -- 0.75 supply consumption
+NDefines.NSupply.MIN_SUPPLY_CONSUMPTION = 0.01 -- 0.05 min supply consumption
+NDefines.NMilitary.EQUIPMENT_COMBAT_LOSS_FACTOR = 0.7 -- 0.7 in vanilla
+NDefines.NMilitary.SUPPLY_GRACE = 96 --72 in vanilla
+NDefines.NMilitary.SUPPLY_GRACE_MAX_REDUCE_PER_HOUR = 1 --2 in vanilla
+NDefines.NMilitary.MAX_OUT_OF_SUPPLY_DAYS = 45 -- 30
+NDefines.NMilitary.OUT_OF_SUPPLY_SPEED = -0.6	-- -0.8
+NDefines.NMilitary.NON_CORE_SUPPLY_SPEED = -0.20 -- -0.5
+NDefines.NMilitary.NON_CORE_SUPPLY_AIR_SPEED = -0.10 -- -0.25
+NDefines.NMilitary.ATTRITION_DAMAGE_ORG = 0.08                                           -- damage from attrition to Organisation
+NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.001           -- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
+NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.001
+NDefines.NMilitary.ATTRITION_WHILE_MOVING_FACTOR = 0.05
+NDefines.NMilitary.OUT_OF_SUPPLY_ATTRITION = 0.1                 -- max attrition when out of supply
 
 NDefines.NCountry.MIN_STABILITY = -1.0
 NDefines.NCountry.MIN_WAR_SUPPORT = -1.0
@@ -140,13 +157,12 @@ NDefines.NAI.AGGRESSIVENESS_CHECK_FULLY_FORTIFIED_POCKET						= 3		--how agressi
 NDefines.NAI.AREA_DEFENSE_SETTING_PORTS						= false	--no naval invasion will be (no ships), no need to guard it
 NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES				= false	--no naval invasion will be (no ships), no need to guard it
 
-NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.02 --was 0.1
-NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.02 --was 0.1
+NDefines.NMilitary.TRAINING_ATTRITION = 0.05
 
 NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 3200 -- was 800
 
-NDefines.NProject.BREAKTHROUGH_DAILY_TECHNOLOGY_GAIN = 10		-- Amount in 1/100th percentage. E.g. 25 = 0.25% (was 12)
-NDefines.NProject.BREAKTHROUGH_DAILY_SCIENTIST_SKILL_GAIN = 7	-- Amount in 1/100th percentage gained per skill when doing basic research. E.g. 5 = 0.05% per skill level. (was 5)
+NDefines.NProject.BREAKTHROUGH_DAILY_TECHNOLOGY_GAIN = 36		-- Amount in 1/100th percentage. E.g. 25 = 0.25% (was 12)
+NDefines.NProject.BREAKTHROUGH_DAILY_SCIENTIST_SKILL_GAIN = 15	-- Amount in 1/100th percentage gained per skill when doing basic research. E.g. 5 = 0.05% per skill level. (was 5)
 NDefines.NProject.BREAKTHROUGH_DAILY_ROCKET_SITE_GAIN = 3		-- Amount in 1/100th percentage gained per rocket site level. E.g. 1 = 0.01% per rocket site level. (was 1)
 NDefines.NProject.BREAKTHROUGH_DAILY_NUCLEAR_REACTOR_GAIN = 5	-- Amount in 1/100th percentage gained per nuclear reactor. E.g. 2 = 0.02% per nuclear reactor. (was 1)
 
