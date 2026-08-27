@@ -240,6 +240,11 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+		bypass = {
+			MOT = {
+				exists = no
+			}
+		}
 		prerequisite = {
 			focus = GLS_chess
 		}
@@ -274,6 +279,11 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		bypass = {
+			URA = {
+				exists = no
+			}
+		}
 		will_lead_to_war_with = URA
 		completion_reward = {
 			declare_war_on = {
@@ -302,6 +312,11 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		bypass = {
+			ISK = {
+				exists = no
+			}
+		}
 		will_lead_to_war_with = ISK
 		completion_reward = {
 			declare_war_on = {
@@ -326,6 +341,11 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GLS_sufferers
+		}
+		bypass = {
+			BL1 = {
+				exists = no
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
