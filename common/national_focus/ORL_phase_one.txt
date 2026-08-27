@@ -462,6 +462,30 @@ focus_tree = {
 					type = annex_everything
 				}
 			}
+			MAZ = {
+				declare_war_on = {
+					target = ZAK
+					type = annex_everything
+				}
+			}
+			TAB = {
+				declare_war_on = {
+					target = ZAK
+					type = annex_everything
+				}
+			}
+			ORL = {
+				declare_war_on = {
+					target = VLC
+					type = annex_everything
+				}
+			}
+			ORL = {
+				declare_war_on = {
+					target = SMX
+					type = annex_everything
+				}
+			}
 		}
 	}
 	focus = {
@@ -488,15 +512,39 @@ focus_tree = {
 
 		completion_reward = {
 			end_puppet = SBT
+			ORL = {
+				declare_war_on = {
+					target = MAZ
+					type = annex_everything
+				}
+			}
+			ORL = {
+				declare_war_on = {
+					target = TAB
+					type = annex_everything
+				}
+			}
 			MAZ = {
 				declare_war_on = {
-					target = ZAK
+					target = MAZ
 					type = annex_everything
 				}
 			}
 			TAB = {
 				declare_war_on = {
 					target = ZAK
+					type = annex_everything
+				}
+			}
+			VLC = {
+				declare_war_on = {
+					target = SBT
+					type = annex_everything
+				}
+			}
+			SMX = {
+				declare_war_on = {
+					target = SBT
 					type = annex_everything
 				}
 			}
