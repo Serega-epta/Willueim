@@ -216,6 +216,13 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
+			}
+			397 = {
+				add_manpower = -2000
+			}
 			if = {
 				limit = {
 					has_idea = GLS_our_starvation_idea3
@@ -243,6 +250,13 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = -0.1
+			}
+			397 = {
+				add_manpower = -10000
+			}
 			if = {
 				limit = {
 					has_idea = GLS_our_starvation_idea3
@@ -320,6 +334,10 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
+			}
 			if = {
 				limit = {
 					has_idea = GLS_our_starvation_idea_Astafev2
@@ -356,6 +374,10 @@ focus_tree = {
 			factor = 11
 		}
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = -0.1
+			}
 			if = {
 				limit = {
 					has_idea = GLS_our_starvation_idea_Astafev2
@@ -1176,6 +1198,10 @@ focus_tree = {
 		y = 12
 		cost = 5
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = -0.05
+			}
 			add_ideas = GLS_Borders
 			if = {
 				limit = {
@@ -1228,6 +1254,10 @@ focus_tree = {
 		y = 12
 		cost = 5
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
+			}
 			add_ideas = GLS_Borders2
 			if = {
 				limit = {

@@ -450,7 +450,7 @@ focus_tree = {
 			add_stability = -0.05
 			add_power_balance_value = {
 				id = GLS_power_balance
-				value = 0.1
+				value = -0.1
 			}
 		}
 	}
@@ -512,7 +512,7 @@ focus_tree = {
 			}
 			add_power_balance_value = {
 				id = GLS_power_balance
-				value = 0.05
+				value = 0.1
 			}
 			if = {
 				limit = {
@@ -578,7 +578,7 @@ focus_tree = {
 			}
 			add_power_balance_value = {
 				id = GLS_power_balance
-				value = 0.1
+				value = -0.05
 			}
 			if = {
 				limit = {
@@ -682,6 +682,12 @@ focus_tree = {
 				id = GLS_power_balance
 				value = 0.05
 			}
+			hidden_effect = {
+				country_event = {
+					id = GLS_decisions.10
+					days = 1
+				}
+			}
 		}
 	}
 	focus = {
@@ -706,7 +712,7 @@ focus_tree = {
 			add_stability = 0.1
 			add_power_balance_value = {
 				id = GLS_power_balance
-				value = 0.1
+				value = -0.1
 			}
 			if = {
 				limit = {
