@@ -439,6 +439,9 @@ focus_tree = {
 				exists = no
 			}
 		}
+		available = {
+			is_neighbor_of = IRT
+		}
 		ai_will_do = {
 			base = 10
 		}
@@ -500,6 +503,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GLS_can_sleep
+		}
+		available = {
+			controls_state = 398
 		}
 		completion_reward = {
 			country_event = {
