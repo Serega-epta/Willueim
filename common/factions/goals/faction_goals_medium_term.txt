@@ -77,6 +77,37 @@ faction_goal_destroy_GLS = {
 		base = 1
 	}
 }
+faction_goal_wipe_LPC = {
+	name = wipe_LPC_goal_name
+	description = wipe_LPC_goal_desc
+	category = medium_term
+	group = UNIFICATION_FILTER
+	allowed = {
+		original_tag = AGE
+		original_tag = CHU
+		original_tag = HAR
+		original_tag = BLZ
+	}
+	visible = {
+
+	}
+	completed = {
+		LPC = {
+			exists = no
+		}
+	}
+	complete_effect = {
+		every_faction_member = {
+			add_popularity = {
+				ideology = THIS
+				popularity = 0.1
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
 faction_goal_new_trade_routs = {
 	name = new_trade_routs_goal_name
 	description = new_trade_routs_goal_desc

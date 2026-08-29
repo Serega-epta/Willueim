@@ -1,4 +1,3 @@
-
 state={
 	id=581
 	name="STATE_581"
@@ -6,21 +5,41 @@ state={
 		steel=8.000
 		chromium=1.000
 	}
-
 	history={
 		owner = MIN
 		victory_points = {
 			7898 1 
 		}
+		strategic_province_location = {
+			defensive_chokepoint = 10551
+		}
+		strategic_province_location = {
+			defensive_chokepoint = 13395
+		}
+		strategic_province_location = {
+			defensive_chokepoint = 13405
+		}
+		strategic_province_location = {
+			defensive_chokepoint = 13417
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
-
+			10551 = {
+				bunker = 4
+			}
+			13395 = {
+				bunker = 4
+			}
+			13405 = {
+				bunker = 4
+			}
+			13417 = {
+				bunker = 4
+			}
 		}
 		add_core_of = MIN
-
 	}
-
 	provinces={
 		7898 10551 12393 13381 13383 13390 13395 13398 13401 13402 13405 13412 13417 
 	}
