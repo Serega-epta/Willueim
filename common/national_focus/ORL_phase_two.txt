@@ -487,6 +487,23 @@ focus_tree = {
 				exists = yes
 			}
 		}
+		bypass = {
+			IMP = {
+				exists = no
+			}
+			NOR = {
+				exists = no
+			}
+			COR = {
+				exists = no
+			}
+			BSO = {
+				exists = no
+			}
+			PLR = {
+				exists = no
+			}
+		}
 		cancel_if_invalid = yes
 		prerequisite = { focus = ORL_North }
 		completion_reward = {
@@ -514,6 +531,23 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		prerequisite = { focus = ORL_Crush_Vlasovites }
+		bypass = {
+			IMP = {
+				exists = no
+			}
+			NOR = {
+				exists = no
+			}
+			COR = {
+				exists = no
+			}
+			BSO = {
+				exists = no
+			}
+			PLR = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			declare_war_on = {
     			target = IMP
@@ -575,6 +609,11 @@ focus_tree = {
 		cost = 2.14
 		x = 13
 		y = 5
+		bypass = {
+			NAR = {
+				exists = no
+			}
+		}
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_North }
 		completion_reward = {
@@ -591,6 +630,11 @@ focus_tree = {
 		cost = 2.14
 		x = 13
 		y = 6
+		bypass = {
+			NAR = {
+				exists = no
+			}
+		}
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_United_Front }
 		completion_reward = {
@@ -621,6 +665,17 @@ focus_tree = {
 				exists = no
 			}
 		}
+		bypass = {
+			NAR = {
+				exists = no
+			}
+		}
+		bypass_effect = {
+			declare_war_on = {
+    			target = SMK
+    			type = annex_everything
+			}
+		}
 		prerequisite = { focus = ORL_Smolensk_Gambit }
 		completion_reward = {
 			dismantle_faction = yes
@@ -642,6 +697,11 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+		}
+		bypass = {
+			VOU = {
+				exists = no
 			}
 		}
 		available = {
@@ -671,6 +731,11 @@ focus_tree = {
 		}
 		available = {
 			is_neighbor_of = MUC
+		}
+		bypass = {
+			MUC = {
+				exists = no
+			}
 		}
 		prerequisite = { focus = ORL_Routes_and_communications }
 		completion_reward = {
@@ -704,6 +769,11 @@ focus_tree = {
 		available = {
 			is_neighbor_of = VOF
 		}
+		bypass = {
+			VOF = {
+				exists = no
+			}
+		}
 		prerequisite = { focus = ORL_North }
 		completion_reward = {
 			custom_effect_tooltip = Enemy_of_Science_tt
@@ -722,6 +792,11 @@ focus_tree = {
 		cost = 2.14
 		x = 17
 		y = 6
+		bypass = {
+			VOF = {
+				exists = no
+			}
+		}
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Enemy_of_Science }
 		completion_reward = {
@@ -754,6 +829,14 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		available = {
 			is_neighbor_of = MOS
+		}
+		bypass = {
+			MOS = {
+				exists = no
+			}
+			ELI = {
+				exists = no
+			}
 		}
 		prerequisite = { focus = ORL_Extermination_teams }
 		prerequisite = { focus = ORL_Rzhevsk_meat_grinder }
@@ -816,6 +899,11 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+		bypass = {
+			RIK = {
+				exists = no
+			}
+		}
 		prerequisite = { focus = ORL_Flaming_Horn }
 		completion_reward = {
 			declare_war_on = {
@@ -831,6 +919,16 @@ focus_tree = {
 		cost = 2.14
 		x = 18
 		y = 2
+		bypass = {
+			OR = {
+				MKS = {
+					exists = no
+				}
+				MSH = {
+					exists = no
+				}
+			}
+		}
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Eliminate_ledge }
 		mutually_exclusive = { focus = ORL_Soldiers_of_Fortune }
@@ -849,6 +947,16 @@ focus_tree = {
 		cost = 2.14
 		x = 20
 		y = 2
+		bypass = {
+			OR = {
+				MKS = {
+					exists = no
+				}
+				MSH = {
+					exists = no
+				}
+			}
+		}
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Eliminate_ledge }
 		mutually_exclusive = { focus = ORL_Military_specialists }
@@ -890,6 +998,20 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+		bypass = {
+			MKS = {
+				exists = no
+			}
+			MSH = {
+				exists = no
+			}
+			KMN = {
+				exists = no
+			}
+			BGR = {
+				exists = no
+			}
+		}
 		prerequisite = { focus = ORL_Soft_underbelly }
 		mutually_exclusive = { focus = ORL_Rusty_Revolution }
 		completion_reward = {
@@ -923,6 +1045,20 @@ focus_tree = {
 				NOT = {
 					has_war_with = BGR 
 				}
+			}
+		}
+		bypass = {
+			MKS = {
+				exists = no
+			}
+			MSH = {
+				exists = no
+			}
+			KMN = {
+				exists = no
+			}
+			BGR = {
+				exists = no
 			}
 		}
 		prerequisite = { focus = ORL_Soft_underbelly }

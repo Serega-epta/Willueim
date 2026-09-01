@@ -308,7 +308,7 @@ AGE_their_freedoms = {
 		visible = {
 			OR = {
 				has_idea = AGE_red_sabres
-				has_idea = AGE_red_sabres_second
+				has_idea = AGE_red_sabres_2
 			}
 			has_country_flag = red_sabres_flag
 		}
@@ -346,7 +346,7 @@ AGE_their_freedoms = {
 		visible = {
 			OR = {
 				has_idea = AGE_red_sabres
-				has_idea = AGE_red_sabres_second
+				has_idea = AGE_red_sabres_2
 			}
 			has_focus_tree = AGE_phase_1
 		}
@@ -361,13 +361,13 @@ AGE_their_freedoms = {
 				}
 				swap_ideas = {
 					remove_idea = AGE_red_sabres
-					add_idea = AGE_red_sabres_second
+					add_idea = AGE_red_sabres_2
 				}
 			}
 			else = {
-				#limit = { has_idea = AGE_red_sabres_second }
+				#limit = { has_idea = AGE_red_sabres_2 }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_second
+					remove_idea = AGE_red_sabres_2
 					add_idea = AGE_red_sabres
 				}
 			}
@@ -378,7 +378,7 @@ AGE_their_freedoms = {
 		visible = {
 			OR = {
 				has_idea = AGE_red_sabres
-				has_idea = AGE_red_sabres_second
+				has_idea = AGE_red_sabres_2
 			}
 			has_focus_tree = AGE_phase_2
 		}
@@ -390,13 +390,13 @@ AGE_their_freedoms = {
 				}
 				swap_ideas = {
 					remove_idea = AGE_red_sabres
-					add_idea = AGE_red_sabres_second
+					add_idea = AGE_red_sabres_2
 				}
 			}
 			else = {
-				#limit = { has_idea = AGE_red_sabres_second }
+				#limit = { has_idea = AGE_red_sabres_2 }
 				swap_ideas = {
-					remove_idea = AGE_red_sabres_second
+					remove_idea = AGE_red_sabres_2
 					add_idea = AGE_red_sabres
 				}
 			}
