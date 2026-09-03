@@ -1,0 +1,62 @@
+﻿division_template = {
+	name = "Ohotniki"
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ROOT"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}
+units = {
+	division = {
+		location = 13452
+		division_template = "Ohotniki"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	division = {
+		location = 13452
+		division_template = "Ohotniki"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	division = {
+		location = 10723
+		division_template = "Ohotniki"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	division = {
+		location = 13456
+		division_template = "Ohotniki"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	division = {
+		location = 13448
+		division_template = "Ohotniki"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	division = {
+		location = 13428
+		division_template = "Ohotniki"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+}

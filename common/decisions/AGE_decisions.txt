@@ -871,7 +871,10 @@ AGE_red_forest = {
 	AGE_red_forest_mission = {
 		activation = {
 			AGE = {
-				has_completed_focus = AGE_visit_our_comrades_slavic
+				OR = {
+					has_completed_focus = AGE_visit_our_comrades_slavic
+					has_completed_focus = AGE_visit_our_comrades
+				}
 			}
 			country_exists = TIP
 		}
