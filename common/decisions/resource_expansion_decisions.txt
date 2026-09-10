@@ -56,6 +56,63 @@ resource_expansion_category = {
 			}
 		}
 	}
+	expand_coal_production = {
+		priority = 100
+		available = {
+			num_of_civilian_factories > 4
+		}
+		cost = 50
+		days_remove = 180
+		days_re_enable = 60
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					num_of_controlled_states < 5
+				}
+				random_owned_state = {
+					add_resource = {
+						type = coal
+						amount = 2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						num_of_controlled_states > 4
+						num_of_controlled_states < 11
+					}
+				}
+				random_owned_state = {
+					add_resource = {
+						type = coal
+						amount = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					num_of_controlled_states > 9
+				}
+				random_owned_state = {
+					add_resource = {
+						type = coal
+						amount = 8
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				coal < 1
+			}
+		}
+	}
 	expand_strategic_material_production = {
 		priority = 90
 		available = {

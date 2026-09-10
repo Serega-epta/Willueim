@@ -326,6 +326,63 @@ Unification = {
 			unite_motherland = yes
 		}
 	}
+	restore_uranium_mines = {
+		priority = 1000
+		targets = {
+			927		#Раквере
+			197		#Кировоград
+			896		#Гомель
+			968		#Соткамо
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 14
+			controls_state = FROM
+		}
+		target_root_trigger = {
+			has_country_flag = Unification_flag
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = mines_restored
+				}
+			}
+		}
+		state_target = yes
+		cost = 50
+		days_remove = 1
+		modifier = {
+			civilian_factory_use = 15
+		}
+		remove_effect = {
+			custom_effect_tooltip = change_Motherland_tt
+			FROM = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					set_building_level = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = repair_all_shared_buildings_tt
+					fix_all_shared_building = yes
+				}
+				add_dynamic_modifier = {
+					modifier = mines_restored
+					days = 150
+				}
+				set_state_flag = mines_restored
+			}
+			add_to_array = {
+				global.mines_restored_array = FROM
+			}
+			unite_motherland = yes
+		}
+	}
 	communication_restoration = {
 		priority = 800
 		targets = {
@@ -522,7 +579,7 @@ Unification = {
 			unite_motherland = yes
 		}
 	}
-	#Special for Leningrade
+	#Special for Leningrad
 	operation_nevsky = {
 		priority = 999
 		targets = { 195 }
@@ -535,6 +592,12 @@ Unification = {
 				tooltip = cities_restored_num_3_or_bigger_tt
 				check_variable = {
 					global.city_restored_array^num > 2
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.mines_restored_array^num > 3
 				}
 			}
 		}

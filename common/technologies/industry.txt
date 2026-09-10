@@ -505,6 +505,7 @@ technologies = {
 	#Ресурсы
 	abandoned_mines = {
 		local_resources_factor = 0.1
+		local_resources_coal_factor = 0.05
 		fuel_gain_factor = 0.4
 		path = {
 			leads_to_tech = resource_development_1
@@ -533,6 +534,7 @@ technologies = {
 	}
 	resource_development_1 = {
 		local_resources_factor = 0.1
+		local_resources_coal_factor = 0.05
 		path = {
 			leads_to_tech = resource_development_2
 			research_cost_coeff = 1
@@ -556,6 +558,7 @@ technologies = {
 	}
 	resource_development_2 = {
 		local_resources_factor = 0.1
+		local_resources_coal_factor = 0.05
 		path = {
 			leads_to_tech = resource_development_3
 			research_cost_coeff = 1
@@ -579,6 +582,7 @@ technologies = {
 	}
 	resource_development_3 = {
 		local_resources_factor = 0.1
+		local_resources_coal_factor = 0.05
 		path = {
 			leads_to_tech = resource_development_4
 			research_cost_coeff = 1
@@ -602,6 +606,7 @@ technologies = {
 	}
 	resource_development_4 = {
 		local_resources_factor = 0.1
+		local_resources_coal_factor = 0.05
 		path = {
 			leads_to_tech = resource_development_5
 			research_cost_coeff = 1
@@ -625,6 +630,7 @@ technologies = {
 	}
 	resource_development_5 = {
 		local_resources_factor = 0.1
+		local_resources_coal_factor = 0.05
 		research_cost = 1.5
 		start_year = 2035
 		folder = {

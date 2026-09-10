@@ -55,6 +55,10 @@ technologies = {
 		enable_subunits = {
 			engineer
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_engineer
+		}
 		path = {
 			leads_to_tech = tech_engineers2
 			research_cost_coeff = 1
@@ -162,6 +166,10 @@ technologies = {
 	tech_drg = {
 		enable_subunits = {
 			drg
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_logistics
 		}
 		path = {
 			leads_to_tech = tech_drg2
@@ -367,6 +375,10 @@ technologies = {
 		enable_subunits = {
 			standard_bearer
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_maintenance
+		}
 		path = {
 			leads_to_tech = tech_standard_bearer2
 			research_cost_coeff = 1
@@ -569,6 +581,10 @@ technologies = {
 		enable_subunits = {
 			gamekeepers
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_recon
+		}
 		path = {
 			leads_to_tech = tech_gamekeepers2
 			research_cost_coeff = 1
@@ -698,6 +714,10 @@ technologies = {
 		enable_subunits = {
 			pulse_jammers
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_signal
+		}
 		path = {
 			leads_to_tech = tech_impulse_silencers2
 			research_cost_coeff = 1
@@ -799,6 +819,10 @@ technologies = {
 	tech_field_hospital = {
 		enable_subunits = {
 			field_hospital
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_field_hospital
 		}
 		path = {
 			leads_to_tech = tech_field_hospital2
