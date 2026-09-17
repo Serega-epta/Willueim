@@ -838,6 +838,956 @@ Unification = {
 			unite_motherland = yes
 		}
 	}
+	restart_bashkir_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 1001
+		}
+		available = {
+			1001 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			1001 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 12130
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 1001 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_voronezh_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 260
+		}
+		available = {
+			260 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			260 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 2
+					instant_build = yes
+					province = {
+						id = 413
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 260 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_gorkov_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 252
+		}
+		available = {
+			252 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			252 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 2
+					instant_build = yes
+					province = {
+						id = 11375
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 252 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_krasnodarsky_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 864
+		}
+		available = {
+			864 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			864 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 1
+					instant_build = yes
+					province = {
+						id = 13361
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 864 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_krimski_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 844
+		}
+		available = {
+			844 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			844 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 12130
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 844 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_odessky_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 839
+		}
+		available = {
+			839 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			839 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 2
+					instant_build = yes
+					province = {
+						id = 11670
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 839 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_tatarsky_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 954
+		}
+		available = {
+			954 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			954 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 3214
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 954 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_kharkov_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 221
+		}
+		available = {
+			221 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			221 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 418
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 221 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_chigirinsky_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 197
+		}
+		available = {
+			197 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			197 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 6478
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 197 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_central_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 995
+		}
+		available = {
+			995 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			995 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 97
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 995 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_minsky_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 206
+		}
+		available = {
+			206 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			206 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 2
+					instant_build = yes
+					province = {
+						id = 11370
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 206 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_chernobul_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 879
+		}
+		available = {
+			879 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			879 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 6
+					instant_build = yes
+					province = {
+						id = 9568
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 879 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_balakovsk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 401
+		}
+		available = {
+			401 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			401 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 6
+					instant_build = yes
+					province = {
+						id = 3316
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 401 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_zaparozhsk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 200
+		}
+		available = {
+			200 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			200 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 6
+					instant_build = yes
+					province = {
+						id = 588
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 200 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_ingalin_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 908
+		}
+		available = {
+			908 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			908 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 11342
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 908 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_kalininsk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 247
+		}
+		available = {
+			247 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			247 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 85
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 247 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_kolsk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 973
+		}
+		available = {
+			973 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			973 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 7
+					instant_build = yes
+					province = {
+						id = 6181
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 973 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_kyrsk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 220
+		}
+		available = {
+			220 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			220 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 10
+					instant_build = yes
+					province = {
+						id = 3580
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 220 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_leningrad_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 1011
+		}
+		available = {
+			1011 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			1011 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 8
+					instant_build = yes
+					province = {
+						id = 9097
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 1011 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_novovoronezhsk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 260
+		}
+		available = {
+			260 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			260 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 7
+					instant_build = yes
+					province = {
+						id = 413
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 260 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_rovensk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 885
+		}
+		available = {
+			885 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			885 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 6
+					instant_build = yes
+					province = {
+						id = 11503
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 885 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_rostov_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 238
+		}
+		available = {
+			238 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			238 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 6490
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 238 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_nikolaevsk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 865
+		}
+		available = {
+			865 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			865 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 6597
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 865 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_hmelnitsk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 199
+		}
+		available = {
+			199 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			199 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 6
+					instant_build = yes
+					province = {
+						id = 6509
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 199 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+	restart_smolensk_nuclear_power_plant = {
+		visible = {
+			has_full_control_of_state = 243
+		}
+		available = {
+			243 = { infrastructure > 4 }
+			num_of_civilian_factories_available_for_projects > 19
+		}
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			243 = {
+				add_building_construction = {
+					type = commercial_nuclear_reactor
+					level = 4
+					instant_build = yes
+					province = {
+						id = 6243
+					}
+				}
+			}
+		}
+
+        cancel_trigger = {
+			NOT = { has_full_control_of_state = 243 }
+		}
+
+        cancel_effect = {  }
+
+		ai_will_do = {
+			base = 25
+		}
+	}
 }
 red_forest_category = {
 	clear_red_forest = {
