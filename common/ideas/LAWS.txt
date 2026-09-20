@@ -196,7 +196,10 @@ ideas = {
 				always = yes
 			}
 			available = {
-				always = yes
+				OR = {
+					has_country_flag = Unification_flag
+					has_global_flag = Unification_debug_flag
+				}
 			}
 			cost = 100
 			removal_cost = -1

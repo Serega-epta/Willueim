@@ -216,6 +216,13 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
+			}
+			397 = {
+				add_manpower = -2000
+			}
 			if = {
 				limit = {
 					has_idea = GLS_our_starvation_idea3
@@ -243,6 +250,13 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = -0.1
+			}
+			397 = {
+				add_manpower = -10000
+			}
 			if = {
 				limit = {
 					has_idea = GLS_our_starvation_idea3
@@ -320,6 +334,10 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.1
+			}
 			if = {
 				limit = {
 					has_idea = GLS_our_starvation_idea_Astafev2
@@ -356,6 +374,10 @@ focus_tree = {
 			factor = 11
 		}
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = -0.1
+			}
 			if = {
 				limit = {
 					has_idea = GLS_our_starvation_idea_Astafev2
@@ -440,39 +462,104 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 		}
+		bypass = {
+			PVS = {
+				exists = no
+			}
+			PLC = {
+				exists = no
+			}
+			DRW = {
+				exists = no
+			}
+			FHS = {
+				exists = no
+			}
+			ADT = {
+				exists = no
+			}
+			OBS = {
+				exists = no
+			}
+			YJY = {
+				exists = no
+			}
+		}
+		bypass_effect = {
+			hidden_effect = {
+				remove_ideas = GLS_our_starvation_idea_Astafev4
+				remove_ideas = GLS_our_starvation_idea_Ryaznov4
+			}
+			custom_effect_tooltip = GLS_starvation_ended
+		}
 		completion_reward = {
 			hidden_effect = {
 				remove_ideas = GLS_our_starvation_idea_Astafev4
 				remove_ideas = GLS_our_starvation_idea_Ryaznov4
 			}
 			custom_effect_tooltip = GLS_starvation_ended
-			create_wargoal = {
-				type = annex_everything
-				target = PVS
+			if = {
+				limit = {
+					country_exists = PVS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PVS
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = PLC
+			if = {
+				limit = {
+					country_exists = PLC
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PLC
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = DRW
+			if = {
+				limit = {
+					country_exists = DRW
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = DRW
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = FHS
+			if = {
+				limit = {
+					country_exists = FHS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FHS
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = ADT
+			if = {
+				limit = {
+					country_exists = ADT
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ADT
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = OBS
+			if = {
+				limit = {
+					country_exists = OBS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = OBS
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = YJY
+			if = {
+				limit = {
+					country_exists = YJY
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YJY
+				}
 			}
 		}
 	}
@@ -587,7 +674,7 @@ focus_tree = {
 			}
 			add_power_balance_value = {
 				id = GLS_power_balance
-				value = 0.1
+				value = -0.3
 			}
 			if = {
 				limit = {
@@ -646,7 +733,7 @@ focus_tree = {
 			}
 			add_power_balance_value = {
 				id = GLS_power_balance
-				value = 0.1
+				value = 0.3
 			}
 			if = {
 				limit = {
@@ -1111,6 +1198,10 @@ focus_tree = {
 		y = 12
 		cost = 5
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = -0.05
+			}
 			add_ideas = GLS_Borders
 			if = {
 				limit = {
@@ -1132,10 +1223,10 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					has_idea = propusk_punkt
+					has_idea = checkpoint
 				}
 				swap_ideas = {
-					remove_idea = propusk_punkt
+					remove_idea = checkpoint
 					add_idea = opend_borders
 				}
 			}
@@ -1163,6 +1254,10 @@ focus_tree = {
 		y = 12
 		cost = 5
 		completion_reward = {
+			add_power_balance_value = {
+				id = GLS_power_balance
+				value = 0.05
+			}
 			add_ideas = GLS_Borders2
 			if = {
 				limit = {
@@ -1571,7 +1666,7 @@ focus_tree = {
 					has_idea = radio
 				}
 				swap_ideas = {
-					remove_idea = radiio
+					remove_idea = radio
 					add_idea = television
 				}
 			}

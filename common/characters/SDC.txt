@@ -12,8 +12,12 @@ characters = {
 			desc = SDC_Putin_desc
 			expire = "2965.1.1.1"
 			id = -1
+			traits = {
+				XSM_devout_leader
+			}
 		}
 		field_marshal = {
+			traits = { war_hero media_personality }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 1
@@ -30,6 +34,7 @@ characters = {
 			}
 		}
 		corps_commander = {
+			traits = { politically_connected }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 3
@@ -46,6 +51,7 @@ characters = {
 			}
 		}
 		corps_commander = {
+			traits = { inflexible_strategist }
 			skill = 2
 			attack_skill = 4
 			defense_skill = 1

@@ -84,3 +84,171 @@ every_possible_country = {
 		}
 	}
 }
+every_possible_country = {
+	limit = {
+		NOT = {
+			has_country_flag = no_generic_theorist_air_ass
+			has_custom_army_chieves = yes
+			has_allowed_idea_with_traits = {
+				idea = army_theorist_air_ass
+				characters = yes
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_theorist_air_ass
+		name = generic_theorist_air_ass
+		advisor = {
+			slot = high_command
+			traits = {
+				army_theorist_air_ass
+			}
+			cost = 100
+		}
+		portraits = { 
+			army = { 
+				small = GFX_idea_generic_theorist_air_ass
+			}
+		}
+	}
+}
+every_possible_country = {
+	limit = {
+		NOT = {
+			has_country_flag = no_generic_theorist_regenerate
+			has_custom_army_chieves = yes
+			has_allowed_idea_with_traits = {
+				idea = army_theorist_regenerate
+				characters = yes
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_theorist_regenerate
+		name = generic_theorist_regenerate
+		advisor = {
+			slot = high_command
+			traits = {
+				army_theorist_regenerate
+			}
+			cost = 100
+		}
+		portraits = { 
+			army = { 
+				small = GFX_idea_generic_theorist_regenerate
+			}
+		}
+	}
+}
+every_possible_country = {
+	limit = {
+		NOT = {
+			has_country_flag = no_generic_theorist_air_battle
+			has_custom_army_chieves = yes
+			has_allowed_idea_with_traits = {
+				idea = army_theorist_air_battle
+				characters = yes
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_theorist_air_battle
+		name = generic_theorist_air_battle
+		advisor = {
+			slot = high_command
+			traits = {
+				army_theorist_air_battle
+			}
+			cost = 100
+		}
+		portraits = { 
+			army = { 
+				small = GFX_idea_generic_theorist_air_battle
+			}
+		}
+	}
+}
+every_possible_country = {
+	limit = {
+		NOT = {
+			has_country_flag = no_generic_theorist_tank_ass
+			has_custom_army_chieves = yes
+			has_allowed_idea_with_traits = {
+				idea = army_theorist_tank_ass
+				characters = yes
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_theorist_tank_ass
+		name = generic_theorist_tank_ass
+		advisor = {
+			slot = high_command
+			traits = {
+				army_theorist_tank_ass
+			}
+			cost = 100
+		}
+		portraits = { 
+			army = { 
+				small = GFX_idea_generic_theorist_tank_ass
+			}
+		}
+	}
+}
+every_possible_country = {
+	limit = {
+		NOT = {
+			has_country_flag = no_generic_theorist_xprienced_arty
+			has_custom_army_chieves = yes
+			has_allowed_idea_with_traits = {
+				idea = army_theorist_xprienced_arty
+				characters = yes
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_theorist_xprienced_arty
+		name = generic_theorist_xprienced_arty
+		advisor = {
+			slot = high_command
+			traits = {
+				army_theorist_xprienced_arty
+			}
+			cost = 100
+		}
+		portraits = { 
+			army = { 
+				small = GFX_idea_generic_theorist_xprienced_arty
+			}
+		}
+	}
+}
+every_possible_country = {
+	limit = {
+		NOT = {
+			has_country_flag = no_generic_theorist_logistic_genius
+			has_custom_army_chieves = yes
+			has_allowed_idea_with_traits = {
+				idea = army_theorist_logistic_genius
+				characters = yes
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_theorist_logistic_genius
+		name = generic_theorist_logistic_genius
+		advisor = {
+			slot = high_command
+			traits = {
+				army_theorist_logistic_genius
+			}
+			cost = 100
+		}
+		portraits = { 
+			army = { 
+				small = GFX_idea_generic_theorist_logistic_genius
+			}
+		}
+	}
+}

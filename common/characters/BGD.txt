@@ -9,15 +9,19 @@ characters = {
 		}
 		country_leader = {
 			desc = "BGD_stepan_tolmutov_desc"
-			ideology = militarists_subideology
-			traits = {}
+			ideology = reglamentism
+			traits = {
+				defender_of_the_homeland
+			}
 			expire = "2050.1.1.1"
 			id = -1
 		}
 		country_leader = {
-			desc = "BGD_stepan_tolmutov_desc"
+			desc = "BGD_statesman_stepan_tolmutov_desc"
 			ideology = statesmen_subideology
-			traits = {}
+			traits = {
+				defender_of_the_homeland
+			}
 			expire = "2050.1.1.1"
 			id = -1
 		}
@@ -33,6 +37,7 @@ characters = {
 				expert_delegator
 				logistics_wizard
 				organizer
+				war_hero
 			}
 		}
 	}
@@ -53,6 +58,7 @@ characters = {
 			traits = {
 				trait_engineer
 				trickster
+				bearer_of_artillery
 			}
 		}
 	}

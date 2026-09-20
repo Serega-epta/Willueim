@@ -10,6 +10,9 @@ characters = {
 			expire = "3333.1.1.1"
 			id = -1
 			desc = POLITICS_Yuriy_Podolika_DESC
+			traits = {
+				generallissimo
+			}
 		}
 	}
 	ARM_Sergey_Rogov = {
@@ -35,6 +38,7 @@ characters = {
 			}
 		}
 		field_marshal = {
+			traits = { war_hero }
 			skill = 1
 			attack_skill = 4
 			defense_skill = 2
@@ -42,10 +46,13 @@ characters = {
 			logistics_skill = 3
 		}
 		country_leader = {
-			ideology = militarists_subideology
+			ideology = revanshism
 			expire = "3333.1.1.1"
 			id = -1
 			desc = ARM_michael_onufrenko_desc
+			traits = {
+				generallissimo
+			}
 		}
 	}
 	ARM_eduard_varfolomeev = {
@@ -55,6 +62,7 @@ characters = {
 			}
 		}
 		corps_commander = {
+			traits = { inflexible_strategist }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1

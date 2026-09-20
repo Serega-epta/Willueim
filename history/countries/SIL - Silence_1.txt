@@ -9,6 +9,8 @@ set_technology = {
 	pre_war_OPV = 1
 	gw_artillery = 1
 	instruments_of_any_era = 1
+	basic_train = 1
+	motorised_infantry = 1
 }
 set_research_slots = 2
 set_politics = {
@@ -20,3 +22,7 @@ set_popularities = {
 }
 set_country_flag = no_war_with_LWV
 recruit_character = SIL_Varash
+add_opinion_modifier = {
+	target = CST
+	modifier = faithless
+}

@@ -19,6 +19,8 @@ set_technology = {
 	pre_war_OPV = 1
 	gw_artillery = 1
 	instruments_of_any_era = 1
+	basic_train = 1
+	motorised_infantry = 1
 }
 set_research_slots = 3
 set_convoys = 0
@@ -65,6 +67,30 @@ add_opinion_modifier = {
 }
 add_opinion_modifier = {
 	target = NMG
+	modifier = endless_hatred
+}
+add_opinion_modifier = {
+	target = AMR
+	modifier = endless_hatred
+}
+add_opinion_modifier = {
+	target = GER
+	modifier = endless_hatred
+}
+add_opinion_modifier = {
+	target = IBR
+	modifier = endless_hatred
+}
+add_opinion_modifier = {
+	target = FRA
+	modifier = endless_hatred
+}
+add_opinion_modifier = {
+	target = POL
+	modifier = endless_hatred
+}
+add_opinion_modifier = {
+	target = ITA
 	modifier = endless_hatred
 }
 recruit_character = ARM_Sergey_Rogov

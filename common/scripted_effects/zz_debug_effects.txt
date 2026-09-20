@@ -240,3 +240,13 @@ d_doc = {
 		}
 	}
 }
+d_ds = {
+	every_state = {
+		limit = {
+			NOT = {
+				is_owned_by = "---"
+			}
+		}
+		log = "[?THIS.GetID]"
+	}
+}

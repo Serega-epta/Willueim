@@ -35,7 +35,7 @@ t_virus = {
 		sp_land_generic_reward_test_failure_3
 	}
 	unique_prototype_rewards = {
-		sp_t_virus_testing = {
+		sp_t_virus_experiments_on_humans = {
 			fire_only_once = yes
 			threshold = { 
 				min = 25
@@ -52,9 +52,14 @@ t_virus = {
 						add_stability = -0.2
 						custom_override_tooltip = {
 							tooltip = {
-								localization_key = t_virus_more_lethal
+								localization_key = t_virus_more_lethal_1
 							}
-							set_country_flag = t_virus_more_lethal
+							add_to_variable = {
+								t_virus_power = 1
+							}
+							add_to_variable = {
+								t_virus_duration = 15
+							}
 						}
 						FROM = {
 							add_project_progress_ratio = constant:sp_progress.gain.medium
@@ -71,6 +76,79 @@ t_virus = {
 						add_political_power = 50
 						FROM = {
 							add_project_progress_ratio = constant:sp_progress.loss.medium
+						}
+					}
+				}
+			}
+		}
+		sp_t_virus_experiments_in_fields = {
+			fire_only_once = yes
+			threshold = { 
+				min = 45
+				max = 65
+			}
+			weight = {
+				base = 1000
+			}
+			#experiments in fields (make more stable, but loose stability)
+			option = {
+				token = sp_t_virus_conduct_the_experiment
+				iteration_output = {
+					country_effects = {
+						add_stability = -0.2
+					}
+				}
+			}
+			option = {
+				token = sp_t_virus_no_experiments
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.loss.medium
+						}
+					}
+				}
+			}
+		}
+		sp_t_virus_tranportation_way = {
+			fire_only_once = yes
+			threshold = { 
+				min = 65
+				max = 85
+			}
+			weight = {
+				base = 1000
+			}
+			#experiments in fields (make more stable, but loose stability)
+			option = {
+				token = sp_t_virus_glass_containers
+				iteration_output = {
+					country_effects = {
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = t_virus_more_lethal_2
+							}
+							add_to_variable = {
+								t_virus_duration = 15
+							}
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_t_virus_gas_chambers
+				iteration_output = {
+					country_effects = {
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = t_virus_more_lethal_3
+							}
+							add_to_variable = {
+								t_virus_power = 1
+							}
+							add_to_variable = {
+								t_virus_duration = -10
+							}
 						}
 					}
 				}

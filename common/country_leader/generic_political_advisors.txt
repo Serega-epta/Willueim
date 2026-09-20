@@ -1,17 +1,9 @@
 leader_traits = {
 	#ideology
-	clerc = {
+	conceptualist = {
 		random = no
-		political_power_factor = 0.05
-		statesmen_drift = 0.1
-	}
-	pagan = {
-		random = no
-		chthonism_drift = 0.1
-	}
-	priest = {
-		random = no
-		sacraments_drift = 0.1
+		conception_drift = 0.1
+		war_support_factor = 0.1
 	}
 	warrior = {
 		random = no
@@ -22,18 +14,37 @@ leader_traits = {
 	anarchist = {
 		random = no
 		free_people_drift = 0.1
+		army_org_regain = 0.1
 	}
 	young_scientist = {
 		random = no
 		technocracy_drift = 0.1
+		research_speed_factor = 0.05
 	}
 	liberal = {
 		random = no
 		humanists_drift = 0.1
+		army_speed_factor = 0.05
 	}
 	authority = {
 		random = no
 		bandits_drift = 0.1
+		non_core_manpower = 0.05
+	}
+	clerc = {
+		random = no
+		political_power_factor = 0.05
+		statesmen_drift = 0.1
+	}
+	pagan = {
+		random = no
+		chthonism_drift = 0.1
+		surrender_limit = 0.05
+	}
+	priest = {
+		random = no
+		sacraments_drift = 0.1
+		army_org_factor = 0.05
 	}
 	#advistors
 	health_minister = {
@@ -93,5 +104,37 @@ leader_traits = {
 		random = no
 		production_factory_efficiency_gain_factor = 0.1
 		production_factory_max_efficiency_factor = 0.05
+	}
+	theorist_air_ass = {
+		random = no
+		air_ace_generation_chance_factor = 0.1
+		experience_gain_air = 0.06
+	}
+	theorist_regenerate = {
+		random = no
+		army_morale_factor = 0.08
+		experience_gain_army = 0.06
+	}
+	theorist_air_battle = {
+		random = no
+		air_superiority_efficiency = 0.1
+		experience_gain_air = 0.06
+	}
+	theorist_tank_ass = {
+		random = no
+		army_armor_attack_factor = 0.05
+	    army_armor_defence_factor = 0.05
+		experience_gain_army = 0.06
+	}
+	theorist_xprienced_arty = {
+		random = no
+		army_artillery_attack_factor = 0.15
+		army_artillery_defence_factor = 0.1
+		experience_gain_army = 0.06
+	}
+	theorist_logistic_genius = {
+		random = no
+		attrition = -0.08
+		experience_gain_army = 0.06
 	}
 }

@@ -11,6 +11,8 @@ set_technology = {
 	tech_support = 1
 	gw_artillery = 1
 	instruments_of_any_era = 1
+	basic_train = 1
+	motorised_infantry = 1
 }
 set_research_slots = 2
 set_convoys = 0
@@ -23,3 +25,11 @@ set_popularities = {
 }
 
 recruit_character = CST_Shepherd_Vit
+add_opinion_modifier = {
+	target = COA
+	modifier = faithless
+}
+add_opinion_modifier = {
+	target = SIL
+	modifier = faithless
+}

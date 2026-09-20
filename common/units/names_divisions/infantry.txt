@@ -3,7 +3,7 @@ BANDIT_INF_01 = {
 	name = "Bandit formation"
 	for_countries = {}
 	can_use = {
-		has_government = bandits
+		always = yes
 	}
 	division_types = {
 		"infantry"
@@ -40,7 +40,7 @@ BAGROVIE_INF_01 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%d Bagrovie luchi"
+	fallback_name = "%d полк Багровых лучей"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -55,7 +55,7 @@ BAGROVIE_INF_02 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%d Bagroviy klin"
+	fallback_name = "%d полк Багровых клиньев"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -71,7 +71,7 @@ TVARI_INF_01 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%d Trari group"
+	fallback_name = "%d орда Тварей"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -87,38 +87,7 @@ PEKHOTNAYA_GRUPPA_01 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%d Pekhotnaya gruppa"
-	#TODO: add ordered names if want something special
-	#ordered = {
-	#	1 = { "1 Aussa Yekilili Sefari" }
-	#}
-}
-#Squads
-SQUAD_INF_01 = {
-	name = "Pervoe pokolenie squad"
-	for_countries = {}
-	can_use = {
-		always = yes
-	}
-	division_types = {
-		"infantry"
-	}
-	fallback_name = "%s First generation squad"
-	#TODO: add ordered names if want something special
-	#ordered = {
-	#	1 = { "1 Aussa Yekilili Sefari" }
-	#}
-}
-SQUAD_INF_02 = {
-	name = "Vtoroe pokolenie squad"
-	for_countries = {}
-	can_use = {
-		always = yes
-	}
-	division_types = {
-		"infantry"
-	}
-	fallback_name = "%s Second generation squad"
+	fallback_name = "%d-я пехотная группа"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -150,7 +119,7 @@ CORPS_INF_01 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%s Infantry Corps"
+	fallback_name = "%s-й пехотный полк"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -165,7 +134,7 @@ CORPS_INF_01 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%s Infantry Corps"
+	fallback_name = "%s-я пехотная группа"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -180,7 +149,7 @@ CORPS_INF_02 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%s Assault Corps"
+	fallback_name = "%s-й штурмовой полк"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -196,7 +165,7 @@ MOTORIZED_INF_01 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%d Infanterie-Division (mot)"
+	fallback_name = "%d-й моторизованный полк"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -212,7 +181,7 @@ LOYALISTI_INF_01 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%d Loyalist-Division"
+	fallback_name = "%d-я группа Лоялистов"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -228,7 +197,7 @@ HOLY_INF_01 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%s Sviatoe opolchenie"
+	fallback_name = "%s-е Святое воинство"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }
@@ -243,7 +212,7 @@ HOLY_INF_02 = {
 	division_types = {
 		"infantry"
 	}
-	fallback_name = "%s Bojiya dlan"
+	fallback_name = "%s-я Божья длань"
 	#TODO: add ordered names if want something special
 	#ordered = {
 	#	1 = { "1 Aussa Yekilili Sefari" }

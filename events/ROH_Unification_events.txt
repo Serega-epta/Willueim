@@ -81,6 +81,21 @@ news_event = {
 					tag = BLT
 					tag = WTR
 					tag = SIL
+					tag = SI1
+					tag = AMZ
+					tag = AMR
+					tag = ARC
+					tag = SCO
+					tag = BVS
+					tag = AFR
+					tag = IRN
+					tag = SWE
+					tag = BLK
+					tag = VST
+					tag = KVK
+					tag = MOS
+					tag = SWI
+					tag = MDT
 					tag = KRT
 					tag = DIS
 					tag = GER
@@ -88,6 +103,19 @@ news_event = {
 					tag = FRA
 					tag = IBR
 					tag = ITA
+					tag = VOZ
+					tag = KRT
+					tag = HOT
+					tag = HOH
+					tag = SIM
+					tag = TIP
+					tag = BAG
+					tag = MAD
+					tag = FHS
+					tag = YJY
+					tag = BL1
+					tag = KUH
+					tag = DIB
 				}
 			}
 			add_ideas = Time_goes_by
@@ -205,6 +233,47 @@ country_event = {
     		idea = Successful_raid
    			days = 60
 		}
+	}
+}
+
+country_event = {
+	id = seas_investigation.1
+	title = seas_investigation.1.t
+	desc = seas_investigation.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = seas_investigation.1.a
+	}
+}
+country_event = {
+	id = seas_investigation.2
+	title = seas_investigation.2.t
+	desc = seas_investigation.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = seas_investigation.2.a
+	}
+}
+country_event = {
+	id = seas_investigation.3
+	title = seas_investigation.3.t
+	desc = seas_investigation.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = seas_investigation.3.a
+	}
+}
+country_event = {
+	id = seas_investigation.4
+	title = seas_investigation.4.t
+	desc = seas_investigation.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = seas_investigation.4.a
 	}
 }
 

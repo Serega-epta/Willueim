@@ -1,0 +1,55 @@
+#SCOPE var:target_state, context - raid
+drop_t_virus = {
+	hidden_effect = {
+		#prepare state
+		if = {
+			limit = {
+				has_dynamic_modifier = t_virus_0
+				check_variable = {
+					var:actor_country.t_virus_power > 0
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = t_virus_0
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = t_virus_1
+				check_variable = {
+					var:actor_country.t_virus_power > 1
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = t_virus_1
+			}
+		}
+		if = {
+			limit = {
+				#most powerful, doesn`t need power checks
+				has_dynamic_modifier = t_virus_2
+			}
+			remove_dynamic_modifier = {
+				modifier = t_virus_2
+			}
+		}
+	}
+	set_temp_variable = {
+		tdays = 50
+	}
+	add_to_temp_variable = {
+		tdays = var:actor_country.t_virus_duration
+	}
+	multiply_temp_variable = {
+		tdays = duration_factor?1
+	}
+	meta_effect = {
+		text = {
+			add_dynamic_modifier = {
+				modifier = t_virus_[INDEX]
+				days = tdays
+			}
+		}
+		INDEX = "[?var:actor_country.t_virus_power?0]"
+	}
+}

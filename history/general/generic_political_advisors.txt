@@ -103,6 +103,40 @@ every_possible_country = {
 			}
 		}
 	}
+	#conception
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = no_generic_conception_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = conceptualist
+					characters = yes
+				}
+			}
+		}
+		generate_character = {
+			token_base = generic_conception_reformer
+			name = generic_conception_reformer
+			advisor = {
+				slot = advisor
+				traits = {
+					conceptualist
+				}
+				available = {
+					conception > 0.1
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+			portraits = { 
+				army = { 
+					small = GFX_idea_generic_conception_reformer
+				}
+			}
+		}
+	}
 	#militarists
 	if = {
 		limit = {
