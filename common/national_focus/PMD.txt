@@ -1,0 +1,201 @@
+focus_tree = {
+	id = PMD
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = PMD
+		}
+	}
+	default = no
+	focus = {
+		id = PMD_All_that_remains
+		cost = 1
+		x = 5
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 100
+			country_event = PMD_phase_one.1
+		}
+	}
+	focus = {
+		id = PMD_Army_Without_State
+		prerequisite = {
+			focus = PMD_All_that_remains
+		}
+		cost = 5
+		x = 5
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 20
+			add_stability = -0.05
+			country_event = PMD_phase_one.3
+		}
+	}
+	focus = {
+		id = PMD_Existential_enemy
+		prerequisite = {
+			focus = PMD_Army_Without_State
+		}
+		cost = 5
+		x = 5
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 20
+			add_war_support = 0.1
+			add_stability = -0.05
+			country_event = PMD_phase_one.5
+		}
+	}
+	focus = {
+		id = PMD_Reliable_Shield_of_Motherland
+		prerequisite = {
+			focus = PMD_Existential_enemy
+		}
+		cost = 5
+		x = 5
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 20
+			add_war_support = 0.1
+			add_stability = -0.05
+			country_event = PMD_phase_one.7
+		}
+	}
+	focus = {
+		id = PMD_Everything_for_front
+		prerequisite = {
+			focus = PMD_Reliable_Shield_of_Motherland
+		}
+		cost = 5
+		x = 4
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 20
+			add_stability = -0.05
+			country_event = PMD_phase_one.8
+		}
+	}
+	focus = {
+		id = PMD_Everything_for_victory
+		prerequisite = {
+			focus = PMD_Reliable_Shield_of_Motherland
+		}
+		cost = 5
+		x = 6
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = PMD_Oil_dependency
+		prerequisite = {
+			focus = PMD_Everything_for_front
+			focus = PMD_Everything_for_victory
+		}
+		cost = 5
+		x = 5
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 50
+			country_event = PMD_phase_one.9
+			add_ideas = PMD_Fuel_from_SDC
+		}
+	}
+	focus = {
+		id = PMD_Old_dog_new_tricks
+		prerequisite = {
+			focus = PMD_Oil_dependency
+		}
+		cost = 5
+		x = 5
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 50
+			country_event = PMD_phase_one.10
+			create_unit = {
+				division = "name = \" Ispravlentsy\" division_template = \"Ispravlentsy\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	focus = {
+		id = PMD_Only_OldMen_Are_Going_to_Battle
+		prerequisite = {
+			focus = PMD_Old_dog_new_tricks
+		}
+		cost = 5
+		x = 5
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_list = {
+				60 = {
+					country_event = PMD_phase_one.11
+				}
+				40 = {
+					country_event = PMD_phase_one.12
+				}
+			}
+		}
+	}
+	focus = {
+		id = PMD_Final_Assault
+		prerequisite = {
+			focus = PMD_Only_OldMen_Are_Going_to_Battle
+		}
+		cost = 5
+		x = 5
+		y = 9
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.1
+			add_stability 0.1
+			country_event = PMD_phase_one.13
+			declare_war_on = {
+                target = NMG
+                type = annex_everything
+            }
+			add_ideas = PMD_Our_last_campaign
+			hidden_effect  = {
+				NMG = {
+					country_event = NMG_phase_one.7
+					load_focus_tree = NMG_war
+					complete_national_focus = NMG_democracy_protocol
+				}
+			}
+		}
+	}
+}
+

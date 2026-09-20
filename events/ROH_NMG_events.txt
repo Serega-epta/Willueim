@@ -65,7 +65,10 @@ country_event = {
 	option = {
 		name = NMG_phase_one.5.a
 		ANR = {
-			annex_country = NMG
+			annex_country = {
+    			target = NMG
+    			transfer_troops = no
+			}
 		}
 	}
 }

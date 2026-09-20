@@ -1,11 +1,13 @@
 capital = 148
-set_stability = 1
-set_war_support = 0.94
-army_experience = 20
-oob = base
+set_stability = 0.64
+set_war_support = 0.89
+add_manpower = 11000
+oob = PMD
 add_ideas = {
-	PMD_preparations_for_war
-	PMD_hunger
+	PMD_People_without_future
+	PMD_Eternal_Night
+	PMD_Dwellers_of_Ruins
+	PMD_Reduced_ration
 	limited_recruting
 	atheism
 	long_shift
@@ -42,16 +44,21 @@ add_opinion_modifier = {
 }
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	infantry_weapons2 = 1
 	civilian_clothing = 1
 	old_world_uniforms = 1
+	local_uniform = 1
+	anti_radin_cloaks = 1
 	gw_artillery = 1
 	tech_support = 1
-	pre_war_OPV = 1
-	pre_war_fighter = 1
+	tech_engineers = 1
+	tech_field_hospital = 1
+	tech_gamekeepers = 1
+	instruments_of_any_era = 1
+	converted_workshops = 1
+	abandoned_mines = 1
+	resource_development_1 = 1
 }
-set_research_slots = 2
+set_research_slots = 0
 set_politics = {
 	ruling_party = militarists
 	elections_allowed = no
@@ -73,4 +80,52 @@ add_opinion_modifier = {
 add_opinion_modifier = {
 	target = NMG
 	modifier = endless_hatred
+}
+
+set_variable = {
+    var = provisions_var
+    value = 90
+}
+
+set_variable = {
+    var = consumption_of_provisions_var
+    value = -2
+}
+
+set_variable = {
+    var = mental_well_being_var
+    value = 60
+}
+
+set_variable = {
+    var = mental_well_being_change_var
+    value = -2
+}
+
+set_variable = {
+    var = expedition_provisions_var
+    value = 0
+}
+
+set_variable = {
+    var = carry_out_surplus_appropriation_var
+    value = 0
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 700
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_odejda_0
+	amount = 400
+}
+add_equipment_to_stockpile = {
+	type = infantry_odejda_1
+	amount = 200
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 200
 }

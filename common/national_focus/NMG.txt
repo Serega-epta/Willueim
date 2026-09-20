@@ -16,7 +16,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		will_lead_to_war_with = TRO
 		completion_reward = {
 			add_political_power = 50
 			country_event = NMG_phase_one.2
@@ -51,10 +50,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_county_flag = NMG_mil_flag
-			country_event = NMG.3
-			remove_idea = NMG_Norwegian_protests
-			remove_idea = NMG_activity_of_ULF
-			add_dynamic_modifier = NMG_increased_activity_of_ULF
+			country_event = NMG_phase_one.3
+			remove_ideas = NMG_Norwegian_protests
+			remove_ideas = NMG_activity_of_ULF
+			add_dynamic_modifier = {
+				modifier = NMG_increased_activity_of_ULF
+			}
 			set_variable = {
     			var = army_core_attack_factor_var
     			value = -0.3
@@ -247,7 +248,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_county_flag = NMG_dem_flag
-			country_event = NMG.4
+			country_event = NMG_phase_one.4
 			swap_ideas = {
 				remove_idea = NMG_activity_of_ULF
 				add_idea = NMG_decreased_activity_of_ULF
@@ -281,6 +282,7 @@ focus_tree = {
     			var = election_progress_var
     			value = 0
 			}
+			activate_mission = Suspicion_is_growing
 		}
 	}
 	focus = {
@@ -321,8 +323,8 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = {
     			var = Suspicion_var
-    			value = -20
-    			tooltip = remove_20_from_Suspicion_tt
+    			value = 20
+    			tooltip = add_20_to_Suspicion_tt
 			}
 			add_to_variable = {
     			var = Suspicion_growth_var
@@ -396,7 +398,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			clr_country_flag = NMG_elections_flag
-			country_event = NMG.6
+			country_event = NMG_phase_one.6
 			remove_idea = NMG_decreased_activity_of_ULF
 			add_political_power = 200
 			add_stability = 0.2
@@ -405,19 +407,22 @@ focus_tree = {
 				militarists = 40
 				humanists = 30
 			}
+			set_cosmetic_tag = NMG_dem
 			set_party_name = {
     			ideology = statesmen
     			name = NMG_dem_statesmen_party
+				long_name = NMG_dem_statesmen_party
 			}
 			set_party_name = {
     			ideology = militarists
     			name = NMG_dem_militarists_party
+				long_name = NMG_dem_militarists_party
 			}
 			set_party_name = {
     			ideology = humanists
     			name = NMG_dem_humanists_party
+				long_name = NMG_dem_humanists_party
 			}
-			set_cosmetic_tag = NMG_dem
 		}
 	}
 	focus = {
@@ -448,13 +453,13 @@ focus_tree = {
 	focus = {
 		id = NMG_democracy_protocol
 		cost = 2
-		x = 2
+		x = 3
 		y = 0
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			country_event = NMG.7
+			country_event = NMG_phase_one.7
 			remove_idea = NMG_Preparation_for_war
 			add_war_support = 0.05
 			add_offsite_building = { type = arms_factory level = 4 }
@@ -466,7 +471,7 @@ focus_tree = {
 			focus = NMG_democracy_protocol
 		}
 		cost = 2
-		x = 2
+		x = 3
 		y = 1
 		ai_will_do = {
 			factor = 10
@@ -492,7 +497,7 @@ focus_tree = {
 			focus = NMG_fire_of_patriotism
 		}
 		cost = 4
-		x = 2
+		x = 3
 		y = 2
 		ai_will_do = {
 			factor = 10
@@ -511,7 +516,7 @@ focus_tree = {
 			focus = NMG_understand_their_tactics
 		}
 		cost = 5
-		x = 2
+		x = 3
 		y = 3
 		ai_will_do = {
 			factor = 10
@@ -562,7 +567,7 @@ focus_tree = {
     		has_war = no
 		}
 		cost = 8
-		x = 2
+		x = 3
 		y = 4
 		ai_will_do = {
 			factor = 10
@@ -607,7 +612,7 @@ focus_tree = {
     		has_war = no
 		}
 		cost = 8
-		x = 3
+		x = 5
 		y = 4
 		ai_will_do = {
 			factor = 10
@@ -640,7 +645,7 @@ focus_tree = {
 			focus = NMG_round_up_collaborators
 		}
 		cost = 10
-		x = 2
+		x = 3
 		y = 5
 		ai_will_do = {
 			factor = 10
@@ -697,7 +702,7 @@ focus_tree = {
     		has_war = no
 		}
 		cost = 8
-		x = 2
+		x = 3
 		y = 6
 		ai_will_do = {
 			factor = 10
@@ -715,7 +720,7 @@ focus_tree = {
     		has_war = no
 		}
 		cost = 8
-		x = 3
+		x = 5
 		y = 6
 		ai_will_do = {
 			factor = 10
@@ -745,7 +750,7 @@ focus_tree = {
 			focus = NMG_establish_occupation_administrations
 		}
 		cost = 10
-		x = 2
+		x = 3
 		y = 7
 		ai_will_do = {
 			factor = 10
@@ -778,7 +783,7 @@ focus_tree = {
     		has_war = no
 		}
 		cost = 2
-		x = 2
+		x = 3
 		y = 8
 		ai_will_do = {
 			factor = 10

@@ -1,0 +1,14 @@
+on_actions = {
+	on_weekly_PMD = {
+		effect = {
+			add_to_variable = {
+    			var = provisions_var
+    			value = consumption_of_provisions_var
+			}
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = mental_well_being_change_var
+			}
+		}
+	}
+}

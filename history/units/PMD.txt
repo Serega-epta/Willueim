@@ -1,0 +1,66 @@
+division_template = {
+	name = "Pechotnaya gruppa"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 1 }
+	 	infantry = { x = 0 y = 2 }
+	 	infantry = { x = 1 y = 2 }
+	}
+    support = {
+		engineer = { x = 0 y = 0 }
+	}	
+	priority = 1
+}
+
+division_template = {
+	name = "Ispravlentsy"
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 1 }
+	 	light_infantry = { x = 0 y = 2 }
+	 	light_infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Sektanty"
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+    division = {
+	name = "Pechotnaya gruppa"
+	location = 103
+	division_template = "Pechotnaya gruppa"
+        start_experience_factor = 1
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+	}
+    division = {
+    name = "Ispravlentsy"
+    location = 6168
+    division_template = "Ispravlentsy"
+        start_experience_factor = 1
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+    name = "Sektanty"
+    location = 11031
+    division_template = "Sektanty"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+}

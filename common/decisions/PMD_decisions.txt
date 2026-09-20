@@ -1,0 +1,291 @@
+PMD_state_of_district = {
+	PMD_hold_Hour_of_Hate = {
+		priority = 0
+		#available = {  }
+		cost = 25
+		days_re_enable = 30
+		remove_effect = {
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = 5
+				tooltip = add_5_mental_tt
+			}
+			add_war_support = 0.05
+		}
+	}
+	PMD_conduct_drill = {
+		priority = 0
+		#available = {  }
+		cost = 50
+		days_re_enable = 30
+		remove_effect = {
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = 5
+				tooltip = add_5_mental_tt
+			}
+			add_stability = -0.02
+		}
+	}
+	PMD_conduct_exercises = {
+		priority = 0
+		#available = {  }
+		cost = 50
+		days_re_enable = 30
+		remove_effect = {
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = 5
+				tooltip = add_5_mental_tt
+			}
+			army_experience = 5
+			add_to_variable = {
+    			var = provisions_var
+    			value = -2
+				tooltip = remove_2_food_tt
+			}
+		}
+	}
+	PMD_carry_out_rotation_in_warehouse = {
+		priority = 0
+		#available = {  }
+		cost = 25
+		days_re_enable = 30
+		remove_effect = {
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = 5
+				tooltip = add_5_mental_tt
+			}
+			army_experience = 5
+			add_to_variable = {
+    			var = provisions_var
+    			value = -2
+				tooltip = remove_2_food_tt
+			}
+		}
+	}
+	PMD_increase_rations = {
+		priority = 0
+		available = {  
+			NOT = {
+				has_idea = PMD_Good_rations
+			}
+		}
+		cost = 25
+		days_re_enable = 30
+		remove_effect = {
+			IF = {
+				limit = {
+					has_idea = PMD_Decent_rations
+				}
+				swap_ideas = {
+					remove_idea = PMD_Decent_rations
+					add_idea = PMD_Good_rations
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = PMD_Reduced_ration
+				}
+				swap_ideas = {
+					remove_idea = PMD_Reduced_ration
+					add_idea = PMD_Decent_rations
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = PMD_Hunger_strike
+				}
+				swap_ideas = {
+					remove_idea = PMD_Hunger_strike
+					add_idea = PMD_Reduced_ration
+				}
+			}
+			add_to_variable = {
+    			var = mental_well_being_change_var
+    			value = 1
+				tooltip = remove_1_food_change_tt
+			}
+			add_to_variable = {
+    			var = consumption_of_provisions_var
+    			value = -1
+				tooltip = add_1_food_change_tt
+			}
+		}
+	}
+	PMD_decrease_rations = {
+		priority = 0
+		available = { 
+			NOT = {
+				has_idea = PMD_Hunger_strike
+			}
+		}
+		cost = 25
+		days_re_enable = 30
+		remove_effect = {
+			IF = {
+				limit = {
+					has_idea = PMD_Good_rations
+				}
+				swap_ideas = {
+					remove_idea = PMD_Good_rations
+					add_idea = PMD_Decent_rations
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = PMD_Decent_rations
+				}
+				swap_ideas = {
+					remove_idea = PMD_Decent_rations
+					add_idea = PMD_Reduced_ration
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = PMD_Reduced_ration
+				}
+				swap_ideas = {
+					remove_idea = PMD_Reduced_ration
+					add_idea = PMD_Hunger_strike
+				}
+			}
+			add_to_variable = {
+    			var = consumption_of_provisions_var
+    			value = 1
+				tooltip = remove_1_food_change_tt
+			}
+			add_to_variable = {
+    			var = mental_well_being_change_var
+    			value = -1
+				tooltip = add_1_mental_change_tt
+			}
+		}
+	}
+	PMD_use_stocks_of_alcohol = {
+		priority = 0
+		#available = {  }
+		cost = 50
+		days_re_enable = 30
+		remove_effect = {
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = 5
+				tooltip = add_5_mental_tt
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	PMD_send_soldiers_on_hunt = {
+		priority = 0
+		#available = {  }
+		cost = 25
+		days_re_enable = 30
+		remove_effect = {
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = 5
+				tooltip = add_5_mental_tt
+			}
+			add_to_variable = {
+    			var = provisions_var
+    			value = 2
+				tooltip = add_2_food_tt
+			}
+		}
+	}
+	PMD_concentrate_our_forces = {
+		priority = 0
+		visible = { 
+			has_completed_focus = PMD_Reliable_Shield_of_Motherland
+			check_variable = {
+    			concentrate_our_efforts_var < 4
+			}
+		}
+		cost = 50
+		days_re_enable = 30
+		remove_effect = {
+			add_to_variable = {
+    			var = concentrate_our_efforts_var
+    			value = 1
+			}
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = 1
+				tooltip = add_1_mental_tt
+			}
+			add_to_variable = {
+    			var = provisions_var
+    			value = -2
+				tooltip = remove_2_food_tt
+			}
+			create_unit = {
+				division = "name = \" Ispravlentsy\" division_template = \"Ispravlentsy\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	PMD_carry_out_surplus_appropriation = {
+		priority = 0
+		visible = { 
+			has_completed_focus = PMD_Everything_for_front
+			check_variable = {
+    			carry_out_surplus_appropriation_var < 4
+			}
+		}
+		cost = 50
+		days_re_enable = 30
+		remove_effect = {
+			add_to_variable = {
+    			var = carry_out_surplus_appropriation_var
+    			value = 1
+			}
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = -4
+				tooltip = remove_4_mental_tt
+			}
+			add_to_variable = {
+    			var = provisions_var
+    			value = 10
+				tooltip = add_10_food_tt
+			}
+		}
+	}
+	PMD_outfit_expedition = {
+		priority = 0
+		visible = { 
+			has_completed_focus = PMD_Everything_for_victory
+		}
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			country_event = PMD_expedition.1
+		}
+	}
+	PMD_meat_from_mass_grave = {
+		priority = 0
+		visible = { 
+			check_variable = {
+    			provisions_var < 6
+			}
+		 }
+		cost = 25
+		fire_only_once = yes
+		remove_effect = {
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = -50
+				tooltip = remove_50_mental_tt
+			}
+			add_to_variable = {
+    			var = provisions_var
+    			value = 100
+				tooltip = add_100_food_tt
+			}
+		}
+	}
+
+}

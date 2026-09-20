@@ -1,0 +1,655 @@
+add_namespace = PMD_phase_one
+add_namespace = PMD_expedition
+
+#И вновь на одного меньше, 1 часть
+country_event = {
+	id = PMD_phase_one.1
+	title = PMD_phase_one.1.t
+	desc = PMD_phase_one.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.1.a
+		country_event = PMD_phase_one.2
+	}
+}
+
+#И вновь на одного меньше, 2 часть
+country_event = {
+	id = PMD_phase_one.2
+	title = PMD_phase_one.2.t
+	desc = PMD_phase_one.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.2.a
+	}
+}
+
+#Огоньки, 1 часть
+country_event = {
+	id = PMD_phase_one.3
+	title = PMD_phase_one.3.t
+	desc = PMD_phase_one.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.3.a
+		country_event = PMD_phase_one.4
+	}
+}
+
+
+#Огоньки, 2 часть
+country_event = {
+	id = PMD_phase_one.4
+	title = PMD_phase_one.4.t
+	desc = PMD_phase_one.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.4.a
+	}
+}
+
+#Недобитый враг, 1 часть
+country_event = {
+	id = PMD_phase_one.5
+	title = PMD_phase_one.5.t
+	desc = PMD_phase_one.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.5.a
+		country_event = PMD_phase_one.6
+	}
+}
+
+#Недобитый враг, 2 часть
+country_event = {
+	id = PMD_phase_one.6
+	title = PMD_phase_one.6.t
+	desc = PMD_phase_one.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.6.a
+	}
+}
+
+#Плутон 2
+country_event = {
+	id = PMD_phase_one.7
+	title = PMD_phase_one.7.t
+	desc = PMD_phase_one.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.7.a
+	}
+}
+
+#Продразвёрстка
+country_event = {
+	id = PMD_phase_one.8
+	title = PMD_phase_one.8.t
+	desc = PMD_phase_one.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.8.a
+		add_to_variable = {
+    			var = provisions_var
+    			value = 20
+				tooltip = add_20_food_tt
+			}
+	}
+	option = {
+		name = PMD_phase_one.8.b
+		add_to_variable = {
+    			var = provisions_var
+    			value = 40
+				tooltip = add_40_food_tt
+			}
+	}
+}
+
+#Нефтяная игла
+country_event = {
+	id = PMD_phase_one.9
+	title = PMD_phase_one.9.t
+	desc = PMD_phase_one.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.9.a
+	}
+}
+
+#Я не Саша
+country_event = {
+	id = PMD_phase_one.10
+	title = PMD_phase_one.10.t
+	desc = PMD_phase_one.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.10.a
+	}
+}
+
+#Успешная разведка
+country_event = {
+	id = PMD_phase_one.11
+	title = PMD_phase_one.11.t
+	desc = PMD_phase_one.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.11.a
+	}
+}
+
+#Всё пошло не по плану
+country_event = {
+	id = PMD_phase_one.12
+	title = PMD_phase_one.12.t
+	desc = PMD_phase_one.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.12.a
+	}
+}
+
+#Новая цель
+country_event = {
+	id = PMD_phase_one.13
+	title = PMD_phase_one.13.t
+	desc = PMD_phase_one.13.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.13.a
+	}
+}
+
+#Суп
+country_event = {
+	id = PMD_phase_one.14
+	title = PMD_phase_one.14.t
+	desc = PMD_phase_one.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.14.a
+	}
+}
+
+#Суп
+country_event = {
+	id = PMD_phase_one.15
+	title = PMD_phase_one.15.t
+	desc = PMD_phase_one.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_phase_one.15.a
+	}
+}
+
+#Еды больше нет
+country_event = {
+	id = PMD_phase_one.16
+	title = PMD_phase_one.16.t
+	desc = PMD_phase_one.16.d
+	fire_only_once = yes
+	trigger = {
+		tag = PMD
+		check_variable = {
+    		var = provisions_var
+    		value = 0
+    		compare = less_than_or_equals
+		}
+	}
+	option = {
+		name = PMD_phase_one.16.a
+		ANR = {
+			annex_country = {
+    			target = PMD
+    			transfer_troops = no
+			}
+		}
+	}
+}
+
+#Нвдежды больше нет
+country_event = {
+	id = PMD_phase_one.17
+	title = PMD_phase_one.17.t
+	desc = PMD_phase_one.17.d
+	fire_only_once = yes
+	trigger = {
+		tag = PMD
+		check_variable = {
+    		var = mental_well_being_var
+    		value = 0
+    		compare = less_than_or_equals
+		}
+	}
+	option = {
+		name = PMD_phase_one.17.a
+		set_politics = {
+    		ruling_party = sacraments
+    		elections_allowed = no
+		}
+		load_focus_tree = anarchy_focus_tree
+	}
+}
+
+
+#Экспедиция
+country_event = {
+	id = PMD_expedition.1
+	title = PMD_expedition.1.t
+	desc = PMD_expedition.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.1.a
+		set_variable = {
+    		var = expedition_provisions_var
+    		value = 6
+		}
+		add_to_variable = {
+    		var = provisions_var
+    		value = -6
+		}
+		country_event = {
+    		id = PMD_expedition.2
+    		days = 2
+		}
+	}
+	option = {
+		name = PMD_expedition.1.b
+		set_variable = {
+    		var = expedition_provisions_var
+    		value = 12
+		}
+		add_to_variable = {
+    		var = provisions_var
+    		value = -12
+		}
+		country_event = {
+    		id = PMD_expedition.2
+    		days = 2
+		}
+	}
+	option = {
+		name = PMD_expedition.1.c
+		set_variable = {
+    		var = expedition_provisions_var
+    		value = 18
+		}
+		add_to_variable = {
+    		var = provisions_var
+    		value = -18
+		}
+		country_event = {
+    		id = PMD_expedition.2
+    		days = 2
+		}
+	}
+	option = {
+		name = PMD_expedition.1.d
+		set_variable = {
+    		var = expedition_provisions_var
+    		value = 20
+		}
+		add_to_variable = {
+    		var = provisions_var
+    		value = -20
+		}
+		country_event = {
+    		id = PMD_expedition.2
+    		days = 2
+		}
+	}
+}
+
+#Записи из экспедиции Беляева 2 день
+country_event = {
+	id = PMD_expedition.2
+	title = PMD_expedition.2.t
+	desc = PMD_expedition.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.2.a
+		country_event = PMD_expedition.10
+	}
+	option = {
+		name = PMD_expedition.2.b
+		country_event = {
+    		id = PMD_expedition.3
+    		days = 2
+		}
+		add_to_variable = {
+    		var = expedition_provisions_var
+    		value = -2
+		}
+	}
+}
+
+#Записи из экспедиции Беляева 4 день
+country_event = {
+	id = PMD_expedition.3
+	title = PMD_expedition.3.t
+	desc = PMD_expedition.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.3.a
+		set_country_falg = expedition_1_flag
+		country_event = PMD_expedition.10
+	}
+	option = {
+		name = PMD_expedition.3.b
+		country_event = {
+    		id = PMD_expedition.4
+    		days = 3
+		}
+		add_to_variable = {
+    		var = expedition_provisions_var
+    		value = -3
+		}
+	}
+}
+
+#Записи из экспедиции Беляева 7 день
+country_event = {
+	id = PMD_expedition.4
+	title = PMD_expedition.4.t
+	desc = PMD_expedition.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.4.a
+		IF = {
+			limit = {
+				check_variable = {
+    				expedition_provisions_var > 6
+				}
+				clr_country_falg = expedition_1_flag
+				set_country_falg = expedition_2_flag
+				add_to_variable = {
+    				var = expedition_provisions_var
+    				value = -7
+				}
+				hidden_effect = { country_event = PMD_expedition.10 }
+			}
+		}
+		else = {
+			hidden_effect = { country_event = PMD_expedition.6 }
+		}
+	}
+	option = {
+		name = PMD_expedition.4.b
+		IF = {
+			limit = {
+				check_variable = {
+    				expedition_provisions_var > 2
+				}
+				add_to_variable = {
+    				var = expedition_provisions_var
+    				value = -3
+				}
+				hidden_effect = { country_event = PMD_expedition.5 }
+			}
+		}
+		else = {
+			hidden_effect = { country_event = PMD_expedition.6 }
+		}
+	}
+}
+
+#Записи из экспедиции Беляева 10 день
+country_event = {
+	id = PMD_expedition.5
+	title = PMD_expedition.5.t
+	desc = PMD_expedition.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.5.a
+		IF = {
+			limit = {
+				check_variable = {
+    				expedition_provisions_var > 9
+				}
+				add_to_variable = {
+    				var = expedition_provisions_var
+    				value = -10
+				}
+				hidden_effect = { country_event = PMD_expedition.10 }
+			}
+		}
+		else = {
+			hidden_effect = { country_event = PMD_expedition.6 }
+		}
+	}
+	option = {
+		name = PMD_expedition.5.b
+		IF = {
+			limit = {
+				check_variable = {
+    				expedition_provisions_var > 0
+				}
+			add_to_variable = {
+    			var = expedition_provisions_var
+    			value = -1
+			}
+				hidden_effect = {
+					random_list = {
+						60 = {
+							country_event = PMD_expedition.8
+						}
+						30 = {
+							country_event = PMD_expedition.7
+						}
+						10 = {
+							country_event = PMD_expedition.9
+						}
+					}
+				}
+			}
+		}
+		else = {
+			hidden_effect = { country_event = PMD_expedition.6 }
+		}
+	}
+}
+
+#Записи из экспедиции Беляева ? день
+country_event = {
+	id = PMD_expedition.6
+	title = PMD_expedition.6.t
+	desc = PMD_expedition.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.6.a
+		add_manpower = -6
+		add_war_support = -0.05
+		add_stability = -0.05
+		add_to_variable = {
+    		var = mental_well_being_var
+    		value = -5
+		}
+	}
+}
+
+#Записи из экспедиции Беляева 11 день пустота
+country_event = {
+	id = PMD_expedition.7
+	title = PMD_expedition.7.t
+	desc = PMD_expedition.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.7.a
+		IF = {
+			limit = {
+				check_variable = {
+    				expedition_provisions_var > 10
+				}
+				add_to_variable = {
+    				var = expedition_provisions_var
+    				value = -11
+				}
+				hidden_effect = { country_event = PMD_expedition.10 }
+			}
+		}
+		else = {
+			hidden_effect = { country_event = PMD_expedition.6 }
+		}
+	}
+}
+
+#Записи из экспедиции Беляева 11 день сектанты
+country_event = {
+	id = PMD_expedition.8
+	title = PMD_expedition.8.t
+	desc = PMD_expedition.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.8.a
+		IF = {
+			limit = {
+				check_variable = {
+    				expedition_provisions_var > 10
+				}
+				clr_country_falg = expedition_2_flag
+				set_country_falg = expedition_3_flag
+				add_to_variable = {
+    				var = expedition_provisions_var
+    				value = -11
+				}
+				hidden_effect = { country_event = PMD_expedition.10 }
+			}
+		}
+		else = {
+			hidden_effect = { country_event = PMD_expedition.6 }
+		}
+	}
+	option = {
+		name = PMD_expedition.8.b
+		IF = {
+			limit = {
+				check_variable = {
+    				expedition_provisions_var > 10
+				}
+				clr_country_falg = expedition_2_flag
+				set_country_falg = expedition_3_flag
+				add_stability = -0.1
+				add_to_variable = {
+    				var = mental_well_being_var
+    				value = -10
+					tooltip = remove_10_mental_tt
+				}
+				add_to_variable = {
+    				var = expedition_provisions_var
+    				value = -11
+				}
+				hidden_effect = { country_event = PMD_expedition.6 }
+			}
+		}
+		else = {
+			hidden_effect = { country_event = PMD_expedition.6 }
+		}
+	}
+}
+
+#Записи из экспедиции Беляева 11 день смерть
+country_event = {
+	id = PMD_expedition.9
+	title = PMD_expedition.9.t
+	desc = PMD_expedition.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.9.a
+		add_manpower = -6
+		add_stability = -0.05
+		add_to_variable = {
+    		var = mental_well_being_var
+    		value = -5
+		}
+	}
+}
+
+#Экспедиция возвращается
+country_event = {
+	id = PMD_expedition.10
+	title = PMD_expedition.10.t
+	desc = PMD_expedition.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PMD_expedition.10.a
+		IF = {
+			limit = {
+				has_country_flag = expedition_1_flag
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = civilian_clothing
+				amount = 200
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = expedition_2_flag
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 600
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+			add_equipment_to_stockpile = {
+				type = civilian_clothing
+				amount = 300
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = expedition_3_flag
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = civilian_clothing
+				amount = 1000
+			}
+		}
+	}
+}
+
+
