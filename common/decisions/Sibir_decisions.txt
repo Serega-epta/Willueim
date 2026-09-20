@@ -1,5 +1,5 @@
 Creation_of_medical_infrastructure = {
-    Build_new_hospitals = {
+	Build_new_hospitals = {
 		icon = GFX_decision_Build_new_hospitals
 		visible = {
 			
@@ -10,7 +10,7 @@ Creation_of_medical_infrastructure = {
 		cost = 90
 		days_remove = 90
 		days_re_enable = 30
-        modifier = {
+		modifier = {
 			civilian_factory_use = 3
 		}
 		complete_effect = {
@@ -22,19 +22,19 @@ Creation_of_medical_infrastructure = {
 				vaccine_progress_amount = 10
 			}
 			add_to_variable = {
-                var = vaccine_progress_var
-                value = 10
-            }
-            random_owned_state = {
-                add_building_construction = {
-                    type = infrastructure
-                    level = 1
-                    instant_build = yes
-                }
-            }
+				var = vaccine_progress_var
+				value = 10
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
-    Increase_investment_in_medicine = {
+	Increase_investment_in_medicine = {
 		icon = GFX_decision_Increase_investment_in_medicine
 		visible = {
 			
@@ -45,7 +45,7 @@ Creation_of_medical_infrastructure = {
 		cost = 45
 		days_remove = 45
 		days_re_enable = 15
-        modifier = {
+		modifier = {
 			civilian_factory_use = 2
 		}
 		complete_effect = {
@@ -61,16 +61,16 @@ Creation_of_medical_infrastructure = {
 				vaccine_progress_amount = 2.5
 			}
 			add_to_variable = {
-                var = vaccine_progress_var
-                value = 15
-            }
+				var = vaccine_progress_var
+				value = 15
+			}
 			add_to_variable = {
-                var = monthly_vaccine_progress_var
-                value = 2.5
-            }
+				var = monthly_vaccine_progress_var
+				value = 2.5
+			}
 		}
 	}
-    Expand_medical_faculties = {
+	Expand_medical_faculties = {
 		icon = GFX_decision_Expand_medical_faculties
 		visible = {
 			
@@ -81,7 +81,7 @@ Creation_of_medical_infrastructure = {
 		cost = 30
 		days_remove = 30
 		days_re_enable = 15
-        modifier = {
+		modifier = {
 			civilian_factory_use = 2
 		}
 		complete_effect = {
@@ -93,12 +93,12 @@ Creation_of_medical_infrastructure = {
 				vaccine_progress_amount = 1.5
 			}
 			add_to_variable = {
-                var = monthly_vaccine_progress_var
-                value = 1.5
-            }
+				var = monthly_vaccine_progress_var
+				value = 1.5
+			}
 		}
 	}
-    Establish_Academy_of_Medical_Sciences = {
+	Establish_Academy_of_Medical_Sciences = {
 		icon = GFX_decision_Establish_Academy_of_Medical_Sciences
 		visible = {
 			
@@ -106,10 +106,10 @@ Creation_of_medical_infrastructure = {
 		available = {
 			
 		}
-        fire_only_once = yes
+		fire_only_once = yes
 		cost = 125
 		days_remove = 180
-        modifier = {
+		modifier = {
 			civilian_factory_use = 5
 		}
 		complete_effect = {
@@ -121,14 +121,14 @@ Creation_of_medical_infrastructure = {
 				vaccine_progress_amount = 10
 			}
 			add_to_variable = {
-                var = vaccine_progress_var
-                value = 10
-            }
-            capital_scope = {
-                add_dynamic_modifier = {
-                    modifier = Presence_of_Academy_of_Medical_Sciences
-                }
-            }
+				var = vaccine_progress_var
+				value = 10
+			}
+			capital_scope = {
+				add_dynamic_modifier = {
+					modifier = Presence_of_Academy_of_Medical_Sciences
+				}
+			}
 		}
 	}
 }
@@ -141,7 +141,7 @@ Collection_of_genetic_material = {
 		}
 		available = {
 			has_equipment = {
-    			infantry_equipment_1 > 499
+				infantry_equipment_1 > 499
 			}
 		}
 		cost = 30
@@ -150,8 +150,8 @@ Collection_of_genetic_material = {
 
 		complete_effect = {
 			add_equipment_to_stockpile = {
-    			type = infantry_equipment
-    			amount = -500
+				type = infantry_equipment
+				amount = -500
 			}
 		}
 		remove_effect = {
@@ -160,9 +160,9 @@ Collection_of_genetic_material = {
 				vaccine_progress_amount = 5
 			}
 			add_to_variable = {
-                var = vaccine_progress_var
-                value = 5
-            }
+				var = vaccine_progress_var
+				value = 5
+			}
 			set_country_flag = Expedition_beyond_Urals_flag
 		}
 	}
@@ -173,13 +173,13 @@ Collection_of_genetic_material = {
 		}
 		available = {
 			has_equipment = {
-    			infantry_equipment_1 > 1499
+				infantry_equipment_1 > 1499
 			}
 			has_equipment = {
-    			motorized_equipment > 74
+				motorized_equipment > 74
 			}
 			has_equipment = {
-    			infantry_fighting_vehicle_equipment > 14
+				infantry_fighting_vehicle_equipment > 14
 			}
 		}
 		cost = 45
@@ -187,16 +187,16 @@ Collection_of_genetic_material = {
 		days_re_enable = 30
 		complete_effect = {
 			add_equipment_to_stockpile = {
-    			type = infantry_equipment
-    			amount = -1500
+				type = infantry_equipment
+				amount = -1500
 			}
 			add_equipment_to_stockpile = {
-    			type = motorized_equipment
-    			amount = -75
+				type = motorized_equipment
+				amount = -75
 			}
 			add_equipment_to_stockpile = {
-    			type = infantry_fighting_vehicle_equipment
-    			amount = -15
+				type = infantry_fighting_vehicle_equipment
+				amount = -15
 			}
 		}
 		remove_effect = {
@@ -205,9 +205,9 @@ Collection_of_genetic_material = {
 				vaccine_progress_amount = 2.5
 			}
 			add_to_variable = {
-                var = monthly_vaccine_progress_var
-                value = 2.5
-            }
+				var = monthly_vaccine_progress_var
+				value = 2.5
+			}
 			set_country_flag = Willuim_catching_flag
 		}
 	}
@@ -237,9 +237,9 @@ Collection_of_genetic_material = {
 				vaccine_progress_amount = 5
 			}
 			add_to_variable = {
-                var = vaccine_progress_var
-                value = 5
-            }
+				var = vaccine_progress_var
+				value = 5
+			}
 		}
 	}
 	Send_expedition_to_Red_Forests = {
@@ -253,10 +253,10 @@ Collection_of_genetic_material = {
 				has_country_flag = Expedition_beyond_Urals_flag
 			}
 			has_equipment = {
-    			infantry_equipment_1 > 2499
+				infantry_equipment_1 > 2499
 			}
 			has_equipment = {
-    			support_equipment > 999
+				support_equipment > 999
 			}
 		}
 		cost = 120
@@ -264,12 +264,12 @@ Collection_of_genetic_material = {
 		days_re_enable = 30
 		complete_effect = {
 			add_equipment_to_stockpile = {
-    			type = infantry_equipment
-    			amount = -2500
+				type = infantry_equipment
+				amount = -2500
 			}
 			add_equipment_to_stockpile = {
-    			type = support_equipment
-    			amount = -1000
+				type = support_equipment
+				amount = -1000
 			}
 		}
 		remove_effect = {
@@ -278,9 +278,9 @@ Collection_of_genetic_material = {
 				vaccine_progress_amount = 7.5
 			}
 			add_to_variable = {
-                var = monthly_vaccine_progress_var
-                value = 7.5
-            }
+				var = monthly_vaccine_progress_var
+				value = 7.5
+			}
 		}
 	}
 }
@@ -297,7 +297,7 @@ Vaccine_development = {
 		cost = 150
 		days_remove = 90
 		fire_only_once = yes
-        modifier = {
+		modifier = {
 			civilian_factory_use = 5
 		}
 		complete_effect = {
@@ -309,9 +309,9 @@ Vaccine_development = {
 				vaccine_progress_amount = 15
 			}
 			add_to_variable = {
-                var = vaccine_progress_var
-                value = 15
-            }
+				var = vaccine_progress_var
+				value = 15
+			}
 		}
 	}
 	Study_of_pathogen_mutagenic_resistance = {
@@ -325,7 +325,7 @@ Vaccine_development = {
 		cost = 45
 		days_remove = 45
 		days_re_enable = 30
-        modifier = {
+		modifier = {
 			civilian_factory_use = 4
 			research_speed_factor = -0.05
 		}
@@ -338,9 +338,9 @@ Vaccine_development = {
 				vaccine_progress_amount = 2.5
 			}
 			add_to_variable = {
-                var = monthly_vaccine_progress_var
-                value = 2.5
-            }
+				var = monthly_vaccine_progress_var
+				value = 2.5
+			}
 		}
 	}
 	Sequencing_of_pathogen_genetic_material = {
@@ -354,7 +354,7 @@ Vaccine_development = {
 		cost = 90
 		days_remove = 90
 		fire_only_once = yes
-        modifier = {
+		modifier = {
 			civilian_factory_use = 7
 			research_speed_factor = -0.1
 		}
@@ -367,9 +367,9 @@ Vaccine_development = {
 				vaccine_progress_amount = 15
 			}
 			add_to_variable = {
-                var = vaccine_progress_var
-                value = 15
-            }
+				var = vaccine_progress_var
+				value = 15
+			}
 		}
 	}
 	Experimental_acceleration_of_antibody_response = {
@@ -383,7 +383,7 @@ Vaccine_development = {
 		cost = 125
 		days_remove = 45
 		days_re_enable = 30
-        modifier = {
+		modifier = {
 			civilian_factory_use = 10
 			research_speed_factor = -0.25
 		}
@@ -396,9 +396,9 @@ Vaccine_development = {
 				vaccine_progress_amount = 7.5
 			}
 			add_to_variable = {
-                var = monthly_vaccine_progress_var
-                value = 7.5
-            }
+				var = monthly_vaccine_progress_var
+				value = 7.5
+			}
 		}
 	}
 	Development_of_RNA_and_DNA_vaccines = {
@@ -412,7 +412,7 @@ Vaccine_development = {
 		cost = 250
 		days_remove = 45
 		fire_only_once = yes
-        modifier = {
+		modifier = {
 			civilian_factory_use = 15
 			research_speed_factor = -0.5
 		}
@@ -425,9 +425,9 @@ Vaccine_development = {
 				vaccine_progress_amount = 25
 			}
 			add_to_variable = {
-                var = vaccine_progress_var
-                value = 25
-            }
+				var = vaccine_progress_var
+				value = 25
+			}
 		}
 	}
 }
@@ -444,7 +444,7 @@ Vaccine_trials = {
 		cost = 300
 		days_remove = 30
 		fire_only_once = yes
-        modifier = {
+		modifier = {
 			civilian_factory_use = 20
 		}
 		complete_effect = {
@@ -461,16 +461,16 @@ Cutting_out_tumor = {
 		icon = GFX_decision_Destruction_of_spire
 		available = {
 			has_equipment = {
-    			infantry_equipment_1 > 2499
+				infantry_equipment_1 > 2499
 			}
 			has_equipment = {
-    			motorized_equipment > 149
+				motorized_equipment > 149
 			}
 			has_equipment = {
-    			infantry_fighting_vehicle_equipment > 24
+				infantry_fighting_vehicle_equipment > 24
 			}
 			has_equipment = {
-    			artillery_equipment > 24
+				artillery_equipment > 24
 			}
 		}
 		target_trigger = {
@@ -502,20 +502,20 @@ Cutting_out_tumor = {
 				}
 			}
 			add_equipment_to_stockpile = {
-    			type = infantry_equipment
-    			amount = -2500
+				type = infantry_equipment
+				amount = -2500
 			}
 			add_equipment_to_stockpile = {
-    			type = motorized_equipment
-    			amount = -150
+				type = motorized_equipment
+				amount = -150
 			}
 			add_equipment_to_stockpile = {
-    			type = infantry_fighting_vehicle_equipment
-    			amount = -25
+				type = infantry_fighting_vehicle_equipment
+				amount = -25
 			}
 			add_equipment_to_stockpile = {
-    			type = artillery_equipment
-    			amount = -25
+				type = artillery_equipment
+				amount = -25
 			}
 		}
 	}
@@ -556,19 +556,19 @@ Cutting_out_tumor = {
 		icon = GFX_decision_Destroy_central_spire
 		available = {
 			has_equipment = {
-    			infantry_equipment_1 > 1499
+				infantry_equipment_1 > 1499
 			}
 			has_equipment = {
-    			motorized_equipment > 1499
+				motorized_equipment > 1499
 			}
 			has_equipment = {
-    			infantry_fighting_vehicle_equipment > 249
+				infantry_fighting_vehicle_equipment > 249
 			}
 			has_equipment = {
-    			artillery_equipment > 249
+				artillery_equipment > 249
 			}
 			has_equipment = {
-    			pre_war_OPV_equipment_archetype > 149
+				pre_war_OPV_equipment_archetype > 149
 			}
 		}
 		target_trigger = {
@@ -587,24 +587,24 @@ Cutting_out_tumor = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-    			type = infantry_equipment
-    			amount = -15000
+				type = infantry_equipment
+				amount = -15000
 			}
 			add_equipment_to_stockpile = {
-    			type = motorized_equipment
-    			amount = -1500
+				type = motorized_equipment
+				amount = -1500
 			}
 			add_equipment_to_stockpile = {
-    			type = infantry_fighting_vehicle_equipment
-    			amount = -250
+				type = infantry_fighting_vehicle_equipment
+				amount = -250
 			}
 			add_equipment_to_stockpile = {
-    			type = artillery_equipment
-    			amount = -250
+				type = artillery_equipment
+				amount = -250
 			}
 			add_equipment_to_stockpile = {
-    			type = pre_war_OPV_equipment_archetype
-    			amount = -150
+				type = pre_war_OPV_equipment_archetype
+				amount = -150
 			}
 			annex_country = {
 				target = BLS

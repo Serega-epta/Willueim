@@ -150,7 +150,7 @@ Unification_campaign = {
 
 
 
-    Finnish_Unification_campaign = {
+	Finnish_Unification_campaign = {
 		available = {
 			all_other_country = {
 				OR = {
@@ -168,32 +168,32 @@ Unification_campaign = {
 				modifier = Motherland_Then_now_henceforth
 			}
 			set_variable = {
-    			var = monthly_population_var
-    			value = -0.9
+				var = monthly_population_var
+				value = -0.9
 			}
 			set_variable = {
-    			var = production_speed_industrial_complex_factor_var
-    			value = 0.5
+				var = production_speed_industrial_complex_factor_var
+				value = 0.5
 			}
 			set_variable = {
-    			var = production_speed_infrastructure_factor_var
-    			value = 0.5
+				var = production_speed_infrastructure_factor_var
+				value = 0.5
 			}
 			set_variable = {
-    			var = required_garrison_factor_var
-    			value = -0.7
+				var = required_garrison_factor_var
+				value = -0.7
 			}
 			set_variable = {
-    			var = weekly_manpower_var
-    			value = -1000
+				var = weekly_manpower_var
+				value = -1000
 			}
 			set_variable = {
-    			var = compliance_growth_on_our_occupied_states_var
-    			value = 0.6
+				var = compliance_growth_on_our_occupied_states_var
+				value = 0.6
 			}
 			set_variable = {
-    			var = red_forest_expiditions
-    			value = 1
+				var = red_forest_expiditions
+				value = 1
 			}
 		}
 		ai_will_do = {
@@ -437,8 +437,8 @@ Unification = {
 				set_state_flag = communication_restored
 				add_building_construction = {
 					type = radar_station
-    				level = 3
-    				instant_build = yes
+					level = 3
+					instant_build = yes
 				}
 			}
 			add_to_array = {
@@ -845,16 +845,21 @@ Unification = {
 		available = {
 			1001 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
-
 		modifier = {
 			civilian_factory_use = 20
 		}
-
 		remove_effect = {
 			1001 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -862,13 +867,10 @@ Unification = {
 				}
 			}
 		}
-
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 1001 }
 		}
-
-        cancel_effect = {  }
-
+		cancel_effect = {  }
 		ai_will_do = {
 			base = 25
 		}
@@ -880,6 +882,12 @@ Unification = {
 		available = {
 			260 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -890,6 +898,7 @@ Unification = {
 
 		remove_effect = {
 			260 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 2
@@ -898,11 +907,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 260 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -915,6 +924,12 @@ Unification = {
 		available = {
 			252 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -925,6 +940,7 @@ Unification = {
 
 		remove_effect = {
 			252 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 2
@@ -933,11 +949,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 252 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -950,6 +966,12 @@ Unification = {
 		available = {
 			864 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -960,6 +982,7 @@ Unification = {
 
 		remove_effect = {
 			864 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 1
@@ -968,11 +991,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 864 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -985,6 +1008,12 @@ Unification = {
 		available = {
 			844 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -995,6 +1024,7 @@ Unification = {
 
 		remove_effect = {
 			844 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1003,11 +1033,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 844 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1020,6 +1050,12 @@ Unification = {
 		available = {
 			839 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1030,6 +1066,7 @@ Unification = {
 
 		remove_effect = {
 			839 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 2
@@ -1038,11 +1075,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 839 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1055,6 +1092,12 @@ Unification = {
 		available = {
 			954 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1065,6 +1108,7 @@ Unification = {
 
 		remove_effect = {
 			954 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1073,11 +1117,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 954 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1090,6 +1134,12 @@ Unification = {
 		available = {
 			221 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1100,6 +1150,7 @@ Unification = {
 
 		remove_effect = {
 			221 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1108,11 +1159,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 221 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1125,6 +1176,12 @@ Unification = {
 		available = {
 			197 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1135,6 +1192,7 @@ Unification = {
 
 		remove_effect = {
 			197 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1143,11 +1201,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 197 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1160,6 +1218,12 @@ Unification = {
 		available = {
 			995 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1170,6 +1234,7 @@ Unification = {
 
 		remove_effect = {
 			995 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1178,11 +1243,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 995 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1195,6 +1260,12 @@ Unification = {
 		available = {
 			206 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1205,6 +1276,7 @@ Unification = {
 
 		remove_effect = {
 			206 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 2
@@ -1213,11 +1285,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 206 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1230,6 +1302,12 @@ Unification = {
 		available = {
 			879 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1240,6 +1318,7 @@ Unification = {
 
 		remove_effect = {
 			879 = {
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 6
@@ -1248,11 +1327,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 879 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1265,6 +1344,12 @@ Unification = {
 		available = {
 			401 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1275,6 +1360,7 @@ Unification = {
 
 		remove_effect = {
 			401 = {
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 6
@@ -1283,11 +1369,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 401 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1300,6 +1386,12 @@ Unification = {
 		available = {
 			200 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1310,6 +1402,7 @@ Unification = {
 
 		remove_effect = {
 			200 = {
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 6
@@ -1318,11 +1411,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 200 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1335,6 +1428,12 @@ Unification = {
 		available = {
 			908 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1345,6 +1444,7 @@ Unification = {
 
 		remove_effect = {
 			908 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1353,11 +1453,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 908 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1370,6 +1470,12 @@ Unification = {
 		available = {
 			247 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1380,6 +1486,7 @@ Unification = {
 
 		remove_effect = {
 			247 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1388,11 +1495,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 247 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1405,6 +1512,12 @@ Unification = {
 		available = {
 			973 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1415,6 +1528,7 @@ Unification = {
 
 		remove_effect = {
 			973 = {
+				add_extra_state_shared_building_slots = 7
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 7
@@ -1423,11 +1537,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 973 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1440,6 +1554,12 @@ Unification = {
 		available = {
 			220 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1450,6 +1570,7 @@ Unification = {
 
 		remove_effect = {
 			220 = {
+				add_extra_state_shared_building_slots = 10
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 10
@@ -1458,11 +1579,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 220 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1475,6 +1596,12 @@ Unification = {
 		available = {
 			1011 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1485,6 +1612,7 @@ Unification = {
 
 		remove_effect = {
 			1011 = {
+				add_extra_state_shared_building_slots = 8
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 8
@@ -1493,11 +1621,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 1011 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1510,6 +1638,12 @@ Unification = {
 		available = {
 			260 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1520,6 +1654,7 @@ Unification = {
 
 		remove_effect = {
 			260 = {
+				add_extra_state_shared_building_slots = 7
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 7
@@ -1528,11 +1663,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 260 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1545,6 +1680,12 @@ Unification = {
 		available = {
 			885 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1555,6 +1696,7 @@ Unification = {
 
 		remove_effect = {
 			885 = {
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 6
@@ -1563,11 +1705,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 885 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1580,6 +1722,12 @@ Unification = {
 		available = {
 			238 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1590,6 +1738,7 @@ Unification = {
 
 		remove_effect = {
 			238 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1598,11 +1747,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 238 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1615,6 +1764,12 @@ Unification = {
 		available = {
 			865 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1625,6 +1780,7 @@ Unification = {
 
 		remove_effect = {
 			865 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1633,11 +1789,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 865 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1650,6 +1806,12 @@ Unification = {
 		available = {
 			199 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1660,6 +1822,7 @@ Unification = {
 
 		remove_effect = {
 			199 = {
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 6
@@ -1668,11 +1831,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 199 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
@@ -1685,6 +1848,12 @@ Unification = {
 		available = {
 			243 = { infrastructure > 4 }
 			num_of_civilian_factories_available_for_projects > 19
+			custom_trigger_tooltip = {
+				tooltip = mines_restored_num_4_or_bigger_tt
+				check_variable = {
+					global.city_restored_array^num > 3
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -1695,6 +1864,7 @@ Unification = {
 
 		remove_effect = {
 			243 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = commercial_nuclear_reactor
 					level = 4
@@ -1703,11 +1873,11 @@ Unification = {
 			}
 		}
 
-        cancel_trigger = {
+		cancel_trigger = {
 			NOT = { has_full_control_of_state = 243 }
 		}
 
-        cancel_effect = {  }
+		cancel_effect = {  }
 
 		ai_will_do = {
 			base = 25
