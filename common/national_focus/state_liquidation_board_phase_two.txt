@@ -369,6 +369,15 @@ focus_tree = {
 		y = 8
 		relative_position_id = GLS_south
 		cost = 5
+		available = {
+			controls_state = 652
+			controls_state = 251
+			controls_state = 993
+			controls_state = 407
+			controls_state = 994
+			controls_state = 406
+			controls_state = 999
+		}
 		ai_will_do = {
 			base = 100
 		}
@@ -385,7 +394,7 @@ focus_tree = {
 			251 = {
 				add_manpower = 7000
 			}
-			401 = {
+			993 = {
 				add_manpower = 7000
 			}
 			407 = {
@@ -702,6 +711,7 @@ focus_tree = {
 				id = GLS_power_balance
 				value = 0.05
 			}
+			custom_effect_tooltip = gls_adds_progress_tt
 			hidden_effect = {
 				country_event = {
 					id = GLS_decisions.10
@@ -954,33 +964,68 @@ focus_tree = {
 		will_lead_to_war_with = OCH
 		will_lead_to_war_with = DIS
 		completion_reward = {
-			declare_war_on = {
-				target = EDM
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = EDM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = EDM
+				}
 			}
-			declare_war_on = {
-				target = WPK
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = WPK
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = WPK
+				}
 			}
-			declare_war_on = {
-				target = URC
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = URC
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = URC
+				}
 			}
-			declare_war_on = {
-				target = ZAN
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = ZAN
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ZAN
+				}
 			}
-			declare_war_on = {
-				target = TAR
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = TAR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TAR
+				}
 			}
-			declare_war_on = {
-				target = OCH
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = OCH
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = OCH
+				}
 			}
-			declare_war_on = {
-				target = DIS
-				type = annex_everything
+			if = {
+				limit = {
+					country_exists = DIS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = DIS
+				}
 			}
 		}
 	}

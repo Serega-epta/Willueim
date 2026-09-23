@@ -675,14 +675,127 @@ country_event = {
 					traits = {}
 				}
 			}
-			load_oob = "WOW"
-			for_loop_effect = {
-				end = 10
-				random_controlled_state = {
-					create_unit = {
-						division = "name = \"Sectants\" division_template = \"Sectants\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
-						owner = WOW
+			hidden_effect = {
+				set_technology = {
+					infantry_weapons = 1
+					civilian_clothing = 1
+					tech_support = 1
+					gw_artillery = 1
+					basic_train = 1
+				}
+				load_oob = "WOW"
+				for_loop_effect = {
+					end = 15
+					random_controlled_state = {
+						create_unit = {
+							division = "name = \"Sectants\"division_template = \"Sectants\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = WOW
+						}
 					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = WOW.infantry_for_civil_war_var
+					producer = WOW
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+					producer = WOW
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_odejda
+					amount = 500
+					producer = WOW
+				}
+			}
+			custom_effect_tooltip = WOW_gets_10_divisions
+			declare_war_on = {
+				target = LWV
+				type = civil_war
+			}
+		}
+		clear_array = transfer_states_from_LWV_to_WOW
+	}
+	option = {
+		name = LWV_decisions.3.c
+		trigger = {
+			any_controlled_state = {
+				is_in_array = {
+					PREV.transfer_states_from_LWV_to_WOW = THIS
+				}
+			}
+			any_controlled_state = {
+				NOT = {
+					is_in_array = {
+						PREV.transfer_states_from_LWV_to_WOW = THIS
+					}
+				}
+			}
+		}
+		clr_country_flag = LWV_war_in_the_shadows_flag
+		LWV_andrey_markov = {
+			set_nationality = WOW
+		}
+		for_each_scope_loop = {
+			array = transfer_states_from_LWV_to_WOW
+			if = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				transfer_state_to = WOW
+				add_core_of = WOW
+			}
+		}
+		#set player to WOW
+		hidden_effect = {
+			WOW = {
+				change_tag_from = LWV
+			}
+		}
+		custom_effect_tooltip = WOW_gets_states_in_civ_war
+		WOW = {
+			add_country_leader_role = {
+				character = LWV_andrey_markov
+				promote_leader = yes
+				country_leader = {
+					ideology = sacraments_subideology
+					expire = "2050.1.1.1"
+					traits = {}
+				}
+			}
+			hidden_effect = {
+				set_technology = {
+					infantry_weapons = 1
+					civilian_clothing = 1
+					tech_support = 1
+					gw_artillery = 1
+					basic_train = 1
+				}
+				load_oob = "WOW"
+				for_loop_effect = {
+					end = 15
+					random_controlled_state = {
+						create_unit = {
+							division = "name = \"Sectants\"division_template = \"Sectants\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = WOW
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = WOW.infantry_for_civil_war_var
+					producer = WOW
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+					producer = WOW
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_odejda
+					amount = 500
+					producer = WOW
 				}
 			}
 			custom_effect_tooltip = WOW_gets_10_divisions

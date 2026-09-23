@@ -50,11 +50,11 @@ LWV_boji_perst = {
 		}
 	}
 }
-#####  ####    ####  #####  #####  #####  #####  #
-#      #   #  #   #    #    #   #  #        #    #
-#      ####    ####    #    #   #  #        #    ####
-#      #   #   #  #    #    #   #  #        #    #   #
-#####  ####   #   #    #    #####  #####    #    ####
+#####  ####	   ####	 #####	#####  #####  #####	 #
+#	   #   #  #	  #	   #	#	#  #		#	 #
+#	   ####	   ####	   #	#	#  #		#	 ####
+#	   #   #   #  #	   #	#	#  #		#	 #	 #
+#####  ####	  #	  #	   #	#####  #####	#	 ####
 LWV_holiness = {
 	stage_1 = {
 		icon = GFX_decision_holiness_integration_one
@@ -516,21 +516,21 @@ LWV_holiness = {
 		}
 	}
 }
-#####   #####   #   #  #   #  #####  #####  ####   #####
-#       #   #   #  ##  #   #  #        #    #   #  #   #
-#####   #   #   # # #  #####  #        #    ####   #   #
-#      #######  ##  #  #   #  #        #    #   #  #   #
-#####  #     #  #   #  #   #  #####    #    ####   #####
+#####	#####	#	#  #   #  #####	 #####	####   #####
+#		#	#	#  ##  #   #  #		   #	#	#  #   #
+#####	#	#	# # #  #####  #		   #	####   #   #
+#	   #######	##	#  #   #  #		   #	#	#  #   #
+#####  #	 #	#	#  #   #  #####	   #	####   #####
 ####
-#   #
+#	#
 ####
-#   #
+#	#
 ####
-#####  ####    ####  #####  #####  #####  #####  #   #
-#      #   #  #   #    #    #   #  #        #    #  ##
-#      ####    ####    #    #   #  #        #    # # #
-#      #   #   #  #    #    #   #  #        #    ##  #
-#####  ####   #   #    #    #####  #####    #    #   #
+#####  ####	   ####	 #####	#####  #####  #####	 #	 #
+#	   #   #  #	  #	   #	#	#  #		#	 #	##
+#	   ####	   ####	   #	#	#  #		#	 # # #
+#	   #   #   #  #	   #	#	#  #		#	 ##	 #
+#####  ####	  #	  #	   #	#####  #####	#	 #	 #
 LWV_unity_in_holiness = {
 	collect_the_swords = {
 		visible = {}
@@ -731,38 +731,93 @@ LWV_war_in_the_shadows = {
 		fire_only_once = yes
 		days_mission_timeout = 60
 		timeout_effect = {
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 73.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 1 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 73.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 78.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 1 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 78.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 80.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 1 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 80.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 91.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 2 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 91.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 93.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 2 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 93.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 198.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 3 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 198.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 199.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 3 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 199.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 201.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 4 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 201.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 882.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 4 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 882.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 883.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 4 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 883.id
+				}
 			}
-			add_to_array = {
-				transfer_states_from_LWV_to_WOW = 889.id
+			if = {
+				limit = {
+					check_variable = { WOW.debuff < 4 }
+				}
+				add_to_array = {
+					transfer_states_from_LWV_to_WOW = 889.id
+				}
 			}
 			country_event = {
 				id = LWV_decisions.3
@@ -853,20 +908,26 @@ LWV_war_in_the_shadows = {
 		}
 	}
 	illuminate_the_shadow = {
-		cost = 100
+		cost = 150
 		fire_only_once = yes
 		visible = {
-			has_completed_focus = LWV_shadow_warrior
+			OR = {
+				has_completed_focus = LWV_vstar
+				has_completed_focus = LWV_notexit
+			}
 		}
 		available = {
-			has_completed_focus = LWV_shadow_warrior
+			OR = {
+				has_completed_focus = LWV_vstar
+				has_completed_focus = LWV_notexit
+			}
 		}
 		complete_effect = {
-			activate_mission = truth_in_the_shadows
+			complete_national_focus = LWV_shadow_warrior
 		}
 	}
 	find_30_silversmiths = {
-		cost = 10
+		cost = 30
 		visible = {
 			has_completed_focus = LWV_shadow_warrior
 		}
@@ -877,34 +938,34 @@ LWV_war_in_the_shadows = {
 		complete_effect = {
 			set_country_flag = silversmiths_are_found
 			add_days_mission_timeout = {
-				mission = truth_in_the_shadows
-				days = -10
-			}
-			add_days_mission_timeout = {
 				mission = revenge_of_the_sectarians
 				days = 10
 			}
 			country_event = {
 				id = LWV_decisions.4
 			}
+			add_to_variable = {
+				WOW.debuff = 1
+				tooltip = WOW_gets_debuff_var
+			}
 		}
 	}
 	punish_the_traitors = {
-		cost = 20
+		cost = 50
 		visible = {
 			has_completed_focus = LWV_shadow_warrior
 		}
 		available = {
+			custom_override_tooltip = {
+				tooltip = silversmiths_are_found_tt
+			}
 			has_country_flag = silversmiths_are_found
 		}
 		fire_only_once = yes
 		complete_effect = {
 			clr_country_flag = silversmiths_are_found
 			set_country_flag = traitors_are_punished
-			add_days_mission_timeout = {
-				mission = truth_in_the_shadows
-				days = -10
-			}
+			complete_national_focus = LWV_exkalation
 			add_days_mission_timeout = {
 				mission = revenge_of_the_sectarians
 				days = 10
@@ -912,14 +973,21 @@ LWV_war_in_the_shadows = {
 			country_event = {
 				id = LWV_decisions.5
 			}
+			add_to_variable = {
+				WOW.debuff = 1
+				tooltip = WOW_gets_debuff_var
+			}
 		}
 	}
 	guide_the_faithful = {
-		cost = 30
+		cost = 70
 		visible = {
 			has_completed_focus = LWV_shadow_warrior
 		}
 		available = {
+			custom_override_tooltip = {
+				tooltip = traitors_are_punished_tt
+			}
 			has_country_flag = traitors_are_punished
 		}
 		fire_only_once = yes
@@ -927,38 +995,34 @@ LWV_war_in_the_shadows = {
 			clr_country_flag = traitors_are_punished
 			set_country_flag = faithful_are_guided
 			add_days_mission_timeout = {
-				mission = truth_in_the_shadows
-				days = -10
-			}
-			add_days_mission_timeout = {
 				mission = revenge_of_the_sectarians
 				days = 10
+			}
+			add_to_variable = {
+				WOW.debuff = 1
+				tooltip = WOW_gets_debuff_var
 			}
 		}
 	}
 	crush_markov = {
-		cost = 50
+		cost = 100
 		visible = {
 			has_completed_focus = LWV_shadow_warrior
 		}
 		available = {
+			custom_override_tooltip = {
+				tooltip = faithful_are_guided_tt
+			}
 			has_country_flag = faithful_are_guided
 		}
 		fire_only_once = yes
 		complete_effect = {
 			complete_national_focus = LWV_fatum
 			clr_country_flag = faithful_are_guided
-			add_days_mission_timeout = {
-				mission = truth_in_the_shadows
-				days = -10
-			}
-			add_days_mission_timeout = {
-				mission = revenge_of_the_sectarians
-				days = 10
-			}
 			country_event = {
 				id = LWV_decisions.6
 			}
+			remove_mission = revenge_of_the_sectarians
 		}
 		ai_will_do = {
 			base = 1000

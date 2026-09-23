@@ -590,6 +590,12 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 3
+		available = {
+			custom_override_tooltip = {
+				tooltip = illuminate_the_shadow_decision_done_tt
+				always = no
+			}
+		}
 		prerequisite = {
 			focus = LWV_vstar
 			focus = LWV_notexit
@@ -613,6 +619,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 3
+		available = {
+			custom_override_tooltip = {
+				tooltip = exkalation_tt
+				always = no
+			}
+		}
 		prerequisite = {
 			focus = LWV_shadow_warrior
 		}
@@ -646,7 +658,14 @@ focus_tree = {
 		available = {
 			custom_override_tooltip = {
 				tooltip = crush_markov_decision_done_tt
-				always = no
+				hidden_trigger = {
+					AND = {
+						has_war = no
+						NOT = {
+							has_active_mission = revenge_of_the_sectarians
+						}
+					}
+				}
 			}
 		}
 		completion_reward = {
