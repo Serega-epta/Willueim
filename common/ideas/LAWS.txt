@@ -198,7 +198,9 @@ ideas = {
 			available = {
 				OR = {
 					has_country_flag = Unification_flag
-					has_global_flag = Unification_debug_flag
+					hidden_trigger = {
+						has_global_flag = Unification_debug_flag
+					}
 				}
 			}
 			cost = 100

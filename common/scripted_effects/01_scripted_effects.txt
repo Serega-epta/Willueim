@@ -225,6 +225,20 @@ unite_motherland = {
 		}
 		else_if = {
 			limit = {
+				has_government = humanists
+				OR = {
+					tag = IMP
+					tag = UKR
+					tag = BSO
+					tag = PLR
+					tag = COR
+					tag = NOR
+				}
+			}
+			set_cosmetic_tag = motherland_collabors
+		}
+		else_if = {
+			limit = {
 				OR = {
 					has_government = humanists
 					has_government = technocracy
