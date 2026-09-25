@@ -141,6 +141,42 @@ category = {
 		LPC_infantry_neutral_combat
 		LPC_infantry_positive_combat
 		LPC_infantry_retreat
+		ZAN_infantry_idle
+		ZAN_infantry_neutral_combat
+		ZAN_infantry_positive_combat
+		ZAN_infantry_retreat
+		WPK_infantry_idle
+		WPK_infantry_neutral_combat
+		WPK_infantry_positive_combat
+		WPK_infantry_retreat
+		NOR_infantry_idle
+		NOR_infantry_neutral_combat
+		NOR_infantry_positive_combat
+		NOR_infantry_retreat
+		COR_infantry_idle
+		COR_infantry_neutral_combat
+		COR_infantry_positive_combat
+		COR_infantry_retreat
+		PLR_infantry_idle
+		PLR_infantry_neutral_combat
+		PLR_infantry_positive_combat
+		PLR_infantry_retreat
+		BSO_infantry_idle
+		BSO_infantry_neutral_combat
+		BSO_infantry_positive_combat
+		BSO_infantry_retreat
+		IBR_infantry_idle
+		IBR_infantry_neutral_combat
+		IBR_infantry_positive_combat
+		IBR_infantry_retreat
+		POL_infantry_idle
+		POL_infantry_neutral_combat
+		POL_infantry_positive_combat
+		POL_infantry_retreat
+		MAP_infantry_idle
+		MAP_infantry_neutral_combat
+		MAP_infantry_positive_combat
+		MAP_infantry_retreat
 	}
 	compressor = {
 		enabled = yes
@@ -151,6 +187,190 @@ category = {
 		attacktime = 0.030
 		releasetime = 1.2
 	}
+}
+
+#=== POLAND ===#
+
+soundeffect = {
+	name = "POL_infantry_idle"
+	sounds = {
+		sound = POL_Idle_001
+		sound = POL_Idle_002
+		sound = POL_Idle_003
+		sound = POL_Idle_004
+		sound = POL_Idle_005
+		sound = POL_Idle_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "POL_infantry_neutral_combat"
+	sounds = {
+		sound = POL_Neutral_001
+		sound = POL_Neutral_002
+		sound = POL_Neutral_003
+		sound = POL_Neutral_004
+		sound = POL_Neutral_005
+		sound = POL_Neutral_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "POL_infantry_positive_combat"
+	sounds = {
+		sound = POL_Positive_001
+		sound = POL_Positive_002
+		sound = POL_Positive_003
+		sound = POL_Positive_004
+		sound = POL_Positive_005
+		sound = POL_Positive_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "POL_infantry_retreat"
+	sounds = {
+		sound = POL_Retreat_001
+		sound = POL_Retreat_002
+		sound = POL_Retreat_003
+		sound = POL_Retreat_004
+		sound = POL_Retreat_005
+		sound = POL_Retreat_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "MAP_infantry_idle"
+	sounds = {
+		sound = POL_Idle_001
+		sound = POL_Idle_002
+		sound = POL_Idle_003
+		sound = POL_Idle_004
+		sound = POL_Idle_005
+		sound = POL_Idle_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "MAP_infantry_neutral_combat"
+	sounds = {
+		sound = POL_Neutral_001
+		sound = POL_Neutral_002
+		sound = POL_Neutral_003
+		sound = POL_Neutral_004
+		sound = POL_Neutral_005
+		sound = POL_Neutral_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "MAP_infantry_positive_combat"
+	sounds = {
+		sound = POL_Positive_001
+		sound = POL_Positive_002
+		sound = POL_Positive_003
+		sound = POL_Positive_004
+		sound = POL_Positive_005
+		sound = POL_Positive_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "MAP_infantry_retreat"
+	sounds = {
+		sound = POL_Retreat_001
+		sound = POL_Retreat_002
+		sound = POL_Retreat_003
+		sound = POL_Retreat_004
+		sound = POL_Retreat_005
+		sound = POL_Retreat_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+#=== IBERIA ===#
+
+soundeffect = {
+	name = "IBR_infantry_idle"
+	sounds = {
+		sound = IBR_Idle_001
+		sound = IBR_Idle_002
+		sound = IBR_Idle_003
+		sound = IBR_Idle_004
+		sound = IBR_Idle_005
+		sound = IBR_Idle_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "IBR_infantry_neutral_combat"
+	sounds = {
+		sound = IBR_Neutral_001
+		sound = IBR_Neutral_002
+		sound = IBR_Neutral_003
+		sound = IBR_Neutral_004
+		sound = IBR_Neutral_005
+		sound = IBR_Neutral_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "IBR_infantry_positive_combat"
+	sounds = {
+		sound = IBR_Positive_001
+		sound = IBR_Positive_002
+		sound = IBR_Positive_003
+		sound = IBR_Positive_004
+		sound = IBR_Positive_005
+		sound = IBR_Positive_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "IBR_infantry_retreat"
+	sounds = {
+		sound = IBR_Retreat_001
+		sound = IBR_Retreat_002
+		sound = IBR_Retreat_003
+		sound = IBR_Retreat_004
+		sound = IBR_Retreat_005
+		sound = IBR_Retreat_006
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
 }
 
 #=== LIMITED PEACEKEEPING CONTINGENT ===#
@@ -788,7 +1008,101 @@ soundeffect = {
 	volume = 1
 }
 
-#=== URAL CONFEDERATION ===#
+#=== URC + ZAN + WPK ===#
+
+soundeffect = {
+	name = "WPK_infantry_idle"
+	sounds = {
+		sound = URC_Idle_001
+		sound = URC_Idle_002
+		sound = URC_Idle_003
+		sound = URC_Neutral_003
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "WPK_infantry_neutral_combat"
+	sounds = {
+		sound = URC_Neutral_001
+		sound = URC_Neutral_002
+		sound = URC_Neutral_003
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "WPK_infantry_positive_combat"
+	sounds = {
+		sound = URC_Positive_001
+		sound = URC_Positive_002
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "WPK_infantry_retreat"
+	sounds = {
+		sound = URC_Retreat_001
+		sound = URC_Retreat_002
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ZAN_infantry_idle"
+	sounds = {
+		sound = URC_Idle_001
+		sound = URC_Idle_002
+		sound = URC_Idle_003
+		sound = URC_Neutral_003
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ZAN_infantry_neutral_combat"
+	sounds = {
+		sound = URC_Neutral_001
+		sound = URC_Neutral_002
+		sound = URC_Neutral_003
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ZAN_infantry_positive_combat"
+	sounds = {
+		sound = URC_Positive_001
+		sound = URC_Positive_002
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ZAN_infantry_retreat"
+	sounds = {
+		sound = URC_Retreat_001
+		sound = URC_Retreat_002
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
 
 soundeffect = {
 	name = "URC_infantry_idle"
@@ -796,6 +1110,7 @@ soundeffect = {
 		sound = URC_Idle_001
 		sound = URC_Idle_002
 		sound = URC_Idle_003
+		sound = URC_Neutral_003
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -844,6 +1159,9 @@ soundeffect = {
 		sound = WAC_Idle_001
 		sound = WAC_Idle_002
 		sound = WAC_Idle_003
+		sound = WAC_Neutral_001
+		sound = WAC_Neutral_005
+		sound = WAC_Neutral_006
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -900,6 +1218,9 @@ soundeffect = {
 		sound = WAC_Idle_001
 		sound = WAC_Idle_002
 		sound = WAC_Idle_003
+		sound = WAC_Neutral_001
+		sound = WAC_Neutral_005
+		sound = WAC_Neutral_006
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -956,6 +1277,9 @@ soundeffect = {
 		sound = WAC_Idle_001
 		sound = WAC_Idle_002
 		sound = WAC_Idle_003
+		sound = WAC_Neutral_001
+		sound = WAC_Neutral_005
+		sound = WAC_Neutral_006
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1012,6 +1336,9 @@ soundeffect = {
 		sound = WAC_Idle_001
 		sound = WAC_Idle_002
 		sound = WAC_Idle_003
+		sound = WAC_Neutral_001
+		sound = WAC_Neutral_005
+		sound = WAC_Neutral_006
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2381,7 +2708,219 @@ soundeffect = {
 }
 
 
-#=== Consulate ===#
+#=== IMP + NOR + COR + PLR + BSO ===#
+
+soundeffect = {
+	name = "NOR_infantry_idle"
+	sounds = {
+		sound = IMP_Idle_001
+		sound = IMP_Idle_002
+		sound = IMP_Idle_003
+		sound = IMP_Idle_004
+		sound = IMP_Idle_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "NOR_infantry_neutral_combat"
+	sounds = {
+		sound = ru_Neutral_001
+		sound = ru_Neutral_002
+		sound = ru_Neutral_003
+		sound = ru_Neutral_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "NOR_infantry_positive_combat"
+	sounds = {
+		sound = ru_Positive_001
+		sound = ru_Positive_002
+		sound = ru_Positive_003
+		sound = ru_Positive_004	
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "NOR_infantry_retreat"
+	sounds = {
+		sound = ru_Retreat_001
+		sound = ru_Retreat_002
+		sound = ru_Retreat_003
+		sound = ru_Retreat_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "COR_infantry_idle"
+	sounds = {
+		sound = IMP_Idle_001
+		sound = IMP_Idle_002
+		sound = IMP_Idle_003
+		sound = IMP_Idle_004
+		sound = IMP_Idle_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "COR_infantry_neutral_combat"
+	sounds = {
+		sound = ru_Neutral_001
+		sound = ru_Neutral_002
+		sound = ru_Neutral_003
+		sound = ru_Neutral_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "COR_infantry_positive_combat"
+	sounds = {
+		sound = ru_Positive_001
+		sound = ru_Positive_002
+		sound = ru_Positive_003
+		sound = ru_Positive_004	
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "COR_infantry_retreat"
+	sounds = {
+		sound = ru_Retreat_001
+		sound = ru_Retreat_002
+		sound = ru_Retreat_003
+		sound = ru_Retreat_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "PLR_infantry_idle"
+	sounds = {
+		sound = IMP_Idle_001
+		sound = IMP_Idle_002
+		sound = IMP_Idle_003
+		sound = IMP_Idle_004
+		sound = IMP_Idle_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "PLR_infantry_neutral_combat"
+	sounds = {
+		sound = ru_Neutral_001
+		sound = ru_Neutral_002
+		sound = ru_Neutral_003
+		sound = ru_Neutral_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "PLR_infantry_positive_combat"
+	sounds = {
+		sound = ru_Positive_001
+		sound = ru_Positive_002
+		sound = ru_Positive_003
+		sound = ru_Positive_004	
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "PLR_infantry_retreat"
+	sounds = {
+		sound = ru_Retreat_001
+		sound = ru_Retreat_002
+		sound = ru_Retreat_003
+		sound = ru_Retreat_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "BSO_infantry_idle"
+	sounds = {
+		sound = IMP_Idle_001
+		sound = IMP_Idle_002
+		sound = IMP_Idle_003
+		sound = IMP_Idle_004
+		sound = IMP_Idle_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "BSO_infantry_neutral_combat"
+	sounds = {
+		sound = ru_Neutral_001
+		sound = ru_Neutral_002
+		sound = ru_Neutral_003
+		sound = ru_Neutral_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "BSO_infantry_positive_combat"
+	sounds = {
+		sound = ru_Positive_001
+		sound = ru_Positive_002
+		sound = ru_Positive_003
+		sound = ru_Positive_004	
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "BSO_infantry_retreat"
+	sounds = {
+		sound = ru_Retreat_001
+		sound = ru_Retreat_002
+		sound = ru_Retreat_003
+		sound = ru_Retreat_004
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
 
 soundeffect = {
 	name = "IMP_infantry_idle"
@@ -3183,3 +3722,61 @@ sound = { name = "LPC_Retreat_003" file = "rus/LPC/LPC_Retreat_003.wav" }
 sound = { name = "LPC_Retreat_004" file = "rus/LPC/LPC_Retreat_004.wav" }
 sound = { name = "LPC_Retreat_005" file = "rus/LPC/LPC_Retreat_005.wav" }
 sound = { name = "LPC_Retreat_006" file = "rus/LPC/LPC_Retreat_006.wav" }
+
+
+sound = { name = "IBR_Idle_001" file = "rus/IBR/IBR_Idle_001.wav" }
+sound = { name = "IBR_Idle_002" file = "rus/IBR/IBR_Idle_002.wav" }
+sound = { name = "IBR_Idle_003" file = "rus/IBR/IBR_Idle_003.wav" }
+sound = { name = "IBR_Idle_004" file = "rus/IBR/IBR_Idle_004.wav" }
+sound = { name = "IBR_Idle_005" file = "rus/IBR/IBR_Idle_005.wav" }
+sound = { name = "IBR_Idle_006" file = "rus/IBR/IBR_Idle_006.wav" }
+
+sound = { name = "IBR_Neutral_001" file = "rus/IBR/IBR_Neutral_001.wav" }
+sound = { name = "IBR_Neutral_002" file = "rus/IBR/IBR_Neutral_002.wav" }
+sound = { name = "IBR_Neutral_003" file = "rus/IBR/IBR_Neutral_003.wav" }
+sound = { name = "IBR_Neutral_004" file = "rus/IBR/IBR_Neutral_004.wav" }
+sound = { name = "IBR_Neutral_005" file = "rus/IBR/IBR_Neutral_005.wav" }
+sound = { name = "IBR_Neutral_006" file = "rus/IBR/IBR_Neutral_006.wav" }
+
+sound = { name = "IBR_Positive_001" file = "rus/IBR/IBR_Positive_001.wav" }
+sound = { name = "IBR_Positive_002" file = "rus/IBR/IBR_Positive_002.wav" }
+sound = { name = "IBR_Positive_003" file = "rus/IBR/IBR_Positive_003.wav" }
+sound = { name = "IBR_Positive_004" file = "rus/IBR/IBR_Positive_004.wav" }
+sound = { name = "IBR_Positive_005" file = "rus/IBR/IBR_Positive_005.wav" }
+sound = { name = "IBR_Positive_006" file = "rus/IBR/IBR_Positive_006.wav" }
+
+sound = { name = "IBR_Retreat_001" file = "rus/IBR/IBR_Retreat_001.wav" }
+sound = { name = "IBR_Retreat_002" file = "rus/IBR/IBR_Retreat_002.wav" }
+sound = { name = "IBR_Retreat_003" file = "rus/IBR/IBR_Retreat_003.wav" }
+sound = { name = "IBR_Retreat_004" file = "rus/IBR/IBR_Retreat_004.wav" }
+sound = { name = "IBR_Retreat_005" file = "rus/IBR/IBR_Retreat_005.wav" }
+sound = { name = "IBR_Retreat_006" file = "rus/IBR/IBR_Retreat_006.wav" }
+
+
+sound = { name = "POL_Idle_001" file = "rus/POL/POL_Idle_001.wav" }
+sound = { name = "POL_Idle_002" file = "rus/POL/POL_Idle_002.wav" }
+sound = { name = "POL_Idle_003" file = "rus/POL/POL_Idle_003.wav" }
+sound = { name = "POL_Idle_004" file = "rus/POL/POL_Idle_004.wav" }
+sound = { name = "POL_Idle_005" file = "rus/POL/POL_Idle_005.wav" }
+sound = { name = "POL_Idle_006" file = "rus/POL/POL_Idle_006.wav" }
+
+sound = { name = "POL_Neutral_001" file = "rus/POL/POL_Neutral_001.wav" }
+sound = { name = "POL_Neutral_002" file = "rus/POL/POL_Neutral_002.wav" }
+sound = { name = "POL_Neutral_003" file = "rus/POL/POL_Neutral_003.wav" }
+sound = { name = "POL_Neutral_004" file = "rus/POL/POL_Neutral_004.wav" }
+sound = { name = "POL_Neutral_005" file = "rus/POL/POL_Neutral_005.wav" }
+sound = { name = "POL_Neutral_006" file = "rus/POL/POL_Neutral_006.wav" }
+
+sound = { name = "POL_Positive_001" file = "rus/POL/POL_Positive_001.wav" }
+sound = { name = "POL_Positive_002" file = "rus/POL/POL_Positive_002.wav" }
+sound = { name = "POL_Positive_003" file = "rus/POL/POL_Positive_003.wav" }
+sound = { name = "POL_Positive_004" file = "rus/POL/POL_Positive_004.wav" }
+sound = { name = "POL_Positive_005" file = "rus/POL/POL_Positive_005.wav" }
+sound = { name = "POL_Positive_006" file = "rus/POL/POL_Positive_006.wav" }
+
+sound = { name = "POL_Retreat_001" file = "rus/POL/POL_Retreat_001.wav" }
+sound = { name = "POL_Retreat_002" file = "rus/POL/POL_Retreat_002.wav" }
+sound = { name = "POL_Retreat_003" file = "rus/POL/POL_Retreat_003.wav" }
+sound = { name = "POL_Retreat_004" file = "rus/POL/POL_Retreat_004.wav" }
+sound = { name = "POL_Retreat_005" file = "rus/POL/POL_Retreat_005.wav" }
+sound = { name = "POL_Retreat_006" file = "rus/POL/POL_Retreat_006.wav" }
