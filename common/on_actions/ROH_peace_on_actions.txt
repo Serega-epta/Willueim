@@ -617,6 +617,153 @@ on_actions = {
 						transfer_troops = no
 					}
 				}
+				193 = {
+					add_claim_by = UKR
+				}
+				225 = {
+					add_claim_by = UKR
+				}
+				876 = {
+					add_claim_by = UKR
+				}
+				202 = {
+					add_claim_by = UKR
+				}
+				879 = {
+					add_claim_by = UKR
+				}
+				880 = {
+					add_claim_by = UKR
+				}
+				896 = {
+					add_claim_by = UKR
+				}
+				885 = {
+					add_claim_by = UKR
+				}
+				886 = {
+					add_claim_by = UKR
+				}
+				887 = {
+					add_claim_by = UKR
+				}
+				888 = {
+					add_claim_by = UKR
+				}
+				73 = {
+					add_claim_by = UKR
+				}
+				875 = {
+					add_claim_by = UKR
+				}
+				891 = {
+					add_claim_by = UKR
+				}
+				890 = {
+					add_claim_by = UKR
+				}
+				93 = {
+					add_claim_by = UKR
+				}
+				91 = {
+					add_claim_by = UKR
+				}
+				199 = {
+					add_claim_by = UKR
+				}
+				198 = {
+					add_claim_by = UKR
+				}
+				201 = {
+					add_claim_by = UKR
+				}
+				839 = {
+					add_claim_by = UKR
+				}
+				860 = {
+					add_claim_by = UKR
+				}
+				858 = {
+					add_claim_by = UKR
+				}
+				861 = {
+					add_claim_by = UKR
+				}
+				192 = {
+					add_claim_by = UKR
+				}
+				865 = {
+					add_claim_by = UKR
+				}
+				845 = {
+					add_claim_by = UKR
+				}
+				196 = {
+					add_claim_by = UKR
+				}
+				137 = {
+					add_claim_by = UKR
+				}
+				844 = {
+					add_claim_by = UKR
+				}
+				840 = {
+					add_claim_by = UKR
+				}
+				843 = {
+					add_claim_by = UKR
+				}
+				243 = {
+					add_claim_by = UKR
+				}
+				194 = {
+					add_claim_by = UKR
+				}
+				846 = {
+					add_claim_by = UKR
+				}
+				850 = {
+					add_claim_by = UKR
+				}
+				218 = {
+					add_claim_by = UKR
+				}
+				849 = {
+					add_claim_by = UKR
+				}
+				866 = {
+					add_claim_by = UKR
+				}
+				227 = {
+					add_claim_by = UKR
+				}
+				847 = {
+					add_claim_by = UKR
+				}
+				200 = {
+					add_claim_by = UKR
+				}
+				869 = {
+					add_claim_by = UKR
+				}
+				870 = {
+					add_claim_by = UKR
+				}
+				226 = {
+					add_claim_by = UKR
+				}
+				874 = {
+					add_claim_by = UKR
+				}
+				221 = {
+					add_claim_by = UKR
+				}
+				856 = {
+					add_claim_by = UKR
+				}
+				228 = {
+					add_claim_by = UKR
+				}
 				IMP = {
 					puppet = UKR
 				}
@@ -684,6 +831,164 @@ on_actions = {
 								target = SMK
 								transfer_troops = no
 							}
+						}
+					}
+				}
+			}
+			#LPC vs (AGE + BLZ + CHU + HAR): LPC defeat
+			if = {
+				limit = {
+					ROOT = {
+						tag = LPC
+					}
+					FROM = {
+						OR = {
+							tag = AGE
+							#Allies
+							tag = BLZ
+							tag = CHU
+							tag = HAR
+						}
+					}
+					AGE = {
+						has_completed_focus = AGE_not_their_land
+					}
+				}
+				ROOT = {
+					kill_country_leader = yes
+					188 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = AGE
+						}
+					}
+					763 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = AGE
+						}
+					}
+					5 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = AGE
+						}
+					}
+					915 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = AGE
+						}
+					}
+					814 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							if = {
+								limit = {
+									BLZ = {
+										exist = yes
+									}
+								}
+								transfer_state_to = BLZ
+							}
+							if = {
+								limit = {
+									BLZ = {
+										exist = no
+									}
+								}
+								transfer_state_to = AGE
+							}
+						}
+					}
+					97 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+								POP = {
+									exist = no
+								}
+							}
+							transfer_state_to = POP
+						}
+						if = {
+							limit = {
+								is_owned_by = LPC
+								POP = {
+									exist = yes
+								}
+							}
+							transfer_state_to = AGE
+						}
+					}
+					95 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = POP
+						}
+					}
+					94 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = POP
+						}
+					}
+					851 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = POP
+						}
+					}
+					918 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = MAP
+						}
+					}
+					92 = {
+						if = {
+							limit = {
+								is_owned_by = LPC
+							}
+							transfer_state_to = POP
+						}
+					}
+					if = {
+						limit = {
+							POP = {
+								exist = no
+							}
+						}
+						AGE = {
+							puppet = POP
+						}
+					}
+					if = {
+						limit = {
+							MAP = {
+								exist = no
+							}
+						}
+						AGE = {
+							puppet = MAP
 						}
 					}
 				}
