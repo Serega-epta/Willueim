@@ -1,0 +1,29 @@
+############################
+### 	AGE Triggers 	 ###
+############################
+AGE_defeated_HAR = {
+	910 = { is_owned_by = AGE }
+	909 = { is_owned_by = AGE }
+	NOT = { country_exists = HAR } 
+	country_exists = AGE
+	AGE = {
+		has_completed_focus = AGE_all_alone
+	}
+}
+AGE_defeated_CHU = {
+	191 = { is_owned_by = AGE }
+	NOT = { country_exists = CHU } 
+	country_exists = AGE
+	AGE = {
+		has_completed_focus = AGE_all_alone
+	}
+}
+AGE_defeated_BLZ = {
+	11 = { is_owned_by = AGE }
+	815 = { is_owned_by = AGE }
+	NOT = { country_exists = BLZ } 
+	country_exists = AGE
+	AGE = {
+		has_completed_focus = AGE_all_alone
+	}
+}

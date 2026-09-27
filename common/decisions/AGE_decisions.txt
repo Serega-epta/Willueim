@@ -171,6 +171,9 @@ AGE_their_freedoms = {
 					modifier = open_opposition
 				}
 			}
+			AGE = {
+				has_completed_focus = AGE_protect_borders
+			}
 			divisions_in_state = {
 				size > 0
 				state = FROM
@@ -190,18 +193,17 @@ AGE_their_freedoms = {
 			AGE = {
 				has_completed_focus = AGE_protect_borders
 			}
-			has_country_flag = not_their_land_anymore_flag
 		}
-		#target_trigger = {
-		#	FROM = {
-		#		OR = {
-		#			is_owned_by = CHU
-		#			is_owned_by = HAR
-		#			is_owned_by = BLZ
-		#		}
-		#	}		
-		#}
-		target_array = AGE.allies
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_owned_by = CHU
+					is_owned_by = HAR
+					is_owned_by = BLZ
+				}
+			}		
+		}
+		#target_array = AGE.allies
 		state_target = yes
 		cost = 30
 		days_remove = 30
@@ -262,16 +264,16 @@ AGE_their_freedoms = {
 			}
 			has_country_flag = not_their_land_anymore_flag
 		}
-		#target_trigger = {
-		#	FROM = {
-		#		OR = {
-		#			is_owned_by = CHU
-		#			is_owned_by = HAR
-		#			is_owned_by = BLZ
-		#		}
-		#	}		
-		#}
-		target_array = AGE.allies
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_owned_by = CHU
+					is_owned_by = HAR
+					is_owned_by = BLZ
+				}
+			}		
+		}
+		#target_array = AGE.allies
 		state_target = yes
 		cost = 15
 		days_remove = 50
@@ -408,7 +410,7 @@ AGE_their_freedoms = {
 	AGE_baltic_terror = {
 		icon = GFX_decision_eng_trade_unions_support
 		activation = {
-			has_country_flag = baltic_terror_activation
+			has_completed_focus = AGE_not_their_land
 		}
 		available = {
 			any_owned_state = {
@@ -425,13 +427,9 @@ AGE_their_freedoms = {
 					}
 				}
 			}
-			#hidden_trigger = { NOT = { has_country_flag = baltic_terror_activation } }
 		}
 		days_mission_timeout = 60
 		is_good = yes
-		complete_effect = {
-			clr_country_flag = baltic_terror_activation
-		}
 		timeout_effect = {
 			random_list = {
 				var_terrorist_attack = {
@@ -557,7 +555,6 @@ AGE_their_freedoms = {
 		}
 		available = {
 			any_owned_state = {
-				NOT = {
 					OR = {
 						has_dynamic_modifier = {
 							modifier = open_opposition
@@ -566,7 +563,6 @@ AGE_their_freedoms = {
 							modifier = clandestine_cells
 						}
 					}
-				}
 			}
 			hidden_trigger = {
 				NOT = {
@@ -807,8 +803,37 @@ AGE_their_freedoms = {
 		timeout_effect = {
 			clr_country_flag = war_with_baltosphere_flag
 			AGE = {
-				country_event = {
-					id = AGE_phase_one.9
+				OR = {
+					AND = {
+						if = {
+							limit = {
+								has_completed_focus = AGE_not_their_land
+							}
+							country_event = {
+								id = AGE_phase_one.10
+							}
+						}
+						AGE = {
+							every_owned_state = {
+								OR = {
+									has_dynamic_modifier = {
+										modifier = open_opposition
+									}
+									has_dynamic_modifier = {
+										modifier = clandestine_cells
+									}
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_completed_focus = AGE_still_their_land
+						}
+						country_event = {
+							id = AGE_phase_one.9
+						}
+					}
 				}
 			}
 			BTC = {
@@ -835,31 +860,59 @@ AGE_their_freedoms = {
 						priority = 1
 					}
 					12 = {
-						create_unit = {
-							division = "name = \"Mežabrāļi\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1"
-							owner = BTC
-							allow_spawning_on_enemy_provs = yes
+						if = {
+							limit = {
+								NOT = {
+									has_dynamic_modifier = resistance_completely_eradicated
+								}
+							}
+							create_unit = {
+								division = "name = \"Mežabrāļi\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1"
+								owner = BTC
+								allow_spawning_on_enemy_provs = yes
+							}
 						}
 					}
 					13 = {
-						create_unit = {
-							division = "name = \"Mežabrāļi\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1"
-							owner = BTC
-							allow_spawning_on_enemy_provs = yes
+						if = {
+							limit = {
+								NOT = {
+									has_dynamic_modifier = resistance_completely_eradicated
+								}
+							}
+							create_unit = {
+								division = "name = \"Mežabrāļi\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1"
+								owner = BTC
+								allow_spawning_on_enemy_provs = yes
+							}
 						}
 					}
 					809 = {
-						create_unit = {
-							division = "name = \"Miško broliai\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1"
-							owner = BTC
-							allow_spawning_on_enemy_provs = yes
+						if = {
+							limit = {
+								NOT = {
+									has_dynamic_modifier = resistance_completely_eradicated
+								}
+							}
+							create_unit = {
+								division = "name = \"Miško broliai\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1"
+								owner = BTC
+								allow_spawning_on_enemy_provs = yes
+							}
 						}
 					}
 					911 = {
-						create_unit = {
-							division = "name = \"Miško broliai\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1"
-							owner = BTC
-							allow_spawning_on_enemy_provs = yes
+						if = {
+							limit = {
+								NOT = {
+									has_dynamic_modifier = resistance_completely_eradicated
+								}
+							}
+							create_unit = {
+								division = "name = \"Miško broliai\" division_template = \"Baltic militia\" start_experience_factor = 0.81 start_equipment_factor = 0.3 start_manpower_factor = 1"
+								owner = BTC
+								allow_spawning_on_enemy_provs = yes
+							}
 						}
 					}
 				}
@@ -955,7 +1008,12 @@ AGE_red_forest = {
 			FROM = {
 				is_owned_by = TIP
 				any_neighbor_state = {
-					is_owned_by = AGE
+					OR = {
+						is_owned_by = AGE
+						is_owned_by = CHU
+						is_owned_by = BLZ
+						is_owned_by = HAR
+					}
 				}
 				NOT = {
 					OR = {
@@ -988,12 +1046,21 @@ AGE_red_forest = {
 				amount = -500
 			}
 			FROM = {
-				transfer_state_to = AGE
-				add_core_of = AGE
-			}
-			hidden_effect = {
-				FROM = {
-					remove_core_of = HAR
+				if = {
+					limit = {
+						is_core_of = HAR
+					}
+					transfer_state_to = HAR
+					add_core_of = HAR
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = HAR
+						}
+					}
+					transfer_state_to = AGE
+					add_core_of = AGE
 				}
 			}
 		}
@@ -1178,6 +1245,9 @@ AGE_red_forest = {
 	AGE_burn_the_forest_sim = {
 		visible = {
 			has_completed_focus = AGE_scary_Red_Forest
+			SIM = {
+				exists = yes
+			}
 		}
 		available = {
 			has_equipment = {
@@ -1222,29 +1292,6 @@ AGE_red_forest = {
 			SIM = {
 				add_ideas = SIM_fire_of_infidels
 			}
-			hidden_effect = {
-				BLZ = {
-					add_to_war = {
-						targeted_alliance = AGE
-						enemy = SIM
-						hostility_reason = asked_to_join
-					}
-				}
-				HAR = {
-					add_to_war = {
-						targeted_alliance = AGE
-						enemy = SIM
-						hostility_reason = asked_to_join
-					}
-				}
-				CHU = {
-					add_to_war = {
-						targeted_alliance = AGE
-						enemy = SIM
-						hostility_reason = asked_to_join
-					}
-				}
-			}
 		}
 		ai_will_do = {
 			base = 1
@@ -1262,24 +1309,29 @@ AGE_red_forest = {
 			}
 		}
 		available = {
-			IF = {
-				limit = {
-					has_country_flag = slavicization_flag
-				}
-				OR = {
-					HAR = {
-						is_neighbor_of = BAI
+			OR = {
+				IF = {
+					limit = {
+						has_completed_focus = AGE_mutual_assistance
 					}
-					BLZ = {
-						is_neighbor_of = BAI
+					OR = {
+						HAR = {
+							is_neighbor_of = BAI
+						}
+						BLZ = {
+							is_neighbor_of = BAI
+						}
+						CHU = {
+							is_neighbor_of = BAI
+						}
 					}
 				}
-			}
-			IF = {
-				limit = {
-					has_country_flag = reconciliation_flag
+				IF = {
+					limit = {
+						has_country_flag = reconciliation_flag
+					}
+					is_neighbor_of = BAI
 				}
-				is_neighbor_of = BAI
 			}
 		}
 		cost = 0

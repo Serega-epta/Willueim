@@ -39,6 +39,9 @@ focus_tree = {
 			add_political_power = -50
 			add_manpower = 1000
 			country_event = AGE_phase_one.2
+			remove_dynamic_modifier = {
+				modifier = AGE_baltic_separatism
+			}
 			custom_effect_tooltip = AGE_seek_for_peace_tt
 		}
 	}
@@ -254,6 +257,36 @@ focus_tree = {
 				days = 30
 			}
 			add_stability = 0.03
+			every_owned_state = {
+				if = {
+					limit = {
+						is_owned_by = AGE
+						has_dynamic_modifier = {
+							modifier = open_opposition
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = open_opposition
+					}
+					add_dynamic_modifier = {
+						modifier = resistance_completely_eradicated
+					}
+				}
+				if = {
+					limit = {
+						is_owned_by = AGE
+						has_dynamic_modifier = {
+							modifier = clandestine_cells
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = clandestine_cells
+					}
+					add_dynamic_modifier = {
+						modifier = resistance_completely_eradicated
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -417,6 +450,7 @@ focus_tree = {
 						has_completed_focus = AGE_not_their_land
 					}
 					load_focus_tree = AGE_phase_2_slavicization
+					set_country_flag = war_with_baltosphere_flag
 				}
 			}
 		}

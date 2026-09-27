@@ -175,6 +175,11 @@ focus_tree = {
 		prerequisite = {
 			focus = AGE_help_Zhukovsky
 		}
+		bypass = {
+			BTC = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			declare_war_on = {
 				target = BTC
