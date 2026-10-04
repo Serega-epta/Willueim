@@ -836,7 +836,7 @@ on_actions = {
 				}
 			}
 			#LPC vs (AGE + BLZ + CHU + HAR): LPC defeat
-			if = {
+			else if = {
 				limit = {
 					ROOT = {
 						tag = LPC
@@ -989,6 +989,130 @@ on_actions = {
 						}
 						AGE = {
 							puppet = MAP
+						}
+					}
+				}
+			}
+			#(KMN + MSH) vs (MKS + BGR): (KMN + MSH) defeat
+			else if = {
+				limit = {
+					ROOT = {
+						OR = {
+							tag = KMN
+							tag = MSH
+						}
+					}
+					FROM = {
+						OR = {
+							tag = MKS
+							tag = BGR
+						}
+					}
+				}
+				ROOT = {
+					MKS = {
+						puppet = KMN
+					}
+					#transfer states to BGR
+					255 = {
+						if = {
+							limit = {
+								is_owned_by = MSH
+							}
+							transfer_state_to = BGR
+						}
+					}
+					952 = {
+						if = {
+							limit = {
+								is_owned_by = MSH
+							}
+							transfer_state_to = BGR
+						}
+					}
+					every_enemy_country = {
+						white_peace = KMN
+					}
+				}
+			}
+			#(KMN + MSH) vs (MKS + BGR): (MKS + BGR) defeat
+			else if = {
+				limit = {
+					ROOT = {
+						OR = {
+							tag = MKS
+							tag = BGR
+						}
+					}
+					FROM = {
+						OR = {
+							tag = KMN
+							tag = MSH
+						}
+					}
+					KMN = {
+						is_ally_with = MSH
+					}
+					MSH = {
+						is_ally_with = KMN
+					}
+				}
+				ROOT = {
+					#transfer states to MSH
+					938 = {
+						if = {
+							limit = {
+								is_owned_by = BGR
+							}
+							transfer_state_to = MSH
+						}
+					}
+					991 = {
+						if = {
+							limit = {
+								is_owned_by = BGR
+							}
+							transfer_state_to = MSH
+						}
+					}
+					250 = {
+						if = {
+							limit = {
+								is_owned_by = BGR
+							}
+							transfer_state_to = MSH
+						}
+					}
+					992 = {
+						if = {
+							limit = {
+								is_owned_by = BGR
+							}
+							transfer_state_to = MSH
+						}
+					}
+					265 = {
+						if = {
+							limit = {
+								is_owned_by = MKS
+							}
+							transfer_state_to = KMN
+						}
+					}
+					245 = {
+						if = {
+							limit = {
+								is_owned_by = MKS
+							}
+							transfer_state_to = KMN
+						}
+					}
+					950 = {
+						if = {
+							limit = {
+								is_owned_by = MKS
+							}
+							transfer_state_to = KMN
 						}
 					}
 				}

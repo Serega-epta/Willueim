@@ -757,14 +757,8 @@ focus_tree = {
 						target = ZAK
 						transfer_troops = yes
 					}
-					recruit_character = ORL_Sergey_Surovov
-					recruit_character = ORL_Dmitriy_Gusev
+					recruit_character = ORL_Dmitriy_Gusev # Мы рекрутируем Гусева, потому что их ORL-версии - генералы, а исходные версии - фельды. Суровов тянет на фельда, Гусев - нет. Да и фельд нужен ещё один позарез
 				}				
-			}
-			SBT = {
-				SBT_Dmitriy_Gusev = {
-					set_nationality = ROOT
-				}
 			}
 			ZAK = {
 				ZAK_Sergey_Surovov = {

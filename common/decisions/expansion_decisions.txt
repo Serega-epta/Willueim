@@ -116,6 +116,22 @@ expansion_category = {
 		visible = {
 			ROOT = {
 				is_neighbor_of = FROM
+				if = {
+					limit = {
+						tag = WTR
+						NOT = {
+							has_global_flag = BMB_not_appears_yet
+						}
+					}
+				}
+				if = {
+					limit = {
+						tag = MOS
+						NOT = {
+							has_global_flag = ELI_not_appears_yet
+						}
+					}
+				}
 			}
 		}
 		cost = 200

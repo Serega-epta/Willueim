@@ -119,9 +119,6 @@ leader_traits = {
 			factor = 1
 		}		
 	}	
-
-
-
 	###################################
 	#### Черты Паутов ###
 	###################################
@@ -132,7 +129,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	mutilated = {
+	SDC_mutilated = {
 		random = no
 		stability_factor = -0.07
 		war_support_factor = 0.03
@@ -260,6 +257,21 @@ leader_traits = {
 		random = no
 		stability_factor = 0.5
 		war_support_factor = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pribalt_nazi = {
+		random = no
+		stability_factor = -0.3
+		war_support_factor = 0.3
+		targeted_modifier = {
+			tag = AGE
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
 
 		ai_will_do = {
 			factor = 1
