@@ -67,6 +67,34 @@ characters = {
 			}
 		}
 	}
+	ORL_anarchy_statesmen = {
+		name = ORL_anarchy_statesmen
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GLS_Anarchy
+			}
+		}
+		country_leader = {
+			ideology = statesmen_subideology
+			expire = "3333.1.1.1"
+			id = -1
+			desc = GLS_anarchy_desc
+		}
+	}
+	ORL_anarchy_victory_cult = {
+		name = ORL_anarchy_victory_cult
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GLS_Anarchy
+			}
+		}
+		country_leader = {
+			ideology = victory_cult
+			expire = "3333.1.1.1"
+			id = -1
+			desc = ORL_anarchy_desc
+		}
+	}
 
 	ORL_Burning_Hypostasis = {
 		name = ORL_Burning_Hypostasis

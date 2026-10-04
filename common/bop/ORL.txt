@@ -66,7 +66,27 @@ ORL_power_balance = {
             max = -0.9
             min = -1
             modifier = {
-                custom_modifier_tooltip = endgame_tt
+                custom_modifier_tooltip = endgame_Saint_tt
+            }
+            on_activate = {
+                set_country_flag = ORL_heretic_and_saint_endgame
+                load_focus_tree = anarchy_focus_tree
+                country_event = {
+                    id = ORL_bop.1
+                    days = 1
+                }					
+                set_politics = {
+                    ruling_party = statesmen
+                    elections_allowed = no
+                }
+                kill_country_leader = yes
+                ORL_anarchy_statesmen = {
+                    promote_character = statesmen_subideology
+                }
+                set_rule = {
+                    can_not_declare_war = yes
+                }
+                country_lock_all_division_template = yes
             }
         }
     }
@@ -127,7 +147,27 @@ ORL_power_balance = {
             min = 0.9
             max = 1
             modifier = {
-                custom_modifier_tooltip = endgame_tt
+                custom_modifier_tooltip = endgame_Heretic_tt
+            }
+            on_activate = {
+                set_country_flag = ORL_heretic_and_saint_endgame
+                load_focus_tree = anarchy_focus_tree
+                country_event = {
+                    id = ORL_bop.2
+                    days = 1
+                }					
+                kill_country_leader = yes
+                set_politics = {
+                    ruling_party = sacraments
+                    elections_allowed = no
+                }
+                ORL_anarchy_victory_cult = {
+                    promote_character = victory_cult
+                }
+                set_rule = {
+                    can_not_declare_war = yes
+                }
+                country_lock_all_division_template = yes
             }
         }
     }
