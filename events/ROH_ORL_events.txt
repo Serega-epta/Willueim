@@ -113,6 +113,18 @@ country_event = {
 	}
 }
 country_event = {
+	#Разбор полётов
+	id = ORL_phase_one.11
+	title = ORL_phase_one.11.t
+	desc = ORL_phase_one.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ORL_phase_one.11.a
+		add_manpower = -30
+	}
+}
+country_event = {
 	#Наша судьба
 	id = ORL_phase_two.1
 	title = ORL_phase_two.1.t
