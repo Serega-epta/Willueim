@@ -2,6 +2,9 @@ PMD_state_of_district = {
 	PMD_hold_Hour_of_Hate = {
 		priority = 0
 		#available = {  }
+		ai_will_do = {
+			base = 70
+		}
 		cost = 25
 		days_re_enable = 30
 		remove_effect = {
@@ -18,6 +21,9 @@ PMD_state_of_district = {
 		#available = {  }
 		cost = 50
 		days_re_enable = 30
+		ai_will_do = {
+			base = 20
+		}
 		remove_effect = {
 			add_to_variable = {
     			var = mental_well_being_var
@@ -32,6 +38,9 @@ PMD_state_of_district = {
 		#available = {  }
 		cost = 50
 		days_re_enable = 30
+		ai_will_do = {
+			base = 20
+		}
 		remove_effect = {
 			add_to_variable = {
     			var = mental_well_being_var
@@ -51,6 +60,9 @@ PMD_state_of_district = {
 		#available = {  }
 		cost = 25
 		days_re_enable = 30
+		ai_will_do = {
+			base = 20
+		}
 		remove_effect = {
 			add_to_variable = {
     			var = mental_well_being_var
@@ -67,13 +79,16 @@ PMD_state_of_district = {
 	}
 	PMD_increase_rations = {
 		priority = 0
+		ai_will_do = {
+			base = 10
+		}
 		available = {  
 			NOT = {
 				has_idea = PMD_Good_rations
 			}
 		}
-		cost = 25
-		days_re_enable = 30
+		cost = 0
+		days_re_enable = 1
 		remove_effect = {
 			IF = {
 				limit = {
@@ -105,7 +120,7 @@ PMD_state_of_district = {
 			add_to_variable = {
     			var = mental_well_being_change_var
     			value = 1
-				tooltip = remove_1_food_change_tt
+				tooltip = remove_1_mental_change_tt
 			}
 			add_to_variable = {
     			var = consumption_of_provisions_var
@@ -116,13 +131,16 @@ PMD_state_of_district = {
 	}
 	PMD_decrease_rations = {
 		priority = 0
+		ai_will_do = {
+			base = 10
+		}
 		available = { 
 			NOT = {
 				has_idea = PMD_Hunger_strike
 			}
 		}
-		cost = 25
-		days_re_enable = 30
+		cost = 0
+		days_re_enable = 1
 		remove_effect = {
 			IF = {
 				limit = {
@@ -165,6 +183,9 @@ PMD_state_of_district = {
 	}
 	PMD_use_stocks_of_alcohol = {
 		priority = 0
+		ai_will_do = {
+			base = 20
+		}
 		#available = {  }
 		cost = 50
 		days_re_enable = 30
@@ -180,6 +201,9 @@ PMD_state_of_district = {
 	}
 	PMD_send_soldiers_on_hunt = {
 		priority = 0
+		ai_will_do = {
+			base = 20
+		}
 		#available = {  }
 		cost = 25
 		days_re_enable = 30
@@ -198,6 +222,9 @@ PMD_state_of_district = {
 	}
 	PMD_concentrate_our_forces = {
 		priority = 0
+		ai_will_do = {
+			base = 20
+		}
 		visible = { 
 			has_completed_focus = PMD_Reliable_Shield_of_Motherland
 			check_variable = {
@@ -222,13 +249,18 @@ PMD_state_of_district = {
 				tooltip = remove_2_food_tt
 			}
 			create_unit = {
-				division = "name = \" Ispravlentsy\" division_template = \"Ispravlentsy\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
-				owner = ROOT
+				random_owned_state = {
+					division = "name = \" Ispravlentsy\" division_template = \"Ispravlentsy\" start_experience_factor = 0.2"
+					owner = ROOT
+				}
 			}
 		}
 	}
 	PMD_carry_out_surplus_appropriation = {
 		priority = 0
+		ai_will_do = {
+			base = 20
+		}
 		visible = { 
 			has_completed_focus = PMD_Everything_for_front
 			check_variable = {
@@ -256,6 +288,9 @@ PMD_state_of_district = {
 	}
 	PMD_outfit_expedition = {
 		priority = 0
+		ai_will_do = {
+			base = 5
+		}
 		visible = { 
 			has_completed_focus = PMD_Everything_for_victory
 		}
@@ -267,6 +302,9 @@ PMD_state_of_district = {
 	}
 	PMD_meat_from_mass_grave = {
 		priority = 0
+		ai_will_do = {
+			base = 20
+		}
 		visible = { 
 			check_variable = {
     			provisions_var < 6

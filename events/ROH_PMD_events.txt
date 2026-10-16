@@ -350,7 +350,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = PMD_expedition.3.a
-		set_country_falg = expedition_1_flag
+		set_country_flag = expedition_1_flag
 		country_event = PMD_expedition.10
 	}
 	option = {
@@ -380,8 +380,8 @@ country_event = {
 				check_variable = {
     				expedition_provisions_var > 6
 				}
-				clr_country_falg = expedition_1_flag
-				set_country_falg = expedition_2_flag
+				clr_country_flag = expedition_1_flag
+				set_country_flag = expedition_2_flag
 				add_to_variable = {
     				var = expedition_provisions_var
     				value = -7
@@ -445,21 +445,21 @@ country_event = {
 				check_variable = {
     				expedition_provisions_var > 0
 				}
+			}
 			add_to_variable = {
     			var = expedition_provisions_var
     			value = -1
 			}
-				hidden_effect = {
-					random_list = {
-						60 = {
-							country_event = PMD_expedition.8
-						}
-						30 = {
-							country_event = PMD_expedition.7
-						}
-						10 = {
-							country_event = PMD_expedition.9
-						}
+			hidden_effect = {
+				random_list = {
+					60 = {
+						country_event = PMD_expedition.8
+					}
+					30 = {
+						country_event = PMD_expedition.7
+					}
+					10 = {
+						country_event = PMD_expedition.9
 					}
 				}
 			}
@@ -503,12 +503,12 @@ country_event = {
 				check_variable = {
     				expedition_provisions_var > 10
 				}
-				add_to_variable = {
-    				var = expedition_provisions_var
-    				value = -11
-				}
-				hidden_effect = { country_event = PMD_expedition.10 }
 			}
+			add_to_variable = {
+    			var = expedition_provisions_var
+    			value = -11
+			}
+			hidden_effect = { country_event = PMD_expedition.10 }
 		}
 		else = {
 			hidden_effect = { country_event = PMD_expedition.6 }
@@ -530,14 +530,14 @@ country_event = {
 				check_variable = {
     				expedition_provisions_var > 10
 				}
-				clr_country_falg = expedition_2_flag
-				set_country_falg = expedition_3_flag
-				add_to_variable = {
-    				var = expedition_provisions_var
-    				value = -11
-				}
-				hidden_effect = { country_event = PMD_expedition.10 }
 			}
+			clr_country_flag = expedition_2_flag
+			set_country_flag = expedition_3_flag
+			add_to_variable = {
+    			var = expedition_provisions_var
+    			value = -11
+			}
+			hidden_effect = { country_event = PMD_expedition.10 }
 		}
 		else = {
 			hidden_effect = { country_event = PMD_expedition.6 }
@@ -550,20 +550,20 @@ country_event = {
 				check_variable = {
     				expedition_provisions_var > 10
 				}
-				clr_country_falg = expedition_2_flag
-				set_country_falg = expedition_3_flag
-				add_stability = -0.1
-				add_to_variable = {
-    				var = mental_well_being_var
-    				value = -10
-					tooltip = remove_10_mental_tt
-				}
-				add_to_variable = {
-    				var = expedition_provisions_var
-    				value = -11
-				}
-				hidden_effect = { country_event = PMD_expedition.6 }
 			}
+			clr_country_flag = expedition_2_flag
+			set_country_flag = expedition_3_flag
+			add_stability = -0.1
+			add_to_variable = {
+    			var = mental_well_being_var
+    			value = -10
+				tooltip = remove_10_mental_tt
+			}
+			add_to_variable = {
+    			var = expedition_provisions_var
+    			value = -11
+			}
+			hidden_effect = { country_event = PMD_expedition.6 }
 		}
 		else = {
 			hidden_effect = { country_event = PMD_expedition.6 }
@@ -611,7 +611,7 @@ country_event = {
 				amount = 100
 			}
 			add_equipment_to_stockpile = {
-				type = civilian_clothing
+				type = infantry_odejda_0
 				amount = 200
 			}
 		}
@@ -628,7 +628,7 @@ country_event = {
 				amount = 150
 			}
 			add_equipment_to_stockpile = {
-				type = civilian_clothing
+				type = infantry_odejda_0
 				amount = 300
 			}
 		}
@@ -645,7 +645,7 @@ country_event = {
 				amount = 1000
 			}
 			add_equipment_to_stockpile = {
-				type = civilian_clothing
+				type = cinfantry_odejda_0
 				amount = 1000
 			}
 		}

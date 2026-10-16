@@ -49,9 +49,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			set_county_flag = NMG_mil_flag
+			set_country_flag = NMG_mil_flag
 			country_event = NMG_phase_one.3
-			remove_ideas = NMG_Norwegian_protests
 			remove_ideas = NMG_activity_of_ULF
 			add_dynamic_modifier = {
 				modifier = NMG_increased_activity_of_ULF
@@ -247,13 +246,13 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			set_county_flag = NMG_dem_flag
+			set_country_flag = NMG_dem_flag
 			country_event = NMG_phase_one.4
 			swap_ideas = {
-				remove_idea = NMG_activity_of_ULF
+				remove_ideas = NMG_activity_of_ULF
 				add_idea = NMG_decreased_activity_of_ULF
 			}
-			remove_idea = NMG_Norwegian_protests
+			remove_ideas = NMG_Norwegian_protests
 		}
 	}
 	focus = {
@@ -399,7 +398,8 @@ focus_tree = {
 		completion_reward = {
 			clr_country_flag = NMG_elections_flag
 			country_event = NMG_phase_one.6
-			remove_idea = NMG_decreased_activity_of_ULF
+			remove_ideas = NMG_decreased_activity_of_ULF
+			remove_ideas = NMG_Norwegian_protests
 			add_political_power = 200
 			add_stability = 0.2
 			set_popularities = {
@@ -422,6 +422,11 @@ focus_tree = {
     			ideology = humanists
     			name = NMG_dem_humanists_party
 				long_name = NMG_dem_humanists_party
+			}
+			add_to_variable = {
+    			var = election_progress_var
+    			value = 40
+    			tooltip = add_40_to_election_progress_tt
 			}
 		}
 	}
@@ -460,7 +465,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = NMG_phase_one.7
-			remove_idea = NMG_Preparation_for_war
+			remove_ideas = NMG_Preparation_for_war
 			add_war_support = 0.05
 			add_offsite_building = { type = arms_factory level = 4 }
 		}

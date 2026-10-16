@@ -43,6 +43,9 @@ volga_war = {
 	send_trade_caravan = {
 		days_re_enable = 20
 		cost = 50
+		ai_will_do = {
+			base = 50
+		}
 		complete_effect = {
 			subtract_from_variable = {
 				var = volga_war_cgf
@@ -58,6 +61,9 @@ volga_war = {
 	establish_new_trade_connections = {
 		days_re_enable = 40
 		cost = 100
+		ai_will_do = {
+			base = 20
+		}
 		complete_effect = {
 			subtract_from_variable = {
 				var = volga_war_cgf
@@ -72,6 +78,9 @@ volga_war = {
 	}
 	send_bandit_raid = {
 		days_re_enable = 30
+		ai_will_do = {
+			base = 30
+		}
 		available = {
 			has_equipment = {
 				infantry_equipment > 499
@@ -96,6 +105,9 @@ volga_war = {
 	}
 	extra_shifts = {
 		days_re_enable = 30
+		ai_will_do = {
+			base = 25
+		}
 		available = {
 			has_manpower > 999
 		}

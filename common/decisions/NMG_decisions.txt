@@ -5,11 +5,19 @@ NMG_elections_decisions = {
 		cost = 50
 		days_remove = 35
 		days_re_enable = 35
+		ai_will_do = {
+			base = 10
+		}
 		remove_effect = {
 			add_to_variable = {
     			var = Suspicion_var
     			value = -15
     			tooltip = remove_15_from_Suspicion_tt
+			}
+			clamp_variable = {
+				var = Suspicion_var
+				min = 0
+				max = 100
 			}
 		}
 	}
@@ -18,12 +26,20 @@ NMG_elections_decisions = {
 		#available = {  }
 		days_remove = 35
 		days_re_enable = 35
+		ai_will_do = {
+			base = 10
+		}
 		remove_effect = {
 			add_political_power = 50
 			add_to_variable = {
     			var = Suspicion_var
     			value = 15
     			tooltip = add_15_to_Suspicion_tt
+			}
+			clamp_variable = {
+				var = Suspicion_var
+				min = 0
+				max = 100
 			}
 		}
 	}
@@ -33,6 +49,9 @@ NMG_elections_decisions = {
 		cost = 200
 		days_remove = 70
 		days_re_enable = 35
+		ai_will_do = {
+			base = 30
+		}
 		complete_effect = {
 			add_to_variable = {
     			var = Suspicion_growth_var
@@ -54,6 +73,9 @@ NMG_elections_decisions = {
 		cost = 50
 		days_remove = 35
 		days_re_enable = 35
+		ai_will_do = {
+			base = 10
+		}
 		remove_effect = {
 			random_list = {
 				50 = {
@@ -62,12 +84,22 @@ NMG_elections_decisions = {
     					value = -20
     					tooltip = remove_20_from_Suspicion_tt
 					}
+					clamp_variable = {
+						var = Suspicion_var
+						min = 0
+						max = 100
+					}
 				}
 				50 = {
 					add_to_variable = {
     					var = Suspicion_var
     					value = 20
     					tooltip = add_20_to_Suspicion_tt
+					}
+					clamp_variable = {
+						var = Suspicion_var
+						min = 0
+						max = 100
 					}
 				}
 			}
@@ -93,6 +125,11 @@ NMG_elections_decisions = {
 			add_to_variable = {
     			var = Suspicion_var
     			value = Suspicion_growth_var
+			}
+			clamp_variable = {
+				var = Suspicion_var
+				min = 0
+				max = 100
 			}
 			activate_mission = Suspicion_is_growing
 		}

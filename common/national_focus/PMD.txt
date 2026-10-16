@@ -140,8 +140,10 @@ focus_tree = {
 			add_political_power = 50
 			country_event = PMD_phase_one.10
 			create_unit = {
-				division = "name = \" Ispravlentsy\" division_template = \"Ispravlentsy\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
-				owner = ROOT
+				random_owned_state = {
+					division = "name = \" Ispravlentsy\" division_template = \"Ispravlentsy\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -158,10 +160,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			random_list = {
-				60 = {
+				30 = {
 					country_event = PMD_phase_one.11
 				}
-				40 = {
+				70 = {
 					country_event = PMD_phase_one.12
 				}
 			}
@@ -181,7 +183,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_war_support = 0.1
-			add_stability 0.1
+			add_stability = 0.1
 			country_event = PMD_phase_one.13
 			declare_war_on = {
                 target = NMG

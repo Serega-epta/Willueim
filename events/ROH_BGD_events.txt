@@ -14,9 +14,37 @@ country_event = {
         }
 		BGD = {
 			country_event = BGD_union.2
-			annex_country = {
-    			target = ROOT
-    			transfer_troops = yes
+			if = {
+				limit = {
+					NOT ={
+						target = GLS
+					}
+				}
+				ROOT = {
+					every_core_state = {
+						add_core_of = BGD
+					}
+				}
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+			}
+			if = {
+				limit = {
+					target = GLS
+				}
+				BGD = {
+					every_core_state = {
+						add_core_of = GLS
+					}
+				}
+				GLS = {
+					annex_country = {
+						target = BGD
+						transfer_troops = yes
+					}
+				}
 			}
 		}
 	}
@@ -220,6 +248,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = BGD_event.11.a
+		BGD = {
+			every_core_state = {
+				add_core_of = ARM 
+			}
+		}
 		ARM = {
 			change_tag_from = BGD
 		}
@@ -227,11 +260,6 @@ country_event = {
 			annex_country = {
     			target = BGD
     			transfer_troops = yes
-			}
-		}
-		BGD = {
-			every_core_state = {
-				add_core_of = ARM 
 			}
 		}
 	}
@@ -299,7 +327,7 @@ country_event = {
 		add_political_power = 10
 	}
 }
-#КОТ
+#КОТ (КОКША!!!11!)
 country_event = {
 	id = BGD_event.17
 	title = BGD_event.17.t
