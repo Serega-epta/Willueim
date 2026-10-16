@@ -301,7 +301,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = PMD_expedition.1.d
+		name = PMD_expedition.1.f
 		set_variable = {
     		var = expedition_provisions_var
     		value = 20
@@ -386,11 +386,21 @@ country_event = {
     				var = expedition_provisions_var
     				value = -7
 				}
-				hidden_effect = { country_event = PMD_expedition.10 }
+				hidden_effect = { 
+					country_event = {
+						id = PMD_expedition.10
+						days = 1
+					}
+				}
 			}
 		}
 		else = {
-			hidden_effect = { country_event = PMD_expedition.6 }
+			hidden_effect = {
+				country_event = {
+					id = PMD_expedition.6
+					days = 1
+				}
+			}
 		}
 	}
 	option = {
@@ -404,11 +414,21 @@ country_event = {
     				var = expedition_provisions_var
     				value = -3
 				}
-				hidden_effect = { country_event = PMD_expedition.5 }
+				hidden_effect = {
+					country_event = {
+						id = PMD_expedition.5
+						days = 1
+					}
+				}
 			}
 		}
 		else = {
-			hidden_effect = { country_event = PMD_expedition.6 }
+			hidden_effect = {
+				country_event = {
+					id = PMD_expedition.6
+					days = 1
+				}
+			}
 		}
 	}
 }
@@ -431,11 +451,21 @@ country_event = {
     				var = expedition_provisions_var
     				value = -10
 				}
-				hidden_effect = { country_event = PMD_expedition.10 }
+				hidden_effect = {
+					country_event = {
+						id = PMD_expedition.10
+						days = 1
+					}
+				}
 			}
 		}
 		else = {
-			hidden_effect = { country_event = PMD_expedition.6 }
+			hidden_effect = {
+				country_event = {
+					id = PMD_expedition.6
+					days = 1
+				}
+			}
 		}
 	}
 	option = {
@@ -453,19 +483,33 @@ country_event = {
 			hidden_effect = {
 				random_list = {
 					60 = {
-						country_event = PMD_expedition.8
+						country_event = {
+							id = PMD_expedition.8
+							days = 1
+						}
 					}
 					30 = {
-						country_event = PMD_expedition.7
+						country_event = {
+							id = PMD_expedition.7
+							days = 1
+						}
 					}
 					10 = {
-						country_event = PMD_expedition.9
+						country_event = {
+							id = PMD_expedition.9
+							days = 1
+						}
 					}
 				}
 			}
 		}
 		else = {
-			hidden_effect = { country_event = PMD_expedition.6 }
+			hidden_effect = {
+				country_event = {
+					id = PMD_expedition.6
+					days = 1
+				}
+			}
 		}
 	}
 }
