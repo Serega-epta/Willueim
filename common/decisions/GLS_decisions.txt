@@ -5,6 +5,16 @@ GLS_freedom_and_order = {
 		allowed = {
 			original_tag = GLS
 		}
+		ai_will_do = {
+			base = -1
+			modifier ={
+				power_balance_value = {
+					id = GLS_power_balance
+					value > 0.7
+				}
+				add = 100
+			}
+		}
 		#available = {  }
 		cost = 75
 		days_re_enable = 25
@@ -19,6 +29,16 @@ GLS_freedom_and_order = {
 	talk_to_vladimir = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 110
+		ai_will_do = {
+			base = -1
+			modifier ={
+				power_balance_value = {
+					id = GLS_power_balance
+					value < -0.7
+				}
+				add = 100
+			}
+		}
 		allowed = {
 			original_tag = GLS
 		}

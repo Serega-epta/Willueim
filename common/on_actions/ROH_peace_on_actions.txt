@@ -876,8 +876,15 @@ on_actions = {
 					}
 					FROM = {
 						OR = {
-							tag = ORL
 							tag = NAR
+							if ={
+								limit ={
+									ORL ={
+										is_ally_with = NAR
+									}
+								}
+								tag = ORL
+							}
 						}
 					}
 				}
