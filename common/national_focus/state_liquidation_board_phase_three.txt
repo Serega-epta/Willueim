@@ -18,6 +18,29 @@ focus_tree = {
 		x = 10
 		y = 0
 		cost = 5
+		available = {
+			NOT = {
+				country_exists = EDM
+			}
+			NOT = {
+				country_exists = WPK
+			}
+			NOT = {
+				country_exists = URC
+			}
+			NOT = {
+				country_exists = ZAN
+			}
+			NOT = {
+				country_exists = TAR
+			}
+			NOT = {
+				country_exists = OCH
+			}
+			NOT = {
+				country_exists = DIS
+			}
+		}
 		ai_will_do = {
 			base = 10
 		}

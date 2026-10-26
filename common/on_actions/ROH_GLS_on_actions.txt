@@ -23,8 +23,11 @@ on_actions = {
 				add_to_variable = { ready_charge = 3 }			
 			}
 			if = { #Если прожали решение
-				limit = { has_country_flag = gls_2_percent_additive_for_kurchatov_project }
+				limit = { 
+					has_country_flag = gls_2_percent_additive_for_kurchatov_project
+				}
 				add_to_variable = { ready_charge = 2 }
+				clr_country_flag = gls_2_percent_additive_for_kurchatov_project
 			}
 			####Создание ОМП####
 			if = {

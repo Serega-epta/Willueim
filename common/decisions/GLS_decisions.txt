@@ -243,7 +243,7 @@ GLS_kurchatov_project = {
 			original_tag = GLS
 		}
 		available = {
-			num_of_civilian_factories > 20
+			num_of_civilian_factories > 34
 		}
 		visible = {
 			NOT = {
@@ -251,7 +251,7 @@ GLS_kurchatov_project = {
 			}
 		}
 		modifier = {
-			civilian_factory_use = 20
+			civilian_factory_use = 35
 		}
 		cost = 150
 		days_remove = 90
@@ -263,6 +263,10 @@ GLS_kurchatov_project = {
 					id = GLS_decisions.10
 					days = 1
 				}
+				add_to_variable = {
+					ready_charge = 5
+				}
+				set_country_flag = gls_2_percent_additive_for_kurchatov_project
 			}
 		}
 	}
