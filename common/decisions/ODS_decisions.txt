@@ -174,11 +174,11 @@ ODS_subordination = {
 		visible = {
 			FROM = {
 				has_state_flag = first_level_of_authority
-			}
-			NOT = {
-				state = 837
-				state = 838
-				state = 839
+				NOT = {
+					state = 837
+					state = 838
+					state = 839
+				}
 			}
 		}
 		on_map_mode = decision_view_only
@@ -235,11 +235,11 @@ ODS_subordination = {
 		visible = {
 			FROM = {
 				has_state_flag = second_level_of_authority
-			}
-			NOT = {
-				state = 837
-				state = 838
-				state = 839
+				NOT = {
+					state = 837
+					state = 838
+					state = 839
+				}
 			}
 		}
 		on_map_mode = decision_view_only

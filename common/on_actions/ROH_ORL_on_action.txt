@@ -1,14 +1,16 @@
 on_actions = {
     on_weekly_ORL = {
-        add_power_balance_value = {
-    		id = ORL_power_balance
-    		value = Messiah_side_var
-    		tooltip_side = Messiah_side
-		}
-        add_power_balance_value = {
-    		id = ORL_power_balance
-    		value = Hypocrite_side_var
-    		tooltip_side = Hypocrite_side
-		}
+        effect = {
+	        add_power_balance_value = {
+	    		id = ORL_power_balance
+	    		value = Messiah_side_var
+	    		tooltip_side = Messiah_side
+			}
+	        add_power_balance_value = {
+	    		id = ORL_power_balance
+	    		value = Hypocrite_side_var
+	    		tooltip_side = Hypocrite_side
+			}
+        }
     }
 }

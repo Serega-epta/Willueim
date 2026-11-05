@@ -23,7 +23,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 150
-			remove_idea = ARM_second_central_russian_war_idea
+			remove_ideas = ARM_second_central_russian_war_idea
 		}
 	}
 	focus = {
@@ -571,7 +571,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 2
 				uses = 2
-				category = artillery
+				category = artillery_tech
 			}
 		}
 	}
@@ -939,7 +939,8 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = industry
+				category = production_lines
+				category = industry_organisation
 			}
 			add_tech_bonus = {
 				bonus = 0.5
@@ -1136,7 +1137,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
-				category = military_police_tech
+				category = support_tech
 			}
 			every_owned_state = {
 				random_select_amount = 2

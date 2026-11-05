@@ -227,7 +227,7 @@ LWV_holiness = {
 			NOT = {
 				any_state = {
 					has_dynamic_modifier = {
-						modifier = holy_step
+						modifier = sviataya_postup
 					}
 				}
 			}
@@ -252,7 +252,7 @@ LWV_holiness = {
 			NOT = {
 				any_state = {
 					has_dynamic_modifier = {
-						modifier = holy_step
+						modifier = sviataya_postup
 					}
 				}
 			}
@@ -268,7 +268,7 @@ LWV_holiness = {
 		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = {
-					modifier = holy_step
+					modifier = sviataya_postup
 					days = 30
 				}
 				owner = {
@@ -305,13 +305,13 @@ LWV_holiness = {
 			}
 			FROM = {
 				has_dynamic_modifier = {
-					modifier = holy_step
+					modifier = sviataya_postup
 				}
 			}
 			NOT = {
 				any_state = {
 					has_dynamic_modifier = {
-						modifier = judgment_day
+						modifier = sudni_den
 					}
 				}
 			}
@@ -324,13 +324,13 @@ LWV_holiness = {
 			}
 			FROM = {
 				has_dynamic_modifier = {
-					modifier = holy_step
+					modifier = sviataya_postup
 				}
 			}
 			NOT = {
 				any_state = {
 					has_dynamic_modifier = {
-						modifier = judgment_day
+						modifier = sudni_den
 					}
 				}
 			}
@@ -347,10 +347,10 @@ LWV_holiness = {
 		remove_effect = {
 			FROM = {
 				remove_dynamic_modifier = {
-					modifier = holy_step
+					modifier = sviataya_postup
 				}
 				add_dynamic_modifier = {
-					modifier = judgment_day
+					modifier = sudni_den
 					days = 20
 				}
 			}
@@ -390,7 +390,7 @@ LWV_holiness = {
 			NOT = {
 				any_state = {
 					has_dynamic_modifier = {
-						modifier = prepare_the_ground
+						modifier = podgotovlennaya_pochva
 					}
 				}
 			}
@@ -409,7 +409,7 @@ LWV_holiness = {
 			NOT = {
 				any_state = {
 					has_dynamic_modifier = {
-						modifier = prepare_the_ground
+						modifier = podgotovlennaya_pochva
 					}
 				}
 			}
@@ -425,7 +425,7 @@ LWV_holiness = {
 		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = {
-					modifier = prepare_the_ground
+					modifier = podgotovlennaya_pochva
 					days = 50
 				}
 			}
@@ -474,7 +474,7 @@ LWV_holiness = {
 				is_core_of = LWV
 				is_owned_by = LWV
 				has_dynamic_modifier = {
-					modifier = prepare_the_ground
+					modifier = podgotovlennaya_pochva
 				}
 			}
 		}
@@ -490,11 +490,11 @@ LWV_holiness = {
 		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = {
-					modifier = sow_the_seeds
+					modifier = zaseyannyje_semena
 					days = 30
 				}
 				remove_dynamic_modifier = {
-					modifier = prepare_the_ground
+					modifier = podgotovlennaya_pochva
 					days = 30
 				}
 			}
