@@ -42,17 +42,15 @@ debug_decisions = {
 		visible = {
 			is_debug = yes
 			NOT = {
-				has_focus_tree = NMG_war
+				has_country_flag = NMG_war_flag
 			}
 		}
 		allowed = {
 			tag = NMG
 		}
 		complete_effect = {
-			load_focus_tree = {
-				tree = NMG_war
-				keep_completed = yes
-			}
+			set_country_flag = NMG_war_flag
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	#ORL

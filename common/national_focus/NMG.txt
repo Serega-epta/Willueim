@@ -8,6 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
+
 	focus = {
 		id = NMG_briefing
 		cost = 4
@@ -447,353 +448,369 @@ focus_tree = {
 			add_war_support = 0.1
 		}
 	}
-}
-focus_tree = {
-	id = NMG_war
-	country = {
-		factor = 0
-	}
-	default = no
 
-	focus = {
-		id = NMG_democracy_protocol
-		cost = 2
-		x = 3
-		y = 0
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			country_event = NMG_phase_one.7
-			remove_ideas = NMG_Preparation_for_war
-			add_war_support = 0.05
-			add_offsite_building = { type = arms_factory level = 4 }
+	shared_focus = NMG_democracy_protocol
+}
+
+shared_focus = {
+	id = NMG_democracy_protocol
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = NMG_not_PMD_anarchy_tt
+			NOT = { has_country_flag = NMG_PMD_anarchy_flag }
 		}
 	}
-	focus = {
-		id = NMG_fire_of_patriotism
-		prerequisite = {
-			focus = NMG_democracy_protocol
-		}
-		cost = 2
-		x = 3
-		y = 1
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			IF = {
-				limit = {
-					has_country_flag = NMG_mil_flag
-				}
-				add_ideas = NMG_soldiers_support
-			}
-			IF = {
-				limit = {
-					has_country_flag = NMG_dem_flag
-				}
-				add_ideas = NMG_people_support
-			}
+	cost = 2
+	x = 11
+	y = 0
+	allow_branch = {
+		has_country_flag = NMG_war_flag
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		country_event = NMG_phase_one.7
+		remove_ideas = NMG_Preparation_for_war
+		add_war_support = 0.05
+		add_offsite_building = { type = arms_factory level = 4 }
+	}
+}
+shared_focus = {
+	id = NMG_fire_of_patriotism
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = NMG_not_PMD_anarchy_tt
+			NOT = { has_country_flag = NMG_PMD_anarchy_flag }
 		}
 	}
-	focus = {
-		id = NMG_understand_their_tactics
-		prerequisite = {
-			focus = NMG_fire_of_patriotism
+	prerequisite = {
+		focus = NMG_democracy_protocol
+	}
+	cost = 2
+	x = 11
+	y = 1
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		IF = {
+			limit = {
+				has_country_flag = NMG_mil_flag
+			}
+			add_ideas = NMG_soldiers_support
 		}
-		cost = 4
-		x = 3
-		y = 2
-		ai_will_do = {
-			factor = 10
+		IF = {
+			limit = {
+				has_country_flag = NMG_dem_flag
+			}
+			add_ideas = NMG_people_support
 		}
-		completion_reward = {
-			add_timed_idea = {
+	}
+}
+shared_focus = {
+	id = NMG_understand_their_tactics
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = NMG_not_PMD_anarchy_tt
+			NOT = { has_country_flag = NMG_PMD_anarchy_flag }
+		}
+	}
+	prerequisite = {
+		focus = NMG_fire_of_patriotism
+	}
+	cost = 4
+	x = 11
+	y = 2
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_timed_idea = {
     			idea = NMG_countermeasures
     			days = 90
-			}
-			add_war_support = 0.1
 		}
+		add_war_support = 0.1
 	}
-	focus = {
-		id = NMG_Polar_Waltz
-		prerequisite = {
-			focus = NMG_understand_their_tactics
-		}
-		cost = 5
-		x = 3
-		y = 3
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_timed_idea = {
+}
+shared_focus = {
+	id = NMG_Polar_Waltz
+	prerequisite = {
+		focus = NMG_understand_their_tactics
+	}
+	cost = 5
+	x = 11
+	y = 3
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_timed_idea = {
     			idea = NMG_spirit_of_revanchism
     			days = 35
-			}
-			add_war_support = 0.2
 		}
+		add_war_support = 0.2
 	}
-	focus = {
-		id = NMG_Calm_population_down
-		prerequisite = {
-			focus = NMG_Polar_Waltz
-		}
-		available = {
+}
+shared_focus = {
+	id = NMG_Calm_population_down
+	prerequisite = {
+		focus = NMG_Polar_Waltz
+	}
+	available = {
     		has_war = no
+	}
+	cost = 8
+	x = 9
+	y = 4
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		98 = {
+			add_resistance = -10
 		}
-		cost = 8
-		x = 1
-		y = 4
-		ai_will_do = {
-			factor = 10
+		148 = {
+			add_resistance = -10
 		}
-		completion_reward = {
-			98 = {
-				add_resistance = -10
-			}
-			148 = {
-				add_resistance = -10
-			}
-			722 = {
-				add_resistance = -10
-			}
-			842 = {
-				add_resistance = -10
-			}
+		722 = {
+			add_resistance = -10
+		}
+		842 = {
+			add_resistance = -10
 		}
 	}
-	focus = {
-		id = NMG_reconstruct_infrastructure
-		prerequisite = {
-			focus = NMG_Polar_Waltz
-		}
-		available = {
+}
+shared_focus = {
+	id = NMG_reconstruct_infrastructure
+	prerequisite = {
+		focus = NMG_Polar_Waltz
+	}
+	available = {
     		has_war = no
+	}
+	cost = 8
+	x = 11
+	y = 4
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		98 = {
+			add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+			}
 		}
-		cost = 8
-		x = 3
-		y = 4
-		ai_will_do = {
-			factor = 10
+		148 = {
+			add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+			}
 		}
-		completion_reward = {
-			98 = {
-				add_building_construction = {
+		722 = {
+			add_building_construction = {
     				type = infrastructure
     				level = 1
     				instant_build = yes
-				}
 			}
-			148 = {
-				add_building_construction = {
+		}
+		842 = {
+			add_building_construction = {
     				type = infrastructure
     				level = 1
     				instant_build = yes
-				}
-			}
-			722 = {
-				add_building_construction = {
-    				type = infrastructure
-    				level = 1
-    				instant_build = yes
-				}
-			}
-			842 = {
-				add_building_construction = {
-    				type = infrastructure
-    				level = 1
-    				instant_build = yes
-				}
 			}
 		}
 	}
-	focus = {
-		id = NMG_round_up_collaborators
-		prerequisite = {
-			focus = NMG_Polar_Waltz
-		}
-		available = {
+}
+shared_focus = {
+	id = NMG_round_up_collaborators
+	prerequisite = {
+		focus = NMG_Polar_Waltz
+	}
+	available = {
     		has_war = no
+	}
+	cost = 8
+	x = 13
+	y = 4
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_manpower = 1500
+		98 = {
+			add_compliance = 10
 		}
-		cost = 8
-		x = 5
-		y = 4
-		ai_will_do = {
-			factor = 10
+		148 = {
+			add_compliance = 10
 		}
-		completion_reward = {
-			add_manpower = 1500
-			98 = {
-				add_compliance = 10
-			}
-			148 = {
-				add_compliance = 10
-			}
-			722 = {
-				add_compliance = 10
-			}
-			842 = {
-				add_compliance = 10
-			}
+		722 = {
+			add_compliance = 10
+		}
+		842 = {
+			add_compliance = 10
 		}
 	}
-	focus = {
-		id = NMG_Alps
-		prerequisite = {
-			focus = NMG_Calm_population_down
-		}
-		prerequisite = {
-			focus = NMG_reconstruct_infrastructure
-		}
-		prerequisite = {
-			focus = NMG_round_up_collaborators
-		}
-		cost = 10
-		x = 3
-		y = 5
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			create_wargoal = {
+}
+shared_focus = {
+	id = NMG_Alps
+	prerequisite = {
+		focus = NMG_Calm_population_down
+	}
+	prerequisite = {
+		focus = NMG_reconstruct_infrastructure
+	}
+	prerequisite = {
+		focus = NMG_round_up_collaborators
+	}
+	cost = 10
+	x = 11
+	y = 5
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		create_wargoal = {
     			type = annex_everything
     			target = PLD
-			}
-			create_wargoal = {
+		}
+		create_wargoal = {
     			type = annex_everything
     			target = ZLG
-			}
-			create_wargoal = {
+		}
+		create_wargoal = {
     			type = annex_everything
     			target = SFL
-			}
-			create_wargoal = {
+		}
+		create_wargoal = {
     			type = annex_everything
     			target = DRG
-			}
-			create_wargoal = {
+		}
+		create_wargoal = {
     			type = annex_everything
     			target = MGL
-			}
 		}
 	}
-	focus = {
-		id = NMG_population_census
-		prerequisite = {
-			focus = NMG_Alps
-		}
-		available = {
-    		has_war = no
-		}
-		cost = 8
-		x = 1
-		y = 6
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_stability = 0.1
-			add_political_power = 100
-			add_manpower = 4571
-		}
+}
+shared_focus = {
+	id = NMG_population_census
+	prerequisite = {
+		focus = NMG_Alps
 	}
-	focus = {
-		id = NMG_relocate_defense_industry
-		prerequisite = {
-			focus = NMG_Alps
-		}
-		available = {
+	available = {
     		has_war = no
-		}
-		cost = 8
-		x = 3
-		y = 6
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 5 }
-		}
 	}
-	focus = {
-		id = NMG_establish_occupation_administrations
-		prerequisite = {
-			focus = NMG_Alps
-		}
-		available = {
+	cost = 8
+	x = 9
+	y = 6
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_stability = 0.1
+		add_political_power = 100
+		add_manpower = 4571
+	}
+}
+shared_focus = {
+	id = NMG_relocate_defense_industry
+	prerequisite = {
+		focus = NMG_Alps
+	}
+	available = {
     		has_war = no
-		}
-		cost = 8
-		x = 5
-		y = 6
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_state_core = 98
-			add_state_core = 148
-			add_state_core = 722
-			add_state_core = 842
-			add_state_core = 973
-			add_state_core = 213
-			add_state_core = 974
-			add_state_core = 976
-			add_state_core = 975
+	}
+	cost = 8
+	x = 11
+	y = 6
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_offsite_building = { type = arms_factory level = 5 }
+	}
+}
+shared_focus = {
+	id = NMG_establish_occupation_administrations
+	prerequisite = {
+		focus = NMG_Alps
+	}
+	available = {
+    		has_war = no
+	}
+	cost = 8
+	x = 13
+	y = 6
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_state_core = 98
+		add_state_core = 148
+		add_state_core = 722
+		add_state_core = 842
+		add_state_core = 973
+		add_state_core = 213
+		add_state_core = 974
+		add_state_core = 976
+		add_state_core = 975
 
-		}
 	}
-	focus = {
-		id = NMG_Mannerheim
-		prerequisite = {
-			focus = NMG_population_census
-		}
-		prerequisite = {
-			focus = NMG_relocate_defense_industry
-		}
-		prerequisite = {
-			focus = NMG_establish_occupation_administrations
-		}
-		cost = 10
-		x = 3
-		y = 7
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			create_wargoal = {
+}
+shared_focus = {
+	id = NMG_Mannerheim
+	prerequisite = {
+		focus = NMG_population_census
+	}
+	prerequisite = {
+		focus = NMG_relocate_defense_industry
+	}
+	prerequisite = {
+		focus = NMG_establish_occupation_administrations
+	}
+	cost = 10
+	x = 11
+	y = 7
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		create_wargoal = {
     			type = annex_everything
     			target = KSK
-			}
-			create_wargoal = {
+		}
+		create_wargoal = {
     			type = annex_everything
     			target = TTS
-			}
-			create_wargoal = {
+		}
+		create_wargoal = {
     			type = annex_everything
     			target = LKV
-			}
-			create_wargoal = {
+		}
+		create_wargoal = {
     			type = annex_everything
     			target = BSL
-			}
 		}
 	}
-	focus = {
-		id = NMG_Wait_for_orders
-		prerequisite = {
-			focus = NMG_Mannerheim
-		}
-		available = {
-    		has_war = no
-		}
-		cost = 2
-		x = 3
-		y = 8
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {}
-	}
-
 }
+shared_focus = {
+	id = NMG_Wait_for_orders
+	prerequisite = {
+		focus = NMG_Mannerheim
+	}
+	available = {
+    		has_war = no
+	}
+	cost = 2
+	x = 11
+	y = 8
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {}
+}
+
