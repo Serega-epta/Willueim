@@ -113,11 +113,12 @@ guiTypes = {
 			dontRender = ""
 			horizontalBorder = "0"
 			verticalBorder = ""
-			fullScreen = no
-			Orientation = "CENTER_UP"
+			fullScreen = yes
+			Orientation = "UPPER_LEFT"
 			iconType = {
 				name = "bg_load_screen2"
 				spriteType = "GFX_loadingstatus_bg"
+				Orientation = "CENTER_UP"
 				position = {
 					x = -700
 					y = 0
@@ -130,6 +131,7 @@ guiTypes = {
 					y = -5000
 				}
 				textureFile = ""
+				Orientation = "CENTER_UP"
 				font = "loadscreen_header"
 				borderSize = {
 					x = 0
@@ -144,9 +146,10 @@ guiTypes = {
 			iconType = {
 				name = "progressbar"
 				spriteType = "GFX_loadingstatus_progress"
+				Orientation = "CENTER_DOWN"
 				position = {
 					x = -519
-					y = 1027
+					y = -53
 				}
 			}
 		}
