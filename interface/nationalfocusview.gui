@@ -430,6 +430,18 @@ guiTypes = {
 			orientation = lower_left
 			pdx_tooltip = "CONSTRUCTION_MINIMIZE"
 		}
+		buttonType = {
+			name = "cycle_focus_next"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 1 y = 1 }
+			shortcut = "ctrl+TAB"
+		}
+		buttonType = {
+			name = "cycle_focus_prev"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 1 y = 1 }
+			shortcut = "ctrl+shift+TAB"
+		}
 	}
 
 	containerWindowType = {

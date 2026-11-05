@@ -167,6 +167,12 @@ guiTypes = {
 			fixedsize = yes
 			Orientation = "UPPER_LEFT"
 		}
+		iconType = {
+			name = "new_content"
+			position = { x = -9000 y = -9000 }
+			spriteType = "GFX_unplayed_content_notification"
+			alwaystransparent = yes
+		}
 	}
 
 	### country entry
@@ -891,6 +897,12 @@ guiTypes = {
 					format = "UPPER_LEFT"
 				}
 			}
+			iconType ={
+				name ="pol_faction_icon"
+				spriteType = "GFX_pol_factions_strip"
+				position = { x = -9000 y = -9000 }
+				frame = 1
+			}
 		}
 
 		instantTextBoxType = {
@@ -912,6 +924,53 @@ guiTypes = {
 			maxWidth = 800
 			maxHeight = 500
 			format = left
+		}
+		OverlappingElementsBoxType = {
+			name = "filters"
+			position = { x = -9000 y = -9000 }
+			size = { x = 1181 y = 32 }
+			format = center
+			spacing = 14.0
+		}
+		dropDownBoxType = {
+			name = "more_countries"
+			position = { x = -9000 y = -9000 }
+
+			expandButton = {
+				name = "expand_button"
+				position = { x = 1168 y = -4 }
+				quadTextureSprite = "GFX_peace_drop_down_button"
+				clicksound = click_default
+			}
+
+			expandedWindow = {
+				name = "expanded_window"
+				position = { x=0 y= -300 }
+				show_position = { x = 0 y = 25 }
+				show_animation_type = decelerated
+				hide_animation_type = accelerated
+				animation_time = 300
+				size = { width=1205 height=58 }
+				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 50
+				smooth_scrolling = yes
+				margin = { top = 7 bottom = 7 right = 6 }
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_window_1b_thin_border"
+				}
+
+				gridBoxType = {
+					name = "countries_mini_expanded"
+					position = { x = 8 y = 0 }
+					size = { width = 199 height = 100%% }
+					slotsize = { width = 52 height = 38 }
+					add_horizontal = yes
+					max_slots_horizontal = 22
+					format = "UPPER_LEFT"
+				}
+			}
 		}
 	}
 

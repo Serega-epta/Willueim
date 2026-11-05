@@ -17,7 +17,7 @@ country_event = {
 			if = {
 				limit = {
 					NOT ={
-						target = GLS
+						ROOT = { tag = GLS }
 					}
 				}
 				ROOT = {
@@ -32,7 +32,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					target = GLS
+					ROOT = { tag = GLS }
 				}
 				BGD = {
 					every_core_state = {
