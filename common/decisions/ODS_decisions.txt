@@ -20,7 +20,7 @@ ODS_kuban = {
 				motorized_equipment_1 > 99
 			}
 		}
-		days_remove = 180
+		days_remove = 365
 		complete_effect = {
 			add_manpower = -5000
 			add_equipment_to_stockpile = {
@@ -46,6 +46,8 @@ ODS_kuban = {
 							country_event = {
 								id = kuban.2
 							}
+						}
+						KUB = {
 							annex_country = {
 								target = ECD
 								transfer_troops = no
