@@ -502,14 +502,184 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.5.a
-		ANR = { #Пока будет так, потом писатели придумают норм гражданску. войну
-			annex_country = {
-    			target = SDC
-    			transfer_troops = yes
+		IF = {
+			limit {
+				power_balance_value = {
+    				id = SDC_power_balance
+    				value > 0.2
+				}
+			}
+			215 = {
+				transfer_state_to = NOS
+				add_core_of = NOS
+			}
+			984 = {
+				transfer_state_to = NOS
+				add_core_of = NOS
+			}
+			825 = {
+				transfer_state_to = NOS
+				add_core_of = NOS
 			}
 		}
+		981 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		897 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		916 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		919 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		980 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		262 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		884 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		986 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		985 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		979 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		25 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		NOS = {
+			set_politics = {
+				ruling_party = sacraments
+				elections_allowed = no
+				}
+			set_popularities = {
+				sacraments = 80
+				free_people = 20
+			}
+			division_template = {
+				name = "Сектанты"
+				is_locked = yes
+				priority = 2
+				regiments = {
+					light_infantry = {
+						x = 0
+						y = 0
+					}
+					light_infantry = {
+						x = 1
+						y = 0
+					}
+					light_infantry = {
+						x = 2
+						y = 0
+					}
+					light_infantry = {
+						x = 0
+						y = 1
+					}
+					light_infantry = {
+						x = 1
+						y = 1
+					}
+					light_infantry = {
+						x = 2
+						y = 1
+					}
+				}
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Сектанты\" division_template = \"Сектанты\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = NOS
+				}
+				create_unit = {
+					division = "name = \"Сектанты\" division_template = \"Сектанты\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = NOS
+				}
+			}
+			declare_war_on = {
+    			target = SDC
+    			type = annex_everything
+			}
+		}
+		delete_unit = {}
+		country_lock_all_division_template = yes
+		set_equipment_fraction = 0
+		add_ideas = BLT_lost_world
+		division_template = {
+			name = "Лоялисты"
+			is_locked = yes
+			priority = 2
+			regiments = {
+				infantry = {
+					x = 0
+					y = 0
+				}
+				infantry = {
+					x = 1
+					y = 0
+				}
+				infantry = {
+					x = 0
+					y = 1
+				}
+				infantry = {
+					x = 1
+					y = 1
+				}
+			}
+		}
+		every_controlled_state  = {
+				create_unit = {
+					division = "name = \"Лоялисты\" division_template = \"Лоялисты\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
+			}
+		kill_ideology_leader = statesmen
+		IF = {
+			limit = {
+				has_idea = SDC_Martin_integration_eastern_idea
+			}
+			set_politics = {
+    			ruling_party = technocracy
+			}
+		}
+		else = {
+			set_politics = {
+    			ruling_party = militarists
+			}
+			add_country_leader_role = {
+    			character = SDC_Sergey_Shoigov
+    			promote_leader = yes
+    			country_leader = {
+        			ideology = militarists_subideology
+        			expire = "1965.1.1.1"
+    			}
+			}
+		}
+		load_focus_tree = SDC_phase_three_failed
 	}
 }
+
 
 #Ритуал I
 country_event = {
@@ -641,12 +811,181 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SDC_phase_three.13.a
-		ANR = {#Пока будет так, потом писатели придумают норм гражданску. войну
-			annex_country = {
-    			target = SDC
-    			transfer_troops = yes
+		IF = {
+			limit {
+				power_balance_value = {
+    				id = SDC_power_balance
+    				value > 0.2
+				}
+			}
+			215 = {
+				transfer_state_to = NOS
+				add_core_of = NOS
+			}
+			984 = {
+				transfer_state_to = NOS
+				add_core_of = NOS
+			}
+			825 = {
+				transfer_state_to = NOS
+				add_core_of = NOS
 			}
 		}
+		981 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		897 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		916 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		919 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		980 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		262 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		884 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		986 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		985 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		979 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		25 = {
+			transfer_state_to = NOS
+			add_core_of = NOS
+		}
+		NOS = {
+			set_politics = {
+				ruling_party = sacraments
+				elections_allowed = no
+				}
+			set_popularities = {
+				sacraments = 80
+				free_people = 20
+			}
+			division_template = {
+				name = "Сектанты"
+				is_locked = yes
+				priority = 2
+				regiments = {
+					light_infantry = {
+						x = 0
+						y = 0
+					}
+					light_infantry = {
+						x = 1
+						y = 0
+					}
+					light_infantry = {
+						x = 2
+						y = 0
+					}
+					light_infantry = {
+						x = 0
+						y = 1
+					}
+					light_infantry = {
+						x = 1
+						y = 1
+					}
+					light_infantry = {
+						x = 2
+						y = 1
+					}
+				}
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Сектанты\" division_template = \"Сектанты\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = NOS
+				}
+				create_unit = {
+					division = "name = \"Сектанты\" division_template = \"Сектанты\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = NOS
+				}
+			}
+			declare_war_on = {
+    			target = SDC
+    			type = annex_everything
+			}
+		}
+		delete_unit = {}
+		country_lock_all_division_template = yes
+		set_equipment_fraction = 0
+		add_ideas = BLT_lost_world
+		division_template = {
+			name = "Лоялисты"
+			is_locked = yes
+			priority = 2
+			regiments = {
+				infantry = {
+					x = 0
+					y = 0
+				}
+				infantry = {
+					x = 1
+					y = 0
+				}
+				infantry = {
+					x = 0
+					y = 1
+				}
+				infantry = {
+					x = 1
+					y = 1
+				}
+			}
+		}
+		every_controlled_state  = {
+				create_unit = {
+					division = "name = \"Лоялисты\" division_template = \"Лоялисты\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+				}
+			}
+		kill_ideology_leader = statesmen
+		IF = {
+			limit = {
+				has_idea = SDC_Martin_integration_eastern_idea
+			}
+			set_politics = {
+    			ruling_party = technocracy
+			}
+		}
+		else = {
+			set_politics = {
+    			ruling_party = militarists
+			}
+			add_country_leader_role = {
+    			character = SDC_Sergey_Shoigov
+    			promote_leader = yes
+    			country_leader = {
+        			ideology = militarists_subideology
+        			expire = "1965.1.1.1"
+    			}
+			}
+		}
+		load_focus_tree = SDC_phase_three_failed
 	}
 }
 
@@ -699,8 +1038,8 @@ country_event = {
 		add_war_support = -0.04
 		add_power_balance_value = {
     		id = SDC_power_balance
-    		value = -0.1
-    		tooltip_side = get_10_human
+    		value = -0.15
+    		tooltip_side = get_15_human
 		}
 	}
 }

@@ -1,0 +1,30 @@
+characters = {
+	NOS_student = {
+		name = NOS_student
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ROH_generic_9"
+			}
+		}
+		country_leader = {
+			desc = NOS_student_desc
+			ideology = sacraments_subideology
+			expire = "2090.1.1.1"
+			id = -1
+		}
+	}
+	NOS_generic_general = {
+		portraits = {
+			army = {
+				large = "GFX_portrait_ROH_generic_7"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
