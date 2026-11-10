@@ -124,7 +124,7 @@ focus_tree = {
 				}
 				remove_ideas = ODS_Black_Berets4
 				add_dynamic_modifier = {
-					modifier = ODS_Black_Berets_dynamic
+					modifier = black_beret_dynamic
 				}
 			}
 			country_event = ODS_phase_three.9
@@ -204,7 +204,8 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
-				category = industry
+				category = production_lines
+				category = industry_organisation
 			}
 			country_event = ODS_phase_three.7
 		}

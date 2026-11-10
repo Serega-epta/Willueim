@@ -214,16 +214,34 @@ country_event = {
 	}
 	option = {
 		name = PMD_phase_one.16.a
-		ANR = {
-			annex_country = {
-    			target = PMD
-    			transfer_troops = no
+		custom_effect_tooltip = PMD_phase_one.16.a.tt
+		hidden_effect = {
+			set_politics = {
+				ruling_party = sacraments
+				elections_allowed = no
 			}
+			load_focus_tree = anarchy_focus_tree
+			set_cosmetic_tag = PMD_anarchy
+			add_ideas = BLT_lost_world
+			remove_ideas = {
+				PMD_People_without_future
+				PMD_Eternal_Night
+				PMD_Dwellers_of_Ruins
+				PMD_Reduced_ration
+				PMD_Hunger_strike
+				PMD_Decent_rations
+				PMD_Good_rations
+				PMD_Fuel_from_SDC
+				PMD_Our_last_campaign
+				PMD_God_of_Wrath
+			}
+			delete_unit = {}
+			NMG = { country_event = NMG_phase_one.8 }
 		}
 	}
 }
 
-#Нвдежды больше нет
+#Надежды больше нет
 country_event = {
 	id = PMD_phase_one.17
 	title = PMD_phase_one.17.t
@@ -239,11 +257,30 @@ country_event = {
 	}
 	option = {
 		name = PMD_phase_one.17.a
-		set_politics = {
-    		ruling_party = sacraments
-    		elections_allowed = no
+		custom_effect_tooltip = PMD_phase_one.17.a.tt
+		hidden_effect = {
+			set_politics = {
+				ruling_party = sacraments
+				elections_allowed = no
+			}
+			load_focus_tree = anarchy_focus_tree
+			set_cosmetic_tag = PMD_anarchy
+			add_ideas = BLT_lost_world
+			remove_ideas = {
+				PMD_People_without_future
+				PMD_Eternal_Night
+				PMD_Dwellers_of_Ruins
+				PMD_Reduced_ration
+				PMD_Hunger_strike
+				PMD_Decent_rations
+				PMD_Good_rations
+				PMD_Fuel_from_SDC
+				PMD_Our_last_campaign
+				PMD_God_of_Wrath
+			}
+			delete_unit = {}
+			NMG = { country_event = NMG_phase_one.8 }
 		}
-		load_focus_tree = anarchy_focus_tree
 	}
 }
 
@@ -375,22 +412,22 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = PMD_expedition.4.a
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
     				expedition_provisions_var > 6
 				}
-				clr_country_flag = expedition_1_flag
-				set_country_flag = expedition_2_flag
-				add_to_variable = {
-    				var = expedition_provisions_var
-    				value = -7
-				}
-				hidden_effect = { 
-					country_event = {
-						id = PMD_expedition.10
-						days = 1
-					}
+			}
+			clr_country_flag = expedition_1_flag
+			set_country_flag = expedition_2_flag
+			add_to_variable = {
+				var = expedition_provisions_var
+				value = -7
+			}
+			hidden_effect = { 
+				country_event = {
+					id = PMD_expedition.10
+					days = 1
 				}
 			}
 		}
@@ -405,20 +442,20 @@ country_event = {
 	}
 	option = {
 		name = PMD_expedition.4.b
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
     				expedition_provisions_var > 2
 				}
-				add_to_variable = {
-    				var = expedition_provisions_var
-    				value = -3
-				}
-				hidden_effect = {
-					country_event = {
-						id = PMD_expedition.5
-						days = 1
-					}
+			}
+			add_to_variable = {
+				var = expedition_provisions_var
+				value = -3
+			}
+			hidden_effect = {
+				country_event = {
+					id = PMD_expedition.5
+					days = 1
 				}
 			}
 		}
@@ -442,20 +479,20 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = PMD_expedition.5.a
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
     				expedition_provisions_var > 9
 				}
-				add_to_variable = {
-    				var = expedition_provisions_var
-    				value = -10
-				}
-				hidden_effect = {
-					country_event = {
-						id = PMD_expedition.10
-						days = 1
-					}
+			}
+			add_to_variable = {
+				var = expedition_provisions_var
+				value = -10
+			}
+			hidden_effect = {
+				country_event = {
+					id = PMD_expedition.10
+					days = 1
 				}
 			}
 		}
@@ -470,7 +507,7 @@ country_event = {
 	}
 	option = {
 		name = PMD_expedition.5.b
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
     				expedition_provisions_var > 0
@@ -542,7 +579,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = PMD_expedition.7.a
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
     				expedition_provisions_var > 10
@@ -569,7 +606,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = PMD_expedition.8.a
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
     				expedition_provisions_var > 10
@@ -589,7 +626,7 @@ country_event = {
 	}
 	option = {
 		name = PMD_expedition.8.b
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
     				expedition_provisions_var > 10
@@ -642,7 +679,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = PMD_expedition.10.a
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = expedition_1_flag
 			}
@@ -689,11 +726,26 @@ country_event = {
 				amount = 1000
 			}
 			add_equipment_to_stockpile = {
-				type = cinfantry_odejda_0
+				type = infantry_odejda_0
 				amount = 1000
 			}
 		}
 	}
 }
 
-
+#Миротворцы пали в анархию
+country_event = {
+	id = PMD_phase_one.18
+	title = PMD_phase_one.18.t
+	desc = PMD_phase_one.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = PMD_phase_two_flag
+		set_country_flag = PMD_NMG_anarchy_flag
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = PMD_phase_one.18.a
+	}
+}

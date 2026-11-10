@@ -185,6 +185,14 @@ category = {
 		MAP_infantry_neutral_combat
 		MAP_infantry_positive_combat
 		MAP_infantry_retreat
+		ITA_infantry_idle
+		ITA_infantry_neutral_combat
+		ITA_infantry_positive_combat
+		ITA_infantry_retreat
+		NMG_infantry_idle
+		NMG_infantry_neutral_combat
+		NMG_infantry_positive_combat
+		NMG_infantry_retreat
 	}
 	compressor = {
 		enabled = yes
@@ -2514,10 +2522,11 @@ soundeffect = {
 soundeffect = {
 	name = "AGE_infantry_neutral_combat"
 	sounds = {
-		sound = ru_Neutral_001
-		sound = ru_Neutral_002
-		sound = ru_Neutral_003
-		sound = ru_Neutral_004
+		sound = AGE_Neutral_001
+		sound = AGE_Neutral_002
+		sound = AGE_Neutral_003
+		sound = AGE_Neutral_004
+		sound = AGE_Neutral_005
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2527,10 +2536,11 @@ soundeffect = {
 soundeffect = {
 	name = "AGE_infantry_positive_combat"
 	sounds = {
-		sound = ru_Positive_001
-		sound = ru_Positive_002
-		sound = ru_Positive_003
-		sound = ru_Positive_004	
+		sound = AGE_Positive_001
+		sound = AGE_Positive_002
+		sound = AGE_Positive_003
+		sound = AGE_Positive_004
+		sound = AGE_Positive_005
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2540,10 +2550,123 @@ soundeffect = {
 soundeffect = {
 	name = "AGE_infantry_retreat"
 	sounds = {
-		sound = ru_Retreat_001
-		sound = ru_Retreat_002
-		sound = ru_Retreat_003
-		sound = ru_Retreat_004
+		sound = AGE_Retreat_001
+		sound = AGE_Retreat_002
+		sound = AGE_Retreat_003
+		sound = AGE_Retreat_004
+		sound = AGE_Retreat_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+#=== NORVEGIA ===#
+
+soundeffect = {
+	name = "NMG_infantry_idle"
+	sounds = {
+		sound = NMG_Idle_001
+		sound = NMG_Idle_002
+		sound = NMG_Idle_003
+		sound = NMG_Idle_004
+		sound = NMG_Idle_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "NMG_infantry_neutral_combat"
+	sounds = {
+		sound = NMG_Neutral_001
+		sound = NMG_Neutral_002
+		sound = NMG_Neutral_003
+		sound = NMG_Neutral_004
+		sound = NMG_Neutral_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "NMG_infantry_positive_combat"
+	sounds = {
+		sound = NMG_Positive_001
+		sound = NMG_Positive_002
+		sound = NMG_Positive_003
+		sound = NMG_Positive_004
+		sound = NMG_Positive_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "NMG_infantry_retreat"
+	sounds = {
+		sound = NMG_Retreat_001
+		sound = NMG_Retreat_002
+		sound = NMG_Retreat_003
+		sound = NMG_Retreat_004
+		sound = NMG_Retreat_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+#=== ITALY ===#
+
+soundeffect = {
+	name = "ITA_infantry_idle"
+	sounds = {
+		sound = ITA_Idle_001
+		sound = ITA_Idle_002
+		sound = ITA_Idle_003
+		sound = ITA_Idle_004
+		sound = ITA_Idle_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ITA_infantry_neutral_combat"
+	sounds = {
+		sound = ITA_Neutral_001
+		sound = ITA_Neutral_002
+		sound = ITA_Neutral_003
+		sound = ITA_Neutral_004
+		sound = ITA_Neutral_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "ITA_infantry_positive_combat"
+	sounds = {
+		sound = ITA_Positive_001
+		sound = ITA_Positive_002
+		sound = ITA_Positive_003
+		sound = ITA_Positive_004
+		sound = ITA_Positive_005
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+}
+
+soundeffect = {
+	name = "AGE_infantry_retreat"
+	sounds = {
+		sound = AGE_Retreat_001
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3169,6 +3292,24 @@ sound = {
 	file = "rus/AGE/AGE_Idle_005.wav"
 }
 
+sound = { name = "AGE_Neutral_001" file = "rus/AGE/AGE_Neutral_001.wav" }
+sound = { name = "AGE_Neutral_002" file = "rus/AGE/AGE_Neutral_002.wav" }
+sound = { name = "AGE_Neutral_003" file = "rus/AGE/AGE_Neutral_003.wav" }
+sound = { name = "AGE_Neutral_004" file = "rus/AGE/AGE_Neutral_004.wav" }
+sound = { name = "AGE_Neutral_005" file = "rus/AGE/AGE_Neutral_005.wav" }
+
+sound = { name = "AGE_Positive_001" file = "rus/AGE/AGE_Positive_001.wav" }
+sound = { name = "AGE_Positive_002" file = "rus/AGE/AGE_Positive_002.wav" }
+sound = { name = "AGE_Positive_003" file = "rus/AGE/AGE_Positive_003.wav" }
+sound = { name = "AGE_Positive_004" file = "rus/AGE/AGE_Positive_004.wav" }
+sound = { name = "AGE_Positive_005" file = "rus/AGE/AGE_Positive_005.wav" }
+
+sound = { name = "AGE_Retreat_001" file = "rus/AGE/AGE_Retreat_001.wav" }
+sound = { name = "AGE_Retreat_002" file = "rus/AGE/AGE_Retreat_002.wav" }
+sound = { name = "AGE_Retreat_003" file = "rus/AGE/AGE_Retreat_003.wav" }
+sound = { name = "AGE_Retreat_004" file = "rus/AGE/AGE_Retreat_004.wav" }
+sound = { name = "AGE_Retreat_005" file = "rus/AGE/AGE_Retreat_005.wav" }
+
 sound = { name = "GLS_Idle_001" file = "rus/GLS/GLS_Idle_001.wav" }
 sound = { name = "GLS_Idle_002" file = "rus/GLS/GLS_Idle_002.wav" }
 sound = { name = "GLS_Idle_003" file = "rus/GLS/GLS_Idle_003.wav" }
@@ -3788,3 +3929,53 @@ sound = { name = "POL_Retreat_003" file = "rus/POL/POL_Retreat_003.wav" }
 sound = { name = "POL_Retreat_004" file = "rus/POL/POL_Retreat_004.wav" }
 sound = { name = "POL_Retreat_005" file = "rus/POL/POL_Retreat_005.wav" }
 sound = { name = "POL_Retreat_006" file = "rus/POL/POL_Retreat_006.wav" }
+
+
+sound = { name = "ITA_Idle_001" file = "rus/ITA/ITA_Idle_001.wav" }
+sound = { name = "ITA_Idle_002" file = "rus/ITA/ITA_Idle_002.wav" }
+sound = { name = "ITA_Idle_003" file = "rus/ITA/ITA_Idle_003.wav" }
+sound = { name = "ITA_Idle_004" file = "rus/ITA/ITA_Idle_004.wav" }
+sound = { name = "ITA_Idle_005" file = "rus/ITA/ITA_Idle_005.wav" }
+
+sound = { name = "ITA_Neutral_001" file = "rus/ITA/ITA_Neutral_001.wav" }
+sound = { name = "ITA_Neutral_002" file = "rus/ITA/ITA_Neutral_002.wav" }
+sound = { name = "ITA_Neutral_003" file = "rus/ITA/ITA_Neutral_003.wav" }
+sound = { name = "ITA_Neutral_004" file = "rus/ITA/ITA_Neutral_004.wav" }
+sound = { name = "ITA_Neutral_005" file = "rus/ITA/ITA_Neutral_005.wav" }
+
+sound = { name = "ITA_Positive_001" file = "rus/ITA/ITA_Positive_001.wav" }
+sound = { name = "ITA_Positive_002" file = "rus/ITA/ITA_Positive_002.wav" }
+sound = { name = "ITA_Positive_003" file = "rus/ITA/ITA_Positive_003.wav" }
+sound = { name = "ITA_Positive_004" file = "rus/ITA/ITA_Positive_004.wav" }
+sound = { name = "ITA_Positive_005" file = "rus/ITA/ITA_Positive_005.wav" }
+
+sound = { name = "ITA_Retreat_001" file = "rus/ITA/ITA_Retreat_001.wav" }
+
+
+sound = { name = "NMG_Idle_001" file = "rus/NMG/NMG_Idle_001.wav" }
+sound = { name = "NMG_Idle_002" file = "rus/NMG/NMG_Idle_002.wav" }
+sound = { name = "NMG_Idle_003" file = "rus/NMG/NMG_Idle_003.wav" }
+sound = { name = "NMG_Idle_004" file = "rus/NMG/NMG_Idle_004.wav" }
+sound = { name = "NMG_Idle_005" file = "rus/NMG/NMG_Idle_005.wav" }
+sound = { name = "NMG_Idle_006" file = "rus/NMG/NMG_Idle_006.wav" }
+
+sound = { name = "NMG_Neutral_001" file = "rus/NMG/NMG_Neutral_001.wav" }
+sound = { name = "NMG_Neutral_002" file = "rus/NMG/NMG_Neutral_002.wav" }
+sound = { name = "NMG_Neutral_003" file = "rus/NMG/NMG_Neutral_003.wav" }
+sound = { name = "NMG_Neutral_004" file = "rus/NMG/NMG_Neutral_004.wav" }
+sound = { name = "NMG_Neutral_005" file = "rus/NMG/NMG_Neutral_005.wav" }
+sound = { name = "NMG_Neutral_006" file = "rus/NMG/NMG_Neutral_006.wav" }
+
+sound = { name = "NMG_Positive_001" file = "rus/NMG/NMG_Positive_001.wav" }
+sound = { name = "NMG_Positive_002" file = "rus/NMG/NMG_Positive_002.wav" }
+sound = { name = "NMG_Positive_003" file = "rus/NMG/NMG_Positive_003.wav" }
+sound = { name = "NMG_Positive_004" file = "rus/NMG/NMG_Positive_004.wav" }
+sound = { name = "NMG_Positive_005" file = "rus/NMG/NMG_Positive_005.wav" }
+sound = { name = "NMG_Positive_006" file = "rus/NMG/NMG_Positive_006.wav" }
+
+sound = { name = "NMG_Retreat_001" file = "rus/NMG/NMG_Retreat_001.wav" }
+sound = { name = "NMG_Retreat_002" file = "rus/NMG/NMG_Retreat_002.wav" }
+sound = { name = "NMG_Retreat_003" file = "rus/NMG/NMG_Retreat_003.wav" }
+sound = { name = "NMG_Retreat_004" file = "rus/NMG/NMG_Retreat_004.wav" }
+sound = { name = "NMG_Retreat_005" file = "rus/NMG/NMG_Retreat_005.wav" }
+sound = { name = "NMG_Retreat_006" file = "rus/NMG/NMG_Retreat_006.wav" }

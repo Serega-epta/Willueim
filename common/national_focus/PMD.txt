@@ -141,7 +141,7 @@ focus_tree = {
 			country_event = PMD_phase_one.10
 			random_owned_state = {
 				create_unit = {
-					division = "name = \" Ispravlentsy\" division_template = \"Ispravlentsy\" start_experience_factor = 0.2"
+					division = "name = \"Ispravlentsy\" division_template = \"Ispravlentsy\" start_experience_factor = 0.2 start_equipment_factor = 0.8 start_manpower_factor = 1"
 					owner = PMD
 				}
 			}
@@ -193,11 +193,35 @@ focus_tree = {
 			hidden_effect  = {
 				NMG = {
 					country_event = NMG_phase_one.7
-					load_focus_tree = NMG_war
+					#load_focus_tree = NMG_war
+					set_country_flag = NMG_war_flag
+					mark_focus_tree_layout_dirty = yes
 					complete_national_focus = NMG_democracy_protocol
 				}
+				set_country_flag = PMD_phase_two_flag
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
+
+	shared_focus = PMD_phase_two_placeholder
 }
 
+#Вторая фаза (заглушка)
+shared_focus = {
+	id = PMD_phase_two_placeholder
+	available = {
+		always = no
+	}
+	cost = 10
+	x = 9
+	y = 1
+	allow_branch = {
+		has_country_flag = PMD_phase_two_flag
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	completion_reward = {
+	}
+}

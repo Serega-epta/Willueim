@@ -20,7 +20,7 @@ ODS_kuban = {
 				motorized_equipment_1 > 99
 			}
 		}
-		days_remove = 180
+		days_remove = 365
 		complete_effect = {
 			add_manpower = -5000
 			add_equipment_to_stockpile = {
@@ -46,6 +46,8 @@ ODS_kuban = {
 							country_event = {
 								id = kuban.2
 							}
+						}
+						KUB = {
 							annex_country = {
 								target = ECD
 								transfer_troops = no
@@ -174,11 +176,11 @@ ODS_subordination = {
 		visible = {
 			FROM = {
 				has_state_flag = first_level_of_authority
-			}
-			NOT = {
-				state = 837
-				state = 838
-				state = 839
+				NOT = {
+					state = 837
+					state = 838
+					state = 839
+				}
 			}
 		}
 		on_map_mode = decision_view_only
@@ -235,11 +237,11 @@ ODS_subordination = {
 		visible = {
 			FROM = {
 				has_state_flag = second_level_of_authority
-			}
-			NOT = {
-				state = 837
-				state = 838
-				state = 839
+				NOT = {
+					state = 837
+					state = 838
+					state = 839
+				}
 			}
 		}
 		on_map_mode = decision_view_only

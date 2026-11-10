@@ -64,11 +64,28 @@ country_event = {
 	}
 	option = {
 		name = NMG_phase_one.5.a
-		ANR = {
-			annex_country = {
-    			target = NMG
-    			transfer_troops = no
+		hidden_effect = {
+			set_politics = {
+				ruling_party = sacraments
+				elections_allowed = no
 			}
+			load_focus_tree = anarchy_focus_tree
+			set_cosmetic_tag = NMG_anarchy
+			add_ideas = BLT_lost_world
+			remove_ideas = {
+				NMG_Preparation_for_war
+				NMG_Norwegian_protests
+				NMG_activity_of_ULF
+				NMG_increased_activity_of_ULF
+				NMG_decreased_activity_of_ULF
+				NMG_soldiers_support
+				NMG_people_support
+				NMG_countermeasures
+				NMG_spirit_of_revanchism
+			}
+			clr_country_flag = NMG_elections_flag
+			delete_unit = {}
+			PMD = { country_event = PMD_phase_one.18 }
 		}
 	}
 }
@@ -96,4 +113,20 @@ country_event = {
 	}
 }
 
-
+#Заполярный Фронт упал в анархию пиздец заходим Z
+country_event = {
+	id = NMG_phase_one.8
+	title = NMG_phase_one.8.t
+	desc = NMG_phase_one.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = NMG_war_flag
+		set_country_flag = NMG_PMD_anarchy_flag
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = NMG_Polar_Waltz
+	}
+	option = {
+		name = NMG_phase_one.8.a
+	}
+}

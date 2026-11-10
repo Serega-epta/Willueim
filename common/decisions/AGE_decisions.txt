@@ -803,37 +803,23 @@ AGE_their_freedoms = {
 		timeout_effect = {
 			clr_country_flag = war_with_baltosphere_flag
 			AGE = {
-				OR = {
-					AND = {
-						if = {
-							limit = {
-								has_completed_focus = AGE_not_their_land
-							}
-							country_event = {
-								id = AGE_phase_one.10
-							}
-						}
-						AGE = {
-							every_owned_state = {
-								OR = {
-									has_dynamic_modifier = {
-										modifier = open_opposition
-									}
-									has_dynamic_modifier = {
-										modifier = clandestine_cells
-									}
-								}
+				if = {
+					limit = {
+						has_completed_focus = AGE_not_their_land
+						any_owned_state = {
+							OR = {
+								has_dynamic_modifier = { modifier = open_opposition }
+								has_dynamic_modifier = { modifier = clandestine_cells }
 							}
 						}
 					}
-					if = {
-						limit = {
-							has_completed_focus = AGE_still_their_land
-						}
-						country_event = {
-							id = AGE_phase_one.9
-						}
+					country_event = { id = AGE_phase_one.10 }
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = AGE_still_their_land
 					}
+					country_event = { id = AGE_phase_one.9 }
 				}
 			}
 			BTC = {
@@ -1683,7 +1669,7 @@ AGE_help_from_allies = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = hospital_tech
+				category = field_hospital_tech
 			}
 			clr_country_flag = help_from_blz_1_flag
 			set_country_flag = help_from_blz_2_flag
@@ -1711,7 +1697,7 @@ AGE_help_from_allies = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = hospital_tech
+				category = field_hospital_tech
 			}
 			clr_country_flag = help_from_blz_2_flag
 		}
