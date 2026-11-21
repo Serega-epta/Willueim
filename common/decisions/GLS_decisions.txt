@@ -250,6 +250,15 @@ GLS_kurchatov_project = {
 				has_country_flag = gls_2_percent_additive_for_kurchatov_project
 			}
 		}
+		ai_will_do = {
+			base = -1
+			modifier ={
+				check_variable ={
+					num_of_civilian_factories > 80
+				}
+				add = 50
+			}
+		}
 		modifier = {
 			civilian_factory_use = 35
 		}
@@ -278,6 +287,15 @@ GLS_kurchatov_project = {
 		}
 		available = {
 			has_manpower > 3000
+		}
+		ai_will_do = {
+			base = -1
+			modifier ={
+				check_variable ={
+					has_manpower > 900000
+				}
+				add = 50
+			}
 		}
 		cost = 150
 		days_re_enable = 20

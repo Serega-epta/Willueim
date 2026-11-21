@@ -549,6 +549,15 @@ Vaccine_trials = {
 		available = {
 			
 		}
+		ai_will_do = {
+			base = -1
+			modifier ={
+				check_variable ={
+					has_political_power > 400
+				}
+				add = 50
+			}
+		}
 		cost = 300
 		days_remove = 30
 		fire_only_once = yes

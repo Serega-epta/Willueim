@@ -1,7 +1,11 @@
 PMD_state_of_district = {
 	PMD_hold_Hour_of_Hate = {
 		priority = 0
-		#available = {  }
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
+		}
 		ai_will_do = {
 			base = 75
 			modifier ={
@@ -24,7 +28,11 @@ PMD_state_of_district = {
 	}
 	PMD_conduct_drill = {
 		priority = 0
-		#available = {  }
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
+		}
 		cost = 50
 		days_re_enable = 30
 		ai_will_do = {
@@ -56,7 +64,11 @@ PMD_state_of_district = {
 	}
 	PMD_conduct_exercises = {
 		priority = 0
-		#available = {  }
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
+		}
 		cost = 50
 		days_re_enable = 30
 		ai_will_do = {
@@ -84,7 +96,11 @@ PMD_state_of_district = {
 	}
 	PMD_carry_out_rotation_in_warehouse = {
 		priority = 0
-		#available = {  }
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
+		}
 		cost = 25
 		days_re_enable = 30
 		ai_will_do = {
@@ -145,6 +161,9 @@ PMD_state_of_district = {
 		available = {  
 			NOT = {
 				has_idea = PMD_Good_rations
+			}
+			NOT = {
+				country_exists = NMG
 			}
 		}
 		cost = 0
@@ -225,6 +244,9 @@ PMD_state_of_district = {
 			NOT = {
 				has_idea = PMD_Hunger_strike
 			}
+			NOT = {
+				country_exists = NMG
+			}
 		}
 		cost = 0
 		days_re_enable = 1
@@ -279,7 +301,11 @@ PMD_state_of_district = {
 				add = 100
 			}
 		}
-		#available = {  }
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
+		}
 		cost = 50
 		days_re_enable = 30
 		remove_effect = {
@@ -303,7 +329,11 @@ PMD_state_of_district = {
 				add = 100
 			}
 		}
-		#available = {  }
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
+		}
 		cost = 25
 		days_re_enable = 30
 		remove_effect = {
@@ -343,6 +373,11 @@ PMD_state_of_district = {
 					temp < 4
 				}
 				add = -1000
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = NMG
 			}
 		}
 		visible = { 
@@ -387,6 +422,11 @@ PMD_state_of_district = {
 				add = 100
 			}
 		}
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
+		}
 		visible = { 
 			has_completed_focus = PMD_Everything_for_front
 			check_variable = {
@@ -423,6 +463,11 @@ PMD_state_of_district = {
 				add = -100
 			}
 		}
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
+		}
 		visible = { 
 			has_completed_focus = PMD_Everything_for_victory
 		}
@@ -436,6 +481,11 @@ PMD_state_of_district = {
 		priority = 0
 		ai_will_do = {
 			base = 1000
+		}
+		available = {
+			NOT = {
+				country_exists = NMG
+			}
 		}
 		visible = { 
 			check_variable = {

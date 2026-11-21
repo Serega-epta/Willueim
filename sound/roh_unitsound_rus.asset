@@ -193,6 +193,10 @@ category = {
 		NMG_infantry_neutral_combat
 		NMG_infantry_positive_combat
 		NMG_infantry_retreat
+		Bandits_infantry_idle
+		Bandits_infantry_neutral_combat
+		Bandits_infantry_positive_combat
+		Bandits_infantry_retreat
 	}
 	compressor = {
 		enabled = yes
@@ -1008,16 +1012,6 @@ soundeffect = {
 		sound = SOV_Retreat_003
 		sound = SOV_Retreat_004
 		sound = SOV_Retreat_005
-	}
-	max_audible = 1
-	max_audible_behaviour = fail
-	volume = 1
-}
-
-soundeffect = {
-	name = "SOV_infantry_retreat"
-	sounds = {
-		sound = SOV_Retreat_001
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2663,16 +2657,6 @@ soundeffect = {
 	volume = 1
 }
 
-soundeffect = {
-	name = "AGE_infantry_retreat"
-	sounds = {
-		sound = AGE_Retreat_001
-	}
-	max_audible = 1
-	max_audible_behaviour = fail
-	volume = 1
-}
-
 
 #=== Pautov ===#
 
@@ -3148,7 +3132,7 @@ soundeffect = {
 }
 
 soundeffect = {
-	name = "IMP_infantry_retreat"
+	name = "Bandits_infantry_retreat"
 	sounds = {
 		sound = ru_Retreat_001
 		sound = ru_Retreat_002
