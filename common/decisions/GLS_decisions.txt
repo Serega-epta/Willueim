@@ -319,13 +319,10 @@ GLS_nuclear_strike = {
 			original_tag = GLS
 		}
 		visible = {
-			FROM = {
-				has_war_with = GLS
-				has_capitulated = no
-				hidden_trigger = {
-					NOT = {
-						has_country_flag = nuclear_strike_has_been_launched_against_you_lol
-					}
+			NOT = {
+				any_collection_element = {
+					collection = collection:mother_russia
+					is_owned_by = FROM
 				}
 			}
 		}

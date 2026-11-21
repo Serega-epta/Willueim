@@ -120,9 +120,6 @@ ideas = {
 		#Уплата долга
 		SDC_pay_debt = {
 			picture = SDC_paying_debt
-			cancel = {
-				has_war = yes
-			}
 			modifier = {
 				consumer_goods_factor = 0.5
 				production_factory_efficiency_gain_factor = -0.5
@@ -133,9 +130,6 @@ ideas = {
 		#Уплата большого долга
 		SDC_pay_big_debt = {
 			picture = SDC_paying_large_debt
-			cancel = {
-				has_war = yes
-			}
 			modifier = {
 				consumer_goods_factor = 0.75
 				production_factory_efficiency_gain_factor = -0.75

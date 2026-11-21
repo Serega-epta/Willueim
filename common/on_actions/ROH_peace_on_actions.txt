@@ -247,6 +247,21 @@ on_actions = {
 						add_core_of = MOT #in case GLS made decisions of nationalisation
 					}
 				}
+				BMB = {
+					if = {
+						limit = {
+							OR = {
+								has_war_with = URC
+								has_war_with = WPK
+								has_war_with = ZAN
+							}
+						}
+						declare_war_on = {
+							target = MOT
+							type = annex_everything
+						}
+					}
+				}
 			}
 			#UFV vs (SDC + VOZ): UFV defeat
 			else_if = {
