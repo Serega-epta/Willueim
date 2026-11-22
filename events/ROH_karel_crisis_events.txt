@@ -90,10 +90,6 @@ country_event = {
 				type = annex_everything
 			}
 			declare_war_on = {
-				target = ZLG
-				type = annex_everything
-			}
-			declare_war_on = {
 				target = PMD
 				type = annex_everything
 			}
@@ -113,7 +109,6 @@ country_event = {
 		}
 		NOT = {
 			country_exists = TTS
-			country_exists = ZLG
 			country_exists = PMD
 		}
 	}

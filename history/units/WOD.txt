@@ -11,31 +11,18 @@ division_template = {
 	}
 	priority = 1
 }
-
 division_template = {
-	name = "Bandits_1"
+	name = "Patrulnaya Diviziya"
 
 	division_names_group = BANDIT_INF_01
 
 	regiments = {
-		light_infantry = { x = 0 y = 0 }
-		light_infantry = { x = 1 y = 0 }
-		light_infantry = { x = 0 y = 1 }
-		light_infantry = { x = 1 y = 1 }
-	}
-	priority = 1
-}
-
-division_template = {
-	name = "Bandits_2"
-
-	division_names_group = BANDIT_INF_01
-
-	regiments = {
-		light_infantry = { x = 0 y = 0 }
-		light_infantry = { x = 1 y = 0 }
-		light_infantry = { x = 0 y = 1 }
-		light_infantry = { x = 1 y = 1 }
+		infantry  = { x = 0 y = 0 }
+		infantry  = { x = 1 y = 0 }
+		infantry  = { x = 0 y = 1 }
+		infantry  = { x = 1 y = 1 }
+	 	infantry  = { x = 0 y = 2 }
+		infantry  = { x = 2 y = 0 }
 	}
 	priority = 1
 }
@@ -60,7 +47,7 @@ units = {
 	division = {
 		name = "Bandits"
 		location = 9716
-		division_template = "Bandits_1"
+		division_template = "Bandits"
         	start_experience_factor = 0.1
         	start_equipment_factor = 0.5
         	start_manpower_factor = 1.0
@@ -68,7 +55,7 @@ units = {
 	division = {
 		name = "Bandit"
 		location = 6706
-		division_template = "Bandits_1"
+		division_template = "Bandits"
         	start_experience_factor = 0.1
         	start_equipment_factor = 0.5
         	start_manpower_factor = 1.0
@@ -76,7 +63,7 @@ units = {
 	division = {
 		name = "Bandits"
 		location = 9716
-		division_template = "Bandits_2"
+		division_template = "Bandits"
         	start_experience_factor = 0.1
         	start_equipment_factor = 0.5
         	start_manpower_factor = 1.0
@@ -84,7 +71,31 @@ units = {
 	division = {
 		name = "Bandits"
 		location = 6706
-		division_template = "Bandits_1"
+		division_template = "Bandits"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.5
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Bandits"
+		location = 9635
+		division_template = "Bandits"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.5
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Bandits"
+		location = 9635
+		division_template = "Bandits"
+        	start_experience_factor = 0.1
+        	start_equipment_factor = 0.5
+        	start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Patrulnaya Diviziya"
+		location = 6727
+		division_template = "Patrulnaya Diviziya"
         	start_experience_factor = 0.1
         	start_equipment_factor = 0.5
         	start_manpower_factor = 1.0

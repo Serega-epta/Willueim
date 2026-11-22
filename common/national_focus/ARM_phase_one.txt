@@ -586,13 +586,9 @@ focus_tree = {
 			factor = 10
 		}
 		will_lead_to_war_with = BIH
-		will_lead_to_war_with = DIB
 		will_lead_to_war_with = BAG
 		bypass = {
 			BIH = {
-				exists = no
-			}
-			DIB = {
 				exists = no
 			}
 			BAG = {
@@ -610,15 +606,6 @@ focus_tree = {
 				}
 				declare_war_on = {
 					target = BIH
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					country_exists = DIB
-				}
-				declare_war_on = {
-					target = DIB
 					type = annex_everything
 				}
 			}

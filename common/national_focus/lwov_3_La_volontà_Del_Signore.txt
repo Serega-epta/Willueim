@@ -284,7 +284,6 @@ focus_tree = {
 		available = {
 			OR = {
 				is_neighbor_of = WOD
-				is_neighbor_of = YWD
 				is_neighbor_of = MOD
 			}
 		}
@@ -301,15 +300,10 @@ focus_tree = {
 			has_war = no
 		}
 		will_lead_to_war_with = WOD
-		will_lead_to_war_with = YWD
 		will_lead_to_war_with = MOD
 		completion_reward = {
 			declare_war_on = {
 				target = WOD
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = YWD
 				type = annex_everything
 			}
 			declare_war_on = {
@@ -328,7 +322,6 @@ focus_tree = {
 			OR = {
 				is_neighbor_of = MAP
 				is_neighbor_of = POP
-				is_neighbor_of = CST
 			}
 		}
 		ai_will_do = {
@@ -345,7 +338,6 @@ focus_tree = {
 		}
 		will_lead_to_war_with = MAP
 		will_lead_to_war_with = POP
-		will_lead_to_war_with = CST
 		completion_reward = {
 			declare_war_on = {
 				type = annex_everything
@@ -353,10 +345,6 @@ focus_tree = {
 			}
 			declare_war_on = {
 				target = POP
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = CST
 				type = annex_everything
 			}
 		}
@@ -537,7 +525,6 @@ focus_tree = {
 		available = {
 			OR = {
 				is_neighbor_of = VDS
-				is_neighbor_of = DIB
 				is_neighbor_of = BIH
 				is_neighbor_of = BAG
 				is_neighbor_of = ARM
@@ -555,7 +542,6 @@ focus_tree = {
 			has_war = no
 		}
 		will_lead_to_war_with = VDS
-		will_lead_to_war_with = DIB
 		will_lead_to_war_with = BIH
 		will_lead_to_war_with = BAG
 		will_lead_to_war_with = ARM
@@ -564,10 +550,6 @@ focus_tree = {
 		completion_reward = {
 			declare_war_on = {
 				target = VDS
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = DIB
 				type = annex_everything
 			}
 			declare_war_on = {

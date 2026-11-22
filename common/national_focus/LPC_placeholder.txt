@@ -41,7 +41,7 @@ focus_tree = {
 		prerequisite = {
 			focus = LPC_focus_placeholder_1
 		}
-		cost = 10
+		cost = 30
 		x = 6
 		y = 2
 		ai_will_do = {
@@ -50,29 +50,10 @@ focus_tree = {
 		completion_reward = {}
 	}
 	focus = {
-		id = LPC_focus_placeholder_3
-		icon = GFX_The_Power_of_the_Guard
-		prerequisite = {
-			focus = LPC_focus_placeholder_2
-		}
-		cost = 10
-		x = 6
-		y = 4
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			declare_war_on = {
-				target = VOS
-				type = annex_everything
-			}
-		}
-	}
-	focus = {
 		id = LPC_focus_placeholder_4
 		icon = GFX_The_Power_of_the_Guard
 		prerequisite = {
-			focus = LPC_focus_placeholder_3
+			focus = LPC_focus_placeholder_2
 		}
 		available = {
 			hidden_trigger = {
@@ -86,7 +67,7 @@ focus_tree = {
 		}
 		cost = 10
 		x = 6
-		y = 6
+		y = 4
 		ai_will_do = {
 			factor = 10
 		}
@@ -97,36 +78,6 @@ focus_tree = {
 			}
 			add_state_core = 92
 			add_state_core = 918
-		}
-	}
-	focus = {
-		id = LPC_focus_placeholder_5
-		icon = GFX_The_Power_of_the_Guard
-		prerequisite = {
-			focus = LPC_focus_placeholder_4
-		}
-		cost = 10
-		x = 6
-		y = 8
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			declare_war_on = {
-				target = POP
-				type = annex_everything
-			}
-			hidden_effect = {
-				IF = {
-					limit = {
-						is_ai = yes
-					}
-					country_event = {
-						id = scripted_peace.4
-						days = 200
-					}
-				}
-			}
 		}
 	}
 }

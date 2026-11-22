@@ -504,9 +504,6 @@ focus_tree = {
 			OBS = {
 				exists = no
 			}
-			YJY = {
-				exists = no
-			}
 		}
 		bypass_effect = {
 			hidden_effect = {
@@ -573,15 +570,6 @@ focus_tree = {
 				create_wargoal = {
 					type = annex_everything
 					target = OBS
-				}
-			}
-			if = {
-				limit = {
-					country_exists = YJY
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = YJY
 				}
 			}
 		}

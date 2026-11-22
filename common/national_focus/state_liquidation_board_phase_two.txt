@@ -312,16 +312,12 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		bypass = {
-			ISK = {
-				exists = no
-			}
+		available = {
+			controls_state = 1000
 		}
-		will_lead_to_war_with = ISK
 		completion_reward = {
-			declare_war_on = {
-				target = ISK
-				type = annex_everything
+			1000 = {
+				add_manpower = 3000
 			}
 		}
 	}

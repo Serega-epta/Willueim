@@ -695,83 +695,10 @@ focus_tree = {
 	}
 
     focus = {
-		id = ORL_Routes_and_communications
-		icon = GFX_ORL_Routes_and_communications
-		cost = 2.14
-		x = 15
-		y = 5
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		bypass = {
-			VOU = {
-				exists = no
-			}
-		}
-		available = {
-			is_neighbor_of = VOU
-		}
-		prerequisite = { focus = ORL_North }
-		completion_reward = {
-			declare_war_on = {
-    			target = VOU
-    			type = annex_everything
-			}
-		}
-	}
-
-    focus = {
-		id = ORL_Howl_in_swamps
-		icon = GFX_ORL_Howl_in_swamps
-		cost = 2.14
-		x = 15
-		y = 6
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		available = {
-			is_neighbor_of = MUC
-		}
-		bypass = {
-			MUC = {
-				exists = no
-			}
-		}
-		prerequisite = { focus = ORL_Routes_and_communications }
-		completion_reward = {
-			declare_war_on = {
-    			target = MUC
-    			type = annex_everything
-			}
-		}
-	}
-
-    focus = {
-		id = ORL_For_our_own_benefit
-		icon = GFX_ORL_For_our_own_benefit
-		cost = 10
-		x = 15
-		y = 7
-		ai_will_do = { factor = 10 }
-		prerequisite = { focus = ORL_Howl_in_swamps }
-		completion_reward = {
-			add_ideas = ORL_Integrated_trains
-		}
-	}
-
-    focus = {
 		id = ORL_Enemy_of_Science
 		icon = GFX_ORL_Enemy_of_Science
 		cost = 5
-		x = 17
+		x = 15
 		y = 5
 		ai_will_do = { factor = 10 }
 		available = {
@@ -798,7 +725,7 @@ focus_tree = {
 		id = ORL_Support_determined
 		icon = GFX_ORL_Support_determined
 		cost = 5
-		x = 17
+		x = 15
 		y = 6
 		bypass = {
 			VOF = {
@@ -818,7 +745,7 @@ focus_tree = {
 		id = ORL_General_Staff_Academy
 		icon = GFX_ORL_General_Staff_Academy
 		cost = 5
-		x = 17
+		x = 15
 		y = 7
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = ORL_Support_determined }
@@ -849,7 +776,6 @@ focus_tree = {
 		prerequisite = { 
 			focus = ORL_Extermination_teams
 			focus = ORL_Rzhevsk_meat_grinder
-			focus = ORL_For_our_own_benefit
 			focus = ORL_General_Staff_Academy
 		}
 		completion_reward = {
