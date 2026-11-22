@@ -441,14 +441,14 @@
 			factor = 1
 		}
 		bypass = {
-			MOD = {
+			BOD = {
 				exists = no
 			}
 			SOD = {
 				exists = no
 			}
 		}
-		will_lead_to_war_with = MOD
+		will_lead_to_war_with = BOD
 		will_lead_to_war_with = SOD
 		completion_reward = {
 			country_event = {
@@ -456,10 +456,10 @@
 			}
 			if = {
 				limit = {
-					country_exists = MOD
+					country_exists = BOD
 				}
 				create_wargoal = {
-					target = MOD
+					target = BOD
 					type = annex_everything
 				}
 			}

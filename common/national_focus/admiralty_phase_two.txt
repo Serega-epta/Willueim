@@ -933,7 +933,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		will_lead_to_war_with = BOD
 		will_lead_to_war_with = FUD
 		will_lead_to_war_with = WOD
 		will_lead_to_war_with = ECD
@@ -947,9 +946,6 @@ focus_tree = {
 				exists = no
 			}
 			KUB = {
-				exists = no
-			}
-			BOD = {
 				exists = no
 			}
 			FUD = {
@@ -997,16 +993,7 @@ focus_tree = {
 					transfer_troops = yes
 				}
 			}
-			#ЗАХВАТ УКРА�?НЫ (ой, я имел ввиду Южных Окраин)
-			if = {
-				limit = {
-					country_exists = BOD
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = BOD
-				}
-			}
+			#Захват Новороссии
 			if = {
 				limit = {
 					country_exists = FUD
