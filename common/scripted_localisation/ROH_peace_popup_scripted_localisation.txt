@@ -175,6 +175,14 @@ defined_text = {
 	text = {
 		trigger = {
 			event_target:losing_country = {
+				original_tag = POP
+			}
+		}
+		localization_key = PEACE_POPUP_FLAVOR_POP
+	}
+	text = {
+		trigger = {
+			event_target:losing_country = {
 				original_tag = SDC
 			}
 		}
@@ -430,10 +438,10 @@ defined_text = {
 	text = {
 		trigger = {
 			event_target:losing_country = {
-				original_tag = SPA
+				original_tag = IBR
 			}
 		}
-		localization_key = PEACE_POPUP_FLAVOR_SPA
+		localization_key = PEACE_POPUP_FLAVOR_IBR
 	}
 	text = {
 		trigger = {
