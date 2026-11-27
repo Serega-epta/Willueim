@@ -29,7 +29,27 @@ change_leader_rule_never = {
 		base = 0
 		modifier = {  
 			add = 5
-			has_government = fascism
+			has_government = statesmen
+			is_faction_leader = yes 
+		}
+		modifier = {  
+			add = 5
+			has_government = chthonism
+			is_faction_leader = yes 
+		}
+		modifier = {  
+			add = 5
+			has_government = sacraments
+			is_faction_leader = yes 
+		}
+		modifier = {  
+			add = 5
+			has_government = conception
+			is_faction_leader = yes 
+		}
+		modifier = {  
+			add = 5
+			has_government = bandits
 			is_faction_leader = yes 
 		}
 	}

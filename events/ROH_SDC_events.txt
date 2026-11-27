@@ -503,7 +503,7 @@ country_event = {
 	option = {
 		name = SDC_phase_three.5.a
 		IF = {
-			limit {
+			limit = {
 				power_balance_value = {
     				id = SDC_power_balance
     				value > 0.2
@@ -812,7 +812,7 @@ country_event = {
 	option = {
 		name = SDC_phase_three.13.a
 		IF = {
-			limit {
+			limit = {
 				power_balance_value = {
     				id = SDC_power_balance
     				value > 0.2

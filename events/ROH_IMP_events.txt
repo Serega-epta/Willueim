@@ -129,19 +129,9 @@ country_event = {
 				transfer_state_to = UKR
 			}
 		}
-		UKR = {
-			225 = {
-				add_core_of = UKR
-				remove_core_of = ARM
-			}
-			193 = {
-				add_core_of = UKR
-				remove_core_of = ARM
-			}
-			259 = {
-				add_core_of = UKR
-				remove_core_of = ARM
-			}
+		every_collection_element = {
+			input = collection:hohland
+			add_claim_by = UKR
 		}
 		country_event = {
 			id = IMP.5
