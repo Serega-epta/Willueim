@@ -29,6 +29,20 @@ country_event = {
 		name = unification_negotiations.1.b
 		custom_override_tooltip = {
 			tooltip = you_will_be_annexed_tt
+			every_country = { #annex ROOT`s puppets and ROOT
+				limit = {
+					OR = {
+						is_subject_of = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
 			FROM = {
 				annex_country = {
     				target = ROOT

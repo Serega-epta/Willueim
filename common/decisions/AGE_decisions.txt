@@ -1037,16 +1037,16 @@ AGE_red_forest = {
 						is_core_of = HAR
 					}
 					transfer_state_to = HAR
-					add_core_of = HAR
 				}
-				if = {
-					limit = {
-						NOT = {
-							is_core_of = HAR
-						}
-					}
+				else = {
 					transfer_state_to = AGE
 					add_core_of = AGE
+				}
+			}
+			hidden_effect = {
+				set_autonomy = {
+					target = HAR
+					autonomy_state = autonomy_free
 				}
 			}
 		}
@@ -1124,6 +1124,12 @@ AGE_red_forest = {
 					transfer_state_to = HAR
 					add_core_of = HAR
 					remove_core_of = TIP
+				}
+				hidden_effect = {
+					set_autonomy = {
+						target = HAR
+						autonomy_state = autonomy_free
+					}
 				}
 			}
 			else_if = {
@@ -1211,6 +1217,12 @@ AGE_red_forest = {
 					transfer_state_to = HAR
 					add_core_of = HAR
 					remove_core_of = TIP
+				}
+				hidden_effect = {
+					set_autonomy = {
+						target = HAR
+						autonomy_state = autonomy_free
+					}
 				}
 			}
 			else_if = {
