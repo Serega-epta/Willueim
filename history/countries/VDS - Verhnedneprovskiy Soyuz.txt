@@ -11,6 +11,11 @@ set_technology = {
 	instruments_of_any_era = 1
 	basic_train = 1
 	motorised_infantry = 1
+	#aviation
+	pre_war_fighter = 1
+	basic_mass_airplane = 1
+	basic_mass_bomber = 1
+	basic_mass_fighter = 1
 }
 set_research_slots = 2
 set_convoys = 0
@@ -29,3 +34,12 @@ add_opinion_modifier = {
 recruit_character = VDS_pustovoytenko_valeriy
 
 add_ideas = VDS_Abandoned_Cities
+
+add_equipment_to_stockpile = {
+	type = basic_mass_fighter_equipment
+	amount = 100
+}
+add_equipment_to_stockpile = {
+	type = basic_mass_bomber_equipment
+	amount = 50
+}
